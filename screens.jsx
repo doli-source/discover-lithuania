@@ -646,4 +646,80 @@ function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, map
   );
 }
 
-Object.assign(window, { HomeScreen, ExploreScreen, RoutesScreen, FoodScreen, StaysScreen, PlaceModal, PlaceCard });
+// ─── SAVED SCREEN ───────────────────────────────────────────────────────────
+function SavedScreen({ savedSet, places, regions, lang, t, openPlace, toggleSaved }) {
+  const savedPlaces = places.filter(p => savedSet.has(p.id));
+
+  if (savedPlaces.length === 0) {
+    return (
+      <div className="saved-empty">
+        <div className="saved-empty-icon">🔖</div>
+        <h2 className="saved-empty-title">
+          {lang === 'he' ? 'עדיין לא שמרת מקומות' : 'No saved places yet'}
+        </h2>
+        <p className="saved-empty-sub">
+          {lang === 'he'
+            ? 'לחץ על הסימנייה בכרטיס מקום כדי לשמור אותו כאן.'
+            : 'Click the bookmark on any place card to save it here.'}
+        </p>
+      </div>
+    );
+  }
+
+  const byRegion = regions
+    .map(r => ({ ...r, places: savedPlaces.filter(p => p.region === r.id) }))
+    .filter(r => r.places.length > 0);
+
+  return (
+    <div className="saved-screen">
+      <div className="saved-header">
+        <h1 className="saved-title">
+          {lang === 'he' ? 'המקומות שלי' : 'My Places'}
+        </h1>
+        <p className="saved-count">
+          {savedPlaces.length} {lang === 'he' ? 'מקומות שמורים' : 'saved places'}
+        </p>
+      </div>
+
+      <div className="saved-regions">
+        {byRegion.map(region => (
+          <section key={region.id} className="saved-region">
+            <h2 className="saved-region-title">
+              {region[lang].name}
+              <span className="saved-region-count">{region.places.length}</span>
+            </h2>
+            <div className="saved-cards">
+              {region.places.map(place => (
+                <div
+                  key={place.id}
+                  className="saved-card"
+                  onClick={() => openPlace(place.id)}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <span className="saved-emoji">{place.emoji}</span>
+                  <div className="saved-info">
+                    <div className="saved-name">{place.name}</div>
+                    <div className="saved-type">
+                      {lang === 'he' ? place.typeHe : place.type}
+                    </div>
+                  </div>
+                  <button
+                    className="saved-remove"
+                    onClick={e => { e.stopPropagation(); toggleSaved(place.id); }}
+                    aria-label={lang === 'he' ? 'הסר משמורים' : 'Remove'}
+                    title={lang === 'he' ? 'הסר' : 'Remove'}
+                  >
+                    <Icon.bookmarkFill />
+                  </button>
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+Object.assign(window, { HomeScreen, ExploreScreen, RoutesScreen, FoodScreen, StaysScreen, PlaceModal, PlaceCard, SavedScreen });
