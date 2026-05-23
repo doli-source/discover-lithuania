@@ -98,7 +98,9 @@ const PLACES = [
     "price": "€5–10",
     "emoji": "☕",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "rocketbean-kavin",
@@ -112,7 +114,9 @@ const PLACES = [
     "price": "€5–10",
     "emoji": "🚀",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "yugen-tea",
@@ -126,7 +130,9 @@ const PLACES = [
     "price": "€5–10",
     "emoji": "🍵",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "espresin",
@@ -141,7 +147,9 @@ const PLACES = [
     "emoji": "☕",
     "niv": "Tiny espresso bar with seriously good coffee. Local favorite.",
     "nivHe": "בר אספרסו זעיר עם קפה ברמה רצינית. מקום מועדף על המקומיים.",
-    "mapUrl": "https://maps.app.goo.gl/L7yNZbDcwaEXpk8S9"
+    "mapUrl": "https://maps.app.goo.gl/L7yNZbDcwaEXpk8S9",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "mon",
@@ -155,7 +163,9 @@ const PLACES = [
     "price": "€10–15",
     "emoji": "☕",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "strangelove",
@@ -169,7 +179,9 @@ const PLACES = [
     "price": "€5–10",
     "emoji": "🖤",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "coffee-circus-piano",
@@ -183,7 +195,9 @@ const PLACES = [
     "price": "€5–10",
     "emoji": "🎪",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "brew-specialty-coffee",
@@ -198,7 +212,9 @@ const PLACES = [
     "emoji": "🥐",
     "niv": "Specialty roaster with excellent pastries — perfect morning stop.",
     "nivHe": "קלייה ספשלטי עם מאפים מעולים — עצירת בוקר מושלמת.",
-    "mapUrl": "https://maps.app.goo.gl/3oA2cV61rYqw5gZNA"
+    "mapUrl": "https://maps.app.goo.gl/3oA2cV61rYqw5gZNA",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "art-cafe",
@@ -212,7 +228,9 @@ const PLACES = [
     "price": "€5–10",
     "emoji": "🎨",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "beigelistai",
@@ -226,7 +244,9 @@ const PLACES = [
     "price": "€5–10",
     "emoji": "🥯",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "backstage-roastery-caf",
@@ -241,7 +261,9 @@ const PLACES = [
     "emoji": "🥞",
     "niv": "One of the best brunch spots in Vilnius — always packed, always worth it.",
     "nivHe": "אחד הברנצ'ים הכי טובים בווילנה — תמיד מלא, תמיד שווה.",
-    "mapUrl": "https://www.google.com/maps?q=54.6747985,25.2660406"
+    "mapUrl": "https://www.google.com/maps?q=54.6747985,25.2660406",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "backstage-cafe-vokie-i-str",
@@ -255,7 +277,9 @@ const PLACES = [
     "price": "€5–15",
     "emoji": "☕",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "italala-caff",
@@ -269,7 +293,9 @@ const PLACES = [
     "price": "€5–10",
     "emoji": "🇮🇹",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "lola",
@@ -283,7 +309,9 @@ const PLACES = [
     "price": "€10–15",
     "emoji": "🌸",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "barn-bistro-b-arn",
@@ -297,7 +325,9 @@ const PLACES = [
     "price": "€50+",
     "emoji": "🥩",
     "niv": "Top-end dining — extraordinary quality.",
-    "nivHe": "ארוחה ברמה הכי גבוהה — איכות יוצאת דופן."
+    "nivHe": "ארוחה ברמה הכי גבוהה — איכות יוצאת דופן.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "tempo-v39",
@@ -311,7 +341,9 @@ const PLACES = [
     "price": "€25–50",
     "emoji": "🍷",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "pachamama-dinner-club",
@@ -325,7 +357,9 @@ const PLACES = [
     "price": "€50+",
     "emoji": "🇵🇪",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "meat-steakhouse",
@@ -339,7 +373,9 @@ const PLACES = [
     "price": "€50+",
     "emoji": "🥩",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "cha-apuri",
@@ -353,7 +389,9 @@ const PLACES = [
     "price": "€10–15",
     "emoji": "🧀",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "focacceria",
@@ -367,7 +405,9 @@ const PLACES = [
     "price": "€5–10",
     "emoji": "🥪",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "baleboste",
@@ -381,7 +421,9 @@ const PLACES = [
     "price": "€10–15",
     "emoji": "✡️",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "le-travi",
@@ -396,7 +438,9 @@ const PLACES = [
     "emoji": "🍝",
     "niv": "Cozy Italian bistro — great pasta and intimate atmosphere.",
     "nivHe": "ביסטרו איטלקי חמימות — פסטה מעולה ואווירה אינטימית.",
-    "mapUrl": "https://maps.app.goo.gl/jdVee8KgtKYz238f7"
+    "mapUrl": "https://maps.app.goo.gl/jdVee8KgtKYz238f7",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "donde",
@@ -410,7 +454,9 @@ const PLACES = [
     "price": "€10–15",
     "emoji": "🌮",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "mason-restoranas",
@@ -424,7 +470,9 @@ const PLACES = [
     "price": "€15–45",
     "emoji": "🍴",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "2-vir-jai",
@@ -438,7 +486,9 @@ const PLACES = [
     "price": "€10–15",
     "emoji": "👨‍🍳",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "bistro-n-2",
@@ -452,7 +502,9 @@ const PLACES = [
     "price": null,
     "emoji": "🍽️",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "naked-noah",
@@ -466,7 +518,9 @@ const PLACES = [
     "price": null,
     "emoji": "🍷",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "burbulio-vynin",
@@ -480,7 +534,9 @@ const PLACES = [
     "price": null,
     "emoji": "🍾",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "la-madeleine-atelier",
@@ -494,7 +550,9 @@ const PLACES = [
     "price": null,
     "emoji": "🥐",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "mindaugo-kepykla",
@@ -508,7 +566,9 @@ const PLACES = [
     "price": null,
     "emoji": "🥐",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "desert-klubas",
@@ -522,7 +582,9 @@ const PLACES = [
     "price": "€5–15",
     "emoji": "🎂",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "bundu",
@@ -536,7 +598,9 @@ const PLACES = [
     "price": "€5–10",
     "emoji": "🍞",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "adata-bar",
@@ -551,7 +615,9 @@ const PLACES = [
     "emoji": "🍸",
     "niv": "Intimate cocktail bar with creative drinks. Reserve a seat.",
     "nivHe": "בר קוקטיילים אינטימי עם שתייה יצירתית. כדאי להזמין מקום.",
-    "mapUrl": "https://maps.app.goo.gl/sKGGPa3UoayEPEDB6"
+    "mapUrl": "https://maps.app.goo.gl/sKGGPa3UoayEPEDB6",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "paupio-turgus",
@@ -565,7 +631,9 @@ const PLACES = [
     "price": "€10–15",
     "emoji": "🛒",
     "niv": "Best food market in Vilnius — go on Saturday morning.",
-    "nivHe": "השוק הכי טוב בווילנה — שווה ללכת בשבת בבוקר."
+    "nivHe": "השוק הכי טוב בווילנה — שווה ללכת בשבת בבוקר.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "benedikto-turgus",
@@ -579,7 +647,9 @@ const PLACES = [
     "price": null,
     "emoji": "🥕",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "3m-zos-rooftop-bar",
@@ -593,7 +663,9 @@ const PLACES = [
     "price": "€10–25",
     "emoji": "🌆",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "po-ba-ka",
@@ -607,7 +679,9 @@ const PLACES = [
     "price": "€1–5",
     "emoji": "🍺",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "mo-museum",
@@ -621,7 +695,9 @@ const PLACES = [
     "price": null,
     "emoji": "🎨",
     "niv": "World-class modern art museum — don't miss it.",
-    "nivHe": "מוזיאון אמנות מודרנית ברמה עולמית — לא לפספס."
+    "nivHe": "מוזיאון אמנות מודרנית ברמה עולמית — לא לפספס.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "men-fabrikas-loftas",
@@ -635,7 +711,9 @@ const PLACES = [
     "price": null,
     "emoji": "🏭",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "the-green-house",
@@ -649,7 +727,9 @@ const PLACES = [
     "price": null,
     "emoji": "🟢",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "gediminas-castle",
@@ -663,7 +743,9 @@ const PLACES = [
     "price": null,
     "emoji": "🏰",
     "niv": "Fantastic view of Vilnius — come at sunset for the golden hour. Watch hot-air balloons in the morning.",
-    "nivHe": "נוף מטריף על וילנה — בואו בשקיעה לשעת הזהב. בבוקר אפשר לראות כדורים פורחים."
+    "nivHe": "נוף מטריף על וילנה — בואו בשקיעה לשעת הזהב. בבוקר אפשר לראות כדורים פורחים.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "atvira-meno-galerija",
@@ -677,7 +759,9 @@ const PLACES = [
     "price": null,
     "emoji": "🖼️",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "backstage-roastery-hq",
@@ -691,7 +775,9 @@ const PLACES = [
     "price": null,
     "emoji": "☕",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "kur-is-kavin-baras-gra-inos-st",
@@ -705,7 +791,9 @@ const PLACES = [
     "price": "€15–20",
     "emoji": "☕",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "snapas-kava-ir-desertai",
@@ -719,7 +807,9 @@ const PLACES = [
     "price": "€5–10",
     "emoji": "☕",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "b-heme-house",
@@ -733,7 +823,9 @@ const PLACES = [
     "price": null,
     "emoji": "🎭",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "velvetti",
@@ -747,7 +839,9 @@ const PLACES = [
     "price": "€10–30",
     "emoji": "🍽️",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "habits-bakery",
@@ -761,7 +855,9 @@ const PLACES = [
     "price": "€10–15",
     "emoji": "🍞",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "nyc-coffee-co",
@@ -775,7 +871,9 @@ const PLACES = [
     "price": "€1–5",
     "emoji": "🗽",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "city-coffee",
@@ -789,7 +887,9 @@ const PLACES = [
     "price": "€1–5",
     "emoji": "☕",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "elska-coffee",
@@ -803,7 +903,9 @@ const PLACES = [
     "price": "€5–15",
     "emoji": "❤️",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "kavos-architektai",
@@ -817,7 +919,9 @@ const PLACES = [
     "price": "€5–10",
     "emoji": "☕",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "klaip-dos-yd-bendruomen",
@@ -831,7 +935,9 @@ const PLACES = [
     "price": null,
     "emoji": "✡️",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "muskatas",
@@ -845,7 +951,9 @@ const PLACES = [
     "price": null,
     "emoji": "🌿",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "bistro-zarasai",
@@ -859,7 +967,9 @@ const PLACES = [
     "price": "€10–20",
     "emoji": "🍔",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "spricas-brunch-2",
@@ -873,7 +983,9 @@ const PLACES = [
     "price": "€10–15",
     "emoji": "🥞",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "the-dead-dunes",
@@ -887,7 +999,9 @@ const PLACES = [
     "price": null,
     "emoji": "🏜️",
     "niv": "Magical UNESCO landscape — the sand dunes are unlike anything in Europe.",
-    "nivHe": "נוף קסום של אונסק\"ו — דיונות חול שאין כמותן באירופה."
+    "nivHe": "נוף קסום של אונסק\"ו — דיונות חול שאין כמותן באירופה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "vecekrugas-dune",
@@ -901,7 +1015,9 @@ const PLACES = [
     "price": null,
     "emoji": "🏔️",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "smoked-fish",
@@ -915,7 +1031,9 @@ const PLACES = [
     "price": null,
     "emoji": "🐟",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "mi-ko-rojus",
@@ -929,7 +1047,9 @@ const PLACES = [
     "price": null,
     "emoji": "🏡",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "doyou-place",
@@ -943,7 +1063,9 @@ const PLACES = [
     "price": null,
     "emoji": "🌲",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "pami-k-boutique-spa",
@@ -957,7 +1079,9 @@ const PLACES = [
     "price": null,
     "emoji": "🛁",
     "niv": "Incredible Lithuanian sauna experience in the forest.",
-    "nivHe": "חוויית סאונה ליטאית בלב היער."
+    "nivHe": "חוויית סאונה ליטאית בלב היער.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "casa-de-campo-glamping-lithuania",
@@ -971,7 +1095,9 @@ const PLACES = [
     "price": null,
     "emoji": "⛺",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "hytte",
@@ -985,7 +1111,9 @@ const PLACES = [
     "price": null,
     "emoji": "🏠",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "alantos-irgai-sodybos-ir-nameli",
@@ -999,7 +1127,9 @@ const PLACES = [
     "price": null,
     "emoji": "🐴",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "villa-the-lake",
@@ -1013,7 +1143,9 @@ const PLACES = [
     "price": null,
     "emoji": "🏡",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "kupetait",
@@ -1027,7 +1159,9 @@ const PLACES = [
     "price": null,
     "emoji": "🌿",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "varena-treehouse",
@@ -1041,7 +1175,9 @@ const PLACES = [
     "price": null,
     "emoji": "🌳",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "getaway-to-forest-cab",
@@ -1055,7 +1191,9 @@ const PLACES = [
     "price": null,
     "emoji": "🪵",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "www-pineplace-lt",
@@ -1069,7 +1207,9 @@ const PLACES = [
     "price": null,
     "emoji": "🌲",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "atvira-meno-galerija-open-gallery",
@@ -1083,7 +1223,9 @@ const PLACES = [
     "price": null,
     "emoji": "🖼️",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "a-triosios-kirsnos-dvaras",
@@ -1097,7 +1239,9 @@ const PLACES = [
     "price": null,
     "emoji": "🏰",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "atokampis-boutique-spa-resort",
@@ -1111,7 +1255,9 @@ const PLACES = [
     "price": null,
     "emoji": "💆",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "horizons-lake-resort-spa",
@@ -1125,7 +1271,9 @@ const PLACES = [
     "price": null,
     "emoji": "🌅",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "mana-sleep-spa-druskininkai",
@@ -1140,7 +1288,9 @@ const PLACES = [
     "emoji": "💆",
     "niv": "Best spa resort in Lithuania — pure relaxation.",
     "nivHe": "ספא-ריזורט הכי טוב בליטא — רגיעה צרופה.",
-    "mapUrl": "https://maps.app.goo.gl/e5ynZktiUyr2tGt76"
+    "mapUrl": "https://maps.app.goo.gl/e5ynZktiUyr2tGt76",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "la-petite-france-vilnius",
@@ -1154,10 +1304,10 @@ const PLACES = [
     "price": null,
     "emoji": "🥐",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
-
-  // ── ZARASAI ─────────────────────────────────────────────────────────────────
   {
     "id": "brut-wine-restaurant-zarasai",
     "region": "zarasai",
@@ -1170,7 +1320,9 @@ const PLACES = [
     "price": "€25–50",
     "emoji": "🍷",
     "niv": "Charcoal-grilled meats and an excellent wine list — the most stylish dinner in Zarasai.",
-    "nivHe": "בשרים על פחם ורשימת יין מצוינת — הארוחה הכי סטייל בזרסאי."
+    "nivHe": "בשרים על פחם ורשימת יין מצוינת — הארוחה הכי סטייל בזרסאי.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "monopolis-zarasai",
@@ -1184,7 +1336,9 @@ const PLACES = [
     "price": "€15–30",
     "emoji": "🐟",
     "niv": "Lakeside terrace and locally-caught vendace — the rarest fish dish in northeastern Lithuania.",
-    "nivHe": "טרסה על האגם עם דג ונדאס מקומי — המנה הנדירה ביותר בצפון-מזרח ליטא."
+    "nivHe": "טרסה על האגם עם דג ונדאס מקומי — המנה הנדירה ביותר בצפון-מזרח ליטא.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "lietaus-sodai",
@@ -1198,7 +1352,9 @@ const PLACES = [
     "price": "€5–15",
     "emoji": "🛒",
     "niv": "Part gourmet deli, part café — local wines, artisan cheeses, and homemade desserts under one roof.",
-    "nivHe": "חצי דלי גורמה, חצי קפה — יינות מקומיים, גבינות אומן ומתוקים ביתיים."
+    "nivHe": "חצי דלי גורמה, חצי קפה — יינות מקומיים, גבינות אומן ומתוקים ביתיים.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "zarasai-five-lakes",
@@ -1212,7 +1368,9 @@ const PLACES = [
     "price": null,
     "emoji": "🌊",
     "niv": "The town sits on a peninsula between five interconnected lakes — kayak, swim, or just watch the light change.",
-    "nivHe": "העיר יושבת על חצי-אי בין חמישה אגמים מחוברים — קיאקים, שחייה, או פשוט לצפות באור משתנה."
+    "nivHe": "העיר יושבת על חצי-אי בין חמישה אגמים מחוברים — קיאקים, שחייה, או פשוט לצפות באור משתנה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "sartai-lake",
@@ -1226,7 +1384,9 @@ const PLACES = [
     "price": null,
     "emoji": "🧊",
     "niv": "Lithuania's famous ice-yachting lake in winter, crystal-clear swimming in summer. Unforgettable in any season.",
-    "nivHe": "אגם השיט על הקרח המפורסם של ליטא בחורף, שחייה קריסטלית בקיץ. בלתי נשכח בכל עונה."
+    "nivHe": "אגם השיט על הקרח המפורסם של ליטא בחורף, שחייה קריסטלית בקיץ. בלתי נשכח בכל עונה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "zarasai-museum",
@@ -1240,7 +1400,9 @@ const PLACES = [
     "price": null,
     "emoji": "🏛️",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "zarasai-promenade",
@@ -1254,7 +1416,9 @@ const PLACES = [
     "price": null,
     "emoji": "🚶",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "kemping-zarasai",
@@ -1268,10 +1432,10 @@ const PLACES = [
     "price": null,
     "emoji": "⛺",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
-
-  // ── PALANGA ──────────────────────────────────────────────────────────────────
   {
     "id": "palanga-amber-museum",
     "region": "palanga",
@@ -1284,7 +1448,9 @@ const PLACES = [
     "price": null,
     "emoji": "🟡",
     "niv": "28,000 pieces of amber — including prehistoric insects frozen in time — in a grand 19th-century palace.",
-    "nivHe": "28,000 פריטי ענבר כולל חרקים פרהיסטוריים קפואים בזמן — בארמון מהמאה ה-19."
+    "nivHe": "28,000 פריטי ענבר כולל חרקים פרהיסטוריים קפואים בזמן — בארמון מהמאה ה-19.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "birute-park-palanga",
@@ -1298,7 +1464,9 @@ const PLACES = [
     "price": null,
     "emoji": "🌹",
     "niv": "100 hectares of sculpted grounds — rose gardens, ancient dunes, summer concerts. Free to enter.",
-    "nivHe": "100 דונם של גנים מעוצבים — גני ורדים, דיונות עתיקות וקונצרטים בקיץ. כניסה חינם."
+    "nivHe": "100 דונם של גנים מעוצבים — גני ורדים, דיונות עתיקות וקונצרטים בקיץ. כניסה חינם.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "palanga-pier",
@@ -1312,7 +1480,9 @@ const PLACES = [
     "price": null,
     "emoji": "🌅",
     "niv": "470 meters of wooden planks reaching into the Baltic. The sunsets here are the stuff of local legend.",
-    "nivHe": "470 מטר של עץ לתוך הים הבלטי. השקיעות כאן הן אגדה מקומית."
+    "nivHe": "470 מטר של עץ לתוך הים הבלטי. השקיעות כאן הן אגדה מקומית.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "palanga-beach",
@@ -1326,7 +1496,9 @@ const PLACES = [
     "price": null,
     "emoji": "🏖️",
     "niv": "Wide, clean Baltic sand backed by pine dunes — the classic Lithuanian summer.",
-    "nivHe": "חוף חול בלטי רחב ונקי עם דיונות אורן — הקיץ הליטאי הקלאסי."
+    "nivHe": "חוף חול בלטי רחב ונקי עם דיונות אורן — הקיץ הליטאי הקלאסי.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "brew-palanga",
@@ -1340,7 +1512,9 @@ const PLACES = [
     "price": "€5–12",
     "emoji": "☕",
     "niv": "The same excellent Vilnius roaster — now with a Bali-inspired terrace steps from the Baltic.",
-    "nivHe": "אותה קלייה מצוינת מווילנה — עכשיו עם טרסה בהשראת באלי צעדים מהים."
+    "nivHe": "אותה קלייה מצוינת מווילנה — עכשיו עם טרסה בהשראת באלי צעדים מהים.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "fotokava-palanga",
@@ -1354,7 +1528,9 @@ const PLACES = [
     "price": "€5–10",
     "emoji": "📷",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "cafe-banduke",
@@ -1368,7 +1544,9 @@ const PLACES = [
     "price": "€15–30",
     "emoji": "🍽️",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "basanaviciaus-street",
@@ -1382,7 +1560,9 @@ const PLACES = [
     "price": null,
     "emoji": "🛍️",
     "niv": "The beating heart of Palanga — bars, restaurants, amber shops and street performers. Best at golden hour.",
-    "nivHe": "לב פלאנגה הפועם — ברים, מסעדות, חנויות ענבר ורוקדי רחוב. הכי טוב בשקיעה."
+    "nivHe": "לב פלאנגה הפועם — ברים, מסעדות, חנויות ענבר ורוקדי רחוב. הכי טוב בשקיעה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "caffeine-palanga",
@@ -1396,10 +1576,10 @@ const PLACES = [
     "price": "€5–10",
     "emoji": "☕",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
-
-  // ── CURONIAN SPIT (additional) ────────────────────────────────────────────────
   {
     "id": "senas-zvejas",
     "region": "curonian",
@@ -1412,7 +1592,9 @@ const PLACES = [
     "price": "€10–20",
     "emoji": "🎣",
     "niv": "Old fisherman's tavern with cepelinai and smoked fish — as authentic as Nida gets.",
-    "nivHe": "פונדק דייגים ישן עם צפלינאי ודגים מעושנים — האותנטיות של נידה."
+    "nivHe": "פונדק דייגים ישן עם צפלינאי ודגים מעושנים — האותנטיות של נידה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "toda-nida",
@@ -1426,7 +1608,9 @@ const PLACES = [
     "price": "€15–25",
     "emoji": "🧆",
     "niv": "Israeli-Mediterranean on the Curonian Spit — hummus, mezze, and chargrilled meats between the dunes.",
-    "nivHe": "ישראלי-ים תיכוני על רכס קורון — חומוס, מזה ובשרים על גחלים בין הדיונות."
+    "nivHe": "ישראלי-ים תיכוני על רכס קורון — חומוס, מזה ובשרים על גחלים בין הדיונות.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "gitanos-blynai",
@@ -1440,7 +1624,9 @@ const PLACES = [
     "price": "€5–12",
     "emoji": "🥞",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "witches-hill",
@@ -1454,7 +1640,9 @@ const PLACES = [
     "price": null,
     "emoji": "🧙",
     "niv": "80 ancient Lithuanian mythological wooden sculptures along a forest trail — haunting, beautiful, and free.",
-    "nivHe": "80 פסלי עץ של מיתולוגיה ליטאית לאורך שביל יער — מרהיב, מקסים וחינם."
+    "nivHe": "80 פסלי עץ של מיתולוגיה ליטאית לאורך שביל יער — מרהיב, מקסים וחינם.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "thomas-mann-house-nida",
@@ -1468,7 +1656,9 @@ const PLACES = [
     "price": null,
     "emoji": "📚",
     "niv": "Where Thomas Mann spent three summers in the 1930s — a tiny wooden cottage full of light and literary history.",
-    "nivHe": "כאן שהה תומאס מאן שלושה קיצות בשנות ה-30 — צריף עץ קטן מלא אור והיסטוריה ספרותית."
+    "nivHe": "כאן שהה תומאס מאן שלושה קיצות בשנות ה-30 — צריף עץ קטן מלא אור והיסטוריה ספרותית.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "nida-harbour",
@@ -1482,10 +1672,10 @@ const PLACES = [
     "price": null,
     "emoji": "⛵",
     "niv": "Colourful fishing boats on the Curonian Lagoon — morning smoked-fish stalls, sailing dinghies, and pink sunrises.",
-    "nivHe": "סירות דייגים צבעוניות על לגונת קורון — דוכני דגים בבוקר, מפרשיות וזריחות ורודות."
+    "nivHe": "סירות דייגים צבעוניות על לגונת קורון — דוכני דגים בבוקר, מפרשיות וזריחות ורודות.",
+    "status": "approved",
+    "source": "niv"
   },
-
-  // ── KLAIPĖDA (additional) ─────────────────────────────────────────────────────
   {
     "id": "monai-klaipeda",
     "region": "klaipeda",
@@ -1498,7 +1688,9 @@ const PLACES = [
     "price": "€50+",
     "emoji": "⭐",
     "niv": "Michelin-recommended since 2022 — intimate, ingredient-driven tasting menu. Klaipėda's best table.",
-    "nivHe": "מומלץ מישלן מ-2022 — תפריט טעימות אינטימי ומבוסס-חומרי-גלם. השולחן הטוב ביותר בקלייפדה."
+    "nivHe": "מומלץ מישלן מ-2022 — תפריט טעימות אינטימי ומבוסס-חומרי-גלם. השולחן הטוב ביותר בקלייפדה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "ateik-ateik",
@@ -1512,7 +1704,9 @@ const PLACES = [
     "price": "€5–15",
     "emoji": "🎸",
     "niv": "Watch ships leave the port over jazz and coffee at sunset. The most Klaipėda thing you can do.",
-    "nivHe": "מסתכלים על ספינות יוצאות מהנמל עם ג'אז, קפה ושקיעה. הכי קלייפדה שיש."
+    "nivHe": "מסתכלים על ספינות יוצאות מהנמל עם ג'אז, קפה ושקיעה. הכי קלייפדה שיש.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "klaipeda-castle-museum",
@@ -1526,7 +1720,9 @@ const PLACES = [
     "price": null,
     "emoji": "🏰",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "klaipeda-old-town-walk",
@@ -1540,7 +1736,9 @@ const PLACES = [
     "price": null,
     "emoji": "🏘️",
     "niv": "German-Prussian half-timbered architecture, cobblestones, and the famous bronze Taravos Anikė sculpture.",
-    "nivHe": "ארכיטקטורה גרמנית-פרוסית, אבני ריצוף ופסל ברונזה מפורסם — שווה ללכת בשקיעה."
+    "nivHe": "ארכיטקטורה גרמנית-פרוסית, אבני ריצוף ופסל ברונזה מפורסם — שווה ללכת בשקיעה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "clock-museum-klaipeda",
@@ -1554,10 +1752,10 @@ const PLACES = [
     "price": null,
     "emoji": "🕰️",
     "niv": "A surprisingly captivating collection of timepieces spanning 3,000 years — the sundials alone are worth it.",
-    "nivHe": "אוסף מרתק באופן מפתיע של שעונים על פני 3,000 שנה — שעוני השמש לבדם שווים ביקור."
+    "nivHe": "אוסף מרתק באופן מפתיע של שעונים על פני 3,000 שנה — שעוני השמש לבדם שווים ביקור.",
+    "status": "approved",
+    "source": "niv"
   },
-
-  // ── DRUSKININKAI (additional) ─────────────────────────────────────────────────
   {
     "id": "toli-toli-druskininkai",
     "region": "druskininkai",
@@ -1570,7 +1768,9 @@ const PLACES = [
     "price": "€15–30",
     "emoji": "🍜",
     "niv": "Lithuanian-Asian fusion done right — nearly 4,000 reviews, creative dishes, and always packed.",
-    "nivHe": "פיוז'ן ליטאי-אסיאתי מוצלח — כמעט 4,000 ביקורות, מנות יצירתיות ותמיד מלא."
+    "nivHe": "פיוז'ן ליטאי-אסיאתי מוצלח — כמעט 4,000 ביקורות, מנות יצירתיות ותמיד מלא.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "grutas-park",
@@ -1584,7 +1784,9 @@ const PLACES = [
     "price": null,
     "emoji": "☭",
     "niv": "An open-air museum of Soviet-era Lenin and Stalin statues — equal parts eerie and fascinating.",
-    "nivHe": "מוזיאון גן פתוח של פסלי לנין וסטאלין מהעידן הסובייטי — מפחיד ומרתק בשווה."
+    "nivHe": "מוזיאון גן פתוח של פסלי לנין וסטאלין מהעידן הסובייטי — מפחיד ומרתק בשווה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "sicilia-druskininkai",
@@ -1598,7 +1800,9 @@ const PLACES = [
     "price": "€8–18",
     "emoji": "🍕",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "druskininkai-aqua-park",
@@ -1612,7 +1816,9 @@ const PLACES = [
     "price": null,
     "emoji": "🏊",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "dzukija-national-park",
@@ -1626,10 +1832,10 @@ const PLACES = [
     "price": null,
     "emoji": "🌲",
     "niv": "Lithuania's largest national park — ancient mushroom-picking forests, sandy rivers, and village beekeepers.",
-    "nivHe": "הפארק הלאומי הגדול ביותר בליטא — יערות קטיף פטריות עתיקים, נהרות חוליים ודבוראים כפריים."
+    "nivHe": "הפארק הלאומי הגדול ביותר בליטא — יערות קטיף פטריות עתיקים, נהרות חוליים ודבוראים כפריים.",
+    "status": "approved",
+    "source": "niv"
   },
-
-  // ── MOLĖTAI (additional) ──────────────────────────────────────────────────────
   {
     "id": "moletai-observatory",
     "region": "moletai",
@@ -1642,7 +1848,9 @@ const PLACES = [
     "price": null,
     "emoji": "🔭",
     "niv": "The largest scientific telescope in Northern Europe — public stargazing nights are magical. Book ahead.",
-    "nivHe": "הטלסקופ המדעי הגדול ביותר בצפון אירופה — ערבי תצפית לציבור קסומים. להזמין מראש."
+    "nivHe": "הטלסקופ המדעי הגדול ביותר בצפון אירופה — ערבי תצפית לציבור קסומים. להזמין מראש.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "ethnocosmology-museum",
@@ -1656,7 +1864,9 @@ const PLACES = [
     "price": null,
     "emoji": "🌌",
     "niv": "Where Lithuanian cosmic mythology meets real science — shaped like the mythological World Tree.",
-    "nivHe": "כאן מיתולוגיה קוסמית ליטאית פוגשת מדע אמיתי — בצורת עץ העולם המיתולוגי."
+    "nivHe": "כאן מיתולוגיה קוסמית ליטאית פוגשת מדע אמיתי — בצורת עץ העולם המיתולוגי.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "labanoras-observation-tower",
@@ -1670,7 +1880,9 @@ const PLACES = [
     "price": null,
     "emoji": "🗼",
     "niv": "Lithuania's second-tallest tower — 214 steps and a panorama over the Lakajai lakes and endless pine forest.",
-    "nivHe": "המגדל השני בגובהו בליטא — 214 מדרגות ופנורמה על אגמי לאקאיי ויער אורן אינסופי."
+    "nivHe": "המגדל השני בגובהו בליטא — 214 מדרגות ופנורמה על אגמי לאקאיי ויער אורן אינסופי.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "dubingiai-stud-farm",
@@ -1684,7 +1896,9 @@ const PLACES = [
     "price": "€20–40",
     "emoji": "🐴",
     "niv": "Dine overlooking the paddocks and a lake on a working horse stud farm — genuinely unique.",
-    "nivHe": "ארוחה עם נוף לאורוות ואגם בחוות סוסים פעילה — חוויה ייחודית לגמרי."
+    "nivHe": "ארוחה עם נוף לאורוות ואגם בחוות סוסים פעילה — חוויה ייחודית לגמרי.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "moletai-lake-district",
@@ -1698,7 +1912,9 @@ const PLACES = [
     "price": null,
     "emoji": "💙",
     "niv": "Over 300 lakes within the district — canoe routes, fishing, and lakeside saunas. Dark-sky reserve at night.",
-    "nivHe": "מעל 300 אגמים במחוז — מסלולי קאנו, דיג וסאונות על האגם. שמיים חשוכים בלילה."
+    "nivHe": "מעל 300 אגמים במחוז — מסלולי קאנו, דיג וסאונות על האגם. שמיים חשוכים בלילה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "moletai-sculpture-park",
@@ -1712,10 +1928,10 @@ const PLACES = [
     "price": null,
     "emoji": "🗿",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
-
-  // ── UTENA (additional) ────────────────────────────────────────────────────────
   {
     "id": "aukstaitija-national-park",
     "region": "utena",
@@ -1728,7 +1944,9 @@ const PLACES = [
     "price": null,
     "emoji": "🏞️",
     "niv": "200+ lakes, old-growth forest and canoe routes that feel like another century. Lithuania's most beautiful park.",
-    "nivHe": "200+ אגמים, יערות עתיקים ומסלולי קאנו שמרגישים כמו מאה אחרת. הפארק היפה ביותר בליטא."
+    "nivHe": "200+ אגמים, יערות עתיקים ומסלולי קאנו שמרגישים כמו מאה אחרת. הפארק היפה ביותר בליטא.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "vanilinis-dangus",
@@ -1742,7 +1960,9 @@ const PLACES = [
     "price": "€5–10",
     "emoji": "🧁",
     "niv": "Utena's sweetest spot — pastries and cakes made with real craft.",
-    "nivHe": "הנקודה המתוקה ביותר באוטנה — מאפים ועוגות עם אמנות אמיתית."
+    "nivHe": "הנקודה המתוקה ביותר באוטנה — מאפים ועוגות עם אמנות אמיתית.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "beekeeping-museum-stripeikiai",
@@ -1756,7 +1976,9 @@ const PLACES = [
     "price": null,
     "emoji": "🐝",
     "niv": "Ancient log beehives, forest sculptures, and honey tasting. A uniquely Lithuanian experience.",
-    "nivHe": "כוורות בול עץ עתיקות, פסלי יער וטעימת דבש. חוויה ייחודית לליטא."
+    "nivHe": "כוורות בול עץ עתיקות, פסלי יער וטעימת דבש. חוויה ייחודית לליטא.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "paluse-wooden-church",
@@ -1770,7 +1992,9 @@ const PLACES = [
     "price": null,
     "emoji": "⛪",
     "niv": "A 1750 wooden church reflected in the lake — the most iconic image in Aukštaitija National Park.",
-    "nivHe": "כנסיית עץ מ-1750 המשתקפת באגם — הדימוי המזוהה ביותר עם הפארק הלאומי."
+    "nivHe": "כנסיית עץ מ-1750 המשתקפת באגם — הדימוי המזוהה ביותר עם הפארק הלאומי.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "food-lab-utena",
@@ -1784,7 +2008,9 @@ const PLACES = [
     "price": "€15–25",
     "emoji": "🧪",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "vila-gervalis",
@@ -1798,7 +2024,9 @@ const PLACES = [
     "price": null,
     "emoji": "🌅",
     "niv": "Lakeside spa retreat — the most comfortable base for exploring the Aukštaitija lakes.",
-    "nivHe": "נסיגה לאגם עם ספא — הבסיס הנוח ביותר לגילוי אגמי אוקשטאיטיה."
+    "nivHe": "נסיגה לאגם עם ספא — הבסיס הנוח ביותר לגילוי אגמי אוקשטאיטיה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "utenos-alus-brewery",
@@ -1812,7 +2040,9 @@ const PLACES = [
     "price": "€5–15",
     "emoji": "🍺",
     "niv": "Lithuania's most beloved beer brand, brewed here since 1745. Tours and tastings available.",
-    "nivHe": "מותג הבירה האהוב ביותר בליטא, מבושל כאן מ-1745. סיורים וטעימות זמינים."
+    "nivHe": "מותג הבירה האהוב ביותר בליטא, מבושל כאן מ-1745. סיורים וטעימות זמינים.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "ginuciai-hill-fort",
@@ -1826,10 +2056,10 @@ const PLACES = [
     "price": null,
     "emoji": "⛰️",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
-
-  // ── KRETINGA (additional) ─────────────────────────────────────────────────────
   {
     "id": "kretinga-manor-winter-garden",
     "region": "kretinga",
@@ -1842,7 +2072,9 @@ const PLACES = [
     "price": null,
     "emoji": "🌿",
     "niv": "5,000 tropical plants in a 19th-century glass conservatory — with live parrots, turtles, and banana trees.",
-    "nivHe": "5,000 צמחים טרופיים בחממת זכוכית מהמאה ה-19 — עם תוכים חיים, צבים ועצי בננה."
+    "nivHe": "5,000 צמחים טרופיים בחממת זכוכית מהמאה ה-19 — עם תוכים חיים, צבים ועצי בננה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "franciscan-monastery-kretinga",
@@ -1856,7 +2088,9 @@ const PLACES = [
     "price": null,
     "emoji": "⛪",
     "niv": "A working 17th-century Franciscan monastery at the centre of town — austere, beautiful, very peaceful.",
-    "nivHe": "מנזר פרנציסקני פעיל מהמאה ה-17 במרכז העיר — מאופק, יפה ושקט מאוד."
+    "nivHe": "מנזר פרנציסקני פעיל מהמאה ה-17 במרכז העיר — מאופק, יפה ושקט מאוד.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "cafe-old-palace-kretinga",
@@ -1870,7 +2104,9 @@ const PLACES = [
     "price": "€5–12",
     "emoji": "🫖",
     "niv": "Coffee surrounded by exotic plants and turtles inside the Kretinga Manor conservatory. Genuinely magical.",
-    "nivHe": "קפה בין צמחים טרופיים וצבים בחממת ארמון קרטינגה. קסום באמת."
+    "nivHe": "קפה בין צמחים טרופיים וצבים בחממת ארמון קרטינגה. קסום באמת.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "cable-park-313",
@@ -1884,7 +2120,9 @@ const PLACES = [
     "price": null,
     "emoji": "🏄",
     "niv": "One of Europe's most advanced cable wakeboard parks — fun for first-timers, serious for pros.",
-    "nivHe": "אחד מפארקי הוויקבורד בכבלים המתקדמים באירופה — כיפי למתחילים ורציני לקשוחים."
+    "nivHe": "אחד מפארקי הוויקבורד בכבלים המתקדמים באירופה — כיפי למתחילים ורציני לקשוחים.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "lourdes-grotto-kretinga",
@@ -1898,7 +2136,9 @@ const PLACES = [
     "price": null,
     "emoji": "🙏",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "kretinga-park",
@@ -1912,7 +2152,9 @@ const PLACES = [
     "price": null,
     "emoji": "🌳",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "kretinga-museum",
@@ -1926,7 +2168,9 @@ const PLACES = [
     "price": null,
     "emoji": "🏛️",
     "niv": null,
-    "nivHe": null
+    "nivHe": null,
+    "status": "pending",
+    "source": "ai"
   },
   {
     "id": "pajurio-parkas",
@@ -1940,10 +2184,10 @@ const PLACES = [
     "price": null,
     "emoji": "🌾",
     "niv": "Dunes, lagoons, and migratory bird routes along the coast between Kretinga and the sea.",
-    "nivHe": "דיונות, לגונות ומסלולי ציפורים נודדות לאורך החוף בין קרטינגה לים."
+    "nivHe": "דיונות, לגונות ומסלולי ציפורים נודדות לאורך החוף בין קרטינגה לים.",
+    "status": "approved",
+    "source": "niv"
   },
-
-  // ── COUNTRYSIDE (additional) ──────────────────────────────────────────────────
   {
     "id": "kernave-archaeological",
     "region": "countryside",
@@ -1956,7 +2200,9 @@ const PLACES = [
     "price": null,
     "emoji": "⛰️",
     "niv": "Lithuania's oldest capital — five dramatic hill forts on the Neris river. UNESCO-listed, almost no crowds.",
-    "nivHe": "הבירה הקדומה ביותר של ליטא — חמש גבעות מבצר על נהר נריס. אתר UNESCO, כמעט ללא המון."
+    "nivHe": "הבירה הקדומה ביותר של ליטא — חמש גבעות מבצר על נהר נריס. אתר UNESCO, כמעט ללא המון.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "trakai-island-castle",
@@ -1970,7 +2216,9 @@ const PLACES = [
     "price": null,
     "emoji": "🏰",
     "niv": "A 14th-century red-brick castle rising from a lake — Lithuania's most iconic image. Rent a rowboat and circle it.",
-    "nivHe": "טירה מהמאה ה-14 עולה מתוך אגם — הדימוי הכי אייקוני של ליטא. שכר סירת חתירה וחתור סביבה."
+    "nivHe": "טירה מהמאה ה-14 עולה מתוך אגם — הדימוי הכי אייקוני של ליטא. שכר סירת חתירה וחתור סביבה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "anyksciai-treetop-path",
@@ -1984,7 +2232,9 @@ const PLACES = [
     "price": null,
     "emoji": "🌳",
     "niv": "A 300-metre elevated walkway through the forest canopy — the views, sounds, and silence are extraordinary.",
-    "nivHe": "שביל מוגבה של 300 מטר בחופת היער — הנופים, הצלילים והשקט יוצאי דופן."
+    "nivHe": "שביל מוגבה של 300 מטר בחופת היער — הנופים, הצלילים והשקט יוצאי דופן.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "kibinai-senoji",
@@ -1998,7 +2248,9 @@ const PLACES = [
     "price": "€5–15",
     "emoji": "🥐",
     "niv": "The best kibinai (Karaim meat pies) in Lithuania — baked fresh in Trakai from a 600-year-old recipe.",
-    "nivHe": "הקיביני הכי טובים בליטא — נאפים טריים בטראקאי ממתכון בן 600 שנה."
+    "nivHe": "הקיביני הכי טובים בליטא — נאפים טריים בטראקאי ממתכון בן 600 שנה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "dzukija-pine-forests",
@@ -2012,10 +2264,10 @@ const PLACES = [
     "price": null,
     "emoji": "🍄",
     "niv": "In autumn the whole of southern Lithuania heads into these ancient forests to pick mushrooms. Join them.",
-    "nivHe": "בסתיו כל דרום ליטא נכנס ליערות האלה לקטוף פטריות. הצטרפו."
+    "nivHe": "בסתיו כל דרום ליטא נכנס ליערות האלה לקטוף פטריות. הצטרפו.",
+    "status": "approved",
+    "source": "niv"
   },
-
-  // ── KAUNAS (additional) ───────────────────────────────────────────────────────
   {
     "id": "uoksas-kaunas",
     "region": "kaunas",
@@ -2028,7 +2280,9 @@ const PLACES = [
     "price": "€15–30",
     "emoji": "🍽️",
     "niv": "Kaunas's standout seasonal bistro — creative Lithuanian dishes and natural wine in a Bauhaus-era building.",
-    "nivHe": "הביסטרו העונתי הבולט של קאונאס — מנות ליטאיות יצירתיות ויין טבעי בבניין בסגנון באוהאוס."
+    "nivHe": "הביסטרו העונתי הבולט של קאונאס — מנות ליטאיות יצירתיות ויין טבעי בבניין בסגנון באוהאוס.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "ciurlionis-art-museum",
@@ -2042,7 +2296,9 @@ const PLACES = [
     "price": null,
     "emoji": "🎨",
     "niv": "Lithuania's greatest art collection — including the haunting symbolist paintings of Čiurlionis himself.",
-    "nivHe": "אוסף האמנות הגדול ביותר בליטא — כולל ציורי הסימבוליזם המרגשים של צ'ורליוניס עצמו."
+    "nivHe": "אוסף האמנות הגדול ביותר בליטא — כולל ציורי הסימבוליזם המרגשים של צ'ורליוניס עצמו.",
+    "status": "approved",
+    "source": "niv"
   }
 ];
 
