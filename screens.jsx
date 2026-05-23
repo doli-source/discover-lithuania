@@ -107,32 +107,17 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
         </div>
       </section>
 
-      {/* TIPS — featured */}
-      <section className="section">
+      {/* INTERACTIVE MAP */}
+      <section className="section home-map-section">
         <div className="section-head">
           <div>
-            <div className="section-eyebrow">★ {lang === 'he' ? 'מומלצים מיוחדים' : 'Featured picks'}</div>
-            <h2 className="section-title">{lang === 'he' ? 'המקומות שלא תרצה לפספס' : "Don't miss these"}</h2>
-            <p className="section-sub">{lang === 'he' ? 'המלצות עם הסבר למה שווה ללכת.' : 'Recommendations with a note on why they\'re worth it.'}</p>
+            <div className="section-eyebrow">{lang === 'he' ? 'מפה אינטרקטיבית' : 'Interactive map'}</div>
+            <h2 className="section-title">{lang === 'he' ? 'בחר אזור ותתחיל לגלות' : 'Pick a region to explore'}</h2>
+            <p className="section-sub">{lang === 'he' ? 'לחץ על אזור במפה לצפייה בכל המקומות בו.' : 'Tap any region on the map to see all its places.'}</p>
           </div>
         </div>
-        <div className="tips-grid">
-          {nivPicks.map(p => {
-            const r = regions.find(re => re.id === p.region);
-            return (
-              <PlaceCard
-                key={p.id}
-                place={p}
-                region={r}
-                lang={lang}
-                t={t}
-                onClick={() => openPlace(p.id)}
-                saved={savedSet.has(p.id)}
-                onToggleSave={toggleSaved}
-                accent={r && r.accent}
-              />
-            );
-          })}
+        <div className="home-map-wrap">
+          <MapIllustration regions={regions} activeRegion={null} onPick={(regionId) => nav('explore', { region: regionId })} t={t} lang={lang} />
         </div>
       </section>
 
@@ -167,6 +152,35 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
                 <h3 className="region-name">{r[lang].name}</h3>
                 <p className="region-blurb">{r[lang].blurb}</p>
               </article>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* TIPS — featured */}
+      <section className="section">
+        <div className="section-head">
+          <div>
+            <div className="section-eyebrow">★ {lang === 'he' ? 'מומלצים מיוחדים' : 'Featured picks'}</div>
+            <h2 className="section-title">{lang === 'he' ? 'המקומות שלא תרצה לפספס' : "Don't miss these"}</h2>
+            <p className="section-sub">{lang === 'he' ? 'המלצות עם הסבר למה שווה ללכת.' : "Recommendations with a note on why they're worth it."}</p>
+          </div>
+        </div>
+        <div className="tips-grid tips-grid-home">
+          {nivPicks.map(p => {
+            const r = regions.find(re => re.id === p.region);
+            return (
+              <PlaceCard
+                key={p.id}
+                place={p}
+                region={r}
+                lang={lang}
+                t={t}
+                onClick={() => openPlace(p.id)}
+                saved={savedSet.has(p.id)}
+                onToggleSave={toggleSaved}
+                accent={r && r.accent}
+              />
             );
           })}
         </div>
@@ -280,6 +294,10 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
   return (
     <div className="explore">
       <div className="explore-header">
+        {/* Map first so it appears at top on mobile */}
+        <div className="explore-map-col">
+          <MapIllustration regions={regions} activeRegion={activeRegion} onPick={setActiveRegion} t={t} lang={lang} />
+        </div>
         <div className="explore-intro">
           <div className="section-eyebrow">{lang === 'he' ? 'גלה' : 'Explore'}</div>
           <h1 className="page-title">{lang === 'he' ? 'בחר אזור' : 'Pick a region'}</h1>
@@ -289,7 +307,6 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
               : `${places.length} places across the country. Click any card for details.`}
           </p>
         </div>
-        <MapIllustration regions={regions} activeRegion={activeRegion} onPick={setActiveRegion} t={t} lang={lang} />
       </div>
 
       <div className="region-tabs">
@@ -310,9 +327,20 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
       </div>
 
       <div className="region-detail">
-        <div className="region-detail-head">
-          <h2 className="region-detail-title" style={{ color: region.accent }}>{region[lang].name}</h2>
-          <p className="region-detail-blurb">{region[lang].blurb}</p>
+        {/* Region banner — image + title + blurb */}
+        <div className="region-banner" style={{ '--region-accent': region.accent }}>
+          <div className="region-banner-img-wrap">
+            <img
+              className="region-banner-img"
+              src={(window.REGION_IMAGES && window.REGION_IMAGES[region.id]) || `regions/${region.id}.jpg`}
+              alt={region[lang].name}
+            />
+          </div>
+          <div className="region-banner-body">
+            <span className="region-banner-tag" style={{ color: region.accent }}>{region[lang].tag}</span>
+            <h2 className="region-banner-title" style={{ color: region.accent }}>{region[lang].name}</h2>
+            <p className="region-banner-blurb">{region[lang].blurb}</p>
+          </div>
         </div>
 
         <div className="filter-bar">
@@ -339,7 +367,7 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
         {filtered.length === 0 ? (
           <p className="empty-state">{lang === 'he' ? 'לא נמצאו מקומות בקטגוריה הזו.' : 'No places match this filter.'}</p>
         ) : (
-          <div className="places-grid">
+          <div className="places-grid places-grid-sm">
             {filtered.map(p => (
               <PlaceCard
                 key={p.id}
@@ -765,8 +793,15 @@ function AdminScreen({ allPlaces, adminOverrides, onOverride, regions }) {
   const [authed, setAuthed] = useState(
     () => localStorage.getItem('lt_admin_authed') === '1'
   );
-  const [filter, setFilter] = useState({ region: '', kind: '', status: '', search: '' });
+  const [filter, setFilter] = useState({ region: '', kind: '', status: '', source: '', search: '' });
+  const [sort, setSort]     = useState({ by: 'status', dir: 'asc' });
+  const [selectedIds, setSelectedIds] = useState(new Set());
   const [pendingNotes, setPendingNotes] = useState({});
+
+  // Reset selection whenever filters or sort-key change (hooks must be before conditional return)
+  useEffect(() => {
+    setSelectedIds(new Set());
+  }, [filter.region, filter.kind, filter.status, filter.source, filter.search, sort.by]);
 
   if (!authed) return <AdminLogin onAuth={() => setAuthed(true)} />;
 
@@ -783,16 +818,52 @@ function AdminScreen({ allPlaces, adminOverrides, onOverride, regions }) {
     .filter(p => !filter.region || p.region === filter.region)
     .filter(p => !filter.kind   || p.kind   === filter.kind)
     .filter(p => !filter.status || p.status === filter.status)
+    .filter(p => !filter.source || p.source === filter.source)
     .filter(p => !filter.search || p.name.toLowerCase().includes(filter.search.toLowerCase()));
 
-  // Sort: approved first, then pending, then hidden
+  // Dynamic sort
+  const statusOrder = { approved: 0, pending: 1, hidden: 2 };
   const sorted = [...filtered].sort((a, b) => {
-    const order = { approved: 0, pending: 1, hidden: 2 };
-    return (order[a.status] ?? 1) - (order[b.status] ?? 1);
+    let va, vb;
+    switch (sort.by) {
+      case 'status':  va = statusOrder[a.status] ?? 1; vb = statusOrder[b.status] ?? 1; break;
+      case 'source':  va = a.source === 'niv' ? 0 : 1; vb = b.source === 'niv' ? 0 : 1; break;
+      case 'region':  va = a.region || ''; vb = b.region || ''; break;
+      case 'name':    va = a.name || ''; vb = b.name || ''; break;
+      case 'rating':  va = b.rating || 0; vb = a.rating || 0; break;
+      default: return 0;
+    }
+    const cmp = typeof va === 'string' ? va.localeCompare(vb) : va - vb;
+    return sort.dir === 'asc' ? cmp : -cmp;
   });
 
+  // Multi-select helpers
+  const allSelected  = sorted.length > 0 && sorted.every(p => selectedIds.has(p.id));
+  const someSelected = !allSelected && sorted.some(p => selectedIds.has(p.id));
+  const selectedCount = sorted.filter(p => selectedIds.has(p.id)).length;
+
+  function toggleSelectAll() {
+    setSelectedIds(prev => {
+      const next = new Set(prev);
+      if (allSelected) { sorted.forEach(p => next.delete(p.id)); }
+      else             { sorted.forEach(p => next.add(p.id)); }
+      return next;
+    });
+  }
+  function toggleSelect(id) {
+    setSelectedIds(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id); else next.add(id);
+      return next;
+    });
+  }
+  function bulkSetStatus(status) {
+    sorted.filter(p => selectedIds.has(p.id)).forEach(p => onOverride(p.id, { status }));
+    setSelectedIds(new Set());
+  }
+
   function cycleStatus(p) {
-    const idx = STATUS_CYCLE.indexOf(p.status);
+    const idx  = STATUS_CYCLE.indexOf(p.status);
     const next = STATUS_CYCLE[(idx + 1) % STATUS_CYCLE.length];
     onOverride(p.id, { status: next });
   }
@@ -806,18 +877,15 @@ function AdminScreen({ allPlaces, adminOverrides, onOverride, regions }) {
 
   function handleExport() {
     const { REGIONS: R, LANDMARKS, DISHES, ITINERARIES, FACTS, MAP_URL } = window.LT_DATA;
-    const updatedPlaces = allPlaces.map(p => ({
-      ...p,
-      ...(adminOverrides[p.id] || {})
-    }));
+    const updatedPlaces = allPlaces.map(p => ({ ...p, ...(adminOverrides[p.id] || {}) }));
     const out = [
       '(function() {\n',
-      'const REGIONS = ' + JSON.stringify(R, null, 2) + ';\n\n',
-      'const PLACES = '  + JSON.stringify(updatedPlaces, null, 2) + ';\n\n',
-      'const LANDMARKS = '   + JSON.stringify(LANDMARKS, null, 2)   + ';\n\n',
-      'const ITINERARIES = ' + JSON.stringify(ITINERARIES, null, 2) + ';\n\n',
-      'const DISHES = '  + JSON.stringify(DISHES, null, 2)  + ';\n\n',
-      'const FACTS = '   + JSON.stringify(FACTS, null, 2)   + ';\n\n',
+      'const REGIONS = '     + JSON.stringify(R, null, 2)            + ';\n\n',
+      'const PLACES = '      + JSON.stringify(updatedPlaces, null, 2) + ';\n\n',
+      'const LANDMARKS = '   + JSON.stringify(LANDMARKS, null, 2)    + ';\n\n',
+      'const ITINERARIES = ' + JSON.stringify(ITINERARIES, null, 2)  + ';\n\n',
+      'const DISHES = '      + JSON.stringify(DISHES, null, 2)       + ';\n\n',
+      'const FACTS = '       + JSON.stringify(FACTS, null, 2)        + ';\n\n',
       'window.LT_DATA = { REGIONS, PLACES, LANDMARKS, DISHES, ITINERARIES, FACTS, MAP_URL: '
         + JSON.stringify(MAP_URL) + ' };\n\n',
       '})();'
@@ -832,6 +900,8 @@ function AdminScreen({ allPlaces, adminOverrides, onOverride, regions }) {
   const approvedCnt = effective.filter(p => p.status === 'approved').length;
   const pendingCnt  = effective.filter(p => p.status === 'pending').length;
   const hiddenCnt   = effective.filter(p => p.status === 'hidden').length;
+
+  const SORT_LABELS = { status: 'סטטוס', source: 'מקור', region: 'אזור', name: 'שם', rating: 'דירוג' };
 
   return (
     <div className="admin-screen" dir="rtl">
@@ -868,6 +938,23 @@ function AdminScreen({ allPlaces, adminOverrides, onOverride, regions }) {
           <option value="pending">⏳ ממתין</option>
           <option value="hidden">🚫 מוסתר</option>
         </select>
+        <select value={filter.source} onChange={e => setFilter(f => ({ ...f, source: e.target.value }))}>
+          <option value="">כל המקורות</option>
+          <option value="niv">🟢 ניב</option>
+          <option value="ai">🤖 AI</option>
+        </select>
+        <select value={sort.by} onChange={e => setSort(s => ({ ...s, by: e.target.value }))}>
+          {Object.entries(SORT_LABELS).map(([k, v]) => (
+            <option key={k} value={k}>מיון: {v}</option>
+          ))}
+        </select>
+        <button
+          className="sort-dir-btn"
+          onClick={() => setSort(s => ({ ...s, dir: s.dir === 'asc' ? 'desc' : 'asc' }))}
+          title={sort.dir === 'asc' ? 'סדר עולה — לחץ להפיך' : 'סדר יורד — לחץ להפיך'}
+        >
+          {sort.dir === 'asc' ? '↑' : '↓'}
+        </button>
         <input
           type="search"
           placeholder="🔍 חיפוש מקום..."
@@ -877,10 +964,28 @@ function AdminScreen({ allPlaces, adminOverrides, onOverride, regions }) {
         <span className="filter-count">{sorted.length} / {allPlaces.length}</span>
       </div>
 
+      {selectedCount > 0 && (
+        <div className="admin-bulk-bar">
+          <span className="bulk-count">{selectedCount} נבחרו</span>
+          <button className="bulk-btn bulk-approve" onClick={() => bulkSetStatus('approved')}>✅ אשר</button>
+          <button className="bulk-btn bulk-pending" onClick={() => bulkSetStatus('pending')}>⏳ ממתין</button>
+          <button className="bulk-btn bulk-hide"    onClick={() => bulkSetStatus('hidden')}>🚫 הסתר</button>
+          <button className="bulk-clear" onClick={() => setSelectedIds(new Set())}>✕ בטל בחירה</button>
+        </div>
+      )}
+
       <div className="admin-table-wrap">
         <table className="admin-table">
           <thead>
             <tr>
+              <th className="col-check">
+                <input
+                  type="checkbox"
+                  checked={allSelected}
+                  ref={el => { if (el) el.indeterminate = someSelected; }}
+                  onChange={toggleSelectAll}
+                />
+              </th>
               <th>סטטוס</th>
               <th>מקור</th>
               <th>אזור</th>
@@ -893,10 +998,14 @@ function AdminScreen({ allPlaces, adminOverrides, onOverride, regions }) {
           </thead>
           <tbody>
             {sorted.map(p => {
-              const region  = regionMap[p.region];
+              const reg     = regionMap[p.region];
               const noteVal = pendingNotes[p.id] !== undefined ? pendingNotes[p.id] : p.notes;
+              const isSel   = selectedIds.has(p.id);
               return (
-                <tr key={p.id} className={`admin-row ${p.status === 'hidden' ? 'row-hidden' : ''}`}>
+                <tr key={p.id} className={`admin-row ${p.status === 'hidden' ? 'row-hidden' : ''} ${isSel ? 'row-selected' : ''}`}>
+                  <td className="col-check">
+                    <input type="checkbox" checked={isSel} onChange={() => toggleSelect(p.id)} />
+                  </td>
                   <td>
                     <button
                       className={`status-badge ${STATUS_CLS[p.status]}`}
@@ -911,9 +1020,7 @@ function AdminScreen({ allPlaces, adminOverrides, onOverride, regions }) {
                       {p.source === 'niv' ? '🟢 ניב' : '🤖 AI'}
                     </span>
                   </td>
-                  <td className="col-region">
-                    {region ? region.he.name : p.region}
-                  </td>
+                  <td className="col-region">{reg ? reg.he.name : p.region}</td>
                   <td className="col-name">
                     <div className="place-name">{p.name}</div>
                     <div className="place-id">{p.id}</div>
