@@ -78,6 +78,25 @@ function App() {
   const [screen,      setScreen]     = useState(() => parseURL().screen);
   const [params,      setParams]     = useState(() => parseURL().params);
   const [savedSet, setSavedSet]      = useState(() => new Set(JSON.parse(localStorage.getItem('lt_saved') || '[]')));
+  const [adminOverrides, setAdminOverrides] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('lt_admin') || '{}'); }
+    catch { return {}; }
+  });
+
+  function applyAdminOverride(id, patch) {
+    setAdminOverrides(prev => {
+      const next = { ...prev, [id]: { ...(prev[id] || {}), ...patch } };
+      localStorage.setItem('lt_admin', JSON.stringify(next));
+      return next;
+    });
+  }
+
+  const effectivePlaces = useMemo(() => {
+    return PLACES
+      .map(p => ({ ...p, ...(adminOverrides[p.id] || {}) }))
+      .filter(p => p.status !== 'hidden');
+  }, [adminOverrides]);
+
   const [openPlaceId, setOpenPlaceId] = useState(() => parseURL().openPlaceId);
 
   useEffect(() => {
@@ -162,7 +181,7 @@ function App() {
     const qs = p.toString();
     history.pushState(null, '', qs ? '?' + qs : location.pathname);
   };
-  const openPlaceData = openPlaceId ? PLACES.find(p => p.id === openPlaceId) : null;
+  const openPlaceData = openPlaceId ? effectivePlaces.find(p => p.id === openPlaceId) : null;
   const openPlaceRegion = openPlaceData ? REGIONS.find(r => r.id === openPlaceData.region) : null;
 
   return (
@@ -171,24 +190,24 @@ function App() {
 
       <main className="main">
         {screen === 'home' && (
-          <HomeScreen lang={lang} t={t} regions={REGIONS} places={PLACES} landmarks={LANDMARKS}
+          <HomeScreen lang={lang} t={t} regions={REGIONS} places={effectivePlaces} landmarks={LANDMARKS}
             dishes={DISHES} itineraries={ITINERARIES} facts={FACTS} mapUrl={MAP_URL} nav={nav}
             savedSet={savedSet} toggleSaved={toggleSaved} openPlace={openPlace} />
         )}
         {screen === 'explore' && (
-          <ExploreScreen lang={lang} t={t} regions={REGIONS} places={PLACES} mapUrl={MAP_URL} params={params} nav={nav}
+          <ExploreScreen lang={lang} t={t} regions={REGIONS} places={effectivePlaces} mapUrl={MAP_URL} params={params} nav={nav}
             savedSet={savedSet} toggleSaved={toggleSaved} openPlace={openPlace} />
         )}
         {screen === 'routes' && (
-          <RoutesScreen lang={lang} t={t} regions={REGIONS} places={PLACES} landmarks={LANDMARKS} itineraries={ITINERARIES}
+          <RoutesScreen lang={lang} t={t} regions={REGIONS} places={effectivePlaces} landmarks={LANDMARKS} itineraries={ITINERARIES}
             params={params} openPlace={openPlace} />
         )}
         {screen === 'food' && (
-          <FoodScreen lang={lang} t={t} places={PLACES} dishes={DISHES} regions={REGIONS}
+          <FoodScreen lang={lang} t={t} places={effectivePlaces} dishes={DISHES} regions={REGIONS}
             savedSet={savedSet} toggleSaved={toggleSaved} openPlace={openPlace} />
         )}
         {screen === 'stays' && (
-          <StaysScreen lang={lang} t={t} places={PLACES} regions={REGIONS}
+          <StaysScreen lang={lang} t={t} places={effectivePlaces} regions={REGIONS}
             savedSet={savedSet} toggleSaved={toggleSaved} openPlace={openPlace} />
         )}
       </main>
