@@ -1,5 +1,7 @@
 // All screens for the Lithuania travel app — wired to Niv's curated places
 
+const ADMIN_PASSWORD = 'discover-lt-admin'; // ← change this before deploying
+
 const { useState, useEffect, useMemo, useRef } = React;
 
 // ─── PLACE CARD (shared) ────────────────────────────────────────────────
@@ -722,4 +724,229 @@ function SavedScreen({ savedSet, places, regions, lang, t, openPlace, toggleSave
   );
 }
 
-Object.assign(window, { HomeScreen, ExploreScreen, RoutesScreen, FoodScreen, StaysScreen, PlaceModal, PlaceCard, SavedScreen });
+// ─── ADMIN PANEL ────────────────────────────────────────────────────────────
+function AdminLogin({ onAuth }) {
+  const [pwd, setPwd] = useState('');
+  const [err, setErr] = useState(false);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (pwd === ADMIN_PASSWORD) {
+      localStorage.setItem('lt_admin_authed', '1');
+      onAuth();
+    } else {
+      setErr(true);
+      setPwd('');
+    }
+  }
+
+  return (
+    <div className="admin-login">
+      <form className="admin-login-form" onSubmit={handleSubmit}>
+        <div className="admin-login-logo">⚙️</div>
+        <h1 className="admin-login-title">Discover LT Admin</h1>
+        <input
+          className={`admin-login-input ${err ? 'input-err' : ''}`}
+          type="password"
+          value={pwd}
+          onChange={e => { setPwd(e.target.value); setErr(false); }}
+          placeholder="Password"
+          autoFocus
+        />
+        {err && <p className="admin-login-err">Wrong password</p>}
+        <button className="admin-login-btn" type="submit">Enter</button>
+      </form>
+    </div>
+  );
+}
+
+const STATUS_CYCLE  = ['approved', 'pending', 'hidden'];
+const STATUS_LABELS = { approved: '✅ מאושר', pending: '⏳ ממתין', hidden: '🚫 מוסתר' };
+const STATUS_CLS    = { approved: 'status-approved', pending: 'status-pending', hidden: 'status-hidden' };
+
+function AdminScreen({ allPlaces, adminOverrides, onOverride, regions }) {
+  const [authed, setAuthed] = useState(
+    () => localStorage.getItem('lt_admin_authed') === '1'
+  );
+  const [filter, setFilter] = useState({ region: '', kind: '', status: '', search: '' });
+  const [pendingNotes, setPendingNotes] = useState({});
+
+  if (!authed) return <AdminLogin onAuth={() => setAuthed(true)} />;
+
+  // Merge overrides into allPlaces for display
+  const effective = allPlaces.map(p => ({
+    ...p,
+    status: (adminOverrides[p.id] && adminOverrides[p.id].status) ? adminOverrides[p.id].status : (p.status || 'pending'),
+    source: p.source || 'ai',
+    notes:  (adminOverrides[p.id] && adminOverrides[p.id].notes) ? adminOverrides[p.id].notes : ''
+  }));
+
+  // Apply filters
+  const filtered = effective
+    .filter(p => !filter.region || p.region === filter.region)
+    .filter(p => !filter.kind   || p.kind   === filter.kind)
+    .filter(p => !filter.status || p.status === filter.status)
+    .filter(p => !filter.search || p.name.toLowerCase().includes(filter.search.toLowerCase()));
+
+  // Sort: approved first, then pending, then hidden
+  const sorted = [...filtered].sort((a, b) => {
+    const order = { approved: 0, pending: 1, hidden: 2 };
+    return (order[a.status] ?? 1) - (order[b.status] ?? 1);
+  });
+
+  function cycleStatus(p) {
+    const idx = STATUS_CYCLE.indexOf(p.status);
+    const next = STATUS_CYCLE[(idx + 1) % STATUS_CYCLE.length];
+    onOverride(p.id, { status: next });
+  }
+
+  function saveNote(id) {
+    if (pendingNotes[id] !== undefined) {
+      onOverride(id, { notes: pendingNotes[id] });
+      setPendingNotes(prev => { const n = { ...prev }; delete n[id]; return n; });
+    }
+  }
+
+  function handleExport() {
+    const { REGIONS: R, LANDMARKS, DISHES, ITINERARIES, FACTS, MAP_URL } = window.LT_DATA;
+    const updatedPlaces = allPlaces.map(p => ({
+      ...p,
+      ...(adminOverrides[p.id] || {})
+    }));
+    const out = [
+      '(function() {\n',
+      'const REGIONS = ' + JSON.stringify(R, null, 2) + ';\n\n',
+      'const PLACES = '  + JSON.stringify(updatedPlaces, null, 2) + ';\n\n',
+      'const LANDMARKS = '   + JSON.stringify(LANDMARKS, null, 2)   + ';\n\n',
+      'const ITINERARIES = ' + JSON.stringify(ITINERARIES, null, 2) + ';\n\n',
+      'const DISHES = '  + JSON.stringify(DISHES, null, 2)  + ';\n\n',
+      'const FACTS = '   + JSON.stringify(FACTS, null, 2)   + ';\n\n',
+      'window.LT_DATA = { REGIONS, PLACES, LANDMARKS, DISHES, ITINERARIES, FACTS, MAP_URL: '
+        + JSON.stringify(MAP_URL) + ' };\n\n',
+      '})();'
+    ].join('');
+    const blob = new Blob([out], { type: 'text/javascript' });
+    const url  = URL.createObjectURL(blob);
+    Object.assign(document.createElement('a'), { href: url, download: 'data.js' }).click();
+    URL.revokeObjectURL(url);
+  }
+
+  const regionMap   = Object.fromEntries(regions.map(r => [r.id, r]));
+  const approvedCnt = effective.filter(p => p.status === 'approved').length;
+  const pendingCnt  = effective.filter(p => p.status === 'pending').length;
+  const hiddenCnt   = effective.filter(p => p.status === 'hidden').length;
+
+  return (
+    <div className="admin-screen" dir="rtl">
+      <div className="admin-topbar">
+        <span className="admin-logo">⚙️ Discover LT — Admin</span>
+        <div className="admin-stats">
+          <span className="stat approved">✅ {approvedCnt}</span>
+          <span className="stat pending">⏳ {pendingCnt}</span>
+          <span className="stat hidden">🚫 {hiddenCnt}</span>
+        </div>
+        <button className="btn-export" onClick={handleExport}>⬇ Export data.js</button>
+        <button
+          className="btn-logout"
+          onClick={() => { localStorage.removeItem('lt_admin_authed'); setAuthed(false); }}
+        >
+          יציאה
+        </button>
+      </div>
+
+      <div className="admin-filters">
+        <select value={filter.region} onChange={e => setFilter(f => ({ ...f, region: e.target.value }))}>
+          <option value="">כל האזורים</option>
+          {regions.map(r => <option key={r.id} value={r.id}>{r.he.name}</option>)}
+        </select>
+        <select value={filter.kind} onChange={e => setFilter(f => ({ ...f, kind: e.target.value }))}>
+          <option value="">כל הסוגים</option>
+          {['cafe','restaurant','stay','culture','nature','market'].map(k => (
+            <option key={k} value={k}>{k}</option>
+          ))}
+        </select>
+        <select value={filter.status} onChange={e => setFilter(f => ({ ...f, status: e.target.value }))}>
+          <option value="">כל הסטטוסים</option>
+          <option value="approved">✅ מאושר</option>
+          <option value="pending">⏳ ממתין</option>
+          <option value="hidden">🚫 מוסתר</option>
+        </select>
+        <input
+          type="search"
+          placeholder="🔍 חיפוש מקום..."
+          value={filter.search}
+          onChange={e => setFilter(f => ({ ...f, search: e.target.value }))}
+        />
+        <span className="filter-count">{sorted.length} / {allPlaces.length}</span>
+      </div>
+
+      <div className="admin-table-wrap">
+        <table className="admin-table">
+          <thead>
+            <tr>
+              <th>סטטוס</th>
+              <th>מקור</th>
+              <th>אזור</th>
+              <th>מקום</th>
+              <th>סוג</th>
+              <th>דירוג</th>
+              <th>מפות</th>
+              <th>הערה</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sorted.map(p => {
+              const region  = regionMap[p.region];
+              const noteVal = pendingNotes[p.id] !== undefined ? pendingNotes[p.id] : p.notes;
+              return (
+                <tr key={p.id} className={`admin-row ${p.status === 'hidden' ? 'row-hidden' : ''}`}>
+                  <td>
+                    <button
+                      className={`status-badge ${STATUS_CLS[p.status]}`}
+                      onClick={() => cycleStatus(p)}
+                      title="לחץ להחלפת סטטוס"
+                    >
+                      {STATUS_LABELS[p.status]}
+                    </button>
+                  </td>
+                  <td>
+                    <span className={`source-badge source-${p.source}`}>
+                      {p.source === 'niv' ? '🟢 ניב' : '🤖 AI'}
+                    </span>
+                  </td>
+                  <td className="col-region">
+                    {region ? region.he.name : p.region}
+                  </td>
+                  <td className="col-name">
+                    <div className="place-name">{p.name}</div>
+                    <div className="place-id">{p.id}</div>
+                  </td>
+                  <td>
+                    <span className="kind-badge">{p.emoji} {p.kind}</span>
+                  </td>
+                  <td className="col-rating">★ {p.rating ? p.rating.toFixed(1) : '—'}</td>
+                  <td>
+                    {p.mapUrl
+                      ? <a href={p.mapUrl} target="_blank" rel="noopener noreferrer" className="maps-link">🗺 פתח</a>
+                      : <span className="no-link">—</span>}
+                  </td>
+                  <td>
+                    <input
+                      className="note-input"
+                      value={noteVal}
+                      placeholder="הוסף הערה..."
+                      onChange={e => setPendingNotes(n => ({ ...n, [p.id]: e.target.value }))}
+                      onBlur={() => saveNote(p.id)}
+                    />
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+Object.assign(window, { HomeScreen, ExploreScreen, RoutesScreen, FoodScreen, StaysScreen, PlaceModal, PlaceCard, SavedScreen, AdminScreen });
