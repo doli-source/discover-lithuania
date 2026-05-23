@@ -35,7 +35,7 @@ const FONT_PAIRS = {
 //   ?place=ID       → place modal overlay (works on any screen)
 //   ?lang=en        → language override (default: he)
 
-const VALID_SCREENS = ['home', 'explore', 'routes', 'food', 'stays'];
+const VALID_SCREENS = ['home', 'explore', 'routes', 'food', 'stays', 'saved', 'admin'];
 
 function parseURL() {
   const seg = location.pathname.replace(/^\//, '').split('/').filter(Boolean);
@@ -184,9 +184,23 @@ function App() {
   const openPlaceData = openPlaceId ? effectivePlaces.find(p => p.id === openPlaceId) : null;
   const openPlaceRegion = openPlaceData ? REGIONS.find(r => r.id === openPlaceData.region) : null;
 
+  // Admin panel — full-screen, no NavBar/Footer
+  if (screen === 'admin') {
+    return (
+      <div style={{ minHeight: '100vh', background: '#f5f5f5' }}>
+        <AdminScreen
+          allPlaces={PLACES}
+          adminOverrides={adminOverrides}
+          onOverride={applyAdminOverride}
+          regions={REGIONS}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className="app">
-      <NavBar lang={lang} setLang={setLang} screen={screen} nav={nav} t={t} savedCount={savedSet.size} />
+      <NavBar lang={lang} setLang={setLang} screen={screen} nav={nav} t={t} savedCount={savedSet.size} onSavedClick={() => nav('saved')} />
 
       <main className="main">
         {screen === 'home' && (
@@ -210,6 +224,17 @@ function App() {
           <StaysScreen lang={lang} t={t} places={effectivePlaces} regions={REGIONS}
             savedSet={savedSet} toggleSaved={toggleSaved} openPlace={openPlace} />
         )}
+        {screen === 'saved' && (
+          <SavedScreen
+            savedSet={savedSet}
+            places={effectivePlaces}
+            regions={REGIONS}
+            lang={lang}
+            t={t}
+            openPlace={openPlace}
+            toggleSaved={toggleSaved}
+          />
+        )}
       </main>
 
       <Footer lang={lang} t={t} nav={nav} />
@@ -232,7 +257,7 @@ function App() {
   );
 }
 
-function NavBar({ lang, setLang, screen, nav, t, savedCount }) {
+function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   useEffect(() => {
@@ -278,7 +303,7 @@ function NavBar({ lang, setLang, screen, nav, t, savedCount }) {
 
         <div className="nav-actions">
           {savedCount > 0 && (
-            <button className="saved-btn" aria-label={t.yourTrip}>
+            <button className="saved-btn" onClick={onSavedClick} aria-label={t.yourTrip}>
               <Icon.bookmarkFill/>
               <span>{savedCount}</span>
             </button>
