@@ -49,8 +49,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
   const stats = useMemo(() => {
     const total = places.length;
     const cities = new Set(places.map(p => p.region)).size;
-    const avg = (places.reduce((s, p) => s + p.rating, 0) / total).toFixed(1);
-    return { total, cities, avg };
+    return { total, cities };
   }, [places]);
 
   const nivPicks = places.filter(p => p.niv);
@@ -83,8 +82,6 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
             <div className="hstat"><span className="hstat-num">{stats.total}</span><span className="hstat-lbl">{lang === 'he' ? 'מקומות' : 'Places'}</span></div>
             <div className="hstat-sep"></div>
             <div className="hstat"><span className="hstat-num">{stats.cities}</span><span className="hstat-lbl">{lang === 'he' ? 'אזורים' : 'Regions'}</span></div>
-            <div className="hstat-sep"></div>
-            <div className="hstat"><span className="hstat-num">{stats.avg}</span><span className="hstat-lbl">{lang === 'he' ? 'ממוצע' : 'Avg rating'}</span></div>
           </div>
           <div className="hero-cta">
             <button className="btn btn-primary" onClick={() => nav('explore')}>
