@@ -128,155 +128,156 @@ const Icon = {
   globe: (props) => <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
 };
 
-// Geographic outline of Lithuania — traced from real map data
 function MapIllustration({ regions, activeRegion, onPick, t, lang }) {
-  // Real-world coords projected to viewBox (lon→x, lat→y)
-  // Dots positioned to match actual city locations on the silhouette
-  const dots = {
-    klaipeda:    { x: 17,  y: 38, anchor: 'start',  lx:  21, ly: 39 },
-    curonian:    { x: 8,   y: 56, anchor: 'middle', lx:  13, ly: 73 },
-    kaunas:      { x: 46,  y: 55, anchor: 'start',  lx:  50, ly: 56 },
-    vilnius:     { x: 68,  y: 60, anchor: 'start',  lx:  72, ly: 61 },
-    druskininkai:{ x: 47,  y: 88, anchor: 'middle', lx:  47, ly: 95 },
-    // Additional cities
-    palanga:     { x: 15,  y: 28, anchor: 'start',  lx:  19, ly: 29 },
-    kretinga:    { x: 20,  y: 32, anchor: 'start',  lx:  24, ly: 33 },
-    moletai:     { x: 64,  y: 42, anchor: 'start',  lx:  68, ly: 43 },
-    utena:       { x: 70,  y: 34, anchor: 'start',  lx:  74, ly: 35 },
-    zarasai:     { x: 82,  y: 24, anchor: 'end',    lx:  79, ly: 25 }
+  // Map data-place IDs to app region IDs
+  const placeToRegion = {
+    vilnius: 'vilnius',
+    kaunas: 'kaunas',
+    klaipeda: 'klaipeda',
+    nida: 'curonian',
+    druskininkai: 'druskininkai',
+    kretinga: 'kretinga',
+    palanga: 'palanga',
+    moletai: 'moletai',
+    utena: 'utena',
+    zarasai: 'zarasai',
   };
 
-  // Countryside is scattered across the whole country (10 rural spots).
-  // Render as multiple small subtle dots, with one label off to the side.
-  const countrysideScatter = [
-    { x: 32, y: 30 }, { x: 56, y: 28 }, { x: 70, y: 40 },
-    { x: 38, y: 45 }, { x: 60, y: 68 }, { x: 28, y: 65 },
-    { x: 80, y: 50 }, { x: 50, y: 70 }
-  ];
-  const countryside = regions.find(r => r.id === 'countryside');
+  function handleClick(placeKey) {
+    const regionId = placeToRegion[placeKey] || placeKey;
+    if (onPick) onPick(regionId);
+  }
 
-  // Realistic Lithuania outline — wider north, narrower south, eastward bulge near Vilnius,
-  // southern "tongue" toward Druskininkai, short Baltic coast in the west.
-  const mainlandPath = `
-    M 16 22
-    C 20 19, 28 16, 38 15
-    C 50 14, 62 14, 72 16
-    C 79 17, 83 20, 85 24
-    C 87 28, 87 33, 86 38
-    C 87 44, 90 50, 91 56
-    C 91 62, 88 67, 84 70
-    C 80 74, 74 75, 68 76
-    C 62 77, 57 77, 55 79
-    C 53 82, 52 86, 51 90
-    C 49 92, 47 93, 45 91
-    C 43 88, 42 85, 38 84
-    C 32 84, 26 83, 22 80
-    C 18 76, 17 71, 18 66
-    L 18 62
-    C 18 58, 17 52, 16 46
-    C 15 40, 15 30, 16 22
-    Z
-  `;
-  // Curonian Spit — narrow detached peninsula off the SW coast
-  const spitPath = `
-    M 12 38
-    C 9 44, 7 50, 6 56
-    C 5 62, 6 67, 8 70
-    C 10 71, 12 68, 13 62
-    C 14 56, 14 48, 13 40
-    C 13 38, 12 37, 12 38
-    Z
-  `;
+  const isActive = (placeKey) => activeRegion === (placeToRegion[placeKey] || placeKey);
 
   return (
     <div className="map-wrap">
-      <svg viewBox="0 0 100 100" className="map-svg" preserveAspectRatio="xMidYMid meet">
+      <svg viewBox="0 0 1000 760" className="map-svg lt-map-svg" role="img"
+           aria-label="Clickable illustrated map of Lithuania" preserveAspectRatio="xMidYMid meet">
         <defs>
-          <pattern id="topo" width="2.6" height="2.6" patternUnits="userSpaceOnUse" patternTransform="rotate(28)">
-            <line x1="0" y1="0" x2="0" y2="2.6" stroke="rgba(120,90,55,0.10)" strokeWidth="0.4"/>
+          <pattern id="lt-topo" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(28)">
+            <line x1="0" y1="0" x2="0" y2="26" stroke="rgba(120,90,55,0.10)" strokeWidth="2"/>
           </pattern>
         </defs>
 
-        {/* Baltic Sea label */}
-        <text x="2" y="20" fontSize="2.4" fill="#7a8c95" fontStyle="italic" opacity="0.75">Baltic Sea</text>
+        {/* Background */}
+        <rect x="0" y="0" width="1000" height="760" rx="28" fill="#f3ead9" />
+        <rect x="0" y="0" width="260" height="760" fill="#dce8eb" opacity=".62" />
 
-        {/* Surrounding country labels (subtle) */}
-        <text x="50" y="9" fontSize="1.9" fill="#a8a090" textAnchor="middle" opacity="0.55" letterSpacing="0.4">LATVIA</text>
-        <text x="95" y="50" fontSize="1.9" fill="#a8a090" textAnchor="end" opacity="0.55" letterSpacing="0.4">BELARUS</text>
-        <text x="40" y="97" fontSize="1.9" fill="#a8a090" textAnchor="middle" opacity="0.55" letterSpacing="0.4">POLAND</text>
+        {/* Sea & country labels */}
+        <text className="lt-sea-label" x="80" y="205">Baltic Sea</text>
+        <text className="lt-region-label" x="485" y="115">LATVIA</text>
+        <text className="lt-region-label" x="820" y="495">BELARUS</text>
+        <text className="lt-region-label" x="425" y="725">POLAND</text>
 
-        {/* Lithuania mainland */}
-        <path d={mainlandPath} fill="#f4ead8" stroke="#c4a878" strokeWidth="0.6" strokeDasharray="1 0.7"/>
-        <path d={mainlandPath} fill="url(#topo)"/>
+        {/* Lithuania outline */}
+        <path className="lt-country" d="M 804.64 286.81 L 815.15 374.51 L 723.41 437.20 L 697.44 547.72 L 575.94 621.48 L 467.78 620.15 L 440.91 559.83 L 383.51 538.89 L 374.56 488.93 L 386.50 435.32 L 337.03 404.24 L 219.84 369.94 L 196.04 205.37 L 324.21 145.32 L 511.89 157.88 L 621.82 138.52 L 637.52 179.24 L 697.07 191.82 L 804.64 286.81 Z" />
+        <path d="M 804.64 286.81 L 815.15 374.51 L 723.41 437.20 L 697.44 547.72 L 575.94 621.48 L 467.78 620.15 L 440.91 559.83 L 383.51 538.89 L 374.56 488.93 L 386.50 435.32 L 337.03 404.24 L 219.84 369.94 L 196.04 205.37 L 324.21 145.32 L 511.89 157.88 L 621.82 138.52 L 637.52 179.24 L 697.07 191.82 L 804.64 286.81 Z" fill="url(#lt-topo)" />
 
-        {/* Curonian Spit */}
-        <path d={spitPath} fill="#f4ead8" stroke="#c4a878" strokeWidth="0.5" strokeDasharray="0.8 0.6"/>
-        <path d={spitPath} fill="url(#topo)"/>
+        {/* Country watermark */}
+        <text className="lt-country-word" x="515" y="405" textAnchor="middle">LIETUVA</text>
 
-        {/* Curonian Lagoon — water between spit and mainland */}
-        <path d="M 13 40 C 14 48, 14 56, 13 62 C 12 67, 14 70, 17 70 L 17 60 C 17 52, 16 44, 15 40 Z"
-              fill="#dde7e8" opacity="0.7"/>
+        {/* Countryside scatter dots */}
+        <g onClick={() => handleClick('countryside')} style={{cursor:'pointer'}}>
+          {[
+            {cx:413.60,cy:299.56},{cx:525.51,cy:338.71},{cx:324.08,cy:407.24},
+            {cx:659.80,cy:456.18},{cx:458.37,cy:495.34},{cx:547.89,cy:240.82}
+          ].map((c,i) => (
+            <circle key={i} cx={c.cx} cy={c.cy} r={isActive('countryside') ? 11 : 9}
+                    fill="#5F7A4A" opacity={isActive('countryside') ? 0.75 : 0.45}/>
+          ))}
+          <text className="lt-countryside" x="515" y="235" textAnchor="middle"
+                opacity={isActive('countryside') ? 1 : 0.85}
+                fontWeight={isActive('countryside') ? 800 : 700}>
+            · {lang === 'he' ? 'הכפר' : 'Countryside'} ·
+          </text>
+        </g>
 
-        {/* Country name watermark */}
-        <text x="50" y="50" fontSize="3.2" fill="#c4a878" textAnchor="middle"
-              opacity="0.18" letterSpacing="0.8" fontStyle="italic" fontFamily="serif">
-          LIETUVA
-        </text>
+        {/* Vilnius */}
+        <g className="lt-place-link" onClick={() => handleClick('vilnius')} style={{cursor:'pointer'}}>
+          <circle className="lt-hit" cx="668.71" cy="468.48" r="42"/>
+          <circle className={`lt-place-dot${isActive('vilnius') ? ' lt-place-active lt-place-vilnius' : ''}`} cx="668.71" cy="468.48" r={isActive('vilnius') ? 26 : 21} fill="#C28840"/>
+          <rect className="lt-label-bg" x="698" y="449" width="96" height="34" rx="9" opacity={isActive('vilnius') ? 1 : 0.88}/>
+          <text className="lt-place-label" x="710" y="474" textAnchor="start" fontWeight={isActive('vilnius') ? 800 : 800}>Vilnius</text>
+        </g>
 
-        {/* Countryside — scattered rural spots across the country */}
-        {countryside && (
-          <g onClick={() => onPick && onPick('countryside')} style={{ cursor: 'pointer' }}>
-            {countrysideScatter.map((c, i) => {
-              const active = activeRegion === 'countryside';
-              return (
-                <circle key={i} cx={c.x} cy={c.y} r={active ? 1.4 : 1}
-                        fill={countryside.accent}
-                        opacity={active ? 0.95 : 0.55}>
-                  {active && (
-                    <animate attributeName="opacity" values="0.95;0.4;0.95"
-                      dur="2.4s" begin={`${i*0.2}s`} repeatCount="indefinite"/>
-                  )}
-                </circle>
-              );
-            })}
-            <text x="50" y="22" fontSize="2.2" fill={countryside.accent}
-                  textAnchor="middle" fontStyle="italic"
-                  fontWeight={activeRegion === 'countryside' ? 700 : 500}
-                  opacity={activeRegion === 'countryside' ? 1 : 0.75}>
-              · {countryside[lang].name} ·
-            </text>
-          </g>
-        )}
+        {/* Kaunas */}
+        <g className="lt-place-link" onClick={() => handleClick('kaunas')} style={{cursor:'pointer'}}>
+          <circle className="lt-hit" cx="514.72" cy="427.11" r="38"/>
+          <circle className={`lt-place-dot${isActive('kaunas') ? ' lt-place-active' : ''}`} cx="514.72" cy="427.11" r={isActive('kaunas') ? 20 : 16} fill="#7E6A4E"/>
+          <rect className="lt-label-bg" x="540" y="410" width="92" height="32" rx="9"/>
+          <text className="lt-place-label" x="552" y="434" textAnchor="start" fontWeight={isActive('kaunas') ? 800 : 800}>Kaunas</text>
+        </g>
 
-        {/* Dots & labels */}
-        {regions.filter(r => r.id !== 'countryside').map(r => {
-          const d = dots[r.id];
-          if (!d) return null;
-          const active = r.id === activeRegion;
-          return (
-            <g key={r.id} onClick={() => onPick && onPick(r.id)} style={{ cursor: 'pointer' }}>
-              {active && (
-                <circle cx={d.x} cy={d.y} r="5" fill="none" stroke={r.accent} strokeWidth="0.4" opacity="0.55">
-                  <animate attributeName="r" values="4;6;4" dur="2.4s" repeatCount="indefinite"/>
-                  <animate attributeName="opacity" values="0.55;0.15;0.55" dur="2.4s" repeatCount="indefinite"/>
-                </circle>
-              )}
-              <circle cx={d.x} cy={d.y} r={active ? 2.4 : 1.8} fill={r.accent} opacity={active ? 1 : 0.9}/>
-              <text x={d.lx} y={d.ly} fontSize="2.4"
-                    fill="#3a2e1f"
-                    textAnchor={d.anchor}
-                    fontWeight={active ? 700 : 500}>
-                {r[lang].name}
-              </text>
-            </g>
-          );
-        })}
+        {/* Klaipėda */}
+        <g className="lt-place-link" onClick={() => handleClick('klaipeda')} style={{cursor:'pointer'}}>
+          <circle className="lt-hit" cx="205.94" cy="269.54" r="32"/>
+          <circle className={`lt-place-dot${isActive('klaipeda') ? ' lt-place-active' : ''}`} cx="205.94" cy="269.54" r={isActive('klaipeda') ? 20 : 16} fill="#4A7C8C"/>
+          <rect className="lt-label-bg" x="230" y="274" width="100" height="32" rx="9"/>
+          <text className="lt-place-label" x="242" y="298" textAnchor="start" fontWeight={isActive('klaipeda') ? 800 : 800}>Klaipėda</text>
+        </g>
 
-        {/* Compass rose */}
-        <g transform="translate(94, 12)">
-          <circle r="2.6" fill="none" stroke="#8b7355" strokeWidth="0.3"/>
-          <path d="M 0 -2.2 L 0.5 0 L 0 2.2 L -0.5 0 Z" fill="#8b7355"/>
-          <text x="0" y="-3.6" fontSize="1.8" fill="#8b7355" textAnchor="middle">N</text>
+        {/* Curonian Spit (Nida) */}
+        <g className="lt-place-link" onClick={() => handleClick('nida')} style={{cursor:'pointer'}}>
+          <circle className="lt-hit" cx="190.27" cy="347.58" r="34"/>
+          <circle className={`lt-place-dot${isActive('nida') ? ' lt-place-active' : ''}`} cx="190.27" cy="347.58" r={isActive('nida') ? 20 : 16} fill="#B89968"/>
+          <rect className="lt-label-bg" x="210" y="378" width="248" height="33" rx="9"/>
+          <text className="lt-place-label" x="222" y="402" textAnchor="start" fontWeight={isActive('nida') ? 800 : 800}>Curonian Spit (Nida)</text>
+        </g>
+
+        {/* Druskininkai */}
+        <g className="lt-place-link" onClick={() => handleClick('druskininkai')} style={{cursor:'pointer'}}>
+          <circle className="lt-hit" cx="524.06" cy="599.94" r="38"/>
+          <circle className={`lt-place-dot${isActive('druskininkai') ? ' lt-place-active' : ''}`} cx="524.06" cy="599.94" r={isActive('druskininkai') ? 20 : 16} fill="#A85D4A"/>
+          <rect className="lt-label-bg" x="461" y="628" width="150" height="34" rx="9"/>
+          <text className="lt-place-label" x="536" y="653" textAnchor="middle" fontWeight={isActive('druskininkai') ? 800 : 800}>Druskininkai</text>
+        </g>
+
+        {/* Kretinga */}
+        <g className="lt-place-link" onClick={() => handleClick('kretinga')} style={{cursor:'pointer'}}>
+          <circle className="lt-hit" cx="217.16" cy="233.23" r="31"/>
+          <circle className={`lt-place-dot${isActive('kretinga') ? ' lt-place-active' : ''}`} cx="217.16" cy="233.23" r={isActive('kretinga') ? 20 : 16} fill="#8A6B4A"/>
+          <rect className="lt-label-bg" x="246" y="236" width="102" height="32" rx="9"/>
+          <text className="lt-place-label" x="258" y="260" textAnchor="start" fontWeight={isActive('kretinga') ? 800 : 800}>Kretinga</text>
+        </g>
+
+        {/* Palanga */}
+        <g className="lt-place-link" onClick={() => handleClick('palanga')} style={{cursor:'pointer'}}>
+          <circle className="lt-hit" cx="197.47" cy="227.61" r="30"/>
+          <circle className={`lt-place-dot${isActive('palanga') ? ' lt-place-active' : ''}`} cx="197.47" cy="227.61" r={isActive('palanga') ? 20 : 16} fill="#D4A05A"/>
+          <rect className="lt-label-bg" x="225" y="184" width="94" height="32" rx="9"/>
+          <text className="lt-place-label" x="237" y="208" textAnchor="start" fontWeight={isActive('palanga') ? 800 : 800}>Palanga</text>
+        </g>
+
+        {/* Molėtai */}
+        <g className="lt-place-link" onClick={() => handleClick('moletai')} style={{cursor:'pointer'}}>
+          <circle className="lt-hit" cx="684.07" cy="362.32" r="38"/>
+          <circle className={`lt-place-dot${isActive('moletai') ? ' lt-place-active' : ''}`} cx="684.07" cy="362.32" r={isActive('moletai') ? 20 : 16} fill="#4A6B7E"/>
+          <rect className="lt-label-bg" x="573" y="375" width="96" height="32" rx="9"/>
+          <text className="lt-place-label" x="657" y="399" textAnchor="end" fontWeight={isActive('moletai') ? 800 : 800}>Molėtai</text>
+        </g>
+
+        {/* Utena */}
+        <g className="lt-place-link" onClick={() => handleClick('utena')} style={{cursor:'pointer'}}>
+          <circle className="lt-hit" cx="704.47" cy="309.82" r="38"/>
+          <circle className={`lt-place-dot${isActive('utena') ? ' lt-place-active' : ''}`} cx="704.47" cy="309.82" r={isActive('utena') ? 20 : 16} fill="#6B8A5A"/>
+          <rect className="lt-label-bg" x="728" y="304" width="78" height="32" rx="9"/>
+          <text className="lt-place-label" x="740" y="328" textAnchor="start" fontWeight={isActive('utena') ? 800 : 800}>Utena</text>
+        </g>
+
+        {/* Zarasai */}
+        <g className="lt-place-link" onClick={() => handleClick('zarasai')} style={{cursor:'pointer'}}>
+          <circle className="lt-hit" cx="776.77" cy="263.75" r="38"/>
+          <circle className={`lt-place-dot${isActive('zarasai') ? ' lt-place-active' : ''}`} cx="776.77" cy="263.75" r={isActive('zarasai') ? 20 : 16} fill="#5A8A8A"/>
+          <rect className="lt-label-bg" x="676" y="238" width="92" height="32" rx="9"/>
+          <text className="lt-place-label" x="756" y="262" textAnchor="end" fontWeight={isActive('zarasai') ? 800 : 800}>Zarasai</text>
+        </g>
+
+        {/* Compass */}
+        <g transform="translate(910 145)">
+          <circle r="35" fill="none" stroke="#8b7355" strokeWidth="3"/>
+          <path d="M 0 -28 L 8 0 L 0 28 L -8 0 Z" fill="#8b7355"/>
+          <text x="0" y="-48" fontSize="24" fill="#8b7355" textAnchor="middle">N</text>
         </g>
       </svg>
     </div>

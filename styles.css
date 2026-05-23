@@ -1875,3 +1875,95 @@ a.btn { text-decoration: none; }
 .saved-empty-icon  { font-size: 56px; margin-bottom: 16px; }
 .saved-empty-title { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--ink); margin: 0 0 10px; }
 .saved-empty-sub   { font-size: 15px; color: #9ca3af; max-width: 280px; line-height: 1.6; margin: 0; }
+
+/* ═══════════════════════════════════════════════════════════════
+   LITHUANIA MAP (new SVG)
+═══════════════════════════════════════════════════════════════ */
+
+.lt-map-svg { border-radius: 28px; }
+
+.lt-country {
+  fill: #f6ecda;
+  stroke: #c4a878;
+  stroke-width: 4;
+  stroke-dasharray: 9 8;
+  stroke-linejoin: round;
+}
+
+.lt-sea-label { font-size: 23px; fill: #7a8c95; font-style: italic; opacity: .75; }
+.lt-region-label { font-size: 18px; letter-spacing: 8px; fill: #a8a090; opacity: .55; }
+.lt-country-word {
+  font-family: Georgia, serif;
+  font-size: 47px;
+  letter-spacing: 14px;
+  fill: #c4a878;
+  opacity: .13;
+  font-style: italic;
+}
+.lt-countryside {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 700;
+  fill: #5F7A4A;
+}
+
+.lt-place-link { cursor: pointer; outline: none; }
+.lt-hit { fill: transparent; pointer-events: all; }
+
+.lt-place-dot {
+  stroke: rgba(255,255,255,.78);
+  stroke-width: 3;
+  transition: transform .16s ease, filter .16s ease, r .16s ease;
+  transform-box: fill-box;
+  transform-origin: center;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.2));
+}
+.lt-place-link:hover .lt-place-dot,
+.lt-place-link:focus-visible .lt-place-dot {
+  transform: scale(1.18);
+  filter: drop-shadow(0 5px 9px rgba(0,0,0,.28));
+}
+.lt-place-active {
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,.3));
+}
+
+.lt-place-vilnius {
+  animation: lt-pulse 2.4s infinite;
+}
+@keyframes lt-pulse {
+  0%, 100% { filter: drop-shadow(0 0 0 rgba(194,136,64,0)) drop-shadow(0 2px 4px rgba(0,0,0,.2)); }
+  50%       { filter: drop-shadow(0 0 14px rgba(194,136,64,.65)) drop-shadow(0 2px 4px rgba(0,0,0,.2)); }
+}
+
+.lt-place-label {
+  font-size: 22px;
+  font-weight: 800;
+  fill: #3a2e1f;
+  paint-order: stroke;
+  stroke: #f3ead9;
+  stroke-width: 7;
+  stroke-linejoin: round;
+  pointer-events: all;
+  transition: fill .16s ease;
+}
+.lt-place-link:hover .lt-place-label,
+.lt-place-link:focus-visible .lt-place-label { fill: #000; }
+
+.lt-label-bg {
+  fill: rgba(243,234,217,.88);
+  stroke: rgba(196,168,120,0);
+  stroke-width: 1.4;
+  transition: opacity .16s ease, stroke .16s ease;
+  pointer-events: all;
+}
+.lt-place-link:hover .lt-label-bg,
+.lt-place-link:focus-visible .lt-label-bg { opacity: .94; stroke: #d8bf90; }
+
+@media (max-width: 720px) {
+  .lt-map-svg { border-radius: 18px; }
+  .lt-place-label { font-size: 19px; stroke-width: 6; }
+  .lt-sea-label { font-size: 19px; }
+  .lt-region-label { font-size: 14px; }
+  .lt-countryside { font-size: 18px; }
+  .lt-country-word { font-size: 38px; letter-spacing: 10px; }
+}
