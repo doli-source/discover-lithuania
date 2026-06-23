@@ -357,7 +357,7 @@ function Footer({ lang, t, nav }) {
                 ? 'ניב שמעוני. יזם, עובד עם AI, ומבלה בליטא יותר ממה שתכנן. האתר הזה הוא התוצאה.'
                 : 'Niv Shimoni. Entrepreneur, AI builder, and someone who keeps ending up in Lithuania. This site is the result.'}
             </p>
-            <a className="footer-contact" href="mailto:dolishimoni@gmail.com">dolishimoni@gmail.com</a>
+            <a className="footer-contact" href="mailto:Niv.shimoni@gmail.com">Niv.shimoni@gmail.com</a>
           </div>
         </div>
         <div className="footer-cols">

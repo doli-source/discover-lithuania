@@ -37,7 +37,7 @@ const STRINGS = {
     open: 'פתח'
   },
   en: {
-    siteName: 'Atrask Lietuvą',
+    siteName: 'Discover Lithuania',
     siteSub: 'A Traveler\'s Guide to Lithuania',
     tagline: 'Discover Lithuania — slow, tasty, unrushed',
     heroSubtitle: 'Routes, food, and everything you need to fall for this small, magical country.',
