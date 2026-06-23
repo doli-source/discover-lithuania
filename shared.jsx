@@ -189,7 +189,7 @@ function MapIllustration({ regions, activeRegion, onPick, t, lang }) {
           <text className="lt-countryside" x="515" y="235" textAnchor="middle"
                 opacity={isActive('countryside') ? 1 : 0.85}
                 fontWeight={isActive('countryside') ? 800 : 700}>
-            · {lang === 'he' ? 'הכפר' : 'Countryside'} ·
+            · Countryside ·
           </text>
         </g>
 
