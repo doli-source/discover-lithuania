@@ -75,7 +75,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
           </h1>
           <p className="hero-sub">
             {lang === 'he'
-              ? `${stats.total} מקומות נבחרים — בתי קפה, מסעדות, טבע ולינה — מובחרים בקפדה.`
+              ? `${stats.total} מקומות נבחרים — בתי קפה, מסעדות, טבע ולינה — מובחרים בקפידה.`
               : `${stats.total} handpicked places — cafés, restaurants, nature & stays — carefully chosen.`}
           </p>
           <div className="hero-stats-row">
