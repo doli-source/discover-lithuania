@@ -1132,6 +1132,24 @@ em { font-style: italic; color: var(--primary); }
   color: var(--primary);
 }
 .footer-sub { opacity: 0.6; margin: 0; max-width: 30ch; line-height: 1.55; }
+.footer-about {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(250,245,236,0.1);
+}
+.footer-about-bio {
+  font-size: 0.9rem;
+  color: rgba(250,245,236,0.55);
+  line-height: 1.65;
+  margin: 0 0 12px;
+}
+.footer-contact {
+  font-size: 0.85rem;
+  color: var(--primary);
+  text-decoration: none;
+  opacity: 0.85;
+}
+.footer-contact:hover { opacity: 1; text-decoration: underline; }
 .footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 @media (max-width: 540px) {
   .footer-cols { grid-template-columns: repeat(2, 1fr); }

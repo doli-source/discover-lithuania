@@ -351,6 +351,14 @@ function Footer({ lang, t, nav }) {
               ? 'מדריך אישי לליטא — בלי פאתוס, רק מה שכיף.'
               : 'A friendly guide to Lithuania — no pretense, just what\'s fun.'}
           </p>
+          <div className="footer-about">
+            <p className="footer-about-bio">
+              {lang === 'he'
+                ? 'ניב שמעוני. יזם, עובד עם AI, ומבלה בליטא יותר ממה שתכנן. האתר הזה הוא התוצאה.'
+                : 'Niv Shimoni. Entrepreneur, AI builder, and someone who keeps ending up in Lithuania. This site is the result.'}
+            </p>
+            <a className="footer-contact" href="mailto:dolishimoni@gmail.com">dolishimoni@gmail.com</a>
+          </div>
         </div>
         <div className="footer-cols">
           <div className="footer-col">
