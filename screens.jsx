@@ -396,19 +396,7 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
   );
 }
 
-function stopTimeEN(t) {
-  var r = (t || '')
-    .replace(/שישי/g, 'Fri')
-    .replace(/שבת/g, 'Sat')
-    .replace(/ראשון/g, 'Sun')
-    .replace(/יום/g, 'Day')
-    .replace(/בוקר/g, 'morning')
-    .replace(/ערב/g, 'eve');
-  if (r === 'Fri') return 'Friday';
-  if (r === 'Sat') return 'Saturday';
-  if (r === 'Sun') return 'Sunday';
-  return r;
-}
+
 
 // ─── ROUTES ──────────────────────────────────────────────────────────────
 function RoutesScreen({ lang, t, regions, places, landmarks, itineraries, params, openPlace }) {
