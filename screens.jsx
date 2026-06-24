@@ -41,6 +41,7 @@ function PlaceCard({ place, region, lang, t, onClick, saved, onToggleSave, accen
 // ─── HOME ────────────────────────────────────────────────────────────────
 function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, facts, mapUrl, nav, savedSet, toggleSaved, openPlace }) {
   const [factIdx, setFactIdx] = useState(0);
+  const [tipsVisible, setTipsVisible] = useState(8);
   useEffect(() => {
     const id = setInterval(() => setFactIdx(i => (i + 1) % facts.length), 5500);
     return () => clearInterval(id);
@@ -167,7 +168,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
           </div>
         </div>
         <div className="tips-grid tips-grid-home">
-          {nivPicks.map(p => {
+          {nivPicks.slice(0, tipsVisible).map(p => {
             const r = regions.find(re => re.id === p.region);
             return (
               <PlaceCard
@@ -184,6 +185,13 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
             );
           })}
         </div>
+        {tipsVisible < nivPicks.length && (
+          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+            <button className="load-more-btn" onClick={() => setTipsVisible(v => v + 8)}>
+              {lang === 'he' ? `טען עוד (${nivPicks.length - tipsVisible} נותרו)` : `Load more (${nivPicks.length - tipsVisible} left)`}
+            </button>
+          </div>
+        )}
       </section>
 
       {/* ROUTES PREVIEW */}
