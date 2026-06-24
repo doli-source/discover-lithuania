@@ -1183,6 +1183,27 @@ em { font-style: italic; color: var(--primary); }
   border-top: 1px solid rgba(250,245,236,0.08);
 }
 
+/* ── WhatsApp floating button ── */
+.wa-float {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: transform 0.2s, background 0.2s;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+}
+.wa-float:hover { transform: scale(1.1); background: #20ba5a; }
+@media (max-width: 600px) {
+  .wa-float { bottom: 20px; left: 16px; width: 50px; height: 50px; }
+}
+
 /* ── RTL adjustments ── */
 [dir="rtl"] .map-svg text { direction: ltr; }
 [dir="rtl"] .venue-card { text-align: right; }
