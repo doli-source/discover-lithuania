@@ -2367,10 +2367,8 @@ const ITINERARIES = [
     he: { title: 'סופ"ש ביערות', tagline: 'אגמים, בקתות, וסאונה' },
     en: { title: 'A Weekend in the Forests', tagline: 'Lakes, cabins, and sauna' },
     stops: [
-      { time: 'שישי', placeId: 'casa-de-campo-glamping-lithuania', landmarkId: null, he: 'הגעה לגלמפינג ביער', en: 'Arrive at forest glamping' },
-      { time: 'שבת בוקר', placeId: 'varena-treehouse', landmarkId: null, he: 'בית-עץ ביער', en: 'Cabin in the trees' },
-      { time: 'שבת ערב', placeId: 'pami-k-boutique-spa', landmarkId: null, he: 'סאונה ליטאית אותנטית', en: 'Authentic Lithuanian sauna' },
-      { time: 'ראשון', placeId: 'villa-the-lake', landmarkId: null, he: 'בוקר על האגם', en: 'Morning by the lake' }
+      { time: 'שישי–שבת', placeId: 'varena-treehouse', landmarkId: null, he: 'בית-עץ ביער', en: 'Cabin in the trees' },
+      { time: 'שבת–ראשון', placeId: 'villa-the-lake', landmarkId: null, he: 'וילה על האגם', en: 'Villa by the lake' }
     ]
   },
   {
