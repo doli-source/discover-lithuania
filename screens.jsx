@@ -447,7 +447,14 @@ function RoutesScreen({ lang, t, regions, places, landmarks, itineraries, params
             const stopType = place ? (lang === 'he' ? place.typeHe : place.type) : (lang === 'he' ? 'אטרקציה' : 'Landmark');
             return (
               <li className="timeline-item" key={i}>
-                <div className="timeline-time">{stop.time}</div>
+                <div className="timeline-time">{lang === 'en' ? ({
+                  'שישי': 'Friday', 'שבת': 'Saturday', 'ראשון': 'Sunday',
+                  'שבת בוקר': 'Sat morning', 'שבת ערב': 'Sat evening',
+                  'שישי–שבת': 'Fri–Sat', 'שבת–ראשון': 'Sat–Sun',
+                  'יום 1': 'Day 1', 'יום 1-2': 'Day 1–2', 'יום 2': 'Day 2',
+                  'יום 2 ערב': 'Day 2 eve', 'יום 3': 'Day 3', 'יום 4': 'Day 4',
+                  'יום 5': 'Day 5', 'יום 6': 'Day 6', 'יום 7': 'Day 7',
+                }[stop.time] || stop.time) : stop.time}</div>
                 <div className="timeline-line">
                   <span className="timeline-dot"></span>
                   {i < route.stops.length - 1 && <span className="timeline-bar"></span>}
