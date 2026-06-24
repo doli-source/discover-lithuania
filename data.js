@@ -1678,6 +1678,23 @@ const PLACES = [
     "source": "niv"
   },
   {
+    "id": "stebuklai-spa",
+    "region": "curonian",
+    "kind": "stay",
+    "name": "Stebuklai SPA",
+    "type": "Luxury spa",
+    "typeHe": "ספא יוקרתי",
+    "rating": 4.9,
+    "reviews": 210,
+    "price": "€€€",
+    "emoji": "🌊",
+    "niv": "A rare luxury spa right in Nida — lagoon views, outdoor pools, and deep pine-forest silence. One of Lithuania's best.",
+    "nivHe": "ספא יוקרתי נדיר בלב נידה — נוף ללגון, בריכות חיצוניות ושקט של יערות אורן. אחד הטובים בליטא.",
+    "mapUrl": "https://maps.app.goo.gl/YxSPBL7PyRV1dwdV9",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
     "id": "monai-klaipeda",
     "region": "klaipeda",
     "kind": "restaurant",
@@ -2378,10 +2395,12 @@ const ITINERARIES = [
     he: { title: 'שלושה ימים על החוף', tagline: 'נמל, דיונות, וספא' },
     en: { title: 'Three Days on the Coast', tagline: 'Port, dunes, and spa' },
     stops: [
-      { time: 'יום 1', placeId: 'kavos-architektai', landmarkId: null, he: 'קלייפדה: קפה ועיר עתיקה', en: 'Klaipėda: coffee & old town' },
-      { time: 'יום 2', placeId: 'the-dead-dunes', landmarkId: null, he: 'מעבורת לנידה ודיונות', en: 'Ferry to Nida & dunes' },
-      { time: 'יום 2 ערב', placeId: 'smoked-fish', landmarkId: null, he: 'דגים מעושנים בנמל', en: 'Smoked fish at the port' },
-      { time: 'יום 3', placeId: 'pami-k-boutique-spa', landmarkId: null, he: 'ספא ביער', en: 'Forest spa' }
+      { time: 'יום 1', placeId: 'kavos-architektai', landmarkId: null, he: 'קפה בוקר בעיר הישנה', en: 'Morning coffee in the old town' },
+      { time: 'יום 1', placeId: 'klaipeda-old-town-walk', landmarkId: null, he: 'סמטאות פרוסיות, חצרות נסתרות ואמנות רחוב', en: 'Prussian lanes, hidden courtyards & street art' },
+      { time: 'יום 1 ערב', placeId: 'ateik-ateik', landmarkId: null, he: 'שקיעה על הנמל עם ג\'אז וספינות יוצאות', en: 'Sunset at the port — jazz, ships & cold beer' },
+      { time: 'יום 2', placeId: 'the-dead-dunes', landmarkId: null, he: 'מעבורת לנידה: עלייה על הדיונה הגדולה', en: 'Ferry to Nida — climb the Great Dune' },
+      { time: 'יום 2 ערב', placeId: 'nida-harbour', landmarkId: null, he: 'נמל נידה: סירות צבעוניות ושקיעה על הלגון', en: 'Nida harbour — colourful boats & lagoon sunset' },
+      { time: 'יום 3', placeId: 'stebuklai-spa', landmarkId: null, he: 'ספא יוקרתי בנידה — בריכות, שקט, ויערות אורן', en: 'Stebuklai SPA — pools, silence & pine forest' }
     ]
   },
   {
