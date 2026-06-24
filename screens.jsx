@@ -388,23 +388,19 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
   );
 }
 
-const STOP_TIME_EN = {};
-STOP_TIME_EN['שישי'] = 'Friday';
-STOP_TIME_EN['שבת'] = 'Saturday';
-STOP_TIME_EN['ראשון'] = 'Sunday';
-STOP_TIME_EN['שבת בוקר'] = 'Sat morning';
-STOP_TIME_EN['שבת ערב'] = 'Sat evening';
-STOP_TIME_EN['שישי–שבת'] = 'Fri–Sat';
-STOP_TIME_EN['שבת–ראשון'] = 'Sat–Sun';
-STOP_TIME_EN['יום 1'] = 'Day 1';
-STOP_TIME_EN['יום 1-2'] = 'Day 1–2';
-STOP_TIME_EN['יום 2'] = 'Day 2';
-STOP_TIME_EN['יום 2 ערב'] = 'Day 2 eve';
-STOP_TIME_EN['יום 3'] = 'Day 3';
-STOP_TIME_EN['יום 4'] = 'Day 4';
-STOP_TIME_EN['יום 5'] = 'Day 5';
-STOP_TIME_EN['יום 6'] = 'Day 6';
-STOP_TIME_EN['יום 7'] = 'Day 7';
+function stopTimeEN(t) {
+  var r = (t || '')
+    .replace(/שישי/g, 'Fri')
+    .replace(/שבת/g, 'Sat')
+    .replace(/ראשון/g, 'Sun')
+    .replace(/יום/g, 'Day')
+    .replace(/בוקר/g, 'morning')
+    .replace(/ערב/g, 'eve');
+  if (r === 'Fri') return 'Friday';
+  if (r === 'Sat') return 'Saturday';
+  if (r === 'Sun') return 'Sunday';
+  return r;
+}
 
 // ─── ROUTES ──────────────────────────────────────────────────────────────
 function RoutesScreen({ lang, t, regions, places, landmarks, itineraries, params, openPlace }) {
@@ -465,7 +461,7 @@ function RoutesScreen({ lang, t, regions, places, landmarks, itineraries, params
             const stopType = place ? (lang === 'he' ? place.typeHe : place.type) : (lang === 'he' ? 'אטרקציה' : 'Landmark');
             return (
               <li className="timeline-item" key={i}>
-                <div className="timeline-time">{lang === 'en' ? (STOP_TIME_EN[stop.time] || stop.time) : stop.time}</div>
+                <div className="timeline-time">{lang === 'en' ? stopTimeEN(stop.time) : stop.time}</div>
                 <div className="timeline-line">
                   <span className="timeline-dot"></span>
                   {i < route.stops.length - 1 && <span className="timeline-bar"></span>}
