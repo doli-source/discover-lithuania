@@ -469,7 +469,7 @@ function RoutesScreen({ lang, t, regions, places, landmarks, itineraries, params
             const stopType = place ? (lang === 'he' ? place.typeHe : place.type) : (lang === 'he' ? 'אטרקציה' : 'Landmark');
             return (
               <li className="timeline-item" key={i}>
-                <div className="timeline-time">{lang === 'en' ? stopTimeEN(stop.time) : stop.time}</div>
+                <div className="timeline-time">{lang === 'en' ? (stop.timeEn || stop.time) : stop.time}</div>
                 <div className="timeline-line">
                   <span className="timeline-dot"></span>
                   {i < route.stops.length - 1 && <span className="timeline-bar"></span>}

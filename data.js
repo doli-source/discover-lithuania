@@ -2369,12 +2369,12 @@ const ITINERARIES = [
     he: { title: 'שבוע בלטי קלאסי', tagline: 'מהבירה לים, דרך טירות ודיונות' },
     en: { title: 'The Classic Baltic Week', tagline: 'Capital to coast via castles and dunes' },
     stops: [
-      { time: 'יום 1-2', placeId: null, landmarkId: 'old-town', he: 'וילנה: עיר עתיקה ואוז\'ופיס', en: 'Vilnius: Old Town & Užupis' },
-      { time: 'יום 3', placeId: null, landmarkId: 'trakai-castle', he: 'טראקאי וסירה על האגם', en: 'Trakai & a boat on the lake' },
-      { time: 'יום 4', placeId: null, landmarkId: 'laisves', he: 'קובנה וסצנת הקפה', en: 'Kaunas & its café scene' },
-      { time: 'יום 5', placeId: null, landmarkId: 'theatre-square', he: 'קלייפדה ויציאה לים', en: 'Klaipėda meets the sea' },
-      { time: 'יום 6', placeId: 'the-dead-dunes', landmarkId: null, he: 'נידה ודיונות חול', en: 'Nida & the sand dunes' },
-      { time: 'יום 7', placeId: null, landmarkId: 'palanga', he: 'פלאנגה לפני הטיסה', en: 'Palanga before flying home' }
+      { time: 'יום 1-2', timeEn: 'Day 1–2', placeId: null, landmarkId: 'old-town', he: 'וילנה: עיר עתיקה ואוז\'ופיס', en: 'Vilnius: Old Town & Užupis' },
+      { time: 'יום 3', timeEn: 'Day 3', placeId: null, landmarkId: 'trakai-castle', he: 'טראקאי וסירה על האגם', en: 'Trakai & a boat on the lake' },
+      { time: 'יום 4', timeEn: 'Day 4', placeId: null, landmarkId: 'laisves', he: 'קובנה וסצנת הקפה', en: 'Kaunas & its café scene' },
+      { time: 'יום 5', timeEn: 'Day 5', placeId: null, landmarkId: 'theatre-square', he: 'קלייפדה ויציאה לים', en: 'Klaipėda meets the sea' },
+      { time: 'יום 6', timeEn: 'Day 6', placeId: 'the-dead-dunes', landmarkId: null, he: 'נידה ודיונות חול', en: 'Nida & the sand dunes' },
+      { time: 'יום 7', timeEn: 'Day 7', placeId: null, landmarkId: 'palanga', he: 'פלאנגה לפני הטיסה', en: 'Palanga before flying home' }
     ]
   },
   {
@@ -2384,8 +2384,8 @@ const ITINERARIES = [
     he: { title: 'סופ"ש ביערות', tagline: 'אגמים, בקתות, וסאונה' },
     en: { title: 'A Weekend in the Forests', tagline: 'Lakes, cabins, and sauna' },
     stops: [
-      { time: 'שישי–שבת', placeId: 'varena-treehouse', landmarkId: null, he: 'בית-עץ ביער', en: 'Cabin in the trees' },
-      { time: 'שבת–ראשון', placeId: 'villa-the-lake', landmarkId: null, he: 'וילה על האגם', en: 'Villa by the lake' }
+      { time: 'שישי–שבת', timeEn: 'Fri–Sat', placeId: 'varena-treehouse', landmarkId: null, he: 'בית-עץ ביער', en: 'Cabin in the trees' },
+      { time: 'שבת–ראשון', timeEn: 'Sat–Sun', placeId: 'villa-the-lake', landmarkId: null, he: 'וילה על האגם', en: 'Villa by the lake' }
     ]
   },
   {
@@ -2395,12 +2395,12 @@ const ITINERARIES = [
     he: { title: 'שלושה ימים על החוף', tagline: 'נמל, דיונות, וספא' },
     en: { title: 'Three Days on the Coast', tagline: 'Port, dunes, and spa' },
     stops: [
-      { time: 'יום 1', placeId: 'kavos-architektai', landmarkId: null, he: 'קפה בוקר בעיר הישנה', en: 'Morning coffee in the old town' },
-      { time: 'יום 1', placeId: 'klaipeda-old-town-walk', landmarkId: null, he: 'סמטאות פרוסיות, חצרות נסתרות ואמנות רחוב', en: 'Prussian lanes, hidden courtyards & street art' },
-      { time: 'יום 1 ערב', placeId: 'ateik-ateik', landmarkId: null, he: 'שקיעה על הנמל עם ג\'אז וספינות יוצאות', en: 'Sunset at the port — jazz, ships & cold beer' },
-      { time: 'יום 2', placeId: 'the-dead-dunes', landmarkId: null, he: 'מעבורת לנידה: עלייה על הדיונה הגדולה', en: 'Ferry to Nida — climb the Great Dune' },
-      { time: 'יום 2 ערב', placeId: 'nida-harbour', landmarkId: null, he: 'נמל נידה: סירות צבעוניות ושקיעה על הלגון', en: 'Nida harbour — colourful boats & lagoon sunset' },
-      { time: 'יום 3', placeId: 'stebuklai-spa', landmarkId: null, he: 'ספא יוקרתי בנידה — בריכות, שקט, ויערות אורן', en: 'Stebuklai SPA — pools, silence & pine forest' }
+      { time: 'יום 1', timeEn: 'Day 1', placeId: 'kavos-architektai', landmarkId: null, he: 'קפה בוקר בעיר הישנה', en: 'Morning coffee in the old town' },
+      { time: 'יום 1', timeEn: 'Day 1', placeId: 'klaipeda-old-town-walk', landmarkId: null, he: 'סמטאות פרוסיות, חצרות נסתרות ואמנות רחוב', en: 'Prussian lanes, hidden courtyards & street art' },
+      { time: 'יום 1 ערב', timeEn: 'Day 1 eve', placeId: 'ateik-ateik', landmarkId: null, he: 'שקיעה על הנמל עם ג\'אז וספינות יוצאות', en: 'Sunset at the port — jazz, ships & cold beer' },
+      { time: 'יום 2', timeEn: 'Day 2', placeId: 'the-dead-dunes', landmarkId: null, he: 'מעבורת לנידה: עלייה על הדיונה הגדולה', en: 'Ferry to Nida — climb the Great Dune' },
+      { time: 'יום 2 ערב', timeEn: 'Day 2 eve', placeId: 'nida-harbour', landmarkId: null, he: 'נמל נידה: סירות צבעוניות ושקיעה על הלגון', en: 'Nida harbour — colourful boats & lagoon sunset' },
+      { time: 'יום 3', timeEn: 'Day 3', placeId: 'stebuklai-spa', landmarkId: null, he: 'ספא יוקרתי בנידה — בריכות, שקט, ויערות אורן', en: 'Stebuklai SPA — pools, silence & pine forest' }
     ]
   },
   {
@@ -2410,9 +2410,9 @@ const ITINERARIES = [
     he: { title: 'סוף שבוע ספא בדרוסקיניינקאי', tagline: 'מעיינות, ספא, ויערות אורן' },
     en: { title: 'Druskininkai Spa Weekend', tagline: 'Springs, spa, and pine forests' },
     stops: [
-      { time: 'שישי', placeId: 'atokampis-boutique-spa-resort', landmarkId: null, he: 'הגעה לספא בוטיק', en: 'Check in at boutique spa' },
-      { time: 'שבת', placeId: 'horizons-lake-resort-spa', landmarkId: null, he: 'יום על האגם', en: 'A day on the lake' },
-      { time: 'ראשון', placeId: 'mana-sleep-spa-druskininkai', landmarkId: null, he: 'ארוחת בוקר וביקור פרידה', en: 'Brunch & a farewell visit' }
+      { time: 'שישי', timeEn: 'Friday', placeId: 'atokampis-boutique-spa-resort', landmarkId: null, he: 'הגעה לספא בוטיק', en: 'Check in at boutique spa' },
+      { time: 'שבת', timeEn: 'Saturday', placeId: 'horizons-lake-resort-spa', landmarkId: null, he: 'יום על האגם', en: 'A day on the lake' },
+      { time: 'ראשון', timeEn: 'Sunday', placeId: 'mana-sleep-spa-druskininkai', landmarkId: null, he: 'ארוחת בוקר וביקור פרידה', en: 'Brunch & a farewell visit' }
     ]
   }
 ];
