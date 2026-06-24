@@ -2,7 +2,7 @@
 
 const STRINGS = {
   he: {
-    siteName: 'Atrask Lietuvą',
+    siteName: 'גלה את ליטא',
     siteSub: 'מדריך טיולים לליטא',
     tagline: 'גלה את ליטא — לאט, טעים, ובלי לחץ',
     heroSubtitle: 'מסלולים, מקומות אוכל, וכל מה שצריך כדי לאהוב את הארץ הקטנה והקסומה הזו.',
