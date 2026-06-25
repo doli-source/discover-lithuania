@@ -2263,6 +2263,23 @@ const PLACES = [
     "source": "niv"
   },
   {
+    "id": "esperanza-lake-resort-spa",
+    "region": "trakai",
+    "kind": "stay",
+    "name": "Esperanza Lake Resort & Spa",
+    "type": "Lakeside design hotel & spa",
+    "typeHe": "מלון בוטיק וספא על האגם",
+    "rating": 4.8,
+    "reviews": 148,
+    "price": null,
+    "emoji": "💆",
+    "niv": "Eleven hectares of private forest on the shore of Lake Ungurys, ten minutes from Trakai's castles — built from century-old Canadian cedar in a calm, minimalist style. Days drift between the lake, the woods (where two resident alpacas roam), and Spa Esperanza's pool, sauna, hammam and salt room. A place built for doing absolutely nothing, beautifully.",
+    "nivHe": "אחת עשרה הקטרים של יער פרטי על שפת אגם אונגוריס, עשר דקות נסיעה מהטירות של טראקאי — בנוי מעץ ארז קנדי עתיק, בסטייל מינימליסטי ורגוע. הימים מתמזגים בין האגם, היער (ששם גרים שני אלפקות) וספא אספרנזה עם בריכה, סאונה, חמאם וחדר מלח. מקום שנבנה בשביל לא לעשות כלום, ברמה הכי יפה שיש.",
+    "mapUrl": "https://www.google.com/maps/place/Esperanza+Resort+%26+SPA/@54.616408,24.8080203,11.75z/data=!4m9!3m8!1s0x46ddf6422bda2049:0x5bd6cb0973f7a15b!5m2!4m1!1i2!8m2!3d54.6048228!4d24.7470474!16s%2Fg%2F1pp2vc_fn?entry=ttu&g_ep=EgoyMDI2MDYyMi4wIKXMDSoASAFQAw%3D%3D",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
     "id": "anyksciai-treetop-path",
     "region": "countryside",
     "kind": "nature",
