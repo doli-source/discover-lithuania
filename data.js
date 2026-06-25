@@ -2246,6 +2246,23 @@ const PLACES = [
     "source": "niv"
   },
   {
+    "id": "s-shapshal-karaim-museum",
+    "region": "trakai",
+    "kind": "culture",
+    "name": "S. Shapshal Karaite Ethnographic Museum",
+    "type": "Ethnographic museum",
+    "typeHe": "מוזיאון אתנוגרפי",
+    "rating": 4.0,
+    "reviews": 57,
+    "price": "€1–3",
+    "emoji": "🏛️",
+    "niv": "Europe's only museum dedicated to the Karaim people — a small Turkic, Old Testament-following community that Grand Duke Vytautas brought from Crimea to Trakai 600 years ago. Three modest rooms hold 300+ artifacts: traditional dress, Eastern weapons, an antique wooden cradle, ceremonial coffee pots. A quick, fascinating stop on the way between the two castles, steps from the still-active Karaim kenesa (prayer house).",
+    "nivHe": "המוזיאון היחיד באירופה המוקדש לעם הקראי — קהילה טורקית קטנה ההולכת לפי התנ\"ך בלי פרשנות מאוחרת, שהדוכס ויטאוטס הביא מקרים לטראקאי לפני 600 שנה. בשלושה חללים קטנים יותר מ-300 מוצגים: בגדים מסורתיים, נשק מזרחי, עריסת תינוקות עתיקה וקנקני קפה טקסיים. עצירה קצרה ומרתקת בדרך בין שתי הטירות, כמה צעדים מהקנסה הקראית שעדיין פעילה.",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=S.+Shapshal+Karaite+Ethnographic+Museum+Trakai",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
     "id": "anyksciai-treetop-path",
     "region": "countryside",
     "kind": "nature",
