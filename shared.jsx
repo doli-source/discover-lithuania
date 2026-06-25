@@ -132,6 +132,7 @@ function MapIllustration({ regions, activeRegion, onPick, t, lang }) {
   // Map data-place IDs to app region IDs
   const placeToRegion = {
     vilnius: 'vilnius',
+    trakai: 'trakai',
     kaunas: 'kaunas',
     klaipeda: 'klaipeda',
     nida: 'curonian',
@@ -199,6 +200,14 @@ function MapIllustration({ regions, activeRegion, onPick, t, lang }) {
           <circle className={`lt-place-dot${isActive('vilnius') ? ' lt-place-active lt-place-vilnius' : ''}`} cx="668.71" cy="468.48" r={isActive('vilnius') ? 26 : 21} fill="#C28840"/>
           <rect className="lt-label-bg" x="698" y="449" width="96" height="34" rx="9" opacity={isActive('vilnius') ? 1 : 0.88}/>
           <text className="lt-place-label" x="710" y="474" textAnchor="start" fontWeight={isActive('vilnius') ? 800 : 800}>Vilnius</text>
+        </g>
+
+        {/* Trakai */}
+        <g className="lt-place-link" onClick={() => handleClick('trakai')} style={{cursor:'pointer'}}>
+          <circle className="lt-hit" cx="615.00" cy="486.00" r="30"/>
+          <circle className={`lt-place-dot${isActive('trakai') ? ' lt-place-active' : ''}`} cx="615.00" cy="486.00" r={isActive('trakai') ? 20 : 16} fill="#5C8AA6"/>
+          <rect className="lt-label-bg" x="503" y="498" width="86" height="32" rx="9"/>
+          <text className="lt-place-label" x="581" y="522" textAnchor="end" fontWeight={isActive('trakai') ? 800 : 800}>Trakai</text>
         </g>
 
         {/* Kaunas */}
@@ -392,6 +401,41 @@ function RegionArt({ id, accent }) {
         <line x1="125" y1="155" x2="127" y2="146" stroke={dark} strokeWidth="0.8" opacity="0.8"/>
         <line x1="128" y1="155" x2="129" y2="147" stroke={dark} strokeWidth="0.8" opacity="0.8"/>
         <line x1="175" y1="148" x2="177" y2="140" stroke={dark} strokeWidth="0.8" opacity="0.8"/>
+      </g>
+    ),
+    trakai: (
+      // Island castle on Lake Galvė
+      <g>
+        <rect x="0" y="0" width="200" height="180" fill={sky}/>
+        <circle cx="35" cy="35" r="12" fill="#ffffff" opacity="0.55"/>
+        {/* Lake */}
+        <path d="M 0 180 L 200 180 L 200 120 Q 100 110 0 122 Z" fill={light}/>
+        <path d="M 0 138 Q 50 132 100 138 T 200 135" stroke={mid} strokeWidth="1.5" fill="none" opacity="0.4"/>
+        <path d="M 0 152 Q 50 146 100 152 T 200 149" stroke={mid} strokeWidth="1.5" fill="none" opacity="0.35"/>
+        {/* Island */}
+        <ellipse cx="100" cy="128" rx="58" ry="12" fill={mid} opacity="0.55"/>
+        {/* Castle curtain wall */}
+        <rect x="55" y="108" width="90" height="24" fill={dark}/>
+        <rect x="55" y="100" width="8" height="8" fill={dark}/>
+        <rect x="69" y="100" width="8" height="8" fill={dark}/>
+        <rect x="83" y="100" width="8" height="8" fill={dark}/>
+        <rect x="97" y="100" width="8" height="8" fill={dark}/>
+        <rect x="111" y="100" width="8" height="8" fill={dark}/>
+        <rect x="125" y="100" width="8" height="8" fill={dark}/>
+        <rect x="139" y="100" width="8" height="8" fill={dark}/>
+        {/* Corner towers */}
+        <rect x="48" y="78" width="20" height="54" fill={mid}/>
+        <rect x="48" y="70" width="6" height="8" fill={mid}/>
+        <rect x="62" y="70" width="6" height="8" fill={mid}/>
+        <rect x="132" y="78" width="20" height="54" fill={mid}/>
+        <rect x="132" y="70" width="6" height="8" fill={mid}/>
+        <rect x="146" y="70" width="6" height="8" fill={mid}/>
+        {/* Central keep */}
+        <rect x="88" y="60" width="24" height="72" fill={dark}/>
+        <path d="M 88 60 L 100 44 L 112 60 Z" fill={dark}/>
+        <rect x="97" y="80" width="6" height="10" fill="#ffffff" opacity="0.5"/>
+        {/* Footbridge to shore */}
+        <line x1="0" y1="170" x2="55" y2="120" stroke={dark} strokeWidth="3" opacity="0.5"/>
       </g>
     ),
     countryside: (
@@ -590,6 +634,7 @@ function placeMapUrl(place) {
     kaunas: 'Kaunas',
     klaipeda: 'Klaipėda',
     curonian: 'Nida',
+    trakai: 'Trakai',
     countryside: '',
     druskininkai: 'Druskininkai',
     palanga: 'Palanga',
