@@ -1,0 +1,36 @@
+# Discover Lithuania
+
+> A curated travel guide to Lithuania — handpicked cafés, restaurants, stays, nature and ready-made routes across 11 regions. Available in English and Hebrew.
+
+## About the site
+
+Discover Lithuania is an independent travel guide built by Niv Shimoni — entrepreneur, AI builder, and someone who keeps ending up in Lithuania. Every place on the site has been personally reviewed or vetted.
+
+The site covers 133+ places across 11 regions: Vilnius, Kaunas, Klaipėda, the Curonian Spit (Nida), Druskininkai, Trakai, Zarasai, Utena, Šiauliai, Palanga, and the Lithuanian countryside.
+
+## What you'll find
+
+- **Places**: cafés, restaurants, nature spots, stays, cultural sites — each with a personal note on why it's worth visiting
+- **Routes**: ready-made itineraries from a single day (A Perfect Day in Vilnius) to a full week (The Classic Baltic Week)
+- **Food guide**: traditional Lithuanian dishes explained
+- **Stays**: handpicked accommodation from boutique spas to forest cabins
+
+## Highlights
+
+- Vilnius old town, Užupis, and the best coffee scene in the Baltics
+- Curonian Spit — UNESCO dunes, pine forests, and the village of Nida
+- Druskininkai — mineral springs and spa retreats
+- Trakai Castle — a 14th-century island fortress
+- Aukštaitija National Park — lakes, forests, and canoe routes
+- Klaipėda — German-Prussian old town and Baltic port
+
+## Author
+
+**Niv Shimoni**
+Entrepreneur and AI builder based between Israel and Lithuania.
+Contact: Niv.shimoni@gmail.com
+WhatsApp: +972534228282
+
+## URL
+
+https://discover-lithuania.netlify.app
