@@ -13,6 +13,13 @@ const REGIONS = [
     placeholder: 'Old Town rooftops at golden hour'
   },
   {
+    id: 'trakai',
+    he: { name: 'טראקאי', tag: 'טירה על אגם', blurb: 'טירת האבן היחידה בליטא שנותרה על אי באגם גלווה. עיירת הקראים, סירות צבעוניות, וקיביני טריים מהתנור.' },
+    en: { name: 'Trakai', tag: 'Castle on the Lake', blurb: "Lithuania's only island castle, rising from Lake Galvė. Karaim heritage, colorful boats, and fresh kibinai straight from the oven." },
+    accent: '#5C8AA6',
+    placeholder: 'Trakai Island Castle reflected in Lake Galvė at golden hour'
+  },
+  {
     id: 'kaunas',
     he: { name: 'קובנה', tag: 'מודרניזם בין-מלחמתי', blurb: 'בירת הארץ לשעבר, יער של ארכיטקטורת באוהאוס וסצנת קפה צעירה ותוססת.' },
     en: { name: 'Kaunas', tag: 'Interwar Modernism', blurb: 'The former capital — a forest of Bauhaus façades and a young, buzzing café scene.' },
@@ -2224,7 +2231,7 @@ const PLACES = [
   },
   {
     "id": "trakai-island-castle",
-    "region": "countryside",
+    "region": "trakai",
     "kind": "culture",
     "name": "Trakai Island Castle",
     "type": "Medieval castle",
@@ -2256,7 +2263,7 @@ const PLACES = [
   },
   {
     "id": "kibinai-senoji",
-    "region": "countryside",
+    "region": "trakai",
     "kind": "restaurant",
     "name": "Senoji Kibininė",
     "type": "Traditional Karaim kitchen",
@@ -2326,7 +2333,7 @@ const LANDMARKS = [
   { id: 'uzupis', region: 'vilnius', he: { name: 'רפובליקת אוז\'ופיס' }, en: { name: 'Užupis Republic' } },
   { id: 'cathedral', region: 'vilnius', he: { name: 'כיכר הקתדרלה' }, en: { name: 'Cathedral Square' } },
   { id: 'old-town', region: 'vilnius', he: { name: 'העיר העתיקה' }, en: { name: 'Old Town' } },
-  { id: 'trakai-castle', region: 'vilnius', he: { name: 'טירת טראקאי' }, en: { name: 'Trakai Castle' } },
+  { id: 'trakai-castle', region: 'trakai', he: { name: 'טירת טראקאי' }, en: { name: 'Trakai Castle' } },
   { id: 'laisves', region: 'kaunas', he: { name: 'שדרת Laisvės' }, en: { name: 'Laisvės Alėja' } },
   { id: 'ninth-fort', region: 'kaunas', he: { name: 'הפורט התשיעי' }, en: { name: 'Ninth Fort' } },
   { id: 'theatre-square', region: 'klaipeda', he: { name: 'כיכר התיאטרון' }, en: { name: 'Theatre Square' } },
