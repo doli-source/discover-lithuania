@@ -256,7 +256,7 @@ function App() {
 
       <a
         className="wa-float"
-        href="https://wa.me/972534228282?text=%D7%94%D7%99%D7%99%20%D7%A0%D7%99%D7%91%21%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94%20%D7%A2%D7%9C%20%D7%9C%D7%99%D7%98%D7%90%20%F0%9F%8C%BF"
+        href={`https://wa.me/972534228282?text=${encodeURIComponent(lang === 'en' ? 'Hey Niv! I have a question about Lithuania 🌿' : 'היי ניב! יש לי שאלה על ליטא 🌿')}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="צור קשר בוואטסאפ"
