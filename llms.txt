@@ -33,4 +33,4 @@ WhatsApp: +972534228282
 
 ## URL
 
-https://discover-lithuania.netlify.app
+https://discoverlithuania.netlify.app
