@@ -804,19 +804,19 @@ const PLACES = [
   },
   {
     "id": "snapas-kava-ir-desertai",
-    "region": "kaunas",
+    "region": "trakai",
     "kind": "cafe",
-    "name": "Snapas kava ir desertai",
-    "type": "Coffee shop",
-    "typeHe": "בית קפה",
+    "name": "Snapas Kava ir Desertai",
+    "type": "Specialty coffee & bakery",
+    "typeHe": "בית קפה ומאפייה",
     "rating": 4.7,
     "reviews": 155,
     "price": "€5–10",
     "emoji": "☕",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A tiny café on Vytauto Street that a local woman, Laima, opened herself after years of failing to find a proper cup of coffee in Trakai — now it's the warmest corner in town, with single-origin coffee, fresh-baked croissants and brownies every morning, and homemade treats from her own honeyberry orchard.",
+    "nivHe": "בית קפה קטן ברחוב ויטאוטו שלאימה, תושבת מקומית, פתחה בעצמה אחרי שנים שלא הצליחה למצוא כוס קפה הגונה בטראקאי — היום זה הפינה הכי חמימה בעיר: קפה איכותי, קרואסונים ובראוניז שנאפים טריים כל בוקר, וממתקים ביתיים מהגינה שלה עם פירות יער sausmedis.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "b-heme-house",
