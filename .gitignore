@@ -1,0 +1,9 @@
+# Netlify local state
+.netlify/
+
+# OS
+.DS_Store
+
+# Env
+.env
+.env.local
