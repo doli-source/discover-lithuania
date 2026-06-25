@@ -248,7 +248,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
                 <span className="taste-emoji">{f.emoji || '🍲'}</span>
               </div>
               <div className="taste-body">
-                <span className="taste-tag">{f.tag}</span>
+                <span className="taste-tag">{f[lang]?.tag || f.tag}</span>
                 <h4 className="taste-name">{f[lang].name}</h4>
                 <p className="taste-desc">{f[lang].desc}</p>
               </div>
@@ -511,7 +511,7 @@ function FoodScreen({ lang, t, places, dishes, regions, openPlace, savedSet, tog
               <div className="dish-body">
                 <div className="dish-head">
                   <h4 className="dish-name">{f[lang].name}</h4>
-                  <span className="dish-tag">{f.tag}</span>
+                  <span className="dish-tag">{f[lang]?.tag || f.tag}</span>
                 </div>
                 <p className="dish-desc">{f[lang].desc}</p>
               </div>
