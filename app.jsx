@@ -108,6 +108,42 @@ function App() {
     document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
   }, [lang]);
 
+  // SEO: per-route <title> + meta description (the static HTML only covers '/')
+  useEffect(() => {
+    const baseTitle = lang === 'he' ? 'גלה את ליטא' : 'Discover Lithuania';
+    let title = `${baseTitle} — ${lang === 'he' ? 'מדריך טיולים אישי' : "A Traveler's Guide"}`;
+    let description = lang === 'he'
+      ? 'מדריך טיולים אישי לליטא — 141 מקומות נבחרים: בתי קפה, מסעדות, אתרי טבע ולינה, ב-12 אזורים. מאת ניב שמעוני.'
+      : "A curated travel guide to Lithuania — 141 handpicked cafés, restaurants, stays, nature spots and ready-made routes across 12 regions. By Niv Shimoni.";
+
+    if (screen === 'explore' && params.region) {
+      const region = REGIONS.find(r => r.id === params.region);
+      if (region) {
+        title = `${region[lang].name} — ${region[lang].tag} | ${baseTitle}`;
+        description = region[lang].blurb;
+      }
+    } else if (screen === 'explore') {
+      title = lang === 'he' ? `כל האזורים | ${baseTitle}` : `Explore all regions | ${baseTitle}`;
+    } else if (screen === 'routes') {
+      title = lang === 'he' ? `מסלולים מוכנים מראש | ${baseTitle}` : `Ready-made routes | ${baseTitle}`;
+    } else if (screen === 'food') {
+      title = lang === 'he' ? `איפה לאכול ולשתות בליטא | ${baseTitle}` : `Where to eat & drink in Lithuania | ${baseTitle}`;
+    } else if (screen === 'stays') {
+      title = lang === 'he' ? `איפה לישון בליטא | ${baseTitle}` : `Where to sleep in Lithuania | ${baseTitle}`;
+    }
+
+    document.title = title;
+    const setMeta = (selector, attr, value) => {
+      const el = document.querySelector(selector);
+      if (el) el.setAttribute(attr, value);
+    };
+    setMeta('meta[name="description"]', 'content', description);
+    setMeta('meta[property="og:title"]', 'content', title);
+    setMeta('meta[property="og:description"]', 'content', description);
+    setMeta('meta[name="twitter:title"]', 'content', title);
+    setMeta('meta[name="twitter:description"]', 'content', description);
+  }, [screen, params, lang]);
+
   // Handle browser back / forward
   useEffect(() => {
     const onPop = () => {

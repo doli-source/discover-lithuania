@@ -1,12 +1,12 @@
 # Discover Lithuania
 
-> A curated travel guide to Lithuania — handpicked cafés, restaurants, stays, nature and ready-made routes across 11 regions. Available in English and Hebrew.
+> A curated travel guide to Lithuania — handpicked cafés, restaurants, stays, nature and ready-made routes across 12 regions. Available in English and Hebrew.
 
 ## About the site
 
 Discover Lithuania is an independent travel guide built by Niv Shimoni — entrepreneur, AI builder, and someone who keeps ending up in Lithuania. Every place on the site has been personally reviewed or vetted.
 
-The site covers 133+ places across 11 regions: Vilnius, Kaunas, Klaipėda, the Curonian Spit (Nida), Druskininkai, Trakai, Zarasai, Utena, Šiauliai, Palanga, and the Lithuanian countryside.
+The site covers 141+ places across 12 regions: Vilnius, Trakai, Kaunas, Klaipėda, the Curonian Spit (Nida), Druskininkai, Kretinga, Palanga, Molėtai, Utena, Zarasai, and the Lithuanian countryside.
 
 ## What you'll find
 
