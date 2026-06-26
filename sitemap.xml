@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://discoverlithuania.netlify.app/</loc>
+    <loc>https://lithuaniadiscovery.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://discoverlithuania.netlify.app/explore</loc>
+    <loc>https://lithuaniadiscovery.com/explore</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://discoverlithuania.netlify.app/explore/vilnius</loc>
+    <loc>https://lithuaniadiscovery.com/explore/vilnius</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://discoverlithuania.netlify.app/explore/kaunas</loc>
+    <loc>https://lithuaniadiscovery.com/explore/kaunas</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://discoverlithuania.netlify.app/explore/klaipeda</loc>
+    <loc>https://lithuaniadiscovery.com/explore/klaipeda</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://discoverlithuania.netlify.app/explore/curonian</loc>
+    <loc>https://lithuaniadiscovery.com/explore/curonian</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://discoverlithuania.netlify.app/explore/druskininkai</loc>
+    <loc>https://lithuaniadiscovery.com/explore/druskininkai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://discoverlithuania.netlify.app/explore/trakai</loc>
+    <loc>https://lithuaniadiscovery.com/explore/trakai</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://discoverlithuania.netlify.app/explore/countryside</loc>
+    <loc>https://lithuaniadiscovery.com/explore/countryside</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://discoverlithuania.netlify.app/routes</loc>
+    <loc>https://lithuaniadiscovery.com/routes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://discoverlithuania.netlify.app/food</loc>
+    <loc>https://lithuaniadiscovery.com/food</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://discoverlithuania.netlify.app/stays</loc>
+    <loc>https://lithuaniadiscovery.com/stays</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
