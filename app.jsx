@@ -35,7 +35,7 @@ const FONT_PAIRS = {
 //   ?place=ID       → place modal overlay (works on any screen)
 //   ?lang=en        → language override (default: he)
 
-const VALID_SCREENS = ['home', 'explore', 'routes', 'food', 'stays', 'saved', 'admin'];
+const VALID_SCREENS = ['home', 'explore', 'routes', 'food', 'stays', 'saved', 'admin', 'privacy', 'terms'];
 
 function parseURL() {
   const seg = location.pathname.replace(/^\//, '').split('/').filter(Boolean);
@@ -130,6 +130,10 @@ function App() {
       title = lang === 'he' ? `איפה לאכול ולשתות בליטא | ${baseTitle}` : `Where to eat & drink in Lithuania | ${baseTitle}`;
     } else if (screen === 'stays') {
       title = lang === 'he' ? `איפה לישון בליטא | ${baseTitle}` : `Where to sleep in Lithuania | ${baseTitle}`;
+    } else if (screen === 'privacy') {
+      title = lang === 'he' ? `מדיניות פרטיות | ${baseTitle}` : `Privacy Policy | ${baseTitle}`;
+    } else if (screen === 'terms') {
+      title = lang === 'he' ? `תנאי שימוש | ${baseTitle}` : `Terms of Service | ${baseTitle}`;
     }
 
     document.title = title;
@@ -278,6 +282,12 @@ function App() {
             toggleSaved={toggleSaved}
           />
         )}
+        {screen === 'privacy' && (
+  <PrivacyScreen lang={lang} />
+)}
+{screen === 'terms' && (
+  <TermsScreen lang={lang} />
+)}
       </main>
 
       <Footer lang={lang} t={t} nav={nav} />
@@ -436,6 +446,11 @@ function Footer({ lang, t, nav }) {
             <button>{lang === 'he' ? 'שפה: ליטאית' : 'Language: Lithuanian'}</button>
             <button>{lang === 'he' ? 'אזור זמן: +2 GMT' : 'Time: +2 GMT'}</button>
           </div>
+          <div className="footer-col">
+  <h5>{lang === 'he' ? 'משפטי' : 'Legal'}</h5>
+  <button onClick={() => nav('privacy')}>{lang === 'he' ? 'מדיניות פרטיות' : 'Privacy Policy'}</button>
+  <button onClick={() => nav('terms')}>{lang === 'he' ? 'תנאי שימוש' : 'Terms of Service'}</button>
+</div>
         </div>
       </div>
       <div className="footer-bottom">
