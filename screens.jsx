@@ -671,6 +671,7 @@ function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, map
               className="btn btn-ghost"
               onClick={(e) => {
                 e.preventDefault();
+                if (typeof gtag === 'function') gtag('event', 'maps_click', { place_id: place.id, place_name: place.name });
                 window.open(placeMapUrl(place), '_blank', 'noopener,noreferrer');
               }}
             >
