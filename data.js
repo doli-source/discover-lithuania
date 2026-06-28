@@ -514,7 +514,7 @@ const PLACES = [
     "source": "ai"
   },
   {
-    "id": "naked-noah",
+    "id": "hales-market","region": "vilnius","kind": "market","name": "Halės Market","type": "Market","typeHe": "שוק","rating": 4.3,"reviews": 10096,"price": null,"emoji": "🛒","niv": "A nice, small market with great local products — sausages, cured meats, cheese, and fresh produce in a historic 1906 market hall.","nivHe": "שוק קטן ונחמד עם מוצרים מקומיים מצוינים — נקניקים, בשרים מעושנים, גבינות ותוצרת טרייה, באולם שוק היסטורי מ-1906.","mapUrl": "https://www.google.com/maps/place/Hal%C4%97s+Market/@54.6736516,25.2860853,17z/data=!3m1!4b1!4m6!3m5!1s0x46dd94402e2a6117:0x5a01d9989ea469f0!8m2!3d54.6736516!4d25.2860853!16s%2Fg%2F122rcy5m?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D","status": "approved","source": "niv"},{"id": "naked-noah",
     "region": "vilnius",
     "kind": "market",
     "name": "Naked Noah",
