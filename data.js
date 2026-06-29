@@ -2451,7 +2451,7 @@ const PLACES = [
           "rating": 4.5,
           "reviews": 346,
           "price": null,
-          "emoji": "🏨",
+          "emoji": "🛎️",
           "niv": "Boutique hotel in a converted 18th-century warehouse on the Dangė River, steps from Klaipėda Castle.",
           "nivHe": "מלון בוטיק במחסן מהמאה ה-18 שעובד לשימוש, על נהר הדאנגה, צעדים מטירת קלייפדה.",
           "status": "approved",
