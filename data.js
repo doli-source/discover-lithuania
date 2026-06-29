@@ -1520,7 +1520,7 @@ const PLACES = [
         "rating": 4.5,
         "reviews": 1235,
         "price": null,
-        "emoji": "🏨",
+        "emoji": "🛏️",
         "niv": "Modern 4-star hotel 8 minutes from the Bridge of Palanga — pool and free breakfast.",
         "nivHe": "מלון 4 כוכבים מודרני, 8 דקות מגשר פלאנגה — בריכה וארוחת בוקר חינם.",
         "status": "approved",
