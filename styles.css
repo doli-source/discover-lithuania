@@ -620,7 +620,7 @@ em { font-style: italic; color: var(--primary); }
 .closing {
   background: var(--ink);
   color: var(--cream);
-  padding: clamp(80px, 12vw, 140px) var(--gutter);
+  padding: clamp(80px, 12vw, 140px) var(--gutter) clamp(48px, 6vw, 80px);
   text-align: center;
 }
 .closing-inner { max-width: 600px; margin: 0 auto; }
@@ -1129,7 +1129,7 @@ em { font-style: italic; color: var(--primary); }
 .footer-inner {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 64px var(--gutter) 32px;
+  padding: 44px var(--gutter) 32px;
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 48px;
@@ -1163,8 +1163,8 @@ em { font-style: italic; color: var(--primary); }
   opacity: 0.85;
 }
 .footer-contact:hover { opacity: 1; text-decoration: underline; }
-.footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-@media (max-width: 540px) {
+.footer-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+@media (max-width: 720px) {
   .footer-cols { grid-template-columns: repeat(2, 1fr); }
 }
 .footer-col h5 {
@@ -1603,7 +1603,7 @@ a.btn { text-decoration: none; }
 /* niv-card visual block (replaces placeholder image) */
 .niv-card-img {
   position: relative;
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/2;
   display: grid;
   place-items: center;
   overflow: hidden;

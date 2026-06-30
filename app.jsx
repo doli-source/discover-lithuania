@@ -113,8 +113,8 @@ function App() {
     const baseTitle = lang === 'he' ? 'גלה את ליטא' : 'Discover Lithuania';
     let title = `${baseTitle} — ${lang === 'he' ? 'מדריך טיולים אישי' : "A Traveler's Guide"}`;
     let description = lang === 'he'
-      ? 'מדריך טיולים אישי לליטא — 154 מקומות נבחרים: בתי קפה, מסעדות, אתרי טבע ולינה, ב-12 אזורים. מאת ניב שמעוני.'
-      : "A curated travel guide to Lithuania — 154 handpicked cafés, restaurants, stays, nature spots and ready-made routes across 12 regions. By Niv Shimoni.";
+      ? 'מדריך טיולים אישי לליטא — 136 מקומות נבחרים: בתי קפה, מסעדות, אתרי טבע ולינה, ב-10 אזורים. מאת ניב שמעוני.'
+      : "A curated travel guide to Lithuania — 136 handpicked cafés, restaurants, stays, nature spots and ready-made routes across 10 regions. By Niv Shimoni.";
 
     if (screen === 'explore' && params.region) {
       const region = REGIONS.find(r => r.id === params.region);
@@ -436,7 +436,7 @@ function Footer({ lang, t, nav }) {
           </div>
           <div className="footer-col">
             <h5>{lang === 'he' ? 'אזורים' : 'Regions'}</h5>
-            {REGIONS.slice(0, 4).map(r => (
+            {REGIONS.map(r => (
               <button key={r.id} onClick={() => nav('explore', { region: r.id })}>{r[lang].name}</button>
             ))}
           </div>

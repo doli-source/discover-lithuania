@@ -41,22 +41,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://lithuaniadiscovery.com/explore/kretinga</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://lithuaniadiscovery.com/explore/palanga</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://lithuaniadiscovery.com/explore/moletai</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lithuaniadiscovery.com/explore/utena</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
