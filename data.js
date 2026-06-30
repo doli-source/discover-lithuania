@@ -2242,7 +2242,7 @@ const LANDMARKS = [
 
 // Traditional dishes (separate from Niv venues)
 const DISHES = [
-  { id: 'saltibarsciai', emoji: '🍲', he: { name: 'שלטיברשצ\'יי', desc: 'מרק סלק קר ורוד-זוהר עם קפיר וביצה קשה. הקיץ במנה.', tag: 'קלאסי' }, en: { name: 'Šaltibarščiai', desc: 'Glowing pink cold beet soup with kefir and boiled egg. Summer in a bowl.', tag: 'Classic' }, ph: 'Bright pink cold soup' },
+  { id: 'saltibarsciai', emoji: '🥣', emojiFilter: 'sepia(1) hue-rotate(300deg) saturate(4) brightness(0.85)', he: { name: 'שלטיברשצ\'יי', desc: 'מרק סלק קר ורוד-זוהר עם קפיר וביצה קשה. הקיץ במנה.', tag: 'קלאסי' }, en: { name: 'Šaltibarščiai', desc: 'Glowing pink cold beet soup with kefir and boiled egg. Summer in a bowl.', tag: 'Classic' }, ph: 'Bright pink cold soup' },
   { id: 'cepelinai', emoji: '🥟', he: { name: 'צפלינאי', desc: 'כופתאות תפוח-אדמה גדולות במילוי בשר עם רוטב שמנת ובייקון.', tag: 'מסורתי' }, en: { name: 'Cepelinai', desc: 'Zeppelin-shaped potato dumplings stuffed with meat, cream & bacon.', tag: 'Traditional' }, ph: 'Two potato dumplings on plate' },
   { id: 'kibinai', emoji: '🥐', he: { name: 'קיביני', desc: 'מאפי בצק קראימיים במילוי כבש או גבינה. הכי טוב בטראקאי.', tag: 'טראקאי' }, en: { name: 'Kibinai', desc: 'Karaim hand pies filled with mutton or cheese. Best in Trakai.', tag: 'Trakai' }, ph: 'Golden half-moon pastries' },
   { id: 'kepta-duona', emoji: '🍞', he: { name: 'קפטא-דונה', desc: 'אצבעות לחם שיפון מטוגנות עם שום. חברה הכי טובה של בירה.', tag: 'נשנוש' }, en: { name: 'Kepta Duona', desc: 'Fried rye bread sticks with garlic. Beer\'s best friend.', tag: 'Snack' }, ph: 'Dark rye toast sticks' },
