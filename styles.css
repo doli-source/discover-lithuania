@@ -514,6 +514,14 @@ em { font-style: italic; color: var(--primary); }
   margin: 0;
   line-height: 1.5;
 }
+@media (max-width: 720px) {
+  /* On mobile, show the city name (and its tag) above the illustration
+     instead of below it. */
+  .region-meta { order: 1; margin-top: 0; }
+  .region-name { order: 2; }
+  .region-visual { order: 3; }
+  .region-blurb { order: 4; }
+}
 
 /* ── Route cards ── */
 .route-cards {
