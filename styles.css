@@ -1,5 +1,5 @@
 /* ============================================================
-   Discover Lithuania — main styles
+   Discover Lithuania â main styles
    ============================================================ */
 
 :root {
@@ -46,11 +46,11 @@ button {
 
 em { font-style: italic; color: var(--primary); }
 
-/* ── App shell ── */
+/* ââ App shell ââ */
 .app { min-height: 100vh; }
 .main { min-height: 60vh; }
 
-/* ── Nav ── */
+/* ââ Nav ââ */
 .nav {
   position: sticky;
   top: 0;
@@ -108,8 +108,6 @@ em { font-style: italic; color: var(--primary); }
   display: flex;
   align-items: center;
   gap: 4px;
-  margin-inline-start: auto;
-  margin-inline-end: 0;
 }
 .nav-link {
   padding: 8px 14px;
@@ -121,7 +119,7 @@ em { font-style: italic; color: var(--primary); }
 }
 .nav-link:hover { background: rgba(194, 136, 64, 0.1); color: var(--ink); }
 .nav-link.active { background: var(--ink); color: var(--cream); }
-.nav-actions { display: flex; align-items: center; gap: 8px; }
+.nav-actions { display: flex; align-items: center; gap: 8px; margin-inline-start: auto; }
 .saved-btn {
   display: flex;
   align-items: center;
@@ -156,7 +154,7 @@ em { font-style: italic; color: var(--primary); }
   .mobile-link.active { background: var(--ink); color: var(--cream); }
 }
 
-/* ── Buttons ── */
+/* ââ Buttons ââ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -202,7 +200,7 @@ em { font-style: italic; color: var(--primary); }
 }
 .load-more-btn:hover { background: var(--primary-dark); color: #fff; }
 
-/* ── Section structure ── */
+/* ââ Section structure ââ */
 .section {
   max-width: var(--max-w);
   margin: 0 auto;
@@ -256,7 +254,7 @@ em { font-style: italic; color: var(--primary); }
   max-width: 55ch;
 }
 
-/* ── Hero ── */
+/* ââ Hero ââ */
 .hero {
   position: relative;
   min-height: 92vh;
@@ -376,7 +374,7 @@ em { font-style: italic; color: var(--primary); }
   50% { transform: scaleY(0.6); opacity: 0.5; }
 }
 
-/* ── Facts strip ── */
+/* ââ Facts strip ââ */
 .facts-strip {
   background: var(--ink);
   color: var(--cream);
@@ -407,7 +405,7 @@ em { font-style: italic; color: var(--primary); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ── Region grid ── */
+/* ââ Region grid ââ */
 .region-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -523,7 +521,7 @@ em { font-style: italic; color: var(--primary); }
   .region-blurb { order: 4; }
 }
 
-/* ── Route cards ── */
+/* ââ Route cards ââ */
 .route-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -595,7 +593,7 @@ em { font-style: italic; color: var(--primary); }
 }
 .trail-dot.first { background: var(--primary); }
 
-/* ── Taste grid ── */
+/* ââ Taste grid ââ */
 .taste-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -624,7 +622,7 @@ em { font-style: italic; color: var(--primary); }
   line-height: 1.45;
 }
 
-/* ── Closing CTA ── */
+/* ââ Closing CTA ââ */
 .closing {
   background: var(--ink);
   color: var(--cream);
@@ -649,7 +647,7 @@ em { font-style: italic; color: var(--primary); }
 .closing .btn-primary { background: var(--primary); }
 .closing .btn-primary:hover { background: var(--primary-dark); }
 
-/* ── Placeholder (decorative) ── HIDDEN: no placeholder boxes anywhere */
+/* ââ Placeholder (decorative) ââ HIDDEN: no placeholder boxes anywhere */
 .ph {
   position: relative;
   width: 100%;
@@ -659,7 +657,7 @@ em { font-style: italic; color: var(--primary); }
 }
 .ph-svg, .ph-label, .ph-dot, .ph-text { display: none; }
 
-/* ── Explore ── */
+/* ââ Explore ââ */
 .explore { max-width: var(--max-w); margin: 0 auto; padding: 48px var(--gutter) 100px; }
 .explore-header {
   display: grid;
@@ -668,7 +666,7 @@ em { font-style: italic; color: var(--primary); }
   align-items: start;
   margin-bottom: 40px;
 }
-/* Map column — wraps MapIllustration's .map-wrap */
+/* Map column â wraps MapIllustration's .map-wrap */
 .explore-map-col { min-width: 0; }
 .map-wrap {
   background: linear-gradient(135deg, #f7f0df, #ede2ca);
@@ -684,7 +682,7 @@ em { font-style: italic; color: var(--primary); }
     flex-direction: column;
     gap: 24px;
   }
-  /* On mobile, map-col is first in DOM so it appears at top — keep that order */
+  /* On mobile, map-col is first in DOM so it appears at top â keep that order */
   .explore-intro { order: 2; }
   .explore-map-col { order: 1; width: 100%; }
 }
@@ -820,7 +818,7 @@ em { font-style: italic; color: var(--primary); }
   margin-top: 4px;
 }
 
-/* ── Routes ── */
+/* ââ Routes ââ */
 .routes { max-width: var(--max-w); margin: 0 auto; padding: 48px var(--gutter) 100px; }
 .routes-header { margin-bottom: 32px; }
 
@@ -965,7 +963,7 @@ em { font-style: italic; color: var(--primary); }
 }
 .timeline-tip { opacity: 0.7; }
 
-/* ── Food ── */
+/* ââ Food ââ */
 .food { max-width: var(--max-w); margin: 0 auto; padding: 48px var(--gutter) 100px; }
 .food-header { text-align: center; margin-bottom: 32px; }
 .food-header .page-sub { margin-inline: auto; }
@@ -1049,7 +1047,7 @@ em { font-style: italic; color: var(--primary); }
   line-height: 1.5;
 }
 
-/* ── Modal ── */
+/* ââ Modal ââ */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -1129,7 +1127,7 @@ em { font-style: italic; color: var(--primary); }
 }
 .modal-actions { display: flex; gap: 10px; flex-wrap: wrap; }
 
-/* ── Footer ── */
+/* ââ Footer ââ */
 .footer {
   background: var(--ink);
   color: var(--cream);
@@ -1204,7 +1202,7 @@ em { font-style: italic; color: var(--primary); }
   border-top: 1px solid rgba(250,245,236,0.08);
 }
 
-/* ── WhatsApp floating button ── */
+/* ââ WhatsApp floating button ââ */
 .wa-float {
   position: fixed;
   bottom: 28px;
@@ -1225,13 +1223,13 @@ em { font-style: italic; color: var(--primary); }
   .wa-float { bottom: 20px; left: 16px; width: 50px; height: 50px; }
 }
 
-/* ── RTL adjustments ── */
+/* ââ RTL adjustments ââ */
 [dir="rtl"] .map-svg text { direction: ltr; }
 [dir="rtl"] .venue-card { text-align: right; }
 
-/* ─────────────────────────────────────────────────────────
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
    Niv-merged additions: place cards, niv tip, filters, etc.
-   ───────────────────────────────────────────────────────── */
+   âââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 /* Hero stats row */
 .hero-stats-row {
@@ -1542,7 +1540,7 @@ em { font-style: italic; color: var(--primary); }
 /* a tag styled as button */
 a.btn { text-decoration: none; }
 
-/* ── Visual blocks (no image placeholders) ── */
+/* ââ Visual blocks (no image placeholders) ââ */
 .taste-card { display: flex; flex-direction: column; gap: 12px; }
 .taste-visual, .dish-visual {
   position: relative;
@@ -1653,9 +1651,9 @@ a.btn { text-decoration: none; }
 }
 .modal-emoji { display: none; } /* hide old overlay emoji */
 
-/* ═══════════════════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
    ADMIN PANEL
-═══════════════════════════════════════════════════════════════ */
+âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 .admin-screen {
   min-height: 100vh;
@@ -1867,9 +1865,9 @@ a.btn { text-decoration: none; }
 }
 .admin-login-btn:hover { background: #8b5cf6; }
 
-/* ═══════════════════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
    SAVED SCREEN
-═══════════════════════════════════════════════════════════════ */
+âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 .saved-screen {
   max-width: 760px;
@@ -1945,9 +1943,9 @@ a.btn { text-decoration: none; }
 .saved-empty-title { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--ink); margin: 0 0 10px; }
 .saved-empty-sub   { font-size: 15px; color: #9ca3af; max-width: 280px; line-height: 1.6; margin: 0; }
 
-/* ═══════════════════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
    LITHUANIA MAP (new SVG)
-═══════════════════════════════════════════════════════════════ */
+âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 .lt-map-svg { border-radius: 28px; }
 
@@ -2037,23 +2035,23 @@ a.btn { text-decoration: none; }
   .lt-country-word { font-size: 38px; letter-spacing: 10px; }
 }
 
-/* ═══════════════════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
    HOME MAP SECTION
-═══════════════════════════════════════════════════════════════ */
+âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 .home-map-section { padding-top: 0; }
 .home-map-wrap {
   max-width: 680px;
   margin: 0 auto;
 }
-/* MapIllustration renders .map-wrap inside home-map-wrap — no extra bg needed */
+/* MapIllustration renders .map-wrap inside home-map-wrap â no extra bg needed */
 .home-map-wrap .map-wrap {
   background: linear-gradient(135deg, #f7f0df, #ede2ca);
   border-radius: 20px;
   padding: 20px;
 }
 @media (max-width: 720px) {
-  /* Restore a modest top gap above the heading on mobile only — the
+  /* Restore a modest top gap above the heading on mobile only â the
      desktop rule zeroes padding-top, which reads as too tight against
      the section above on small screens. Section's own left/right
      padding (gutter) is left untouched so the heading/text stays
@@ -2084,9 +2082,9 @@ a.btn { text-decoration: none; }
   }
 }
 
-/* ═══════════════════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
    SMALLER PLACE CARD GRIDS (home tips + explore places)
-═══════════════════════════════════════════════════════════════ */
+âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 .tips-grid-home,
 .places-grid-sm {
@@ -2138,9 +2136,9 @@ a.btn { text-decoration: none; }
   }
 }
 
-/* ═══════════════════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
    EXPLORE REGION BANNER
-═══════════════════════════════════════════════════════════════ */
+âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 .region-banner {
   display: grid;
@@ -2208,9 +2206,9 @@ a.btn { text-decoration: none; }
   .region-banner-title { font-size: 2rem; }
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   ADMIN PANEL — NEW ELEMENTS
-═══════════════════════════════════════════════════════════════ */
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+   ADMIN PANEL â NEW ELEMENTS
+âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 /* Make filter bar single-row with horizontal scroll */
 .admin-filters {
