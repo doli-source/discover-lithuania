@@ -2,36 +2,36 @@
   <!-- drop shadow -->
   <ellipse cx="40" cy="71" rx="16" ry="2" fill="#a08050" opacity="0.18"/>
 
-  <!-- Bowl body (cream) -->
+  <!-- Bowl body (cream exterior) -->
   <path d="M11 38 C11 65 26 69 40 69 C54 69 69 65 69 38 Z" fill="#fdf8ee"/>
 
-  <!-- Pink soup fill -->
+  <!-- Pink soup fill (inside bowl) -->
   <path d="M14.5 40 C14.5 64 27 67 40 67 C53 67 65.5 64 65.5 40 Z" fill="#cc1c5e"/>
 
-  <!-- Soup top surface -->
-  <ellipse cx="40" cy="40" rx="25.5" ry="5.8" fill="#d82870"/>
-
-  <!-- Soup highlight -->
-  <ellipse cx="29" cy="38.5" rx="7" ry="2" fill="#e84a7a" opacity="0.5"/>
-
-  <!-- Boiled egg on soup surface -->
-  <circle cx="47" cy="39" r="3.8" fill="#fdfaf0"/>
-  <circle cx="47" cy="39" r="2" fill="#fde68a"/>
-
-  <!-- Bowl rim outer (cream) -->
+  <!-- Bowl rim outer (cream) — creates rim border -->
   <ellipse cx="40" cy="38" rx="29" ry="7" fill="#fdf8ee"/>
-  <!-- Rim inner — pink soup visible through opening -->
+  <!-- Rim inner — pink soup surface visible through opening -->
   <ellipse cx="40" cy="38" rx="25.5" ry="5.5" fill="#d82870"/>
 
-  <!-- SPOON — drawn last so it sits on top of everything -->
-  <!-- Handle shadow (soft, for contrast against light bg) -->
-  <line x1="33" y1="38" x2="71" y2="6" stroke="#c0a870" stroke-width="6.5" stroke-linecap="round" opacity="0.22"/>
-  <!-- Handle -->
-  <line x1="33" y1="37" x2="71" y2="6" stroke="#f5ede0" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- Soup highlight -->
+  <ellipse cx="29" cy="37.5" rx="7" ry="2" fill="#e84a7a" opacity="0.5"/>
+
+  <!-- Boiled egg — drawn after rim so it sits on top of soup surface -->
+  <circle cx="47" cy="37.5" r="3.8" fill="#fdfaf0"/>
+  <circle cx="47" cy="37.5" r="2" fill="#fde68a"/>
+
+  <!-- SPOON — warm golden, clearly visible -->
+  <!-- Handle shadow -->
+  <line x1="34" y1="36" x2="72" y2="4" stroke="#7A5C30" stroke-width="6.5" stroke-linecap="round" opacity="0.3"/>
+  <!-- Handle body -->
+  <line x1="34" y1="35" x2="72" y2="4" stroke="#C8A060" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- Handle highlight -->
+  <line x1="34" y1="34.5" x2="65" y2="8" stroke="#E8C888" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>
+
   <!-- Spoon head shadow -->
-  <ellipse cx="27" cy="45.5" rx="8.5" ry="5.5" fill="#b89060" opacity="0.2" transform="rotate(42 27 45.5)"/>
-  <!-- Spoon head (oval) -->
-  <ellipse cx="27" cy="45" rx="7.5" ry="4.8" fill="#f5ede0" transform="rotate(42 27 45)"/>
-  <!-- Spoon concave (inner shadow) -->
-  <ellipse cx="27" cy="45.5" rx="4.8" ry="2.8" fill="#d8c8a8" opacity="0.45" transform="rotate(42 27 45)"/>
+  <ellipse cx="27" cy="46" rx="9" ry="5.8" fill="#7A5C30" opacity="0.3" transform="rotate(42 27 46)"/>
+  <!-- Spoon head body -->
+  <ellipse cx="27" cy="45" rx="8" ry="5" fill="#C8A060" transform="rotate(42 27 45)"/>
+  <!-- Spoon concave (inner highlight) -->
+  <ellipse cx="27" cy="45" rx="5.2" ry="3" fill="#E8C888" opacity="0.8" transform="rotate(42 27 45)"/>
 </svg>
