@@ -1,38 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <!-- drop shadow -->
-  <ellipse cx="40" cy="71" rx="16" ry="2" fill="#a08050" opacity="0.18"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- All elements shifted +20 on each axis to add padding inside the SVG -->
+  <g transform="translate(20,20)">
+    <!-- drop shadow -->
+    <ellipse cx="40" cy="71" rx="16" ry="2" fill="#a08050" opacity="0.18"/>
 
-  <!-- Bowl body (cream exterior) -->
-  <path d="M11 38 C11 65 26 69 40 69 C54 69 69 65 69 38 Z" fill="#fdf8ee"/>
+    <!-- Bowl body (cream exterior) -->
+    <path d="M11 38 C11 65 26 69 40 69 C54 69 69 65 69 38 Z" fill="#fdf8ee"/>
 
-  <!-- Pink soup fill -->
-  <path d="M14.5 40 C14.5 64 27 67 40 67 C53 67 65.5 64 65.5 40 Z" fill="#cc1c5e"/>
+    <!-- Pink soup fill -->
+    <path d="M14.5 40 C14.5 64 27 67 40 67 C53 67 65.5 64 65.5 40 Z" fill="#cc1c5e"/>
 
-  <!-- Bowl rim outer (cream) -->
-  <ellipse cx="40" cy="38" rx="29" ry="7" fill="#fdf8ee"/>
-  <!-- Rim inner — pink soup surface -->
-  <ellipse cx="40" cy="38" rx="25.5" ry="5.5" fill="#d82870"/>
+    <!-- Bowl rim outer (cream) -->
+    <ellipse cx="40" cy="38" rx="29" ry="7" fill="#fdf8ee"/>
+    <!-- Rim inner — pink soup surface -->
+    <ellipse cx="40" cy="38" rx="25.5" ry="5.5" fill="#d82870"/>
 
-  <!-- Soup highlight -->
-  <ellipse cx="29" cy="37.5" rx="7" ry="2" fill="#e84a7a" opacity="0.5"/>
+    <!-- Soup highlight -->
+    <ellipse cx="29" cy="37.5" rx="7" ry="2" fill="#e84a7a" opacity="0.5"/>
 
-  <!-- Boiled egg on soup surface -->
-  <circle cx="47" cy="37.5" r="3.8" fill="#fdfaf0"/>
-  <circle cx="47" cy="37.5" r="2" fill="#fde68a"/>
+    <!-- Boiled egg on soup surface -->
+    <circle cx="47" cy="37.5" r="3.8" fill="#fdfaf0"/>
+    <circle cx="47" cy="37.5" r="2" fill="#fde68a"/>
 
-  <!-- SPOON — proportional, mostly inside the bowl -->
-  <!-- Handle shadow -->
-  <line x1="41" y1="39" x2="61" y2="23" stroke="#7A5C30" stroke-width="6" stroke-linecap="round" opacity="0.25"/>
-  <!-- Handle body (goes from bowl rim up-right, stays within card) -->
-  <line x1="41" y1="38" x2="61" y2="23" stroke="#C8A060" stroke-width="4.5" stroke-linecap="round"/>
-  <!-- Handle highlight -->
-  <line x1="41" y1="37.5" x2="58" y2="25.5" stroke="#E8C888" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>
-
-  <!-- Spoon head — inside the bowl, small and elegant -->
-  <!-- Shadow -->
-  <ellipse cx="33" cy="40.5" rx="8" ry="4.8" fill="#7A5C30" opacity="0.25" transform="rotate(-15 33 40.5)"/>
-  <!-- Head body -->
-  <ellipse cx="33" cy="40" rx="7.5" ry="4.5" fill="#C8A060" transform="rotate(-15 33 40)"/>
-  <!-- Concave inner -->
-  <ellipse cx="33" cy="40" rx="4.8" ry="2.5" fill="#E8C888" opacity="0.8" transform="rotate(-15 33 40)"/>
+    <!-- SPOON — proportional, mostly inside the bowl -->
+    <line x1="41" y1="39" x2="61" y2="23" stroke="#7A5C30" stroke-width="6" stroke-linecap="round" opacity="0.25"/>
+    <line x1="41" y1="38" x2="61" y2="23" stroke="#C8A060" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="41" y1="37.5" x2="58" y2="25.5" stroke="#E8C888" stroke-width="1.8" stroke-linecap="round" opacity="0.7"/>
+    <ellipse cx="33" cy="40.5" rx="8" ry="4.8" fill="#7A5C30" opacity="0.25" transform="rotate(-15 33 40.5)"/>
+    <ellipse cx="33" cy="40" rx="7.5" ry="4.5" fill="#C8A060" transform="rotate(-15 33 40)"/>
+    <ellipse cx="33" cy="40" rx="4.8" ry="2.5" fill="#E8C888" opacity="0.8" transform="rotate(-15 33 40)"/>
+  </g>
 </svg>
