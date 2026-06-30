@@ -245,7 +245,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
           {tasteSample.map((f, i) => (
             <article className="taste-card" key={f.id}>
               <div className="taste-visual" style={{ background: `linear-gradient(135deg, #A85D4A30, #A85D4A10)` }}>
-                <span className="taste-emoji" style={f.emojiFilter ? {filter: f.emojiFilter} : {}}>{f.emoji || '🍲'}</span>
+                <span className="taste-emoji">{f.emojiImage ? <img src={f.emojiImage} alt="" style={{width:'100%',height:'100%',objectFit:'contain'}}/> : f.emoji || '🍲'}</span>
               </div>
               <div className="taste-body">
                 <span className="taste-tag">{f[lang]?.tag || f.tag}</span>
@@ -506,7 +506,7 @@ function FoodScreen({ lang, t, places, dishes, regions, openPlace, savedSet, tog
           {dishes.map((f, i) => (
             <article className="dish-card" key={f.id}>
               <div className="dish-visual" style={{ background: `linear-gradient(135deg, #A85D4A30, #C2884020)` }}>
-                <span className="dish-emoji" style={f.emojiFilter ? {filter: f.emojiFilter} : {}}>{f.emoji || '🍲'}</span>
+                <span className="dish-emoji">{f.emojiImage ? <img src={f.emojiImage} alt="" style={{width:'100%',height:'100%',objectFit:'contain'}}/> : f.emoji || '🍲'}</span>
               </div>
               <div className="dish-body">
                 <div className="dish-head">
