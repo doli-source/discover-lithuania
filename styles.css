@@ -2044,6 +2044,26 @@ a.btn { text-decoration: none; }
   border-radius: 20px;
   padding: 20px;
 }
+@media (max-width: 720px) {
+  /* Enlarge the home map on mobile by trimming the surrounding padding,
+     so the map itself gets more of the screen width. */
+  .home-map-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .home-map-wrap .map-wrap {
+    padding: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .home-map-section {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .home-map-wrap .map-wrap {
+    padding: 8px;
+  }
+}
 
 /* ═══════════════════════════════════════════════════════════════
    SMALLER PLACE CARD GRIDS (home tips + explore places)
