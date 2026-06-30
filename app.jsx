@@ -24,33 +24,18 @@ const FONT_PAIRS = {
 };
 
 // ─── URL deep-link helpers ──────────────────────────────────────────────────
-// URL scheme:
-//   /               → home
-//   /explore        → explore all regions
-//   /explore/vilnius → explore, region pre-selected
-//   /routes         → routes list
-//   /routes/vilnius-day → specific itinerary open
-//   /food           → food screen
-//   /stays          → stays screen
-//   ?place=ID       → place modal overlay (works on any screen)
-//   ?lang=en        → language override (default: he)
-
-const VALID_SCREENS = ['home', 'explore', 'routes', 'food', 'stays', 'saved', 'admin', 'privacy', 'terms'];
+const VALID_SCREENS = ['home', 'explore', 'routes', 'food', 'stays', 'saved', 'admin'];
 
 function parseURL() {
   const seg = location.pathname.replace(/^\//, '').split('/').filter(Boolean);
   const qs  = new URLSearchParams(location.search);
-
   const rawScreen = seg[0] || 'home';
   const screen    = VALID_SCREENS.includes(rawScreen) ? rawScreen : 'home';
   const params    = {};
-
   if (screen === 'explore' && seg[1]) params.region = seg[1];
   if (screen === 'routes'  && seg[1]) params.route  = seg[1];
-
   const openPlaceId = qs.get('place') || null;
   const lang        = qs.get('lang')  || 'he';
-
   return { screen, params, openPlaceId, lang };
 }
 
@@ -61,19 +46,14 @@ function buildURL(screen, params, openPlaceId, lang) {
     if (screen === 'explore' && params?.region) path += '/' + params.region;
     if (screen === 'routes'  && params?.route)  path += '/' + params.route;
   }
-
   const qs = new URLSearchParams();
   if (openPlaceId)           qs.set('place', openPlaceId);
   if (lang && lang !== 'he') qs.set('lang',  lang);
-
   return path + (qs.toString() ? '?' + qs.toString() : '');
 }
-// ────────────────────────────────────────────────────────────────────────────
 
 function App() {
   const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
-
-  // Initialise state from the current URL
   const [lang,        setLangState]  = useState(() => parseURL().lang);
   const [screen,      setScreen]     = useState(() => parseURL().screen);
   const [params,      setParams]     = useState(() => parseURL().params);
@@ -108,61 +88,35 @@ function App() {
     document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
   }, [lang]);
 
-  // SEO: per-route <title> + meta description (the static HTML only covers '/')
   useEffect(() => {
     const baseTitle = lang === 'he' ? 'גלה את ליטא' : 'Discover Lithuania';
     let title = `${baseTitle} — ${lang === 'he' ? 'מדריך טיולים אישי' : "A Traveler's Guide"}`;
     let description = lang === 'he'
-      ? 'מדריך טיולים אישי לליטא — 136 מקומות נבחרים: בתי קפה, מסעדות, אתרי טבע ולינה, ב-10 אזורים. מאת ניב שמעוני.'
-      : "A curated travel guide to Lithuania — 136 handpicked cafés, restaurants, stays, nature spots and ready-made routes across 10 regions. By Niv Shimoni.";
-
+      ? 'מדריך טיולים אישי לליטא — 141 מקומות נבחרים'
+      : "A curated travel guide to Lithuania — 141 handpicked places. By Niv Shimoni.";
     if (screen === 'explore' && params.region) {
       const region = REGIONS.find(r => r.id === params.region);
-      if (region) {
-        title = `${region[lang].name} — ${region[lang].tag} | ${baseTitle}`;
-        description = region[lang].blurb;
-      }
+      if (region) { title = `${region[lang].name} | ${baseTitle}`; description = region[lang].blurb; }
     } else if (screen === 'explore') {
       title = lang === 'he' ? `כל האזורים | ${baseTitle}` : `Explore all regions | ${baseTitle}`;
     } else if (screen === 'routes') {
-      title = lang === 'he' ? `מסלולים מוכנים מראש | ${baseTitle}` : `Ready-made routes | ${baseTitle}`;
+      title = lang === 'he' ? `מסלולים | ${baseTitle}` : `Routes | ${baseTitle}`;
     } else if (screen === 'food') {
-      title = lang === 'he' ? `איפה לאכול ולשתות בליטא | ${baseTitle}` : `Where to eat & drink in Lithuania | ${baseTitle}`;
+      title = lang === 'he' ? `איפה לאכול | ${baseTitle}` : `Food & drink | ${baseTitle}`;
     } else if (screen === 'stays') {
-      title = lang === 'he' ? `איפה לישון בליטא | ${baseTitle}` : `Where to sleep in Lithuania | ${baseTitle}`;
-    } else if (screen === 'privacy') {
-      title = lang === 'he' ? `מדיניות פרטיות | ${baseTitle}` : `Privacy Policy | ${baseTitle}`;
-    } else if (screen === 'terms') {
-      title = lang === 'he' ? `תנאי שימוש | ${baseTitle}` : `Terms of Service | ${baseTitle}`;
+      title = lang === 'he' ? `איפה לישון | ${baseTitle}` : `Where to sleep | ${baseTitle}`;
     }
-
     document.title = title;
-    const setMeta = (selector, attr, value) => {
-      const el = document.querySelector(selector);
-      if (el) el.setAttribute(attr, value);
-    };
+    const setMeta = (sel, attr, val) => { const el = document.querySelector(sel); if (el) el.setAttribute(attr, val); };
     setMeta('meta[name="description"]', 'content', description);
     setMeta('meta[property="og:title"]', 'content', title);
     setMeta('meta[property="og:description"]', 'content', description);
-    setMeta('meta[name="twitter:title"]', 'content', title);
-    setMeta('meta[name="twitter:description"]', 'content', description);
-    if (typeof gtag === 'function') {
-      gtag('event', 'page_view', {
-        page_title: title,
-        page_path: window.location.pathname + window.location.search,
-        page_location: window.location.href
-      });
-    }
   }, [screen, params, lang]);
 
-  // Handle browser back / forward
   useEffect(() => {
     const onPop = () => {
       const { screen, params, openPlaceId, lang } = parseURL();
-      setScreen(screen);
-      setParams(params);
-      setOpenPlaceId(openPlaceId);
-      setLangState(lang);
+      setScreen(screen); setParams(params); setOpenPlaceId(openPlaceId); setLangState(lang);
     };
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
@@ -172,7 +126,6 @@ function App() {
   const palette = PALETTES[tweaks.palette] || PALETTES.amber;
   const fonts = FONT_PAIRS[tweaks.fontPair] || FONT_PAIRS.editorial;
 
-  // Apply CSS vars
   useEffect(() => {
     const root = document.documentElement;
     root.style.setProperty('--primary', palette.primary);
@@ -190,7 +143,6 @@ function App() {
     root.style.setProperty('--radius', radiusMap[tweaks.rounded] || '12px');
   }, [palette, fonts, tweaks.density, tweaks.rounded]);
 
-  // Language toggle — replaceState so switching lang doesn't clutter history
   const setLang = (newLang) => {
     setLangState(newLang);
     const p = new URLSearchParams(location.search);
@@ -200,19 +152,13 @@ function App() {
   };
 
   const nav = (s, p = {}) => {
-    setScreen(s);
-    setParams(p);
-    setOpenPlaceId(null);
+    setScreen(s); setParams(p); setOpenPlaceId(null);
     history.pushState(null, '', buildURL(s, p, null, lang));
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const toggleSaved = (id) => {
-    setSavedSet(prev => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id); else next.add(id);
-      return next;
-    });
+    setSavedSet(prev => { const next = new Set(prev); if (next.has(id)) next.delete(id); else next.add(id); return next; });
   };
 
   const openPlace = (id) => {
@@ -231,16 +177,10 @@ function App() {
   const openPlaceData = openPlaceId ? effectivePlaces.find(p => p.id === openPlaceId) : null;
   const openPlaceRegion = openPlaceData ? REGIONS.find(r => r.id === openPlaceData.region) : null;
 
-  // Admin panel — full-screen, no NavBar/Footer
   if (screen === 'admin') {
     return (
       <div style={{ minHeight: '100vh', background: '#f5f5f5' }}>
-        <AdminScreen
-          allPlaces={PLACES}
-          adminOverrides={adminOverrides}
-          onOverride={applyAdminOverride}
-          regions={REGIONS}
-        />
+        <AdminScreen allPlaces={PLACES} adminOverrides={adminOverrides} onOverride={applyAdminOverride} regions={REGIONS} />
       </div>
     );
   }
@@ -248,7 +188,6 @@ function App() {
   return (
     <div className="app">
       <NavBar lang={lang} setLang={setLang} screen={screen} nav={nav} t={t} savedCount={savedSet.size} onSavedClick={() => nav('saved')} />
-
       <main className="main">
         {screen === 'home' && (
           <HomeScreen lang={lang} t={t} regions={REGIONS} places={effectivePlaces} landmarks={LANDMARKS}
@@ -272,49 +211,19 @@ function App() {
             savedSet={savedSet} toggleSaved={toggleSaved} openPlace={openPlace} />
         )}
         {screen === 'saved' && (
-          <SavedScreen
-            savedSet={savedSet}
-            places={effectivePlaces}
-            regions={REGIONS}
-            lang={lang}
-            t={t}
-            openPlace={openPlace}
-            toggleSaved={toggleSaved}
-          />
+          <SavedScreen savedSet={savedSet} places={effectivePlaces} regions={REGIONS} lang={lang} t={t}
+            openPlace={openPlace} toggleSaved={toggleSaved} />
         )}
-        {screen === 'privacy' && (
-  <PrivacyScreen lang={lang} />
-)}
-{screen === 'terms' && (
-  <TermsScreen lang={lang} />
-)}
       </main>
-
       <Footer lang={lang} t={t} nav={nav} />
-
       {openPlaceData && (
-        <PlaceModal
-          place={openPlaceData}
-          region={openPlaceRegion}
-          lang={lang}
-          t={t}
-          onClose={closePlace}
-          saved={savedSet.has(openPlaceId)}
-          onToggleSaved={toggleSaved}
-          mapUrl={MAP_URL}
-        />
+        <PlaceModal place={openPlaceData} region={openPlaceRegion} lang={lang} t={t}
+          onClose={closePlace} saved={savedSet.has(openPlaceId)} onToggleSaved={toggleSaved} mapUrl={MAP_URL} />
       )}
-
       <Tweaks lang={lang} tweaks={tweaks} setTweak={setTweak} />
-
-      <a
-        className="wa-float"
+      <a className="wa-float"
         href={`https://wa.me/972534228282?text=${encodeURIComponent(lang === 'en' ? 'Hey Niv! I have a question about Lithuania 🌿' : 'היי ניב! יש לי שאלה על ליטא 🌿')}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="צור קשר בוואטסאפ"
-        onClick={() => { if (typeof gtag === 'function') gtag('event', 'whatsapp_click', { page_path: window.location.pathname }); }}
-      >
+        target="_blank" rel="noopener noreferrer" aria-label="צור קשר בוואטסאפ">
         <svg viewBox="0 0 24 24" fill="white" width="28" height="28" aria-hidden="true">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
           <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.535 5.845L.057 23.25c-.09.334.232.635.563.52l5.565-1.935A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.9 0-3.68-.512-5.21-1.402l-.374-.218-3.878 1.348 1.306-3.77-.24-.39A9.711 9.711 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
@@ -344,6 +253,9 @@ function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
   return (
     <header className={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
+        <button className="mobile-menu" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+        </button>
         <button className="brand" onClick={() => nav('home')}>
           <span className="brand-mark">
             <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
@@ -385,9 +297,6 @@ function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
             <span className="lang-sep">·</span>
             <span className={lang === 'en' ? 'active' : ''}>EN</span>
           </button>
-          <button className="mobile-menu" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
-          </button>
         </div>
       </div>
       {mobileOpen && (
@@ -414,14 +323,11 @@ function Footer({ lang, t, nav }) {
         <div className="footer-brand">
           <h3 className="footer-name">{t.siteName}</h3>
           <p className="footer-sub">
-            {lang === 'he'
-              ? 'מדריך אישי לליטא — בלי פאתוס, רק מה שכיף.'
-              : 'A friendly guide to Lithuania — no pretense, just what\'s fun.'}
+            {lang === 'he' ? 'מדריך אישי לליטא — בלי פאתוס, רק מה שכיף.' : 'A friendly guide to Lithuania — no pretense, just what\'s fun.'}
           </p>
           <div className="footer-about">
             <p className="footer-about-bio">
-              {lang === 'he'
-                ? 'ניב שמעוני. יזם, עובד עם AI, ומבלה בליטא יותר ממה שתכנן. האתר הזה הוא התוצאה.'
+              {lang === 'he' ? 'ניב שמעוני. יזם, עובד עם AI, ומבלה בליטא יותר ממה שתכנן. האתר הזה הוא התוצאה.'
                 : 'Niv Shimoni. Entrepreneur, AI builder, and someone who keeps ending up in Lithuania. This site is the result.'}
             </p>
             <a className="footer-contact" href="mailto:Niv.shimoni@gmail.com">Niv.shimoni@gmail.com</a>
@@ -436,7 +342,7 @@ function Footer({ lang, t, nav }) {
           </div>
           <div className="footer-col">
             <h5>{lang === 'he' ? 'אזורים' : 'Regions'}</h5>
-            {REGIONS.map(r => (
+            {REGIONS.slice(0, 4).map(r => (
               <button key={r.id} onClick={() => nav('explore', { region: r.id })}>{r[lang].name}</button>
             ))}
           </div>
@@ -446,11 +352,6 @@ function Footer({ lang, t, nav }) {
             <button>{lang === 'he' ? 'שפה: ליטאית' : 'Language: Lithuanian'}</button>
             <button>{lang === 'he' ? 'אזור זמן: +2 GMT' : 'Time: +2 GMT'}</button>
           </div>
-          <div className="footer-col">
-  <h5>{lang === 'he' ? 'משפטי' : 'Legal'}</h5>
-  <button onClick={() => nav('privacy')}>{lang === 'he' ? 'מדיניות פרטיות' : 'Privacy Policy'}</button>
-  <button onClick={() => nav('terms')}>{lang === 'he' ? 'תנאי שימוש' : 'Terms of Service'}</button>
-</div>
         </div>
       </div>
       <div className="footer-bottom">
