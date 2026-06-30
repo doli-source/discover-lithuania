@@ -2045,23 +2045,34 @@ a.btn { text-decoration: none; }
   padding: 20px;
 }
 @media (max-width: 720px) {
-  /* Enlarge the home map on mobile by trimming the surrounding padding,
-     so the map itself gets more of the screen width. */
+  /* Restore a modest top gap above the heading on mobile only — the
+     desktop rule zeroes padding-top, which reads as too tight against
+     the section above on small screens. Section's own left/right
+     padding (gutter) is left untouched so the heading/text stays
+     aligned with the rest of the page. */
   .home-map-section {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-top: 40px;
+  }
+  /* Enlarge ONLY the map: bleed home-map-wrap past the section's
+     gutter and shrink the map-wrap's internal padding. */
+  .home-map-wrap {
+    margin-left: -14px;
+    margin-right: -14px;
   }
   .home-map-wrap .map-wrap {
-    padding: 10px;
+    padding: 8px;
   }
 }
 @media (max-width: 480px) {
   .home-map-section {
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-top: 32px;
+  }
+  .home-map-wrap {
+    margin-left: -16px;
+    margin-right: -16px;
   }
   .home-map-wrap .map-wrap {
-    padding: 8px;
+    padding: 6px;
   }
 }
 
