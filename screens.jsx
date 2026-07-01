@@ -234,7 +234,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
         <div className="section-head">
           <div>
             <div className="section-eyebrow">03 — {lang === 'he' ? 'מה' : 'What'}</div>
-            <h2 className="section-title">{lang === 'he' ? 'טעמים ליטאיים' : 'Lithuanian Tastes'}</h2>
+            <h2 className="section-title">{lang === 'he' ? 'טעמים ליט׀יים' : 'Lithuanian Tastes'}</h2>
             <p className="section-sub">{lang === 'he' ? 'המנות המסורתיות שכדאי להזמין — וכמובן איפה לאכול אותן.' : 'Traditional dishes worth ordering — and where to find them.'}</p>
           </div>
           <button className="link-btn" onClick={() => nav('food')}>
@@ -245,7 +245,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
           {tasteSample.map((f, i) => (
             <article className="taste-card" key={f.id}>
               <div className="taste-visual" style={{ background: `linear-gradient(135deg, #A85D4A30, #A85D4A10)` }}>
-                <span className="taste-emoji">{f.emojiImage ? <img src={f.emojiImage} alt="" style={{width:'100%',height:'100%',objectFit:'contain'}}/> : f.emoji || '🍲'}</span>
+                <span className="taste-emoji">{f.emoji || '🍲'}</span>
               </div>
               <div className="taste-body">
                 <span className="taste-tag">{f[lang]?.tag || f.tag}</span>
@@ -290,6 +290,16 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
   useEffect(() => {
     if (params?.region) setActiveRegion(params.region);
   }, [params?.region]);
+
+  // When arriving at a specific region (from home page cards), scroll to the tabs
+  useEffect(() => {
+    if (params?.region) {
+      setTimeout(() => {
+        const tabs = document.querySelector('.region-tabs');
+        if (tabs) tabs.scrollIntoView({ behavior: 'instant', block: 'start' });
+      }, 60);
+    }
+  }, []);
 
   const region = regions.find(r => r.id === activeRegion);
   const regionPlaces = places.filter(p => p.region === activeRegion);
@@ -506,7 +516,7 @@ function FoodScreen({ lang, t, places, dishes, regions, openPlace, savedSet, tog
           {dishes.map((f, i) => (
             <article className="dish-card" key={f.id}>
               <div className="dish-visual" style={{ background: `linear-gradient(135deg, #A85D4A30, #C2884020)` }}>
-                <span className="dish-emoji">{f.emojiImage ? <img src={f.emojiImage} alt="" style={{width:'100%',height:'100%',objectFit:'contain'}}/> : f.emoji || '🍲'}</span>
+                <span className="dish-emoji">{f.emoji || '🍲'}</span>
               </div>
               <div className="dish-body">
                 <div className="dish-head">
@@ -671,7 +681,6 @@ function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, map
               className="btn btn-ghost"
               onClick={(e) => {
                 e.preventDefault();
-                if (typeof gtag === 'function') gtag('event', 'maps_click', { place_id: place.id, place_name: place.name });
                 window.open(placeMapUrl(place), '_blank', 'noopener,noreferrer');
               }}
             >
@@ -895,9 +904,9 @@ function AdminScreen({ allPlaces, adminOverrides, onOverride, regions }) {
       'const PLACES = '      + JSON.stringify(updatedPlaces, null, 2) + ';\n\n',
       'const LANDMARKS = '   + JSON.stringify(LANDMARKS, null, 2)    + ';\n\n',
       'const ITINERARIES = ' + JSON.stringify(ITINERARIES, null, 2)  + ';\n\n',
-      'const DISHES = '      + JSON.stringify(DISHES, null, 2)       + ';\n\n',
-      'const FACTS = '       + JSON.stringify(FACTS, null, 2)        + ';\n\n',
-      'window.LT_DATA = { REGIONS, PLACES, LANDMARKS, DISHES, ITINERARIES, FACTS, MAP_URL: '
+      'const DISHES = '      + JSON.stringify(DISHES, null, 2)        + ';\n\n',
+      'const FACTS = '       + JSON.stringify(FACTS, null, 2)         + ';\n\n',
+      'window.LT_DATA = { REGIONS, PLACES, LANDMARKS, DISHES, ITINERARIES, FACTS, MAPEURL8�
         + JSON.stringify(MAP_URL) + ' };\n\n',
       '})();'
     ].join('');
@@ -912,7 +921,7 @@ function AdminScreen({ allPlaces, adminOverrides, onOverride, regions }) {
   const pendingCnt  = effective.filter(p => p.status === 'pending').length;
   const hiddenCnt   = effective.filter(p => p.status === 'hidden').length;
 
-  const SORT_LABELS = { status: 'סטטוס', source: 'מקור', region: 'אזור', name: 'שם', rating: 'דירוג' };
+  const SORT_LABELS = { status: 'סטטוס', source: 'מ�nǕר', region: 'אזור', name: 'שם', rating: 'דיטוג' };
 
   return (
     <div className="admin-screen" dir="rtl">
@@ -928,7 +937,7 @@ function AdminScreen({ allPlaces, adminOverrides, onOverride, regions }) {
           className="btn-logout"
           onClick={() => { localStorage.removeItem('lt_admin_authed'); setAuthed(false); }}
         >
-          יציאה
+          יציל&
         </button>
       </div>
 
@@ -1064,114 +1073,4 @@ function AdminScreen({ allPlaces, adminOverrides, onOverride, regions }) {
   );
 }
 
-Object.assign(window, { HomeScreen, ExploreScreen, RoutesScreen, FoodScreen, StaysScreen, PlaceModal, PlaceCard, SavedScreen, AdminScreen, PrivacyScreen, TermsScreen });
-function PrivacyScreen({ lang }) {
-  const updated = lang === 'he' ? '27 ביוני 2026' : 'June 27, 2026';
-  return (
-    <div className="food" style={{ maxWidth: 760, margin: '0 auto' }}>
-      <div className="food-header">
-        <div className="section-eyebrow">{lang === 'he' ? 'מידע' : 'Info'}</div>
-        <h1 className="page-title">{lang === 'he' ? 'מדיניות פרטיות' : 'Privacy Policy'}</h1>
-        <p className="page-sub">{lang === 'he' ? `עודכן לאחרונה: ${updated}` : `Last updated: ${updated}`}</p>
-      </div>
-      <div style={{ lineHeight: 1.8, fontSize: '1.02rem' }} dir={lang === 'he' ? 'rtl' : 'ltr'}>
-        {lang === 'he' ? (
-          <>
-            <p>האתר הזה (lithuaniadiscovery.com) הוא מדריך טיולים אישי לליטא, שנבנה ומופעל על ידי ניב שמעוני. מדיניות זו מסבירה איזה מידע נאסף בעת השימוש באתר, ולמה.</p>
-            <h2>איזה מידע נאסף</h2>
-            <p>האתר לא דורש הרשמה, חשבון, או פרטים אישיים כדי לגלוש בו. עם זאת, האתר משתמש בכלים הבאים:</p>
-            <ul>
-              <li><strong>Google Analytics (GA4)</strong> — אוסף מידע סטטיסטי אנונימי על שימוש באתר: דפים שנצפו, סוג מכשיר, מדינה משוערת (לפי IP), ומשך השהייה. המידע משמש להבנת השימוש באתר ואינו מקושר לזהותך האישית.</li>
-              <li><strong>שמירה מקומית בדפדפן (Local Storage)</strong> — מקומות שאתה שומר ל"טיול שלי" נשמרים רק בדפדפן שלך ולא נשלחים לשרת.</li>
-              <li><strong>קישורי וואטסאפ וגוגל מפות</strong> — לחיצה על "פתח בוואטסאפ" או "פתח בגוגל מפות" מעבירה אותך לשירות חיצוני עם מדיניות פרטיות נפרדת.</li>
-            </ul>
-            <h2>קובצי Cookie</h2>
-            <p>Google Analytics משתמש בקובצי cookie לזיהוי ביקורים חוזרים. ניתן לחסום cookies בכל עת בהגדרות הדפדפן.</p>
-            <h2>שיתוף מידע</h2>
-            <p>אנחנו לא מוכרים, משכירים או משתפים מידע אישי עם צדדים שלישיים, מעבר לשירות האנליטיקס שצוין לעיל.</p>
-            <h2>זכויותיך</h2>
-            <p>יש לך שאלות על המידע שנאסף, או מעוניין להסיר נתונים? אפשר לפנות אלינו בכל עת.</p>
-            <h2>שינויים במדיניות</h2>
-            <p>מדיניות זו עשויה להתעדכן מעת לעת. שינויים יפורסמו בעמוד זה.</p>
-            <h2>צור קשר</h2>
-            <p>שאלות? כתבו ל-<a href="mailto:Niv.shimoni@gmail.com">Niv.shimoni@gmail.com</a>.</p>
-          </>
-        ) : (
-          <>
-            <p>This site (lithuaniadiscovery.com) is a personal travel guide to Lithuania, built and run by Niv Shimoni. This policy explains what information is collected when you use the site, and why.</p>
-            <h2>What we collect</h2>
-            <p>The site doesn't require signup, an account, or personal details to browse. It does use the following:</p>
-            <ul>
-              <li><strong>Google Analytics (GA4)</strong> — collects anonymous statistics about site usage: pages viewed, device type, approximate country (via IP), and time on site. Used to understand usage; not linked to your identity.</li>
-              <li><strong>Browser local storage</strong> — places you save to "My Trip" are stored only in your own browser and never sent to a server.</li>
-              <li><strong>WhatsApp and Google Maps links</strong> — clicking "Open in WhatsApp" or "Open in Google Maps" takes you to an external service with its own privacy policy.</li>
-            </ul>
-            <h2>Cookies</h2>
-            <p>Google Analytics uses cookies to recognize repeat visits. You can block cookies in your browser settings at any time.</p>
-            <h2>Sharing information</h2>
-            <p>We don't sell, rent, or share personal data with third parties beyond the analytics service noted above.</p>
-            <h2>Your rights</h2>
-            <p>Questions about the information collected, or want data removed? You're welcome to contact us anytime.</p>
-            <h2>Changes to this policy</h2>
-            <p>This policy may be updated from time to time. Changes will be posted on this page.</p>
-            <h2>Contact</h2>
-            <p>Questions? Email <a href="mailto:Niv.shimoni@gmail.com">Niv.shimoni@gmail.com</a>.</p>
-          </>
-        )}
-      </div>
-    </div>
-  );
-}
-
-function TermsScreen({ lang }) {
-  const updated = lang === 'he' ? '27 ביוני 2026' : 'June 27, 2026';
-  return (
-    <div className="food" style={{ maxWidth: 760, margin: '0 auto' }}>
-      <div className="food-header">
-        <div className="section-eyebrow">{lang === 'he' ? 'מידע' : 'Info'}</div>
-        <h1 className="page-title">{lang === 'he' ? 'תנאי שימוש' : 'Terms of Service'}</h1>
-        <p className="page-sub">{lang === 'he' ? `עודכן לאחרונה: ${updated}` : `Last updated: ${updated}`}</p>
-      </div>
-      <div style={{ lineHeight: 1.8, fontSize: '1.02rem' }} dir={lang === 'he' ? 'rtl' : 'ltr'}>
-        {lang === 'he' ? (
-          <>
-            <p>השימוש באתר lithuaniadiscovery.com מהווה הסכמה לתנאים הבאים.</p>
-            <h2>על האתר</h2>
-            <p>האתר הוא מדריך טיולים אישי ובלתי רשמי לליטא, מבוסס על המלצות אישיות וחיפוש מקוון. הוא אינו קשור לגוף תיירות רשמי, ואינו מציע הזמנות, רכישות או שירותי תיווך.</p>
-            <h2>מידע ודיוק</h2>
-            <p>אנחנו משתדלים שהמידע באתר (שעות פתיחה, מחירים, דירוגים, פרטי עסקים) יהיה מדויק ועדכני, אך הוא עלול להשתנות ללא הודעה. מומלץ לאמת פרטים קריטיים ישירות מול בית העסק לפני הביקור.</p>
-            <h2>קישורים חיצוניים</h2>
-            <p>האתר מקשר לשירותים חיצוניים (גוגל מפות, וואטסאפ, אתרי עסקים) שאינם בשליטתנו. איננו אחראים לתוכן, למדיניות הפרטיות, או לחוויית השימוש בהם.</p>
-            <h2>הגבלת אחריות</h2>
-            <p>השימוש באתר ובהמלצות שבו הוא באחריותך הבלעדית. איננו אחראים לכל נזק ישיר או עקיף שייגרם כתוצאה מהסתמכות על תוכן האתר.</p>
-            <h2>קניין רוחני</h2>
-            <p>התוכן, העיצוב והטקסטים באתר הם רכושו של ניב שמעוני, אלא אם צוין אחרת. אין לשכפל או להשתמש בתוכן למטרות מסחריות בלי אישור.</p>
-            <h2>שינויים בתנאים</h2>
-            <p>אנחנו עשויים לעדכן תנאים אלו מעת לעת. המשך השימוש באתר לאחר שינוי מהווה הסכמה לתנאים המעודכנים.</p>
-            <h2>צור קשר</h2>
-            <p>שאלות על התנאים? כתבו ל-<a href="mailto:Niv.shimoni@gmail.com">Niv.shimoni@gmail.com</a>.</p>
-          </>
-        ) : (
-          <>
-            <p>By using lithuaniadiscovery.com, you agree to the following terms.</p>
-            <h2>About this site</h2>
-            <p>This site is a personal, unofficial travel guide to Lithuania, based on personal recommendations and online research. It is not affiliated with any official tourism body, and does not offer bookings, purchases, or brokerage services.</p>
-            <h2>Information & accuracy</h2>
-            <p>We try to keep the information on this site (opening hours, prices, ratings, business details) accurate and current, but it may change without notice. We recommend confirming critical details directly with a business before visiting.</p>
-            <h2>External links</h2>
-            <p>The site links to external services (Google Maps, WhatsApp, business websites) that we don't control. We're not responsible for their content, privacy practices, or your experience using them.</p>
-            <h2>Limitation of liability</h2>
-            <p>Use of this site and its recommendations is at your own risk. We aren't liable for any direct or indirect damage resulting from reliance on the site's content.</p>
-            <h2>Intellectual property</h2>
-            <p>The content, design, and text on this site belong to Niv Shimoni unless stated otherwise. Don't reproduce or use the content commercially without permission.</p>
-            <h2>Changes to these terms</h2>
-            <p>We may update these terms from time to time. Continued use of the site after a change means you accept the updated terms.</p>
-            <h2>Contact</h2>
-            <p>Questions about these terms? Email <a href="mailto:Niv.shimoni@gmail.com">Niv.shimoni@gmail.com</a>.</p>
-          </>
-        )}
-      </div>
-    </div>
-  );
-}
-
+Object.assign(window, { HomeScreen, ExploreScreen, RoutesScreen, FoodScreen, StaysScreen, PlaceModal, PlaceCard, SavedScreen, AdminScreen });
