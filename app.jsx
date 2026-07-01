@@ -96,7 +96,7 @@ function App() {
       : "A curated travel guide to Lithuania — 141 handpicked places. By Niv Shimoni.";
     if (screen === 'explore' && params.region) {
       const region = REGIONS.find(r => r.id === params.region);
-      if (region) { title = `${region[lang].name} | ${baseTitle}`; description = region[lang].blurb; }
+      if (region) { title = `${region[lang].name} — ${region[lang].tag} | ${baseTitle}`; description = region[lang].blurb; }
     } else if (screen === 'explore') {
       title = lang === 'he' ? `כל האזורים | ${baseTitle}` : `Explore all regions | ${baseTitle}`;
     } else if (screen === 'routes') {
@@ -111,6 +111,8 @@ function App() {
     setMeta('meta[name="description"]', 'content', description);
     setMeta('meta[property="og:title"]', 'content', title);
     setMeta('meta[property="og:description"]', 'content', description);
+    setMeta('meta[name="twitter:title"]', 'content', title);
+    setMeta('meta[name="twitter:description"]', 'content', description);
   }, [screen, params, lang]);
 
   useEffect(() => {
@@ -152,9 +154,11 @@ function App() {
   };
 
   const nav = (s, p = {}) => {
-    setScreen(s); setParams(p); setOpenPlaceId(null);
+    setScreen(s);
+    setParams(p);
+    setOpenPlaceId(null);
     history.pushState(null, '', buildURL(s, p, null, lang));
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => window.scrollTo(0, 0), 0);
   };
 
   const toggleSaved = (id) => {
@@ -267,31 +271,20 @@ function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
             <span className="brand-sub">{t.siteSub}</span>
           </span>
         </button>
-
         <nav className="nav-links">
           {items.map(item => (
-            <button
-              key={item.id}
-              className={`nav-link ${screen === item.id ? 'active' : ''}`}
-              onClick={() => nav(item.id)}
-            >
+            <button key={item.id} className={`nav-link ${screen === item.id ? 'active' : ''}`} onClick={() => nav(item.id)}>
               {item.label}
             </button>
           ))}
         </nav>
-
         <div className="nav-actions">
           {savedCount > 0 && (
             <button className="saved-btn" onClick={onSavedClick} aria-label={t.yourTrip}>
-              <Icon.bookmarkFill/>
-              <span>{savedCount}</span>
+              <Icon.bookmarkFill/><span>{savedCount}</span>
             </button>
           )}
-          <button
-            className="lang-toggle"
-            onClick={() => setLang(lang === 'he' ? 'en' : 'he')}
-            aria-label="Toggle language"
-          >
+          <button className="lang-toggle" onClick={() => setLang(lang === 'he' ? 'en' : 'he')} aria-label="Toggle language">
             <Icon.globe/>
             <span className={lang === 'he' ? 'active' : ''}>עב</span>
             <span className="lang-sep">·</span>
@@ -302,11 +295,8 @@ function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
       {mobileOpen && (
         <div className="mobile-nav">
           {items.map(item => (
-            <button
-              key={item.id}
-              className={`mobile-link ${screen === item.id ? 'active' : ''}`}
-              onClick={() => { nav(item.id); setMobileOpen(false); }}
-            >
+            <button key={item.id} className={`mobile-link ${screen === item.id ? 'active' : ''}`}
+              onClick={() => { nav(item.id); setMobileOpen(false); }}>
               {item.label}
             </button>
           ))}
@@ -342,7 +332,7 @@ function Footer({ lang, t, nav }) {
           </div>
           <div className="footer-col">
             <h5>{lang === 'he' ? 'אזורים' : 'Regions'}</h5>
-            {REGIONS.slice(0, 4).map(r => (
+            {REGIONS.map(r => (
               <button key={r.id} onClick={() => nav('explore', { region: r.id })}>{r[lang].name}</button>
             ))}
           </div>
