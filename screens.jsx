@@ -296,8 +296,12 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
     if (params?.region) {
       setTimeout(() => {
         const tabs = document.querySelector('.region-tabs');
-        if (tabs) tabs.scrollIntoView({ behavior: 'instant', block: 'start' });
-      }, 60);
+        if (tabs) {
+          const navH = document.querySelector('.nav')?.offsetHeight || 64;
+          const top = tabs.getBoundingClientRect().top + window.scrollY - navH;
+          window.scrollTo({ top, behavior: 'instant' });
+        }
+      }, 150);
     }
   }, []);
 
