@@ -1223,6 +1223,14 @@ em { font-style: italic; color: var(--primary); }
   .wa-float { bottom: 20px; left: 16px; width: 50px; height: 50px; }
 }
 
+@media (max-width: 600px) {
+  .hero {
+    min-height: auto;
+    padding: 36px var(--gutter) 56px;
+  }
+  .hero-scroll { display: none; }
+}
+
 /* ââ RTL adjustments ââ */
 [dir="rtl"] .map-svg text { direction: ltr; }
 [dir="rtl"] .venue-card { text-align: right; }
