@@ -906,7 +906,7 @@ function AdminScreen({ allPlaces, adminOverrides, onOverride, regions }) {
       'const ITINERARIES = ' + JSON.stringify(ITINERARIES, null, 2)  + ';\n\n',
       'const DISHES = '      + JSON.stringify(DISHES, null, 2)        + ';\n\n',
       'const FACTS = '       + JSON.stringify(FACTS, null, 2)         + ';\n\n',
-      'window.LT_DATA = { REGIONS, PLACES, LANDMARKS, DISHES, ITINERARIES, FACTS, MAPEURL8�
+      'window.LT_DATA = { REGIONS, PLACES, LANDMARKS, DISHES, ITINERARIES, FACTS, MAP_URL: '
         + JSON.stringify(MAP_URL) + ' };\n\n',
       '})();'
     ].join('');
