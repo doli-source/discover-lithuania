@@ -234,7 +234,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
         <div className="section-head">
           <div>
             <div className="section-eyebrow">03 — {lang === 'he' ? 'מה' : 'What'}</div>
-            <h2 className="section-title">{lang === 'he' ? 'טעמים ליט׀יים' : 'Lithuanian Tastes'}</h2>
+            <h2 className="section-title">{lang === 'he' ? 'טעמים ליטאיים' : 'Lithuanian Tastes'}</h2>
             <p className="section-sub">{lang === 'he' ? 'המנות המסורתיות שכדאי להזמין — וכמובן איפה לאכול אותן.' : 'Traditional dishes worth ordering — and where to find them.'}</p>
           </div>
           <button className="link-btn" onClick={() => nav('food')}>
@@ -289,6 +289,7 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
 
   useEffect(() => {
     if (params?.region) setActiveRegion(params.region);
+  }, [params?.region]);
 
   // When arriving at a specific region (from home page cards), scroll to the tabs
   useEffect(() => {
@@ -306,10 +307,8 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
       }, 50);
     }
   }, []);
-  }, [params?.region]);
 
-  // When arriving at a specific region (from home page cards), scroll to the tabs
-    // When user clicks a pin on the map while already on ExploreScreen, switch region AND scroll to places
+  // When user clicks a pin on the map while already on ExploreScreen, switch region AND scroll to places
   const handleMapPick = (regionId) => {
     setActiveRegion(regionId);
     setActiveKind('all');
@@ -928,8 +927,8 @@ function AdminScreen({ allPlaces, adminOverrides, onOverride, regions }) {
       'const PLACES = '      + JSON.stringify(updatedPlaces, null, 2) + ';\n\n',
       'const LANDMARKS = '   + JSON.stringify(LANDMARKS, null, 2)    + ';\n\n',
       'const ITINERARIES = ' + JSON.stringify(ITINERARIES, null, 2)  + ';\n\n',
-      'const DISHES = '      + JSON.stringify(DISHES, null, 2)        + ';\n\n',
-      'const FACTS = '       + JSON.stringify(FACTS, null, 2)         + ';\n\n',
+      'const DISHES = '      + JSON.stringify(DISHES, null, 2)       + ';\n\n',
+      'const FACTS = '       + JSON.stringify(FACTS, null, 2)        + ';\n\n',
       'window.LT_DATA = { REGIONS, PLACES, LANDMARKS, DISHES, ITINERARIES, FACTS, MAP_URL: '
         + JSON.stringify(MAP_URL) + ' };\n\n',
       '})();'
@@ -945,7 +944,7 @@ function AdminScreen({ allPlaces, adminOverrides, onOverride, regions }) {
   const pendingCnt  = effective.filter(p => p.status === 'pending').length;
   const hiddenCnt   = effective.filter(p => p.status === 'hidden').length;
 
-  const SORT_LABELS = { status: 'סטטוס', source: 'מ�nǕר', region: 'אזור', name: 'שם', rating: 'דיטוג' };
+  const SORT_LABELS = { status: 'סטטוס', source: 'מקור', region: 'אזור', name: 'שם', rating: 'דירוג' };
 
   return (
     <div className="admin-screen" dir="rtl">
@@ -961,7 +960,7 @@ function AdminScreen({ allPlaces, adminOverrides, onOverride, regions }) {
           className="btn-logout"
           onClick={() => { localStorage.removeItem('lt_admin_authed'); setAuthed(false); }}
         >
-          יציל&
+          יציאה
         </button>
       </div>
 
