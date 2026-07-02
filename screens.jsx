@@ -289,6 +289,23 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
 
   useEffect(() => {
     if (params?.region) setActiveRegion(params.region);
+
+  // When arriving at a specific region (from home page cards), scroll to the tabs
+  useEffect(() => {
+    if (params?.region) {
+      setTimeout(() => {
+        const tabs = document.querySelector('.region-tabs');
+        if (tabs) {
+          const navH = document.querySelector('.nav')?.offsetHeight || 64;
+          const top = tabs.getBoundingClientRect().top + window.scrollY - navH;
+          window.scrollTo({ top, behavior: 'instant' });
+        }
+        // Also scroll the active tab into horizontal view
+        const activeTab = document.querySelector('.region-tab.active');
+        if (activeTab) activeTab.scrollIntoView({ inline: 'nearest', block: 'nearest' });
+      }, 50);
+    }
+  }, []);
   }, [params?.region]);
 
   // When arriving at a specific region (from home page cards), scroll to the tabs
