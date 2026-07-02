@@ -309,20 +309,7 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
   }, [params?.region]);
 
   // When arriving at a specific region (from home page cards), scroll to the tabs
-  useEffect(() => {
-    if (params?.region) {
-      setTimeout(() => {
-        const tabs = document.querySelector('.region-tabs');
-        if (tabs) {
-          const navH = document.querySelector('.nav')?.offsetHeight || 64;
-          const top = tabs.getBoundingClientRect().top + window.scrollY - navH;
-          window.scrollTo({ top, behavior: 'instant' });
-        }
-      }, 150);
-    }
-  }, []);
-
-  // When user clicks a pin on the map while already on ExploreScreen, switch region AND scroll to places
+    // When user clicks a pin on the map while already on ExploreScreen, switch region AND scroll to places
   const handleMapPick = (regionId) => {
     setActiveRegion(regionId);
     setActiveKind('all');
