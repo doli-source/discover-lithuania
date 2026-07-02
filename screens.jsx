@@ -322,6 +322,22 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
     }
   }, []);
 
+  // When user clicks a pin on the map while already on ExploreScreen, switch region AND scroll to places
+  const handleMapPick = (regionId) => {
+    setActiveRegion(regionId);
+    setActiveKind('all');
+    setTimeout(() => {
+      const tabs = document.querySelector('.region-tabs');
+      if (tabs) {
+        const navH = document.querySelector('.nav')?.offsetHeight || 64;
+        const top = tabs.getBoundingClientRect().top + window.scrollY - navH;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+      const activeTab = document.querySelector('.region-tab.active');
+      if (activeTab) activeTab.scrollIntoView({ inline: 'nearest', block: 'nearest' });
+    }, 80);
+  };
+
   const region = regions.find(r => r.id === activeRegion);
   const regionPlaces = places.filter(p => p.region === activeRegion);
   const filtered = regionPlaces
@@ -335,7 +351,7 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
       <div className="explore-header">
         {/* Map first so it appears at top on mobile */}
         <div className="explore-map-col">
-          <MapIllustration regions={regions} activeRegion={activeRegion} onPick={setActiveRegion} t={t} lang={lang} />
+          <MapIllustration regions={regions} activeRegion={activeRegion} onPick={handleMapPick} t={t} lang={lang} />
         </div>
         <div className="explore-intro">
           <div className="section-eyebrow">{lang === 'he' ? 'גלה' : 'Explore'}</div>
