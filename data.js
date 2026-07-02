@@ -7,7 +7,7 @@
 const REGIONS = [
   {
     id: 'vilnius',
-    he: { name: 'וילנה', tag: 'בירת הברוק', blurb: 'סמטאות אבן, גגות אדומים, ובתי קפה בכל פינה. רפובליקת אוז\'ופיס האמנותית מעבר לנהר.' },
+    he: { name: 'וילנה', tag: 'בירת הברוק', blurb: 'סמטאות אבן, גגות אדומים, ובתי קפה בכל פינה. רפובליקת אוז\ופיס האמנותית מעבר לנהר.' },
     en: { name: 'Vilnius', tag: 'Baroque Capital', blurb: 'Cobbled lanes, terracotta roofs, and a café on every corner. Užupis art republic just across the river.' },
     accent: '#C28840',
     placeholder: 'Old Town rooftops at golden hour'
@@ -2245,7 +2245,7 @@ const DISHES = [
   { id: 'saltibarsciai', emoji: '🍲', bg: 'linear-gradient(135deg, #e91e6332, #f48fb150)', he: { name: "שלטיברשצ'יי", desc: 'מרק סלק קר ורוד-זוהר עם קפיר וביצה קשה. הקיץ במנה.', tag: 'קלאסי' }, en: { name: 'Šaltibarščiai', desc: 'Glowing pink cold beet soup with kefir and boiled egg. Summer in a bowl.', tag: 'Classic' }, ph: 'Bright pink cold soup' },
   { id: 'cepelinai', emoji: '🥟', bg: 'linear-gradient(135deg, #a0522d28, #d4a56830)', he: { name: 'צפלינאי', desc: 'כופתאות תפוח-אדמה גדולות במילוי בשר עם רוטב שמנת ובייקון.', tag: 'מסורתי' }, en: { name: 'Cepelinai', desc: 'Zeppelin-shaped potato dumplings stuffed with meat, cream & bacon.', tag: 'Traditional' }, ph: 'Two potato dumplings on plate' },
   { id: 'kibinai', emoji: '🥐', bg: 'linear-gradient(135deg, #c8960028, #fdd83530)', he: { name: 'קיביני', desc: 'מאפי בצק קראימיים במילוי כבש או גבינה. הכי טוב בטראקאי.', tag: 'טראקאי' }, en: { name: 'Kibinai', desc: 'Karaim hand pies filled with mutton or cheese. Best in Trakai.', tag: 'Trakai' }, ph: 'Golden half-moon pastries' },
-  { id: 'kepta-duona', emoji: '🍞', bg: 'linear-gradient(135deg, #3d2b1a30, #6b4c3228)', he: { name: 'קפטא-דונה', desc: 'אצבעות לחם שיפון מטוגנות עם שום. חברה הכי טובה של בירה.', tag: 'נשנוש' }, en: { name: 'Kepta Duona', desc: 'Fried rye bread sticks with garlic. Beer's best friend.', tag: 'Snack' }, ph: 'Dark rye toast sticks' },
+  { id: 'kepta-duona', emoji: '🍞', bg: 'linear-gradient(135deg, #3d2b1a30, #6b4c3228)', he: { name: 'קפטא-דונה', desc: 'אצבעות לחם שיפון מטוגנות עם שום. חברה הכי טובה של בירה.', tag: 'נשנוש' }, en: { name: 'Kepta Duona', desc: 'Fried rye bread sticks with garlic. Beer\'s best friend.', tag: 'Snack' }, ph: 'Dark rye toast sticks' },
   { id: 'sakotis', emoji: '🍰', bg: 'linear-gradient(135deg, #f59e0b28, #fef08a30)', he: { name: 'שאקוטיס', desc: 'עוגת "עץ" צהבהבה עם זיזים, נאפית על שיפוד מסתובב.', tag: 'מתוק' }, en: { name: 'Šakotis', desc: 'Spiky golden "tree cake" baked on a rotating spit.', tag: 'Sweet' }, ph: 'Spiky golden tree cake' }
 ]
 const ITINERARIES = [
