@@ -244,7 +244,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
         <div className="taste-grid">
           {tasteSample.map((f, i) => (
             <article className="taste-card" key={f.id}>
-              <div className="taste-visual" style={{ background: `linear-gradient(135deg, #A85D4A30, #A85D4A10)` }}>
+              <div className="taste-visual" style={{ background: f.bg || `linear-gradient(135deg, #A85D4A30, #A85D4A10)` }}>
                 <span className="taste-emoji">{f.emoji || '🍲'}</span>
               </div>
               <div className="taste-body">
@@ -287,26 +287,23 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
   const [activeKind, setActiveKind] = useState('all');
   const [search, setSearch] = useState('');
 
-  useEffect(() => {
-    if (params?.region) setActiveRegion(params.region);
-  }, [params?.region]);
-
-  // When arriving at a specific region (from home page cards), scroll to the tabs
+  // Sync activeRegion from params AND scroll to tabs whenever params.region changes
+  // (covers initial deep-link load, home-card nav, footer region links, etc.)
   useEffect(() => {
     if (params?.region) {
+      setActiveRegion(params.region);
       setTimeout(() => {
         const tabs = document.querySelector('.region-tabs');
         if (tabs) {
           const navH = document.querySelector('.nav')?.offsetHeight || 64;
           const top = tabs.getBoundingClientRect().top + window.scrollY - navH;
-          window.scrollTo({ top, behavior: 'instant' });
+          window.scrollTo({ top, behavior: 'smooth' });
         }
-        // Also scroll the active tab into horizontal view
         const activeTab = document.querySelector('.region-tab.active');
         if (activeTab) activeTab.scrollIntoView({ inline: 'nearest', block: 'nearest' });
-      }, 50);
+      }, 80);
     }
-  }, []);
+  }, [params?.region]);
 
   // When user clicks a pin on the map while already on ExploreScreen, switch region AND scroll to places
   const handleMapPick = (regionId) => {
@@ -538,7 +535,7 @@ function FoodScreen({ lang, t, places, dishes, regions, openPlace, savedSet, tog
         <div className="dish-strip">
           {dishes.map((f, i) => (
             <article className="dish-card" key={f.id}>
-              <div className="dish-visual" style={{ background: `linear-gradient(135deg, #A85D4A30, #C2884020)` }}>
+              <div className="dish-visual" style={{ background: f.bg || `linear-gradient(135deg, #A85D4A30, #C2884020)` }}>
                 <span className="dish-emoji">{f.emoji || '🍲'}</span>
               </div>
               <div className="dish-body">
