@@ -244,8 +244,8 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
         <div className="taste-grid">
           {tasteSample.map((f, i) => (
             <article className="taste-card" key={f.id}>
-              <div className="taste-visual" style={{ background: `linear-gradient(135deg, #A85D4A30, #A85D4A10)` }}>
-                <span className="taste-emoji">{f.emoji || '🍲'}</span>
+              <div className="taste-visual" style={{ background: (((f.bg||'').match(/#[0-9a-f]{6}/i)||['#A85D4A'])[0])+'0d', '--dish-color': ((f.bg||'').match(/#[0-9a-f]{6}/i)||['#A85D4A'])[0] }}>
+                {f.liquid ? <svg viewBox="0 0 100 80" width="90" height="72" style={{flexShrink:0}}><path d="M8 36 Q10 74 50 74 Q90 74 92 36 Z" fill={f.liquid}/><ellipse cx="50" cy="36" rx="42" ry="11" fill="#e8d5b0"/><ellipse cx="50" cy="36" rx="36" ry="8" fill={f.liquid}/><ellipse cx="42" cy="33" rx="14" ry="4" fill="#f06292" opacity="0.5"/><ellipse cx="50" cy="36" rx="42" ry="11" fill="none" stroke="#c9a870" strokeWidth="2"/><path d="M8 36 Q10 74 50 74 Q90 74 92 36" fill="none" stroke="#c9a870" strokeWidth="2.5" strokeLinecap="round"/></svg> : <span className="taste-emoji">{f.emoji || '🍲'}</span>}
               </div>
               <div className="taste-body">
                 <span className="taste-tag">{f[lang]?.tag || f.tag}</span>
@@ -287,9 +287,39 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
   const [activeKind, setActiveKind] = useState('all');
   const [search, setSearch] = useState('');
 
+  // Sync activeRegion from params AND scroll to tabs whenever params.region changes
+  // (covers initial deep-link load, home-card nav, footer region links, etc.)
   useEffect(() => {
-    if (params?.region) setActiveRegion(params.region);
+    if (params?.region) {
+      setActiveRegion(params.region);
+      setTimeout(() => {
+        const tabs = document.querySelector('.region-tabs');
+        if (tabs) {
+          const navH = document.querySelector('.nav')?.offsetHeight || 64;
+          const top = tabs.getBoundingClientRect().top + window.scrollY - navH;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+        const activeTab = document.querySelector('.region-tab.active');
+        if (activeTab) activeTab.scrollIntoView({ inline: 'nearest', block: 'nearest' });
+      }, 80);
+    }
   }, [params?.region]);
+
+  // When user clicks a pin on the map while already on ExploreScreen, switch region AND scroll to places
+  const handleMapPick = (regionId) => {
+    setActiveRegion(regionId);
+    setActiveKind('all');
+    setTimeout(() => {
+      const tabs = document.querySelector('.region-tabs');
+      if (tabs) {
+        const navH = document.querySelector('.nav')?.offsetHeight || 64;
+        const top = tabs.getBoundingClientRect().top + window.scrollY - navH;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+      const activeTab = document.querySelector('.region-tab.active');
+      if (activeTab) activeTab.scrollIntoView({ inline: 'nearest', block: 'nearest' });
+    }, 80);
+  };
 
   const region = regions.find(r => r.id === activeRegion);
   const regionPlaces = places.filter(p => p.region === activeRegion);
@@ -304,7 +334,7 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
       <div className="explore-header">
         {/* Map first so it appears at top on mobile */}
         <div className="explore-map-col">
-          <MapIllustration regions={regions} activeRegion={activeRegion} onPick={setActiveRegion} t={t} lang={lang} />
+          <MapIllustration regions={regions} activeRegion={activeRegion} onPick={handleMapPick} t={t} lang={lang} />
         </div>
         <div className="explore-intro">
           <div className="section-eyebrow">{lang === 'he' ? 'גלה' : 'Explore'}</div>
@@ -505,8 +535,8 @@ function FoodScreen({ lang, t, places, dishes, regions, openPlace, savedSet, tog
         <div className="dish-strip">
           {dishes.map((f, i) => (
             <article className="dish-card" key={f.id}>
-              <div className="dish-visual" style={{ background: `linear-gradient(135deg, #A85D4A30, #C2884020)` }}>
-                <span className="dish-emoji">{f.emoji || '🍲'}</span>
+              <div className="dish-visual" style={{ background: (((f.bg||'').match(/#[0-9a-f]{6}/i)||['#A85D4A'])[0])+'0d', '--dish-color': ((f.bg||'').match(/#[0-9a-f]{6}/i)||['#A85D4A'])[0] }}>
+                {f.liquid ? <svg viewBox="0 0 100 80" width="120" height="96" style={{flexShrink:0}}><path d="M8 36 Q10 74 50 74 Q90 74 92 36 Z" fill={f.liquid}/><ellipse cx="50" cy="36" rx="42" ry="11" fill="#e8d5b0"/><ellipse cx="50" cy="36" rx="36" ry="8" fill={f.liquid}/><ellipse cx="42" cy="33" rx="14" ry="4" fill="#f06292" opacity="0.5"/><ellipse cx="50" cy="36" rx="42" ry="11" fill="none" stroke="#c9a870" strokeWidth="2"/><path d="M8 36 Q10 74 50 74 Q90 74 92 36" fill="none" stroke="#c9a870" strokeWidth="2.5" strokeLinecap="round"/></svg> : <span className="dish-emoji">{f.emoji || '🍲'}</span>}
               </div>
               <div className="dish-body">
                 <div className="dish-head">
