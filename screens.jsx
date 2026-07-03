@@ -27,7 +27,7 @@ function PlaceCard({ place, region, lang, t, onClick, saved, onToggleSave, accen
         <div className="niv-card-type">{typeLabel}</div>
         <h3 className="niv-card-name">{place.name}</h3>
         <div className="niv-card-meta">
-          <span className="niv-rating"><Icon.star /> {place.rating.toFixed(1)} <span className="reviews">({place.reviews.toLocaleString()})</span></span>
+          {place.rating != null && <span className="niv-rating"><Icon.star /> {place.rating.toFixed(1)} <span className="reviews">({place.reviews?.toLocaleString()})</span></span>}
           {place.price && <span className="niv-price">{place.price}</span>}
         </div>
         {nivText && (
@@ -673,7 +673,7 @@ function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, map
           <div className="modal-meta">
             <span className="modal-region" style={{ color: region?.accent }}>● {region?.[lang].name}</span>
             <span className="modal-kind">{typeLabel}</span>
-            <span className="modal-rating"><Icon.star /> {place.rating.toFixed(1)} <span style={{ opacity: 0.55 }}>({place.reviews.toLocaleString()})</span></span>
+            {place.rating != null && <span className="modal-rating"><Icon.star /> {place.rating.toFixed(1)} <span style={{ opacity: 0.55 }}>({place.reviews?.toLocaleString()})</span></span>}
             {place.price && <span className="modal-price">{place.price}</span>}
           </div>
           <h2 className="modal-title">{place.name}</h2>
