@@ -1,5 +1,5 @@
 /* ============================================================
-   Discover Lithuania — main styles
+   Discover Lithuania â main styles
    ============================================================ */
 
 :root {
@@ -46,11 +46,11 @@ button {
 
 em { font-style: italic; color: var(--primary); }
 
-/* ── App shell ── */
+/* ââ App shell ââ */
 .app { min-height: 100vh; }
 .main { min-height: 60vh; }
 
-/* ── Nav ── */
+/* ââ Nav ââ */
 .nav {
   position: sticky;
   top: 0;
@@ -154,7 +154,7 @@ em { font-style: italic; color: var(--primary); }
   .mobile-link.active { background: var(--ink); color: var(--cream); }
 }
 
-/* ── Buttons ── */
+/* ââ Buttons ââ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -200,7 +200,7 @@ em { font-style: italic; color: var(--primary); }
 }
 .load-more-btn:hover { background: var(--primary-dark); color: #fff; }
 
-/* ── Section structure ── */
+/* ââ Section structure ââ */
 .section {
   max-width: var(--max-w);
   margin: 0 auto;
@@ -254,7 +254,7 @@ em { font-style: italic; color: var(--primary); }
   max-width: 55ch;
 }
 
-/* ── Hero ── */
+/* ââ Hero ââ */
 .hero {
   position: relative;
   min-height: 92vh;
@@ -374,7 +374,7 @@ em { font-style: italic; color: var(--primary); }
   50% { transform: scaleY(0.6); opacity: 0.5; }
 }
 
-/* ── Facts strip ── */
+/* ââ Facts strip ââ */
 .facts-strip {
   background: var(--ink);
   color: var(--cream);
@@ -405,7 +405,7 @@ em { font-style: italic; color: var(--primary); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ── Region grid ── */
+/* ââ Region grid ââ */
 .region-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -512,8 +512,16 @@ em { font-style: italic; color: var(--primary); }
   margin: 0;
   line-height: 1.5;
 }
+@media (max-width: 720px) {
+  /* On mobile, show the city name (and its tag) above the illustration
+     instead of below it. */
+  .region-meta { order: 1; margin-top: 0; }
+  .region-name { order: 2; }
+  .region-visual { order: 3; }
+  .region-blurb { order: 4; }
+}
 
-/* ── Route cards ── */
+/* ââ Route cards ââ */
 .route-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -585,7 +593,7 @@ em { font-style: italic; color: var(--primary); }
 }
 .trail-dot.first { background: var(--primary); }
 
-/* ── Taste grid ── */
+/* ââ Taste grid ââ */
 .taste-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -614,11 +622,11 @@ em { font-style: italic; color: var(--primary); }
   line-height: 1.45;
 }
 
-/* ── Closing CTA ── */
+/* ââ Closing CTA ââ */
 .closing {
   background: var(--ink);
   color: var(--cream);
-  padding: clamp(80px, 12vw, 140px) var(--gutter);
+  padding: clamp(80px, 12vw, 140px) var(--gutter) clamp(48px, 6vw, 80px);
   text-align: center;
 }
 .closing-inner { max-width: 600px; margin: 0 auto; }
@@ -639,7 +647,7 @@ em { font-style: italic; color: var(--primary); }
 .closing .btn-primary { background: var(--primary); }
 .closing .btn-primary:hover { background: var(--primary-dark); }
 
-/* ── Placeholder (decorative) ── HIDDEN: no placeholder boxes anywhere */
+/* ââ Placeholder (decorative) ââ HIDDEN: no placeholder boxes anywhere */
 .ph {
   position: relative;
   width: 100%;
@@ -649,7 +657,7 @@ em { font-style: italic; color: var(--primary); }
 }
 .ph-svg, .ph-label, .ph-dot, .ph-text { display: none; }
 
-/* ── Explore ── */
+/* ââ Explore ââ */
 .explore { max-width: var(--max-w); margin: 0 auto; padding: 48px var(--gutter) 100px; }
 .explore-header {
   display: grid;
@@ -658,7 +666,7 @@ em { font-style: italic; color: var(--primary); }
   align-items: start;
   margin-bottom: 40px;
 }
-/* Map column — wraps MapIllustration's .map-wrap */
+/* Map column â wraps MapIllustration's .map-wrap */
 .explore-map-col { min-width: 0; }
 .map-wrap {
   background: linear-gradient(135deg, #f7f0df, #ede2ca);
@@ -674,7 +682,7 @@ em { font-style: italic; color: var(--primary); }
     flex-direction: column;
     gap: 24px;
   }
-  /* On mobile, map-col is first in DOM so it appears at top — keep that order */
+  /* On mobile, map-col is first in DOM so it appears at top â keep that order */
   .explore-intro { order: 2; }
   .explore-map-col { order: 1; width: 100%; }
 }
@@ -810,7 +818,7 @@ em { font-style: italic; color: var(--primary); }
   margin-top: 4px;
 }
 
-/* ── Routes ── */
+/* ââ Routes ââ */
 .routes { max-width: var(--max-w); margin: 0 auto; padding: 48px var(--gutter) 100px; }
 .routes-header { margin-bottom: 32px; }
 
@@ -955,7 +963,7 @@ em { font-style: italic; color: var(--primary); }
 }
 .timeline-tip { opacity: 0.7; }
 
-/* ── Food ── */
+/* ââ Food ââ */
 .food { max-width: var(--max-w); margin: 0 auto; padding: 48px var(--gutter) 100px; }
 .food-header { text-align: center; margin-bottom: 32px; }
 .food-header .page-sub { margin-inline: auto; }
@@ -1039,7 +1047,7 @@ em { font-style: italic; color: var(--primary); }
   line-height: 1.5;
 }
 
-/* ── Modal ── */
+/* ââ Modal ââ */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -1119,7 +1127,7 @@ em { font-style: italic; color: var(--primary); }
 }
 .modal-actions { display: flex; gap: 10px; flex-wrap: wrap; }
 
-/* ── Footer ── */
+/* ââ Footer ââ */
 .footer {
   background: var(--ink);
   color: var(--cream);
@@ -1127,7 +1135,7 @@ em { font-style: italic; color: var(--primary); }
 .footer-inner {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 64px var(--gutter) 32px;
+  padding: 44px var(--gutter) 32px;
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 48px;
@@ -1161,8 +1169,8 @@ em { font-style: italic; color: var(--primary); }
   opacity: 0.85;
 }
 .footer-contact:hover { opacity: 1; text-decoration: underline; }
-.footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-@media (max-width: 540px) {
+.footer-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+@media (max-width: 720px) {
   .footer-cols { grid-template-columns: repeat(2, 1fr); }
 }
 .footer-col h5 {
@@ -1194,7 +1202,7 @@ em { font-style: italic; color: var(--primary); }
   border-top: 1px solid rgba(250,245,236,0.08);
 }
 
-/* ── WhatsApp floating button ── */
+/* ââ WhatsApp floating button ââ */
 .wa-float {
   position: fixed;
   bottom: 28px;
@@ -1215,13 +1223,21 @@ em { font-style: italic; color: var(--primary); }
   .wa-float { bottom: 20px; left: 16px; width: 50px; height: 50px; }
 }
 
-/* ── RTL adjustments ── */
+@media (max-width: 600px) {
+  .hero {
+    min-height: auto;
+    padding: 36px var(--gutter) 56px;
+  }
+  .hero-scroll { display: none; }
+}
+
+/* ââ RTL adjustments ââ */
 [dir="rtl"] .map-svg text { direction: ltr; }
 [dir="rtl"] .venue-card { text-align: right; }
 
-/* ─────────────────────────────────────────────────────────
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
    Niv-merged additions: place cards, niv tip, filters, etc.
-   ───────────────────────────────────────────────────────── */
+   âââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 /* Hero stats row */
 .hero-stats-row {
@@ -1532,7 +1548,7 @@ em { font-style: italic; color: var(--primary); }
 /* a tag styled as button */
 a.btn { text-decoration: none; }
 
-/* ── Visual blocks (no image placeholders) ── */
+/* ââ Visual blocks (no image placeholders) ââ */
 .taste-card { display: flex; flex-direction: column; gap: 12px; }
 .taste-visual, .dish-visual {
   position: relative;
@@ -1552,12 +1568,12 @@ a.btn { text-decoration: none; }
   pointer-events: none;
 }
 .taste-emoji, .dish-emoji {
-  font-size: 3.2rem;
+  font-size: 4.5rem;
   position: relative;
   z-index: 1;
-  filter: drop-shadow(0 4px 8px rgba(40,30,20,0.08));
+  filter: drop-shadow(0 0 14px var(--dish-color)) drop-shadow(0 0 28px var(--dish-color)) drop-shadow(0 3px 6px rgba(40,30,20,0.12));
 }
-.dish-emoji { font-size: 4rem; }
+.dish-emoji { font-size: 5.5rem; } @media (max-width: 600px) { .taste-grid, .dish-strip { grid-template-columns: repeat(2, 1fr); gap: 12px; } .taste-emoji, .dish-emoji { font-size: 4.5rem; } .taste-name, .dish-name { font-size: 1.05rem; } .taste-desc, .dish-desc { font-size: 0.82rem; } }
 
 .route-visual {
   aspect-ratio: 4/3;
@@ -1601,7 +1617,7 @@ a.btn { text-decoration: none; }
 /* niv-card visual block (replaces placeholder image) */
 .niv-card-img {
   position: relative;
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/2;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -1643,9 +1659,9 @@ a.btn { text-decoration: none; }
 }
 .modal-emoji { display: none; } /* hide old overlay emoji */
 
-/* ═══════════════════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
    ADMIN PANEL
-═══════════════════════════════════════════════════════════════ */
+âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 .admin-screen {
   min-height: 100vh;
@@ -1857,9 +1873,9 @@ a.btn { text-decoration: none; }
 }
 .admin-login-btn:hover { background: #8b5cf6; }
 
-/* ═══════════════════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
    SAVED SCREEN
-═══════════════════════════════════════════════════════════════ */
+âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 .saved-screen {
   max-width: 760px;
@@ -1935,9 +1951,9 @@ a.btn { text-decoration: none; }
 .saved-empty-title { font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--ink); margin: 0 0 10px; }
 .saved-empty-sub   { font-size: 15px; color: #9ca3af; max-width: 280px; line-height: 1.6; margin: 0; }
 
-/* ═══════════════════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
    LITHUANIA MAP (new SVG)
-═══════════════════════════════════════════════════════════════ */
+âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 .lt-map-svg { border-radius: 28px; }
 
@@ -2027,25 +2043,56 @@ a.btn { text-decoration: none; }
   .lt-country-word { font-size: 38px; letter-spacing: 10px; }
 }
 
-/* ═══════════════════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
    HOME MAP SECTION
-═══════════════════════════════════════════════════════════════ */
+âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 .home-map-section { padding-top: 0; }
 .home-map-wrap {
   max-width: 680px;
   margin: 0 auto;
 }
-/* MapIllustration renders .map-wrap inside home-map-wrap — no extra bg needed */
+/* MapIllustration renders .map-wrap inside home-map-wrap â no extra bg needed */
 .home-map-wrap .map-wrap {
   background: linear-gradient(135deg, #f7f0df, #ede2ca);
   border-radius: 20px;
   padding: 20px;
 }
+@media (max-width: 720px) {
+  /* Restore a modest top gap above the heading on mobile only â the
+     desktop rule zeroes padding-top, which reads as too tight against
+     the section above on small screens. Section's own left/right
+     padding (gutter) is left untouched so the heading/text stays
+     aligned with the rest of the page. */
+  .home-map-section {
+    padding-top: 40px;
+  }
+  /* Enlarge ONLY the map: bleed home-map-wrap past the section's
+     gutter and shrink the map-wrap's internal padding. */
+  .home-map-wrap {
+    margin-left: -14px;
+    margin-right: -14px;
+  }
+  .home-map-wrap .map-wrap {
+    padding: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .home-map-section {
+    padding-top: 32px;
+  }
+  .home-map-wrap {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+  .home-map-wrap .map-wrap {
+    padding: 6px;
+  }
+}
 
-/* ═══════════════════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
    SMALLER PLACE CARD GRIDS (home tips + explore places)
-═══════════════════════════════════════════════════════════════ */
+âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 .tips-grid-home,
 .places-grid-sm {
@@ -2097,9 +2144,9 @@ a.btn { text-decoration: none; }
   }
 }
 
-/* ═══════════════════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
    EXPLORE REGION BANNER
-═══════════════════════════════════════════════════════════════ */
+âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 .region-banner {
   display: grid;
@@ -2167,9 +2214,9 @@ a.btn { text-decoration: none; }
   .region-banner-title { font-size: 2rem; }
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   ADMIN PANEL — NEW ELEMENTS
-═══════════════════════════════════════════════════════════════ */
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+   ADMIN PANEL â NEW ELEMENTS
+âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 /* Make filter bar single-row with horizontal scroll */
 .admin-filters {

@@ -132,14 +132,13 @@ function MapIllustration({ regions, activeRegion, onPick, t, lang }) {
   // Map data-place IDs to app region IDs
   const placeToRegion = {
     vilnius: 'vilnius',
+    trakai: 'trakai',
     kaunas: 'kaunas',
     klaipeda: 'klaipeda',
     nida: 'curonian',
     druskininkai: 'druskininkai',
-    kretinga: 'kretinga',
     palanga: 'palanga',
     moletai: 'moletai',
-    utena: 'utena',
     zarasai: 'zarasai',
   };
 
@@ -201,6 +200,14 @@ function MapIllustration({ regions, activeRegion, onPick, t, lang }) {
           <text className="lt-place-label" x="710" y="474" textAnchor="start" fontWeight={isActive('vilnius') ? 800 : 800}>Vilnius</text>
         </g>
 
+        {/* Trakai */}
+        <g className="lt-place-link" onClick={() => handleClick('trakai')} style={{cursor:'pointer'}}>
+          <circle className="lt-hit" cx="615.00" cy="486.00" r="30"/>
+          <circle className={`lt-place-dot${isActive('trakai') ? ' lt-place-active' : ''}`} cx="615.00" cy="486.00" r={isActive('trakai') ? 20 : 16} fill="#5C8AA6"/>
+          <rect className="lt-label-bg" x="503" y="498" width="86" height="32" rx="9"/>
+          <text className="lt-place-label" x="581" y="522" textAnchor="end" fontWeight={isActive('trakai') ? 800 : 800}>Trakai</text>
+        </g>
+
         {/* Kaunas */}
         <g className="lt-place-link" onClick={() => handleClick('kaunas')} style={{cursor:'pointer'}}>
           <circle className="lt-hit" cx="514.72" cy="427.11" r="38"/>
@@ -233,13 +240,6 @@ function MapIllustration({ regions, activeRegion, onPick, t, lang }) {
           <text className="lt-place-label" x="536" y="653" textAnchor="middle" fontWeight={isActive('druskininkai') ? 800 : 800}>Druskininkai</text>
         </g>
 
-        {/* Kretinga */}
-        <g className="lt-place-link" onClick={() => handleClick('kretinga')} style={{cursor:'pointer'}}>
-          <circle className="lt-hit" cx="217.16" cy="233.23" r="31"/>
-          <circle className={`lt-place-dot${isActive('kretinga') ? ' lt-place-active' : ''}`} cx="217.16" cy="233.23" r={isActive('kretinga') ? 20 : 16} fill="#8A6B4A"/>
-          <rect className="lt-label-bg" x="246" y="236" width="102" height="32" rx="9"/>
-          <text className="lt-place-label" x="258" y="260" textAnchor="start" fontWeight={isActive('kretinga') ? 800 : 800}>Kretinga</text>
-        </g>
 
         {/* Palanga */}
         <g className="lt-place-link" onClick={() => handleClick('palanga')} style={{cursor:'pointer'}}>
@@ -257,13 +257,6 @@ function MapIllustration({ regions, activeRegion, onPick, t, lang }) {
           <text className="lt-place-label" x="657" y="399" textAnchor="end" fontWeight={isActive('moletai') ? 800 : 800}>Molėtai</text>
         </g>
 
-        {/* Utena */}
-        <g className="lt-place-link" onClick={() => handleClick('utena')} style={{cursor:'pointer'}}>
-          <circle className="lt-hit" cx="704.47" cy="309.82" r="38"/>
-          <circle className={`lt-place-dot${isActive('utena') ? ' lt-place-active' : ''}`} cx="704.47" cy="309.82" r={isActive('utena') ? 20 : 16} fill="#6B8A5A"/>
-          <rect className="lt-label-bg" x="728" y="304" width="78" height="32" rx="9"/>
-          <text className="lt-place-label" x="740" y="328" textAnchor="start" fontWeight={isActive('utena') ? 800 : 800}>Utena</text>
-        </g>
 
         {/* Zarasai */}
         <g className="lt-place-link" onClick={() => handleClick('zarasai')} style={{cursor:'pointer'}}>
@@ -394,6 +387,41 @@ function RegionArt({ id, accent }) {
         <line x1="175" y1="148" x2="177" y2="140" stroke={dark} strokeWidth="0.8" opacity="0.8"/>
       </g>
     ),
+    trakai: (
+      // Island castle on Lake Galvė
+      <g>
+        <rect x="0" y="0" width="200" height="180" fill={sky}/>
+        <circle cx="35" cy="35" r="12" fill="#ffffff" opacity="0.55"/>
+        {/* Lake */}
+        <path d="M 0 180 L 200 180 L 200 120 Q 100 110 0 122 Z" fill={light}/>
+        <path d="M 0 138 Q 50 132 100 138 T 200 135" stroke={mid} strokeWidth="1.5" fill="none" opacity="0.4"/>
+        <path d="M 0 152 Q 50 146 100 152 T 200 149" stroke={mid} strokeWidth="1.5" fill="none" opacity="0.35"/>
+        {/* Island */}
+        <ellipse cx="100" cy="128" rx="58" ry="12" fill={mid} opacity="0.55"/>
+        {/* Castle curtain wall */}
+        <rect x="55" y="108" width="90" height="24" fill={dark}/>
+        <rect x="55" y="100" width="8" height="8" fill={dark}/>
+        <rect x="69" y="100" width="8" height="8" fill={dark}/>
+        <rect x="83" y="100" width="8" height="8" fill={dark}/>
+        <rect x="97" y="100" width="8" height="8" fill={dark}/>
+        <rect x="111" y="100" width="8" height="8" fill={dark}/>
+        <rect x="125" y="100" width="8" height="8" fill={dark}/>
+        <rect x="139" y="100" width="8" height="8" fill={dark}/>
+        {/* Corner towers */}
+        <rect x="48" y="78" width="20" height="54" fill={mid}/>
+        <rect x="48" y="70" width="6" height="8" fill={mid}/>
+        <rect x="62" y="70" width="6" height="8" fill={mid}/>
+        <rect x="132" y="78" width="20" height="54" fill={mid}/>
+        <rect x="132" y="70" width="6" height="8" fill={mid}/>
+        <rect x="146" y="70" width="6" height="8" fill={mid}/>
+        {/* Central keep */}
+        <rect x="88" y="60" width="24" height="72" fill={dark}/>
+        <path d="M 88 60 L 100 44 L 112 60 Z" fill={dark}/>
+        <rect x="97" y="80" width="6" height="10" fill="#ffffff" opacity="0.5"/>
+        {/* Footbridge to shore */}
+        <line x1="0" y1="170" x2="55" y2="120" stroke={dark} strokeWidth="3" opacity="0.5"/>
+      </g>
+    ),
     countryside: (
       // Pine forest with cabin
       <g>
@@ -437,30 +465,6 @@ function RegionArt({ id, accent }) {
         <path d="M 0 172 Q 50 168 100 172 T 200 171" stroke="#ffffff" strokeWidth="1" fill="none" opacity="0.4"/>
         {/* Reflection */}
         <rect x="85" y="152" width="30" height="3" fill={dark} opacity="0.25"/>
-      </g>
-    ),
-    kretinga: (
-      // Manor garden — formal hedges, manor house
-      <g>
-        <rect x="0" y="0" width="200" height="180" fill={sky}/>
-        <circle cx="40" cy="38" r="10" fill="#ffffff" opacity="0.55"/>
-        <path d="M 0 180 L 200 180 L 200 155 L 0 155 Z" fill={light}/>
-        {/* Manor */}
-        <rect x="60" y="100" width="80" height="55" fill={mid}/>
-        <path d="M 56 100 L 100 78 L 144 100 Z" fill={dark}/>
-        <rect x="96" y="88" width="8" height="12" fill={dark}/>
-        <rect x="94" y="120" width="12" height="35" fill={dark}/>
-        <rect x="70" y="118" width="10" height="14" fill="#ffffff" opacity="0.5"/>
-        <rect x="120" y="118" width="10" height="14" fill="#ffffff" opacity="0.5"/>
-        <rect x="70" y="138" width="10" height="14" fill="#ffffff" opacity="0.5"/>
-        <rect x="120" y="138" width="10" height="14" fill="#ffffff" opacity="0.5"/>
-        {/* Formal hedges */}
-        <ellipse cx="25" cy="168" rx="14" ry="6" fill={dark}/>
-        <ellipse cx="50" cy="170" rx="10" ry="5" fill={dark}/>
-        <ellipse cx="150" cy="170" rx="10" ry="5" fill={dark}/>
-        <ellipse cx="175" cy="168" rx="14" ry="6" fill={dark}/>
-        {/* Path */}
-        <path d="M 95 178 L 100 155 L 105 178 Z" fill="#ffffff" opacity="0.4"/>
       </g>
     ),
     palanga: (
@@ -516,29 +520,6 @@ function RegionArt({ id, accent }) {
         <path d="M 165 170 L 160 158 L 163 158 L 158 148 L 162 148 L 157 135 L 165 122 L 173 135 L 168 148 L 172 148 L 167 158 L 170 158 L 165 170 Z" fill={dark}/>
       </g>
     ),
-    utena: (
-      // Multiple connected lakes from above + canoe
-      <g>
-        <rect x="0" y="0" width="200" height="180" fill={sky}/>
-        <circle cx="40" cy="35" r="10" fill="#ffffff" opacity="0.55"/>
-        {/* Land */}
-        <path d="M 0 180 L 200 180 L 200 0 L 0 0 Z" fill={light}/>
-        {/* Pine forest scatter */}
-        {[[30,60],[55,90],[15,110],[75,140],[170,55],[180,100],[150,135],[35,150]].map(([x,y],i)=>(
-          <path key={i} d={`M ${x} ${y+8} L ${x-4} ${y+3} L ${x-2} ${y+3} L ${x-3} ${y-2} L ${x} ${y-8} L ${x+3} ${y-2} L ${x+2} ${y+3} L ${x+4} ${y+3} Z`} fill={dark} opacity="0.7"/>
-        ))}
-        {/* Lakes (organic shapes) */}
-        <ellipse cx="60" cy="80" rx="22" ry="14" fill={accent + '88'} transform="rotate(-20 60 80)"/>
-        <ellipse cx="120" cy="65" rx="18" ry="12" fill={accent + '88'} transform="rotate(15 120 65)"/>
-        <ellipse cx="100" cy="120" rx="32" ry="18" fill={accent + '99'} transform="rotate(-10 100 120)"/>
-        <ellipse cx="155" cy="105" rx="14" ry="10" fill={accent + '88'}/>
-        <path d="M 75 78 Q 95 80 105 105" stroke={accent + '88'} strokeWidth="3" fill="none"/>
-        <path d="M 132 78 Q 130 90 130 110" stroke={accent + '88'} strokeWidth="3" fill="none"/>
-        {/* Canoe on main lake */}
-        <ellipse cx="100" cy="120" rx="10" ry="2.5" fill={dark}/>
-        <line x1="100" y1="118" x2="100" y2="115" stroke={dark} strokeWidth="1.5"/>
-      </g>
-    ),
     zarasai: (
       // Island town between lakes — boardwalk
       <g>
@@ -590,12 +571,11 @@ function placeMapUrl(place) {
     kaunas: 'Kaunas',
     klaipeda: 'Klaipėda',
     curonian: 'Nida',
+    trakai: 'Trakai',
     countryside: '',
     druskininkai: 'Druskininkai',
     palanga: 'Palanga',
-    kretinga: 'Kretinga',
     moletai: 'Molėtai',
-    utena: 'Utena',
     zarasai: 'Zarasai'
   }[place.region] || '';
   // Simplest reliable Google Maps URL: pure ?q= search

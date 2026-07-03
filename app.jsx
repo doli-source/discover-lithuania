@@ -1,5 +1,8 @@
 // Main app — nav, screen routing, tweaks, language toggle
 
+// Prevent iOS Safari from restoring scroll position on pushState
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
 const { useState, useEffect, useMemo } = React;
 const { REGIONS, PLACES, LANDMARKS, DISHES, ITINERARIES, FACTS, MAP_URL } = window.LT_DATA;
 
@@ -108,6 +111,42 @@ function App() {
     document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
   }, [lang]);
 
+  // SEO: per-route <title> + meta description (the static HTML only covers '/')
+  useEffect(() => {
+    const baseTitle = lang === 'he' ? 'גלה את ליטא' : 'Discover Lithuania';
+    let title = `${baseTitle} — ${lang === 'he' ? 'מדריך טיולים אישי' : "A Traveler's Guide"}`;
+    let description = lang === 'he'
+      ? 'מדריך טיולים אישי לליטא — 141 מקומות נבחרים: בתי קפה, מסעדות, אתרי טבע ולינה, ב-12 אזורים. מאת ניב שמעוני.'
+      : "A curated travel guide to Lithuania — 141 handpicked cafés, restaurants, stays, nature spots and ready-made routes across 12 regions. By Niv Shimoni.";
+
+    if (screen === 'explore' && params.region) {
+      const region = REGIONS.find(r => r.id === params.region);
+      if (region) {
+        title = `${region[lang].name} — ${region[lang].tag} | ${baseTitle}`;
+        description = region[lang].blurb;
+      }
+    } else if (screen === 'explore') {
+      title = lang === 'he' ? `כל האזורים | ${baseTitle}` : `Explore all regions | ${baseTitle}`;
+    } else if (screen === 'routes') {
+      title = lang === 'he' ? `מסלולים מוכנים מראש | ${baseTitle}` : `Ready-made routes | ${baseTitle}`;
+    } else if (screen === 'food') {
+      title = lang === 'he' ? `איפה לאכול ולשתות בליטא | ${baseTitle}` : `Where to eat & drink in Lithuania | ${baseTitle}`;
+    } else if (screen === 'stays') {
+      title = lang === 'he' ? `איפה לישון בליטא | ${baseTitle}` : `Where to sleep in Lithuania | ${baseTitle}`;
+    }
+
+    document.title = title;
+    const setMeta = (selector, attr, value) => {
+      const el = document.querySelector(selector);
+      if (el) el.setAttribute(attr, value);
+    };
+    setMeta('meta[name="description"]', 'content', description);
+    setMeta('meta[property="og:title"]', 'content', title);
+    setMeta('meta[property="og:description"]', 'content', description);
+    setMeta('meta[name="twitter:title"]', 'content', title);
+    setMeta('meta[name="twitter:description"]', 'content', description);
+  }, [screen, params, lang]);
+
   // Handle browser back / forward
   useEffect(() => {
     const onPop = () => {
@@ -157,7 +196,11 @@ function App() {
     setParams(p);
     setOpenPlaceId(null);
     history.pushState(null, '', buildURL(s, p, null, lang));
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Don't scroll to top when navigating to a specific region (ExploreScreen handles it)
+    if (!(s === 'explore' && p.region)) {
+      setTimeout(() => window.scrollTo(0, 0), 10);
+      setTimeout(() => window.scrollTo(0, 0), 100);
+    }
   };
 
   const toggleSaved = (id) => {
@@ -290,6 +333,9 @@ function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
   return (
     <header className={`nav ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-inner">
+        <button className="mobile-menu" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+        </button>
         <button className="brand" onClick={() => nav('home')}>
           <span className="brand-mark">
             <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
@@ -330,9 +376,6 @@ function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
             <span className={lang === 'he' ? 'active' : ''}>עב</span>
             <span className="lang-sep">·</span>
             <span className={lang === 'en' ? 'active' : ''}>EN</span>
-          </button>
-          <button className="mobile-menu" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
           </button>
         </div>
       </div>
@@ -382,7 +425,7 @@ function Footer({ lang, t, nav }) {
           </div>
           <div className="footer-col">
             <h5>{lang === 'he' ? 'אזורים' : 'Regions'}</h5>
-            {REGIONS.slice(0, 4).map(r => (
+            {REGIONS.map(r => (
               <button key={r.id} onClick={() => nav('explore', { region: r.id })}>{r[lang].name}</button>
             ))}
           </div>
