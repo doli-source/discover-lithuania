@@ -2638,9 +2638,11 @@ const ITINERARIES = [
     he: { title: 'סוף שבוע ספא בדרוסקיניינקאי', tagline: 'מעיינות, ספא, ויערות אורן' },
     en: { title: 'Druskininkai Spa Weekend', tagline: 'Springs, spa, and pine forests' },
     stops: [
-      { time: 'שישי', timeEn: 'Friday', placeId: 'atokampis-boutique-spa-resort', landmarkId: null, he: 'הגעה לספא בוטיק', en: 'Check in at boutique spa' },
-      { time: 'שבת', timeEn: 'Saturday', placeId: 'horizons-lake-resort-spa', landmarkId: null, he: 'יום על האגם', en: 'A day on the lake' },
-      { time: 'ראשון', timeEn: 'Sunday', placeId: 'mana-sleep-spa-druskininkai', landmarkId: null, he: 'ארוחת בוקר וביקור פרידה', en: 'Brunch & a farewell visit' }
+      { time: 'שישי אחה"צ', timeEn: 'Friday afternoon', placeId: 'mana-sleep-spa-druskininkai', landmarkId: null, he: 'הגעה למאנה ספא — מרחץ מינרלים ערב', en: 'Arrive at Mana & evening mineral spring bath' },
+      { time: 'שבת בוקר', timeEn: 'Saturday morning', placeId: 'mana-sleep-spa-druskininkai', landmarkId: null, he: 'טיפול פלואוטינג וחדר מלח ים המלח', en: 'Float therapy & Dead Sea salt room' },
+      { time: 'שבת אחה"צ', timeEn: 'Saturday afternoon', placeId: 'grutas-park', landmarkId: null, he: 'טיול קצר בעיר ופארק גרוטס', en: 'City stroll & Grūtas Park' },
+      { time: 'שבת ערב', timeEn: 'Saturday evening', placeId: 'toli-toli-druskininkai', landmarkId: null, he: 'ארוחת ערב במסעדת טולי טולי', en: 'Dinner at Toli Toli' },
+      { time: 'ראשון', timeEn: 'Sunday', placeId: 'mana-sleep-spa-druskininkai', landmarkId: null, he: 'טיפול ספא אחרון — עיסוי ובריכה תרמית לפני יציאה', en: 'Final treatment — massage & thermal pool before checkout' }
     ]
   }
 ];
