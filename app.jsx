@@ -199,6 +199,83 @@ function App() {
     }
   }, [screen, params, lang]);
 
+  // SEO: BreadcrumbList + FAQ schema (home page only)
+  useEffect(() => {
+    const BASE = 'https://lithuaniadiscovery.com';
+    const crumbs = [{ name: lang === 'he' ? 'בית' : 'Home', url: `${BASE}/` }];
+    const screenNames = { explore: { he: 'גלה', en: 'Explore' }, routes: { he: 'מסלולים', en: 'Routes' }, food: { he: 'אוכל ושתייה', en: 'Food & Drink' }, stays: { he: 'לינה', en: 'Stays' } };
+    if (screen !== 'home' && screenNames[screen]) crumbs.push({ name: screenNames[screen][lang], url: `${BASE}/${screen}` });
+    if (screen === 'explore' && params.region) {
+      const region = REGIONS.find(r => r.id === params.region);
+      if (region) crumbs.push({ name: region[lang].name, url: `${BASE}/explore/${params.region}` });
+    }
+    if (screen === 'routes' && params.route) {
+      const itin = ITINERARIES.find(i => i.id === params.route);
+      if (itin) crumbs.push({ name: itin[lang].title, url: `${BASE}/routes/${params.route}` });
+    }
+
+    const breadcrumb = crumbs.length > 1 ? {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.url }))
+    } : null;
+
+    const faq = screen === 'home' ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'What is the best time to visit Lithuania?',
+          acceptedAnswer: { '@type': 'Answer', text: 'May to September offers the best weather. June–August is warm and lively, with festivals and long daylight hours.' } },
+        { '@type': 'Question', name: 'What currency does Lithuania use?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Lithuania uses the Euro (€). Very affordable compared to Western Europe — coffee ~€3, a full meal €8–15.' } },
+        { '@type': 'Question', name: 'Is English widely spoken in Lithuania?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes, especially in Vilnius, Kaunas, and tourist areas. Most young people and service staff speak good English.' } },
+        { '@type': 'Question', name: 'How many days do you need to visit Lithuania?',
+          acceptedAnswer: { '@type': 'Answer', text: '3–7 days gives you a full experience. Vilnius alone is worth 2 days; add a day trip to Trakai Castle, and Kaunas or the Curonian Spit.' } },
+        { '@type': 'Question', name: 'Is Lithuania safe for tourists?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes, Lithuania is one of the safest countries in Europe with very low crime rates. Vilnius Old Town is safe to walk at night.' } },
+        { '@type': 'Question', name: 'What is Lithuania known for?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Lithuania is known for its medieval Vilnius Old Town (UNESCO), the Curonian Spit dunes, Baltic amber, castle islands in Trakai, and an emerging café and food scene.' } }
+      ]
+    } : null;
+
+    const inject = (id, data) => {
+      let el = document.getElementById(id);
+      if (data) {
+        if (!el) { el = document.createElement('script'); el.type = 'application/ld+json'; el.id = id; document.head.appendChild(el); }
+        el.textContent = JSON.stringify(data);
+      } else if (el) { el.remove(); }
+    };
+    inject('ld-breadcrumb', breadcrumb);
+    inject('ld-faq', faq);
+  }, [screen, params, lang]);
+
+  // SEO: LocalBusiness schema when a place modal is open
+  useEffect(() => {
+    const inject = (id, data) => {
+      let el = document.getElementById(id);
+      if (data) {
+        if (!el) { el = document.createElement('script'); el.type = 'application/ld+json'; el.id = id; document.head.appendChild(el); }
+        el.textContent = JSON.stringify(data);
+      } else if (el) { el.remove(); }
+    };
+    if (openPlaceData) {
+      const kindMap = { cafe: 'CafeOrCoffeeShop', restaurant: 'Restaurant', stay: 'LodgingBusiness', nature: 'TouristAttraction', bar: 'BarOrPub', bakery: 'Bakery' };
+      const lb = {
+        '@context': 'https://schema.org',
+        '@type': kindMap[openPlaceData.kind] || 'LocalBusiness',
+        name: openPlaceData.name,
+        description: openPlaceData.niv || openPlaceData.en?.blurb || openPlaceData.type,
+        url: openPlaceData.mapUrl || `https://lithuaniadiscovery.com/explore/${openPlaceData.region}`,
+        ...(openPlaceData.rating && { aggregateRating: { '@type': 'AggregateRating', ratingValue: openPlaceData.rating, reviewCount: openPlaceData.reviews || 1, bestRating: 5 } }),
+        ...(openPlaceData.price && { priceRange: openPlaceData.price })
+      };
+      inject('ld-local-business', lb);
+    } else {
+      inject('ld-local-business', null);
+    }
+  }, [openPlaceData]);
+
   // Handle browser back / forward
   useEffect(() => {
     const onPop = () => {
@@ -241,14 +318,17 @@ function App() {
     if (newLang === 'he') p.delete('lang'); else p.set('lang', newLang);
     const qs = p.toString();
     history.replaceState(null, '', qs ? '?' + qs : location.pathname);
+    ga('language_toggle', { to: newLang });
   };
+
+  const ga = (event, params) => { if (typeof gtag === 'function') gtag('event', event, params); };
 
   const nav = (s, p = {}) => {
     setScreen(s);
     setParams(p);
     setOpenPlaceId(null);
     history.pushState(null, '', buildURL(s, p, null, lang));
-    // Don't scroll to top when navigating to a specific region (ExploreScreen handles it)
+    ga('page_view', { screen_name: s, ...(p.region && { region: p.region }), ...(p.route && { route: p.route }), language: lang });
     if (!(s === 'explore' && p.region)) {
       setTimeout(() => window.scrollTo(0, 0), 10);
       setTimeout(() => window.scrollTo(0, 0), 100);
@@ -258,7 +338,10 @@ function App() {
   const toggleSaved = (id) => {
     setSavedSet(prev => {
       const next = new Set(prev);
-      if (next.has(id)) next.delete(id); else next.add(id);
+      const adding = !next.has(id);
+      if (adding) next.add(id); else next.delete(id);
+      const place = effectivePlaces.find(p => p.id === id);
+      ga(adding ? 'place_save' : 'place_unsave', { place_id: id, place_name: place?.name, region: place?.region });
       return next;
     });
   };
@@ -268,6 +351,8 @@ function App() {
     const p = new URLSearchParams(location.search);
     p.set('place', id);
     history.pushState(null, '', '?' + p.toString());
+    const place = effectivePlaces.find(pl => pl.id === id);
+    ga('place_open', { place_id: id, place_name: place?.name, place_kind: place?.kind, region: place?.region });
   };
   const closePlace = () => {
     setOpenPlaceId(null);
@@ -355,6 +440,7 @@ function App() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="צור קשר בוואטסאפ"
+        onClick={() => ga('whatsapp_click', { screen, language: lang })}
       >
         <svg viewBox="0 0 24 24" fill="white" width="28" height="28" aria-hidden="true">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>

@@ -1,0 +1,29 @@
+{
+  "name": "Discover Lithuania",
+  "short_name": "Lithuania",
+  "description": "A curated travel guide to Lithuania — 152+ handpicked places across 12 regions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf5ec",
+  "theme_color": "#C28840",
+  "lang": "he",
+  "dir": "rtl",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/og-preview.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["travel", "food", "lifestyle"],
+  "screenshots": [
+    {
+      "src": "/og-preview.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}
