@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260704f';
+window._DL_DATA_VERSION = '20260704g';
 
 (function() {
 
@@ -2593,19 +2593,15 @@ const ITINERARIES = [
   },
   {
     id: 'baltic-week',
-    duration: 'week',
+    duration: 'weekend',
     region: null,
-    he: { title: 'שבוע בלטי קלאסי', tagline: 'מהבירה לים, דרך טירות ודיונות' },
-    en: { title: 'The Classic Baltic Week', tagline: 'Capital to coast via castles and dunes' },
+    he: { title: 'וילנה והסביבה', tagline: 'יום בעיר, יום בטבע' },
+    en: { title: 'Vilnius & The Region', tagline: 'A day in the city, a day in nature' },
     stops: [
       { time: 'יום 1', timeEn: 'Day 1', placeId: 'mo-museum', landmarkId: null, he: 'וילנה: מוזיאון MO ואומנות רחוב באוז\'ופיס', en: 'Vilnius: MO Museum & Užupis street art walk' },
       { time: 'יום 2 בוקר', timeEn: 'Day 2 morning', placeId: 'snapas-kava-ir-desertai', landmarkId: null, he: 'טראקאי — קפה ומאפה ב-Snapas', en: 'Trakai — coffee & pastry at Snapas' },
       { time: 'יום 2 צהריים', timeEn: 'Day 2', placeId: null, landmarkId: 'trakai-castle', he: 'טירת טראקאי + צהריים ב-Kiubėtė על האגם', en: 'Trakai Castle + lunch at Kiubėtė on the lake' },
-      { time: 'יום 2 אחה"צ', timeEn: 'Day 2 afternoon', placeId: 'trakai-balloon-ride', landmarkId: null, he: 'כדור פורח מעל הטירה והאגמים', en: 'Hot air balloon over the castle & lakes' },
-      { time: 'יום 4', timeEn: 'Day 4', placeId: null, landmarkId: 'laisves', he: 'קובנה וסצנת הקפה', en: 'Kaunas & its café scene' },
-      { time: 'יום 5', timeEn: 'Day 5', placeId: null, landmarkId: 'theatre-square', he: 'קלייפדה ויציאה לים', en: 'Klaipėda meets the sea' },
-      { time: 'יום 6', timeEn: 'Day 6', placeId: 'the-dead-dunes', landmarkId: null, he: 'נידה ודיונות חול', en: 'Nida & the sand dunes' },
-      { time: 'יום 7', timeEn: 'Day 7', placeId: null, landmarkId: 'palanga', he: 'פלאנגה לפני הטיסה', en: 'Palanga before flying home' }
+      { time: 'יום 2 אחה"צ', timeEn: 'Day 2 afternoon', placeId: 'trakai-balloon-ride', landmarkId: null, he: 'כדור פורח מעל הטירה והאגמים', en: 'Hot air balloon over the castle & lakes' }
     ]
   },
   {
