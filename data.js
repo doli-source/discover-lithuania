@@ -2508,9 +2508,9 @@ const PLACES = [
     "reviews": null,
     "price": null,
     "emoji": "🕍",
-    "niv": "A remarkable and moving museum in the small town of Šeduva, dedicated to the Jewish community that once thrived here. One of the most important Jewish heritage sites in Lithuania.",
-    "nivHe": "מוזיאון מרגש ויוצא דופן בעיירה הקטנה שדובה, המוקדש לקהילה היהודית שפרחה כאן. אחד מאתרי המורשת היהודית החשובים ביותר בליטא.",
-    "mapUrl": "https://maps.app.goo.gl/rN7HZpHX5YZ3bPWC6",
+    "niv": "One of the most profound and moving experiences in all of Lithuania. Hidden in the tiny town of Šeduva, this museum tells the story of a Jewish community that was almost entirely wiped out. Walking through it is deeply emotional — a reminder of what was, and what was lost. Do not skip this.",
+    "nivHe": "אחת מהחוויות העמוקות והמרגשות ביותר בכל ליטא. חבוי בעיירה הקטנטנה שדובה, המוזיאון מספר את סיפורה של קהילה יהודית שנמחקה כמעט לחלוטין. לעבור דרכו זה מחריד ומרגש עד דמעות — תזכורת למה שהיה ולמה שאבד. אל תפספסו את זה.",
+    "mapUrl": "https://maps.app.goo.gl/fDZaRGMxjNNMocgC9",
     "status": "approved",
     "source": "niv"
   },
