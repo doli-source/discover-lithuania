@@ -111,28 +111,60 @@ function App() {
     document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
   }, [lang]);
 
-  // SEO: per-route <title> + meta description (the static HTML only covers '/')
+  // SEO: per-route <title>, meta description, canonical URL + TouristTrip JSON-LD
   useEffect(() => {
     const baseTitle = lang === 'he' ? 'גלה את ליטא' : 'Discover Lithuania';
     let title = `${baseTitle} — ${lang === 'he' ? 'מדריך טיולים אישי' : "A Traveler's Guide"}`;
     let description = lang === 'he'
-      ? 'מדריך טיולים אישי לליטא — 141 מקומות נבחרים: בתי קפה, מסעדות, אתרי טבע ולינה, ב-12 אזורים. מאת ניב שמעוני.'
-      : "A curated travel guide to Lithuania — 141 handpicked cafés, restaurants, stays, nature spots and ready-made routes across 12 regions. By Niv Shimoni.";
+      ? 'מדריך טיולים אישי לליטא — 152 מקומות נבחרים: בתי קפה, מסעדות, אתרי טבע ולינה, ב-12 אזורים. מאת ניב שמעוני.'
+      : "A curated travel guide to Lithuania — 152 handpicked cafés, restaurants, stays, nature spots and ready-made routes across 12 regions. By Niv Shimoni.";
+    let canonicalPath = '/';
+    let touristTrip = null;
 
     if (screen === 'explore' && params.region) {
       const region = REGIONS.find(r => r.id === params.region);
       if (region) {
         title = `${region[lang].name} — ${region[lang].tag} | ${baseTitle}`;
         description = region[lang].blurb;
+        canonicalPath = `/explore/${params.region}`;
       }
     } else if (screen === 'explore') {
       title = lang === 'he' ? `כל האזורים | ${baseTitle}` : `Explore all regions | ${baseTitle}`;
+      canonicalPath = '/explore';
+    } else if (screen === 'routes' && params.route) {
+      const itin = ITINERARIES.find(i => i.id === params.route);
+      if (itin) {
+        title = `${itin[lang].title} — ${itin[lang].tagline} | ${baseTitle}`;
+        description = lang === 'he'
+          ? `מסלול: ${itin.he.title}. ${itin.he.tagline}. ${itin.stops.length} תחנות בליטא.`
+          : `Itinerary: ${itin.en.title}. ${itin.en.tagline}. ${itin.stops.length} stops across Lithuania.`;
+        canonicalPath = `/routes/${params.route}`;
+        touristTrip = {
+          '@context': 'https://schema.org',
+          '@type': 'TouristTrip',
+          name: itin.en.title,
+          description: `${itin.en.tagline}. ${itin.stops.length} stops across Lithuania.`,
+          url: `https://lithuaniadiscovery.com/routes/${params.route}`,
+          touristType: ['Cultural tourist', 'Nature lover', 'Food traveler'],
+          itinerary: {
+            '@type': 'ItemList',
+            itemListElement: itin.stops.map((s, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              name: s.en
+            }))
+          }
+        };
+      }
     } else if (screen === 'routes') {
       title = lang === 'he' ? `מסלולים מוכנים מראש | ${baseTitle}` : `Ready-made routes | ${baseTitle}`;
+      canonicalPath = '/routes';
     } else if (screen === 'food') {
       title = lang === 'he' ? `איפה לאכול ולשתות בליטא | ${baseTitle}` : `Where to eat & drink in Lithuania | ${baseTitle}`;
+      canonicalPath = '/food';
     } else if (screen === 'stays') {
       title = lang === 'he' ? `איפה לישון בליטא | ${baseTitle}` : `Where to sleep in Lithuania | ${baseTitle}`;
+      canonicalPath = '/stays';
     }
 
     document.title = title;
@@ -145,6 +177,26 @@ function App() {
     setMeta('meta[property="og:description"]', 'content', description);
     setMeta('meta[name="twitter:title"]', 'content', title);
     setMeta('meta[name="twitter:description"]', 'content', description);
+
+    // Update canonical + og:url
+    const canonicalUrl = `https://lithuaniadiscovery.com${canonicalPath}`;
+    setMeta('link[rel="canonical"]', 'href', canonicalUrl);
+    setMeta('meta[property="og:url"]', 'content', canonicalUrl);
+
+    // Inject / remove TouristTrip JSON-LD
+    const ldId = 'ld-tourist-trip';
+    let ldEl = document.getElementById(ldId);
+    if (touristTrip) {
+      if (!ldEl) {
+        ldEl = document.createElement('script');
+        ldEl.type = 'application/ld+json';
+        ldEl.id = ldId;
+        document.head.appendChild(ldEl);
+      }
+      ldEl.textContent = JSON.stringify(touristTrip, null, 0);
+    } else if (ldEl) {
+      ldEl.remove();
+    }
   }, [screen, params, lang]);
 
   // Handle browser back / forward
