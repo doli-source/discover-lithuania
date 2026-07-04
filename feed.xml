@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Discover Lithuania — A Traveler's Guide</title>
+    <link>https://lithuaniadiscovery.com</link>
+    <description>152+ handpicked cafés, restaurants, stays, nature spots and ready-made routes across 12 regions of Lithuania. By Niv Shimoni.</description>
+    <language>en</language>
+    <lastBuildDate>Fri, 04 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://lithuaniadiscovery.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://lithuaniadiscovery.com/og-preview.png</url>
+      <title>Discover Lithuania</title>
+      <link>https://lithuaniadiscovery.com</link>
+    </image>
+
+    <item>
+      <title>A Perfect Day in Vilnius</title>
+      <link>https://lithuaniadiscovery.com/routes/vilnius-day</link>
+      <guid isPermaLink="true">https://lithuaniadiscovery.com/routes/vilnius-day</guid>
+      <pubDate>Fri, 04 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Niv Shimoni</dc:creator>
+      <description>From Baroque alleys to Užupis — a curated one-day itinerary through Vilnius. Brunch at Backstage, Cathedral Square, Gediminas Tower, lunch at 2 virėjai, Užupis art republic, MO Museum, dinner at BARN, and rooftop drinks at 3M žOS.</description>
+      <content:encoded><![CDATA[
+        <p>A curated one-day route through Vilnius, Lithuania's capital. Cobbled lanes, world-class coffee, and the breakaway art republic of Užupis — all in one day.</p>
+        <ul>
+          <li>09:00 — Brunch at Backstage Roastery Café</li>
+          <li>11:00 — Cathedral Square</li>
+          <li>12:00 — Climb Gediminas Tower</li>
+          <li>13:30 — Lunch at 2 virėjai (honest Lithuanian food)</li>
+          <li>15:00 — Užupis art republic</li>
+          <li>17:00 — MO Museum (modern Lithuanian art)</li>
+          <li>19:30 — Dinner at BARN Bistro</li>
+          <li>22:00 — Rooftop drink at 3M žOS</li>
+        </ul>
+        <p><a href="https://lithuaniadiscovery.com/routes/vilnius-day">View full itinerary →</a></p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>Vilnius &amp; The Region — Weekend Itinerary</title>
+      <link>https://lithuaniadiscovery.com/routes/baltic-week</link>
+      <guid isPermaLink="true">https://lithuaniadiscovery.com/routes/baltic-week</guid>
+      <pubDate>Fri, 04 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Niv Shimoni</dc:creator>
+      <description>A day in the city, a day in nature. Vilnius MO Museum and Užupis on Day 1 — then Trakai by way of Snapas café, the island castle, and a hot air balloon over the lakes on Day 2.</description>
+      <content:encoded><![CDATA[
+        <p>Two days that cover both sides of Lithuania: the urban energy of Vilnius and the lakeside magic of Trakai.</p>
+        <ul>
+          <li>Day 1 — Vilnius: MO Museum &amp; Užupis street art walk</li>
+          <li>Day 2 morning — Trakai: coffee &amp; pastry at Snapas café</li>
+          <li>Day 2 afternoon — Trakai Castle + lunch at Kiubėtė on the lake</li>
+          <li>Day 2 late — Hot air balloon over the castle &amp; lakes</li>
+        </ul>
+        <p><a href="https://lithuaniadiscovery.com/routes/baltic-week">View full itinerary →</a></p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>A Weekend in the Forests</title>
+      <link>https://lithuaniadiscovery.com/routes/forest-weekend</link>
+      <guid isPermaLink="true">https://lithuaniadiscovery.com/routes/forest-weekend</guid>
+      <pubDate>Fri, 04 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Niv Shimoni</dc:creator>
+      <description>Lakes, forest cabins, and a traditional Lithuanian sauna (pirtis). A digital detox weekend in the Lithuanian countryside — Varėna treehouse and a villa on the lake.</description>
+    </item>
+
+    <item>
+      <title>Three Days on the Coast — Klaipėda, Nida &amp; the Curonian Spit</title>
+      <link>https://lithuaniadiscovery.com/routes/coast-3day</link>
+      <guid isPermaLink="true">https://lithuaniadiscovery.com/routes/coast-3day</guid>
+      <pubDate>Fri, 04 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Niv Shimoni</dc:creator>
+      <description>Port city, UNESCO dunes, and a luxury spa. Three days along the Lithuanian coast — Klaipėda old town, the Great Dune at Nida, and Stebuklai SPA in the pine forest.</description>
+    </item>
+
+    <item>
+      <title>Druskininkai Spa Weekend</title>
+      <link>https://lithuaniadiscovery.com/routes/spa-weekend</link>
+      <guid isPermaLink="true">https://lithuaniadiscovery.com/routes/spa-weekend</guid>
+      <pubDate>Fri, 04 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Niv Shimoni</dc:creator>
+      <description>Mineral springs, float therapy, Dead Sea salt rooms, and pine forests. A full spa weekend in Druskininkai — Lithuania's premier wellness destination.</description>
+    </item>
+
+    <item>
+      <title>Explore Vilnius — Baroque Capital of the Baltics</title>
+      <link>https://lithuaniadiscovery.com/explore/vilnius</link>
+      <guid isPermaLink="true">https://lithuaniadiscovery.com/explore/vilnius</guid>
+      <pubDate>Fri, 04 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Niv Shimoni</dc:creator>
+      <description>Cobbled lanes, terracotta roofs, and a café on every corner. The Užupis art republic just across the river. 40+ handpicked places in Vilnius — from the best espresso bars to hidden courtyards.</description>
+    </item>
+
+    <item>
+      <title>Explore Trakai — Castle on the Lake</title>
+      <link>https://lithuaniadiscovery.com/explore/trakai</link>
+      <guid isPermaLink="true">https://lithuaniadiscovery.com/explore/trakai</guid>
+      <pubDate>Fri, 04 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Niv Shimoni</dc:creator>
+      <description>Lithuania's only island castle, rising from Lake Galvė. Karaim heritage, colorful boats, fresh kibinai straight from the oven, and a hot air balloon ride over the lakes.</description>
+    </item>
+
+    <item>
+      <title>Explore the Curonian Spit (Nida) — UNESCO Dunes &amp; Pine Forests</title>
+      <link>https://lithuaniadiscovery.com/explore/curonian</link>
+      <guid isPermaLink="true">https://lithuaniadiscovery.com/explore/curonian</guid>
+      <pubDate>Fri, 04 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Niv Shimoni</dc:creator>
+      <description>Giant dunes down a narrow peninsula, pine forests, and pastel fishing villages. The Curonian Spit is a UNESCO World Heritage Site shared between Lithuania and Russia's Kaliningrad.</description>
+    </item>
+
+  </channel>
+</rss>
