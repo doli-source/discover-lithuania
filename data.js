@@ -2498,6 +2498,23 @@ const PLACES = [
     "source": "niv"
   },
   {
+    "id": "seduva-jewish-museum",
+    "region": "countryside",
+    "kind": "culture",
+    "name": "Šeduva Jewish Museum",
+    "type": "Jewish heritage museum",
+    "typeHe": "מוזיאון מורשת יהודית",
+    "rating": null,
+    "reviews": null,
+    "price": null,
+    "emoji": "🕍",
+    "niv": "A remarkable and moving museum in the small town of Šeduva, dedicated to the Jewish community that once thrived here. One of the most important Jewish heritage sites in Lithuania.",
+    "nivHe": "מוזיאון מרגש ויוצא דופן בעיירה הקטנה שדובה, המוקדש לקהילה היהודית שפרחה כאן. אחד מאתרי המורשת היהודית החשובים ביותר בליטא.",
+    "mapUrl": "https://maps.app.goo.gl/rN7HZpHX5YZ3bPWC6",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
     "id": "uoksas-kaunas",
     "region": "kaunas",
     "kind": "restaurant",
