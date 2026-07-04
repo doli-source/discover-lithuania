@@ -1,33 +1,54 @@
 # Discover Lithuania
 
-> A curated travel guide to Lithuania — handpicked cafés, restaurants, stays, nature and ready-made routes across 10 regions. Available in English and Hebrew.
+> A curated travel guide to Lithuania — 152+ handpicked cafés, restaurants, stays, nature spots and ready-made routes across 12 regions. Available in English and Hebrew.
 
 ## About the site
 
-Discover Lithuania is an independent travel guide built by Niv Shimoni — entrepreneur, AI builder, and someone who keeps ending up in Lithuania. Every place on the site has been personally reviewed or vetted.
+Discover Lithuania is an independent travel guide built by Niv Shimoni — entrepreneur, AI builder, and someone who keeps ending up in Lithuania. Every place on the site has been personally reviewed or vetted. Not sponsored. Not algorithmic. Just what's actually worth visiting.
 
-The site covers 136+ places across 10 regions: Vilnius, Trakai, Kaunas, Klaipėda, the Curonian Spit (Nida), Druskininkai, Palanga, Molėtai, Zarasai, and the Lithuanian countryside.
+The site covers 152+ places across 12 regions: Vilnius, Trakai, Kaunas, Klaipėda, the Curonian Spit (Nida), Druskininkai, Palanga, Kretinga, Molėtai, Utena, Zarasai, and the Lithuanian countryside.
 
 ## What you'll find
 
-- **Places**: cafés, restaurants, nature spots, stays, cultural sites — each with a personal note on why it's worth visiting
-- **Routes**: ready-made itineraries from a single day (A Perfect Day in Vilnius) to a full week (The Classic Baltic Week)
-- **Food guide**: traditional Lithuanian dishes explained
-- **Stays**: handpicked accommodation from boutique spas to forest cabins
+- **Places**: cafés, restaurants, nature spots, stays, cultural sites — each with a personal note from Niv on why it's worth visiting
+- **Routes**: ready-made itineraries for every trip length — from a single day to a full weekend
+- **Food guide**: traditional Lithuanian dishes explained (cepelinai, šaltibarščiai, kibinai, and more)
+- **Stays**: handpicked accommodation from boutique spas to forest cabins and lake villas
+
+## Ready-made itineraries
+
+- **A Perfect Day in Vilnius** — Baroque alleys, Užupis art republic, MO Museum, rooftop drinks
+- **Vilnius & The Region** (weekend) — Vilnius day + Trakai castle, Snapas café, hot air balloon over the lakes
+- **A Weekend in the Forests** — forest cabins, lakes, traditional sauna (pirtis)
+- **Three Days on the Coast** — Klaipėda old town, Curonian Spit dunes, Nida lagoon, Stebuklai SPA
+- **Druskininkai Spa Weekend** — mineral springs, float therapy, pine forest walks
 
 ## Highlights
 
-- Vilnius old town, Užupis, and the best coffee scene in the Baltics
-- Curonian Spit — UNESCO dunes, pine forests, and the village of Nida
-- Druskininkai — mineral springs and spa retreats
-- Trakai Castle — a 14th-century island fortress
-- Aukštaitija National Park — lakes, forests, and canoe routes
-- Klaipėda — German-Prussian old town and Baltic port
+- Vilnius Old Town (UNESCO) — cobblestones, Baroque churches, best coffee scene in the Baltics
+- Curonian Spit — UNESCO dunes, pine forests, and the idyllic village of Nida
+- Trakai Castle — 14th-century island fortress on Lake Galvė, Karaim culture, kibinai pastries
+- Druskininkai — mineral springs, spa retreats, Grūtas Soviet sculpture park
+- Klaipėda — German-Prussian old town and Baltic port city
+- Aukštaitija National Park — 3,000+ lakes, forest trails, canoe routes
+- Snapas café, Trakai — cozy lakeside spot for coffee and pastry before the castle
+
+## Practical info
+
+- **Currency**: Euro (€) — Lithuania is affordable. Coffee ~€3, full meal €8–15.
+- **Language**: Lithuanian. English widely spoken in cities.
+- **Best time to visit**: May–September. June–August is peak season with festivals and long days.
+- **Getting there**: Vilnius Airport (VNO) has direct flights from Tel Aviv, London, Berlin, Warsaw, Riga.
+- **Safety**: One of the safest countries in Europe. Low crime, especially in tourist areas.
+
+## Who this is for
+
+Travelers who want real recommendations — not TripAdvisor averages or Wikipedia entries. Particularly useful for Israeli travelers (site is bilingual Hebrew/English), first-time Lithuania visitors, and anyone planning a 3–7 day trip.
 
 ## Author
 
 **Niv Shimoni**
-Entrepreneur and AI builder based between Israel and Lithuania.
+Entrepreneur and AI builder, based between Israel and Lithuania.
 Contact: Niv.shimoni@gmail.com
 WhatsApp: +972534228282
 
