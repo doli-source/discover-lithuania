@@ -2597,8 +2597,10 @@ const ITINERARIES = [
     he: { title: 'שבוע בלטי קלאסי', tagline: 'מהבירה לים, דרך טירות ודיונות' },
     en: { title: 'The Classic Baltic Week', tagline: 'Capital to coast via castles and dunes' },
     stops: [
-      { time: 'יום 1-2', timeEn: 'Day 1–2', placeId: null, landmarkId: 'old-town', he: 'וילנה: עיר עתיקה ואוז\'ופיס', en: 'Vilnius: Old Town & Užupis' },
-      { time: 'יום 3', timeEn: 'Day 3', placeId: null, landmarkId: 'trakai-castle', he: 'טראקאי וסירה על האגם', en: 'Trakai & a boat on the lake' },
+      { time: 'יום 1', timeEn: 'Day 1', placeId: 'mo-museum', landmarkId: null, he: 'וילנה: מוזיאון MO ואומנות רחוב באוז\'ופיס', en: 'Vilnius: MO Museum & Užupis street art walk' },
+      { time: 'יום 2 בוקר', timeEn: 'Day 2 morning', placeId: 'snapas-kava-ir-desertai', landmarkId: null, he: 'טראקאי — קפה ומאפה ב-Snapas', en: 'Trakai — coffee & pastry at Snapas' },
+      { time: 'יום 2 צהריים', timeEn: 'Day 2', placeId: null, landmarkId: 'trakai-castle', he: 'טירת טראקאי + צהריים ב-Kiubėtė על האגם', en: 'Trakai Castle + lunch at Kiubėtė on the lake' },
+      { time: 'יום 2 אחה"צ', timeEn: 'Day 2 afternoon', placeId: 'trakai-balloon-ride', landmarkId: null, he: 'כדור פורח מעל הטירה והאגמים', en: 'Hot air balloon over the castle & lakes' },
       { time: 'יום 4', timeEn: 'Day 4', placeId: null, landmarkId: 'laisves', he: 'קובנה וסצנת הקפה', en: 'Kaunas & its café scene' },
       { time: 'יום 5', timeEn: 'Day 5', placeId: null, landmarkId: 'theatre-square', he: 'קלייפדה ויציאה לים', en: 'Klaipėda meets the sea' },
       { time: 'יום 6', timeEn: 'Day 6', placeId: 'the-dead-dunes', landmarkId: null, he: 'נידה ודיונות חול', en: 'Nida & the sand dunes' },
