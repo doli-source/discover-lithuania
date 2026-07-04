@@ -1571,7 +1571,7 @@ a.btn { text-decoration: none; }
   font-size: 4.5rem;
   position: relative;
   z-index: 1;
-  filter: drop-shadow(0 0 14px var(--dish-color)) drop-shadow(0 0 28px var(--dish-color)) drop-shadow(0 3px 6px rgba(40,30,20,0.12));
+  filter: drop-shadow(0 3px 6px rgba(40,30,20,0.12));
 }
 .dish-emoji { font-size: 5.5rem; } @media (max-width: 600px) { .taste-grid, .dish-strip { grid-template-columns: repeat(2, 1fr); gap: 12px; } .taste-emoji, .dish-emoji { font-size: 4.5rem; } .taste-name, .dish-name { font-size: 1.05rem; } .taste-desc, .dish-desc { font-size: 0.82rem; } }
 
