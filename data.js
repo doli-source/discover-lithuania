@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260707a';
+window._DL_DATA_VERSION = '20260707b';
 
 (function() {
 
@@ -1961,22 +1961,6 @@ const PLACES = [
     "source": "niv"
   },
   {
-    "id": "vanilinis-dangus",
-    "region": "countryside",
-    "kind": "cafe",
-    "name": "Vanilinis Dangus",
-    "type": "Patisserie & café",
-    "typeHe": "פטיסרי",
-    "rating": 4.6,
-    "reviews": 380,
-    "price": "€5–10",
-    "emoji": "🧁",
-    "niv": "Utena's sweetest spot — pastries and cakes made with real craft.",
-    "nivHe": "הנקודה המתוקה ביותר באוטנה — מאפים ועוגות עם אמנות אמיתית.",
-    "status": "approved",
-    "source": "niv"
-  },
-  {
     "id": "beekeeping-museum-stripeikiai",
     "region": "countryside",
     "kind": "culture",
@@ -2009,22 +1993,6 @@ const PLACES = [
     "source": "niv"
   },
   {
-    "id": "food-lab-utena",
-    "region": "countryside",
-    "kind": "restaurant",
-    "name": "Food Lab",
-    "type": "Restaurant",
-    "typeHe": "מסעדה",
-    "rating": 4.5,
-    "reviews": 210,
-    "price": "€15–25",
-    "emoji": "🧪",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
-  },
-  {
     "id": "vila-gervalis",
     "region": "countryside",
     "kind": "stay",
@@ -2037,22 +2005,6 @@ const PLACES = [
     "emoji": "🌅",
     "niv": "Lakeside spa retreat — the most comfortable base for exploring the Aukštaitija lakes.",
     "nivHe": "נסיגה לאגם עם ספא — הבסיס הנוח ביותר לגילוי אגמי אוקשטאיטיה.",
-    "status": "approved",
-    "source": "niv"
-  },
-  {
-    "id": "utenos-alus-brewery",
-    "region": "countryside",
-    "kind": "culture",
-    "name": "Utenos Alus Brewery",
-    "type": "Brewery",
-    "typeHe": "מבשלת בירה",
-    "rating": 4.4,
-    "reviews": 580,
-    "price": "€5–15",
-    "emoji": "🍺",
-    "niv": "Lithuania's most beloved beer brand, brewed here since 1745. Tours and tastings available.",
-    "nivHe": "מותג הבירה האהוב ביותר בליטא, מבושל כאן מ-1745. סיורים וטעימות זמינים.",
     "status": "approved",
     "source": "niv"
   },
