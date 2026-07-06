@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260704h';
+window._DL_DATA_VERSION = '20260707a';
 
 (function() {
 
@@ -2498,6 +2498,57 @@ const PLACES = [
     "niv": "One of the most profound and moving experiences in all of Lithuania. Hidden in the tiny town of Šeduva, this museum tells the story of a Jewish community that was almost entirely wiped out. Walking through it is deeply emotional — a reminder of what was, and what was lost. Do not skip this.",
     "nivHe": "אחת מהחוויות העמוקות והמרגשות ביותר בכל ליטא. חבוי בעיירה הקטנטנה שדובה, המוזיאון מספר את סיפורה של קהילה יהודית שנמחקה כמעט לחלוטין. לעבור דרכו זה מחריד ומרגש עד דמעות — תזכורת למה שהיה ולמה שאבד. אל תפספסו את זה.",
     "mapUrl": "https://maps.app.goo.gl/fDZaRGMxjNNMocgC9",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
+    "id": "alantos-zirgai",
+    "region": "countryside",
+    "kind": "stay",
+    "name": "Alantos Žirgai",
+    "type": "Lakeside horse farm & holiday homes",
+    "typeHe": "חווה עם סוסים ובתי נופש ליד האגם",
+    "rating": 4.9,
+    "reviews": 145,
+    "price": null,
+    "emoji": "🐎",
+    "niv": "An incredible countryside escape near Alanta — two beautiful lakeside houses for rent on a working horse farm. The owners are some of the warmest hosts I've met in Lithuania: they invited me in for coffee, cooked a meal, and showed me the whole area. Pure Lithuanian countryside magic.",
+    "nivHe": "בריחה כפרית מדהימה ליד אלנטה — שני בתי נופש ליד האגם על חווה עם סוסים. הבעלים הם מהמארחים החמים ביותר שפגשתי בליטא: הם הזמינו אותי לקפה, בישלו ארוחה ועשו לי סיור באזור. קסם כפרי ליטאי אמיתי.",
+    "mapUrl": "https://maps.app.goo.gl/HqSeQMyKHdLB715D7",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
+    "id": "astriosios-kirsnos-dvaras",
+    "region": "countryside",
+    "kind": "stay",
+    "name": "Aštriosios Kirsnos dvaras",
+    "type": "Historic manor & estate stay",
+    "typeHe": "אחוזה היסטורית ולינה",
+    "rating": 4.6,
+    "reviews": 265,
+    "price": null,
+    "emoji": "🏰",
+    "niv": "A stunning historic manor estate in the quiet Suvalkija countryside, near the Lithuanian-Polish border. Beautiful old architecture, peaceful surroundings — the kind of place that feels frozen in time.",
+    "nivHe": "אחוזה היסטורית מרהיבה באזור הכפרי השקט של סובלקיה, ליד הגבול הליטאי-פולני. ארכיטקטורה עתיקה יפיפייה וסביבה שלווה — מקום שמרגיש כאילו הזמן עמד בו מלכת.",
+    "mapUrl": "https://maps.app.goo.gl/Qw6T6vro7RgFHTCV9",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
+    "id": "genio-kampas-treehouse",
+    "region": "countryside",
+    "kind": "stay",
+    "name": "Genio kampas Treehouse",
+    "type": "Treehouse lodge with lake view",
+    "typeHe": "בית עץ עם נוף לאגם",
+    "rating": 4.9,
+    "reviews": 24,
+    "price": null,
+    "emoji": "🌲",
+    "niv": "One of Lithuania's most unique stays — a treehouse lodge deep in the forest with a spectacular lake view. Completely off-grid feeling, surrounded by nature. Perfect for a true digital detox.",
+    "nivHe": "אחד מהמקומות הייחודיים ביותר לשהייה בליטא — בית עץ ביער עמוק עם נוף מרהיב לאגם. תחושה של ניתוק מוחלט מהעולם, מוקף בטבע. מושלם לדטוקס דיגיטלי אמיתי.",
+    "mapUrl": "https://maps.app.goo.gl/5o6WXyaa4GJuanPZ9",
     "status": "approved",
     "source": "niv"
   },
