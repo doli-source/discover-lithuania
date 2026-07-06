@@ -6,7 +6,7 @@
 
 Discover Lithuania is an independent travel guide built by Niv Shimoni — entrepreneur, AI builder, and someone who keeps ending up in Lithuania. Every place on the site has been personally reviewed or vetted. Not sponsored. Not algorithmic. Just what's actually worth visiting.
 
-The site covers 152+ places across 12 regions: Vilnius, Trakai, Kaunas, Klaipėda, the Curonian Spit (Nida), Druskininkai, Palanga, Kretinga, Molėtai, Utena, Zarasai, and the Lithuanian countryside.
+The site covers 152+ places across 10 regions: Vilnius, Trakai, Kaunas, Klaipėda, the Curonian Spit (Nida), Druskininkai, Palanga, Molėtai, Zarasai, and the Lithuanian countryside.
 
 ## What you'll find
 

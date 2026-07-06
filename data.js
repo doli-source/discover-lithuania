@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260704g';
+window._DL_DATA_VERSION = '20260704h';
 
 (function() {
 
@@ -56,13 +56,6 @@ const REGIONS = [
     placeholder: 'Spa resort by the lake'
   },
   {
-    id: 'kretinga',
-    he: { name: 'קרטינגה', tag: 'גנים ומנזרים', blurb: 'עיר קטנה ליד פלאנגה עם גני הארמון של טישקביצ\'יוס וכנסיית פרנציסקנים מהמאה ה-17.' },
-    en: { name: 'Kretinga', tag: 'Manor Gardens', blurb: 'A small coastal town near Palanga with the Tiškevičius manor gardens and a 17th-century Franciscan church.' },
-    accent: '#8A6B4A',
-    placeholder: 'Winter garden inside the manor'
-  },
-  {
     id: 'palanga',
     he: { name: 'פלאנגה', tag: 'עיירת חוף וענבר', blurb: 'עיירת נופש קלאסית על הים הבלטי, עם טיילת ארוכה, מוזיאון הענבר, וגן בוטני מרהיב.' },
     en: { name: 'Palanga', tag: 'Beach Town & Amber', blurb: 'A classic Baltic seaside resort with a long pier, the Amber Museum, and a stunning botanical garden.' },
@@ -75,13 +68,6 @@ const REGIONS = [
     en: { name: 'Molėtai', tag: 'Astronomy Capital', blurb: 'A quiet town in the heart of lake country — home to the national observatory and dark skies.' },
     accent: '#4A6B7E',
     placeholder: 'Lake and pine forest'
-  },
-  {
-    id: 'utena',
-    he: { name: 'אוטנה', tag: 'שער למחוז האגמים', blurb: 'נקודת מוצא למסעות בפארק הלאומי אוקשטאיטיה — אגמים, יערות בתולה, וסירות עץ.' },
-    en: { name: 'Utena', tag: 'Gateway to the Lakes', blurb: 'A launchpad for Aukštaitija National Park — lakes, virgin forest, and wooden rowboats.' },
-    accent: '#6B8A5A',
-    placeholder: 'Aukštaitija lakes from above'
   },
   {
     id: 'zarasai',
@@ -1077,7 +1063,7 @@ const PLACES = [
   },
   {
     "id": "pami-k-boutique-spa",
-    "region": "kretinga",
+    "region": "palanga",
     "kind": "stay",
     "name": "PAMIŠKĖ BOUTIQUE SPA",
     "type": "Forest Cabin & Sauna",
@@ -1190,7 +1176,7 @@ const PLACES = [
   },
   {
     "id": "getaway-to-forest-cab",
-    "region": "utena",
+    "region": "countryside",
     "kind": "stay",
     "name": "Getaway to forest cab",
     "type": "Lodging",
@@ -1960,7 +1946,7 @@ const PLACES = [
   },
   {
     "id": "aukstaitija-national-park",
-    "region": "utena",
+    "region": "countryside",
     "kind": "nature",
     "name": "Aukštaitija National Park",
     "type": "National park",
@@ -1976,7 +1962,7 @@ const PLACES = [
   },
   {
     "id": "vanilinis-dangus",
-    "region": "utena",
+    "region": "countryside",
     "kind": "cafe",
     "name": "Vanilinis Dangus",
     "type": "Patisserie & café",
@@ -1992,7 +1978,7 @@ const PLACES = [
   },
   {
     "id": "beekeeping-museum-stripeikiai",
-    "region": "utena",
+    "region": "countryside",
     "kind": "culture",
     "name": "Ancient Beekeeping Museum",
     "type": "Open-air museum",
@@ -2008,7 +1994,7 @@ const PLACES = [
   },
   {
     "id": "paluse-wooden-church",
-    "region": "utena",
+    "region": "countryside",
     "kind": "culture",
     "name": "Palūšė Wooden Church",
     "type": "Historic church",
@@ -2024,7 +2010,7 @@ const PLACES = [
   },
   {
     "id": "food-lab-utena",
-    "region": "utena",
+    "region": "countryside",
     "kind": "restaurant",
     "name": "Food Lab",
     "type": "Restaurant",
@@ -2040,7 +2026,7 @@ const PLACES = [
   },
   {
     "id": "vila-gervalis",
-    "region": "utena",
+    "region": "countryside",
     "kind": "stay",
     "name": "Vila Gervalis",
     "type": "Lakeside hotel & spa",
@@ -2056,7 +2042,7 @@ const PLACES = [
   },
   {
     "id": "utenos-alus-brewery",
-    "region": "utena",
+    "region": "countryside",
     "kind": "culture",
     "name": "Utenos Alus Brewery",
     "type": "Brewery",
@@ -2072,7 +2058,7 @@ const PLACES = [
   },
   {
     "id": "ginuciai-hill-fort",
-    "region": "utena",
+    "region": "countryside",
     "kind": "nature",
     "name": "Ginučiai Hill Fort",
     "type": "Archaeological viewpoint",
@@ -2088,7 +2074,7 @@ const PLACES = [
   },
   {
     "id": "kretinga-manor-winter-garden",
-    "region": "kretinga",
+    "region": "palanga",
     "kind": "culture",
     "name": "Kretinga Manor & Winter Garden",
     "type": "Museum & conservatory",
@@ -2104,7 +2090,7 @@ const PLACES = [
   },
   {
     "id": "franciscan-monastery-kretinga",
-    "region": "kretinga",
+    "region": "palanga",
     "kind": "culture",
     "name": "Franciscan Monastery & Church",
     "type": "Historic monastery",
@@ -2120,7 +2106,7 @@ const PLACES = [
   },
   {
     "id": "cafe-old-palace-kretinga",
-    "region": "kretinga",
+    "region": "palanga",
     "kind": "cafe",
     "name": "Café Inside Old Palace",
     "type": "Café in manor",
@@ -2136,7 +2122,7 @@ const PLACES = [
   },
   {
     "id": "cable-park-313",
-    "region": "kretinga",
+    "region": "palanga",
     "kind": "nature",
     "name": "313 Cable Park",
     "type": "Wakeboard park",
@@ -2152,7 +2138,7 @@ const PLACES = [
   },
   {
     "id": "lourdes-grotto-kretinga",
-    "region": "kretinga",
+    "region": "palanga",
     "kind": "culture",
     "name": "Lourdes Grotto",
     "type": "Religious landmark",
@@ -2168,7 +2154,7 @@ const PLACES = [
   },
   {
     "id": "kretinga-park",
-    "region": "kretinga",
+    "region": "palanga",
     "kind": "nature",
     "name": "Kretinga Manor Park",
     "type": "Manor park",
@@ -2184,7 +2170,7 @@ const PLACES = [
   },
   {
     "id": "kretinga-museum",
-    "region": "kretinga",
+    "region": "palanga",
     "kind": "culture",
     "name": "Kretinga Museum",
     "type": "Regional museum",
@@ -2200,7 +2186,7 @@ const PLACES = [
   },
   {
     "id": "pajurio-parkas",
-    "region": "kretinga",
+    "region": "palanga",
     "kind": "nature",
     "name": "Pajūrio Regional Park",
     "type": "Coastal nature park",
