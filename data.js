@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260707c';
+window._DL_DATA_VERSION = '20260707d';
 
 (function() {
 
@@ -1368,6 +1368,23 @@ const PLACES = [
     "niv": "A large, polished 4-star hotel with one of the best spas in the city and the legendary Skybar on the top floor — incredible views over the river and city skyline. Great for business travelers or anyone who wants a full-service hotel experience.",
     "nivHe": "מלון 4 כוכבים גדול ומשופשף עם אחד הספאים הטובים בעיר וה-Skybar האגדי בקומה העליונה — נוף עוצר נשימה על הנהר והאופק העירוני. מצוין לנוסעי עסקים או למי שרוצה חוויית מלון מלאה.",
     "mapUrl": "https://maps.app.goo.gl/d9ozfT6WhHyoJJCr9",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
+    "id": "ac-hotel-vilnius",
+    "region": "vilnius",
+    "kind": "stay",
+    "name": "AC Hotel Vilnius",
+    "type": "4-star Marriott hotel in the city centre",
+    "typeHe": "מלון מריוט 4 כוכבים במרכז העיר",
+    "rating": 4.6,
+    "reviews": 188,
+    "price": null,
+    "emoji": "🏨",
+    "niv": "A beautiful, modern hotel in the heart of Vilnius — spacious, with an impressive elegant lobby that makes a great first impression. Comfortable well-designed rooms, and an excellent varied breakfast. Perfect for a business trip or a polished city stay.",
+    "nivHe": "מלון יפה ומודרני בלב וילנה — מרווח, עם לובי אלגנטי ומרשים שיוצר רושם ראשוני נהדר. חדרים נוחים ומעוצבים, וארוחת בוקר מצוינת ומגוונת. מושלם לנסיעת עסקים או לשהייה עירונית מסוגננת.",
+    "mapUrl": "https://maps.app.goo.gl/9FFAt2SRnEnZJUuF9",
     "status": "approved",
     "source": "niv"
   },
