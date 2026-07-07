@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260707b';
+window._DL_DATA_VERSION = '20260707c';
 
 (function() {
 
@@ -1302,6 +1302,74 @@ const PLACES = [
     "nivHe": null,
     "status": "pending",
     "source": "ai"
+  },
+  {
+    "id": "hotel-pacai",
+    "region": "vilnius",
+    "kind": "stay",
+    "name": "Hotel PACAI",
+    "type": "5-star boutique hotel in a baroque palace",
+    "typeHe": "מלון בוטיק 5 כוכבים בארמון בארוקי",
+    "rating": 4.8,
+    "reviews": 1308,
+    "price": null,
+    "emoji": "🏛️",
+    "niv": "The most stunning hotel in Vilnius — a 17th-century baroque palace turned into a world-class boutique hotel, right in the Old Town. Every corner is a work of art. If you're going to splurge once in Lithuania, this is it.",
+    "nivHe": "המלון המרהיב ביותר בווילנה — ארמון בארוקי מהמאה ה-17 שהפך למלון בוטיק ברמה עולמית, ממש בלב העיר העתיקה. כל פינה היא יצירת אמנות. אם פעם אחת מותר לבזבז בליטא — זה המקום.",
+    "mapUrl": "https://maps.app.goo.gl/1W6EqKYWEzCzoqu86",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
+    "id": "neringa-hotel",
+    "region": "vilnius",
+    "kind": "stay",
+    "name": "Neringa Hotel",
+    "type": "4-star hotel on Gediminas Avenue",
+    "typeHe": "מלון 4 כוכבים על שדרת גדימינס",
+    "rating": 4.5,
+    "reviews": 1696,
+    "price": null,
+    "emoji": "🌆",
+    "niv": "My go-to hotel in Vilnius — perfectly located on Gediminas Avenue, the main boulevard of the city. Beautiful rooms, great breakfast, fantastic rooftop bar with panoramic city views. The staff goes above and beyond. If you want to be close to everything, this is the place.",
+    "nivHe": "המלון שאני חוזר אליו בווילנה — מיקום מושלם על שדרת גדימינס, הבולוואר הראשי של העיר. חדרים יפים, ארוחת בוקר מצוינת, בר גג פנטסטי עם נוף פנורמי. הצוות יוצא מגדרו. אם אתם רוצים להיות קרוב לכל דבר — זה המקום.",
+    "mapUrl": "https://maps.app.goo.gl/7XUbSgV2z6EH5NZC8",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
+    "id": "comfort-hotel-vilnius",
+    "region": "vilnius",
+    "kind": "stay",
+    "name": "Comfort Hotel LT – Rock 'n' Roll Vilnius",
+    "type": "3-star music-themed hotel",
+    "typeHe": "מלון 3 כוכבים בסגנון רוק אנד רול",
+    "rating": 4.6,
+    "reviews": 3428,
+    "price": null,
+    "emoji": "🎸",
+    "niv": "A fun, music-themed 3-star hotel with great value and an excellent location. One of the highest-rated budget hotels in Vilnius — clean, comfortable, and full of personality.",
+    "nivHe": "מלון 3 כוכבים מבדר בסגנון מוזיקלי עם ערך מצוין ומיקום טוב. אחד ממלוני הבאדג'ט המדורגים הכי גבוה בווילנה — נקי, נוח ועם אופי.",
+    "mapUrl": "https://maps.app.goo.gl/SqkDDRjFc8EueN3u7",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
+    "id": "radisson-blu-lietuva",
+    "region": "vilnius",
+    "kind": "stay",
+    "name": "Radisson Blu Hotel Lietuva",
+    "type": "4-star high-rise with spa & skybar",
+    "typeHe": "מלון 4 כוכבים עם ספא ובר גג",
+    "rating": 4.6,
+    "reviews": 5185,
+    "price": null,
+    "emoji": "🏙️",
+    "niv": "A large, polished 4-star hotel with one of the best spas in the city and the legendary Skybar on the top floor — incredible views over the river and city skyline. Great for business travelers or anyone who wants a full-service hotel experience.",
+    "nivHe": "מלון 4 כוכבים גדול ומשופשף עם אחד הספאים הטובים בעיר וה-Skybar האגדי בקומה העליונה — נוף עוצר נשימה על הנהר והאופק העירוני. מצוין לנוסעי עסקים או למי שרוצה חוויית מלון מלאה.",
+    "mapUrl": "https://maps.app.goo.gl/d9ozfT6WhHyoJJCr9",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "brut-wine-restaurant-zarasai",
