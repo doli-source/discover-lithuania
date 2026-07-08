@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260707h';
+window._DL_DATA_VERSION = '20260707i';
 
 (function() {
 
@@ -1935,6 +1935,23 @@ const PLACES = [
     "niv": "The best spa hotel in Druskininkai — top-quality treatments, super professional staff, and an extraordinary relaxation experience. I've been coming back here for years. Highest recommendation.",
     "nivHe": "מלון הספא הכי טוב בדרוסקינינקאי — טיפולים ברמה הגבוהה ביותר, צוות מקצועי מאוד וחוויית רגיעה יוצאת דופן. אני חוזר לכאן כבר שנים. המלצה הכי גבוהה שיש.",
     "mapUrl": "https://maps.app.goo.gl/7cU9qgF2ncs7Z6WH6",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
+    "id": "druskininkai-tourism-center",
+    "region": "druskininkai",
+    "kind": "culture",
+    "name": "Druskininkai Tourism & Business Info Center",
+    "type": "Tourist information center",
+    "typeHe": "מרכז מידע תיירותי",
+    "rating": 4.5,
+    "reviews": 107,
+    "price": null,
+    "emoji": "ℹ️",
+    "niv": "The best first stop in Druskininkai — the staff will help you plan your day, recommend the best spots, and answer any question about the city. Friendly, helpful, and speak great English.",
+    "nivHe": "העצירה הראשונה הכי טובה בדרוסקינינקאי — הצוות יעזור לכם לתכנן את היום, ימליץ על המקומות הכי שווים ויענה על כל שאלה על העיר. ידידותיים, מועילים ומדברים אנגלית מצוינת.",
+    "mapUrl": "https://maps.app.goo.gl/69Q1uGcNPYEMFhYp6",
     "status": "approved",
     "source": "niv"
   },
