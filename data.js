@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260707i';
+window._DL_DATA_VERSION = '20260707j';
 
 (function() {
 
@@ -774,22 +774,6 @@ const PLACES = [
     "source": "ai"
   },
   {
-    "id": "kur-is-kavin-baras-gra-inos-st",
-    "region": "kaunas",
-    "kind": "cafe",
-    "name": "KURŠIS, kavinė-baras, Gražinos St.",
-    "type": "Cafe",
-    "typeHe": "בית קפה",
-    "rating": 4.4,
-    "reviews": 3257,
-    "price": "€15–20",
-    "emoji": "☕",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
-  },
-  {
     "id": "snapas-kava-ir-desertai",
     "region": "trakai",
     "kind": "cafe",
@@ -822,22 +806,6 @@ const PLACES = [
     "source": "ai"
   },
   {
-    "id": "velvetti",
-    "region": "kaunas",
-    "kind": "restaurant",
-    "name": "Velvetti",
-    "type": "Restaurant",
-    "typeHe": "מסעדה",
-    "rating": 4.3,
-    "reviews": 1530,
-    "price": "€10–30",
-    "emoji": "🍽️",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
-  },
-  {
     "id": "habits-bakery",
     "region": "kaunas",
     "kind": "cafe",
@@ -864,38 +832,6 @@ const PLACES = [
     "reviews": 363,
     "price": "€1–5",
     "emoji": "🗽",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
-  },
-  {
-    "id": "city-coffee",
-    "region": "kaunas",
-    "kind": "cafe",
-    "name": "City Coffee",
-    "type": "Espresso bar",
-    "typeHe": "אספרסו בר",
-    "rating": 4.8,
-    "reviews": 849,
-    "price": "€1–5",
-    "emoji": "☕",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
-  },
-  {
-    "id": "elska-coffee",
-    "region": "kaunas",
-    "kind": "cafe",
-    "name": "Elska coffee",
-    "type": "Coffee shop",
-    "typeHe": "בית קפה",
-    "rating": 4.5,
-    "reviews": 1394,
-    "price": "€5–15",
-    "emoji": "❤️",
     "niv": null,
     "nivHe": null,
     "status": "pending",
