@@ -551,7 +551,30 @@ function Footer({ lang, t, nav }) {
                 ? 'ניב שמעוני. יזם, עובד עם AI, ומבלה בליטא יותר ממה שתכנן. האתר הזה הוא התוצאה.'
                 : 'Niv Shimoni. Entrepreneur, AI builder, and someone who keeps ending up in Lithuania. This site is the result.'}
             </p>
-            <a className="footer-contact" href="mailto:Niv.shimoni@gmail.com">Niv.shimoni@gmail.com</a>
+            <div className="footer-social">
+              <a className="footer-social-icon" href="mailto:Niv.shimoni@gmail.com" title="Gmail" aria-label="Email">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="4" fill="#EA4335"/>
+                  <path d="M4 7.5L12 13L20 7.5" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+                  <rect x="4" y="7" width="16" height="11" rx="1" stroke="white" strokeWidth="1.5" fill="none"/>
+                </svg>
+              </a>
+              <a className="footer-social-icon" href="https://www.instagram.com/nivshimoni/" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#F58529"/>
+                      <stop offset="50%" stopColor="#DD2A7B"/>
+                      <stop offset="100%" stopColor="#8134AF"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="24" height="24" rx="6" fill="url(#ig-grad)"/>
+                  <circle cx="12" cy="12" r="4.5" stroke="white" strokeWidth="1.5" fill="none"/>
+                  <circle cx="17" cy="7" r="1" fill="white"/>
+                  <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" stroke="white" strokeWidth="1.5" fill="none"/>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
         <div className="footer-cols">

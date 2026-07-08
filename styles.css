@@ -1170,6 +1170,9 @@ em { font-style: italic; color: var(--primary); }
   opacity: 0.85;
 }
 .footer-contact:hover { opacity: 1; text-decoration: underline; }
+.footer-social { display: flex; gap: 10px; margin-top: 4px; }
+.footer-social-icon { opacity: 0.85; transition: opacity 0.2s, transform 0.2s; display: inline-flex; }
+.footer-social-icon:hover { opacity: 1; transform: scale(1.12); }
 .footer-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 @media (max-width: 720px) {
   .footer-cols { grid-template-columns: repeat(2, 1fr); }
