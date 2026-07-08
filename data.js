@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260707g';
+window._DL_DATA_VERSION = '20260707h';
 
 (function() {
 
@@ -1850,6 +1850,91 @@ const PLACES = [
     "emoji": "🌲",
     "niv": "Lithuania's largest national park — ancient mushroom-picking forests, sandy rivers, and village beekeepers.",
     "nivHe": "הפארק הלאומי הגדול ביותר בליטא — יערות קטיף פטריות עתיקים, נהרות חוליים ודבוראים כפריים.",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
+    "id": "city-coffee-druskininkai",
+    "region": "druskininkai",
+    "kind": "cafe",
+    "name": "City Coffee",
+    "type": "Espresso bar",
+    "typeHe": "בר אספרסו",
+    "rating": 4.8,
+    "reviews": 853,
+    "price": "€1–5",
+    "emoji": "☕",
+    "niv": "The best coffee in Druskininkai — a tiny, cozy espresso bar with outstanding flat whites. I really enjoyed the coffee and the service. Highly recommend.",
+    "nivHe": "הקפה הכי טוב בדרוסקינינקאי — בר אספרסו קטן ונעים עם פלאט-וויט מעולה. נהניתי מהקפה ומהשירות. ממליץ בחום.",
+    "mapUrl": "https://maps.app.goo.gl/79Hm8ACTXc4Mauyb8",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
+    "id": "snow-arena-druskininkai",
+    "region": "druskininkai",
+    "kind": "nature",
+    "name": "Snow Arena Druskininkai",
+    "type": "Indoor ski resort",
+    "typeHe": "אתר סקי מקורה",
+    "rating": 4.4,
+    "reviews": 6681,
+    "price": null,
+    "emoji": "⛷️",
+    "niv": "A covered ski complex open all year round — great for beginners and also has a professional section. Excellent service, unique experience especially in summer. One of a kind in the Baltics.",
+    "nivHe": "קומפלקס סקי מקורה הפועל כל השנה — מצוין למתחילים ויש גם חלק מקצועי. שירות מעולה, חוויה ייחודית במיוחד בקיץ. אחד מסוגו בבלטיים.",
+    "mapUrl": "https://maps.app.goo.gl/f1zAosWs9947cp1w9",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
+    "id": "vijunele-park",
+    "region": "druskininkai",
+    "kind": "nature",
+    "name": "Vijūnėlė Park",
+    "type": "Lakeside park",
+    "typeHe": "פארק על האגם",
+    "rating": 4.8,
+    "reviews": 3007,
+    "price": null,
+    "emoji": "🦢",
+    "niv": "A beautiful lakeside park with a beach, electric scooter and boat rentals, outdoor gym, and basketball courts. Perfect for a relaxed afternoon stroll or an active day out in Druskininkai.",
+    "nivHe": "פארק יפהפה על האגם עם חוף, השכרת קורקינטים חשמליים וסירות, חדר כושר פתוח ומגרשי כדורסל. מושלם לטיול אחר הצהריים נינוח או יום פעיל בדרוסקינינקאי.",
+    "mapUrl": "https://maps.app.goo.gl/zBu5eJcbodEyTJBa9",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
+    "id": "uno-park-druskininkai",
+    "region": "druskininkai",
+    "kind": "nature",
+    "name": "UNO Park Druskininkai",
+    "type": "Adventure rope park",
+    "typeHe": "פארק הרפתקאות",
+    "rating": 4.9,
+    "reviews": 884,
+    "price": null,
+    "emoji": "🌲",
+    "niv": "An amazing adventure rope park in the middle of a pine forest — tracks for all ages and skill levels, including a zip line over the Nemunas river. A must for anyone visiting with kids or seeking an adrenaline kick.",
+    "nivHe": "פארק הרפתקאות מדהים בתוך יער אורנים — מסלולים לכל הגילאים ורמות הכישרון, כולל זיפ-ליין מעל נהר נמונס. חובה לכל מי שמגיע עם ילדים או מחפש אדרנלין.",
+    "mapUrl": "https://maps.app.goo.gl/AxUNLqP6g6o6ZQVS9",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
+    "id": "spa-vilnius-druskininkai",
+    "region": "druskininkai",
+    "kind": "stay",
+    "name": "SPA VILNIUS Druskininkai",
+    "type": "4-star spa hotel",
+    "typeHe": "מלון ספא 4 כוכבים",
+    "rating": 4.7,
+    "reviews": 2092,
+    "price": null,
+    "emoji": "💆",
+    "niv": "The best spa hotel in Druskininkai — top-quality treatments, super professional staff, and an extraordinary relaxation experience. I've been coming back here for years. Highest recommendation.",
+    "nivHe": "מלון הספא הכי טוב בדרוסקינינקאי — טיפולים ברמה הגבוהה ביותר, צוות מקצועי מאוד וחוויית רגיעה יוצאת דופן. אני חוזר לכאן כבר שנים. המלצה הכי גבוהה שיש.",
+    "mapUrl": "https://maps.app.goo.gl/7cU9qgF2ncs7Z6WH6",
     "status": "approved",
     "source": "niv"
   },
