@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260707d';
+window._DL_DATA_VERSION = '20260707f';
 
 (function() {
 
@@ -1159,22 +1159,6 @@ const PLACES = [
     "source": "ai"
   },
   {
-    "id": "varena-treehouse",
-    "region": "druskininkai",
-    "kind": "stay",
-    "name": "Varena Treehouse",
-    "type": "Camping cabin",
-    "typeHe": "בקתה",
-    "rating": 4.6,
-    "reviews": 164,
-    "price": null,
-    "emoji": "🌳",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
-  },
-  {
     "id": "getaway-to-forest-cab",
     "region": "countryside",
     "kind": "stay",
@@ -1223,22 +1207,6 @@ const PLACES = [
     "source": "ai"
   },
   {
-    "id": "a-triosios-kirsnos-dvaras",
-    "region": "druskininkai",
-    "kind": "culture",
-    "name": "Aštriosios Kirsnos dvaras",
-    "type": "Historical landmark",
-    "typeHe": "אתר היסטורי",
-    "rating": 4.6,
-    "reviews": 261,
-    "price": null,
-    "emoji": "🏰",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
-  },
-  {
     "id": "atokampis-boutique-spa-resort",
     "region": "druskininkai",
     "kind": "stay",
@@ -1249,22 +1217,6 @@ const PLACES = [
     "reviews": 255,
     "price": null,
     "emoji": "💆",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
-  },
-  {
-    "id": "horizons-lake-resort-spa",
-    "region": "druskininkai",
-    "kind": "stay",
-    "name": "Horizons Lake Resort & Spa",
-    "type": "Hotel",
-    "typeHe": "מלון",
-    "rating": 4.9,
-    "reviews": 129,
-    "price": null,
-    "emoji": "🌅",
     "niv": null,
     "nivHe": null,
     "status": "pending",
@@ -1866,22 +1818,6 @@ const PLACES = [
     "emoji": "🍜",
     "niv": "Lithuanian-Asian fusion done right — nearly 4,000 reviews, creative dishes, and always packed.",
     "nivHe": "פיוז'ן ליטאי-אסיאתי מוצלח — כמעט 4,000 ביקורות, מנות יצירתיות ותמיד מלא.",
-    "status": "approved",
-    "source": "niv"
-  },
-  {
-    "id": "grutas-park",
-    "region": "druskininkai",
-    "kind": "culture",
-    "name": "Grūtas Park",
-    "type": "Soviet sculpture park",
-    "typeHe": "פארק פסלים סובייטים",
-    "rating": 4.5,
-    "reviews": 4200,
-    "price": null,
-    "emoji": "☭",
-    "niv": "An open-air museum of Soviet-era Lenin and Stalin statues — equal parts eerie and fascinating.",
-    "nivHe": "מוזיאון גן פתוח של פסלי לנין וסטאלין מהעידן הסובייטי — מפחיד ומרתק בשווה.",
     "status": "approved",
     "source": "niv"
   },
