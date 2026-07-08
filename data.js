@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260707f';
+window._DL_DATA_VERSION = '20260707g';
 
 (function() {
 
@@ -1201,22 +1201,6 @@ const PLACES = [
     "reviews": 106,
     "price": null,
     "emoji": "🖼️",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
-  },
-  {
-    "id": "atokampis-boutique-spa-resort",
-    "region": "druskininkai",
-    "kind": "stay",
-    "name": "Atokampis Boutique SPA & Resort",
-    "type": "Resort hotel",
-    "typeHe": "ריזורט",
-    "rating": 4.8,
-    "reviews": 255,
-    "price": null,
-    "emoji": "💆",
     "niv": null,
     "nivHe": null,
     "status": "pending",
