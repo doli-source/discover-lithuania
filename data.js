@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260707k';
+window._DL_DATA_VERSION = '20260707l';
 
 (function() {
 
@@ -1258,6 +1258,23 @@ const PLACES = [
     "nivHe": "מלון יפה ומודרני בלב וילנה — מרווח, עם לובי אלגנטי ומרשים שיוצר רושם ראשוני נהדר. חדרים נוחים ומעוצבים, וארוחת בוקר מצוינת ומגוונת. מושלם לנסיעת עסקים או לשהייה עירונית מסוגננת.",
     "mapUrl": "https://maps.app.goo.gl/9FFAt2SRnEnZJUuF9",
     "status": "approved",
+    "source": "niv"
+  },
+  {
+    "id": "rooma-apartments-vilnius",
+    "region": "vilnius",
+    "kind": "stay",
+    "name": "ROOMA Apartments Vilnius",
+    "type": "Boutique apartments",
+    "typeHe": "דירות בוטיק",
+    "rating": 4.9,
+    "reviews": 62,
+    "price": null,
+    "emoji": "🏠",
+    "niv": null,
+    "nivHe": null,
+    "mapUrl": "https://maps.app.goo.gl/qw2psfqTiLykisid9",
+    "status": "pending",
     "source": "niv"
   },
   {
