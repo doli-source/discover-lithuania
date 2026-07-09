@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260707l';
+window._DL_DATA_VERSION = '20260707m';
 
 (function() {
 
@@ -1271,8 +1271,8 @@ const PLACES = [
     "reviews": 62,
     "price": null,
     "emoji": "🏠",
-    "niv": null,
-    "nivHe": null,
+    "niv": "Gorgeous boutique apartments right in the heart of Vilnius Old Town — walking distance from all the main attractions. Stylish, cosy and immaculately clean.",
+    "nivHe": "דירות בוטיק מדהימות ממש במרכז העיר העתיקה של וילנה — רגלית מכל האטרקציות המרכזיות. מעוצבות, חמימות ונקיות ברמה גבוהה.",
     "mapUrl": "https://maps.app.goo.gl/qw2psfqTiLykisid9",
     "status": "pending",
     "source": "niv"
