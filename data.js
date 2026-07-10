@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260707n';
+window._DL_DATA_VERSION = '20260707o';
 
 (function() {
 
@@ -1755,6 +1755,23 @@ const PLACES = [
     "emoji": "🍜",
     "niv": "Lithuanian-Asian fusion done right — nearly 4,000 reviews, creative dishes, and always packed.",
     "nivHe": "פיוז'ן ליטאי-אסיאתי מוצלח — כמעט 4,000 ביקורות, מנות יצירתיות ותמיד מלא.",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
+    "id": "boulangerie-druskininkai",
+    "region": "druskininkai",
+    "kind": "cafe",
+    "name": "Boulangerie Druskininkai",
+    "type": "French bakery & café",
+    "typeHe": "מאפייה צרפתית",
+    "rating": 4.6,
+    "reviews": 1894,
+    "price": "€5–10",
+    "emoji": "🥐",
+    "niv": "A little piece of Paris in the middle of Druskininkai — flaky, buttery croissants, beautiful pastries and smooth coffee. The perfect morning stop before a spa day.",
+    "nivHe": "פינת פריז קטנה בלב דרוסקיניינקאי — קרואסונים חמאתיים ופריכים, מאפים יפהפיים וקפה מצוין. עצירת בוקר מושלמת לפני יום ספא.",
+    "mapUrl": "https://maps.app.goo.gl/rwHinzG78ThpsNME9",
     "status": "approved",
     "source": "niv"
   },
