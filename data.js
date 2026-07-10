@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260707m';
+window._DL_DATA_VERSION = '20260707n';
 
 (function() {
 
@@ -1761,16 +1761,16 @@ const PLACES = [
   {
     "id": "sicilia-druskininkai",
     "region": "druskininkai",
-    "kind": "cafe",
+    "kind": "restaurant",
     "name": "Sicilia",
-    "type": "Italian bakery & café",
-    "typeHe": "מאפייה איטלקית",
+    "type": "Italian restaurant",
+    "typeHe": "מסעדה איטלקית",
     "rating": 4.3,
     "reviews": 1056,
     "price": "€8–18",
     "emoji": "🍕",
-    "niv": null,
-    "nivHe": null,
+    "niv": "A proper Italian restaurant with seriously good food — one of the best dining options in Druskininkai.",
+    "nivHe": "מסעדה איטלקית אמיתית ברמה גבוהה עם אוכל נהדר — אחת מאפשרויות האוכל הטובות ביותר בדרוסקיניינקאי.",
     "status": "pending",
     "source": "ai"
   },
