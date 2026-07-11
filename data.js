@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260707t';
+window._DL_DATA_VERSION = '20260707u';
 
 (function() {
 
@@ -1549,22 +1549,6 @@ const PLACES = [
     "source": "niv"
   },
   {
-    "id": "caffeine-palanga",
-    "region": "palanga",
-    "kind": "cafe",
-    "name": "Caffeine",
-    "type": "Coffee shop",
-    "typeHe": "בית קפה",
-    "rating": 4.5,
-    "reviews": 230,
-    "price": "€5–10",
-    "emoji": "☕",
-    "niv": "A solid coffee shop a short walk from the beach — strong espresso, the best cheesecake in the area according to regulars, and free Wi-Fi that makes it Palanga's co-working spot.",
-    "nivHe": "בית קפה מוצק קרוב לחוף — אספרסו חזק, עוגת הגבינה הכי טובה באזור לפי הקבועים, וWi-Fi חינמי שהפך אותו לנקודת העבודה של פלנגה.",
-    "status": "approved",
-    "source": "niv"
-  },
-  {
     "id": "senas-zvejas",
     "region": "curonian",
     "kind": "restaurant",
@@ -2113,38 +2097,6 @@ const PLACES = [
     "emoji": "⛰️",
     "niv": "An early medieval hill fort in the Ignalina district — the original earthworks still stand, and the views across the surrounding lake landscape are remarkable.",
     "nivHe": "מבצר גבעה מתחילת ימי הביניים במחוז איגנלינה — עבודות העפר המקוריות עדיין עומדות, והנוף על נוף האגמים שמסביב יוצא דופן.",
-    "status": "approved",
-    "source": "niv"
-  },
-  {
-    "id": "franciscan-monastery-kretinga",
-    "region": "palanga",
-    "kind": "culture",
-    "name": "Franciscan Monastery & Church",
-    "type": "Historic monastery",
-    "typeHe": "מנזר היסטורי",
-    "rating": 4.5,
-    "reviews": 610,
-    "price": null,
-    "emoji": "⛪",
-    "niv": "A working 17th-century Franciscan monastery at the centre of town — austere, beautiful, very peaceful.",
-    "nivHe": "מנזר פרנציסקני פעיל מהמאה ה-17 במרכז העיר — מאופק, יפה ושקט מאוד.",
-    "status": "approved",
-    "source": "niv"
-  },
-  {
-    "id": "cafe-old-palace-kretinga",
-    "region": "palanga",
-    "kind": "cafe",
-    "name": "Café Inside Old Palace",
-    "type": "Café in manor",
-    "typeHe": "קפה בארמון",
-    "rating": 4.4,
-    "reviews": 285,
-    "price": "€5–12",
-    "emoji": "🫖",
-    "niv": "Coffee surrounded by exotic plants and turtles inside the Kretinga Manor conservatory. Genuinely magical.",
-    "nivHe": "קפה בין צמחים טרופיים וצבים בחממת ארמון קרטינגה. קסום באמת.",
     "status": "approved",
     "source": "niv"
   },
