@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260707s';
+window._DL_DATA_VERSION = '20260707t';
 
 (function() {
 
@@ -994,23 +994,6 @@ const PLACES = [
     "emoji": "🌲",
     "niv": "A-frame cabins in the woods built entirely to the owners' own design — 45 minutes from Vilnius, with a \"more nature, fewer people\" philosophy taken seriously.",
     "nivHe": "בקתות A-frame ביער שנבנו לפי עיצוב הבעלים בלבד — 45 דקות מווילנה, עם פילוסופיה של 'יותר טבע, פחות אנשים' שנלקחת ברצינות.",
-    "status": "approved",
-    "source": "niv"
-  },
-  {
-    "id": "pami-k-boutique-spa",
-    "region": "palanga",
-    "kind": "stay",
-    "name": "PAMIŠKĖ BOUTIQUE SPA",
-    "type": "Forest Cabin & Sauna",
-    "typeHe": "קתת ביער וסאונה",
-    "rating": 5,
-    "reviews": 21,
-    "price": null,
-    "emoji": "🛖",
-    "niv": "Not a hotel — a private forest cabin with a real Lithuanian sauna and outdoor wooden tub. You rent the whole place, just for yourself.",
-    "nivHe": "לא מלון — קתת ביער פרטית עם סאונה ליטאית אמיתית ואמבט עץ בחוץ. שוכרים את כל המקום לעצמך בלבד.",
-    "mapUrl": "https://www.google.com/maps/place/PAMI%C5%A0K%C4%96+BOUTIQUE+SPA/@55.8358834,21.3534571,17z",
     "status": "approved",
     "source": "niv"
   },
@@ -2134,22 +2117,6 @@ const PLACES = [
     "source": "niv"
   },
   {
-    "id": "kretinga-manor-winter-garden",
-    "region": "palanga",
-    "kind": "culture",
-    "name": "Kretinga Manor & Winter Garden",
-    "type": "Museum & conservatory",
-    "typeHe": "מוזיאון וגן חורפי",
-    "rating": 4.6,
-    "reviews": 1850,
-    "price": null,
-    "emoji": "🌿",
-    "niv": "5,000 tropical plants in a 19th-century glass conservatory — with live parrots, turtles, and banana trees.",
-    "nivHe": "5,000 צמחים טרופיים בחממת זכוכית מהמאה ה-19 — עם תוכים חיים, צבים ועצי בננה.",
-    "status": "approved",
-    "source": "niv"
-  },
-  {
     "id": "franciscan-monastery-kretinga",
     "region": "palanga",
     "kind": "culture",
@@ -2182,22 +2149,6 @@ const PLACES = [
     "source": "niv"
   },
   {
-    "id": "cable-park-313",
-    "region": "palanga",
-    "kind": "nature",
-    "name": "313 Cable Park",
-    "type": "Wakeboard park",
-    "typeHe": "פארק גלישת כבלים",
-    "rating": 4.6,
-    "reviews": 520,
-    "price": null,
-    "emoji": "🏄",
-    "niv": "One of Europe's most advanced cable wakeboard parks — fun for first-timers, serious for pros.",
-    "nivHe": "אחד מפארקי הוויקבורד בכבלים המתקדמים באירופה — כיפי למתחילים ורציני לקשוחים.",
-    "status": "approved",
-    "source": "niv"
-  },
-  {
     "id": "lourdes-grotto-kretinga",
     "region": "palanga",
     "kind": "culture",
@@ -2210,54 +2161,6 @@ const PLACES = [
     "emoji": "🙏",
     "niv": "A 1933 replica of the Lourdes grotto, inaugurated by Lithuania's president before 25,000 pilgrims — destroyed by the Soviets in 1952 and lovingly rebuilt by locals in 1989.",
     "nivHe": "עותק מ-1933 של מערת לורד, שנחנך על ידי נשיא ליטא בפני 25,000 עולי רגל — נהרס על ידי הסובייטים ב-1952 ושוחזר באהבה על ידי תושבי המקום ב-1989.",
-    "status": "approved",
-    "source": "niv"
-  },
-  {
-    "id": "kretinga-park",
-    "region": "palanga",
-    "kind": "nature",
-    "name": "Kretinga Manor Park",
-    "type": "Manor park",
-    "typeHe": "פארק האחוזה",
-    "rating": 4.5,
-    "reviews": 720,
-    "price": null,
-    "emoji": "🌳",
-    "niv": "A 19th-century manor park with a legendary Winter Garden greenhouse — 5,000 exotic plants including banana trees and cacti, set among fountains, ponds, and sculpted gardens.",
-    "nivHe": "פארק אחוזה מהמאה ה-19 עם חממת 'גן החורף' האגדית — 5,000 צמחים אקזוטיים כולל עצי בננה וקקטוסים, בתוך מזרקות, בריכות וגנים מסותתים.",
-    "status": "approved",
-    "source": "niv"
-  },
-  {
-    "id": "kretinga-museum",
-    "region": "palanga",
-    "kind": "culture",
-    "name": "Kretinga Museum",
-    "type": "Regional museum",
-    "typeHe": "מוזיאון אזורי",
-    "rating": 4.4,
-    "reviews": 380,
-    "price": null,
-    "emoji": "🏛️",
-    "niv": "A regional museum in the former Tiškevičiai manor house — archaeological finds, folk art, amber jewelry, and a beautifully restored 19th-century orangery.",
-    "nivHe": "מוזיאון אזורי בבית האחוזה Tiškevičiai לשעבר — ממצאים ארכיאולוגיים, אמנות עממית, תכשיטי ענבר ואורנג'רי מהמאה ה-19 שוחזרה יפה.",
-    "status": "approved",
-    "source": "niv"
-  },
-  {
-    "id": "pajurio-parkas",
-    "region": "palanga",
-    "kind": "nature",
-    "name": "Pajūrio Regional Park",
-    "type": "Coastal nature park",
-    "typeHe": "פארק חוף טבעי",
-    "rating": 4.7,
-    "reviews": 480,
-    "price": null,
-    "emoji": "🌾",
-    "niv": "Dunes, lagoons, and migratory bird routes along the coast between Kretinga and the sea.",
-    "nivHe": "דיונות, לגונות ומסלולי ציפורים נודדות לאורך החוף בין קרטינגה לים.",
     "status": "approved",
     "source": "niv"
   },
