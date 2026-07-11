@@ -27,6 +27,10 @@ function ShareButton({ place, lang }) {
   }
   function toggleOpen(e) {
     e.stopPropagation();
+    if (navigator.share) {
+      navigator.share({ title: place.name, text: text, url: url }).catch(() => {});
+      return;
+    }
     setOpen(o => !o);
   }
 
