@@ -5,16 +5,93 @@ const ADMIN_PASSWORD = 'discover-lt-admin'; // ← change this before deploying
 const { useState, useEffect, useMemo, useRef } = React;
 
 // ─── PLACE CARD (shared) ────────────────────────────────────────────────
+function ShareButton({ place, lang }) {
+  const [open, setOpen] = React.useState(false);
+  const [copied, setCopied] = React.useState(false);
+  const url = `https://lithuaniadiscovery.com/?place=${place.id}${lang !== 'en' ? '&lang=' + lang : ''}`;
+  const text = lang === 'he'
+    ? `תראו את המקום הזה 👉 ${url}`
+    : `Check out this place 👉 ${url}`;
+
+  function handleWhatsApp(e) {
+    e.stopPropagation();
+    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+    setOpen(false);
+  }
+  function handleCopy(e) {
+    e.stopPropagation();
+    navigator.clipboard.writeText(url).then(() => {
+      setCopied(true);
+      setTimeout(() => { setCopied(false); setOpen(false); }, 1500);
+    });
+  }
+  function toggleOpen(e) {
+    e.stopPropagation();
+    setOpen(o => !o);
+  }
+
+  React.useEffect(() => {
+    if (!open) return;
+    const close = () => setOpen(false);
+    document.addEventListener('click', close);
+    return () => document.removeEventListener('click', close);
+  }, [open]);
+
+  return (
+    <div style={{ position: 'absolute', top: 8, left: 8, zIndex: 10 }} onClick={e => e.stopPropagation()}>
+      <button
+        onClick={toggleOpen}
+        aria-label="Share"
+        style={{
+          width: 30, height: 30, borderRadius: '50%',
+          background: 'rgba(255,255,255,0.92)', border: '0.5px solid rgba(0,0,0,0.12)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          cursor: 'pointer', fontSize: 14, color: '#555', padding: 0,
+        }}
+      >
+        ↗
+      </button>
+      {open && (
+        <div style={{
+          position: 'absolute', top: 36, left: 0,
+          background: '#fff', border: '0.5px solid #ddd', borderRadius: 10,
+          padding: 6, minWidth: 160, boxShadow: '0 4px 16px rgba(0,0,0,0.12)',
+        }}>
+          <div
+            onClick={handleWhatsApp}
+            style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '7px 10px', borderRadius: 6, fontSize: 13, cursor: 'pointer', color: '#111' }}
+            onMouseEnter={e => e.currentTarget.style.background = '#f5f5f5'}
+            onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
+          >
+            <span style={{ fontSize: 16 }}>💬</span> WhatsApp
+          </div>
+          <div
+            onClick={handleCopy}
+            style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '7px 10px', borderRadius: 6, fontSize: 13, cursor: 'pointer', color: copied ? '#1a7a4a' : '#111' }}
+            onMouseEnter={e => e.currentTarget.style.background = '#f5f5f5'}
+            onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
+          >
+            <span style={{ fontSize: 16 }}>{copied ? '✓' : '🔗'}</span>
+            {copied ? (lang === 'he' ? 'הועתק!' : 'Copied!') : (lang === 'he' ? 'העתק לינק' : 'Copy link')}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function PlaceCard({ place, region, lang, t, onClick, saved, onToggleSave, accent }) {
   const tones = ['warm', 'stone', 'sea', 'forest', 'sunset'];
   const nivText = lang === 'he' ? place.nivHe : place.niv;
   const typeLabel = lang === 'he' ? place.typeHe : place.type;
   const ph = `${place.name} · ${place.type}`;
   const tone = tones[place.id.charCodeAt(0) % tones.length];
+  const showShare = place.region === 'moletai';
   return (
     <article className={`niv-card ${place.niv ? 'has-tip' : ''}`} onClick={onClick}>
-      <div className="niv-card-img" style={{ background: `linear-gradient(135deg, ${(accent || (region && region.accent) || '#C28840')}22, ${(accent || (region && region.accent) || '#C28840')}10)` }}>
+      <div className="niv-card-img" style={{ position: 'relative', background: `linear-gradient(135deg, ${(accent || (region && region.accent) || '#C28840')}22, ${(accent || (region && region.accent) || '#C28840')}10)` }}>
         <span className="niv-emoji-big" aria-hidden="true">{place.emoji}</span>
+        {showShare && <ShareButton place={place} lang={lang} />}
         <button
           className={`bookmark ${saved ? 'on' : ''}`}
           onClick={(e) => { e.stopPropagation(); onToggleSave && onToggleSave(place.id); }}
