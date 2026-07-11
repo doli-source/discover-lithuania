@@ -52,7 +52,7 @@ function parseURL() {
   if (screen === 'routes'  && seg[1]) params.route  = seg[1];
 
   const openPlaceId = qs.get('place') || null;
-  const lang        = qs.get('lang')  || 'he';
+  const lang        = qs.get('lang')  || 'en';
 
   return { screen, params, openPlaceId, lang };
 }
@@ -67,7 +67,7 @@ function buildURL(screen, params, openPlaceId, lang) {
 
   const qs = new URLSearchParams();
   if (openPlaceId)           qs.set('place', openPlaceId);
-  if (lang && lang !== 'he') qs.set('lang',  lang);
+  if (lang && lang !== 'en') qs.set('lang',  lang);
 
   return path + (qs.toString() ? '?' + qs.toString() : '');
 }
