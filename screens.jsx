@@ -56,32 +56,31 @@ function ShareButton({ place, lang }) {
       </button>
       {open && (
         <div style={{
-          position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
-          zIndex: 999, display: 'flex', alignItems: 'flex-end',
-          background: 'rgba(0,0,0,0.25)',
-        }} onClick={e => { e.stopPropagation(); setOpen(false); }}>
-          <div style={{
-            background: '#fff', borderRadius: '16px 16px 0 0',
-            padding: '8px 8px 24px', width: '100%',
-            boxShadow: '0 -4px 24px rgba(0,0,0,0.15)',
-          }} onClick={e => e.stopPropagation()}>
-            <div style={{ width: 36, height: 4, background: '#ddd', borderRadius: 2, margin: '6px auto 14px' }} />
-            <div style={{ fontSize: 13, color: '#888', textAlign: 'center', marginBottom: 10 }}>
-              {place.name}
-            </div>
-            <div
-              onClick={handleWhatsApp}
-              style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '14px 20px', fontSize: 16, cursor: 'pointer', color: '#111', borderRadius: 10 }}
-            >
-              <span style={{ fontSize: 22 }}>💬</span> WhatsApp
-            </div>
-            <div
-              onClick={handleCopy}
-              style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '14px 20px', fontSize: 16, cursor: 'pointer', color: copied ? '#1a7a4a' : '#111', borderRadius: 10 }}
-            >
-              <span style={{ fontSize: 22 }}>{copied ? '✓' : '🔗'}</span>
-              {copied ? (lang === 'he' ? 'הועתק!' : 'Copied!') : (lang === 'he' ? 'העתק לינק' : 'Copy link')}
-            </div>
+          position: 'absolute', top: 38, left: 0,
+          background: '#fff', border: '0.5px solid #e0e0e0',
+          borderRadius: 10, padding: 5, minWidth: 150,
+          boxShadow: '0 4px 16px rgba(0,0,0,0.13)', zIndex: 50,
+        }} onClick={e => e.stopPropagation()}>
+          <div onClick={handleWhatsApp} style={{
+            display: 'flex', alignItems: 'center', gap: 8,
+            padding: '8px 12px', borderRadius: 7, fontSize: 13,
+            cursor: 'pointer', color: '#111',
+          }}
+            onMouseEnter={e => e.currentTarget.style.background = '#f5f5f5'}
+            onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
+          >
+            <span style={{ fontSize: 15 }}>💬</span> WhatsApp
+          </div>
+          <div onClick={handleCopy} style={{
+            display: 'flex', alignItems: 'center', gap: 8,
+            padding: '8px 12px', borderRadius: 7, fontSize: 13,
+            cursor: 'pointer', color: copied ? '#1a7a4a' : '#111',
+          }}
+            onMouseEnter={e => e.currentTarget.style.background = '#f5f5f5'}
+            onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
+          >
+            <span style={{ fontSize: 15 }}>{copied ? '✓' : '🔗'}</span>
+            {copied ? (lang === 'he' ? 'הועתק!' : 'Copied!') : (lang === 'he' ? 'העתק לינק' : 'Copy link')}
           </div>
         </div>
       )}
