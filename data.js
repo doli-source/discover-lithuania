@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260707p';
+window._DL_DATA_VERSION = '20260707q';
 
 (function() {
 
@@ -896,10 +896,10 @@ const PLACES = [
     "reviews": 72,
     "price": "€10–20",
     "emoji": "🍔",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "The town's go-to for a quick, unpretentious bite — solid local food at honest prices.",
+    "nivHe": "המקום של העיר לאוכל מהיר ומחיר הוגן — אוכל מקומי פשוט ומשביע.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "spricas-brunch-2",
@@ -1368,10 +1368,10 @@ const PLACES = [
     "reviews": 95,
     "price": null,
     "emoji": "🏛️",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "Small but sincere — traces of Jewish Zarasai, lake-town crafts, and photographs from a forgotten century.",
+    "nivHe": "קטן אבל כן — עקבות זאראסאי היהודית, מלאכות של עיר האגמים, ותצלומים ממאה שנשכחה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "zarasai-promenade",
@@ -1384,10 +1384,10 @@ const PLACES = [
     "reviews": 220,
     "price": null,
     "emoji": "🚶",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "The town's living room — stroll the waterfront at sunset when the five lakes catch fire and the whole place slows down.",
+    "nivHe": "הסלון של העיר — טיול לאורך המים בשקיעה כשחמשת האגמים מתלקחים והכול מואט.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "kemping-zarasai",
@@ -1400,10 +1400,10 @@ const PLACES = [
     "reviews": 85,
     "price": null,
     "emoji": "⛺",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "Pitch a tent on the lakeshore and fall asleep to the sound of water. Simple, serene, and completely off the grid.",
+    "nivHe": "אוהל על חוף האגם ונרדמים לצלילי המים. פשוט, שקט, ורחוק מהכול.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "palanga-amber-museum",
