@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260707r';
+window._DL_DATA_VERSION = '20260707s';
 
 (function() {
 
@@ -91,10 +91,10 @@ const PLACES = [
     "reviews": 141,
     "price": "€5–10",
     "emoji": "☕",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "The Latvian roastery KALVE's first Vilnius café — exceptional milky coffees and pastries from GRUDAS Bakery in a beautifully restored courtyard.",
+    "nivHe": "הסניף הראשון של KALVE הלטווית בווילנה — קפה חלב יוצא דופן ומאפים מ-GRUDAS בחצר מוחזרת יפה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "rocketbean-kavin",
@@ -107,10 +107,10 @@ const PLACES = [
     "reviews": 275,
     "price": "€5–10",
     "emoji": "🚀",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A Baltic specialty roastery from Riga — three types of espresso, excellent filter coffee, and always flawlessly executed.",
+    "nivHe": "מקלה קפה בלטית מריגה — שלושה סוגי אספרסו, פילטר מצוין ותמיד מבוצע בשלמות.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "yugen-tea",
@@ -123,10 +123,10 @@ const PLACES = [
     "reviews": 341,
     "price": "€5–10",
     "emoji": "🍵",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A Japanese tea studio in Užupis run by a certified tea master — rare single-farm teas from Japan, ceremony-style preparation, and a calm that's hard to find elsewhere in Vilnius.",
+    "nivHe": "סטודיו תה יפני ב-Užupis בניהול מאסטר תה מוסמך — תיות נדירות מחקלאי יחיד ביפן, הכנה בסגנון טקס ושקט שקשה למצוא בווילנה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "espresin",
@@ -156,10 +156,10 @@ const PLACES = [
     "reviews": 366,
     "price": "€10–15",
     "emoji": "☕",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A specialty coffee shop with a hidden inner courtyard on Šv. Mikalojaus Street — excellent brunch plates and coffee that draws regulars every morning.",
+    "nivHe": "בית קפה מיוחד עם חצר פנימית נסתרת ברחוב Šv. Mikalojaus — צלחות ברנץ' מצוינות וקפה שמושך קבועים כל בוקר.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "strangelove",
@@ -172,10 +172,10 @@ const PLACES = [
     "reviews": 1375,
     "price": "€5–10",
     "emoji": "🖤",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "One of Vilnius's beloved specialty roasters since 2015 — beans roasted in-house and a sprawling terrace alongside the Bernardine Gardens.",
+    "nivHe": "אחת מקלייות הקפה המיוחדות האהובות בווילנה מאז 2015 — פולים קלויים בעצמם וטרסה רחבה לצד גן ברנרדין.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "coffee-circus-piano",
@@ -188,10 +188,10 @@ const PLACES = [
     "reviews": 483,
     "price": "€5–10",
     "emoji": "🎪",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A specialty coffee community with a big red piano at its center — customers play, baristas talk coffee, and nobody is in a hurry.",
+    "nivHe": "קהילת קפה מיוחדת עם פסנתר אדום גדול במרכז — לקוחות מנגנים, בריסטות מדברים קפה ואף אחד לא ממהר.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "brew-specialty-coffee",
@@ -221,10 +221,10 @@ const PLACES = [
     "reviews": 142,
     "price": "€5–10",
     "emoji": "🎨",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A café-gallery in Vilnius's old town hosting rotating exhibitions — art on every wall, homemade croissants and cakes on every table.",
+    "nivHe": "קפה-גלריה בעיר העתיקה של וילנה עם תערוכות מתחלפות — אמנות על כל קיר, קרואסונים ועוגות תוצרת בית על כל שולחן.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "beigelistai",
@@ -237,10 +237,10 @@ const PLACES = [
     "reviews": 1173,
     "price": "€5–10",
     "emoji": "🥯",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "New York-style bagels, freshly baked and stuffed with salmon & cream cheese, pastrami, or braised beef — a small return of Jewish Vilna's most iconic food.",
+    "nivHe": "ביגלים בסגנון ניו-יורק, אפויים טרי ומגיעים עם סלמון ושמנת, פסטרמה או בשר מבושל — חזרה קטנה של האוכל היהודי-וילנאי המזוהה ביותר.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "backstage-roastery-caf",
@@ -270,10 +270,10 @@ const PLACES = [
     "reviews": 618,
     "price": "€5–15",
     "emoji": "☕",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A roastery café on Vokiečių Street founded by photographers — Backstage's own freshly roasted beans, exposed-brick walls, and a brunch menu that rewards a slow morning.",
+    "nivHe": "קפה-מקלה ברחוב Vokiečių שנוסד על ידי צלמים — פולים קלויים טרי של Backstage, לבנים חשופות ותפריט ברנץ' שמתגמל בוקר איטי.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "italala-caff",
@@ -286,10 +286,10 @@ const PLACES = [
     "reviews": 1435,
     "price": "€5–10",
     "emoji": "🇮🇹",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "An Italian-style specialty café in the old town with chairs that swing — espresso from a Florence roaster, authentic cornetti, and handmade gelato.",
+    "nivHe": "בר קפה איטלקי-מיוחד בעיר העתיקה עם כיסאות מתנדנדים — אספרסו ממקלה פירנצאי, קורנטי אמיתיים וג'לטו תוצרת בית.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "lola",
@@ -302,10 +302,10 @@ const PLACES = [
     "reviews": 1036,
     "price": "€10–15",
     "emoji": "🌸",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "An all-day brunch café near the old town — Turkish eggs, shakshuka, and avocado toast from morning until close.",
+    "nivHe": "קפה ברנץ' כל היום ליד העיר העתיקה — ביצים טורקיות, שקשוקה וטוסט אבוקדו מהבוקר ועד הסגירה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "barn-bistro-b-arn",
@@ -334,10 +334,10 @@ const PLACES = [
     "reviews": 230,
     "price": "€25–50",
     "emoji": "🍷",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A Mediterranean bistro on Vilniaus Street born from late-night vinyl sessions — natural wines, sharing plates, and an evening crowd that stays for the vibe.",
+    "nivHe": "ביסטרו ים-תיכוני ברחוב Vilniaus שנולד מהפעלות ויניל בשעות הלילה — יינות טבעיים, צלחות לשיתוף וקהל ערב שנשאר על הוויב.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "pachamama-dinner-club",
@@ -350,10 +350,10 @@ const PLACES = [
     "reviews": 1687,
     "price": "€50+",
     "emoji": "🇵🇪",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "Peruvian-Nikkei fusion with smoke, show, and DJ nights — ranked #4 in all of Vilnius, with a signature mistura de ceviches that alone justifies the visit.",
+    "nivHe": "פיוז'ן פרואני-ניקיי עם עשן, מופע וערבי DJ — מדורג #4 בכל וילנה, עם mistura de ceviches חתימה שלבד מצדיקה את הביקור.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "meat-steakhouse",
@@ -366,10 +366,10 @@ const PLACES = [
     "reviews": 1570,
     "price": "€50+",
     "emoji": "🥩",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A serious steakhouse with a dedicated aging chamber — beef dry-aged for at least 28 days before it reaches your plate, and no kids after 5pm.",
+    "nivHe": "בית בשר רציני עם תא הבשלה ייעודי — בקר מיובש לפחות 28 יום לפני שמגיע לצלחת, וללא ילדים אחרי 17:00.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "cha-apuri",
@@ -382,10 +382,10 @@ const PLACES = [
     "reviews": 2683,
     "price": "€10–15",
     "emoji": "🧀",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "The best Georgian kitchen in Vilnius — six varieties of khachapuri, proper khinkali by the dozen, and staff who show you the right way to eat them.",
+    "nivHe": "המטבח הגרוזיני הכי טוב בווילנה — שישה סוגי חאצ'פורי, חינקלי אמיתי בתריסרים וצוות שמראה לך את הדרך הנכונה לאכול אותם.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "focacceria",
@@ -398,10 +398,10 @@ const PLACES = [
     "reviews": 52,
     "price": "€5–10",
     "emoji": "🥪",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A tiny Italian focacceria that opened in 2025 and quickly earned five stars — fresh focaccia sandwiches, simple and executed perfectly.",
+    "nivHe": "פוקאצ'ריה איטלקית זעירה שנפתחה ב-2025 וזכתה במהרה לחמישה כוכבים — כריכי פוקאצ'ה טריים, פשוטים ומבוצעים בשלמות.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "baleboste",
@@ -414,10 +414,10 @@ const PLACES = [
     "reviews": 410,
     "price": "€10–15",
     "emoji": "✡️",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "Traditional Litvak Jewish cuisine at the foot of the Hales Market — forshmak, borscht, pastrami bagels, and cabbage rolls the way old Vilna used to make them.",
+    "nivHe": "מטבח ליטבי-יהודי מסורתי בשולי שוק הלס — פורשמאק, בורשט, ביגל עם פסטרמה וכרוב ממולא כפי שוילנה הישנה נהגה לעשות.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "le-travi",
@@ -447,10 +447,10 @@ const PLACES = [
     "reviews": 877,
     "price": "€10–15",
     "emoji": "🌮",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "Vilnius's go-to Tex-Mex spot — homemade tortillas and consistently the best tacos in the city.",
+    "nivHe": "היעד ל-Tex-Mex בווילנה — טורטיות תוצרת בית והטאקו הכי עקבי בעיר.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "mason-restoranas",
@@ -463,10 +463,10 @@ const PLACES = [
     "reviews": 511,
     "price": "€15–45",
     "emoji": "🍴",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A classic old-town restaurant with a green terrace — potato pancakes with salmon, fresh mussels, and a European menu that never lets you down.",
+    "nivHe": "מסעדה קלאסית בעיר העתיקה עם טרסה ירוקה — לביבות תפוח אדמה עם סלמון, מולים טריים ותפריט אירופאי שאף פעם לא מאכזב.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "2-vir-jai",
@@ -495,10 +495,10 @@ const PLACES = [
     "reviews": 221,
     "price": null,
     "emoji": "🍽️",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A Scandinavian-inspired bistro with natural wines and seasonal Lithuanian produce — fish and chips done properly and a roast beef worth going back for.",
+    "nivHe": "ביסטרו בהשראה סקנדינבית עם יינות טבעיים ותוצרת ליטאית עונתית — פיש אנד צ'יפס שנעשה כמו שצריך ורוסט ביף ששווה לחזור עבורו.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "naked-noah",
@@ -511,10 +511,10 @@ const PLACES = [
     "reviews": 57,
     "price": null,
     "emoji": "🍷",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "The largest natural wine shop in the Baltics — over 150 labels from small producers worldwide, with staff who know every bottle personally.",
+    "nivHe": "חנות היין הטבעי הגדולה ביותר בבלטיים — מעל 150 תוויות מיצרנים קטנים ברחבי העולם, עם צוות שמכיר אישית כל בקבוק.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "burbulio-vynin",
@@ -527,10 +527,10 @@ const PLACES = [
     "reviews": 435,
     "price": null,
     "emoji": "🍾",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A small Italian wine bar and shop on Rūdninkų Street — self-imported sparkling wines from small producers, nduja and cheese on the side, and a wonderfully unpretentious Italian atmosphere.",
+    "nivHe": "בר יין ואיטלקי קטן ברחוב Rūdninkų — יינות מבועים מיובאים ישירות מיצרנים קטנים, נדוג'ה וגבינה בצד, ואווירה איטלקית נפלאה וחפה מיומרה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "la-madeleine-atelier",
@@ -543,10 +543,10 @@ const PLACES = [
     "reviews": 53,
     "price": null,
     "emoji": "🥐",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A French pastry atelier with the best croissants in Vilnius — fresh quiches, tarts, and croissant sandwiches in a proper Parisian spirit.",
+    "nivHe": "אטלייה מאפים צרפתי עם הקרואסונים הכי טובים בווילנה — קישים טריים, טארטים וכריכי קרואסון ברוח פריזאית אמיתית.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "mindaugo-kepykla",
@@ -559,10 +559,10 @@ const PLACES = [
     "reviews": 221,
     "price": null,
     "emoji": "🥐",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A Vilnius legend since 2010 — cakes, croissants, and Lithuanian pastry classics made the same careful way they have always been.",
+    "nivHe": "אגדה וילנאית מאז 2010 — עוגות, קרואסונים וקלאסיקות מאפה ליטאיות שנעשות באותה דרך זהירה כפי שהן תמיד נעשו.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "desert-klubas",
@@ -575,10 +575,10 @@ const PLACES = [
     "reviews": 214,
     "price": "€5–15",
     "emoji": "🎂",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "Born as a dessert subscription, now one of Vilnius's most inventive bakeries — croissants, tarts, donuts, and savory buns, all made in-house daily.",
+    "nivHe": "נולד כמינוי לקינוחים, עכשיו אחת ממאפיות וילנה היצירתיות ביותר — קרואסונים, טארטים, דונאטים ולחמניות מלוחות, הכל תוצרת בית מדי יום.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "bundu",
@@ -591,10 +591,10 @@ const PLACES = [
     "reviews": 255,
     "price": "€5–10",
     "emoji": "🍞",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A Kaunas bakery connected to the Pranciškaus family mill — handmade sourdough bread, fresh pastries, specialty coffee, and a space that feels like a real neighborhood place.",
+    "nivHe": "מאפייה בקובנה המחוברת לטחנת משפחת Pranciškaus — לחם מחמצת תוצרת בית, מאפים טריים, קפה מיוחד ומקום שמרגיש כמו שכונה אמיתית.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "adata-bar",
@@ -640,10 +640,10 @@ const PLACES = [
     "reviews": 2414,
     "price": null,
     "emoji": "🥕",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A proper farmers' market in northern Vilnius — 50+ Lithuanian producers alongside global gourmet traders, and nine restaurants inside to eat your way through.",
+    "nivHe": "שוק איכרים אמיתי בצפון וילנה — מעל 50 יצרנים ליטאים לצד סוחרי גורמה גלובליים, ותשע מסעדות בפנים לאכול דרכן.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "3m-zos-rooftop-bar",
@@ -656,10 +656,10 @@ const PLACES = [
     "reviews": 198,
     "price": "€10–25",
     "emoji": "🌆",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "On the roof of the National Drama Theatre — a panoramic view of Gediminas Castle and the Cathedral, with Middle Eastern meze plates made for sharing.",
+    "nivHe": "על גג התיאטרון הלאומי לדרמה — נוף פנורמי של מגדל גדימינס והקתדרלה, עם צלחות מזה מזרח-תיכוני שנועדו לשיתוף.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "po-ba-ka",
@@ -672,10 +672,10 @@ const PLACES = [
     "reviews": 53,
     "price": "€1–5",
     "emoji": "🍺",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A barrel bar tucked into the Vilnius old town — a focused natural wine list, zero pretension, and the kind of crowd that found it by word of mouth.",
+    "nivHe": "בר חביות מוסתר בעיר העתיקה של וילנה — רשימת יין טבעי ממוקדת, אפס יומרה, וקהל שמצא אותו מפה לאוזן.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "mo-museum",
@@ -704,10 +704,10 @@ const PLACES = [
     "reviews": 3128,
     "price": null,
     "emoji": "🏭",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "Lithuania's most active cultural venue in a converted Soviet-era ELFA factory — concerts, theater, film, street art, and a massive open-air mural gallery all on one site.",
+    "nivHe": "המקום התרבותי הפעיל ביותר בליטא במפעל ELFA הסובייטי שהוסב — קונצרטים, תיאטרון, קולנוע, אמנות רחוב וגלריית ציורי קיר עצומה בשטח פתוח — הכל באתר אחד.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "the-green-house",
@@ -720,10 +720,10 @@ const PLACES = [
     "reviews": 397,
     "price": null,
     "emoji": "🟢",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "The Holocaust exhibition of the Vilna Gaon Jewish Museum — seven quiet rooms tracing Lithuanian Jewish history from its golden age to its near-total destruction in WWII.",
+    "nivHe": "תערוכת השואה של מוזיאון הגאון מוילנה — שבעה חדרים שקטים המתעדים את ההיסטוריה היהודית הליטאית מתקופתה הזהובה ועד לחורבנה הכמעט-מוחלט במלחמת העולם השנייה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "gediminas-castle",
@@ -752,10 +752,10 @@ const PLACES = [
     "reviews": 106,
     "price": null,
     "emoji": "🖼️",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A free, 24/7 open-air street art gallery in the former Elfa factory yard — 50+ large-scale murals, light installations, and sculptures by Lithuanian and international artists.",
+    "nivHe": "גלריית אמנות רחוב בשטח פתוח, חינמית ופתוחה 24/7 בחצר מפעל אלפה לשעבר — מעל 50 ציורי קיר בקנה-מידה גדול, התקנות אור ופסלים מאמנים ליטאים ובינלאומיים.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "backstage-roastery-hq",
@@ -768,10 +768,10 @@ const PLACES = [
     "reviews": 17,
     "price": null,
     "emoji": "☕",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "The roasting hub of Backstage Roasters on T. Ševčenkos Street — beans sourced from Brazil and Thailand, roasted on the second floor, poured downstairs at the café.",
+    "nivHe": "מרכז הקלייה של Backstage Roasters ברחוב T. Ševčenkos — פולים מברזיל ותאילנד, קלויים בקומה השנייה ומוגשים למטה בקפה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "snapas-kava-ir-desertai",
@@ -848,10 +848,10 @@ const PLACES = [
     "reviews": 937,
     "price": "€5–10",
     "emoji": "☕",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "Founded by two architects passionate about coffee — a third wave café on Klaipėda's main boulevard with Chemex, espresso, and genuine expertise in every cup.",
+    "nivHe": "נוסד על ידי שני אדריכלים שנלהבים מקפה — בית קפה גל שלישי על הבולוואר הראשי של קלייפדה עם Chemex, אספרסו ומומחיות אמיתית בכל כוס.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "klaip-dos-yd-bendruomen",
@@ -880,10 +880,10 @@ const PLACES = [
     "reviews": 338,
     "price": null,
     "emoji": "🌿",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A well-regarded local restaurant in Klaipėda — a reliable address for a proper sit-down meal in Lithuania's port city.",
+    "nivHe": "מסעדה מקומית מוערכת בקלייפדה — כתובת אמינה לארוחה מסודרת בעיר הנמל של ליטא.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "bistro-zarasai",
@@ -912,10 +912,10 @@ const PLACES = [
     "reviews": 452,
     "price": "€10–15",
     "emoji": "🥞",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "One of Lithuania's most talked-about brunch spots — inventive plates, silky eggs Benedict, and a stacked steak toast that keeps people coming back.",
+    "nivHe": "אחד ממקומות הברנץ' הכי מדוברים בליטא — צלחות יצירתיות, בנדיקט ביצים משיי וטוסט סטייק עמוס שמחזיר אנשים שוב ושוב.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "the-dead-dunes",
@@ -944,10 +944,10 @@ const PLACES = [
     "reviews": 806,
     "price": null,
     "emoji": "🏔️",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "The highest dune on the Curonian Spit at 67 metres — a hike through fragrant pines to a summit with views across the lagoon, the Baltic Sea, and the forest.",
+    "nivHe": "הדיונה הגבוהה ביותר בחצי האי הקורוני ב-67 מטר — טיפוס דרך אורנים ריחניים לפסגה עם נוף על הלגונה, הים הבלטי והיער.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "smoked-fish",
@@ -960,10 +960,10 @@ const PLACES = [
     "reviews": 64,
     "price": null,
     "emoji": "🐟",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A roadside smokehouse on the Curonian Spit selling the freshest smoked fish you will find — buy it warm straight from the smoker and eat it by the water.",
+    "nivHe": "בית עישון על שפת הדרך בחצי האי הקורוני עם הדגים המעושנים הטריים ביותר שתמצאו — קנו חם ישר מהמעשן ואכלו על שפת המים.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "mi-ko-rojus",
@@ -976,10 +976,10 @@ const PLACES = [
     "reviews": 45,
     "price": null,
     "emoji": "🏡",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A forest cabin near Rietavas with a private outdoor pool and beach — no internet by design, with solar charging panels and pine trees for company.",
+    "nivHe": "בקתה ביער ליד ריטאוס עם בריכה ריבותית ממוחוץ וחוף פרטי — ללא אינטרנט לפי תכנון, עם לוחות סולאריים ואורנים לחברה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "doyou-place",
@@ -992,10 +992,10 @@ const PLACES = [
     "reviews": 154,
     "price": null,
     "emoji": "🌲",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A-frame cabins in the woods built entirely to the owners' own design — 45 minutes from Vilnius, with a \"more nature, fewer people\" philosophy taken seriously.",
+    "nivHe": "בקתות A-frame ביער שנבנו לפי עיצוב הבעלים בלבד — 45 דקות מווילנה, עם פילוסופיה של 'יותר טבע, פחות אנשים' שנלקחת ברצינות.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "pami-k-boutique-spa",
@@ -1025,10 +1025,10 @@ const PLACES = [
     "reviews": 183,
     "price": null,
     "emoji": "⛺",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "Three glamping tents on a working organic farm in the Šilalė district — pick your own vegetables from the garden for breakfast, and fall asleep to lake views.",
+    "nivHe": "שלושה אוהלי גלמפינג בחווה אורגנית פעילה במחוז שילאלה — קטפו ירקות מהגינה לארוחת הבוקר שלכם, ונרדמים עם נוף לאגם.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "hytte",
@@ -1041,10 +1041,10 @@ const PLACES = [
     "reviews": 118,
     "price": null,
     "emoji": "🏠",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "Cozy countryside cottages in the Kaunas region — the name is Norwegian for cabin, and the atmosphere matches it perfectly.",
+    "nivHe": "בקתות כפריות חמימות באזור קובנה — השם הוא 'בקתה' בנורווגית, והאווירה תואמת בשלמות.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "alantos-irgai-sodybos-ir-nameli",
@@ -1057,10 +1057,10 @@ const PLACES = [
     "reviews": 139,
     "price": null,
     "emoji": "🐴",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "An eco-farm with Lithuania's rare Žemaitukas horses, 40 hectares of meadow and forest, and pine-cabin hot tubs — the most nature-immersed getaway in the Molėtai region.",
+    "nivHe": "חווה אקו עם סוסי Žemaitukas הנדירים של ליטא, 40 דונם של כרים ויער ובקתות עם ג'קוזי — הגטאוויי הכי שקוע בטבע באזור מולטאי.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "villa-the-lake",
@@ -1073,10 +1073,10 @@ const PLACES = [
     "reviews": 28,
     "price": null,
     "emoji": "🏡",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A private lakefront villa in the Molėtai lake district — five-star comfort, complete privacy, and Lithuanian nature at its most unspoiled.",
+    "nivHe": "וילה פרטית על חוף האגם במחוז האגמים של מולטאי — נוחות חמישה כוכבים, פרטיות מוחלטת וטבע ליטאי בצורתו הטהורה ביותר.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "kupetait",
@@ -1089,10 +1089,10 @@ const PLACES = [
     "reviews": 18,
     "price": null,
     "emoji": "🌿",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A small countryside hideaway with a generous garden — simple and quiet, ideal for families wanting to slow down in rural Lithuania.",
+    "nivHe": "מסתור כפרי קטן עם גינה נדיבה — פשוט ושקט, אידיאלי למשפחות שרוצות להאט בכפר הליטאי.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "getaway-to-forest-cab",
@@ -1105,10 +1105,10 @@ const PLACES = [
     "reviews": 37,
     "price": null,
     "emoji": "🪵",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A secluded forest cabin built for complete disconnection — trees in every direction and the kind of silence city people drive hours to find.",
+    "nivHe": "בקתה ביער מבודדת שנבנתה להתנתקות מוחלטת — עצים בכל כיוון והסוג של שקט שאנשי העיר נוסעים שעות כדי למצוא.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "www-pineplace-lt",
@@ -1121,10 +1121,10 @@ const PLACES = [
     "reviews": 42,
     "price": null,
     "emoji": "🌲",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A simple pine-forest apartment in the Molėtai hills — affordable, peaceful, and well-placed for hiking and lake swimming in the heart of Lithuanian lake country.",
+    "nivHe": "דירה פשוטה ביער אורנים בגבעות מולטאי — בר-השגה, שקטה ומיקומה טוב לטיולים ולשחייה באגמי לב ליטא.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "atvira-meno-galerija-open-gallery",
@@ -1137,10 +1137,10 @@ const PLACES = [
     "reviews": 106,
     "price": null,
     "emoji": "🖼️",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A free, 24/7 open-air street art gallery in the former Elfa factory yard — 50+ large-scale murals, light installations, and sculptures by Lithuanian and international artists.",
+    "nivHe": "גלריית אמנות רחוב בשטח פתוח, חינמית ופתוחה 24/7 בחצר מפעל אלפה לשעבר — מעל 50 ציורי קיר בקנה-מידה גדול, התקנות אור ופסלים מאמנים ליטאים ובינלאומיים.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "mana-sleep-spa-druskininkai",
@@ -1170,10 +1170,10 @@ const PLACES = [
     "reviews": 119,
     "price": null,
     "emoji": "🥐",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A French grocery and café just off the old town — French cheeses, foie gras, natural wines, and croissants with lavender tea.",
+    "nivHe": "מכולת ומקום קפה צרפתי ממש ליד העיר העתיקה — גבינות צרפתיות, פואה גרה, יינות טבעיים וקרואסונים עם תה לבנדר.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "hotel-pacai",
@@ -1528,10 +1528,10 @@ const PLACES = [
     "reviews": 320,
     "price": "€5–10",
     "emoji": "📷",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A café inside a former photography shop on Vytauto Street — vintage cameras and photography books throughout, and some of the best espresso in Palanga.",
+    "nivHe": "קפה בתוך חנות צילום לשעבר ברחוב Vytauto — מצלמות וינטאג' וספרי צילום בכל מקום, ואחד מהאספרסו הכי טובים בפלנגה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "cafe-banduke",
@@ -1544,10 +1544,10 @@ const PLACES = [
     "reviews": 580,
     "price": "€15–30",
     "emoji": "🍽️",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A café on Palanga's main pedestrian street — freshly baked croissants, Neapolitan pizza in summer, and the reliable coffee that locals have been choosing for years.",
+    "nivHe": "קפה ברחוב ההולכי הרגל הראשי של פלנגה — קרואסונים אפויים טרי, פיצה נאפוליטנית בקיץ, והקפה האמין שמקומיים בחרו בו שנים.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "basanaviciaus-street",
@@ -1576,10 +1576,10 @@ const PLACES = [
     "reviews": 230,
     "price": "€5–10",
     "emoji": "☕",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A solid coffee shop a short walk from the beach — strong espresso, the best cheesecake in the area according to regulars, and free Wi-Fi that makes it Palanga's co-working spot.",
+    "nivHe": "בית קפה מוצק קרוב לחוף — אספרסו חזק, עוגת הגבינה הכי טובה באזור לפי הקבועים, וWi-Fi חינמי שהפך אותו לנקודת העבודה של פלנגה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "senas-zvejas",
@@ -1624,10 +1624,10 @@ const PLACES = [
     "reviews": 290,
     "price": "€5–12",
     "emoji": "🥞",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A beloved crêpe café in Nida — sweet and savory pancakes, strong coffee, and a slow morning pace at the edge of the Curonian Spit.",
+    "nivHe": "קפה קרפים אהוב בנידה — פנקייקים מתוקים ומלוחים, קפה חזק וקצב בוקר איטי בקצה חצי האי הקורוני.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "witches-hill",
@@ -1737,10 +1737,10 @@ const PLACES = [
     "reviews": 870,
     "price": null,
     "emoji": "🏰",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "Beneath Klaipėda lies a Teutonic castle founded in 1252 — an archaeological museum built into the original foundations, restored and reopened in 2021.",
+    "nivHe": "מתחת לקלייפדה מסתתרת טירה טבטונית שנוסדה ב-1252 — מוזיאון ארכיאולוגי שנבנה על היסודות המקוריים, שוחזר ונפתח מחדש ב-2021.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "klaipeda-old-town-walk",
@@ -1834,10 +1834,10 @@ const PLACES = [
     "reviews": 3800,
     "price": null,
     "emoji": "🏊",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "The largest indoor water park in the Baltic states — 30,000 sqm with water slides, a wave pool, flowing rivers, and 19 saunas from around the world, open year-round.",
+    "nivHe": "פארק המים המקורה הגדול ביותר במדינות הבלטיות — 30,000 מ\"ר עם מגלשות, בריכת גלים, נהרות זורמים ו-19 סאונות מרחבי העולם, פתוח כל השנה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "dzukija-national-park",
@@ -2048,10 +2048,10 @@ const PLACES = [
     "reviews": 145,
     "price": null,
     "emoji": "🗿",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "An open-air sculpture park on the shore of Lake Pastovis, open since 1998 — works in granite and wood by Lithuanian, French, Welsh and Polish artists, free and always open.",
+    "nivHe": "פארק פסלים בשטח פתוח על חוף אגם פסטוביס, פתוח מאז 1998 — יצירות בגרניט ועץ מאמנים ליטאים, צרפתים, ויילשים ופולנים, חינמי ותמיד פתוח.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "aukstaitija-national-park",
@@ -2128,10 +2128,10 @@ const PLACES = [
     "reviews": 420,
     "price": null,
     "emoji": "⛰️",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "An early medieval hill fort in the Ignalina district — the original earthworks still stand, and the views across the surrounding lake landscape are remarkable.",
+    "nivHe": "מבצר גבעה מתחילת ימי הביניים במחוז איגנלינה — עבודות העפר המקוריות עדיין עומדות, והנוף על נוף האגמים שמסביב יוצא דופן.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "kretinga-manor-winter-garden",
@@ -2208,10 +2208,10 @@ const PLACES = [
     "reviews": 430,
     "price": null,
     "emoji": "🙏",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A 1933 replica of the Lourdes grotto, inaugurated by Lithuania's president before 25,000 pilgrims — destroyed by the Soviets in 1952 and lovingly rebuilt by locals in 1989.",
+    "nivHe": "עותק מ-1933 של מערת לורד, שנחנך על ידי נשיא ליטא בפני 25,000 עולי רגל — נהרס על ידי הסובייטים ב-1952 ושוחזר באהבה על ידי תושבי המקום ב-1989.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "kretinga-park",
@@ -2224,10 +2224,10 @@ const PLACES = [
     "reviews": 720,
     "price": null,
     "emoji": "🌳",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A 19th-century manor park with a legendary Winter Garden greenhouse — 5,000 exotic plants including banana trees and cacti, set among fountains, ponds, and sculpted gardens.",
+    "nivHe": "פארק אחוזה מהמאה ה-19 עם חממת 'גן החורף' האגדית — 5,000 צמחים אקזוטיים כולל עצי בננה וקקטוסים, בתוך מזרקות, בריכות וגנים מסותתים.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "kretinga-museum",
@@ -2240,10 +2240,10 @@ const PLACES = [
     "reviews": 380,
     "price": null,
     "emoji": "🏛️",
-    "niv": null,
-    "nivHe": null,
-    "status": "pending",
-    "source": "ai"
+    "niv": "A regional museum in the former Tiškevičiai manor house — archaeological finds, folk art, amber jewelry, and a beautifully restored 19th-century orangery.",
+    "nivHe": "מוזיאון אזורי בבית האחוזה Tiškevičiai לשעבר — ממצאים ארכיאולוגיים, אמנות עממית, תכשיטי ענבר ואורנג'רי מהמאה ה-19 שוחזרה יפה.",
+    "status": "approved",
+    "source": "niv"
   },
   {
     "id": "pajurio-parkas",
