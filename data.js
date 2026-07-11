@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260707q';
+window._DL_DATA_VERSION = '20260707r';
 
 (function() {
 
@@ -1402,6 +1402,38 @@ const PLACES = [
     "emoji": "⛺",
     "niv": "Pitch a tent on the lakeshore and fall asleep to the sound of water. Simple, serene, and completely off the grid.",
     "nivHe": "אוהל על חוף האגם ונרדמים לצלילי המים. פשוט, שקט, ורחוק מהכול.",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
+    "id": "wake-inn-zarasai",
+    "region": "zarasai",
+    "kind": "nature",
+    "name": "Wake Inn Zarasai",
+    "type": "Wakepark & water park",
+    "typeHe": "ווייקפארק ופארק מים",
+    "rating": 4.7,
+    "reviews": 460,
+    "price": "€10–25",
+    "emoji": "🏄",
+    "niv": "Wakeboarding, inflatable water park, and a sandy beach on the lake — the most action-packed afternoon in Zarasai.",
+    "nivHe": "וייקבורדינג, פארק מים מתנפח וחוף חול על האגם — האחר הצהריים הכי מרגש בזאראסאי.",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
+    "id": "brut-wine-hotel-zarasai",
+    "region": "zarasai",
+    "kind": "stay",
+    "name": "Brut Wine Hotel",
+    "type": "Boutique hotel",
+    "typeHe": "מלון בוטיק",
+    "rating": 4.7,
+    "reviews": 81,
+    "price": "€60–120",
+    "emoji": "🏨",
+    "niv": "Small boutique hotel with a wine soul — pool, restaurant on-site, and the lake town right outside.",
+    "nivHe": "מלון בוטיק קטן עם נשמה של יין — בריכה, מסעדה במקום, ועיר האגמים בפתח הדלת.",
     "status": "approved",
     "source": "niv"
   },
