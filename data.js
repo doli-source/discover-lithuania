@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260707o';
+window._DL_DATA_VERSION = '20260707p';
 
 (function() {
 
@@ -800,8 +800,8 @@ const PLACES = [
     "reviews": 289,
     "price": null,
     "emoji": "🎭",
-    "niv": null,
-    "nivHe": null,
+    "niv": "A creative, eclectic restaurant with an artistic soul — the kind of place that feels like a Kaunas locals' living room. Great for an unhurried dinner with character.",
+    "nivHe": "מסעדה יצירתית ואקלקטית עם נשמה אמנותית — המקום שמרגיש כמו סלון של מקומיים בקאונאס. מעולה לארוחת ערב נינוחה עם אופי.",
     "status": "pending",
     "source": "ai"
   },
@@ -816,8 +816,8 @@ const PLACES = [
     "reviews": 790,
     "price": "€10–15",
     "emoji": "🍞",
-    "niv": null,
-    "nivHe": null,
+    "niv": "One of Kaunas's most beloved bakeries — serious sourdough, seasonal pastries and the smell of fresh bread that pulls you in from the street.",
+    "nivHe": "אחת המאפיות האהובות ביותר בקאונאס — לחם מחמצת רציני, מאפים עונתיים וריח לחם טרי שמושך אותך מהרחוב.",
     "status": "pending",
     "source": "ai"
   },
@@ -832,8 +832,8 @@ const PLACES = [
     "reviews": 363,
     "price": "€1–5",
     "emoji": "🗽",
-    "niv": null,
-    "nivHe": null,
+    "niv": "A 4.9 rating for under €5 — that's almost impossible to argue with. No-nonsense specialty coffee done brilliantly, without the pretension.",
+    "nivHe": "דירוג 4.9 במחיר של פחות מ-5 יורו — קשה להתווכח עם זה. קפה ספיישלטי ללא בלגן, בלי יוהרה, פשוט מצוין.",
     "status": "pending",
     "source": "ai"
   },
@@ -2624,8 +2624,8 @@ const PLACES = [
     "reviews": 8466,
     "price": null,
     "emoji": "🏰",
-    "niv": null,
-    "nivHe": null,
+    "niv": "One of Lithuania's oldest stone structures, standing at the confluence of two rivers since the 14th century. Small but atmospheric — a quiet reminder of how ancient this city really is.",
+    "nivHe": "אחת המבנים האבניים הוותיקים ביותר בליטא, עומד בצומת שני נהרות מאז המאה ה-14. קטן אבל אטמוספרי — תזכורת שקטה לכמה עתיקה העיר הזאת.",
     "status": "pending",
     "source": "niv"
   },
@@ -2640,8 +2640,8 @@ const PLACES = [
     "reviews": 6093,
     "price": null,
     "emoji": "🌳",
-    "niv": null,
-    "nivHe": null,
+    "niv": "A vast oak forest in the middle of the city — ancient trees, walking paths and total calm. One of the largest urban parks in Lithuania and a favourite escape for locals.",
+    "nivHe": "יער אלונים עצום בלב העיר — עצים עתיקים, שבילי הליכה ושקט מוחלט. אחד הפארקים העירוניים הגדולים ביותר בליטא ומקלט אהוב על המקומיים.",
     "status": "pending",
     "source": "niv"
   },
@@ -2656,8 +2656,8 @@ const PLACES = [
     "reviews": 263,
     "price": "€5–10",
     "emoji": "🥐",
-    "niv": null,
-    "nivHe": null,
+    "niv": "A newer bakery that's already earned a cult following — beautifully crafted pastries and a calm, minimal space. The kind of place you'll tell people about.",
+    "nivHe": "מאפייה חדשה שכבר זכתה לעוקבים נלהבים — מאפים מעוצבים בצורה יפהפייה וחלל רגוע ומינימליסטי. הסוג של מקום שתספר עליו לאנשים.",
     "status": "pending",
     "source": "niv"
   },
@@ -2672,8 +2672,8 @@ const PLACES = [
     "reviews": 40,
     "price": null,
     "emoji": "🎨",
-    "niv": null,
-    "nivHe": null,
+    "niv": "A perfect 5.0 — a concept space blending specialty coffee with handpicked Lithuanian design objects and gifts. The most thoughtful souvenir stop in Kaunas.",
+    "nivHe": "5.0 מושלם — חלל קונספטואלי שמשלב קפה ספיישלטי עם עצמי עיצוב ליטאי ומתנות נבחרות. עצירת הסובניר המחושבת ביותר בקאונאס.",
     "status": "pending",
     "source": "niv"
   },
@@ -2688,8 +2688,8 @@ const PLACES = [
     "reviews": 1648,
     "price": "€50+",
     "emoji": "🍽️",
-    "niv": null,
-    "nivHe": null,
+    "niv": "Kaunas's most acclaimed fine dining — modern European tasting menus with precise, elegant technique. A 4.8 from nearly 1,700 diners says everything.",
+    "nivHe": "מסעדת השף המוערכת ביותר בקאונאס — תפריטי טעימות אירופאיים מודרניים עם טכניקה מדויקת ואלגנטית. 4.8 מכמעט 1,700 סועדים אומר הכל.",
     "status": "pending",
     "source": "niv"
   },
@@ -2704,8 +2704,8 @@ const PLACES = [
     "reviews": 23491,
     "price": null,
     "emoji": "🏀",
-    "niv": null,
-    "nivHe": null,
+    "niv": "Home of Žalgiris Kaunas — one of Europe's most storied basketball clubs. If there's a game on while you're in town, go. The atmosphere is unlike anything else in Lithuania.",
+    "nivHe": "ביתו של ז'אלגיריס קאונאס — אחד ממועדוני הכדורסל המפורסמים באירופה. אם יש משחק בזמן שאתה בעיר, לך. האווירה שונה מכל דבר אחר בליטא.",
     "status": "pending",
     "source": "niv"
   },
@@ -2720,8 +2720,8 @@ const PLACES = [
     "reviews": 588,
     "price": "€50+",
     "emoji": "🍽️",
-    "niv": null,
-    "nivHe": null,
+    "niv": "An intimate fine dining experience with a strong Nordic influence — clean flavours, beautiful plating and a menu that changes with the seasons. One of Kaunas's best-kept secrets.",
+    "nivHe": "חוויית שף אינטימית עם השפעה סקנדינבית חזקה — טעמים נקיים, צלחות יפהפיות ותפריט שמשתנה עם העונות. אחד הסודות השמורים ביותר של קאונאס.",
     "status": "pending",
     "source": "niv"
   },
@@ -2736,8 +2736,8 @@ const PLACES = [
     "reviews": 237,
     "price": "€15–20",
     "emoji": "🍕",
-    "niv": null,
-    "nivHe": null,
+    "niv": "The best pizza in Kaunas — wood-fired, with a charred crust and serious toppings. Small, buzzy and always busy. Book ahead or arrive early.",
+    "nivHe": "הפיצה הכי טובה בקאונאס — נאפית בתנור עצים, עם שוליים פחמיים ותוספות רציניות. קטן, תוסס ותמיד מלא. הזמינו מראש או הגיעו מוקדם.",
     "status": "pending",
     "source": "niv"
   },
@@ -2752,8 +2752,8 @@ const PLACES = [
     "reviews": 131,
     "price": null,
     "emoji": "ℹ️",
-    "niv": null,
-    "nivHe": null,
+    "niv": "The official starting point for exploring Kaunas — free maps, event listings, guided tour bookings and genuinely helpful staff. Worth a stop on your first morning.",
+    "nivHe": "נקודת המוצא הרשמית לחקירת קאונאס — מפות חינמיות, לוחות אירועים, הזמנת סיורים מודרכים וצוות מסייע באמת. שווה עצירה בבוקר הראשון.",
     "status": "pending",
     "source": "niv"
   },
@@ -2768,8 +2768,8 @@ const PLACES = [
     "reviews": 2785,
     "price": null,
     "emoji": "🏨",
-    "niv": null,
-    "nivHe": null,
+    "niv": "A reliable, well-located 4-star on Laisvės Alėja — Kaunas's main boulevard. Comfortable rooms, solid breakfast and walking distance from everything worth seeing.",
+    "nivHe": "מלון 4 כוכבים אמין ובמיקום מצוין על שדרת לייסבס — הרחוב הראשי של קאונאס. חדרים נוחים, ארוחת בוקר טובה ומרחק הליכה מכל מה שכדאי לראות.",
     "status": "pending",
     "source": "niv"
   },
@@ -2784,8 +2784,8 @@ const PLACES = [
     "reviews": 2481,
     "price": null,
     "emoji": "🏨",
-    "niv": null,
-    "nivHe": null,
+    "niv": "A classic city-centre hotel with old-school charm and a loyal following — right on the pedestrian boulevard, with city views from the upper floors.",
+    "nivHe": "מלון קלאסי במרכז העיר עם קסם ישן ועוקבים נאמנים — ממש על הטיילת להולכי רגל, עם נוף לעיר מהקומות העליונות.",
     "mapUrl": "https://maps.app.goo.gl/tZe6vhPkKECkdLV18",
     "status": "pending",
     "source": "niv"
