@@ -113,13 +113,35 @@ function App() {
 
   // SEO: per-route <title>, meta description, canonical URL + TouristTrip JSON-LD
   useEffect(() => {
-    const baseTitle = lang === 'he' ? 'גלה את ליטא' : 'Discover Lithuania';
-    let title = `${baseTitle} — ${lang === 'he' ? 'מדריך טיולים אישי' : "A Traveler's Guide"}`;
+    const baseTitle = lang === 'he' ? 'גלה את ליטא' : 'LithuaniaDiscovery';
+    let title = `${baseTitle} — ${lang === 'he' ? 'מדריך טיולים אישי' : "A Traveler's Guide to Lithuania"}`;
     let description = lang === 'he'
-      ? 'מדריך טיולים אישי לליטא — 152 מקומות נבחרים: בתי קפה, מסעדות, אתרי טבע ולינה, ב-12 אזורים. מאת ניב שמעוני.'
-      : "A curated travel guide to Lithuania — 152 handpicked cafés, restaurants, stays, nature spots and ready-made routes across 12 regions. By Niv Shimoni.";
+      ? 'מדריך טיולים אישי לליטא — 160 מקומות נבחרים: בתי קפה, מסעדות, אתרי טבע ולינה, ב-12 אזורים. מאת ניב שמעוני.'
+      : "A curated travel guide to Lithuania — 160 handpicked cafés, restaurants, stays, nature spots and ready-made routes across 12 regions. By Niv Shimoni.";
     let canonicalPath = '/';
     let touristTrip = null;
+
+    // Place modal open — highest priority for SEO
+    if (openPlaceData) {
+      const regionName = openPlaceRegion ? openPlaceRegion.en.name : 'Lithuania';
+      const placeType  = openPlaceData.type || 'Place';
+      title       = `${openPlaceData.name} – ${placeType} in ${regionName} | LithuaniaDiscovery`;
+      description = openPlaceData.niv
+        ? openPlaceData.niv.slice(0, 160)
+        : `${openPlaceData.name} — ${placeType} in ${regionName}, Lithuania.${openPlaceData.rating ? ` Rated ${openPlaceData.rating}/5.` : ''}`;
+      canonicalPath = `/?place=${openPlaceData.id}`;
+
+      document.title = title;
+      const setMeta = (selector, attr, value) => { const el = document.querySelector(selector); if (el) el.setAttribute(attr, value); };
+      setMeta('meta[name="description"]', 'content', description);
+      setMeta('meta[property="og:title"]', 'content', title);
+      setMeta('meta[property="og:description"]', 'content', description);
+      setMeta('meta[name="twitter:title"]', 'content', title);
+      setMeta('meta[name="twitter:description"]', 'content', description);
+      setMeta('link[rel="canonical"]', 'href', `https://lithuaniadiscovery.com${canonicalPath}`);
+      setMeta('meta[property="og:url"]', 'content', `https://lithuaniadiscovery.com${canonicalPath}`);
+      return;
+    }
 
     if (screen === 'explore' && params.region) {
       const region = REGIONS.find(r => r.id === params.region);
@@ -197,7 +219,7 @@ function App() {
     } else if (ldEl) {
       ldEl.remove();
     }
-  }, [screen, params, lang]);
+  }, [screen, params, lang, openPlaceData, openPlaceRegion]);
 
   // SEO: BreadcrumbList + FAQ schema (home page only)
   useEffect(() => {
@@ -248,7 +270,7 @@ function App() {
     };
     inject('ld-breadcrumb', breadcrumb);
     inject('ld-faq', faq);
-  }, [screen, params, lang]);
+  }, [screen, params, lang, openPlaceData]);
 
   // SEO: LocalBusiness schema when a place modal is open
   useEffect(() => {
