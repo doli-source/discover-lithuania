@@ -472,7 +472,7 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
         {/* Blog guide banners — shown per region when a guide exists */}
         {region.id === 'vilnius' && (
           <a
-            href="/blog/best-restaurants-vilnius"
+            href={lang === 'he' ? '/blog/best-restaurants-vilnius.html?lang=he' : '/blog/best-restaurants-vilnius.html'}
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -498,7 +498,7 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
         )}
         {region.id === 'vilnius' && (
           <a
-            href="/blog/best-coffee-vilnius"
+            href={lang === 'he' ? '/blog/best-coffee-vilnius.html?lang=he' : '/blog/best-coffee-vilnius.html'}
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -532,7 +532,7 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
 
         {region.id === 'trakai' && (
           <a
-            href="/blog/trakai-day-trip"
+            href={lang === 'he' ? '/blog/trakai-day-trip.html?lang=he' : '/blog/trakai-day-trip.html'}
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -987,7 +987,7 @@ function BlogScreen({ lang }) {
       desc: lang === 'he'
         ? 'הטירה על האגם, קיבינאי, השכרת סירות, כדור פורח — כל מה שצריך לבילוי מושלם בטרקאי.'
         : 'The island castle, Karaim kibinai, boat rentals, hot air balloon, and the best coffee in town.',
-      href: '/blog/trakai-day-trip.html',
+      href: lang === 'he' ? '/blog/trakai-day-trip.html?lang=he' : '/blog/trakai-day-trip.html',
       time: lang === 'he' ? '5 דק׳ קריאה' : '5 min read',
     },
     {
@@ -997,7 +997,7 @@ function BlogScreen({ lang }) {
       desc: lang === 'he'
         ? 'Le Travi, Donde, OSH Halal ועוד — המקומות שאנחנו חוזרים אליהם שוב ושוב.'
         : 'Le Travi, Donde, OSH Halal and more — the restaurants we keep coming back to.',
-      href: '/blog/best-restaurants-vilnius.html',
+      href: lang === 'he' ? '/blog/best-restaurants-vilnius.html?lang=he' : '/blog/best-restaurants-vilnius.html',
       time: lang === 'he' ? '4 דק׳ קריאה' : '4 min read',
     },
     {
@@ -1007,7 +1007,7 @@ function BlogScreen({ lang }) {
       desc: lang === 'he'
         ? 'Espresinė, BREW, Backstage ועוד — מהמקומות שהמקומיים שותים בהם קפה.'
         : 'Espresinė, BREW, Backstage and more — where locals actually drink coffee.',
-      href: '/blog/best-coffee-vilnius.html',
+      href: lang === 'he' ? '/blog/best-coffee-vilnius.html?lang=he' : '/blog/best-coffee-vilnius.html',
       time: lang === 'he' ? '4 דק׳ קריאה' : '4 min read',
     },
   ];

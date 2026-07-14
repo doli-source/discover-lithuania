@@ -22,7 +22,7 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Trakai Day Trip from Vilnius — The Complete 2026 Guide",
-    "description": "Everything you need for a perfect Trakai day trip from Vilnius — the island castle, Karaim kibinai, boat rentals, a hot air balloon ride, and the best coffee in town.",
+    "description": "Everything you need for a perfect Trakai day trip from Vilnius.",
     "url": "https://lithuaniadiscovery.com/blog/trakai-day-trip",
     "datePublished": "2026-07-13",
     "dateModified": "2026-07-13",
@@ -52,6 +52,7 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f9f7f3; color: #1f2a1a; line-height: 1.7; }
+    body.rtl { direction: rtl; }
 
     nav { background: #fff; border-bottom: 1px solid #e8e0d0; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 62px; position: sticky; top: 0; z-index: 10; }
     .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
@@ -72,6 +73,7 @@
     h1 { font-size: clamp(24px, 4vw, 34px); font-weight: 700; line-height: 1.25; color: #1f2a1a; margin-bottom: 0.75rem; letter-spacing: -0.02em; }
     .article-meta { font-size: 13px; color: #9a8a72; margin-bottom: 1.75rem; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
     .intro { font-size: 17px; color: #4a3e2e; line-height: 1.75; padding: 1.25rem 1.5rem; background: #fff; border-left: 3px solid #5C8AA6; border-radius: 0 8px 8px 0; margin-bottom: 1rem; }
+    body.rtl .intro { border-left: none; border-right: 3px solid #5C8AA6; border-radius: 8px 0 0 8px; }
 
     .quick-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 2.5rem; }
     .fact-card { background: #fff; border: 1px solid #e8e0d0; border-radius: 10px; padding: 12px 14px; }
@@ -79,12 +81,16 @@
     .fact-value { font-size: 14px; font-weight: 600; color: #1f2a1a; }
 
     .timeline-item { display: grid; grid-template-columns: 56px 1fr; gap: 0; margin-bottom: 0; }
+    body.rtl .timeline-item { grid-template-columns: 1fr 56px; }
     .timeline-line { display: flex; flex-direction: column; align-items: center; }
+    body.rtl .timeline-line { order: 2; }
+    body.rtl .stop-card { order: 1; }
     .timeline-dot { width: 40px; height: 40px; background: #5C8AA6; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; color: white; font-weight: 700; }
     .timeline-connector { width: 2px; background: #deeaf0; flex: 1; min-height: 20px; }
     .timeline-item:last-child .timeline-connector { display: none; }
 
     .stop-card { background: #fff; border: 1px solid #e8e0d0; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; margin-left: 16px; }
+    body.rtl .stop-card { margin-left: 0; margin-right: 16px; }
     .stop-time { font-size: 11px; font-weight: 600; color: #5C8AA6; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
     .stop-name { font-size: 19px; font-weight: 700; color: #1f2a1a; margin-bottom: 4px; line-height: 1.2; }
     .stop-type { font-size: 12px; background: #deeaf0; color: #2a6080; padding: 2px 8px; border-radius: 4px; font-weight: 500; display: inline-block; margin-bottom: 10px; }
@@ -95,6 +101,7 @@
     .price-tag { font-size: 12px; background: #f0f7ed; color: #3a6020; padding: 2px 8px; border-radius: 4px; font-weight: 500; }
     .stop-desc { font-size: 15px; color: #4a3e2e; line-height: 1.65; margin-bottom: 1rem; }
     .tip-inline { font-size: 13px; background: #fffbf0; border-left: 3px solid #C28840; padding: 8px 12px; border-radius: 0 6px 6px 0; color: #6a5020; margin-bottom: 1rem; }
+    body.rtl .tip-inline { border-left: none; border-right: 3px solid #C28840; border-radius: 6px 0 0 6px; }
     .stop-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: #5C8AA6; text-decoration: none; font-weight: 500; border: 1px solid #b8d4e8; padding: 6px 14px; border-radius: 6px; background: #f0f6fa; }
     .stop-link:hover { background: #deeaf0; }
 
@@ -107,6 +114,8 @@
     .tips-box ul { list-style: none; padding: 0; }
     .tips-box li { font-size: 14px; color: #3a6020; padding: 4px 0; padding-left: 1.2rem; position: relative; }
     .tips-box li::before { content: '✓'; position: absolute; left: 0; color: #5a9040; }
+    body.rtl .tips-box li { padding-left: 0; padding-right: 1.2rem; }
+    body.rtl .tips-box li::before { left: auto; right: 0; }
 
     .also-read { background: #fff; border: 1px solid #e8e0d0; border-radius: 10px; padding: 1rem 1.25rem; margin: 1rem 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-decoration: none; color: #1f2a1a; }
     .also-read:hover { border-color: #5C8AA6; }
@@ -124,7 +133,9 @@
 
     @media (max-width: 480px) {
       .timeline-item { grid-template-columns: 44px 1fr; }
+      body.rtl .timeline-item { grid-template-columns: 1fr 44px; }
       .stop-card { padding: 1.1rem; margin-left: 10px; }
+      body.rtl .stop-card { margin-left: 0; margin-right: 10px; }
       .container { padding: 1.5rem 1rem 3rem; }
       .quick-facts { grid-template-columns: 1fr 1fr; }
     }
@@ -140,52 +151,52 @@
         </svg>
       </div>
       <div class="nav-brand-text">
-        <span class="nav-brand-name">Discover Lithuania</span>
-        <span class="nav-brand-sub">A Traveler's Guide to Lithuania</span>
+        <span class="nav-brand-name" data-he="גלה את ליטא">Discover Lithuania</span>
+        <span class="nav-brand-sub" data-he="מדריך טיולים לליטא">A Traveler's Guide to Lithuania</span>
       </div>
     </a>
-    <a href="https://lithuaniadiscovery.com/explore/trakai" class="nav-back">← Trakai guide</a>
+    <a href="https://lithuaniadiscovery.com/explore/trakai" class="nav-back" data-he="← מדריך טרקאי">← Trakai guide</a>
   </nav>
 
   <div class="container">
 
     <div class="breadcrumb">
-      <a href="https://lithuaniadiscovery.com">Home</a>
+      <a href="https://lithuaniadiscovery.com" data-he="בית">Home</a>
       <span>›</span>
       <a href="https://lithuaniadiscovery.com/explore/trakai">Trakai</a>
       <span>›</span>
-      <span>Day Trip Guide</span>
+      <span data-he="מדריך יום כיף">Day Trip Guide</span>
     </div>
 
-    <span class="tag-pill">🏰 Trakai · Day Trip from Vilnius</span>
-    <h1>Trakai Day Trip from Vilnius — The Complete 2026 Guide</h1>
+    <span class="tag-pill" data-he="🏰 טרקאי · יום כיף מווילנה">🏰 Trakai · Day Trip from Vilnius</span>
+    <h1 data-he="מדריך יום כיף בטרקאי — המלא לשנת 2026">Trakai Day Trip from Vilnius — The Complete 2026 Guide</h1>
 
     <div class="article-meta">
       <span>✍️ By Niv Shimoni</span>
-      <span>· 📅 Updated July 2026</span>
-      <span>· ⏱ 5 min read</span>
+      <span data-he="· 📅 עודכן יולי 2026">· 📅 Updated July 2026</span>
+      <span data-he="· ⏱ 5 דק׳ קריאה">· ⏱ 5 min read</span>
     </div>
 
-    <p class="intro">
+    <p class="intro" data-he="טרקאי נמצאת 28 ק״מ מווילנה ונראית כאילו תוכננה להיות גלויה — טירה מלבנים אדומים עולה מתוך האגם, מוקפת בכפרי דייגים עתיקים ותרבות הקראים בת 600 שנה. זה היעד הפופולרי ביותר ליום כיף מווילנה, ובצדק. הנה איך עושים את זה כמו שצריך.">
       Trakai is 28km from Vilnius and looks like it was designed to end up on a postcard — a red-brick medieval castle rising from a lake, surrounded by wooden fishing villages and 600-year-old Karaim culture. It's the most visited day trip in Lithuania, and for good reason. Here's how to do it properly.
     </p>
 
     <div class="quick-facts">
       <div class="fact-card">
-        <div class="fact-label">Distance</div>
-        <div class="fact-value">28 km from Vilnius</div>
+        <div class="fact-label" data-he="מרחק">Distance</div>
+        <div class="fact-value" data-he="28 ק״מ מווילנה">28 km from Vilnius</div>
       </div>
       <div class="fact-card">
-        <div class="fact-label">Getting there</div>
-        <div class="fact-value">Train — 35 min, €1.50</div>
+        <div class="fact-label" data-he="הגעה">Getting there</div>
+        <div class="fact-value" data-he="רכבת — 35 דק׳, €1.50">Train — 35 min, €1.50</div>
       </div>
       <div class="fact-card">
-        <div class="fact-label">Time needed</div>
-        <div class="fact-value">Half day or full day</div>
+        <div class="fact-label" data-he="זמן מומלץ">Time needed</div>
+        <div class="fact-value" data-he="חצי יום או יום שלם">Half day or full day</div>
       </div>
       <div class="fact-card">
-        <div class="fact-label">Best season</div>
-        <div class="fact-value">May – September</div>
+        <div class="fact-label" data-he="עונה מומלצת">Best season</div>
+        <div class="fact-value" data-he="מאי – ספטמבר">May – September</div>
       </div>
     </div>
 
@@ -196,19 +207,19 @@
         <div class="timeline-connector"></div>
       </div>
       <div class="stop-card">
-        <div class="stop-time">Morning · First stop</div>
+        <div class="stop-time" data-he="בוקר · עצירה ראשונה">Morning · First stop</div>
         <div class="stop-name">Snapas Kava ir Desertai</div>
-        <span class="stop-type">Specialty coffee & bakery</span>
+        <span class="stop-type" data-he="קפה ומאפייה">Specialty coffee & bakery</span>
         <div class="stop-rating">
           <span class="stars">★★★★½</span>
           <span class="rating-num">4.7</span>
           <span class="rating-count">(155 reviews)</span>
           <span class="price-tag">€5–10</span>
         </div>
-        <p class="stop-desc">
+        <p class="stop-desc" data-he="לפני הכל, בואו לכאן. Snapas היא הפינה החמה ביותר בטרקאי — בית קפה ברחוב Vytauto שנפתח על ידי אישה מקומית בשם Laima אחרי שנים של חיפוש אחר כוס קפה כמו שצריך בעיר. קפה סינגל אוריג׳ין, קרואסונים ובראוניז טריים כל בוקר, ומעדנים תוצרת בית מגן היונה שלה.">
           Before anything else, come here. Snapas is the warmest corner in Trakai — a café on Vytauto Street opened by a local woman named Laima after years of searching for a proper cup of coffee in town. Single-origin coffee, fresh-baked croissants and brownies every morning, and homemade treats from her own honeyberry orchard. The kind of place that makes you slow down immediately.
         </p>
-        <a href="https://lithuaniadiscovery.com/?place=snapas-kava-ir-desertai" class="stop-link">🌿 See on LithuaniaDiscovery</a>
+        <a href="https://lithuaniadiscovery.com/?place=snapas-kava-ir-desertai" class="stop-link" data-he="🌿 ראה באתר">🌿 See on LithuaniaDiscovery</a>
       </div>
     </div>
 
@@ -219,19 +230,19 @@
         <div class="timeline-connector"></div>
       </div>
       <div class="stop-card">
-        <div class="stop-time">Morning · The main attraction</div>
-        <div class="stop-name">Trakai Island Castle</div>
-        <span class="stop-type">Medieval castle</span>
+        <div class="stop-time" data-he="בוקר · האטרקציה הראשית">Morning · The main attraction</div>
+        <div class="stop-name" data-he="טירת האי של טרקאי">Trakai Island Castle</div>
+        <span class="stop-type" data-he="טירה מימי הביניים">Medieval castle</span>
         <div class="stop-rating">
           <span class="stars">★★★★½</span>
           <span class="rating-num">4.7</span>
           <span class="rating-count">(18,500 reviews)</span>
         </div>
-        <p class="stop-desc">
+        <p class="stop-desc" data-he="טירה מהמאה ה-14 עשויה לבנים אדומות, עולה ממרכז אגם גלבה — התמונה האייקונית של ליטא. צלחו את הגשר העצים, חקרו את המוזיאון בפנים, והקיפו את כל האי. לכו מוקדם כדי להימנע מהעומס ולתפוס את האור הטוב על המים.">
           A 14th-century red-brick castle rising from the middle of Lake Galvė — Lithuania's most iconic image, and it earns it. Cross the wooden bridge, explore the museum inside, and walk the full perimeter of the island. Go early to beat the crowds and get the best light on the water.
         </p>
-        <div class="tip-inline">💡 Buy tickets online in advance — queues can be long in summer.</div>
-        <a href="https://lithuaniadiscovery.com/?place=trakai-island-castle" class="stop-link">🌿 See on LithuaniaDiscovery</a>
+        <div class="tip-inline" data-he="💡 קנו כרטיסים אונליין מראש — בקיץ יש תורים ארוכים.">💡 Buy tickets online in advance — queues can be long in summer.</div>
+        <a href="https://lithuaniadiscovery.com/?place=trakai-island-castle" class="stop-link" data-he="🌿 ראה באתר">🌿 See on LithuaniaDiscovery</a>
       </div>
     </div>
 
@@ -242,13 +253,13 @@
         <div class="timeline-connector"></div>
       </div>
       <div class="stop-card">
-        <div class="stop-time">Late morning · Don't skip this</div>
-        <div class="stop-name">Boat Rental on Lake Galvė</div>
-        <span class="stop-type">Rowboat & paddleboat rental</span>
-        <p class="stop-desc">
+        <div class="stop-time" data-he="בוקר מאוחר · לא לדלג">Late morning · Don't skip this</div>
+        <div class="stop-name" data-he="השכרת סירות באגם גלבה">Boat Rental on Lake Galvė</div>
+        <span class="stop-type" data-he="השכרת סירות">Rowboat & paddleboat rental</span>
+        <p class="stop-desc" data-he="שכרו סירת חתירה או פדלו ישירות על שפת האגם וחתרו אל הטירה מהמים. הנוף מסירה שונה לגמרי — רואים את הטירה כפי שהיא אמורה להיראות, משתקפת באגם ללא קהל בינכם לבינה. אחת החוויות הכי בלתי נשכחות בליטא, וכמעט בחינם.">
           Rent a rowboat or pedalo right on the lakefront and paddle up to the castle from the water. The view from a boat is completely different — you see the castle the way it was meant to be seen, reflected in the lake with no crowds between you and it. One of the most memorable experiences in Lithuania, and it costs almost nothing.
         </p>
-        <a href="https://lithuaniadiscovery.com/?place=trakai-boat-rental" class="stop-link">🌿 See on LithuaniaDiscovery</a>
+        <a href="https://lithuaniadiscovery.com/?place=trakai-boat-rental" class="stop-link" data-he="🌿 ראה באתר">🌿 See on LithuaniaDiscovery</a>
       </div>
     </div>
 
@@ -259,19 +270,19 @@
         <div class="timeline-connector"></div>
       </div>
       <div class="stop-card">
-        <div class="stop-time">Lunch · Local classic</div>
+        <div class="stop-time" data-he="צהריים · קלאסיקה מקומית">Lunch · Local classic</div>
         <div class="stop-name">Senoji Kibininė</div>
-        <span class="stop-type">Traditional Karaim kitchen</span>
+        <span class="stop-type" data-he="מטבח קראי מסורתי">Traditional Karaim kitchen</span>
         <div class="stop-rating">
           <span class="stars">★★★★½</span>
           <span class="rating-num">4.5</span>
           <span class="rating-count">(2,800 reviews)</span>
           <span class="price-tag">€5–15</span>
         </div>
-        <p class="stop-desc">
+        <p class="stop-desc" data-he="אי אפשר לעזוב את טרקאי בלי לאכול קיבינאי. אלה פשטידות בשר קראיות — אפויות טריות מתכון בן 600 שנה שהגיע לליטא מחצי האי קרים. Senoji Kibininė הוא המקום הכי טוב לנסות אותן: בצק פריך, מילוי מתובל, והידיעה שאתם אוכלים משהו שכמעט לא השתנה מהמאה ה-14.">
           You cannot leave Trakai without eating kibinai. These are Karaim meat pies — baked fresh from a 600-year-old recipe brought to Lithuania from Crimea. Senoji Kibininė is the best place to try them: crispy pastry, seasoned filling, and the knowledge that you're eating something that's barely changed since the 14th century.
         </p>
-        <a href="https://lithuaniadiscovery.com/?place=kibinai-senoji" class="stop-link">🌿 See on LithuaniaDiscovery</a>
+        <a href="https://lithuaniadiscovery.com/?place=kibinai-senoji" class="stop-link" data-he="🌿 ראה באתר">🌿 See on LithuaniaDiscovery</a>
       </div>
     </div>
 
@@ -282,19 +293,19 @@
         <div class="timeline-connector"></div>
       </div>
       <div class="stop-card">
-        <div class="stop-time">Afternoon · Hidden gem</div>
-        <div class="stop-name">Karaite Ethnographic Museum</div>
-        <span class="stop-type">Ethnographic museum</span>
+        <div class="stop-time" data-he="אחרי הצהריים · אוצר נסתר">Afternoon · Hidden gem</div>
+        <div class="stop-name" data-he="מוזיאון הקראים האתנוגרפי">Karaite Ethnographic Museum</div>
+        <span class="stop-type" data-he="מוזיאון אתנוגרפי">Ethnographic museum</span>
         <div class="stop-rating">
           <span class="stars">★★★★</span>
           <span class="rating-num">4.0</span>
           <span class="rating-count">(57 reviews)</span>
           <span class="price-tag">€1–3</span>
         </div>
-        <p class="stop-desc">
+        <p class="stop-desc" data-he="המוזיאון היחיד באירופה המוקדש לעם הקראים — קהילה טורקית קטנה הדבקה בכתבי הקודש שנסיך גדול ויטאוטאס הביא מחצי האי קרים לטרקאי לפני 600 שנה. שלושה חדרים, מעל 300 חפצים: תלבושות מסורתיות, נשק מזרחי, כוסות קפה טקסיות, עריסה עתיקה. עצירה של 20 דקות שרוב המבקרים מדלגים עליה ואף פעם לא שוכחים לאחר שנכנסו.">
           Europe's only museum dedicated to the Karaim people — a small Turkic, Old Testament-following community that Grand Duke Vytautas brought from Crimea to Trakai 600 years ago. Three rooms, 300+ artifacts: traditional dress, Eastern weapons, ceremonial coffee pots, an antique wooden cradle. A 20-minute stop that most visitors walk past and never forget once they've been inside.
         </p>
-        <a href="https://lithuaniadiscovery.com/?place=s-shapshal-karaim-museum" class="stop-link">🌿 See on LithuaniaDiscovery</a>
+        <a href="https://lithuaniadiscovery.com/?place=s-shapshal-karaim-museum" class="stop-link" data-he="🌿 ראה באתר">🌿 See on LithuaniaDiscovery</a>
       </div>
     </div>
 
@@ -305,13 +316,13 @@
         <div class="timeline-connector"></div>
       </div>
       <div class="stop-card">
-        <div class="stop-time">Afternoon · Sweet stop</div>
+        <div class="stop-time" data-he="אחרי הצהריים · עצירה מתוקה">Afternoon · Sweet stop</div>
         <div class="stop-name">AJ Šokoladas</div>
-        <span class="stop-type">Chocolate & coffee shop</span>
-        <p class="stop-desc">
+        <span class="stop-type" data-he="שוקולדייה וקפה">Chocolate & coffee shop</span>
+        <p class="stop-desc" data-he="עצירה מתוקה לשוקולדים בעבודת יד וקפה מיוחד במרכז העיר טרקאי. קנו קופסה לבית — הם מתאימים לנסיעה ועושים מזכרת טובה יותר מכל דבר בחנות המתנות של הטירה.">
           A sweet stop for handmade chocolates and specialty coffee in Trakai's town center. Pick up a box to take home — they travel well and make a better souvenir than anything from the castle gift shop.
         </p>
-        <a href="https://lithuaniadiscovery.com/?place=aj-sokoladas" class="stop-link">🌿 See on LithuaniaDiscovery</a>
+        <a href="https://lithuaniadiscovery.com/?place=aj-sokoladas" class="stop-link" data-he="🌿 ראה באתר">🌿 See on LithuaniaDiscovery</a>
       </div>
     </div>
 
@@ -322,63 +333,90 @@
         <div class="timeline-connector"></div>
       </div>
       <div class="stop-card">
-        <div class="stop-time">Optional · Bucket list</div>
-        <div class="stop-name">Hot Air Balloon Ride over Trakai</div>
-        <span class="stop-type">Hot air balloon tour</span>
-        <p class="stop-desc">
+        <div class="stop-time" data-he="אופציונלי · חוויה של פעם בחיים">Optional · Bucket list</div>
+        <div class="stop-name" data-he="כדור פורח מעל טרקאי">Hot Air Balloon Ride over Trakai</div>
+        <span class="stop-type" data-he="טיסת כדור פורח">Hot air balloon tour</span>
+        <p class="stop-desc" data-he="עפו מעל האגמים והטירה של טרקאי מגובה — הנוף מדהים ושונה לחלוטין ממה שתראו על הקרקע. כדורים בדרך כלל עפים בשעות הבוקר המוקדמות או אחרי הצהריים המאוחרים לאור הטוב ביותר. הזמינו מבעוד מועד, במיוחד בקיץ.">
           Float over Trakai's lakes and medieval castle from above — the view is extraordinary and completely different from anything you'll see on the ground. Balloons typically fly in the early morning or late afternoon for the best light. Book well in advance, especially in summer. One of the most memorable experiences you can have in Lithuania.
         </p>
-        <div class="tip-inline">💡 Book at least a few days ahead — flights depend on weather and fill up fast in peak season.</div>
-        <a href="https://lithuaniadiscovery.com/?place=trakai-balloon-ride" class="stop-link">🌿 See on LithuaniaDiscovery</a>
+        <div class="tip-inline" data-he="💡 הזמינו לפחות כמה ימים מראש — הטיסות תלויות במזג האוויר ומתמלאות מהר בעונת השיא.">💡 Book at least a few days ahead — flights depend on weather and fill up fast in peak season.</div>
+        <a href="https://lithuaniadiscovery.com/?place=trakai-balloon-ride" class="stop-link" data-he="🌿 ראה באתר">🌿 See on LithuaniaDiscovery</a>
       </div>
     </div>
 
     <div class="bonus-box">
-      <h3>🌙 Staying overnight? Worth considering</h3>
+      <h3 data-he="🌙 נשארים לילה? שווה לשקול">🌙 Staying overnight? Worth considering</h3>
       <div class="bonus-item">
         <span>🏨</span>
-        <span><strong>Esperanza Lake Resort & Spa</strong> — Eleven hectares of private forest on a lake ten minutes from Trakai, built from century-old Canadian cedar. Two resident alpacas, a hammam, salt room, and sauna. One of the most beautiful places to stay in Lithuania.</span>
+        <span data-he="Esperanza Lake Resort & Spa — אחד-עשר הקטרים של יער פרטי על שפת אגם, עשרה דקות מטרקאי, בנוי מארז קנדי בן מאה שנה. שני אלפקות, חמאם, חדר מלח וסאונה. אחד המקומות הכי יפים ללינה בליטא."><strong>Esperanza Lake Resort & Spa</strong> — Eleven hectares of private forest on a lake ten minutes from Trakai, built from century-old Canadian cedar. Two resident alpacas, a hammam, salt room, and sauna. One of the most beautiful places to stay in Lithuania.</span>
       </div>
     </div>
 
     <div class="tips-box">
-      <h3>Practical tips for your Trakai day trip</h3>
+      <h3 data-he="טיפים פרקטיים ליום כיף בטרקאי">Practical tips for your Trakai day trip</h3>
       <ul>
-        <li>Train from Vilnius: 35 minutes, runs every hour, costs around €1.50 each way</li>
-        <li>Castle tickets: ~€8 adults, buy online to skip the queue</li>
-        <li>Best time to visit: weekday mornings — weekends get crowded fast</li>
-        <li>Everything is walkable — the town is small, no car needed</li>
-        <li>Bring cash for the boat rental and the kibinai stand</li>
-        <li>Half a day is enough for the castle + lunch; a full day lets you add the balloon and museum</li>
+        <li data-he="רכבת מווילנה: 35 דקות, כל שעה, בערך €1.50 כל כיוון">Train from Vilnius: 35 minutes, runs every hour, costs around €1.50 each way</li>
+        <li data-he="כרטיסים לטירה: כ-€8 למבוגר, קנו אונליין כדי לדלג על התור">Castle tickets: ~€8 adults, buy online to skip the queue</li>
+        <li data-he="הזמן הכי טוב: בוקר ביום חול — סופי שבוע הם עמוסים מאוד">Best time to visit: weekday mornings — weekends get crowded fast</li>
+        <li data-he="הכל בהליכה — העיר קטנה, אין צורך ברכב">Everything is walkable — the town is small, no car needed</li>
+        <li data-he="קחו מזומן להשכרת הסירה ולעמדת הקיבינאי">Bring cash for the boat rental and the kibinai stand</li>
+        <li data-he="חצי יום מספיק לטירה + ארוחת צהריים; יום שלם מאפשר להוסיף כדור פורח ומוזיאון">Half a day is enough for the castle + lunch; a full day lets you add the balloon and museum</li>
       </ul>
     </div>
 
-    <a href="/blog/best-coffee-vilnius" class="also-read">
+    <a href="/blog/best-coffee-vilnius.html" class="also-read" id="also-coffee">
       <div>
-        <div class="also-read-label">Also read</div>
-        <div class="also-read-title">☕ 7 Best Coffee Shops in Vilnius (2026 Guide)</div>
+        <div class="also-read-label" data-he="קרא גם">Also read</div>
+        <div class="also-read-title" data-he="☕ 7 בתי הקפה הכי טובים בווילנה (2026)">☕ 7 Best Coffee Shops in Vilnius (2026 Guide)</div>
       </div>
       <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#5C8AA6" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
 
-    <a href="/blog/best-restaurants-vilnius" class="also-read">
+    <a href="/blog/best-restaurants-vilnius.html" class="also-read" id="also-restaurants">
       <div>
-        <div class="also-read-label">Also read</div>
-        <div class="also-read-title">🍽️ 8 Best Restaurants in Vilnius (2026 Guide)</div>
+        <div class="also-read-label" data-he="קרא גם">Also read</div>
+        <div class="also-read-title" data-he="🍽️ 8 המסעדות הכי טובות בווילנה (2026)">🍽️ 8 Best Restaurants in Vilnius (2026 Guide)</div>
       </div>
       <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#5C8AA6" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
 
     <div class="cta-box">
-      <h3>Explore all of Trakai</h3>
-      <p>See every handpicked place in Trakai — with maps, ratings and opening hours.</p>
-      <a href="https://lithuaniadiscovery.com/explore/trakai" class="cta-btn">Open the Trakai guide →</a>
+      <h3 data-he="גלו את כל טרקאי">Explore all of Trakai</h3>
+      <p data-he="ראו את כל המקומות הנבחרים בטרקאי — עם מפות, דירוגים ושעות פתיחה.">See every handpicked place in Trakai — with maps, ratings and opening hours.</p>
+      <a href="https://lithuaniadiscovery.com/explore/trakai" class="cta-btn" data-he="פתח את מדריך טרקאי ←">Open the Trakai guide →</a>
     </div>
 
     <div class="article-footer">
-      <p>Written by <a href="https://lithuaniadiscovery.com">Niv Shimoni</a> · <a href="https://lithuaniadiscovery.com">LithuaniaDiscovery.com</a> · Last updated July 2026</p>
+      <p data-he="נכתב על ידי Niv Shimoni · LithuaniaDiscovery.com · עודכן יולי 2026">Written by <a href="https://lithuaniadiscovery.com">Niv Shimoni</a> · <a href="https://lithuaniadiscovery.com">LithuaniaDiscovery.com</a> · Last updated July 2026</p>
     </div>
 
   </div>
+
+  <script>
+    (function() {
+      var lang = new URLSearchParams(window.location.search).get('lang');
+      if (lang !== 'he') return;
+
+      document.documentElement.lang = 'he';
+      document.body.classList.add('rtl');
+
+      document.querySelectorAll('[data-he]').forEach(function(el) {
+        var he = el.getAttribute('data-he');
+        if (el.children.length === 0) {
+          el.textContent = he;
+        } else {
+          // element has children (like the bonus item with <strong>)
+          el.innerHTML = he;
+        }
+      });
+
+      // Append ?lang=he to "also read" links
+      ['also-coffee','also-restaurants'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.href = el.getAttribute('href') + '?lang=he';
+      });
+    })();
+  </script>
+
 </body>
 </html>
