@@ -463,8 +463,8 @@ const PLACES = [
     "reviews": 0,
     "price": "€5–10",
     "emoji": "🍚",
-    "niv": "A one-man operation on Kalvarijų Street where the owner cooks authentic Uzbek plov right in front of you. Halal certified, perfect for a casual and filling meal — one of Vilnius's best-kept secrets.",
-    "nivHe": "מסעדה קטנה ברחוב Kalvarijų שבה הבעלים מבשל פלוב אוזבקי מסורתי בפניך. הלאל, אוכל כבד ומשביע, ואחד הסודות הכי טובים בווילנה.",
+    "niv": "Authentic Uzbek plov on Kalvarijų Street — halal certified, generous portions, and some of the most honest Central Asian cooking in Vilnius. A hidden gem that locals keep coming back to.",
+    "nivHe": "פלוב אוזבקי אמיתי ברחוב Kalvarijų — הלאל, מנות גדולות ומהאוכל הכי אמיתי ממרכז אסיה בווילנה. מקום שהמקומיים חוזרים אליו שוב ושוב.",
     "mapUrl": "https://maps.app.goo.gl/duTJLg636vjfqwSPA",
     "status": "approved",
     "source": "niv"
@@ -496,7 +496,7 @@ const PLACES = [
     "reviews": 75,
     "price": "€10–15",
     "emoji": "👨‍🍳",
-    "niv": "A tiny lunch spot run by two local cooks. Perfect rating, no tourists, honest Lithuanian food. Exactly what you want in the middle of a Vilnius day.",
+    "niv": "Run by two local cooks — perfect rating, no tourists, honest Lithuanian food. Exactly what you want in the middle of a Vilnius day.",
     "nivHe": "מקום צהריים קטן של שני שפים מקומיים. דירוג מושלם, בלי תיירים, אוכל ליטאי אמיתי. בדיוק מה שצריך באמצע יום בווילנה.",
     "status": "approved",
     "source": "niv"
