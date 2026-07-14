@@ -453,6 +453,23 @@ const PLACES = [
     "source": "niv"
   },
   {
+    "id": "osh-halal",
+    "region": "vilnius",
+    "kind": "restaurant",
+    "name": "OSH Halal",
+    "type": "Uzbek restaurant",
+    "typeHe": "מסעדה אוזבקית",
+    "rating": 5.0,
+    "reviews": 0,
+    "price": "€5–10",
+    "emoji": "🍚",
+    "niv": "A one-man operation on Kalvarijų Street where the owner cooks authentic Uzbek plov right in front of you. Halal certified, perfect for a casual and filling meal — one of Vilnius's best-kept secrets.",
+    "nivHe": "מסעדה קטנה ברחוב Kalvarijų שבה הבעלים מבשל פלוב אוזבקי מסורתי בפניך. הלאל, אוכל כבד ומשביע, ואחד הסודות הכי טובים בווילנה.",
+    "mapUrl": "https://maps.app.goo.gl/duTJLg636vjfqwSPA",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
     "id": "mason-restoranas",
     "region": "vilnius",
     "kind": "restaurant",
