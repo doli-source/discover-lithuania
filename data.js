@@ -919,6 +919,22 @@ const PLACES = [
     "source": "niv"
   },
   {
+    "id": "spricas-brunch",
+    "region": "vilnius",
+    "kind": "cafe",
+    "name": "Spricas Brunch",
+    "type": "Breakfast",
+    "typeHe": "ארוחת בוקר",
+    "rating": 4.9,
+    "reviews": 452,
+    "price": "€10–15",
+    "emoji": "🥞",
+    "niv": "One of Lithuania's most talked-about brunch spots — inventive plates, silky eggs Benedict, and a stacked steak toast that keeps people coming back.",
+    "nivHe": "אחד ממקומות הברנץ' הכי מדוברים בליטא — צלחות יצירתיות, בנדיקט ביצים משיי וטוסט סטייק עמוס שמחזיר אנשים שוב ושוב.",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
     "id": "the-dead-dunes",
     "region": "curonian",
     "kind": "nature",
