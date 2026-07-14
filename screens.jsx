@@ -885,15 +885,32 @@ function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, map
               {saved ? <Icon.bookmarkFill /> : <Icon.bookmark />}
               {saved ? t.inTrip : t.addToTrip}
             </button>
-            <button
-              className="btn btn-ghost"
-              onClick={(e) => {
-                e.preventDefault();
-                window.open(placeMapUrl(place), '_blank', 'noopener,noreferrer');
-              }}
-            >
-              <Icon.pin /> {lang === 'he' ? 'פתח בגוגל מפות' : 'Open in Google Maps'}
-            </button>
+            {place.mapUrl2 ? (
+              <>
+                <button
+                  className="btn btn-ghost"
+                  onClick={(e) => { e.preventDefault(); window.open(place.mapUrl, '_blank', 'noopener,noreferrer'); }}
+                >
+                  <Icon.pin /> {lang === 'he' ? 'סניף 1 — מפות' : 'Location 1 — Maps'}
+                </button>
+                <button
+                  className="btn btn-ghost"
+                  onClick={(e) => { e.preventDefault(); window.open(place.mapUrl2, '_blank', 'noopener,noreferrer'); }}
+                >
+                  <Icon.pin /> {lang === 'he' ? 'סניף 2 — מפות' : 'Location 2 — Maps'}
+                </button>
+              </>
+            ) : (
+              <button
+                className="btn btn-ghost"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(placeMapUrl(place), '_blank', 'noopener,noreferrer');
+                }}
+              >
+                <Icon.pin /> {lang === 'he' ? 'פתח בגוגל מפות' : 'Open in Google Maps'}
+              </button>
+            )}
           </div>
         </div>
       </div>
