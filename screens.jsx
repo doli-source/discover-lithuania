@@ -469,7 +469,33 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
           </div>
         </div>
 
-        {/* Blog guide banner — shown per region when a guide exists */}
+        {/* Blog guide banners — shown per region when a guide exists */}
+        {region.id === 'vilnius' && (
+          <a
+            href="/blog/best-restaurants-vilnius"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              gap: '12px', background: 'var(--tint)', border: '1px solid var(--primary)',
+              borderRadius: '10px', padding: '12px 16px', margin: '0 0 10px',
+              textDecoration: 'none', color: 'var(--ink)',
+            }}
+          >
+            <span style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <span style={{ fontSize: '20px' }}>🍽️</span>
+              <span>
+                <strong style={{ display: 'block', fontSize: '14px', color: 'var(--ink)' }}>
+                  {lang === 'he' ? '8 המסעדות הכי טובות בווילנה' : '8 Best Restaurants in Vilnius'}
+                </strong>
+                <span style={{ fontSize: '12px', color: 'var(--primary)' }}>
+                  {lang === 'he' ? 'מדריך מקומי ← קרא עכשיו' : 'Local guide · Read now →'}
+                </span>
+              </span>
+            </span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--primary)" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        )}
         {region.id === 'vilnius' && (
           <a
             href="/blog/best-coffee-vilnius"
