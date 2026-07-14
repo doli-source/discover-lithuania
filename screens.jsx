@@ -1,4 +1,5 @@
 // All screens for the Lithuania travel app — wired to Niv's curated places
+// v2.1
 
 const ADMIN_PASSWORD = 'discover-lt-admin'; // ← change this before deploying
 
