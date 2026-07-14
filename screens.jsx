@@ -1019,7 +1019,7 @@ function BlogScreen({ lang }) {
           {lang === 'he' ? 'מדריכי טיול' : 'Travel Guides'}
         </h1>
         <p style={{ fontSize: '15px', color: 'rgba(36,26,16,0.6)', marginBottom: '2rem' }}>
-          {lang === 'he' ? 'מאמרים מעמיקים על מה לעשות, לאכול ולשתות בליטא' : 'In-depth guides on what to do, eat and drink in Lithuania'}
+          {lang === 'he' ? 'מאמרים על מה לעשות, לאכול ולשתות בליטא' : 'Guides on what to do, eat and drink in Lithuania'}
         </p>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
