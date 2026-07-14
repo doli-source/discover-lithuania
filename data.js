@@ -308,6 +308,23 @@ const PLACES = [
     "source": "niv"
   },
   {
+    "id": "cafe-de-pacai",
+    "region": "vilnius",
+    "kind": "cafe",
+    "name": "Café de Pacai",
+    "type": "Patisserie · Café",
+    "typeHe": "פטיסרי · קפה",
+    "rating": 4.8,
+    "reviews": 0,
+    "price": "€3–14",
+    "emoji": "🥐",
+    "niv": "A French patisserie in the Old Town on Didžioji Street — exceptional croissants, sculptural desserts, and an Afternoon Tea worth planning around.",
+    "nivHe": "פטיסרי צרפתית בעיר העתיקה ברחוב דיג'ויה — קרואסונים יוצאי דופן, קינוחים מפוסלים ו-Afternoon Tea שכדאי לתכנן סביבו.",
+    "mapUrl": "https://maps.app.goo.gl/qXccSQdg81uUbvAP8",
+    "status": "approved",
+    "source": "niv"
+  },
+  {
     "id": "barn-bistro-b-arn",
     "region": "vilnius",
     "kind": "restaurant",
