@@ -977,6 +977,94 @@ function SavedScreen({ savedSet, places, regions, lang, t, openPlace, toggleSave
   );
 }
 
+// ─── BLOG SCREEN ────────────────────────────────────────────────────────────
+function BlogScreen({ lang }) {
+  const posts = [
+    {
+      emoji: '🏰',
+      tag: lang === 'he' ? 'טרקאי · מדריך יום כיף' : 'Trakai · Day Trip',
+      title: lang === 'he' ? 'מדריך יום כיף בטרקאי — המלא לשנת 2026' : 'Trakai Day Trip from Vilnius — Complete 2026 Guide',
+      desc: lang === 'he'
+        ? 'הטירה על האגם, קיבינאי, השכרת סירות, כדור פורח — כל מה שצריך לבילוי מושלם בטרקאי.'
+        : 'The island castle, Karaim kibinai, boat rentals, hot air balloon, and the best coffee in town.',
+      href: '/blog/trakai-day-trip.html',
+      time: lang === 'he' ? '5 דק׳ קריאה' : '5 min read',
+    },
+    {
+      emoji: '🍽️',
+      tag: lang === 'he' ? 'וילנה · מסעדות' : 'Vilnius · Restaurants',
+      title: lang === 'he' ? '8 המסעדות הכי טובות בווילנה (2026)' : '8 Best Restaurants in Vilnius (2026 Guide)',
+      desc: lang === 'he'
+        ? 'Le Travi, Donde, OSH Halal ועוד — המקומות שאנחנו חוזרים אליהם שוב ושוב.'
+        : 'Le Travi, Donde, OSH Halal and more — the restaurants we keep coming back to.',
+      href: '/blog/best-restaurants-vilnius.html',
+      time: lang === 'he' ? '4 דק׳ קריאה' : '4 min read',
+    },
+    {
+      emoji: '☕',
+      tag: lang === 'he' ? 'וילנה · קפה' : 'Vilnius · Coffee',
+      title: lang === 'he' ? '7 בתי הקפה הכי טובים בווילנה (2026)' : '7 Best Coffee Shops in Vilnius (2026 Guide)',
+      desc: lang === 'he'
+        ? 'Espresinė, BREW, Backstage ועוד — מהמקומות שהמקומיים שותים בהם קפה.'
+        : 'Espresinė, BREW, Backstage and more — where locals actually drink coffee.',
+      href: '/blog/best-coffee-vilnius.html',
+      time: lang === 'he' ? '4 דק׳ קריאה' : '4 min read',
+    },
+  ];
+
+  return (
+    <div className="screen-wrap" dir={lang === 'he' ? 'rtl' : 'ltr'}>
+      <div style={{ maxWidth: 720, margin: '0 auto', padding: '2rem var(--gutter) 4rem' }}>
+        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px,4vw,32px)', fontWeight: 500, marginBottom: '0.4rem' }}>
+          {lang === 'he' ? 'מדריכי טיול' : 'Travel Guides'}
+        </h1>
+        <p style={{ fontSize: '15px', color: 'rgba(36,26,16,0.6)', marginBottom: '2rem' }}>
+          {lang === 'he' ? 'מאמרים מעמיקים על מה לעשות, לאכול ולשתות בליטא' : 'In-depth guides on what to do, eat and drink in Lithuania'}
+        </p>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          {posts.map((post, i) => (
+            <a
+              key={i}
+              href={post.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'flex', gap: '16px', background: 'var(--card)', border: '1px solid var(--border)',
+                borderRadius: '14px', padding: '1.25rem 1.5rem', textDecoration: 'none', color: 'var(--ink)',
+                alignItems: 'flex-start', transition: 'border-color 0.15s',
+              }}
+              onMouseEnter={e => e.currentTarget.style.borderColor = 'var(--primary)'}
+              onMouseLeave={e => e.currentTarget.style.borderColor = 'var(--border)'}
+            >
+              <div style={{
+                width: 52, height: 52, borderRadius: '12px', background: 'var(--tint)',
+                display: 'grid', placeItems: 'center', fontSize: '24px', flexShrink: 0,
+              }}>
+                {post.emoji}
+              </div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ fontSize: '11px', fontWeight: 600, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '4px' }}>
+                  {post.tag}
+                </div>
+                <div style={{ fontSize: '16px', fontWeight: 600, lineHeight: 1.3, marginBottom: '6px' }}>
+                  {post.title}
+                </div>
+                <div style={{ fontSize: '13px', color: 'rgba(36,26,16,0.6)', lineHeight: 1.5, marginBottom: '8px' }}>
+                  {post.desc}
+                </div>
+                <div style={{ fontSize: '12px', color: 'var(--primary)', fontWeight: 500 }}>
+                  {post.time} →
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ─── ADMIN PANEL ────────────────────────────────────────────────────────────
 function AdminLogin({ onAuth }) {
   const [pwd, setPwd] = useState('');

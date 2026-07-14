@@ -437,6 +437,9 @@ function App() {
             toggleSaved={toggleSaved}
           />
         )}
+        {screen === 'blog' && (
+          <BlogScreen lang={lang} t={t} />
+        )}
       </main>
 
       <Footer lang={lang} t={t} nav={nav} />
@@ -487,7 +490,8 @@ function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
     { id: 'explore', label: t.nav.explore },
     { id: 'routes', label: t.nav.routes },
     { id: 'food', label: t.nav.food },
-    { id: 'stays', label: t.nav.stays }
+    { id: 'stays', label: t.nav.stays },
+    { id: 'blog', label: t.nav.blog }
   ];
 
   return (
