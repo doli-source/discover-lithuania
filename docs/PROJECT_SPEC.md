@@ -22,7 +22,7 @@
 | `docs/PROJECT_SPEC.md` | This file |
 
 **Deployment:** `npx netlify-cli@latest deploy --prod` from project root.  
-**Site:** https://discover-lithuania.netlify.app  
+**Site:** https://lithuaniadiscovery.com (custom domain on Netlify, also reachable at https://discoverlithuania.netlify.app)  
 **Cache busting:** Update `?v=YYYYMMDD{letter}` in `index.html` script tags on every deploy with content changes.
 
 ---
@@ -53,12 +53,13 @@ Clean path-based routing (no `?screen=` params):
 | id | Name | Character |
 |----|------|-----------|
 | `vilnius` | Vilnius | Baroque capital, café culture, Užupis art republic |
+| `trakai` | Trakai | Island castle on Lake Galvė, Karaim heritage, kibinai |
 | `kaunas` | Kaunas | Interwar Modernism / Bauhaus, young scene |
 | `klaipeda` | Klaipėda | Port city, Baltic sea, Prussian old town |
 | `curonian` | Curonian Spit (Nida) | UNESCO dunes, pine forests, fishing villages |
 | `palanga` | Palanga | Baltic beach resort, amber museum, pier |
 | `kretinga` | Kretinga | Manor & winter garden, Franciscan monastery |
-| `countryside` | Countryside | General rural: Trakai, Kernavė, forests, mushrooms |
+| `countryside` | Countryside | General rural: Kernavė, forests, mushrooms (Trakai moved to its own region) |
 | `druskininkai` | Druskininkai | Spa town, mineral springs, Grūtas Park, Dzūkija forest |
 | `moletai` | Molėtai | Astronomy capital, 300 lakes, dark-sky reserve |
 | `utena` | Utena | Aukštaitija National Park gateway, lake country |
@@ -134,8 +135,11 @@ Palanga Amber Museum, Birutė Park, Palanga Pier, Palanga Beach, BREW. Specialty
 ### Kretinga (9 places)
 PAMIŠKĖ BOUTIQUE SPA, Kretinga Manor & Winter Garden, Franciscan Monastery & Church, Café Inside Old Palace, 313 Cable Park, Lourdes Grotto, Kretinga Manor Park, Kretinga Museum, Pajūrio Regional Park
 
-### Countryside (10 places)
-casa de campo glamping, HYTTE, Kupetaitė, Miško Rojus, DOYOU PLACE, Kernavė Archaeological Site, Trakai Island Castle, Anykščiai Treetop Path, Senoji Kibininė, Dzūkija Pine Forests
+### Trakai (2 places, more pending from Niv's Google Maps list)
+Trakai Island Castle, Senoji Kibininė (moved out of Countryside into their own region)
+
+### Countryside (8 places)
+casa de campo glamping, HYTTE, Kupetaitė, Miško Rojus, DOYOU PLACE, Kernavė Archaeological Site, Anykščiai Treetop Path, Dzūkija Pine Forests
 
 ### Druskininkai (10 places)
 Atokampis Boutique SPA & Resort, Horizons Lake Resort & Spa, Mana Sleep & Spa, Varena Treehouse, Aštriosios Kirsnos dvaras, Toli Toli, Grūtas Park, Sicilia, Druskininkai Aqua Park, Dzūkija National Park
@@ -166,7 +170,7 @@ Bistro Zarasai, Brut Wine Hotel & Restaurant, Monopolis, Lietaus Sodai, The Five
 ## 8. Research Notes
 
 ### Region assignment rules
-- **Trakai** → `countryside` (in Vilnius County but rural enough; referenced in vilnius itinerary as landmark)
+- **Trakai** → own region `trakai` (added 2026-06-25, between Vilnius and Kaunas; previously folded into `countryside`)
 - **Varėna area** → `druskininkai` (Alytus County, Dzūkija, same zone as Druskininkai)
 - **Rietavas/Labardžiai** → `countryside` (Telšiai county, no specific region)
 - **Elektrėnai Municipality** → `countryside` (rural, 25-40min from Vilnius)
