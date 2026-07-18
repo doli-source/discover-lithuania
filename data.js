@@ -2724,8 +2724,8 @@ const PLACES = [
         "reviews": 85,
         "price": "€12–22",
         "emoji": "🧘",
-        "niv": "Mat and equipment-based Pilates with professional, certified instructors — small groups, personalized attention, and modern reformer equipment. They also have around 6 more branches across the city!",
-        "nivHe": "פילאטיס מזרון ומכשירים עם מדריכות מקצועיות ומוסמכות — קבוצות קטנות, יחס אישי וציוד רפורמר מודרני. יש להם עוד כ-6 סניפים שונים בעיר!",
+        "niv": "Mat and equipment-based Pilates with professional, certified instructors — small groups, personalized attention, and modern reformer equipment. They also have around 6 more branches across the city! Other Vilnius locations: Šnipiškės – Kintų g. 11, Antakalnis – Kosciuškos g. 34, Žvėrynas – Saltoniškių g. 9B, Viršuliškės – Spaudos g. 7, Žirmūnai – Kareivių g. 11B, and Avižieniai (Urban Hub) – Ožiarūčių g. 3.",
+        "nivHe": "פילאטיס מזרון ומכשירים עם מדריכות מקצועיות ומוסמכות — קבוצות קטנות, יחס אישי וציוד רפורמר מודרני. יש להם עוד כ-6 סניפים שונים בעיר! סניפים נוספים בוילנה: שניפישקס – Kintų g. 11, אנטקלניס – Kosciuškos g. 34, זוורינאס – Saltoniškių g. 9B, ויארשוליישקס – Spaudos g. 7, ז'ירמונאי – Kareivių g. 11B, ואביז'ניאי (Urban Hub) – Ožiarūčių g. 3.",
         "mapUrl": "https://maps.app.goo.gl/RAfCeDELbWym4AcV7",
         "status": "approved",
         "source": "niv"
