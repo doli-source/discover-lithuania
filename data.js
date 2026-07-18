@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260718h';
+window._DL_DATA_VERSION = '20260718i';
 
 (function() {
 
