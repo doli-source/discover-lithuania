@@ -2729,7 +2729,9 @@ const PLACES = [
         "mapUrl": "https://maps.app.goo.gl/RAfCeDELbWym4AcV7",
         "status": "approved",
         "source": "niv"
-  }
+  },
+  {"id": "mypilates-kaunas", "region": "kaunas", "kind": "culture", "name": "MyPilates", "type": "Pilates studio", "typeHe": "סטודיו פילאטיס", "rating": 4.9, "reviews": 76, "price": "€12–22", "emoji": "🧘", "niv": "Mat and equipment-based Pilates with professional, certified instructors — small groups, personalized attention, and modern reformer equipment, right on Vytauto pr. in the city centre. They also have 2 more branches in Kaunas: Urban Hub – Veterinarų g. 4, and Žaliakalnis – Dirvos g. 13.", "nivHe": "פילאטיס מזרון ומכשירים עם מדריכות מקצועיות ומוסמכות — קבוצות קטנות, יחס אישי וציוד רפורמר מודרני, ממש על שדרת Vytauto במרכז קובנה. יש להם עוד 2 סניפים בקובנה: Urban Hub – Veterinarų g. 4, וז'ליאקלניס – Dirvos g. 13.", "mapUrl": "https://www.google.com/maps/place/MyPilates+Kaunas/@54.888914,23.9264125,17z/data=!4m6!3m5!1s0x46e723cb2d085b31:0x9a967e14c16282a7!8m2!3d54.888914!4d23.9264125", "status": "approved", "source": "niv"},
+  {"id": "mypilates-palanga", "region": "palanga", "kind": "culture", "name": "MyPilates", "type": "Seasonal Pilates studio", "typeHe": "סטודיו פילאטיס עונתי", "rating": 5.0, "reviews": 23, "price": "€12–22", "emoji": "🧘", "niv": "A seasonal summer studio inside the Grand Baltic Dunes hotel, just a 5-minute walk from Palanga's pier and the sea. Mat and equipment-based Pilates with professional instructors — a relaxed way to stay active on a beach holiday. Same MyPilates chain as Vilnius and Kaunas, open for the summer season only.", "nivHe": "סטודיו עונתי לקיץ בתוך מלון Grand Baltic Dunes, כ-5 דקות הליכה מהמזח ומהים בפלנגה. פילאטיס מזרון ומכשירים עם מדריכות מקצועיות — דרך נעימה להישאר פעילים בחופשת חוף. אותה רשת MyPilates כמו בוילנה ובקובנה, פתוח לעונת הקיץ בלבד.", "mapUrl": "https://www.google.com/maps/search/MyPilates+Grand+Baltic+Dunes+Palanga", "status": "approved", "source": "niv"}
  ];
 
 // Landmarks for the itinerary timeline (sights, not in Niv's list)
