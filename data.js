@@ -2710,8 +2710,25 @@ const PLACES = [
     "niv": "A classic city-centre hotel with old-school charm and a loyal following — right on the pedestrian boulevard, with city views from the upper floors.",
     "nivHe": "מלון קלאסי במרכז העיר עם קסם ישן ועוקבים נאמנים — ממש על הטיילת להולכי רגל, עם נוף לעיר מהקומות העליונות.",
     "mapUrl": "https://maps.app.goo.gl/tZe6vhPkKECkdLV18",
-    "status": "pending",
-    "source": "niv"
+        "status": "pending",
+        "source": "niv"
+  },
+    {
+        "id": "mypilates",
+        "region": "vilnius",
+        "kind": "culture",
+        "name": "MyPilates",
+        "type": "Pilates studio",
+        "typeHe": "סטודיו פילאטיס",
+        "rating": 5.0,
+        "reviews": 85,
+        "price": "€12–22 / שיעור",
+        "emoji": "🧘",
+        "niv": "Where I train — reformer Pilates with coaches who are also trained physiotherapists. They run 7 studios across Vilnius (Naujamiestis, Šnipiškės, Antakalnis, Žvėrynas, Žirmūnai, Viršuliškės, and Urban Hub in Avižieniai), so there's almost always one near you.",
+        "nivHe": "המקום שבו אני מתאמן — פילאטיס רפורמר עם מאמנים שהם גם פיזיותרפיסטים בהכשרתם. יש להם 7 סטודיו בפריסה על פני וילנה (נאויאמייסטיס, שניפישקס, אנטקלניס, ז'ברינס, ז'ירמונאי, וירשוליישקס, ואורבן האב באוויז'ניאי) — כמעט תמיד יש סניף קרוב אליך.",
+        "mapUrl": "https://maps.app.goo.gl/Pw7MxrCEruRVHYGr9",
+        "status": "approved",
+        "source": "niv"
   }
 ];
 
