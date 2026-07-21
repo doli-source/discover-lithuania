@@ -2784,7 +2784,9 @@ const ITINERARIES = [
     he: { title: 'וילנה והסביבה', tagline: 'יום בעיר, יום בטבע' },
     en: { title: 'Vilnius & The Region', tagline: 'A day in the city, a day in nature' },
     stops: [
+      { time: 'יום 1 בוקר', timeEn: 'Day 1 morning', placeId: 'yugen-tea', landmarkId: null, he: 'אוז\'ופיס — קפה ותה ב-Yugen Tea', en: 'Užupis — coffee & tea at Yugen Tea' },
       { time: 'יום 1', timeEn: 'Day 1', placeId: 'mo-museum', landmarkId: null, he: 'וילנה: מוזיאון MO ואומנות רחוב באוז\'ופיס', en: 'Vilnius: MO Museum & Užupis street art walk' },
+      { time: 'יום 1 אחה"צ', timeEn: 'Day 1 afternoon', placeId: '2-vir-jai', landmarkId: null, he: 'צהריים ב-2 Virėjai — אוכל ליטאי אמיתי', en: 'Lunch at 2 virėjai — honest Lithuanian food' },
       { time: 'יום 2 בוקר', timeEn: 'Day 2 morning', placeId: 'snapas-kava-ir-desertai', landmarkId: null, he: 'טראקאי — קפה ומאפה ב-Snapas', en: 'Trakai — coffee & pastry at Snapas' },
       { time: 'יום 2 צהריים', timeEn: 'Day 2', placeId: null, landmarkId: 'trakai-castle', he: 'טירת טראקאי + צהריים ב-Kiubėtė על האגם', en: 'Trakai Castle + lunch at Kiubėtė on the lake' },
       { time: 'יום 2 אחה"צ', timeEn: 'Day 2 afternoon', placeId: 'trakai-balloon-ride', landmarkId: null, he: 'כדור פורח מעל הטירה והאגמים', en: 'Hot air balloon over the castle & lakes' }
