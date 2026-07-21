@@ -904,9 +904,19 @@ function SavedScreen({ savedSet, places, regions, lang, t, openPlace, toggleSave
 function BlogScreen({ lang }) {
   const posts = [
     {
+      emoji: '🗺️',
+      tag: lang === 'he' ? 'ליטא · מסלול' : 'Lithuania · Itinerary',
+      title: lang === 'he' ? '5 ימים בליטא — מסלול מלא עם וילנה, טרקאי וקובנה' : '5 Days in Lithuania — Full Itinerary with Vilnius, Trakai & Kaunas',
+      desc: lang === 'he'
+        ? 'מסלול יום אחר יום — מהרחובות הצבעוניים של העיר הישנה, דרך הטירה על האגם בטרקאי, ועד לסצנת האוכל הצעירה של קובנה.'
+        : 'A day-by-day itinerary — from the colourful Old Town streets to Trakai\'s island castle and Kaunas\'s young food scene.',
+      href: lang === 'he' ? '/blog/5-days-in-lithuania.html?lang=he' : '/blog/5-days-in-lithuania.html',
+      time: lang === 'he' ? '7 דק׳ קריאה' : '7 min read',
+    },
+    {
       emoji: '🏰',
       tag: lang === 'he' ? 'טרקאי · מדריך יום כיף' : 'Trakai · Day Trip',
-      title: lang === 'he' ? 'מדריך יום כיף בטרקאי — המלא לשנת 2026' : 'Trakai Day Trip from Vilnius — Complete 2026 Guide',
+      title: lang === 'he' ? 'מדריך יום כיף בטרקאי — המדריך המלא' : 'Trakai Day Trip from Vilnius — Complete Guide',
       desc: lang === 'he'
         ? 'הטירה על האגם, קיבינאי, השכרת סירות, כדור פורח — כל מה שצריך לבילוי מושלם בטרקאי.'
         : 'The island castle, Karaim kibinai, boat rentals, hot air balloon, and the best coffee in town.',
@@ -916,7 +926,7 @@ function BlogScreen({ lang }) {
     {
       emoji: '🍽️',
       tag: lang === 'he' ? 'וילנה · מסעדות' : 'Vilnius · Restaurants',
-      title: lang === 'he' ? '8 המסעדות הכי טובות בווילנה (2026)' : '8 Best Restaurants in Vilnius (2026 Guide)',
+      title: lang === 'he' ? '8 המסעדות הכי טובות בווילנה' : '8 Best Restaurants in Vilnius',
       desc: lang === 'he'
         ? 'Le Travi, Donde, OSH Halal ועוד — המקומות שאנחנו חוזרים אליהם שוב ושוב.'
         : 'Le Travi, Donde, OSH Halal and more — the restaurants we keep coming back to.',
@@ -926,7 +936,7 @@ function BlogScreen({ lang }) {
     {
       emoji: '☕',
       tag: lang === 'he' ? 'וילנה · קפה' : 'Vilnius · Coffee',
-      title: lang === 'he' ? '7 בתי הקפה הכי טובים בווילנה (2026)' : '7 Best Coffee Shops in Vilnius (2026 Guide)',
+      title: lang === 'he' ? '7 בתי הקפה הכי טובים בווילנה' : '7 Best Coffee Shops in Vilnius',
       desc: lang === 'he'
         ? 'Espresinė, BREW, Backstage ועוד — מהמקומות שהמקומיים שותים בהם קפה.'
         : 'Espresinė, BREW, Backstage and more — where locals actually drink coffee.',
