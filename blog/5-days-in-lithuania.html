@@ -889,9 +889,9 @@
   </div><!-- /blog -->
 
   <script>
-    var isHe = false;
-    function toggleLang() {
-      isHe = !isHe;
+    var isHe = new URLSearchParams(window.location.search).get('lang') === 'he';
+
+    function applyLang() {
       var blog = document.getElementById('blog');
       blog.dir = isHe ? 'rtl' : 'ltr';
       blog.setAttribute('lang', isHe ? 'he' : 'en');
@@ -900,6 +900,13 @@
         el.innerHTML = isHe ? (el.dataset.he || el.dataset.en) : el.dataset.en;
       });
     }
+
+    function toggleLang() {
+      isHe = !isHe;
+      applyLang();
+    }
+
+    if (isHe) applyLang();
   </script>
 
 </body>
