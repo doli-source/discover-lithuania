@@ -500,7 +500,7 @@ function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
         <button className="mobile-menu" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
         </button>
-        <button className="brand" onClick={() => nav('home')}>
+        <a className="brand" href="/" onClick={(e) => { e.preventDefault(); nav('home'); }}>
           <span className="brand-mark">
             <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
               <path d="M12 2 L14 9 L21 11 L14 13 L12 22 L10 13 L3 11 L10 9 Z" opacity="0.95"/>
@@ -510,17 +510,18 @@ function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
             <span className="brand-name">{t.siteName}</span>
             <span className="brand-sub">{t.siteSub}</span>
           </span>
-        </button>
+        </a>
 
         <nav className="nav-links">
           {items.map(item => (
-            <button
+            <a
               key={item.id}
+              href={item.id === 'home' ? '/' : `/${item.id}`}
               className={`nav-link ${screen === item.id ? 'active' : ''}`}
-              onClick={() => nav(item.id)}
+              onClick={(e) => { e.preventDefault(); nav(item.id); }}
             >
               {item.label}
-            </button>
+            </a>
           ))}
         </nav>
 
@@ -546,13 +547,14 @@ function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
       {mobileOpen && (
         <div className="mobile-nav">
           {items.map(item => (
-            <button
+            <a
               key={item.id}
+              href={item.id === 'home' ? '/' : `/${item.id}`}
               className={`mobile-link ${screen === item.id ? 'active' : ''}`}
-              onClick={() => { nav(item.id); setMobileOpen(false); }}
+              onClick={(e) => { e.preventDefault(); nav(item.id); setMobileOpen(false); }}
             >
               {item.label}
-            </button>
+            </a>
           ))}
         </div>
       )}
@@ -606,14 +608,14 @@ function Footer({ lang, t, nav }) {
         <div className="footer-cols">
           <div className="footer-col">
             <h5>{lang === 'he' ? 'גלה' : 'Explore'}</h5>
-            <button onClick={() => nav('explore')}>{t.nav.explore}</button>
-            <button onClick={() => nav('routes')}>{t.nav.routes}</button>
-            <button onClick={() => nav('food')}>{t.nav.food}</button>
+            <a href="/explore" onClick={(e) => { e.preventDefault(); nav('explore'); }}>{t.nav.explore}</a>
+            <a href="/routes" onClick={(e) => { e.preventDefault(); nav('routes'); }}>{t.nav.routes}</a>
+            <a href="/food" onClick={(e) => { e.preventDefault(); nav('food'); }}>{t.nav.food}</a>
           </div>
           <div className="footer-col">
             <h5>{lang === 'he' ? 'אזורים' : 'Regions'}</h5>
             {REGIONS.map(r => (
-              <button key={r.id} onClick={() => nav('explore', { region: r.id })}>{r[lang].name}</button>
+              <a key={r.id} href={`/explore/${r.id}`} onClick={(e) => { e.preventDefault(); nav('explore', { region: r.id }); }}>{r[lang].name}</a>
             ))}
           </div>
           <div className="footer-col">

@@ -174,9 +174,9 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
             <div className="hstat"><span className="hstat-num">{stats.cities}</span><span className="hstat-lbl">{lang === 'he' ? 'אזורים' : 'Regions'}</span></div>
           </div>
           <div className="hero-cta">
-            <button className="btn btn-primary" onClick={() => nav('explore')}>
+            <a className="btn btn-primary" href="/explore" onClick={(e) => { e.preventDefault(); nav('explore'); }}>
               {lang === 'he' ? 'גלה את כל המקומות' : 'Explore all places'} <Icon.arrow style={{ transform: lang === 'he' ? 'scaleX(-1)' : 'none' }} />
-            </button>
+            </a>
             <a className="btn btn-ghost" href={mapUrl} target="_blank" rel="noopener noreferrer"
                onClick={(e) => { e.preventDefault(); window.open(mapUrl, '_blank', 'noopener,noreferrer'); }}>
               <Icon.pin /> {lang === 'he' ? 'פתח במפות Google' : 'Open Google Map'}
@@ -219,15 +219,15 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
             <h2 className="section-title">{lang === 'he' ? `${regions.length} אזורים לגלות` : `${regions.length} regions to explore`}</h2>
             <p className="section-sub">{lang === 'he' ? 'בחר אזור — וקבל את כל המקומות שם.' : 'Pick a region — get everything pinned there.'}</p>
           </div>
-          <button className="link-btn" onClick={() => nav('explore')}>
+          <a className="link-btn" href="/explore" onClick={(e) => { e.preventDefault(); nav('explore'); }}>
             {t.exploreCta} <Icon.arrow style={{ transform: lang === 'he' ? 'scaleX(-1)' : 'none' }} />
-          </button>
+          </a>
         </div>
         <div className="region-grid">
           {regions.map((r, i) => {
             const count = places.filter(p => p.region === r.id).length;
             return (
-              <article className="region-card" key={r.id} onClick={() => nav('explore', { region: r.id })} style={{ '--accent': r.accent }}>
+              <a className="region-card" key={r.id} href={`/explore/${r.id}`} onClick={(e) => { e.preventDefault(); nav('explore', { region: r.id }); }} style={{ '--accent': r.accent }}>
                 <div className="region-visual">
                   <img className="region-photo" src={(window.REGION_IMAGES && window.REGION_IMAGES[r.id]) || `regions/${r.id}.jpg`} alt={r[lang].name} loading="lazy" />
                   <span className="region-num-big">0{i + 1}</span>
@@ -241,7 +241,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
                 </div>
                 <h3 className="region-name">{r[lang].name}</h3>
                 <p className="region-blurb">{r[lang].blurb}</p>
-              </article>
+              </a>
             );
           })}
         </div>
@@ -291,13 +291,13 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
             <h2 className="section-title">{t.flagshipRoutes}</h2>
             <p className="section-sub">{lang === 'he' ? 'מסלולים מוכנים, מהיום הבודד עד שבוע שלם' : 'Ready-made routes, from a single day to a full week'}</p>
           </div>
-          <button className="link-btn" onClick={() => nav('routes')}>
+          <a className="link-btn" href="/routes" onClick={(e) => { e.preventDefault(); nav('routes'); }}>
             {t.routesCta} <Icon.arrow style={{ transform: lang === 'he' ? 'scaleX(-1)' : 'none' }} />
-          </button>
+          </a>
         </div>
         <div className="route-cards">
           {topRoutes.map(r => (
-            <article className="route-card" key={r.id} onClick={() => nav('routes', { route: r.id })}>
+            <a className="route-card" key={r.id} href={`/routes/${r.id}`} onClick={(e) => { e.preventDefault(); nav('routes', { route: r.id }); }}>
               <div className="route-duration">
                 <span className="dur-num">{r.stops.length}</span>
                 <span className="dur-unit">{t.stops}</span>
@@ -313,7 +313,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
                   <span key={i} className={`trail-dot ${i === 0 ? 'first' : ''}`}></span>
                 ))}
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </section>
@@ -326,9 +326,9 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
             <h2 className="section-title">{lang === 'he' ? 'טעמים ליטאיים' : 'Lithuanian Tastes'}</h2>
             <p className="section-sub">{lang === 'he' ? 'המנות המסורתיות שכדאי להזמין — וכמובן איפה לאכול אותן.' : 'Traditional dishes worth ordering — and where to find them.'}</p>
           </div>
-          <button className="link-btn" onClick={() => nav('food')}>
+          <a className="link-btn" href="/food" onClick={(e) => { e.preventDefault(); nav('food'); }}>
             {lang === 'he' ? 'תפריט מלא' : 'Full menu'} <Icon.arrow style={{ transform: lang === 'he' ? 'scaleX(-1)' : 'none' }} />
-          </button>
+          </a>
         </div>
         <div className="taste-grid">
           {tasteSample.map((f, i) => (
@@ -356,9 +356,9 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
               : 'Build your own trip from all the places and routes. Everything you need — in one place.'}
           </p>
           <div className="closing-cta">
-            <button className="btn btn-primary btn-large" onClick={() => nav('routes')}>
+            <a className="btn btn-primary btn-large" href="/routes" onClick={(e) => { e.preventDefault(); nav('routes'); }}>
               {t.cta} <Icon.arrow style={{ transform: lang === 'he' ? 'scaleX(-1)' : 'none' }} />
-            </button>
+            </a>
             <a className="btn btn-ghost btn-large" href={mapUrl} target="_blank" rel="noopener noreferrer"
                onClick={(e) => { e.preventDefault(); window.open(mapUrl, '_blank', 'noopener,noreferrer'); }}>
               <Icon.pin /> {lang === 'he' ? 'כל המפה' : 'Full map'}
