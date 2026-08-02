@@ -743,69 +743,12 @@ function StaysScreen({ lang, t, places, regions, openPlace, savedSet, toggleSave
 
 // ─── PLACE DETAIL MODAL ──────────────────────────────────────────────────
 function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, mapUrl }) {
-  const mapRef = React.useRef(null);
-  const mapInstanceRef = React.useRef(null);
-
   useEffect(() => {
     const onKey = (e) => { if (e.key === 'Escape') onClose(); };
     window.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
     return () => { window.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
   }, []);
-
-  useEffect(() => {
-    if (!place || !place.lat || !place.lng) return;
-
-    const initLeaflet = () => {
-      if (!mapRef.current || mapInstanceRef.current) return;
-      const L = window.L;
-      const map = L.map(mapRef.current, {
-        center: [place.lat, place.lng],
-        zoom: 15,
-        zoomControl: false,
-        scrollWheelZoom: false,
-        attributionControl: false,
-        dragging: true,
-      });
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
-      const accent = (region && region.accent) || '#C28840';
-      const icon = L.divIcon({
-        className: '',
-        html: `<div style="width:38px;height:38px;background:${accent};border:3px solid #fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,0.35);">${place.emoji}</div>`,
-        iconSize: [38, 38],
-        iconAnchor: [19, 19],
-      });
-      L.marker([place.lat, place.lng], { icon }).addTo(map);
-      mapInstanceRef.current = map;
-    };
-
-    const tryInit = () => { if (window.L) { setTimeout(initLeaflet, 60); } };
-
-    if (window.L) {
-      setTimeout(initLeaflet, 60);
-    } else {
-      if (!document.getElementById('leaflet-css')) {
-        const link = document.createElement('link');
-        link.id = 'leaflet-css';
-        link.rel = 'stylesheet';
-        link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-        document.head.appendChild(link);
-      }
-      if (!document.getElementById('leaflet-js')) {
-        const s = document.createElement('script');
-        s.id = 'leaflet-js';
-        s.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
-        s.onload = () => setTimeout(initLeaflet, 60);
-        document.head.appendChild(s);
-      } else {
-        const iv = setInterval(() => { if (window.L) { clearInterval(iv); setTimeout(initLeaflet, 60); } }, 120);
-      }
-    }
-
-    return () => {
-      if (mapInstanceRef.current) { mapInstanceRef.current.remove(); mapInstanceRef.current = null; }
-    };
-  }, [place]);
 
   if (!place) return null;
   const typeLabel = lang === 'he' ? place.typeHe : place.type;
@@ -819,7 +762,18 @@ function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, map
         <button className="modal-close" onClick={onClose}><Icon.close /></button>
 
         {hasCoords ? (
-          <div className="modal-map-container" ref={mapRef} />
+          <div className="modal-map-container">
+            <iframe
+              src={`https://maps.google.com/maps?q=${place.lat},${place.lng}&z=15&output=embed`}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={place.name}
+            />
+          </div>
         ) : (
           <div className="modal-img">
             <div className="modal-img-bg" style={{ background: `linear-gradient(135deg, ${accentColor}33, ${accentColor}11)` }}>
