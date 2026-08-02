@@ -761,7 +761,7 @@ function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, map
       const L = window.L;
       const map = L.map(mapRef.current, {
         center: [place.lat, place.lng],
-        zoom: 14,
+        zoom: 15,
         zoomControl: false,
         scrollWheelZoom: false,
         attributionControl: false,
@@ -815,7 +815,7 @@ function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, map
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
-      <div className="modal" onClick={e => e.stopPropagation()}>
+      <div className="modal" dir={lang === 'he' ? 'rtl' : 'ltr'} onClick={e => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose}><Icon.close /></button>
 
         {hasCoords ? (
