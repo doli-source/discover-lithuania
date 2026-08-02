@@ -94,7 +94,12 @@ const PLACES = [
     "niv": "The Latvian roastery KALVE's first Vilnius café — exceptional milky coffees and pastries from GRUDAS Bakery in a beautifully restored courtyard.",
     "nivHe": "הסניף הראשון של KALVE הלטווית בווילנה — קפה חלב יוצא דופן ומאפים מ-GRUDAS בחצר מוחזרת יפה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6919508,
+    "lng": 25.2719222,
+    "hours": "Mon-Fri 08:00-19:00 · Sat-Sun 09:00-19:00",
+    "hoursHe": "ב'-ו' 08:00-19:00 · ש'-א' 09:00-19:00",
+    "website": "https://kalvecoffee.com"
   },
   {
     "id": "rocketbean-kavin",
@@ -110,7 +115,11 @@ const PLACES = [
     "niv": "A Baltic specialty roastery from Riga — three types of espresso, excellent filter coffee, and always flawlessly executed.",
     "nivHe": "מקלה קפה בלטית מריגה — שלושה סוגי אספרסו, פילטר מצוין ותמיד מבוצע בשלמות.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6863,
+    "lng": 25.2812,
+    "hours": "Mon-Thu 09:00-17:00 · Fri 09:00-16:00 · Sat,Sun off",
+    "hoursHe": "ב'-ה' 09:00-17:00 · ו' 09:00-16:00 · ש',א' off"
   },
   {
     "id": "yugen-tea",
@@ -126,7 +135,12 @@ const PLACES = [
     "niv": "A Japanese tea studio in Užupis run by a certified tea master — rare single-farm teas from Japan, ceremony-style preparation, and a calm that's hard to find elsewhere in Vilnius.",
     "nivHe": "סטודיו תה יפני ב-Užupis בניהול מאסטר תה מוסמך — תיות נדירות מחקלאי יחיד ביפן, הכנה בסגנון טקס ושקט שקשה למצוא בווילנה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.681006,
+    "lng": 25.2974414,
+    "hours": "Tue-Sat 12:00-20:00 · Sun 12:00-19:00",
+    "hoursHe": "ג'-ש' 12:00-20:00 · א' 12:00-19:00",
+    "website": "https://www.yugentea.lt"
   },
   {
     "id": "espresin",
@@ -143,7 +157,9 @@ const PLACES = [
     "nivHe": "בר אספרסו זעיר עם קפה ברמה רצינית. מקום מועדף על המקומיים.",
     "mapUrl": "https://maps.app.goo.gl/L7yNZbDcwaEXpk8S9",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6920896,
+    "lng": 25.2541696
   },
   {
     "id": "mon",
@@ -159,7 +175,11 @@ const PLACES = [
     "niv": "A specialty coffee shop with a hidden inner courtyard on Šv. Mikalojaus Street — excellent brunch plates and coffee that draws regulars every morning.",
     "nivHe": "בית קפה מיוחד עם חצר פנימית נסתרת ברחוב Šv. Mikalojaus — צלחות ברנץ' מצוינות וקפה שמושך קבועים כל בוקר.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.679042,
+    "lng": 25.2831456,
+    "hours": "Mon-Fri 08:00-20:00 · Sat-Sun 09:00-20:00",
+    "hoursHe": "ב'-ו' 08:00-20:00 · ש'-א' 09:00-20:00"
   },
   {
     "id": "strangelove",
@@ -175,7 +195,11 @@ const PLACES = [
     "niv": "One of Vilnius's beloved specialty roasters since 2015 — beans roasted in-house and a sprawling terrace alongside the Bernardine Gardens.",
     "nivHe": "אחת מקלייות הקפה המיוחדות האהובות בווילנה מאז 2015 — פולים קלויים בעצמם וטרסה רחבה לצד גן ברנרדין.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6851524,
+    "lng": 25.2936593,
+    "hours": "Mon-Fri 08:00-20:00 · Sat, Sun 10:00-20:00",
+    "hoursHe": "ב'-ו' 08:00-20:00 · ש', א' 10:00-20:00"
   },
   {
     "id": "coffee-circus-piano",
@@ -191,7 +215,9 @@ const PLACES = [
     "niv": "A specialty coffee community with a big red piano at its center — customers play, baristas talk coffee, and nobody is in a hurry.",
     "nivHe": "קהילת קפה מיוחדת עם פסנתר אדום גדול במרכז — לקוחות מנגנים, בריסטות מדברים קפה ואף אחד לא ממהר.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.677537,
+    "lng": 25.284312
   },
   {
     "id": "brew-specialty-coffee",
@@ -208,7 +234,11 @@ const PLACES = [
     "nivHe": "קלייה ספשלטי עם מאפים מעולים — עצירת בוקר מושלמת.",
     "mapUrl": "https://maps.app.goo.gl/3oA2cV61rYqw5gZNA",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6740271,
+    "lng": 25.2701278,
+    "hours": "Mon-Thu 09:00-15:00 · Fri 09:00-14:30",
+    "hoursHe": "ב'-ה' 09:00-15:00 · ו' 09:00-14:30"
   },
   {
     "id": "art-cafe",
@@ -224,7 +254,11 @@ const PLACES = [
     "niv": "A café-gallery in Vilnius's old town hosting rotating exhibitions — art on every wall, homemade croissants and cakes on every table.",
     "nivHe": "קפה-גלריה בעיר העתיקה של וילנה עם תערוכות מתחלפות — אמנות על כל קיר, קרואסונים ועוגות תוצרת בית על כל שולחן.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6934143,
+    "lng": 25.2692898,
+    "hours": "Mon-Fri 09:30-17:30 · Sat-Sun 11:30-15:00",
+    "hoursHe": "ב'-ו' 09:30-17:30 · ש'-א' 11:30-15:00"
   },
   {
     "id": "beigelistai",
@@ -240,7 +274,11 @@ const PLACES = [
     "niv": "New York-style bagels, freshly baked and stuffed with salmon & cream cheese, pastrami, or braised beef — a small return of Jewish Vilna's most iconic food.",
     "nivHe": "ביגלים בסגנון ניו-יורק, אפויים טרי ומגיעים עם סלמון ושמנת, פסטרמה או בשר מבושל — חזרה קטנה של האוכל היהודי-וילנאי המזוהה ביותר.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6821579,
+    "lng": 25.2905398,
+    "hours": "Mon-Sun 09:00-19:00",
+    "hoursHe": "ב'-א' 09:00-19:00"
   },
   {
     "id": "backstage-roastery-caf",
@@ -257,7 +295,12 @@ const PLACES = [
     "nivHe": "אחד הברנצ'ים הכי טובים בווילנה — תמיד מלא, תמיד שווה.",
     "mapUrl": "https://www.google.com/maps?q=54.6747985,25.2660406",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6747985,
+    "lng": 25.2660406,
+    "hours": "Mon-Fri 08:00-19:00, Sat-Sun 09:00-17:00",
+    "hoursHe": "ב'-ו' 08:00-19:00, ש'-א' 09:00-17:00",
+    "website": "https://backstageroasters.com"
   },
   {
     "id": "backstage-cafe-vokie-i-str",
@@ -273,7 +316,11 @@ const PLACES = [
     "niv": "A roastery café on Vokiečių Street founded by photographers — Backstage's own freshly roasted beans, exposed-brick walls, and a brunch menu that rewards a slow morning.",
     "nivHe": "קפה-מקלה ברחוב Vokiečių שנוסד על ידי צלמים — פולים קלויים טרי של Backstage, לבנים חשופות ותפריט ברנץ' שמתגמל בוקר איטי.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6784386,
+    "lng": 25.2849119,
+    "hours": "Mon-Fri 08:00-20:00 · Sat-Sun 08:30-18:00",
+    "hoursHe": "ב'-ו' 08:00-20:00 · ש'-א' 08:30-18:00"
   },
   {
     "id": "italala-caff",
@@ -289,7 +336,11 @@ const PLACES = [
     "niv": "An Italian-style specialty café in the old town with chairs that swing — espresso from a Florence roaster, authentic cornetti, and handmade gelato.",
     "nivHe": "בר קפה איטלקי-מיוחד בעיר העתיקה עם כיסאות מתנדנדים — אספרסו ממקלה פירנצאי, קורנטי אמיתיים וג'לטו תוצרת בית.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6785978,
+    "lng": 25.2858726,
+    "hours": "Mon-Fri 08:00-21:00 · Sat-Sun 09:00-21:00",
+    "hoursHe": "ב'-ו' 08:00-21:00 · ש'-א' 09:00-21:00"
   },
   {
     "id": "lola",
@@ -305,7 +356,12 @@ const PLACES = [
     "niv": "An all-day brunch café near the old town — Turkish eggs, shakshuka, and avocado toast from morning until close.",
     "nivHe": "קפה ברנץ' כל היום ליד העיר העתיקה — ביצים טורקיות, שקשוקה וטוסט אבוקדו מהבוקר ועד הסגירה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6779425,
+    "lng": 25.2790432,
+    "hours": "Mon-Fri 08:00-17:00 · Sat-Sun 10:00-17:00",
+    "hoursHe": "ב'-ו' 08:00-17:00 · ש'-א' 10:00-17:00",
+    "website": "https://www.lolavilnius.lt"
   },
   {
     "id": "cafe-de-pacai",
@@ -322,7 +378,11 @@ const PLACES = [
     "nivHe": "פטיסרי צרפתית בעיר העתיקה ברחוב דיג'ויה — קרואסונים יוצאי דופן, קינוחים מפוסלים ו-Afternoon Tea שכדאי לתכנן סביבו.",
     "mapUrl": "https://maps.app.goo.gl/qXccSQdg81uUbvAP8",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6801626,
+    "lng": 25.2855038,
+    "hours": "Mon-Thu 10:00-22:00 · Fri-Sun 10:00-23:00",
+    "hoursHe": "ב'-ה' 10:00-22:00 · ו'-א' 10:00-23:00"
   },
   {
     "id": "barn-bistro-b-arn",
@@ -338,7 +398,11 @@ const PLACES = [
     "niv": "Top-end dining — extraordinary quality.",
     "nivHe": "ארוחה ברמה הכי גבוהה — איכות יוצאת דופן.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.679,
+    "lng": 25.2831,
+    "hours": "Mon-Wed 10:00-22:00, Thu 10:00-23:00, Fri,Sat 10:00-04:00, Sun 10:00-23:00",
+    "hoursHe": "ב'-ד' 10:00-22:00, ה' 10:00-23:00, ו',ש' 10:00-04:00, א' 10:00-23:00"
   },
   {
     "id": "tempo-v39",
@@ -354,7 +418,11 @@ const PLACES = [
     "niv": "A Mediterranean bistro on Vilniaus Street born from late-night vinyl sessions — natural wines, sharing plates, and an evening crowd that stays for the vibe.",
     "nivHe": "ביסטרו ים-תיכוני ברחוב Vilniaus שנולד מהפעלות ויניל בשעות הלילה — יינות טבעיים, צלחות לשיתוף וקהל ערב שנשאר על הוויב.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.678,
+    "lng": 25.285,
+    "hours": "Mon-Sat 10:00-20:00 · Sun 10:00-15:00",
+    "hoursHe": "ב'-ש' 10:00-20:00 · א' 10:00-15:00"
   },
   {
     "id": "pachamama-dinner-club",
@@ -370,7 +438,12 @@ const PLACES = [
     "niv": "Peruvian-Nikkei fusion with smoke, show, and DJ nights — ranked #4 in all of Vilnius, with a signature mistura de ceviches that alone justifies the visit.",
     "nivHe": "פיוז'ן פרואני-ניקיי עם עשן, מופע וערבי DJ — מדורג #4 בכל וילנה, עם mistura de ceviches חתימה שלבד מצדיקה את הביקור.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6875327,
+    "lng": 25.2814507,
+    "hours": "Mon 17:00-24:00 · Tue 17:00-24:00 · Wed 17:00-24:00 · Thu 17:00-02:00…",
+    "hoursHe": "ב' 17:00-24:00 · ג' 17:00-24:00 · ד' 17:00-24:00 · ה' 17:00-02:00…",
+    "website": "https://www.pachamama.lt"
   },
   {
     "id": "meat-steakhouse",
@@ -386,7 +459,11 @@ const PLACES = [
     "niv": "A serious steakhouse with a dedicated aging chamber — beef dry-aged for at least 28 days before it reaches your plate, and no kids after 5pm.",
     "nivHe": "בית בשר רציני עם תא הבשלה ייעודי — בקר מיובש לפחות 28 יום לפני שמגיע לצלחת, וללא ילדים אחרי 17:00.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6917949,
+    "lng": 25.2883262,
+    "hours": "Mon-Thu 11:30-23:00 · Fri 11:30-24:00 · Sat 10:00-24:00 · Sun 10:00-20:30",
+    "hoursHe": "ב'-ה' 11:30-23:00 · ו' 11:30-24:00 · ש' 10:00-24:00 · א' 10:00-20:30"
   },
   {
     "id": "cha-apuri",
@@ -402,7 +479,11 @@ const PLACES = [
     "niv": "The best Georgian kitchen in Vilnius — six varieties of khachapuri, proper khinkali by the dozen, and staff who show you the right way to eat them.",
     "nivHe": "המטבח הגרוזיני הכי טוב בווילנה — שישה סוגי חאצ'פורי, חינקלי אמיתי בתריסרים וצוות שמראה לך את הדרך הנכונה לאכול אותם.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.7405956,
+    "lng": 25.2287529,
+    "hours": "Mon-Sun 10:00-22:00",
+    "hoursHe": "ב'-א' 10:00-22:00"
   },
   {
     "id": "focacceria",
@@ -418,7 +499,11 @@ const PLACES = [
     "niv": "A tiny Italian focacceria that opened in 2025 and quickly earned five stars — fresh focaccia sandwiches, simple and executed perfectly.",
     "nivHe": "פוקאצ'ריה איטלקית זעירה שנפתחה ב-2025 וזכתה במהרה לחמישה כוכבים — כריכי פוקאצ'ה טריים, פשוטים ומבוצעים בשלמות.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6785,
+    "lng": 25.286,
+    "hours": "Mon-Sat 10:00-20:00 · Sun 10:00-15:00",
+    "hoursHe": "ב'-ש' 10:00-20:00 · א' 10:00-15:00"
   },
   {
     "id": "baleboste",
@@ -434,7 +519,9 @@ const PLACES = [
     "niv": "Traditional Litvak Jewish cuisine at the foot of the Hales Market — forshmak, borscht, pastrami bagels, and cabbage rolls the way old Vilna used to make them.",
     "nivHe": "מטבח ליטבי-יהודי מסורתי בשולי שוק הלס — פורשמאק, בורשט, ביגל עם פסטרמה וכרוב ממולא כפי שוילנה הישנה נהגה לעשות.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6737907,
+    "lng": 25.2857133
   },
   {
     "id": "le-travi",
@@ -451,7 +538,11 @@ const PLACES = [
     "nivHe": "ביסטרו איטלקי חמימות — פסטה מעולה ואווירה אינטימית.",
     "mapUrl": "https://maps.app.goo.gl/jdVee8KgtKYz238f7",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6807958,
+    "lng": 25.2953717,
+    "hours": "Mon-Sun 08:00-22:00",
+    "hoursHe": "ב'-א' 08:00-22:00"
   },
   {
     "id": "donde",
@@ -467,7 +558,11 @@ const PLACES = [
     "niv": "Vilnius's go-to Tex-Mex spot — homemade tortillas and consistently the best tacos in the city.",
     "nivHe": "היעד ל-Tex-Mex בווילנה — טורטיות תוצרת בית והטאקו הכי עקבי בעיר.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6774422,
+    "lng": 25.2660572,
+    "hours": "Tue-Sat 10:00-22:00",
+    "hoursHe": "ג'-ש' 10:00-22:00"
   },
   {
     "id": "osh-halal",
@@ -484,7 +579,11 @@ const PLACES = [
     "nivHe": "פלוב אוזבקי אמיתי ברחוב Kalvarijų — הלאל, מנות גדולות ומהאוכל הכי אמיתי ממרכז אסיה בווילנה. מקום שהמקומיים חוזרים אליו שוב ושוב.",
     "mapUrl": "https://maps.app.goo.gl/duTJLg636vjfqwSPA",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6960772,
+    "lng": 25.2786987,
+    "hours": "Mon-Thu 8:00-17:00 · Fri 8:00-15:45",
+    "hoursHe": "ב'-ה' 8:00-17:00 · ו' 8:00-15:45"
   },
   {
     "id": "mason-restoranas",
@@ -500,7 +599,11 @@ const PLACES = [
     "niv": "A classic old-town restaurant with a green terrace — potato pancakes with salmon, fresh mussels, and a European menu that never lets you down.",
     "nivHe": "מסעדה קלאסית בעיר העתיקה עם טרסה ירוקה — לביבות תפוח אדמה עם סלמון, מולים טריים ותפריט אירופאי שאף פעם לא מאכזב.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6791356,
+    "lng": 25.288576,
+    "hours": "Mon-Thu 17:00-23:00 · Fri 17:00-00:00 · Sat 10:00-00:00 · Sun 10:00-23:00",
+    "hoursHe": "ב'-ה' 17:00-23:00 · ו' 17:00-00:00 · ש' 10:00-00:00 · א' 10:00-23:00"
   },
   {
     "id": "2-vir-jai",
@@ -516,7 +619,11 @@ const PLACES = [
     "niv": "Run by two local cooks — perfect rating, no tourists, honest Lithuanian food. Exactly what you want in the middle of a Vilnius day.",
     "nivHe": "מקום צהריים קטן של שני שפים מקומיים. דירוג מושלם, בלי תיירים, אוכל ליטאי אמיתי. בדיוק מה שצריך באמצע יום בווילנה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.68,
+    "lng": 25.287,
+    "hours": "Mon-Fri 09:00-19:00 · Sat-Sun 10:00-18:00",
+    "hoursHe": "ב'-ו' 09:00-19:00 · ש'-א' 10:00-18:00"
   },
   {
     "id": "bistro-n-2",
@@ -532,7 +639,12 @@ const PLACES = [
     "niv": "A Scandinavian-inspired bistro with natural wines and seasonal Lithuanian produce — fish and chips done properly and a roast beef worth going back for.",
     "nivHe": "ביסטרו בהשראה סקנדינבית עם יינות טבעיים ותוצרת ליטאית עונתית — פיש אנד צ'יפס שנעשה כמו שצריך ורוסט ביף ששווה לחזור עבורו.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6764434,
+    "lng": 25.2899694,
+    "hours": "Tue-Fri 18:00-23:00 · Sat 11:00-23:00 · Sun 11:00-21:00",
+    "hoursHe": "ג'-ו' 18:00-23:00 · ש' 11:00-23:00 · א' 11:00-21:00",
+    "website": "https://n2bistro.com"
   },
   {
     "id": "naked-noah",
@@ -548,7 +660,11 @@ const PLACES = [
     "niv": "The largest natural wine shop in the Baltics — over 150 labels from small producers worldwide, with staff who know every bottle personally.",
     "nivHe": "חנות היין הטבעי הגדולה ביותר בבלטיים — מעל 150 תוויות מיצרנים קטנים ברחבי העולם, עם צוות שמכיר אישית כל בקבוק.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.677,
+    "lng": 25.284,
+    "hours": "Mon-Fri 12:00-18:00 · Sat 12:00-16:00",
+    "hoursHe": "ב'-ו' 12:00-18:00 · ש' 12:00-16:00"
   },
   {
     "id": "burbulio-vynin",
@@ -564,7 +680,11 @@ const PLACES = [
     "niv": "A small Italian wine bar and shop on Rūdninkų Street — self-imported sparkling wines from small producers, nduja and cheese on the side, and a wonderfully unpretentious Italian atmosphere.",
     "nivHe": "בר יין ואיטלקי קטן ברחוב Rūdninkų — יינות מבועים מיובאים ישירות מיצרנים קטנים, נדוג'ה וגבינה בצד, ואווירה איטלקית נפלאה וחפה מיומרה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6762254,
+    "lng": 25.2843376,
+    "hours": "Tue-Thu 15:00-23:00 · Fri,Sat 12:00-23:00",
+    "hoursHe": "ג'-ה' 15:00-23:00 · ו',ש' 12:00-23:00"
   },
   {
     "id": "la-madeleine-atelier",
@@ -580,7 +700,9 @@ const PLACES = [
     "niv": "A French pastry atelier with the best croissants in Vilnius — fresh quiches, tarts, and croissant sandwiches in a proper Parisian spirit.",
     "nivHe": "אטלייה מאפים צרפתי עם הקרואסונים הכי טובים בווילנה — קישים טריים, טארטים וכריכי קרואסון ברוח פריזאית אמיתית.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.679,
+    "lng": 25.281
   },
   {
     "id": "mindaugo-kepykla",
@@ -596,7 +718,11 @@ const PLACES = [
     "niv": "A Vilnius legend since 2010 — cakes, croissants, and Lithuanian pastry classics made the same careful way they have always been.",
     "nivHe": "אגדה וילנאית מאז 2010 — עוגות, קרואסונים וקלאסיקות מאפה ליטאיות שנעשות באותה דרך זהירה כפי שהן תמיד נעשו.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.676,
+    "lng": 25.282,
+    "hours": "Mon-Thu 15:00-19:00 · Fri-Sat 11:00-17:00",
+    "hoursHe": "ב'-ה' 15:00-19:00 · ו'-ש' 11:00-17:00"
   },
   {
     "id": "desert-klubas",
@@ -614,7 +740,11 @@ const PLACES = [
     "mapUrl": "https://maps.app.goo.gl/ngL6mx8mJQMgLZnJ7",
     "mapUrl2": "https://maps.app.goo.gl/iRFdyWJicn16czTS7",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.669065,
+    "lng": 25.2599815,
+    "hours": "Mon-Sat 08:00-18:00 · Sun 08:00-15:00",
+    "hoursHe": "ב'-ש' 08:00-18:00 · א' 08:00-15:00"
   },
   {
     "id": "bundu",
@@ -630,7 +760,11 @@ const PLACES = [
     "niv": "A Kaunas bakery connected to the Pranciškaus family mill — handmade sourdough bread, fresh pastries, specialty coffee, and a space that feels like a real neighborhood place.",
     "nivHe": "מאפייה בקובנה המחוברת לטחנת משפחת Pranciškaus — לחם מחמצת תוצרת בית, מאפים טריים, קפה מיוחד ומקום שמרגיש כמו שכונה אמיתית.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.678,
+    "lng": 25.286,
+    "hours": "Mon-Sat 10:00-20:00 · Sun 10:00-15:00",
+    "hoursHe": "ב'-ש' 10:00-20:00 · א' 10:00-15:00"
   },
   {
     "id": "adata-bar",
@@ -647,7 +781,11 @@ const PLACES = [
     "nivHe": "בר קוקטיילים אינטימי עם שתייה יצירתית. כדאי להזמין מקום.",
     "mapUrl": "https://maps.app.goo.gl/sKGGPa3UoayEPEDB6",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6741479,
+    "lng": 25.2642577,
+    "hours": "Mon-Fri 08:00-18:30 · Sat 10:00-15:00",
+    "hoursHe": "ב'-ו' 08:00-18:30 · ש' 10:00-15:00"
   },
   {
     "id": "paupio-turgus",
@@ -663,7 +801,12 @@ const PLACES = [
     "niv": "Best food market in Vilnius — go on Saturday morning.",
     "nivHe": "השוק הכי טוב בווילנה — שווה ללכת בשבת בבוקר.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6785854,
+    "lng": 25.3030198,
+    "hours": "Fri-Sat 11:00-22:00 · Sun-Thu 11:00-21:00",
+    "hoursHe": "ו'-ש' 11:00-22:00 · א'-ה' 11:00-21:00",
+    "website": "https://www.paupioturgus.lt"
   },
   {
     "id": "benedikto-turgus",
@@ -679,7 +822,12 @@ const PLACES = [
     "niv": "A proper farmers' market in northern Vilnius — 50+ Lithuanian producers alongside global gourmet traders, and nine restaurants inside to eat your way through.",
     "nivHe": "שוק איכרים אמיתי בצפון וילנה — מעל 50 יצרנים ליטאים לצד סוחרי גורמה גלובליים, ותשע מסעדות בפנים לאכול דרכן.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.7280213,
+    "lng": 25.2412022,
+    "hours": "Mon-Sat 09:00-20:00 · Sun 09:00-17:00",
+    "hoursHe": "ב'-ש' 09:00-20:00 · א' 09:00-17:00",
+    "website": "https://benediktoturgus.lt"
   },
   {
     "id": "3m-zos-rooftop-bar",
@@ -695,7 +843,11 @@ const PLACES = [
     "niv": "On the roof of the National Drama Theatre — a panoramic view of Gediminas Castle and the Cathedral, with Middle Eastern meze plates made for sharing.",
     "nivHe": "על גג התיאטרון הלאומי לדרמה — נוף פנורמי של מגדל גדימינס והקתדרלה, עם צלחות מזה מזרח-תיכוני שנועדו לשיתוף.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6793,
+    "lng": 25.2802,
+    "hours": "Mon-Fri 08:00-19:00 · Sat,Sun 09:00-18:00",
+    "hoursHe": "ב'-ו' 08:00-19:00 · ש',א' 09:00-18:00"
   },
   {
     "id": "po-ba-ka",
@@ -711,7 +863,11 @@ const PLACES = [
     "niv": "A barrel bar tucked into the Vilnius old town — a focused natural wine list, zero pretension, and the kind of crowd that found it by word of mouth.",
     "nivHe": "בר חביות מוסתר בעיר העתיקה של וילנה — רשימת יין טבעי ממוקדת, אפס יומרה, וקהל שמצא אותו מפה לאוזן.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.677,
+    "lng": 25.283,
+    "hours": "Mon-Fri 08:00-19:00 · Sat 09:00-17:00",
+    "hoursHe": "ב'-ו' 08:00-19:00 · ש' 09:00-17:00"
   },
   {
     "id": "mo-museum",
@@ -727,7 +883,11 @@ const PLACES = [
     "niv": "World-class modern art museum — don't miss it.",
     "nivHe": "מוזיאון אמנות מודרנית ברמה עולמית — לא לפספס.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6793497,
+    "lng": 25.2774967,
+    "hours": "Sun-Wed 10:00-20:00 · Thu-Sat 10:00-22:00",
+    "hoursHe": "א'-ד' 10:00-20:00 · ה'-ש' 10:00-22:00"
   },
   {
     "id": "men-fabrikas-loftas",
@@ -743,7 +903,11 @@ const PLACES = [
     "niv": "Lithuania's most active cultural venue in a converted Soviet-era ELFA factory — concerts, theater, film, street art, and a massive open-air mural gallery all on one site.",
     "nivHe": "המקום התרבותי הפעיל ביותר בליטא במפעל ELFA הסובייטי שהוסב — קונצרטים, תיאטרון, קולנוע, אמנות רחוב וגלריית ציורי קיר עצומה בשטח פתוח — הכל באתר אחד.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6697,
+    "lng": 25.2692,
+    "hours": "Mon, Wed, Fri 14:00-22:00 · Tue, Thu 08:00-22:00 · Sat-Sun 11:00-20:00",
+    "hoursHe": "ב', ד', ו' 14:00-22:00 · ג', ה' 08:00-22:00 · ש'-א' 11:00-20:00"
   },
   {
     "id": "the-green-house",
@@ -759,7 +923,11 @@ const PLACES = [
     "niv": "The Holocaust exhibition of the Vilna Gaon Jewish Museum — seven quiet rooms tracing Lithuanian Jewish history from its golden age to its near-total destruction in WWII.",
     "nivHe": "תערוכת השואה של מוזיאון הגאון מוילנה — שבעה חדרים שקטים המתעדים את ההיסטוריה היהודית הליטאית מתקופתה הזהובה ועד לחורבנה הכמעט-מוחלט במלחמת העולם השנייה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.681,
+    "lng": 25.279,
+    "hours": "Mon-Fri 09:00-17:00",
+    "hoursHe": "ב'-ו' 09:00-17:00"
   },
   {
     "id": "gediminas-castle",
@@ -775,7 +943,11 @@ const PLACES = [
     "niv": "Fantastic view of Vilnius — come at sunset for the golden hour. Watch hot-air balloons in the morning.",
     "nivHe": "נוף מטריף על וילנה — בואו בשקיעה לשעת הזהב. בבוקר אפשר לראות כדורים פורחים.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6869,
+    "lng": 25.2903,
+    "hours": "May 1-Sep 30 10:00-19:00 · Oct 1-Apr 30 10:00-17:00",
+    "hoursHe": "May 1-Sep 30 10:00-19:00 · Oct 1-Apr 30 10:00-17:00"
   },
   {
     "id": "atvira-meno-galerija",
@@ -791,7 +963,9 @@ const PLACES = [
     "niv": "A free, 24/7 open-air street art gallery in the former Elfa factory yard — 50+ large-scale murals, light installations, and sculptures by Lithuanian and international artists.",
     "nivHe": "גלריית אמנות רחוב בשטח פתוח, חינמית ופתוחה 24/7 בחצר מפעל אלפה לשעבר — מעל 50 ציורי קיר בקנה-מידה גדול, התקנות אור ופסלים מאמנים ליטאים ובינלאומיים.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6696766,
+    "lng": 25.2692306
   },
   {
     "id": "backstage-roastery-hq",
@@ -807,7 +981,11 @@ const PLACES = [
     "niv": "The roasting hub of Backstage Roasters on T. Ševčenkos Street — beans sourced from Brazil and Thailand, roasted on the second floor, poured downstairs at the café.",
     "nivHe": "מרכז הקלייה של Backstage Roasters ברחוב T. Ševčenkos — פולים מברזיל ותאילנד, קלויים בקומה השנייה ומוגשים למטה בקפה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6784,
+    "lng": 25.2849,
+    "hours": "Mon-Fri 08:00-20:00 · Sat-Sun 08:30-18:00",
+    "hoursHe": "ב'-ו' 08:00-20:00 · ש'-א' 08:30-18:00"
   },
   {
     "id": "snapas-kava-ir-desertai",
@@ -823,7 +1001,11 @@ const PLACES = [
     "niv": "A tiny café on Vytauto Street that a local woman, Laima, opened herself after years of failing to find a proper cup of coffee in Trakai — now it's the warmest corner in town, with single-origin coffee, fresh-baked croissants and brownies every morning, and homemade treats from her own honeyberry orchard.",
     "nivHe": "בית קפה קטן ברחוב ויטאוטו שלאימה, תושבת מקומית, פתחה בעצמה אחרי שנים שלא הצליחה למצוא כוס קפה הגונה בטראקאי — היום זה הפינה הכי חמימה בעיר: קפה איכותי, קרואסונים ובראוניז שנאפים טריים כל בוקר, וממתקים ביתיים מהגינה שלה עם פירות יער sausmedis.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6458,
+    "lng": 24.9329,
+    "hours": "24/7",
+    "hoursHe": "24/7"
   },
   {
     "id": "b-heme-house",
@@ -839,7 +1021,10 @@ const PLACES = [
     "niv": "A creative, eclectic restaurant with an artistic soul — the kind of place that feels like a Kaunas locals' living room. Great for an unhurried dinner with character.",
     "nivHe": "מסעדה יצירתית ואקלקטית עם נשמה אמנותית — המקום שמרגיש כמו סלון של מקומיים בקאונאס. מעולה לארוחת ערב נינוחה עם אופי.",
     "status": "pending",
-    "source": "ai"
+    "source": "ai",
+    "lat": 54.8955765,
+    "lng": 23.8895434,
+    "website": "https://bohemehouse.lt"
   },
   {
     "id": "habits-bakery",
@@ -855,7 +1040,9 @@ const PLACES = [
     "niv": "One of Kaunas's most beloved bakeries — serious sourdough, seasonal pastries and the smell of fresh bread that pulls you in from the street.",
     "nivHe": "אחת המאפיות האהובות ביותר בקאונאס — לחם מחמצת רציני, מאפים עונתיים וריח לחם טרי שמושך אותך מהרחוב.",
     "status": "pending",
-    "source": "ai"
+    "source": "ai",
+    "lat": 54.897801,
+    "lng": 23.9216875
   },
   {
     "id": "nyc-coffee-co",
@@ -871,7 +1058,9 @@ const PLACES = [
     "niv": "A 4.9 rating for under €5 — that's almost impossible to argue with. No-nonsense specialty coffee done brilliantly, without the pretension.",
     "nivHe": "דירוג 4.9 במחיר של פחות מ-5 יורו — קשה להתווכח עם זה. קפה ספיישלטי ללא בלגן, בלי יוהרה, פשוט מצוין.",
     "status": "pending",
-    "source": "ai"
+    "source": "ai",
+    "lat": 54.8985,
+    "lng": 23.905
   },
   {
     "id": "kavos-architektai",
@@ -887,7 +1076,11 @@ const PLACES = [
     "niv": "Founded by two architects passionate about coffee — a third wave café on Klaipėda's main boulevard with Chemex, espresso, and genuine expertise in every cup.",
     "nivHe": "נוסד על ידי שני אדריכלים שנלהבים מקפה — בית קפה גל שלישי על הבולוואר הראשי של קלייפדה עם Chemex, אספרסו ומומחיות אמיתית בכל כוס.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.7139261,
+    "lng": 21.1299274,
+    "hours": "Mon-Fri 08:00-19:00 · Sat,Sun 10:00-18:00",
+    "hoursHe": "ב'-ו' 08:00-19:00 · ש',א' 10:00-18:00"
   },
   {
     "id": "klaip-dos-yd-bendruomen",
@@ -903,7 +1096,9 @@ const PLACES = [
     "niv": "A small but meaningful Jewish presence in Klaipėda — one of the few remaining connections to the once-thriving Jewish community of this port city. Worth a visit if you're in the area.",
     "nivHe": "נוכחות יהודית קטנה אך משמעותית בקלייפדה — אחד מהקשרים הנותרים לקהילה היהודית השוקקת שפרחה פעם בעיר נמל זו. שווה ביקור אם אתם באזור.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.7106,
+    "lng": 21.1335
   },
   {
     "id": "muskatas",
@@ -919,7 +1114,9 @@ const PLACES = [
     "niv": "A well-regarded local restaurant in Klaipėda — a reliable address for a proper sit-down meal in Lithuania's port city.",
     "nivHe": "מסעדה מקומית מוערכת בקלייפדה — כתובת אמינה לארוחה מסודרת בעיר הנמל של ליטא.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.7017074,
+    "lng": 25.2929436
   },
   {
     "id": "bistro-zarasai",
@@ -935,7 +1132,9 @@ const PLACES = [
     "niv": "The town's go-to for a quick, unpretentious bite — solid local food at honest prices.",
     "nivHe": "המקום של העיר לאוכל מהיר ומחיר הוגן — אוכל מקומי פשוט ומשביע.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.734,
+    "lng": 26.2454
   },
   {
     "id": "spricas-brunch",
@@ -951,7 +1150,11 @@ const PLACES = [
     "niv": "One of Lithuania's most talked-about brunch spots — inventive plates, silky eggs Benedict, and a stacked steak toast that keeps people coming back.",
     "nivHe": "אחד ממקומות הברנץ' הכי מדוברים בליטא — צלחות יצירתיות, בנדיקט ביצים משיי וטוסט סטייק עמוס שמחזיר אנשים שוב ושוב.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.681,
+    "lng": 25.29,
+    "hours": "Mon-Sat 08:00-21:00, Sun 09:00-21:00",
+    "hoursHe": "ב'-ש' 08:00-21:00, א' 09:00-21:00"
   },
   {
     "id": "the-dead-dunes",
@@ -967,7 +1170,9 @@ const PLACES = [
     "niv": "Magical UNESCO landscape — the sand dunes are unlike anything in Europe.",
     "nivHe": "נוף קסום של אונסק\"ו — דיונות חול שאין כמותן באירופה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.5022,
+    "lng": 21.16
   },
   {
     "id": "vecekrugas-dune",
@@ -983,7 +1188,9 @@ const PLACES = [
     "niv": "The highest dune on the Curonian Spit at 67 metres — a hike through fragrant pines to a summit with views across the lagoon, the Baltic Sea, and the forest.",
     "nivHe": "הדיונה הגבוהה ביותר בחצי האי הקורוני ב-67 מטר — טיפוס דרך אורנים ריחניים לפסגה עם נוף על הלגונה, הים הבלטי והיער.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.3543039,
+    "lng": 21.029118
   },
   {
     "id": "smoked-fish",
@@ -999,7 +1206,11 @@ const PLACES = [
     "niv": "A roadside smokehouse on the Curonian Spit selling the freshest smoked fish you will find — buy it warm straight from the smoker and eat it by the water.",
     "nivHe": "בית עישון על שפת הדרך בחצי האי הקורוני עם הדגים המעושנים הטריים ביותר שתמצאו — קנו חם ישר מהמעשן ואכלו על שפת המים.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.46022,
+    "lng": 21.3453297,
+    "hours": "Tue-Fri 10:00-18:00, Sat 10:00-15:00",
+    "hoursHe": "ג'-ו' 10:00-18:00, ש' 10:00-15:00"
   },
   {
     "id": "mi-ko-rojus",
@@ -1015,7 +1226,9 @@ const PLACES = [
     "niv": "A forest cabin near Rietavas with a private outdoor pool and beach — no internet by design, with solar charging panels and pine trees for company.",
     "nivHe": "בקתה ביער ליד ריטאוס עם בריכה ריבותית ממוחוץ וחוף פרטי — ללא אינטרנט לפי תכנון, עם לוחות סולאריים ואורנים לחברה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.88,
+    "lng": 24.35
   },
   {
     "id": "doyou-place",
@@ -1031,7 +1244,9 @@ const PLACES = [
     "niv": "A-frame cabins in the woods built entirely to the owners' own design — 45 minutes from Vilnius, with a \"more nature, fewer people\" philosophy taken seriously.",
     "nivHe": "בקתות A-frame ביער שנבנו לפי עיצוב הבעלים בלבד — 45 דקות מווילנה, עם פילוסופיה של 'יותר טבע, פחות אנשים' שנלקחת ברצינות.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.95,
+    "lng": 24.8
   },
   {
     "id": "casa-de-campo-glamping-lithuania",
@@ -1047,7 +1262,9 @@ const PLACES = [
     "niv": "Three glamping tents on a working organic farm in the Šilalė district — pick your own vegetables from the garden for breakfast, and fall asleep to lake views.",
     "nivHe": "שלושה אוהלי גלמפינג בחווה אורגנית פעילה במחוז שילאלה — קטפו ירקות מהגינה לארוחת הבוקר שלכם, ונרדמים עם נוף לאגם.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.05,
+    "lng": 24.6
   },
   {
     "id": "hytte",
@@ -1063,7 +1280,9 @@ const PLACES = [
     "niv": "Cozy countryside cottages in the Kaunas region — the name is Norwegian for cabin, and the atmosphere matches it perfectly.",
     "nivHe": "בקתות כפריות חמימות באזור קובנה — השם הוא 'בקתה' בנורווגית, והאווירה תואמת בשלמות.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.2,
+    "lng": 25.0
   },
   {
     "id": "alantos-irgai-sodybos-ir-nameli",
@@ -1079,7 +1298,9 @@ const PLACES = [
     "niv": "An eco-farm with Lithuania's rare Žemaitukas horses, 40 hectares of meadow and forest, and pine-cabin hot tubs — the most nature-immersed getaway in the Molėtai region.",
     "nivHe": "חווה אקו עם סוסי Žemaitukas הנדירים של ליטא, 40 דונם של כרים ויער ובקתות עם ג'קוזי — הגטאוויי הכי שקוע בטבע באזור מולטאי.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.3744,
+    "lng": 25.2691
   },
   {
     "id": "villa-the-lake",
@@ -1095,7 +1316,9 @@ const PLACES = [
     "niv": "A private lakefront villa in the Molėtai lake district — five-star comfort, complete privacy, and Lithuanian nature at its most unspoiled.",
     "nivHe": "וילה פרטית על חוף האגם במחוז האגמים של מולטאי — נוחות חמישה כוכבים, פרטיות מוחלטת וטבע ליטאי בצורתו הטהורה ביותר.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.2,
+    "lng": 25.2
   },
   {
     "id": "kupetait",
@@ -1111,7 +1334,9 @@ const PLACES = [
     "niv": "A small countryside hideaway with a generous garden — simple and quiet, ideal for families wanting to slow down in rural Lithuania.",
     "nivHe": "מסתור כפרי קטן עם גינה נדיבה — פשוט ושקט, אידיאלי למשפחות שרוצות להאט בכפר הליטאי.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.957136,
+    "lng": 24.8728845
   },
   {
     "id": "getaway-to-forest-cab",
@@ -1127,7 +1352,9 @@ const PLACES = [
     "niv": "A secluded forest cabin built for complete disconnection — trees in every direction and the kind of silence city people drive hours to find.",
     "nivHe": "בקתה ביער מבודדת שנבנתה להתנתקות מוחלטת — עצים בכל כיוון והסוג של שקט שאנשי העיר נוסעים שעות כדי למצוא.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.3,
+    "lng": 25.0
   },
   {
     "id": "www-pineplace-lt",
@@ -1143,7 +1370,9 @@ const PLACES = [
     "niv": "A simple pine-forest apartment in the Molėtai hills — affordable, peaceful, and well-placed for hiking and lake swimming in the heart of Lithuanian lake country.",
     "nivHe": "דירה פשוטה ביער אורנים בגבעות מולטאי — בר-השגה, שקטה ומיקומה טוב לטיולים ולשחייה באגמי לב ליטא.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.25,
+    "lng": 25.15
   },
   {
     "id": "atvira-meno-galerija-open-gallery",
@@ -1159,7 +1388,9 @@ const PLACES = [
     "niv": "A free, 24/7 open-air street art gallery in the former Elfa factory yard — 50+ large-scale murals, light installations, and sculptures by Lithuanian and international artists.",
     "nivHe": "גלריית אמנות רחוב בשטח פתוח, חינמית ופתוחה 24/7 בחצר מפעל אלפה לשעבר — מעל 50 ציורי קיר בקנה-מידה גדול, התקנות אור ופסלים מאמנים ליטאים ובינלאומיים.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6697,
+    "lng": 25.2692
   },
   {
     "id": "mana-sleep-spa-druskininkai",
@@ -1176,7 +1407,9 @@ const PLACES = [
     "nivHe": "ספא-ריזורט הכי טוב בליטא — רגיעה צרופה.",
     "mapUrl": "https://maps.app.goo.gl/e5ynZktiUyr2tGt76",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.0183748,
+    "lng": 23.9820289
   },
   {
     "id": "la-petite-france-vilnius",
@@ -1192,7 +1425,11 @@ const PLACES = [
     "niv": "A French grocery and café just off the old town — French cheeses, foie gras, natural wines, and croissants with lavender tea.",
     "nivHe": "מכולת ומקום קפה צרפתי ממש ליד העיר העתיקה — גבינות צרפתיות, פואה גרה, יינות טבעיים וקרואסונים עם תה לבנדר.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6763081,
+    "lng": 25.2834031,
+    "hours": "Mon-Sat 10:00-18:00",
+    "hoursHe": "ב'-ש' 10:00-18:00"
   },
   {
     "id": "hotel-pacai",
@@ -1209,7 +1446,11 @@ const PLACES = [
     "nivHe": "המלון המרהיב ביותר בווילנה — ארמון בארוקי מהמאה ה-17 שהפך למלון בוטיק ברמה עולמית, ממש בלב העיר העתיקה. כל פינה היא יצירת אמנות. אם פעם אחת מותר לבזבז בליטא — זה המקום.",
     "mapUrl": "https://maps.app.goo.gl/1W6EqKYWEzCzoqu86",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6801626,
+    "lng": 25.2855038,
+    "hours": "Mon-Thu 12:00-23:00 · Fri-Sat 12:00-00:00 · Sun 12:00-23:00",
+    "hoursHe": "ב'-ה' 12:00-23:00 · ו'-ש' 12:00-00:00 · א' 12:00-23:00"
   },
   {
     "id": "neringa-hotel",
@@ -1226,7 +1467,11 @@ const PLACES = [
     "nivHe": "המלון שאני חוזר אליו בווילנה — מיקום מושלם על שדרת גדימינס, הבולוואר הראשי של העיר. חדרים יפים, ארוחת בוקר מצוינת, בר גג פנטסטי עם נוף פנורמי. הצוות יוצא מגדרו. אם אתם רוצים להיות קרוב לכל דבר — זה המקום.",
     "mapUrl": "https://maps.app.goo.gl/7XUbSgV2z6EH5NZC8",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6879391,
+    "lng": 25.2735115,
+    "hours": "Mon-Fri 10:00-21:00 · Sat-Sun 11:00-21:00",
+    "hoursHe": "ב'-ו' 10:00-21:00 · ש'-א' 11:00-21:00"
   },
   {
     "id": "comfort-hotel-vilnius",
@@ -1243,7 +1488,11 @@ const PLACES = [
     "nivHe": "מלון 3 כוכבים מבדר בסגנון מוזיקלי עם ערך מצוין ומיקום טוב. אחד ממלוני הבאדג'ט המדורגים הכי גבוה בווילנה — נקי, נוח ועם אופי.",
     "mapUrl": "https://maps.app.goo.gl/SqkDDRjFc8EueN3u7",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6772642,
+    "lng": 25.2481592,
+    "hours": "Mon-Fri 11:00-18:00",
+    "hoursHe": "ב'-ו' 11:00-18:00"
   },
   {
     "id": "radisson-blu-lietuva",
@@ -1260,7 +1509,9 @@ const PLACES = [
     "nivHe": "מלון 4 כוכבים גדול ומשופשף עם אחד הספאים הטובים בעיר וה-Skybar האגדי בקומה העליונה — נוף עוצר נשימה על הנהר והאופק העירוני. מצוין לנוסעי עסקים או למי שרוצה חוויית מלון מלאה.",
     "mapUrl": "https://maps.app.goo.gl/d9ozfT6WhHyoJJCr9",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6954549,
+    "lng": 25.2557592
   },
   {
     "id": "ac-hotel-vilnius",
@@ -1277,7 +1528,9 @@ const PLACES = [
     "nivHe": "מלון יפה ומודרני בלב וילנה — מרווח, עם לובי אלגנטי ומרשים שיוצר רושם ראשוני נהדר. חדרים נוחים ומעוצבים, וארוחת בוקר מצוינת ומגוונת. מושלם לנסיעת עסקים או לשהייה עירונית מסוגננת.",
     "mapUrl": "https://maps.app.goo.gl/9FFAt2SRnEnZJUuF9",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6914922,
+    "lng": 25.2715649
   },
   {
     "id": "rooma-apartments-vilnius",
@@ -1294,7 +1547,11 @@ const PLACES = [
     "nivHe": "דירות בוטיק מדהימות ממש במרכז העיר העתיקה של וילנה — רגלית מכל האטרקציות המרכזיות. מעוצבות, חמימות ונקיות ברמה גבוהה.",
     "mapUrl": "https://maps.app.goo.gl/qw2psfqTiLykisid9",
     "status": "pending",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6755427,
+    "lng": 25.2862075,
+    "hours": "Tue-Fri 16:00-22:00 · Sat 13:00-22:00",
+    "hoursHe": "ג'-ו' 16:00-22:00 · ש' 13:00-22:00"
   },
   {
     "id": "brut-wine-restaurant-zarasai",
@@ -1310,7 +1567,9 @@ const PLACES = [
     "niv": "Charcoal-grilled meats and an excellent wine list — the most stylish dinner in Zarasai.",
     "nivHe": "בשרים על פחם ורשימת יין מצוינת — הארוחה הכי סטייל בזרסאי.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.734,
+    "lng": 26.2454
   },
   {
     "id": "monopolis-zarasai",
@@ -1326,7 +1585,11 @@ const PLACES = [
     "niv": "Lakeside terrace and locally-caught vendace — the rarest fish dish in northeastern Lithuania.",
     "nivHe": "טרסה על האגם עם דג ונדאס מקומי — המנה הנדירה ביותר בצפון-מזרח ליטא.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.7314823,
+    "lng": 26.2440768,
+    "hours": "Mon-Thu 11:00-22:00, Fri,Sat 11:00-24:00, Sun 11:00-21:00",
+    "hoursHe": "ב'-ה' 11:00-22:00, ו',ש' 11:00-24:00, א' 11:00-21:00"
   },
   {
     "id": "lietaus-sodai",
@@ -1342,7 +1605,9 @@ const PLACES = [
     "niv": "Part gourmet deli, part café — local wines, artisan cheeses, and homemade desserts under one roof.",
     "nivHe": "חצי דלי גורמה, חצי קפה — יינות מקומיים, גבינות אומן ומתוקים ביתיים.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.73,
+    "lng": 26.24
   },
   {
     "id": "zarasai-five-lakes",
@@ -1358,7 +1623,9 @@ const PLACES = [
     "niv": "The town sits on a peninsula between five interconnected lakes — kayak, swim, or just watch the light change.",
     "nivHe": "העיר יושבת על חצי-אי בין חמישה אגמים מחוברים — קיאקים, שחייה, או פשוט לצפות באור משתנה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.734,
+    "lng": 26.2454
   },
   {
     "id": "sartai-lake",
@@ -1374,7 +1641,9 @@ const PLACES = [
     "niv": "Lithuania's famous ice-yachting lake in winter, crystal-clear swimming in summer. Unforgettable in any season.",
     "nivHe": "אגם השיט על הקרח המפורסם של ליטא בחורף, שחייה קריסטלית בקיץ. בלתי נשכח בכל עונה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.82,
+    "lng": 26.09
   },
   {
     "id": "zarasai-museum",
@@ -1390,7 +1659,9 @@ const PLACES = [
     "niv": "Small but sincere — traces of Jewish Zarasai, lake-town crafts, and photographs from a forgotten century.",
     "nivHe": "קטן אבל כן — עקבות זאראסאי היהודית, מלאכות של עיר האגמים, ותצלומים ממאה שנשכחה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.734,
+    "lng": 26.2454
   },
   {
     "id": "zarasai-promenade",
@@ -1406,7 +1677,9 @@ const PLACES = [
     "niv": "The town's living room — stroll the waterfront at sunset when the five lakes catch fire and the whole place slows down.",
     "nivHe": "הסלון של העיר — טיול לאורך המים בשקיעה כשחמשת האגמים מתלקחים והכול מואט.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.734,
+    "lng": 26.2454
   },
   {
     "id": "kemping-zarasai",
@@ -1422,7 +1695,9 @@ const PLACES = [
     "niv": "Pitch a tent on the lakeshore and fall asleep to the sound of water. Simple, serene, and completely off the grid.",
     "nivHe": "אוהל על חוף האגם ונרדמים לצלילי המים. פשוט, שקט, ורחוק מהכול.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.734,
+    "lng": 26.24
   },
   {
     "id": "wake-inn-zarasai",
@@ -1438,7 +1713,9 @@ const PLACES = [
     "niv": "Wakeboarding, inflatable water park, and a sandy beach on the lake — the most action-packed afternoon in Zarasai.",
     "nivHe": "וייקבורדינג, פארק מים מתנפח וחוף חול על האגם — האחר הצהריים הכי מרגש בזאראסאי.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.734,
+    "lng": 26.2454
   },
   {
     "id": "brut-wine-hotel-zarasai",
@@ -1454,7 +1731,9 @@ const PLACES = [
     "niv": "Small boutique hotel with a wine soul — pool, restaurant on-site, and the lake town right outside.",
     "nivHe": "מלון בוטיק קטן עם נשמה של יין — בריכה, מסעדה במקום, ועיר האגמים בפתח הדלת.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.734,
+    "lng": 26.2454
   },
   {
     "id": "palanga-amber-museum",
@@ -1470,7 +1749,9 @@ const PLACES = [
     "niv": "28,000 pieces of amber — including prehistoric insects frozen in time — in a grand 19th-century palace.",
     "nivHe": "28,000 פריטי ענבר כולל חרקים פרהיסטוריים קפואים בזמן — בארמון מהמאה ה-19.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.9215,
+    "lng": 21.064
   },
   {
     "id": "birute-park-palanga",
@@ -1486,7 +1767,9 @@ const PLACES = [
     "niv": "100 hectares of sculpted grounds — rose gardens, ancient dunes, summer concerts. Free to enter.",
     "nivHe": "100 דונם של גנים מעוצבים — גני ורדים, דיונות עתיקות וקונצרטים בקיץ. כניסה חינם.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.9064684,
+    "lng": 21.0508661
   },
   {
     "id": "palanga-pier",
@@ -1502,7 +1785,9 @@ const PLACES = [
     "niv": "470 meters of wooden planks reaching into the Baltic. The sunsets here are the stuff of local legend.",
     "nivHe": "470 מטר של עץ לתוך הים הבלטי. השקיעות כאן הן אגדה מקומית.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.92,
+    "lng": 21.055
   },
   {
     "id": "palanga-beach",
@@ -1518,7 +1803,9 @@ const PLACES = [
     "niv": "Wide, clean Baltic sand backed by pine dunes — the classic Lithuanian summer.",
     "nivHe": "חוף חול בלטי רחב ונקי עם דיונות אורן — הקיץ הליטאי הקלאסי.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.91,
+    "lng": 21.05
   },
   {
     "id": "brew-palanga",
@@ -1534,7 +1821,12 @@ const PLACES = [
     "niv": "The same excellent Vilnius roaster — now with a Bali-inspired terrace steps from the Baltic.",
     "nivHe": "אותה קלייה מצוינת מווילנה — עכשיו עם טרסה בהשראת באלי צעדים מהים.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6789552,
+    "lng": 25.277686,
+    "hours": "Mon-Fri 08:00-20:00 · Sat-Sun 09:00-20:00",
+    "hoursHe": "ב'-ו' 08:00-20:00 · ש'-א' 09:00-20:00",
+    "website": "https://www.brew.lt"
   },
   {
     "id": "fotokava-palanga",
@@ -1550,7 +1842,11 @@ const PLACES = [
     "niv": "A café inside a former photography shop on Vytauto Street — vintage cameras and photography books throughout, and some of the best espresso in Palanga.",
     "nivHe": "קפה בתוך חנות צילום לשעבר ברחוב Vytauto — מצלמות וינטאג' וספרי צילום בכל מקום, ואחד מהאספרסו הכי טובים בפלנגה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.9201121,
+    "lng": 21.0675247,
+    "hours": "Mon-Sun 08:00-22:00",
+    "hoursHe": "ב'-א' 08:00-22:00"
   },
   {
     "id": "cafe-banduke",
@@ -1566,7 +1862,9 @@ const PLACES = [
     "niv": "A café on Palanga's main pedestrian street — freshly baked croissants, Neapolitan pizza in summer, and the reliable coffee that locals have been choosing for years.",
     "nivHe": "קפה ברחוב ההולכי הרגל הראשי של פלנגה — קרואסונים אפויים טרי, פיצה נאפוליטנית בקיץ, והקפה האמין שמקומיים בחרו בו שנים.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.9183794,
+    "lng": 21.0699964
   },
   {
     "id": "basanaviciaus-street",
@@ -1582,7 +1880,11 @@ const PLACES = [
     "niv": "The beating heart of Palanga — bars, restaurants, amber shops and street performers. Best at golden hour.",
     "nivHe": "לב פלאנגה הפועם — ברים, מסעדות, חנויות ענבר ורוקדי רחוב. הכי טוב בשקיעה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.919,
+    "lng": 21.068,
+    "hours": "Mon-Sat 08:00-22:00 · Sun 08:00-21:00",
+    "hoursHe": "ב'-ש' 08:00-22:00 · א' 08:00-21:00"
   },
   {
     "id": "senas-zvejas",
@@ -1598,7 +1900,11 @@ const PLACES = [
     "niv": "Old fisherman's tavern with cepelinai and smoked fish — as authentic as Nida gets.",
     "nivHe": "פונדק דייגים ישן עם צפלינאי ודגים מעושנים — האותנטיות של נידה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.46,
+    "lng": 21.345,
+    "hours": "Tue-Fri 10:00-18:00, Sat 10:00-15:00",
+    "hoursHe": "ג'-ו' 10:00-18:00, ש' 10:00-15:00"
   },
   {
     "id": "toda-nida",
@@ -1614,7 +1920,9 @@ const PLACES = [
     "niv": "Israeli-Mediterranean on the Curonian Spit — hummus, mezze, and chargrilled meats between the dunes.",
     "nivHe": "ישראלי-ים תיכוני על רכס קורון — חומוס, מזה ובשרים על גחלים בין הדיונות.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.3027219,
+    "lng": 20.9998596
   },
   {
     "id": "gitanos-blynai",
@@ -1630,7 +1938,9 @@ const PLACES = [
     "niv": "A beloved crêpe café in Nida — sweet and savory pancakes, strong coffee, and a slow morning pace at the edge of the Curonian Spit.",
     "nivHe": "קפה קרפים אהוב בנידה — פנקייקים מתוקים ומלוחים, קפה חזק וקצב בוקר איטי בקצה חצי האי הקורוני.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.304,
+    "lng": 21.0
   },
   {
     "id": "witches-hill",
@@ -1646,7 +1956,9 @@ const PLACES = [
     "niv": "80 ancient Lithuanian mythological wooden sculptures along a forest trail — haunting, beautiful, and free.",
     "nivHe": "80 פסלי עץ של מיתולוגיה ליטאית לאורך שביל יער — מרהיב, מקסים וחינם.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.5377459,
+    "lng": 21.1098158
   },
   {
     "id": "thomas-mann-house-nida",
@@ -1662,7 +1974,9 @@ const PLACES = [
     "niv": "Where Thomas Mann spent three summers in the 1930s — a tiny wooden cottage full of light and literary history.",
     "nivHe": "כאן שהה תומאס מאן שלושה קיצות בשנות ה-30 — צריף עץ קטן מלא אור והיסטוריה ספרותית.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.304,
+    "lng": 20.999
   },
   {
     "id": "nida-harbour",
@@ -1678,7 +1992,9 @@ const PLACES = [
     "niv": "Colourful fishing boats on the Curonian Lagoon — morning smoked-fish stalls, sailing dinghies, and pink sunrises.",
     "nivHe": "סירות דייגים צבעוניות על לגונת קורון — דוכני דגים בבוקר, מפרשיות וזריחות ורודות.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.304,
+    "lng": 20.9993
   },
   {
     "id": "stebuklai-spa",
@@ -1695,7 +2011,9 @@ const PLACES = [
     "nivHe": "ספא יוקרתי נדיר בלב נידה — נוף ללגון, בריכות חיצוניות ושקט של יערות אורן. אחד הטובים בליטא.",
     "mapUrl": "https://maps.app.goo.gl/YxSPBL7PyRV1dwdV9",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.3096643,
+    "lng": 20.9582555
   },
   {
     "id": "monai-klaipeda",
@@ -1711,7 +2029,12 @@ const PLACES = [
     "niv": "Michelin-recommended since 2022 — intimate, ingredient-driven tasting menu. Klaipėda's best table.",
     "nivHe": "מומלץ מישלן מ-2022 — תפריט טעימות אינטימי ומבוסס-חומרי-גלם. השולחן הטוב ביותר בקלייפדה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.711692,
+    "lng": 21.1326795,
+    "hours": "Tue-Fri 11:30-22:00 · Sat 11:00-22:00 · Sun 11:00-16:00",
+    "hoursHe": "ג'-ו' 11:30-22:00 · ש' 11:00-22:00 · א' 11:00-16:00",
+    "website": "https://www.restoranasmonai.lt"
   },
   {
     "id": "ateik-ateik",
@@ -1727,7 +2050,11 @@ const PLACES = [
     "niv": "Watch ships leave the port over jazz and coffee at sunset. The most Klaipėda thing you can do.",
     "nivHe": "מסתכלים על ספינות יוצאות מהנמל עם ג'אז, קפה ושקיעה. הכי קלייפדה שיש.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.7114663,
+    "lng": 21.1377122,
+    "hours": "Mon-Sun 09:00-22:30",
+    "hoursHe": "ב'-א' 09:00-22:30"
   },
   {
     "id": "klaipeda-castle-museum",
@@ -1743,7 +2070,9 @@ const PLACES = [
     "niv": "Beneath Klaipėda lies a Teutonic castle founded in 1252 — an archaeological museum built into the original foundations, restored and reopened in 2021.",
     "nivHe": "מתחת לקלייפדה מסתתרת טירה טבטונית שנוסדה ב-1252 — מוזיאון ארכיאולוגי שנבנה על היסודות המקוריים, שוחזר ונפתח מחדש ב-2021.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.7094,
+    "lng": 21.1174
   },
   {
     "id": "klaipeda-old-town-walk",
@@ -1759,7 +2088,9 @@ const PLACES = [
     "niv": "German-Prussian half-timbered architecture, cobblestones, and the famous bronze Taravos Anikė sculpture.",
     "nivHe": "ארכיטקטורה גרמנית-פרוסית, אבני ריצוף ופסל ברונזה מפורסם — שווה ללכת בשקיעה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.7105565,
+    "lng": 21.1334853
   },
   {
     "id": "clock-museum-klaipeda",
@@ -1775,7 +2106,9 @@ const PLACES = [
     "niv": "A surprisingly captivating collection of timepieces spanning 3,000 years — the sundials alone are worth it.",
     "nivHe": "אוסף מרתק באופן מפתיע של שעונים על פני 3,000 שנה — שעוני השמש לבדם שווים ביקור.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.7122121,
+    "lng": 21.1341595
   },
   {
     "id": "toli-toli-druskininkai",
@@ -1791,7 +2124,9 @@ const PLACES = [
     "niv": "Lithuanian-Asian fusion done right — nearly 4,000 reviews, creative dishes, and always packed.",
     "nivHe": "פיוז'ן ליטאי-אסיאתי מוצלח — כמעט 4,000 ביקורות, מנות יצירתיות ותמיד מלא.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.0185189,
+    "lng": 23.9734561
   },
   {
     "id": "boulangerie-druskininkai",
@@ -1808,7 +2143,9 @@ const PLACES = [
     "nivHe": "פינת פריז קטנה בלב דרוסקיניינקאי — קרואסונים חמאתיים ופריכים, מאפים יפהפיים וקפה מצוין. עצירת בוקר מושלמת לפני יום ספא.",
     "mapUrl": "https://maps.app.goo.gl/rwHinzG78ThpsNME9",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.0156259,
+    "lng": 23.9742251
   },
   {
     "id": "sicilia-druskininkai",
@@ -1824,7 +2161,9 @@ const PLACES = [
     "niv": "A proper Italian restaurant with seriously good food — one of the best dining options in Druskininkai.",
     "nivHe": "מסעדה איטלקית אמיתית ברמה גבוהה עם אוכל נהדר — אחת מאפשרויות האוכל הטובות ביותר בדרוסקיניינקאי.",
     "status": "pending",
-    "source": "ai"
+    "source": "ai",
+    "lat": 54.0176995,
+    "lng": 23.9761855
   },
   {
     "id": "druskininkai-aqua-park",
@@ -1840,7 +2179,9 @@ const PLACES = [
     "niv": "The largest indoor water park in the Baltic states — 30,000 sqm with water slides, a wave pool, flowing rivers, and 19 saunas from around the world, open year-round.",
     "nivHe": "פארק המים המקורה הגדול ביותר במדינות הבלטיות — 30,000 מ\"ר עם מגלשות, בריכת גלים, נהרות זורמים ו-19 סאונות מרחבי העולם, פתוח כל השנה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.0234242,
+    "lng": 23.9745298
   },
   {
     "id": "dzukija-national-park",
@@ -1856,7 +2197,9 @@ const PLACES = [
     "niv": "Lithuania's largest national park — ancient mushroom-picking forests, sandy rivers, and village beekeepers.",
     "nivHe": "הפארק הלאומי הגדול ביותר בליטא — יערות קטיף פטריות עתיקים, נהרות חוליים ודבוראים כפריים.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.083359,
+    "lng": 24.2784736
   },
   {
     "id": "city-coffee-druskininkai",
@@ -1873,7 +2216,9 @@ const PLACES = [
     "nivHe": "הקפה הכי טוב בדרוסקינינקאי — בר אספרסו קטן ונעים עם פלאט-וויט מעולה. נהניתי מהקפה ומהשירות. ממליץ בחום.",
     "mapUrl": "https://maps.app.goo.gl/79Hm8ACTXc4Mauyb8",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.0128855,
+    "lng": 23.9786396
   },
   {
     "id": "snow-arena-druskininkai",
@@ -1890,7 +2235,9 @@ const PLACES = [
     "nivHe": "קומפלקס סקי מקורה הפועל כל השנה — מצוין למתחילים ויש גם חלק מקצועי. שירות מעולה, חוויה ייחודית במיוחד בקיץ. אחד מסוגו בבלטיים.",
     "mapUrl": "https://maps.app.goo.gl/f1zAosWs9947cp1w9",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.0324623,
+    "lng": 23.9580763
   },
   {
     "id": "vijunele-park",
@@ -1907,7 +2254,9 @@ const PLACES = [
     "nivHe": "פארק יפהפה על האגם עם חוף, השכרת קורקינטים חשמליים וסירות, חדר כושר פתוח ומגרשי כדורסל. מושלם לטיול אחר הצהריים נינוח או יום פעיל בדרוסקינינקאי.",
     "mapUrl": "https://maps.app.goo.gl/zBu5eJcbodEyTJBa9",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.01567,
+    "lng": 23.9304943
   },
   {
     "id": "uno-park-druskininkai",
@@ -1924,7 +2273,9 @@ const PLACES = [
     "nivHe": "פארק הרפתקאות מדהים בתוך יער אורנים — מסלולים לכל הגילאים ורמות הכישרון, כולל זיפ-ליין מעל נהר נמונס. חובה לכל מי שמגיע עם ילדים או מחפש אדרנלין.",
     "mapUrl": "https://maps.app.goo.gl/AxUNLqP6g6o6ZQVS9",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.01567,
+    "lng": 23.9304943
   },
   {
     "id": "spa-vilnius-druskininkai",
@@ -1941,7 +2292,11 @@ const PLACES = [
     "nivHe": "מלון הספא הכי טוב בדרוסקינינקאי — טיפולים ברמה הגבוהה ביותר, צוות מקצועי מאוד וחוויית רגיעה יוצאת דופן. אני חוזר לכאן כבר שנים. המלצה הכי גבוהה שיש.",
     "mapUrl": "https://maps.app.goo.gl/7cU9qgF2ncs7Z6WH6",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.0143782,
+    "lng": 23.9774661,
+    "hours": "Sun-Thu 12:00-22:00 · Fri,Sat 12:00-23:00",
+    "hoursHe": "א'-ה' 12:00-22:00 · ו',ש' 12:00-23:00"
   },
   {
     "id": "druskininkai-tourism-center",
@@ -1958,7 +2313,9 @@ const PLACES = [
     "nivHe": "העצירה הראשונה הכי טובה בדרוסקינינקאי — הצוות יעזור לכם לתכנן את היום, ימליץ על המקומות הכי שווים ויענה על כל שאלה על העיר. ידידותיים, מועילים ומדברים אנגלית מצוינת.",
     "mapUrl": "https://maps.app.goo.gl/69Q1uGcNPYEMFhYp6",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.0153151,
+    "lng": 23.9394191
   },
   {
     "id": "moletai-observatory",
@@ -1974,7 +2331,9 @@ const PLACES = [
     "niv": "The largest scientific telescope in Northern Europe — public stargazing nights are magical. Book ahead.",
     "nivHe": "הטלסקופ המדעי הגדול ביותר בצפון אירופה — ערבי תצפית לציבור קסומים. להזמין מראש.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.3228,
+    "lng": 25.5544
   },
   {
     "id": "ethnocosmology-museum",
@@ -1990,7 +2349,9 @@ const PLACES = [
     "niv": "Where Lithuanian cosmic mythology meets real science — shaped like the mythological World Tree.",
     "nivHe": "כאן מיתולוגיה קוסמית ליטאית פוגשת מדע אמיתי — בצורת עץ העולם המיתולוגי.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.3228,
+    "lng": 25.5544
   },
   {
     "id": "labanoras-observation-tower",
@@ -2006,7 +2367,9 @@ const PLACES = [
     "niv": "Lithuania's second-tallest tower — 214 steps and a panorama over the Lakajai lakes and endless pine forest.",
     "nivHe": "המגדל השני בגובהו בליטא — 214 מדרגות ופנורמה על אגמי לאקאיי ויער אורן אינסופי.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.36,
+    "lng": 25.4
   },
   {
     "id": "dubingiai-stud-farm",
@@ -2022,7 +2385,9 @@ const PLACES = [
     "niv": "Dine overlooking the paddocks and a lake on a working horse stud farm — genuinely unique.",
     "nivHe": "ארוחה עם נוף לאורוות ואגם בחוות סוסים פעילה — חוויה ייחודית לגמרי.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.35,
+    "lng": 25.45
   },
   {
     "id": "moletai-lake-district",
@@ -2038,7 +2403,9 @@ const PLACES = [
     "niv": "Over 300 lakes within the district — canoe routes, fishing, and lakeside saunas. Dark-sky reserve at night.",
     "nivHe": "מעל 300 אגמים במחוז — מסלולי קאנו, דיג וסאונות על האגם. שמיים חשוכים בלילה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.23,
+    "lng": 25.4
   },
   {
     "id": "moletai-sculpture-park",
@@ -2054,7 +2421,11 @@ const PLACES = [
     "niv": "An open-air sculpture park on the shore of Lake Pastovis, open since 1998 — works in granite and wood by Lithuanian, French, Welsh and Polish artists, free and always open.",
     "nivHe": "פארק פסלים בשטח פתוח על חוף אגם פסטוביס, פתוח מאז 1998 — יצירות בגרניט ועץ מאמנים ליטאים, צרפתים, ויילשים ופולנים, חינמי ותמיד פתוח.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.228,
+    "lng": 25.41,
+    "hours": "08:00-22:00",
+    "hoursHe": "08:00-22:00"
   },
   {
     "id": "aukstaitija-national-park",
@@ -2070,7 +2441,9 @@ const PLACES = [
     "niv": "200+ lakes, old-growth forest and canoe routes that feel like another century. Lithuania's most beautiful park.",
     "nivHe": "200+ אגמים, יערות עתיקים ומסלולי קאנו שמרגישים כמו מאה אחרת. הפארק היפה ביותר בליטא.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.3496901,
+    "lng": 26.0523113
   },
   {
     "id": "beekeeping-museum-stripeikiai",
@@ -2086,7 +2459,9 @@ const PLACES = [
     "niv": "Ancient log beehives, forest sculptures, and honey tasting. A uniquely Lithuanian experience.",
     "nivHe": "כוורות בול עץ עתיקות, פסלי יער וטעימת דבש. חוויה ייחודית לליטא.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.56,
+    "lng": 26.02
   },
   {
     "id": "paluse-wooden-church",
@@ -2102,7 +2477,9 @@ const PLACES = [
     "niv": "A 1750 wooden church reflected in the lake — the most iconic image in Aukštaitija National Park.",
     "nivHe": "כנסיית עץ מ-1750 המשתקפת באגם — הדימוי המזוהה ביותר עם הפארק הלאומי.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.5797,
+    "lng": 25.9798
   },
   {
     "id": "vila-gervalis",
@@ -2118,7 +2495,10 @@ const PLACES = [
     "niv": "Lakeside spa retreat — the most comfortable base for exploring the Aukštaitija lakes.",
     "nivHe": "נסיגה לאגם עם ספא — הבסיס הנוח ביותר לגילוי אגמי אוקשטאיטיה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.4667769,
+    "lng": 25.7720667,
+    "website": "https://www.gervalis.lt"
   },
   {
     "id": "ginuciai-hill-fort",
@@ -2134,7 +2514,9 @@ const PLACES = [
     "niv": "An early medieval hill fort in the Ignalina district — the original earthworks still stand, and the views across the surrounding lake landscape are remarkable.",
     "nivHe": "מבצר גבעה מתחילת ימי הביניים במחוז איגנלינה — עבודות העפר המקוריות עדיין עומדות, והנוף על נוף האגמים שמסביב יוצא דופן.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.55,
+    "lng": 25.96
   },
   {
     "id": "lourdes-grotto-kretinga",
@@ -2150,7 +2532,9 @@ const PLACES = [
     "niv": "A 1933 replica of the Lourdes grotto, inaugurated by Lithuania's president before 25,000 pilgrims — destroyed by the Soviets in 1952 and lovingly rebuilt by locals in 1989.",
     "nivHe": "עותק מ-1933 של מערת לורד, שנחנך על ידי נשיא ליטא בפני 25,000 עולי רגל — נהרס על ידי הסובייטים ב-1952 ושוחזר באהבה על ידי תושבי המקום ב-1989.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.8843,
+    "lng": 21.235
   },
   {
     "id": "kernave-archaeological",
@@ -2166,7 +2550,9 @@ const PLACES = [
     "niv": "Lithuania's oldest capital — five dramatic hill forts on the Neris river. UNESCO-listed, almost no crowds.",
     "nivHe": "הבירה הקדומה ביותר של ליטא — חמש גבעות מבצר על נהר נריס. אתר UNESCO, כמעט ללא המון.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.8786244,
+    "lng": 24.8564076
   },
   {
     "id": "trakai-island-castle",
@@ -2182,7 +2568,12 @@ const PLACES = [
     "niv": "A 14th-century red-brick castle rising from a lake — Lithuania's most iconic image. Rent a rowboat and circle it.",
     "nivHe": "טירה מהמאה ה-14 עולה מתוך אגם — הדימוי הכי אייקוני של ליטא. שכר סירת חתירה וחתור סביבה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6527297,
+    "lng": 24.9339191,
+    "hours": "Mar,Apr,Oct,Nov Tue-Sun 10:00-18:00 · May-Sep Mon-Sun 10:00-15:00 · Dec-Feb Wed-Sun 10:00-18:00",
+    "hoursHe": "Mar,Apr,Oct,Nov ג'-א' 10:00-18:00 · May-Sep ב'-א' 10:00-15:00 · Dec-Feb ד'-א' 10:00-18:00",
+    "website": "https://trakaimuziejus.lt"
   },
   {
     "id": "s-shapshal-karaim-museum",
@@ -2199,7 +2590,11 @@ const PLACES = [
     "nivHe": "המוזיאון היחיד באירופה המוקדש לעם הקראי — קהילה טורקית קטנה ההולכת לפי התנ\"ך בלי פרשנות מאוחרת, שהדוכס ויטאוטס הביא מקרים לטראקאי לפני 600 שנה. בשלושה חללים קטנים יותר מ-300 מוצגים: בגדים מסורתיים, נשק מזרחי, עריסת תינוקות עתיקה וקנקני קפה טקסיים. עצירה קצרה ומרתקת בדרך בין שתי הטירות, כמה צעדים מהקנסה הקראית שעדיין פעילה.",
     "mapUrl": "https://maps.app.goo.gl/dEFMTZ6tC54iy1ma6",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6471567,
+    "lng": 24.9330656,
+    "hours": "Wed-Sun 10:00-18:00",
+    "hoursHe": "ד'-א' 10:00-18:00"
   },
   {
     "id": "esperanza-lake-resort-spa",
@@ -2216,7 +2611,9 @@ const PLACES = [
     "nivHe": "אחת עשרה הקטרים של יער פרטי על שפת אגם אונגוריס, עשר דקות נסיעה מהטירות של טראקאי — בנוי מעץ ארז קנדי עתיק, בסטייל מינימליסטי ורגוע. הימים מתמזגים בין האגם, היער (ששם גרים שני אלפקות) וספא אספרנזה עם בריכה, סאונה, חמאם וחדר מלח. מקום שנבנה בשביל לא לעשות כלום, ברמה הכי יפה שיש.",
     "mapUrl": "https://www.google.com/maps/place/Esperanza+Resort+%26+SPA/@54.616408,24.8080203,11.75z/data=!4m9!3m8!1s0x46ddf6422bda2049:0x5bd6cb0973f7a15b!5m2!4m1!1i2!8m2!3d54.6048228!4d24.7470474!16s%2Fg%2F1pp2vc_fn?entry=ttu&g_ep=EgoyMDI2MDYyMi4wIKXMDSoASAFQAw%3D%3D",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.616408,
+    "lng": 24.8080203
   },
   {
     "id": "anyksciai-treetop-path",
@@ -2232,7 +2629,9 @@ const PLACES = [
     "niv": "A 300-metre elevated walkway through the forest canopy — the views, sounds, and silence are extraordinary.",
     "nivHe": "שביל מוגבה של 300 מטר בחופת היער — הנופים, הצלילים והשקט יוצאי דופן.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.526,
+    "lng": 25.109
   },
   {
     "id": "kibinai-senoji",
@@ -2248,7 +2647,9 @@ const PLACES = [
     "niv": "The best kibinai (Karaim meat pies) in Lithuania — baked fresh in Trakai from a 600-year-old recipe.",
     "nivHe": "הקיביני הכי טובים בליטא — נאפים טריים בטראקאי ממתכון בן 600 שנה.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6486525,
+    "lng": 24.9329232
   },
   {
     "id": "le-vivier-trakai",
@@ -2265,7 +2666,9 @@ const PLACES = [
     "nivHe": "מסעדה אירופאית משובחת על האגם — אחת מהאפשרויות הייצוגיות לאכול בטראקאי.",
     "mapUrl": "https://maps.app.goo.gl/We4C8GY3AKT7nX3eA",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6505959,
+    "lng": 24.9044752
   },
   {
     "id": "aj-sokoladas",
@@ -2282,7 +2685,9 @@ const PLACES = [
     "nivHe": "עצירה מתוקה לשוקולדים עשויים ביד וקפה איכותי במרכז העיירה.",
     "mapUrl": "https://maps.app.goo.gl/JdY3tPMLLihB1WwH9",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.64363,
+    "lng": 24.9297407
   },
   {
     "id": "trakai-balloon-ride",
@@ -2299,7 +2704,9 @@ const PLACES = [
     "nivHe": "להמריא מעל אגמי טראקאי והטירה המימי-ביניימית בבלון פורח — אחד הנופים הבלתי נשכחים ביותר בליטא.",
     "mapUrl": "https://maps.app.goo.gl/vHtHg7oFGszWrftt9",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6437229,
+    "lng": 24.7700851
   },
   {
     "id": "trakai-tourist-info",
@@ -2316,7 +2723,9 @@ const PLACES = [
     "nivHe": "נקודת הפתיחה הרשמית לכל ביקור בטראקאי — מפות, אירועים, והמלצות מקומיות.",
     "mapUrl": "https://maps.app.goo.gl/mefhfCwMv6oX8wtU7",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6487,
+    "lng": 24.9329
   },
   {
     "id": "trakai-boat-rental",
@@ -2333,7 +2742,9 @@ const PLACES = [
     "nivHe": "שכרו סירה על אגם גלווה וחתרו עד לטירת האי — אחת החוויות הכי אייקוניות בטראקאי.",
     "mapUrl": "https://maps.app.goo.gl/N59Aboj2uDnVZYx97",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6486343,
+    "lng": 24.9134332
   },
   {
     "id": "trakai-history-museum",
@@ -2350,7 +2761,9 @@ const PLACES = [
     "nivHe": "מאוכסן בתוך טירת האי, המוזיאון מספר את סיפור הדוכסות הגדולה של ליטא דרך חפצים, נשק ותצוגות מימי הביניים.",
     "mapUrl": "https://maps.app.goo.gl/NTbPVQsz7W61AS9X8",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6486343,
+    "lng": 24.9134332
   },
   {
     "id": "kiubete-trakai",
@@ -2367,7 +2780,9 @@ const PLACES = [
     "nivHe": "מסעדה מוערכת בטראקאי המגישה מנות ליטאיות מסורתיות עם נוף לאגם.",
     "mapUrl": "https://maps.app.goo.gl/NafX4WiecRcK7x5q8",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6461142,
+    "lng": 24.931338
   },
   {
     "id": "trakai-beach",
@@ -2384,7 +2799,9 @@ const PLACES = [
     "nivHe": "חוף אגם חולי על שפת טראקאי — מושלם לשחייה קיצית אחרי ביקור בטירה.",
     "mapUrl": "https://maps.app.goo.gl/YvT8bEsEMt4YXzkb7",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6626379,
+    "lng": 24.9099326
   },
   {
     "id": "varnikai-nature-trail",
@@ -2401,7 +2818,9 @@ const PLACES = [
     "nivHe": "שביל טבע שקט דרך היערות ונופי האגם סביב טראקאי — אידיאלי לטיול רגוע בין האתרים.",
     "mapUrl": "https://maps.app.goo.gl/goWB8W8ZPRLHiana7",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6567667,
+    "lng": 24.9522242
   },
   {
     "id": "maisto-oaze-terasa",
@@ -2418,7 +2837,9 @@ const PLACES = [
     "nivHe": "מסעדת טרסה פתוחה עם אווירה רגועה ליד האגם — מקום טוב לשבת ולאכול בטראקאי.",
     "mapUrl": "https://maps.app.goo.gl/gzTdvqe8kQaMwdAa6",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.6458824,
+    "lng": 24.935103
   },
   {
     "id": "dzukija-pine-forests",
@@ -2434,7 +2855,9 @@ const PLACES = [
     "niv": "In autumn the whole of southern Lithuania heads into these ancient forests to pick mushrooms. Join them.",
     "nivHe": "בסתיו כל דרום ליטא נכנס ליערות האלה לקטוף פטריות. הצטרפו.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.1,
+    "lng": 23.9
   },
   {
     "id": "seduva-jewish-museum",
@@ -2451,7 +2874,9 @@ const PLACES = [
     "nivHe": "אחת מהחוויות העמוקות והמרגשות ביותר בכל ליטא. חבוי בעיירה הקטנטנה שדובה, המוזיאון מספר את סיפורה של קהילה יהודית שנמחקה כמעט לחלוטין. לעבור דרכו זה מחריד ומרגש עד דמעות — תזכורת למה שהיה ולמה שאבד. אל תפספסו את זה.",
     "mapUrl": "https://maps.app.goo.gl/fDZaRGMxjNNMocgC9",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.7511071,
+    "lng": 23.7459316
   },
   {
     "id": "alantos-zirgai",
@@ -2468,7 +2893,9 @@ const PLACES = [
     "nivHe": "בריחה כפרית מדהימה ליד אלנטה — שני בתי נופש ליד האגם על חווה עם סוסים. הבעלים הם מהמארחים החמים ביותר שפגשתי בליטא: הם הזמינו אותי לקפה, בישלו ארוחה ועשו לי סיור באזור. קסם כפרי ליטאי אמיתי.",
     "mapUrl": "https://maps.app.goo.gl/HqSeQMyKHdLB715D7",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 55.3744666,
+    "lng": 25.2691686
   },
   {
     "id": "astriosios-kirsnos-dvaras",
@@ -2485,7 +2912,9 @@ const PLACES = [
     "nivHe": "אחוזה היסטורית מרהיבה באזור הכפרי השקט של סובלקיה, ליד הגבול הליטאי-פולני. ארכיטקטורה עתיקה יפיפייה וסביבה שלווה — מקום שמרגיש כאילו הזמן עמד בו מלכת.",
     "mapUrl": "https://maps.app.goo.gl/Qw6T6vro7RgFHTCV9",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.3027028,
+    "lng": 22.1745831
   },
   {
     "id": "genio-kampas-treehouse",
@@ -2502,7 +2931,9 @@ const PLACES = [
     "nivHe": "אחד מהמקומות הייחודיים ביותר לשהייה בליטא — בית עץ ביער עמוק עם נוף מרהיב לאגם. תחושה של ניתוק מוחלט מהעולם, מוקף בטבע. מושלם לדטוקס דיגיטלי אמיתי.",
     "mapUrl": "https://maps.app.goo.gl/5o6WXyaa4GJuanPZ9",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.9741967,
+    "lng": 22.0417483
   },
   {
     "id": "uoksas-kaunas",
@@ -2518,7 +2949,12 @@ const PLACES = [
     "niv": "Kaunas's standout seasonal bistro — creative Lithuanian dishes and natural wine in a Bauhaus-era building.",
     "nivHe": "הביסטרו העונתי הבולט של קאונאס — מנות ליטאיות יצירתיות ויין טבעי בבניין בסגנון באוהאוס.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.8980675,
+    "lng": 23.9099089,
+    "hours": "Tue-Thu 18:00-22:00 · Fri 18:00-23:00 · Sat 15:00-23:00",
+    "hoursHe": "ג'-ה' 18:00-22:00 · ו' 18:00-23:00 · ש' 15:00-23:00",
+    "website": "https://uoksas.eu"
   },
   {
     "id": "ciurlionis-art-museum",
@@ -2534,7 +2970,11 @@ const PLACES = [
     "niv": "Lithuania's greatest art collection — including the haunting symbolist paintings of Čiurlionis himself.",
     "nivHe": "אוסף האמנות הגדול ביותר בליטא — כולל ציורי הסימבוליזם המרגשים של צ'ורליוניס עצמו.",
     "status": "approved",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.9002641,
+    "lng": 23.912019,
+    "hours": "Tue-Sun 11:00-17:00",
+    "hoursHe": "ג'-א' 11:00-17:00"
   },
   {
     "id": "kaunas-castle",
@@ -2550,7 +2990,9 @@ const PLACES = [
     "niv": "One of Lithuania's oldest stone structures, standing at the confluence of two rivers since the 14th century. Small but atmospheric — a quiet reminder of how ancient this city really is.",
     "nivHe": "אחת המבנים האבניים הוותיקים ביותר בליטא, עומד בצומת שני נהרות מאז המאה ה-14. קטן אבל אטמוספרי — תזכורת שקטה לכמה עתיקה העיר הזאת.",
     "status": "pending",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.8990086,
+    "lng": 23.8839599
   },
   {
     "id": "azuolyno-parkas",
@@ -2566,7 +3008,9 @@ const PLACES = [
     "niv": "A vast oak forest in the middle of the city — ancient trees, walking paths and total calm. One of the largest urban parks in Lithuania and a favourite escape for locals.",
     "nivHe": "יער אלונים עצום בלב העיר — עצים עתיקים, שבילי הליכה ושקט מוחלט. אחד הפארקים העירוניים הגדולים ביותר בליטא ומקלט אהוב על המקומיים.",
     "status": "pending",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.7109129,
+    "lng": 25.1677049
   },
   {
     "id": "bundu-kaunas",
@@ -2582,7 +3026,11 @@ const PLACES = [
     "niv": "A newer bakery that's already earned a cult following — beautifully crafted pastries and a calm, minimal space. The kind of place you'll tell people about.",
     "nivHe": "מאפייה חדשה שכבר זכתה לעוקבים נלהבים — מאפים מעוצבים בצורה יפהפייה וחלל רגוע ומינימליסטי. הסוג של מקום שתספר עליו לאנשים.",
     "status": "pending",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.8985,
+    "lng": 23.9,
+    "hours": "Mon-Fri 08:00-19:00",
+    "hoursHe": "ב'-ו' 08:00-19:00"
   },
   {
     "id": "meno-materija",
@@ -2598,7 +3046,9 @@ const PLACES = [
     "niv": "A perfect 5.0 — a concept space blending specialty coffee with handpicked Lithuanian design objects and gifts. The most thoughtful souvenir stop in Kaunas.",
     "nivHe": "5.0 מושלם — חלל קונספטואלי שמשלב קפה ספיישלטי עם עצמי עיצוב ליטאי ומתנות נבחרות. עצירת הסובניר המחושבת ביותר בקאונאס.",
     "status": "pending",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.9,
+    "lng": 23.91
   },
   {
     "id": "dia-kaunas",
@@ -2614,7 +3064,10 @@ const PLACES = [
     "niv": "Kaunas's most acclaimed fine dining — modern European tasting menus with precise, elegant technique. A 4.8 from nearly 1,700 diners says everything.",
     "nivHe": "מסעדת השף המוערכת ביותר בקאונאס — תפריטי טעימות אירופאיים מודרניים עם טכניקה מדויקת ואלגנטית. 4.8 מכמעט 1,700 סועדים אומר הכל.",
     "status": "pending",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.8965017,
+    "lng": 23.9090541,
+    "website": "https://www.restoranasdia.lt"
   },
   {
     "id": "zalgirio-arena",
@@ -2630,7 +3083,10 @@ const PLACES = [
     "niv": "Home of Žalgiris Kaunas — one of Europe's most storied basketball clubs. If there's a game on while you're in town, go. The atmosphere is unlike anything else in Lithuania.",
     "nivHe": "ביתו של ז'אלגיריס קאונאס — אחד ממועדוני הכדורסל המפורסמים באירופה. אם יש משחק בזמן שאתה בעיר, לך. האווירה שונה מכל דבר אחר בליטא.",
     "status": "pending",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.8904082,
+    "lng": 23.9144444,
+    "website": "https://zalgirioarena.lt"
   },
   {
     "id": "numan-kaunas",
@@ -2646,7 +3102,11 @@ const PLACES = [
     "niv": "An intimate fine dining experience with a strong Nordic influence — clean flavours, beautiful plating and a menu that changes with the seasons. One of Kaunas's best-kept secrets.",
     "nivHe": "חוויית שף אינטימית עם השפעה סקנדינבית חזקה — טעמים נקיים, צלחות יפהפיות ותפריט שמשתנה עם העונות. אחד הסודות השמורים ביותר של קאונאס.",
     "status": "pending",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.8964016,
+    "lng": 23.8970039,
+    "hours": "Mon-Sun 08:00-22:00",
+    "hoursHe": "ב'-א' 08:00-22:00"
   },
   {
     "id": "neighbourhood-kaunas",
@@ -2662,7 +3122,9 @@ const PLACES = [
     "niv": "The best pizza in Kaunas — wood-fired, with a charred crust and serious toppings. Small, buzzy and always busy. Book ahead or arrive early.",
     "nivHe": "הפיצה הכי טובה בקאונאס — נאפית בתנור עצים, עם שוליים פחמיים ותוספות רציניות. קטן, תוסס ותמיד מלא. הזמינו מראש או הגיעו מוקדם.",
     "status": "pending",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.898,
+    "lng": 23.905
   },
   {
     "id": "kaunas-tourism-info",
@@ -2678,7 +3140,11 @@ const PLACES = [
     "niv": "The official starting point for exploring Kaunas — free maps, event listings, guided tour bookings and genuinely helpful staff. Worth a stop on your first morning.",
     "nivHe": "נקודת המוצא הרשמית לחקירת קאונאס — מפות חינמיות, לוחות אירועים, הזמנת סיורים מודרכים וצוות מסייע באמת. שווה עצירה בבוקר הראשון.",
     "status": "pending",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.899,
+    "lng": 23.906,
+    "hours": "Mon-Thu 07:30-16:15, Fri 07:30-15:00",
+    "hoursHe": "ב'-ה' 07:30-16:15, ו' 07:30-15:00"
   },
   {
     "id": "radisson-kaunas",
@@ -2694,7 +3160,11 @@ const PLACES = [
     "niv": "A reliable, well-located 4-star on Laisvės Alėja — Kaunas's main boulevard. Comfortable rooms, solid breakfast and walking distance from everything worth seeing.",
     "nivHe": "מלון 4 כוכבים אמין ובמיקום מצוין על שדרת לייסבס — הרחוב הראשי של קאונאס. חדרים נוחים, ארוחת בוקר טובה ומרחק הליכה מכל מה שכדאי לראות.",
     "status": "pending",
-    "source": "niv"
+    "source": "niv",
+    "lat": 54.8984714,
+    "lng": 23.9197076,
+    "hours": "00:00-24:00",
+    "hoursHe": "00:00-24:00"
   },
   {
     "id": "viesbutis-kaunas",
@@ -2710,31 +3180,95 @@ const PLACES = [
     "niv": "A classic city-centre hotel with old-school charm and a loyal following — right on the pedestrian boulevard, with city views from the upper floors.",
     "nivHe": "מלון קלאסי במרכז העיר עם קסם ישן ועוקבים נאמנים — ממש על הטיילת להולכי רגל, עם נוף לעיר מהקומות העליונות.",
     "mapUrl": "https://maps.app.goo.gl/tZe6vhPkKECkdLV18",
-        "status": "pending",
-        "source": "niv"
+    "status": "pending",
+    "source": "niv",
+    "lat": 54.8970468,
+    "lng": 23.8985358,
+    "hours": "Mon-Thu 11:00-22:00 · Fri,Sat 11:00-23:00 · Sun 11:00-22:00",
+    "hoursHe": "ב'-ה' 11:00-22:00 · ו',ש' 11:00-23:00 · א' 11:00-22:00"
   },
-  {"id": "chabad-vilnius", "region": "vilnius", "kind": "culture", "name": "Chabad of Lithuania", "type": "Synagogue & Jewish community center", "typeHe": "בית כנסת ומרכז קהילתי יהודי", "rating": 4.7, "reviews": 47, "emoji": "🕎", "niv": "Chabad of Lithuania — the beating heart of Vilnius' small but proud Jewish community, led by Rabbi Sholom Ber Krinsky. If you're Jewish and traveling in Lithuania, this is your first stop: kosher home-style meals (order at least 48 hours ahead), Friday night Shabbat dinners, synagogue services, and a genuinely warm welcome. Call ahead before visiting — opening hours can be unpredictable.", "nivHe": "בית חב״ד ליטא — הלב הפועם של הקהילה היהודית הקטנה אך הגאה בוילנה, בראשות הרב שלום בער קרינסקי. עבור יהודים המטיילים בליטא: ארוחות כשריות ביתיות (יש להזמין לפחות 48 שעות מראש), ארוחות שבת חמות בערבי שישי, תפילות בבית הכנסת, וקבלת פנים חמה באמת. מומלץ להתקשר מראש לפני שמגיעים — שעות הפתיחה לא תמיד מדויקות.", "mapUrl": "https://www.google.com/maps/search/Chabad+Of+Lithuania+Sv.+Kazimiero+g.+12+Vilnius", "status": "approved", "source": "niv"},
   {
-        "id": "mypilates-naujamiestis",
-        "region": "vilnius",
-        "kind": "wellness",
-        "name": "MyPilates",
-        "type": "Pilates studio",
-        "typeHe": "סטודיו פילאטיס",
-        "rating": 4.9,
-        "reviews": 85,
-        "price": "€12–22",
-        "emoji": "🧘",
-        "niv": "Mat and equipment-based Pilates with professional, certified instructors — small groups, personalized attention, and modern reformer equipment. They also have around 6 more branches across the city! Other Vilnius locations: Šnipiškės – Kintų g. 11, Antakalnis – Kosciuškos g. 34, Žvėrynas – Saltoniškių g. 9B, Viršuliškės – Spaudos g. 7, Žirmūnai – Kareivių g. 11B, and Avižieniai (Urban Hub) – Ožiarūčių g. 3.",
-        "nivHe": "פילאטיס מזרון ומכשירים עם מדריכות מקצועיות ומוסמכות — קבוצות קטנות, יחס אישי וציוד רפורמר מודרני. יש להם עוד כ-6 סניפים שונים בעיר! סניפים נוספים בוילנה: שניפישקס – Kintų g. 11, אנטקלניס – Kosciuškos g. 34, זוורינאס – Saltoniškių g. 9B, ויארשוליישקס – Spaudos g. 7, ז'ירמונאי – Kareivių g. 11B, ואביז'ניאי (Urban Hub) – Ožiarūčių g. 3.",
-        "mapUrl": "https://maps.app.goo.gl/RAfCeDELbWym4AcV7",
-        "status": "approved",
-        "source": "niv"
+    "id": "chabad-vilnius",
+    "region": "vilnius",
+    "kind": "culture",
+    "name": "Chabad of Lithuania",
+    "type": "Synagogue & Jewish community center",
+    "typeHe": "בית כנסת ומרכז קהילתי יהודי",
+    "rating": 4.7,
+    "reviews": 47,
+    "emoji": "🕎",
+    "niv": "Chabad of Lithuania — the beating heart of Vilnius' small but proud Jewish community, led by Rabbi Sholom Ber Krinsky. If you're Jewish and traveling in Lithuania, this is your first stop: kosher home-style meals (order at least 48 hours ahead), Friday night Shabbat dinners, synagogue services, and a genuinely warm welcome. Call ahead before visiting — opening hours can be unpredictable.",
+    "nivHe": "בית חב״ד ליטא — הלב הפועם של הקהילה היהודית הקטנה אך הגאה בוילנה, בראשות הרב שלום בער קרינסקי. עבור יהודים המטיילים בליטא: ארוחות כשריות ביתיות (יש להזמין לפחות 48 שעות מראש), ארוחות שבת חמות בערבי שישי, תפילות בבית הכנסת, וקבלת פנים חמה באמת. מומלץ להתקשר מראש לפני שמגיעים — שעות הפתיחה לא תמיד מדויקות.",
+    "mapUrl": "https://www.google.com/maps/search/Chabad+Of+Lithuania+Sv.+Kazimiero+g.+12+Vilnius",
+    "status": "approved",
+    "source": "niv",
+    "lat": 54.6831,
+    "lng": 25.2849,
+    "hours": "Tue-Fri 09:00-16:00 · Sat,Sun 11:00-17:00",
+    "hoursHe": "ג'-ו' 09:00-16:00 · ש',א' 11:00-17:00"
   },
-  {"id": "mypilates-kaunas", "region": "kaunas", "kind": "wellness", "name": "MyPilates", "type": "Pilates studio", "typeHe": "סטודיו פילאטיס", "rating": 4.9, "reviews": 76, "price": "€12–22", "emoji": "🧘", "niv": "Mat and equipment-based Pilates with professional, certified instructors — small groups, personalized attention, and modern reformer equipment, right on Vytauto pr. in the city centre. They also have 2 more branches in Kaunas: Urban Hub – Veterinarų g. 4, and Žaliakalnis – Dirvos g. 13.", "nivHe": "פילאטיס מזרון ומכשירים עם מדריכות מקצועיות ומוסמכות — קבוצות קטנות, יחס אישי וציוד רפורמר מודרני, ממש על שדרת Vytauto במרכז קובנה. יש להם עוד 2 סניפים בקובנה: Urban Hub – Veterinarų g. 4, וז'ליאקלניס – Dirvos g. 13.", "mapUrl": "https://www.google.com/maps/search/MyPilates+Kaunas+Vytauto+pr.+23", "status": "approved", "source": "niv"},
-  {"id": "mypilates-palanga", "region": "palanga", "kind": "wellness", "name": "MyPilates", "type": "Seasonal Pilates studio", "typeHe": "סטודיו פילאטיס עונתי", "rating": 5.0, "reviews": 23, "price": "€12–22", "emoji": "🧘", "niv": "A seasonal summer studio inside the Grand Baltic Dunes hotel, just a 5-minute walk from Palanga's pier and the sea. Mat and equipment-based Pilates with professional instructors — a relaxed way to stay active on a beach holiday. Same MyPilates chain as Vilnius and Kaunas, open for the summer season only.", "nivHe": "סטודיו עונתי לקיץ בתוך מלון Grand Baltic Dunes, כ-5 דקות הליכה מהמזח ומהים בפלנגה. פילאטיס מזרון ומכשירים עם מדריכות מקצועיות — דרך נעימה להישאר פעילים בחופשת חוף. אותה רשת MyPilates כמו בוילנה ובקובנה, פתוח לעונת הקיץ בלבד.", "mapUrl": "https://www.google.com/maps/search/MyPilates+Grand+Baltic+Dunes+Palanga", "status": "approved", "source": "niv"}
- ];
-
+  {
+    "id": "mypilates-naujamiestis",
+    "region": "vilnius",
+    "kind": "wellness",
+    "name": "MyPilates",
+    "type": "Pilates studio",
+    "typeHe": "סטודיו פילאטיס",
+    "rating": 4.9,
+    "reviews": 85,
+    "price": "€12–22",
+    "emoji": "🧘",
+    "niv": "Mat and equipment-based Pilates with professional, certified instructors — small groups, personalized attention, and modern reformer equipment. They also have around 6 more branches across the city! Other Vilnius locations: Šnipiškės – Kintų g. 11, Antakalnis – Kosciuškos g. 34, Žvėrynas – Saltoniškių g. 9B, Viršuliškės – Spaudos g. 7, Žirmūnai – Kareivių g. 11B, and Avižieniai (Urban Hub) – Ožiarūčių g. 3.",
+    "nivHe": "פילאטיס מזרון ומכשירים עם מדריכות מקצועיות ומוסמכות — קבוצות קטנות, יחס אישי וציוד רפורמר מודרני. יש להם עוד כ-6 סניפים שונים בעיר! סניפים נוספים בוילנה: שניפישקס – Kintų g. 11, אנטקלניס – Kosciuškos g. 34, זוורינאס – Saltoniškių g. 9B, ויארשוליישקס – Spaudos g. 7, ז'ירמונאי – Kareivių g. 11B, ואביז'ניאי (Urban Hub) – Ožiarūčių g. 3.",
+    "mapUrl": "https://maps.app.goo.gl/RAfCeDELbWym4AcV7",
+    "status": "approved",
+    "source": "niv",
+    "lat": 54.6713169,
+    "lng": 25.2612719
+  },
+  {
+    "id": "mypilates-kaunas",
+    "region": "kaunas",
+    "kind": "wellness",
+    "name": "MyPilates",
+    "type": "Pilates studio",
+    "typeHe": "סטודיו פילאטיס",
+    "rating": 4.9,
+    "reviews": 76,
+    "price": "€12–22",
+    "emoji": "🧘",
+    "niv": "Mat and equipment-based Pilates with professional, certified instructors — small groups, personalized attention, and modern reformer equipment, right on Vytauto pr. in the city centre. They also have 2 more branches in Kaunas: Urban Hub – Veterinarų g. 4, and Žaliakalnis – Dirvos g. 13.",
+    "nivHe": "פילאטיס מזרון ומכשירים עם מדריכות מקצועיות ומוסמכות — קבוצות קטנות, יחס אישי וציוד רפורמר מודרני, ממש על שדרת Vytauto במרכז קובנה. יש להם עוד 2 סניפים בקובנה: Urban Hub – Veterinarų g. 4, וז'ליאקלניס – Dirvos g. 13.",
+    "mapUrl": "https://www.google.com/maps/search/MyPilates+Kaunas+Vytauto+pr.+23",
+    "status": "approved",
+    "source": "niv",
+    "lat": 54.8985,
+    "lng": 23.9217,
+    "hours": "Mon-Fri 10:00-18:00",
+    "hoursHe": "ב'-ו' 10:00-18:00"
+  },
+  {
+    "id": "mypilates-palanga",
+    "region": "palanga",
+    "kind": "wellness",
+    "name": "MyPilates",
+    "type": "Seasonal Pilates studio",
+    "typeHe": "סטודיו פילאטיס עונתי",
+    "rating": 5.0,
+    "reviews": 23,
+    "price": "€12–22",
+    "emoji": "🧘",
+    "niv": "A seasonal summer studio inside the Grand Baltic Dunes hotel, just a 5-minute walk from Palanga's pier and the sea. Mat and equipment-based Pilates with professional instructors — a relaxed way to stay active on a beach holiday. Same MyPilates chain as Vilnius and Kaunas, open for the summer season only.",
+    "nivHe": "סטודיו עונתי לקיץ בתוך מלון Grand Baltic Dunes, כ-5 דקות הליכה מהמזח ומהים בפלנגה. פילאטיס מזרון ומכשירים עם מדריכות מקצועיות — דרך נעימה להישאר פעילים בחופשת חוף. אותה רשת MyPilates כמו בוילנה ובקובנה, פתוח לעונת הקיץ בלבד.",
+    "mapUrl": "https://www.google.com/maps/search/MyPilates+Grand+Baltic+Dunes+Palanga",
+    "status": "approved",
+    "source": "niv",
+    "lat": 55.92,
+    "lng": 21.068,
+    "hours": "Mon-Sun 08:00-22:00",
+    "hoursHe": "ב'-א' 08:00-22:00"
+  }
+];
 // Landmarks for the itinerary timeline (sights, not in Niv's list)
 const LANDMARKS = [
   { id: 'gediminas', region: 'vilnius', he: { name: 'מגדל גדימינאס' }, en: { name: 'Gediminas Tower' } },

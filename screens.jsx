@@ -743,6 +743,9 @@ function StaysScreen({ lang, t, places, regions, openPlace, savedSet, toggleSave
 
 // ─── PLACE DETAIL MODAL ──────────────────────────────────────────────────
 function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, mapUrl }) {
+  const mapRef = React.useRef(null);
+  const mapInstanceRef = React.useRef(null);
+
   useEffect(() => {
     const onKey = (e) => { if (e.key === 'Escape') onClose(); };
     window.addEventListener('keydown', onKey);
@@ -750,22 +753,84 @@ function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, map
     return () => { window.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
   }, []);
 
+  useEffect(() => {
+    if (!place || !place.lat || !place.lng) return;
+
+    const initLeaflet = () => {
+      if (!mapRef.current || mapInstanceRef.current) return;
+      const L = window.L;
+      const map = L.map(mapRef.current, {
+        center: [place.lat, place.lng],
+        zoom: 16,
+        zoomControl: false,
+        scrollWheelZoom: false,
+        attributionControl: false,
+        dragging: true,
+      });
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
+      const accent = (region && region.accent) || '#C28840';
+      const icon = L.divIcon({
+        className: '',
+        html: `<div style="width:38px;height:38px;background:${accent};border:3px solid #fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,0.35);">${place.emoji}</div>`,
+        iconSize: [38, 38],
+        iconAnchor: [19, 19],
+      });
+      L.marker([place.lat, place.lng], { icon }).addTo(map);
+      mapInstanceRef.current = map;
+    };
+
+    const tryInit = () => { if (window.L) { setTimeout(initLeaflet, 60); } };
+
+    if (window.L) {
+      setTimeout(initLeaflet, 60);
+    } else {
+      if (!document.getElementById('leaflet-css')) {
+        const link = document.createElement('link');
+        link.id = 'leaflet-css';
+        link.rel = 'stylesheet';
+        link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+        document.head.appendChild(link);
+      }
+      if (!document.getElementById('leaflet-js')) {
+        const s = document.createElement('script');
+        s.id = 'leaflet-js';
+        s.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+        s.onload = () => setTimeout(initLeaflet, 60);
+        document.head.appendChild(s);
+      } else {
+        const iv = setInterval(() => { if (window.L) { clearInterval(iv); setTimeout(initLeaflet, 60); } }, 120);
+      }
+    }
+
+    return () => {
+      if (mapInstanceRef.current) { mapInstanceRef.current.remove(); mapInstanceRef.current = null; }
+    };
+  }, [place]);
+
   if (!place) return null;
   const typeLabel = lang === 'he' ? place.typeHe : place.type;
   const nivText = lang === 'he' ? place.nivHe : place.niv;
-  const ph = `${place.name} · ${place.type}`;
+  const hasCoords = place.lat && place.lng;
+  const accentColor = (region && region.accent) || '#C28840';
+
   return (
     <div className="modal-backdrop" onClick={onClose}>
       <div className="modal" onClick={e => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose}><Icon.close /></button>
-        <div className="modal-img">
-          <div className="modal-img-bg" style={{ background: `linear-gradient(135deg, ${(region && region.accent) || '#C28840'}33, ${(region && region.accent) || '#C28840'}11)` }}>
-            <span className="modal-emoji-big" aria-hidden="true">{place.emoji}</span>
+
+        {hasCoords ? (
+          <div className="modal-map-container" ref={mapRef} />
+        ) : (
+          <div className="modal-img">
+            <div className="modal-img-bg" style={{ background: `linear-gradient(135deg, ${accentColor}33, ${accentColor}11)` }}>
+              <span className="modal-emoji-big" aria-hidden="true">{place.emoji}</span>
+            </div>
           </div>
-        </div>
+        )}
+
         <div className="modal-body">
           <div className="modal-meta">
-            <span className="modal-region" style={{ color: region?.accent }}>● {region?.[lang].name}</span>
+            <span className="modal-region" style={{ color: accentColor }}>● {region?.[lang].name}</span>
             <span className="modal-kind">{typeLabel}</span>
             {place.rating != null && <span className="modal-rating"><Icon.star /> {place.rating.toFixed(1)} <span style={{ opacity: 0.55 }}>({place.reviews?.toLocaleString()})</span></span>}
             {place.price && <span className="modal-price">{place.price}</span>}
@@ -783,6 +848,26 @@ function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, map
                 : "A place worth a stop. Add it to your trip to see it on your route."}
             </p>
           )}
+          {((place.hours || place.hoursHe) || place.website) && (
+            <div className="modal-info">
+              {(place.hours || place.hoursHe) && (
+                <div className="modal-info-row">
+                  <Icon.clock />
+                  <span dir="ltr">{lang === 'he' && place.hoursHe ? place.hoursHe : place.hours}</span>
+                </div>
+              )}
+              {place.website && (
+                <div className="modal-info-row">
+                  <Icon.globe />
+                  <a href={place.website} target="_blank" rel="noopener noreferrer"
+                     style={{ color: accentColor, textDecoration: 'none', fontWeight: 600 }}
+                     onClick={e => e.stopPropagation()}>
+                    {place.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                  </a>
+                </div>
+              )}
+            </div>
+          )}
           <div className="modal-actions">
             <button
               className={`btn ${saved ? 'btn-success' : 'btn-primary'}`}
@@ -791,16 +876,32 @@ function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, map
               {saved ? <Icon.bookmarkFill /> : <Icon.bookmark />}
               {saved ? t.inTrip : t.addToTrip}
             </button>
+            {place.reservationUrl && (
+              <button
+                className="btn btn-amber"
+                onClick={(e) => { e.preventDefault(); window.open(place.reservationUrl, '_blank', 'noopener,noreferrer'); }}
+              >
+                <Icon.calendar /> {lang === 'he' ? 'הזמן שולחן' : 'Reserve'}
+              </button>
+            )}
+            {place.website && (
+              <button
+                className="btn btn-ghost"
+                onClick={(e) => { e.preventDefault(); window.open(place.website, '_blank', 'noopener,noreferrer'); }}
+              >
+                <Icon.globe /> {lang === 'he' ? 'אתר' : 'Website'}
+              </button>
+            )}
             {place.mapUrl2 ? (
               <>
                 <button
-                  className="btn btn-ghost"
+                  className="btn btn-ghost btn-sm"
                   onClick={(e) => { e.preventDefault(); window.open(place.mapUrl, '_blank', 'noopener,noreferrer'); }}
                 >
                   <Icon.pin /> {lang === 'he' ? 'סניף 1 — מפות' : 'Location 1 — Maps'}
                 </button>
                 <button
-                  className="btn btn-ghost"
+                  className="btn btn-ghost btn-sm"
                   onClick={(e) => { e.preventDefault(); window.open(place.mapUrl2, '_blank', 'noopener,noreferrer'); }}
                 >
                   <Icon.pin /> {lang === 'he' ? 'סניף 2 — מפות' : 'Location 2 — Maps'}
@@ -808,7 +909,7 @@ function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, map
               </>
             ) : (
               <button
-                className="btn btn-ghost"
+                className="btn btn-ghost btn-sm"
                 onClick={(e) => {
                   e.preventDefault();
                   window.open(placeMapUrl(place), '_blank', 'noopener,noreferrer');
