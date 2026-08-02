@@ -761,7 +761,7 @@ function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, map
       const L = window.L;
       const map = L.map(mapRef.current, {
         center: [place.lat, place.lng],
-        zoom: 16,
+        zoom: 14,
         zoomControl: false,
         scrollWheelZoom: false,
         attributionControl: false,
@@ -909,13 +909,13 @@ function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, map
               </>
             ) : (
               <button
-                className="btn btn-ghost btn-sm"
+                className="btn btn-ghost btn-xs"
                 onClick={(e) => {
                   e.preventDefault();
                   window.open(placeMapUrl(place), '_blank', 'noopener,noreferrer');
                 }}
               >
-                <Icon.pin /> {lang === 'he' ? 'פתח בגוגל מפות' : 'Open in Google Maps'}
+                <Icon.pin /> {lang === 'he' ? 'גוגל מפות' : 'Google Maps'}
               </button>
             )}
           </div>
