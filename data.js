@@ -159,7 +159,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6920896,
-    "lng": 25.2541696
+    "lng": 25.2541696,
+    "hours": "Mon-Fri 08:00-15:00 · Sat 09:00-14:00",
+    "hoursHe": "ב'-ו' 08:00-15:00 · ש' 09:00-14:00"
   },
   {
     "id": "mon",
@@ -217,7 +219,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.677537,
-    "lng": 25.284312
+    "lng": 25.284312,
+    "hours": "Daily until 20:00",
+    "hoursHe": "יום-יום עד 20:00"
   },
   {
     "id": "brew-specialty-coffee",
@@ -521,7 +525,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6737907,
-    "lng": 25.2857133
+    "lng": 25.2857133,
+    "hours": "Tue-Thu 10:00-18:00 · Fri 09:00-22:00 · Sat-Sun 08:00-22:00",
+    "hoursHe": "ג'-ה' 10:00-18:00 · ו' 09:00-22:00 · ש'-א' 08:00-22:00"
   },
   {
     "id": "le-travi",
@@ -702,7 +708,10 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.679,
-    "lng": 25.281
+    "lng": 25.281,
+    "website": "http://www.laprovence.lt",
+    "hours": "Mon-Sat 07:30-19:00 · Sun 08:00-17:00",
+    "hoursHe": "ב'-ש' 07:30-19:00 · א' 08:00-17:00"
   },
   {
     "id": "mindaugo-kepykla",
@@ -965,7 +974,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6696766,
-    "lng": 25.2692306
+    "lng": 25.2692306,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "backstage-roastery-hq",
@@ -1024,7 +1035,9 @@ const PLACES = [
     "source": "ai",
     "lat": 54.8955765,
     "lng": 23.8895434,
-    "website": "https://bohemehouse.lt"
+    "website": "https://bohemehouse.lt",
+    "hours": "Check-in from 15:00",
+    "hoursHe": "צ'ק-אין מ-15:00"
   },
   {
     "id": "habits-bakery",
@@ -1042,7 +1055,9 @@ const PLACES = [
     "status": "pending",
     "source": "ai",
     "lat": 54.897801,
-    "lng": 23.9216875
+    "lng": 23.9216875,
+    "hours": "Mon-Wed 07:30-20:00 · Thu 07:30-21:00 · Fri 07:30-23:00 · Sat-Sun 09:00-23:00",
+    "hoursHe": "ב'-ד' 07:30-20:00 · ה' 07:30-21:00 · ו' 07:30-23:00 · ש'-א' 09:00-23:00"
   },
   {
     "id": "nyc-coffee-co",
@@ -1060,7 +1075,9 @@ const PLACES = [
     "status": "pending",
     "source": "ai",
     "lat": 54.8985,
-    "lng": 23.905
+    "lng": 23.905,
+    "hours": "Daily from 07:30",
+    "hoursHe": "יום-יום מ-07:30"
   },
   {
     "id": "kavos-architektai",
@@ -1098,7 +1115,10 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.7106,
-    "lng": 21.1335
+    "lng": 21.1335,
+    "website": "https://ambertonhotels.com/lt/klaipeda",
+    "hours": "By appointment",
+    "hoursHe": "בתיאום מראש"
   },
   {
     "id": "muskatas",
@@ -1116,7 +1136,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.7017074,
-    "lng": 25.2929436
+    "lng": 25.2929436,
+    "hours": "Mon-Fri 09:30-23:00 · Sat 11:00-23:00 · Sun 11:00-22:30",
+    "hoursHe": "ב'-ו' 09:30-23:00 · ש' 11:00-23:00 · א' 11:00-22:30"
   },
   {
     "id": "bistro-zarasai",
@@ -1134,7 +1156,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.734,
-    "lng": 26.2454
+    "lng": 26.2454,
+    "hours": "Mon-Sat 08:00-21:00",
+    "hoursHe": "ב'-ש' 08:00-21:00"
   },
   {
     "id": "spricas-brunch",
@@ -1172,7 +1196,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.5022,
-    "lng": 21.16
+    "lng": 21.16,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "vecekrugas-dune",
@@ -1190,7 +1216,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.3543039,
-    "lng": 21.029118
+    "lng": 21.029118,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "smoked-fish",
@@ -1228,7 +1256,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.88,
-    "lng": 24.35
+    "lng": 24.35,
+    "hours": "Check-in from 15:00",
+    "hoursHe": "צ'ק-אין מ-15:00"
   },
   {
     "id": "doyou-place",
@@ -1246,7 +1276,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.95,
-    "lng": 24.8
+    "lng": 24.8,
+    "hours": "Check-in from 15:00",
+    "hoursHe": "צ'ק-אין מ-15:00"
   },
   {
     "id": "casa-de-campo-glamping-lithuania",
@@ -1264,7 +1296,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.05,
-    "lng": 24.6
+    "lng": 24.6,
+    "hours": "Check-in from 15:00",
+    "hoursHe": "צ'ק-אין מ-15:00"
   },
   {
     "id": "hytte",
@@ -1282,7 +1316,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.2,
-    "lng": 25.0
+    "lng": 25.0,
+    "hours": "Check-in from 15:00",
+    "hoursHe": "צ'ק-אין מ-15:00"
   },
   {
     "id": "alantos-irgai-sodybos-ir-nameli",
@@ -1300,7 +1336,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.3744,
-    "lng": 25.2691
+    "lng": 25.2691,
+    "hours": "Check-in from 15:00",
+    "hoursHe": "צ'ק-אין מ-15:00"
   },
   {
     "id": "villa-the-lake",
@@ -1318,7 +1356,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.2,
-    "lng": 25.2
+    "lng": 25.2,
+    "hours": "Check-in from 15:00",
+    "hoursHe": "צ'ק-אין מ-15:00"
   },
   {
     "id": "kupetait",
@@ -1336,7 +1376,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.957136,
-    "lng": 24.8728845
+    "lng": 24.8728845,
+    "hours": "Check-in from 15:00",
+    "hoursHe": "צ'ק-אין מ-15:00"
   },
   {
     "id": "getaway-to-forest-cab",
@@ -1354,7 +1396,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.3,
-    "lng": 25.0
+    "lng": 25.0,
+    "hours": "Check-in from 15:00",
+    "hoursHe": "צ'ק-אין מ-15:00"
   },
   {
     "id": "www-pineplace-lt",
@@ -1372,7 +1416,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.25,
-    "lng": 25.15
+    "lng": 25.15,
+    "hours": "Check-in from 15:00",
+    "hoursHe": "צ'ק-אין מ-15:00"
   },
   {
     "id": "atvira-meno-galerija-open-gallery",
@@ -1390,7 +1436,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6697,
-    "lng": 25.2692
+    "lng": 25.2692,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "mana-sleep-spa-druskininkai",
@@ -1409,7 +1457,10 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.0183748,
-    "lng": 23.9820289
+    "lng": 23.9820289,
+    "website": "https://www.draugyste.lt/apgyvendinimas/vila-kolonada/#.Vou8mK309L4",
+    "hours": "24/7 reception",
+    "hoursHe": "קבלה 24/7"
   },
   {
     "id": "la-petite-france-vilnius",
@@ -1511,7 +1562,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6954549,
-    "lng": 25.2557592
+    "lng": 25.2557592,
+    "hours": "24/7 reception",
+    "hoursHe": "קבלה 24/7"
   },
   {
     "id": "ac-hotel-vilnius",
@@ -1530,7 +1583,10 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6914922,
-    "lng": 25.2715649
+    "lng": 25.2715649,
+    "website": "https://www.marriott.com/en-us/hotels/vnoac-ac-hotel-vilnius/overview",
+    "hours": "24/7 reception",
+    "hoursHe": "קבלה 24/7"
   },
   {
     "id": "rooma-apartments-vilnius",
@@ -1569,7 +1625,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.734,
-    "lng": 26.2454
+    "lng": 26.2454,
+    "hours": "Daily 12:00-22:00",
+    "hoursHe": "יום-יום 12:00-22:00"
   },
   {
     "id": "monopolis-zarasai",
@@ -1607,7 +1665,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.73,
-    "lng": 26.24
+    "lng": 26.24,
+    "hours": "Daily 08:00-19:00",
+    "hoursHe": "יום-יום 08:00-19:00"
   },
   {
     "id": "zarasai-five-lakes",
@@ -1625,7 +1685,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.734,
-    "lng": 26.2454
+    "lng": 26.2454,
+    "hours": "Mon-Sat 08:00-21:00",
+    "hoursHe": "ב'-ש' 08:00-21:00"
   },
   {
     "id": "sartai-lake",
@@ -1643,7 +1705,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.82,
-    "lng": 26.09
+    "lng": 26.09,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "zarasai-museum",
@@ -1661,7 +1725,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.734,
-    "lng": 26.2454
+    "lng": 26.2454,
+    "hours": "Mon-Sat 08:00-21:00",
+    "hoursHe": "ב'-ש' 08:00-21:00"
   },
   {
     "id": "zarasai-promenade",
@@ -1679,7 +1745,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.734,
-    "lng": 26.2454
+    "lng": 26.2454,
+    "hours": "Mon-Sat 08:00-21:00",
+    "hoursHe": "ב'-ש' 08:00-21:00"
   },
   {
     "id": "kemping-zarasai",
@@ -1697,7 +1765,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.734,
-    "lng": 26.24
+    "lng": 26.24,
+    "hours": "May–Sep: daily",
+    "hoursHe": "מאי–ספט': יום-יום"
   },
   {
     "id": "wake-inn-zarasai",
@@ -1715,7 +1785,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.734,
-    "lng": 26.2454
+    "lng": 26.2454,
+    "hours": "Mon-Sat 08:00-21:00",
+    "hoursHe": "ב'-ש' 08:00-21:00"
   },
   {
     "id": "brut-wine-hotel-zarasai",
@@ -1733,7 +1805,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.734,
-    "lng": 26.2454
+    "lng": 26.2454,
+    "hours": "24/7 reception",
+    "hoursHe": "קבלה 24/7"
   },
   {
     "id": "palanga-amber-museum",
@@ -1751,7 +1825,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.9215,
-    "lng": 21.064
+    "lng": 21.064,
+    "hours": "May–Sep: Tue-Sat 10:00-20:00 · Sun 10:00-19:00 · Oct–Apr: Tue-Sat 10:00-18:00 · Sun 10:00-17:00",
+    "hoursHe": "מאי–ספט': ג'-ש' 10:00-20:00 · א' 10:00-19:00 · אוק'–אפר': ג'-ש' 10:00-18:00 · א' 10:00-17:00"
   },
   {
     "id": "birute-park-palanga",
@@ -1769,7 +1845,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.9064684,
-    "lng": 21.0508661
+    "lng": 21.0508661,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "palanga-pier",
@@ -1787,7 +1865,10 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.92,
-    "lng": 21.055
+    "lng": 21.055,
+    "website": "https://www.grandbalticdunes.com",
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "palanga-beach",
@@ -1805,7 +1886,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.91,
-    "lng": 21.05
+    "lng": 21.05,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "brew-palanga",
@@ -1864,7 +1947,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.9183794,
-    "lng": 21.0699964
+    "lng": 21.0699964,
+    "hours": "Seasonal hours (summer)",
+    "hoursHe": "שעות עונתיות (קיץ)"
   },
   {
     "id": "basanaviciaus-street",
@@ -1922,7 +2007,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.3027219,
-    "lng": 20.9998596
+    "lng": 20.9998596,
+    "hours": "May–Sep: Mon-Thu · Sun 16:00-23:00 · Fri-Sat 16:00-00:00",
+    "hoursHe": "מאי–ספט': ב'-ה'·א' 16:00-23:00 · ו'-ש' 16:00-00:00"
   },
   {
     "id": "gitanos-blynai",
@@ -1940,7 +2027,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.304,
-    "lng": 21.0
+    "lng": 21.0,
+    "hours": "Seasonal: daily 09:00-19:00",
+    "hoursHe": "עונתי: יום-יום 09:00-19:00"
   },
   {
     "id": "witches-hill",
@@ -1958,7 +2047,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.5377459,
-    "lng": 21.1098158
+    "lng": 21.1098158,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "thomas-mann-house-nida",
@@ -1976,7 +2067,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.304,
-    "lng": 20.999
+    "lng": 20.999,
+    "hours": "May–Oct: daily 10:00-18:00 · Nov–Apr: Tue-Sat 10:00-17:00",
+    "hoursHe": "מאי–אוק': יום-יום 10:00-18:00 · נוב'–אפר': ג'-ש' 10:00-17:00"
   },
   {
     "id": "nida-harbour",
@@ -1994,7 +2087,10 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.304,
-    "lng": 20.9993
+    "lng": 20.9993,
+    "website": "https://www.facebook.com/todarestoranas",
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "stebuklai-spa",
@@ -2013,7 +2109,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.3096643,
-    "lng": 20.9582555
+    "lng": 20.9582555,
+    "hours": "Daily 11:00-21:00",
+    "hoursHe": "יום-יום 11:00-21:00"
   },
   {
     "id": "monai-klaipeda",
@@ -2072,7 +2170,10 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.7094,
-    "lng": 21.1174
+    "lng": 21.1174,
+    "website": "https://www.dfds.com/en/freight-shipping/routes-and-schedules/klaipeda-fredericia",
+    "hours": "Tue-Sat 10:00-18:00",
+    "hoursHe": "ג'-ש' 10:00-18:00"
   },
   {
     "id": "klaipeda-old-town-walk",
@@ -2090,7 +2191,10 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.7105565,
-    "lng": 21.1334853
+    "lng": 21.1334853,
+    "website": "https://ambertonhotels.com/lt/klaipeda",
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "clock-museum-klaipeda",
@@ -2108,7 +2212,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.7122121,
-    "lng": 21.1341595
+    "lng": 21.1341595,
+    "hours": "Tue-Wed · Fri-Sat 10:00-18:00 · Thu 12:00-20:00 · Sun 10:00-16:00",
+    "hoursHe": "ג'-ד' · ו'-ש' 10:00-18:00 · ה' 12:00-20:00 · א' 10:00-16:00"
   },
   {
     "id": "toli-toli-druskininkai",
@@ -2126,7 +2232,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.0185189,
-    "lng": 23.9734561
+    "lng": 23.9734561,
+    "hours": "Daily 11:00-23:00",
+    "hoursHe": "יום-יום 11:00-23:00"
   },
   {
     "id": "boulangerie-druskininkai",
@@ -2145,7 +2253,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.0156259,
-    "lng": 23.9742251
+    "lng": 23.9742251,
+    "hours": "Daily 07:00-20:00",
+    "hoursHe": "יום-יום 07:00-20:00"
   },
   {
     "id": "sicilia-druskininkai",
@@ -2163,7 +2273,9 @@ const PLACES = [
     "status": "pending",
     "source": "ai",
     "lat": 54.0176995,
-    "lng": 23.9761855
+    "lng": 23.9761855,
+    "hours": "Daily 10:00-23:00 · Fri-Sat until 00:00",
+    "hoursHe": "יום-יום 10:00-23:00 · ו'-ש' עד 00:00"
   },
   {
     "id": "druskininkai-aqua-park",
@@ -2181,7 +2293,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.0234242,
-    "lng": 23.9745298
+    "lng": 23.9745298,
+    "hours": "08:00-22:00",
+    "hoursHe": "08:00-22:00"
   },
   {
     "id": "dzukija-national-park",
@@ -2199,7 +2313,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.083359,
-    "lng": 24.2784736
+    "lng": 24.2784736,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "city-coffee-druskininkai",
@@ -2218,7 +2334,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.0128855,
-    "lng": 23.9786396
+    "lng": 23.9786396,
+    "hours": "Daily from 08:30",
+    "hoursHe": "יום-יום מ-08:30"
   },
   {
     "id": "snow-arena-druskininkai",
@@ -2237,7 +2355,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.0324623,
-    "lng": 23.9580763
+    "lng": 23.9580763,
+    "hours": "Mon-Thu 10:00-19:00 · Fri-Sat 10:00-22:00 · Sun 10:00-19:00",
+    "hoursHe": "ב'-ה' 10:00-19:00 · ו'-ש' 10:00-22:00 · א' 10:00-19:00"
   },
   {
     "id": "vijunele-park",
@@ -2256,7 +2376,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.01567,
-    "lng": 23.9304943
+    "lng": 23.9304943,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "uno-park-druskininkai",
@@ -2275,7 +2397,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.01567,
-    "lng": 23.9304943
+    "lng": 23.9304943,
+    "hours": "Apr–Aug 10:00-22:30 · Sep-Oct 10:00-21:30 · Nov–Mar 10:00-20:30",
+    "hoursHe": "אפר'–אוג' 10:00-22:30 · ספט'-אוק' 10:00-21:30 · נוב'–מרץ 10:00-20:30"
   },
   {
     "id": "spa-vilnius-druskininkai",
@@ -2315,7 +2439,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.0153151,
-    "lng": 23.9394191
+    "lng": 23.9394191,
+    "hours": "Mon-Fri 08:30-17:15",
+    "hoursHe": "ב'-ו' 08:30-17:15"
   },
   {
     "id": "moletai-observatory",
@@ -2333,7 +2459,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.3228,
-    "lng": 25.5544
+    "lng": 25.5544,
+    "hours": "Wed-Sun 09:00-18:00 · booking required",
+    "hoursHe": "ד'-א' 09:00-18:00 · הזמנה מראש"
   },
   {
     "id": "ethnocosmology-museum",
@@ -2351,7 +2479,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.3228,
-    "lng": 25.5544
+    "lng": 25.5544,
+    "hours": "Mon-Fri 08:00-16:30",
+    "hoursHe": "ב'-ו' 08:00-16:30"
   },
   {
     "id": "labanoras-observation-tower",
@@ -2369,7 +2499,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.36,
-    "lng": 25.4
+    "lng": 25.4,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "dubingiai-stud-farm",
@@ -2387,7 +2519,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.35,
-    "lng": 25.45
+    "lng": 25.45,
+    "hours": "Seasonal · booking required",
+    "hoursHe": "עונתי · הזמנה מראש"
   },
   {
     "id": "moletai-lake-district",
@@ -2405,7 +2539,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.23,
-    "lng": 25.4
+    "lng": 25.4,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "moletai-sculpture-park",
@@ -2443,7 +2579,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.3496901,
-    "lng": 26.0523113
+    "lng": 26.0523113,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "beekeeping-museum-stripeikiai",
@@ -2461,7 +2599,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.56,
-    "lng": 26.02
+    "lng": 26.02,
+    "hours": "May–Sep: Tue-Sun 10:00-18:00",
+    "hoursHe": "מאי–ספט': ג'-א' 10:00-18:00"
   },
   {
     "id": "paluse-wooden-church",
@@ -2479,7 +2619,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.5797,
-    "lng": 25.9798
+    "lng": 25.9798,
+    "hours": "Daily · Hours vary",
+    "hoursHe": "פתוח מדי יום · שעות משתנות"
   },
   {
     "id": "vila-gervalis",
@@ -2498,7 +2640,9 @@ const PLACES = [
     "source": "niv",
     "lat": 55.4667769,
     "lng": 25.7720667,
-    "website": "https://www.gervalis.lt"
+    "website": "https://www.gervalis.lt",
+    "hours": "24/7 reception",
+    "hoursHe": "קבלה 24/7"
   },
   {
     "id": "ginuciai-hill-fort",
@@ -2516,7 +2660,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.55,
-    "lng": 25.96
+    "lng": 25.96,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "lourdes-grotto-kretinga",
@@ -2534,7 +2680,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.8843,
-    "lng": 21.235
+    "lng": 21.235,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "kernave-archaeological",
@@ -2552,7 +2700,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.8786244,
-    "lng": 24.8564076
+    "lng": 24.8564076,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "trakai-island-castle",
@@ -2613,7 +2763,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.616408,
-    "lng": 24.8080203
+    "lng": 24.8080203,
+    "hours": "24/7 reception",
+    "hoursHe": "קבלה 24/7"
   },
   {
     "id": "anyksciai-treetop-path",
@@ -2631,7 +2783,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.526,
-    "lng": 25.109
+    "lng": 25.109,
+    "hours": "May–Oct: daily 09:00-20:00",
+    "hoursHe": "מאי–אוק': יום-יום 09:00-20:00"
   },
   {
     "id": "kibinai-senoji",
@@ -2649,7 +2803,10 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6486525,
-    "lng": 24.9329232
+    "lng": 24.9329232,
+    "website": "https://www.kibinas.lt",
+    "hours": "Mon-Thu 10:00-21:00 · Fri-Sat 10:00-24:00 · Sun 10:00-22:00",
+    "hoursHe": "ב'-ה' 10:00-21:00 · ו'-ש' 10:00-24:00 · א' 10:00-22:00"
   },
   {
     "id": "le-vivier-trakai",
@@ -2668,7 +2825,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6505959,
-    "lng": 24.9044752
+    "lng": 24.9044752,
+    "hours": "Daily 11:00-21:00",
+    "hoursHe": "יום-יום 11:00-21:00"
   },
   {
     "id": "aj-sokoladas",
@@ -2687,7 +2846,10 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.64363,
-    "lng": 24.9297407
+    "lng": 24.9297407,
+    "hours": "Mon-Fri 08:30-20:00 · Sat 10:00-21:00 · Sun 10:00-20:00",
+    "hoursHe": "ב'-ו' 08:30-20:00 · ש' 10:00-21:00 · א' 10:00-20:00",
+    "website": "https://www.ajsokoladas.lt"
   },
   {
     "id": "trakai-balloon-ride",
@@ -2706,7 +2868,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6437229,
-    "lng": 24.7700851
+    "lng": 24.7700851,
+    "hours": "Seasonal · booking required",
+    "hoursHe": "עונתי · הזמנה מראש"
   },
   {
     "id": "trakai-tourist-info",
@@ -2725,7 +2889,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6487,
-    "lng": 24.9329
+    "lng": 24.9329,
+    "hours": "Summer: daily 09:00-18:00 · Winter: Mon-Fri 08:00-17:00",
+    "hoursHe": "קיץ: יום-יום 09:00-18:00 · חורף: ב'-ו' 08:00-17:00"
   },
   {
     "id": "trakai-boat-rental",
@@ -2744,7 +2910,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6486343,
-    "lng": 24.9134332
+    "lng": 24.9134332,
+    "hours": "Seasonal: daily 09:00-20:00",
+    "hoursHe": "עונתי: יום-יום 09:00-20:00"
   },
   {
     "id": "trakai-history-museum",
@@ -2763,7 +2931,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6486343,
-    "lng": 24.9134332
+    "lng": 24.9134332,
+    "hours": "May–Sep: daily 10:00-19:00 · Oct–Apr: Tue-Sun 10:00-18:00",
+    "hoursHe": "מאי–ספט': יום-יום 10:00-19:00 · אוק'–אפר': ג'-א' 10:00-18:00"
   },
   {
     "id": "kiubete-trakai",
@@ -2782,7 +2952,10 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6461142,
-    "lng": 24.931338
+    "lng": 24.931338,
+    "website": "https://kiubete.lt",
+    "hours": "Daily 10:30-22:00",
+    "hoursHe": "יום-יום 10:30-22:00"
   },
   {
     "id": "trakai-beach",
@@ -2801,7 +2974,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6626379,
-    "lng": 24.9099326
+    "lng": 24.9099326,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "varnikai-nature-trail",
@@ -2820,7 +2995,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6567667,
-    "lng": 24.9522242
+    "lng": 24.9522242,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "maisto-oaze-terasa",
@@ -2839,7 +3016,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6458824,
-    "lng": 24.935103
+    "lng": 24.935103,
+    "hours": "May–Sep: daily 09:00-18:00 · Oct–Apr: Mon-Fri 08:00-17:00",
+    "hoursHe": "מאי–ספט': יום-יום 09:00-18:00 · אוק'–אפר': ב'-ו' 08:00-17:00"
   },
   {
     "id": "dzukija-pine-forests",
@@ -2857,7 +3036,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.1,
-    "lng": 23.9
+    "lng": 23.9,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "seduva-jewish-museum",
@@ -2876,7 +3057,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.7511071,
-    "lng": 23.7459316
+    "lng": 23.7459316,
+    "hours": "Tue-Sun 10:00-18:00",
+    "hoursHe": "ג'-א' 10:00-18:00"
   },
   {
     "id": "alantos-zirgai",
@@ -2895,7 +3078,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 55.3744666,
-    "lng": 25.2691686
+    "lng": 25.2691686,
+    "hours": "Check-in from 15:00",
+    "hoursHe": "צ'ק-אין מ-15:00"
   },
   {
     "id": "astriosios-kirsnos-dvaras",
@@ -2914,7 +3099,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.3027028,
-    "lng": 22.1745831
+    "lng": 22.1745831,
+    "hours": "Check-in from 15:00",
+    "hoursHe": "צ'ק-אין מ-15:00"
   },
   {
     "id": "genio-kampas-treehouse",
@@ -2933,7 +3120,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.9741967,
-    "lng": 22.0417483
+    "lng": 22.0417483,
+    "hours": "Check-in from 15:00",
+    "hoursHe": "צ'ק-אין מ-15:00"
   },
   {
     "id": "uoksas-kaunas",
@@ -2992,7 +3181,9 @@ const PLACES = [
     "status": "pending",
     "source": "niv",
     "lat": 54.8990086,
-    "lng": 23.8839599
+    "lng": 23.8839599,
+    "hours": "Tue-Fri 10:00-18:00 · Sat 10:00-17:00",
+    "hoursHe": "ג'-ו' 10:00-18:00 · ש' 10:00-17:00"
   },
   {
     "id": "azuolyno-parkas",
@@ -3010,7 +3201,9 @@ const PLACES = [
     "status": "pending",
     "source": "niv",
     "lat": 54.7109129,
-    "lng": 25.1677049
+    "lng": 25.1677049,
+    "hours": "Open daily",
+    "hoursHe": "פתוח מדי יום"
   },
   {
     "id": "bundu-kaunas",
@@ -3048,7 +3241,9 @@ const PLACES = [
     "status": "pending",
     "source": "niv",
     "lat": 54.9,
-    "lng": 23.91
+    "lng": 23.91,
+    "hours": "Tue-Sat 11:00-19:00",
+    "hoursHe": "ג'-ש' 11:00-19:00"
   },
   {
     "id": "dia-kaunas",
@@ -3067,7 +3262,9 @@ const PLACES = [
     "source": "niv",
     "lat": 54.8965017,
     "lng": 23.9090541,
-    "website": "https://www.restoranasdia.lt"
+    "website": "https://www.restoranasdia.lt",
+    "hours": "Mon-Wed 12:00-22:00 · Thu 12:00-23:00 · Fri-Sat 12:00-24:00 · Sun 12:00-21:00",
+    "hoursHe": "ב'-ד' 12:00-22:00 · ה' 12:00-23:00 · ו'-ש' 12:00-24:00 · א' 12:00-21:00"
   },
   {
     "id": "zalgirio-arena",
@@ -3086,7 +3283,9 @@ const PLACES = [
     "source": "niv",
     "lat": 54.8904082,
     "lng": 23.9144444,
-    "website": "https://zalgirioarena.lt"
+    "website": "https://zalgirioarena.lt",
+    "hours": "Open for events",
+    "hoursHe": "פתוח לאירועים"
   },
   {
     "id": "numan-kaunas",
@@ -3124,7 +3323,9 @@ const PLACES = [
     "status": "pending",
     "source": "niv",
     "lat": 54.898,
-    "lng": 23.905
+    "lng": 23.905,
+    "hours": "Daily until 22:00",
+    "hoursHe": "יום-יום עד 22:00"
   },
   {
     "id": "kaunas-tourism-info",
@@ -3224,7 +3425,9 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6713169,
-    "lng": 25.2612719
+    "lng": 25.2612719,
+    "hours": "Mon-Sat · booking required",
+    "hoursHe": "ב'-ש' · הזמנה מראש"
   },
   {
     "id": "mypilates-kaunas",
