@@ -759,6 +759,7 @@ function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, map
   return (
     <div className="modal-backdrop" onClick={onClose}>
       <div className="modal" dir={lang === 'he' ? 'rtl' : 'ltr'} onClick={e => e.stopPropagation()}>
+        <div className="modal-handle" aria-hidden="true" />
         <button className="modal-close" onClick={onClose}><Icon.close /></button>
 
         {hasCoords ? (
