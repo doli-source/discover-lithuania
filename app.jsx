@@ -113,11 +113,13 @@ function App() {
 
   // SEO: per-route <title>, meta description, canonical URL + TouristTrip JSON-LD
   useEffect(() => {
-    const baseTitle = lang === 'he' ? 'גלה את ליטא' : 'LithuaniaDiscovery';
-    let title = `${baseTitle} — ${lang === 'he' ? 'מדריך טיולים אישי' : "A Traveler's Guide to Lithuania"}`;
+    const baseTitle = lang === 'he' ? 'גלה את ליטא' : 'Lithuania Travel Guide';
+    let title = lang === 'he'
+      ? 'גלה את ליטא — מדריך טיול: מסעדות, בתי קפה ולינה | 166 מקומות'
+      : 'Lithuania Travel Guide — Cafés, Restaurants & Places to Stay | 166 Picks';
     let description = lang === 'he'
-      ? 'מדריך טיולים אישי לליטא — 160 מקומות נבחרים: בתי קפה, מסעדות, אתרי טבע ולינה, ב-12 אזורים. מאת ניב שמעוני.'
-      : "A curated travel guide to Lithuania — 160 handpicked cafés, restaurants, stays, nature spots and ready-made routes across 12 regions. By Niv Shimoni.";
+      ? 'מדריך טיול לליטא — 166 מקומות נבחרים: בתי קפה, מסעדות, אתרי טבע ולינה, ב-12 אזורים. מסלולים מוכנים מראש לטיול בווילנה, טראקאי, קובנה ועוד.'
+      : "Lithuania travel guide with 166 handpicked places — best cafés & restaurants in Vilnius, things to do in Lithuania, nature spots, stays and ready-made itineraries across 12 regions.";
     let canonicalPath = '/';
     let touristTrip = null;
 
@@ -151,7 +153,7 @@ function App() {
         canonicalPath = `/explore/${params.region}`;
       }
     } else if (screen === 'explore') {
-      title = lang === 'he' ? `כל האזורים | ${baseTitle}` : `Explore all regions | ${baseTitle}`;
+      title = lang === 'he' ? `כל אזורי ליטא — מקומות ואטרקציות | ${baseTitle}` : `Explore Lithuania by Region — Places & Attractions | ${baseTitle}`;
       canonicalPath = '/explore';
     } else if (screen === 'routes' && params.route) {
       const itin = ITINERARIES.find(i => i.id === params.route);
@@ -179,13 +181,13 @@ function App() {
         };
       }
     } else if (screen === 'routes') {
-      title = lang === 'he' ? `מסלולים מוכנים מראש | ${baseTitle}` : `Ready-made routes | ${baseTitle}`;
+      title = lang === 'he' ? `מסלולי טיול בליטא — מיום אחד עד שבוע | ${baseTitle}` : `Lithuania Itineraries — From Day Trips to Full Week | ${baseTitle}`;
       canonicalPath = '/routes';
     } else if (screen === 'food') {
-      title = lang === 'he' ? `איפה לאכול ולשתות בליטא | ${baseTitle}` : `Where to eat & drink in Lithuania | ${baseTitle}`;
+      title = lang === 'he' ? `מסעדות ובתי קפה בוילנה וליטא | ${baseTitle}` : `Best Restaurants & Cafés in Vilnius & Lithuania | ${baseTitle}`;
       canonicalPath = '/food';
     } else if (screen === 'stays') {
-      title = lang === 'he' ? `איפה לישון בליטא | ${baseTitle}` : `Where to sleep in Lithuania | ${baseTitle}`;
+      title = lang === 'he' ? `לינה בליטא — בתי מלון, צימרים וריזורטים | ${baseTitle}` : `Where to Stay in Lithuania — Hotels, Cabins & Resorts | ${baseTitle}`;
       canonicalPath = '/stays';
     }
 

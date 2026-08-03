@@ -201,7 +201,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
       <section className="section home-map-section">
         <div className="section-head">
           <div>
-            <div className="section-eyebrow">{lang === 'he' ? 'מפה אינטרקטיבית' : 'Interactive map'}</div>
+            <div className="section-eyebrow">{lang === 'he' ? 'מפה אינטראקטיבית' : 'Interactive map'}</div>
             <h2 className="section-title">{lang === 'he' ? 'בחר אזור ותתחיל לגלות' : 'Pick a region to explore'}</h2>
             <p className="section-sub">{lang === 'he' ? 'לחץ על אזור במפה לצפייה בכל המקומות בו.' : 'Tap any region on the map to see all its places.'}</p>
           </div>
@@ -531,7 +531,7 @@ function RoutesScreen({ lang, t, regions, places, landmarks, itineraries, params
     <div className="routes">
       <div className="routes-header">
         <div className="section-eyebrow">{lang === 'he' ? 'מסלולים' : 'Routes'}</div>
-        <h1 className="page-title">{lang === 'he' ? 'מסלולים שמוכנים מראש' : 'Routes ready to walk'}</h1>
+        <h1 className="page-title">{lang === 'he' ? 'מסלולים מוכנים מראש' : 'Routes ready to walk'}</h1>
         <p className="page-sub">{lang === 'he' ? 'מהיום הבודד ועד טיול שבועי שלם — עם תחנות מהרשימה.' : "From a single day to a full week — with stops from the list."}</p>
       </div>
 

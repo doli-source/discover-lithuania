@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260721a';
+window._DL_DATA_VERSION = '20260803c';
 
 (function() {
 
@@ -8,7 +8,7 @@ window._DL_DATA_VERSION = '20260721a';
 const REGIONS = [
   {
     id: 'vilnius',
-    he: { name: 'וילנה', tag: 'בירת הברוק', blurb: 'סמטאות אבן, גגות אדומים, ובתי קפה בכל פינה. רפובליקת אוז\'ופיס האמנותית מעבר לנהר.' },
+    he: { name: 'וילנה', tag: 'בירת הבארוק', blurb: 'סמטאות אבן, גגות אדומים, ובתי קפה בכל פינה. רפובליקת אוז\'ופיס האמנותית מעבר לנהר.' },
     en: { name: 'Vilnius', tag: 'Baroque Capital', blurb: 'Cobbled lanes, terracotta roofs, and a café on every corner. Užupis art republic just across the river.' },
     accent: '#C28840',
     placeholder: 'Old Town rooftops at golden hour'
@@ -239,7 +239,7 @@ const PLACES = [
     "price": "€5–10",
     "emoji": "🥐",
     "niv": "Specialty roaster with excellent pastries — perfect morning stop.",
-    "nivHe": "קלייה ספשלטי עם מאפים מעולים — עצירת בוקר מושלמת.",
+    "nivHe": "קלייה ספציאלטי עם מאפים מעולים — עצירת בוקר מושלמת.",
     "mapUrl": "https://maps.app.goo.gl/3oA2cV61rYqw5gZNA",
     "status": "approved",
     "source": "niv",
@@ -1936,7 +1936,7 @@ const PLACES = [
     "kind": "cafe",
     "name": "BREW. Specialty Coffee",
     "type": "Specialty coffee",
-    "typeHe": "קפה ספשלטי",
+    "typeHe": "קפה ספציאלטי",
     "rating": 4.7,
     "reviews": 480,
     "price": "€5–12",
