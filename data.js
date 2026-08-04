@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260804c';
+window._DL_DATA_VERSION = '20260804d';
 
 (function() {
 
@@ -725,7 +725,7 @@ const PLACES = [
     "source": "niv",
     "lat": 54.679,
     "lng": 25.281,
-    "website": "http://www.laprovence.lt",
+    "website": "https://lamadeleine.lt/",
     "hours": "Mon-Sat 07:30-19:00 · Sun 08:00-17:00",
     "hoursHe": "ב'-ש' 07:30-19:00 · א' 08:00-17:00"
   },
@@ -1139,7 +1139,6 @@ const PLACES = [
     "source": "niv",
     "lat": 55.7106,
     "lng": 21.1335,
-    "website": "https://ambertonhotels.com/lt/klaipeda",
     "hours": "By appointment",
     "hoursHe": "בתיאום מראש"
   },
@@ -1906,7 +1905,6 @@ const PLACES = [
     "source": "niv",
     "lat": 55.92,
     "lng": 21.055,
-    "website": "https://www.grandbalticdunes.com",
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום"
   },
@@ -2130,7 +2128,6 @@ const PLACES = [
     "source": "niv",
     "lat": 55.304,
     "lng": 20.9993,
-    "website": "https://www.facebook.com/todarestoranas",
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום"
   },
@@ -2215,7 +2212,7 @@ const PLACES = [
     "source": "niv",
     "lat": 55.7094,
     "lng": 21.1174,
-    "website": "https://www.dfds.com/en/freight-shipping/routes-and-schedules/klaipeda-fredericia",
+    "website": "https://www.mlimuziejus.lt/en/museum/castle-museum/",
     "hours": "Tue-Sat 10:00-18:00",
     "hoursHe": "ג'-ש' 10:00-18:00"
   },
@@ -2236,7 +2233,6 @@ const PLACES = [
     "source": "niv",
     "lat": 55.7105565,
     "lng": 21.1334853,
-    "website": "https://ambertonhotels.com/lt/klaipeda",
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום"
   },
