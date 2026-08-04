@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260804a';
+window._DL_DATA_VERSION = '20260804c';
 
 (function() {
 
@@ -496,8 +496,8 @@ const PLACES = [
     "nivHe": "המטבח הגרוזיני הכי טוב בווילנה — שישה סוגי חאצ'פורי, חינקלי אמיתי בתריסרים וצוות שמראה לך את הדרך הנכונה לאכול אותם.",
     "status": "approved",
     "source": "niv",
-    "lat": 54.7405956,
-    "lng": 25.2287529,
+    "lat": 54.6731794,
+    "lng": 25.2833211,
     "hours": "Mon-Sun 10:00-22:00",
     "hoursHe": "ב'-א' 10:00-22:00",
     "website": "https://chacapuri-bistro.webflow.io/"
@@ -641,8 +641,8 @@ const PLACES = [
     "nivHe": "מקום צהריים קטן של שני שפים מקומיים. דירוג מושלם, בלי תיירים, אוכל ליטאי אמיתי. בדיוק מה שצריך באמצע יום בווילנה.",
     "status": "approved",
     "source": "niv",
-    "lat": 54.68,
-    "lng": 25.287,
+    "lat": 54.6868209,
+    "lng": 25.265492,
     "hours": "Mon-Fri 09:00-19:00 · Sat-Sun 10:00-18:00",
     "hoursHe": "ב'-ו' 09:00-19:00 · ש'-א' 10:00-18:00",
     "website": "https://2virejai.lt/"
@@ -1116,8 +1116,8 @@ const PLACES = [
     "nivHe": "נוסד על ידי שני אדריכלים שנלהבים מקפה — בית קפה גל שלישי על הבולוואר הראשי של קלייפדה עם Chemex, אספרסו ומומחיות אמיתית בכל כוס.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.7139261,
-    "lng": 21.1299274,
+    "lat": 55.7138382,
+    "lng": 21.1298765,
     "hours": "Mon-Fri 08:00-19:00 · Sat,Sun 10:00-18:00",
     "hoursHe": "ב'-ו' 08:00-19:00 · ש',א' 10:00-18:00",
     "website": "https://www.kavosarchitektai.lt/"
@@ -1178,8 +1178,8 @@ const PLACES = [
     "nivHe": "המקום של העיר לאוכל מהיר ומחיר הוגן — אוכל מקומי פשוט ומשביע.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.734,
-    "lng": 26.2454,
+    "lat": 55.7322279,
+    "lng": 26.2495298,
     "hours": "Mon-Sat 08:00-21:00",
     "hoursHe": "ב'-ש' 08:00-21:00"
   },
@@ -1198,8 +1198,8 @@ const PLACES = [
     "nivHe": "אחד ממקומות הברנץ' הכי מדוברים בליטא — צלחות יצירתיות, בנדיקט ביצים משיי וטוסט סטייק עמוס שמחזיר אנשים שוב ושוב.",
     "status": "approved",
     "source": "niv",
-    "lat": 54.681,
-    "lng": 25.29,
+    "lat": 54.6699534,
+    "lng": 25.278352,
     "hours": "Mon-Sat 08:00-21:00, Sun 09:00-21:00",
     "hoursHe": "ב'-ש' 08:00-21:00, א' 09:00-21:00",
     "website": "https://spricas.lt/"
@@ -1279,8 +1279,8 @@ const PLACES = [
     "nivHe": "בקתה ביער ליד ריטאוס עם בריכה ריבותית ממוחוץ וחוף פרטי — ללא אינטרנט לפי תכנון, עם לוחות סולאריים ואורנים לחברה.",
     "status": "approved",
     "source": "niv",
-    "lat": 54.88,
-    "lng": 24.35,
+    "lat": 55.7295137,
+    "lng": 21.9287269,
     "hours": "Check-in from 15:00",
     "hoursHe": "צ'ק-אין מ-15:00",
     "website": "https://miskorojus.lt/"
@@ -1300,8 +1300,8 @@ const PLACES = [
     "nivHe": "בקתות A-frame ביער שנבנו לפי עיצוב הבעלים בלבד — 45 דקות מווילנה, עם פילוסופיה של 'יותר טבע, פחות אנשים' שנלקחת ברצינות.",
     "status": "approved",
     "source": "niv",
-    "lat": 54.95,
-    "lng": 24.8,
+    "lat": 54.6640179,
+    "lng": 24.6949464,
     "hours": "Check-in from 15:00",
     "hoursHe": "צ'ק-אין מ-15:00",
     "website": "https://www.doyouplace.lt/"
@@ -1321,8 +1321,8 @@ const PLACES = [
     "nivHe": "שלושה אוהלי גלמפינג בחווה אורגנית פעילה במחוז שילאלה — קטפו ירקות מהגינה לארוחת הבוקר שלכם, ונרדמים עם נוף לאגם.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.05,
-    "lng": 24.6,
+    "lat": 55.4832606,
+    "lng": 22.4991132,
     "hours": "Check-in from 15:00",
     "hoursHe": "צ'ק-אין מ-15:00"
   },
@@ -1341,8 +1341,8 @@ const PLACES = [
     "nivHe": "בקתות כפריות חמימות באזור קובנה — השם הוא 'בקתה' בנורווגית, והאווירה תואמת בשלמות.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.2,
-    "lng": 25.0,
+    "lat": 54.721574,
+    "lng": 24.599587,
     "hours": "Check-in from 15:00",
     "hoursHe": "צ'ק-אין מ-15:00",
     "website": "https://hytte.lt/en/"
@@ -1383,8 +1383,8 @@ const PLACES = [
     "nivHe": "וילה פרטית על חוף האגם במחוז האגמים של מולטאי — נוחות חמישה כוכבים, פרטיות מוחלטת וטבע ליטאי בצורתו הטהורה ביותר.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.2,
-    "lng": 25.2,
+    "lat": 55.226103,
+    "lng": 25.5468605,
     "hours": "Check-in from 15:00",
     "hoursHe": "צ'ק-אין מ-15:00"
   },
@@ -1424,8 +1424,8 @@ const PLACES = [
     "nivHe": "בקתה ביער מבודדת שנבנתה להתנתקות מוחלטת — עצים בכל כיוון והסוג של שקט שאנשי העיר נוסעים שעות כדי למצוא.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.3,
-    "lng": 25.0,
+    "lat": 55.1947318,
+    "lng": 25.6004677,
     "hours": "Check-in from 15:00",
     "hoursHe": "צ'ק-אין מ-15:00",
     "website": "https://www.forestcab.lt/"
@@ -1445,8 +1445,8 @@ const PLACES = [
     "nivHe": "דירה פשוטה ביער אורנים בגבעות מולטאי — בר-השגה, שקטה ומיקומה טוב לטיולים ולשחייה באגמי לב ליטא.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.25,
-    "lng": 25.15,
+    "lat": 55.1066015,
+    "lng": 25.6797986,
     "hours": "Check-in from 15:00",
     "hoursHe": "צ'ק-אין מ-15:00",
     "website": "https://pineplace.lt/"
@@ -1489,7 +1489,7 @@ const PLACES = [
     "source": "niv",
     "lat": 54.0183748,
     "lng": 23.9820289,
-    "website": "https://www.draugyste.lt/apgyvendinimas/vila-kolonada/#.Vou8mK309L4",
+    "website": "https://www.manahotels.lt/druskininkai/en",
     "hours": "24/7 reception",
     "hoursHe": "קבלה 24/7"
   },
@@ -1661,8 +1661,8 @@ const PLACES = [
     "nivHe": "בשרים על פחם ורשימת יין מצוינת — הארוחה הכי סטייל בזרסאי.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.734,
-    "lng": 26.2454,
+    "lat": 55.7321945,
+    "lng": 26.2495039,
     "hours": "Daily 12:00-22:00",
     "hoursHe": "יום-יום 12:00-22:00"
   },
@@ -1701,8 +1701,8 @@ const PLACES = [
     "nivHe": "חצי דלי גורמה, חצי קפה — יינות מקומיים, גבינות אומן ומתוקים ביתיים.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.73,
-    "lng": 26.24,
+    "lat": 55.7322279,
+    "lng": 26.2495298,
     "hours": "Daily 08:00-19:00",
     "hoursHe": "יום-יום 08:00-19:00"
   },
@@ -1721,8 +1721,8 @@ const PLACES = [
     "nivHe": "העיר יושבת על חצי-אי בין חמישה אגמים מחוברים — קיאקים, שחייה, או פשוט לצפות באור משתנה.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.734,
-    "lng": 26.2454,
+    "lat": 55.7342,
+    "lng": 26.2483,
     "hours": "Mon-Sat 08:00-21:00",
     "hoursHe": "ב'-ש' 08:00-21:00"
   },
@@ -1761,8 +1761,8 @@ const PLACES = [
     "nivHe": "קטן אבל כן — עקבות זאראסאי היהודית, מלאכות של עיר האגמים, ותצלומים ממאה שנשכחה.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.734,
-    "lng": 26.2454,
+    "lat": 55.728408,
+    "lng": 26.245125,
     "hours": "Mon-Sat 08:00-21:00",
     "hoursHe": "ב'-ש' 08:00-21:00",
     "website": "https://zarasumuziejus.lt/"
@@ -1782,8 +1782,8 @@ const PLACES = [
     "nivHe": "הסלון של העיר — טיול לאורך המים בשקיעה כשחמשת האגמים מתלקחים והכול מואט.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.734,
-    "lng": 26.2454,
+    "lat": 55.728175,
+    "lng": 26.244262,
     "hours": "Mon-Sat 08:00-21:00",
     "hoursHe": "ב'-ש' 08:00-21:00"
   },
@@ -1802,8 +1802,8 @@ const PLACES = [
     "nivHe": "אוהל על חוף האגם ונרדמים לצלילי המים. פשוט, שקט, ורחוק מהכול.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.734,
-    "lng": 26.24,
+    "lat": 55.719023,
+    "lng": 26.221738,
     "hours": "May–Sep: daily",
     "hoursHe": "מאי–ספט': יום-יום"
   },
@@ -1822,8 +1822,8 @@ const PLACES = [
     "nivHe": "וייקבורדינג, פארק מים מתנפח וחוף חול על האגם — האחר הצהריים הכי מרגש בזאראסאי.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.734,
-    "lng": 26.2454,
+    "lat": 55.735601,
+    "lng": 26.233944,
     "hours": "Mon-Sat 08:00-21:00",
     "hoursHe": "ב'-ש' 08:00-21:00",
     "website": "https://wakeinn.lt/en/"
@@ -1843,8 +1843,8 @@ const PLACES = [
     "nivHe": "מלון בוטיק קטן עם נשמה של יין — בריכה, מסעדה במקום, ועיר האגמים בפתח הדלת.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.734,
-    "lng": 26.2454,
+    "lat": 55.7321945,
+    "lng": 26.2495039,
     "hours": "24/7 reception",
     "hoursHe": "קבלה 24/7"
   },
@@ -2506,8 +2506,8 @@ const PLACES = [
     "nivHe": "הטלסקופ המדעי הגדול ביותר בצפון אירופה — ערבי תצפית לציבור קסומים. להזמין מראש.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.3228,
-    "lng": 25.5544,
+    "lat": 55.315972,
+    "lng": 25.56333,
     "hours": "Wed-Sun 09:00-18:00 · booking required",
     "hoursHe": "ד'-א' 09:00-18:00 · הזמנה מראש",
     "website": "https://mao.tfai.vu.lt/"
@@ -2527,8 +2527,8 @@ const PLACES = [
     "nivHe": "כאן מיתולוגיה קוסמית ליטאית פוגשת מדע אמיתי — בצורת עץ העולם המיתולוגי.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.3228,
-    "lng": 25.5544,
+    "lat": 55.31539,
+    "lng": 25.55506,
     "hours": "Mon-Fri 08:00-16:30",
     "hoursHe": "ב'-ו' 08:00-16:30",
     "website": "https://etnokosmomuziejus.lt/en/"
@@ -2548,8 +2548,8 @@ const PLACES = [
     "nivHe": "המגדל השני בגובהו בליטא — 214 מדרגות ופנורמה על אגמי לאקאיי ויער אורן אינסופי.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.36,
-    "lng": 25.4,
+    "lat": 55.219257,
+    "lng": 25.560978,
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום"
   },
@@ -2568,8 +2568,8 @@ const PLACES = [
     "nivHe": "ארוחה עם נוף לאורוות ואגם בחוות סוסים פעילה — חוויה ייחודית לגמרי.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.35,
-    "lng": 25.45,
+    "lat": 55.03952814,
+    "lng": 25.410652346,
     "hours": "Seasonal · booking required",
     "hoursHe": "עונתי · הזמנה מראש"
   },
@@ -2648,8 +2648,8 @@ const PLACES = [
     "nivHe": "כוורות בול עץ עתיקות, פסלי יער וטעימת דבש. חוויה ייחודית לליטא.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.56,
-    "lng": 26.02,
+    "lat": 55.4075,
+    "lng": 25.93861,
     "hours": "May–Sep: Tue-Sun 10:00-18:00",
     "hoursHe": "מאי–ספט': ג'-א' 10:00-18:00"
   },
@@ -2709,8 +2709,8 @@ const PLACES = [
     "nivHe": "מבצר גבעה מתחילת ימי הביניים במחוז איגנלינה — עבודות העפר המקוריות עדיין עומדות, והנוף על נוף האגמים שמסביב יוצא דופן.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.55,
-    "lng": 25.96,
+    "lat": 55.38528,
+    "lng": 25.99472,
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום"
   },
@@ -2729,8 +2729,8 @@ const PLACES = [
     "nivHe": "עותק מ-1933 של מערת לורד, שנחנך על ידי נשיא ליטא בפני 25,000 עולי רגל — נהרס על ידי הסובייטים ב-1952 ושוחזר באהבה על ידי תושבי המקום ב-1989.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.8843,
-    "lng": 21.235,
+    "lat": 55.892731,
+    "lng": 21.243504,
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום"
   },
