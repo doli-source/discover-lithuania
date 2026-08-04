@@ -1,6 +1,6 @@
 // Travel data for Lithuania discovery app — merged with Niv's curated places
 // Bilingual content (he + en)
-window._DL_DATA_VERSION = '20260804d';
+window._DL_DATA_VERSION = '20260804e';
 
 (function() {
 
@@ -1218,8 +1218,8 @@ const PLACES = [
     "nivHe": "נוף קסום של אונסק\"ו — דיונות חול שאין כמותן באירופה.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.5022,
-    "lng": 21.16,
+    "lat": 55.4400442,
+    "lng": 21.0870391,
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום"
   },
@@ -1740,8 +1740,8 @@ const PLACES = [
     "nivHe": "אגם השיט על הקרח המפורסם של ליטא בחורף, שחייה קריסטלית בקיץ. בלתי נשכח בכל עונה.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.82,
-    "lng": 26.09,
+    "lat": 55.8182735,
+    "lng": 25.834893,
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום"
   },
@@ -1903,8 +1903,8 @@ const PLACES = [
     "nivHe": "470 מטר של עץ לתוך הים הבלטי. השקיעות כאן הן אגדה מקומית.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.92,
-    "lng": 21.055,
+    "lat": 55.9200277,
+    "lng": 21.0483115,
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום"
   },
@@ -1923,8 +1923,8 @@ const PLACES = [
     "nivHe": "חוף חול בלטי רחב ונקי עם דיונות אורן — הקיץ הליטאי הקלאסי.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.91,
-    "lng": 21.05,
+    "lat": 55.9246919,
+    "lng": 21.0548321,
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום"
   },
@@ -2064,8 +2064,8 @@ const PLACES = [
     "nivHe": "קפה קרפים אהוב בנידה — פנקייקים מתוקים ומלוחים, קפה חזק וקצב בוקר איטי בקצה חצי האי הקורוני.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.304,
-    "lng": 21.0,
+    "lat": 55.3039452,
+    "lng": 21.0074453,
     "hours": "Seasonal: daily 09:00-19:00",
     "hoursHe": "עונתי: יום-יום 09:00-19:00"
   },
@@ -2584,8 +2584,8 @@ const PLACES = [
     "nivHe": "מעל 300 אגמים במחוז — מסלולי קאנו, דיג וסאונות על האגם. שמיים חשוכים בלילה.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.23,
-    "lng": 25.4,
+    "lat": 55.2265309,
+    "lng": 25.4180011,
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום"
   },
@@ -2604,8 +2604,8 @@ const PLACES = [
     "nivHe": "פארק פסלים בשטח פתוח על חוף אגם פסטוביס, פתוח מאז 1998 — יצירות בגרניט ועץ מאמנים ליטאים, צרפתים, ויילשים ופולנים, חינמי ותמיד פתוח.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.228,
-    "lng": 25.41,
+    "lat": 55.231823,
+    "lng": 25.4263055,
     "hours": "08:00-22:00",
     "hoursHe": "08:00-22:00"
   },
@@ -3085,8 +3085,8 @@ const PLACES = [
     "nivHe": "בסתיו כל דרום ליטא נכנס ליערות האלה לקטוף פטריות. הצטרפו.",
     "status": "approved",
     "source": "niv",
-    "lat": 54.1,
-    "lng": 23.9,
+    "lat": 54.1631752,
+    "lng": 24.1861435,
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום"
   },
@@ -3274,8 +3274,8 @@ const PLACES = [
     "nivHe": "מאפייה חדשה שכבר זכתה לעוקבים נלהבים — מאפים מעוצבים בצורה יפהפייה וחלל רגוע ומינימליסטי. הסוג של מקום שתספר עליו לאנשים.",
     "status": "pending",
     "source": "niv",
-    "lat": 54.8985,
-    "lng": 23.9,
+    "lat": 54.8985453,
+    "lng": 23.9031549,
     "hours": "Mon-Fri 08:00-19:00",
     "hoursHe": "ב'-ו' 08:00-19:00",
     "website": "https://pmalunas.lt/bundu/"
@@ -3295,8 +3295,8 @@ const PLACES = [
     "nivHe": "5.0 מושלם — חלל קונספטואלי שמשלב קפה ספיישלטי עם עצמי עיצוב ליטאי ומתנות נבחרות. עצירת הסובניר המחושבת ביותר בקאונאס.",
     "status": "pending",
     "source": "niv",
-    "lat": 54.9,
-    "lng": 23.91,
+    "lat": 54.8964242,
+    "lng": 23.917175,
     "hours": "Tue-Sat 11:00-19:00",
     "hoursHe": "ג'-ש' 11:00-19:00",
     "website": "https://menomaterija.lt/"
@@ -3528,8 +3528,8 @@ const PLACES = [
     "mapUrl": "https://www.google.com/maps/search/MyPilates+Grand+Baltic+Dunes+Palanga",
     "status": "approved",
     "source": "niv",
-    "lat": 55.92,
-    "lng": 21.068,
+    "lat": 55.9192235,
+    "lng": 21.0584414,
     "hours": "Mon-Sun 08:00-22:00",
     "hoursHe": "ב'-א' 08:00-22:00",
     "website": "https://mypilates.lt/"
