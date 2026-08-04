@@ -1,6 +1,13 @@
 [build]
   publish = "."
 
+[[plugins]]
+  package = "netlify-plugin-submit-sitemap"
+  [plugins.inputs]
+    baseUrl = "https://lithuaniadiscovery.com"
+    sitemapPath = "/sitemap.xml"
+    providers = ["google", "bing"]
+
 [[redirects]]
   from = "https://discover-lithuania.netlify.app/*"
   to = "https://lithuaniadiscovery.com/:splat"
