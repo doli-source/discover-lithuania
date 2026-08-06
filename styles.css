@@ -1267,6 +1267,7 @@ a.region-card:visited .region-name {
   margin: 0 0 14px;
   font-weight: 700;
 }
+.footer-col a,
 .footer-col button {
   display: block;
   font-size: 0.9rem;
@@ -1274,6 +1275,7 @@ a.region-card:visited .region-name {
   padding: 4px 0;
   text-align: start;
 }
+.footer-col a:hover,
 .footer-col button:hover { color: var(--cream); }
 .footer-bottom {
   max-width: var(--max-w);
