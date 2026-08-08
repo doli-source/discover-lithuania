@@ -127,14 +127,13 @@
     </svg>
   </template>
 
-  <script src="/data.js?v=20260804e"></script>
-  <script>/* CF cache self-heal */
-  (function(){var e='20260804e',l=window.location;if(window._DL_DATA_VERSION!==e&&!l.search.includes('_r=')){var s=l.search?'&':'?';window.location.replace(l.pathname+l.search+s+'_r='+Date.now()+(l.hash||''));}})();
-  </script>
+  <div id="lt-loading" style="position:fixed;inset:0;background:#f0f2eb;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;gap:16px">
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" style="animation:lt-spin 1.2s linear infinite"><circle cx="24" cy="24" r="20" stroke="#C28840" stroke-width="4" stroke-dasharray="90 30" stroke-linecap="round"/></svg>
+    <span style="font-family:Georgia,serif;font-size:14px;color:#7a6040;letter-spacing:0.08em">Discover Lithuania</span>
+    <style>@keyframes lt-spin{to{transform:rotate(360deg)}}</style>
+  </div>
+
   <script src="/region-images.js?v=20260626b"></script>
-  <script type="text/babel" src="/tweaks-panel.jsx?v=20260626b"></script>
-  <script type="text/babel" src="/shared.jsx?v=20260802a"></script>
-  <script type="text/babel" src="/screens.jsx?v=20260804e"></script>
-  <script type="text/babel" src="/app.jsx?v=20260724a"></script>
+  <script src="/supabase-data.js?v=20260808d"></script>
 </body>
 </html>

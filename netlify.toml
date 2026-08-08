@@ -30,6 +30,6 @@
     Cache-Control = "public, max-age=86400"
 
 [[headers]]
-  for = "/data.js"
+  for = "/supabase-data.js"
   [headers.values]
-    Cache-Control = "public, max-age=3600"
+    Cache-Control = "public, max-age=0, must-revalidate"
