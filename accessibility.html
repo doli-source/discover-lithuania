@@ -13,12 +13,52 @@
     p, li { font-size: 1rem; color: #3d2e18; }
     a { color: #C28840; }
     ul { padding-left: 1.25rem; }
+    [dir="rtl"] ul { padding-left: 0; padding-right: 1.25rem; }
     li { margin-bottom: 0.25rem; }
     .back { display: inline-block; margin-bottom: 2rem; font-size: 0.875rem; color: #7a6040; text-decoration: none; font-family: sans-serif; }
     .back:hover { text-decoration: underline; }
     .badge { display: inline-block; background: #fff; border: 1px solid #c8c0a8; border-radius: 4px; font-size: 0.8rem; padding: 3px 10px; font-family: sans-serif; color: #7a6040; }
     .contact-box { background: #fff; border: 1px solid #d8d0c0; border-radius: 8px; padding: 1rem 1.25rem; margin-top: 0.75rem; font-family: sans-serif; font-size: 0.9rem; }
   </style>
+  <script>
+    // Switch to Hebrew if ?lang=he in URL
+    (function () {
+      if (new URLSearchParams(window.location.search).get('lang') === 'he') {
+        document.documentElement.lang = 'he';
+        document.documentElement.dir = 'rtl';
+        document.addEventListener('DOMContentLoaded', function () {
+          document.title = 'הצהרת נגישות — Lithuania Discovery';
+          document.querySelector('.back').textContent = '→ Lithuania Discovery';
+          document.querySelector('h1').textContent = 'הצהרת נגישות';
+          document.querySelector('.badge').textContent = 'עודכן לאחרונה: 9 באוגוסט 2026';
+          document.getElementById('intro').innerHTML = 'Lithuania Discovery מחויבת להנגשת אתר זה לכל המבקרים, לרבות אנשים עם מוגבלויות. אנו פועלים בהתאם ל<strong>הנחיות הנגישות לתכני אינטרנט (WCAG) 2.1 רמה AA</strong>, כנדרש על פי חוק נגישות האינטרנט האירופי (EAA).';
+          document.getElementById('h-widget').textContent = 'ווידג׳ט נגישות מובנה';
+          document.getElementById('widget-intro').textContent = 'אתר זה כולל ווידג׳ט נגישות — כפתור ענברי בפינת כל דף. הוא מאפשר לכם:';
+          document.getElementById('widget-list').innerHTML =
+            '<li><strong>הגדלה והקטנה של גודל הגופן</strong> — באמצעות כפתורי A+ ו-A−</li>' +
+            '<li><strong>מצב ניגודיות גבוהה</strong> — ניגודיות צבע מוגברת למשתמשים עם ראייה חלשה</li>' +
+            '<li><strong>הפחתת תנועה</strong> — עצירת אנימציות ומעברים בכל האתר</li>';
+          document.getElementById('widget-saved').textContent = 'ההעדפות שלכם נשמרות אוטומטית לביקורים הבאים.';
+          document.getElementById('h-tech').textContent = 'תקנים טכניים';
+          document.getElementById('tech-list').innerHTML =
+            '<li>שימוש באלמנטי HTML5 סמנטיים לאורך כל האתר</li>' +
+            '<li>תוויות ARIA על כל האלמנטים האינטראקטיביים</li>' +
+            '<li>תמיכה מלאה בניווט במקלדת</li>' +
+            '<li>ניגודיות צבע העומדת בתקן WCAG AA (מינימום 4.5:1 לטקסט גוף)</li>' +
+            '<li>תוכן דו-לשוני בעברית ובאנגלית (כולל תמיכה בפריסת RTL)</li>' +
+            '<li>עיצוב רספונסיבי לכל גדלי המסך והמכשירים</li>' +
+            '<li>תמיכה בהגדרת מערכת <code>prefers-reduced-motion</code></li>';
+          document.getElementById('h-limits').textContent = 'מגבלות ידועות';
+          document.getElementById('limits-text').textContent = 'אנו משפרים ללא הרף את הנגישות בכל הדפים. חלק מהדפים הסטטיים הישנים עשויים שלא לעמוד עדיין בכל קריטריוני WCAG 2.1 AA. אנו פועלים באופן פעיל לטיפול בכל פערים.';
+          document.getElementById('h-contact').textContent = 'משוב ויצירת קשר';
+          document.getElementById('contact-text').textContent = 'אם נתקלתם במחסום נגישות באתר זה, או זקוקים לתוכן בפורמט חלופי, פנו אלינו:';
+          document.getElementById('contact-response').innerHTML = '<strong>אימייל:</strong> <a href="mailto:niv.shimoni@gmail.com">niv.shimoni@gmail.com</a><br>אנו שואפים להגיב לפניות נגישות תוך 5 ימי עסקים.';
+          document.getElementById('h-enforce').textContent = 'אכיפה';
+          document.getElementById('enforce-text').textContent = 'אם אינכם מרוצים מתגובתנו, תוכלו לפנות לגוף האכיפה הלאומי הרלוונטי בארצכם במסגרת חוק נגישות האינטרנט האירופי.';
+        });
+      }
+    })();
+  </script>
 </head>
 <body>
   <a href="/" class="back">← Lithuania Discovery</a>
@@ -26,19 +66,19 @@
   <h1>Accessibility Statement</h1>
   <p><span class="badge">Last updated: August 9, 2026</span></p>
 
-  <p>Lithuania Discovery is committed to making this website accessible to all visitors, including people with disabilities. We are working towards conformance with the <strong>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong>, as required by the European Accessibility Act (EAA).</p>
+  <p id="intro">Lithuania Discovery is committed to making this website accessible to all visitors, including people with disabilities. We are working towards conformance with the <strong>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong>, as required by the European Accessibility Act (EAA).</p>
 
-  <h2>Built-in Accessibility Widget</h2>
-  <p>This website includes an accessibility widget — the amber button in the bottom corner of every page. It lets you:</p>
-  <ul>
+  <h2 id="h-widget">Built-in Accessibility Widget</h2>
+  <p id="widget-intro">This website includes an accessibility widget — the amber button in the bottom corner of every page. It lets you:</p>
+  <ul id="widget-list">
     <li><strong>Increase or decrease text size</strong> — use A+ and A− buttons</li>
     <li><strong>Enable high contrast mode</strong> — stronger colour contrast for low-vision users</li>
     <li><strong>Reduce motion</strong> — stops animations and transitions across the site</li>
   </ul>
-  <p>Your preferences are saved automatically for future visits.</p>
+  <p id="widget-saved">Your preferences are saved automatically for future visits.</p>
 
-  <h2>Technical Standards</h2>
-  <ul>
+  <h2 id="h-tech">Technical Standards</h2>
+  <ul id="tech-list">
     <li>Semantic HTML5 elements throughout</li>
     <li>ARIA labels on all interactive elements</li>
     <li>Full keyboard navigation support</li>
@@ -48,20 +88,19 @@
     <li>Support for <code>prefers-reduced-motion</code> system preference</li>
   </ul>
 
-  <h2>Known Limitations</h2>
-  <p>We are continuously improving accessibility across all pages. Some older static content pages may not yet fully meet every WCAG 2.1 AA criterion. We are actively working to address any gaps.</p>
+  <h2 id="h-limits">Known Limitations</h2>
+  <p id="limits-text">We are continuously improving accessibility across all pages. Some older static content pages may not yet fully meet every WCAG 2.1 AA criterion. We are actively working to address any gaps.</p>
 
-  <h2>Feedback &amp; Contact</h2>
-  <p>If you encounter any accessibility barriers on this website, or need content in an alternative format, please get in touch:</p>
-  <div class="contact-box">
+  <h2 id="h-contact">Feedback &amp; Contact</h2>
+  <p id="contact-text">If you encounter any accessibility barriers on this website, or need content in an alternative format, please get in touch:</p>
+  <div class="contact-box" id="contact-response">
     <strong>Email:</strong> <a href="mailto:niv.shimoni@gmail.com">niv.shimoni@gmail.com</a><br>
     We aim to respond to accessibility feedback within 5 business days.
   </div>
 
-  <h2>Enforcement</h2>
-  <p>If you are not satisfied with our response, you may contact the relevant national enforcement body in your country under the European Accessibility Act.</p>
+  <h2 id="h-enforce">Enforcement</h2>
+  <p id="enforce-text">If you are not satisfied with our response, you may contact the relevant national enforcement body in your country under the European Accessibility Act.</p>
 
-  <script src="/accessibility.js?v=4"></script>
-<script src="/accessibility.js?v=4"></script>
+  <script src="/accessibility.js?v=5"></script>
 </body>
 </html>

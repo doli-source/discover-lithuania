@@ -77,7 +77,11 @@
     el = document.getElementById('a11y-label-size');     if (el) el.textContent = L.fontSize;
     el = document.getElementById('a11y-label-contrast'); if (el) el.textContent = L.contrast;
     el = document.getElementById('a11y-label-motion');   if (el) el.textContent = L.motion;
-    el = document.getElementById('a11y-link-statement'); if (el) el.textContent = L.statement;
+    el = document.getElementById('a11y-link-statement');
+    if (el) {
+      el.textContent = L.statement;
+      el.href = getLang() === 'he' ? '/accessibility.html?lang=he' : '/accessibility.html';
+    }
     el = document.getElementById('a11y-decrease');       if (el) el.setAttribute('aria-label', L.decrease);
     el = document.getElementById('a11y-increase');       if (el) el.setAttribute('aria-label', L.increase);
     el = document.getElementById('a11y-contrast-toggle');if (el) el.setAttribute('aria-label', L.contrast);
@@ -137,7 +141,7 @@
       '  </button>',
       '</div>',
 
-      '<a id="a11y-link-statement" href="/accessibility.html" style="display:block;margin-top:10px;font-size:12px;color:#C28840;text-decoration:underline;">' + L.statement + '</a>',
+      '<a id="a11y-link-statement" href="' + (getLang() === 'he' ? '/accessibility.html?lang=he' : '/accessibility.html') + '" style="display:block;margin-top:10px;font-size:12px;color:#C28840;text-decoration:underline;">' + L.statement + '</a>',
     ].join('');
 
     var btn = document.createElement('button');
