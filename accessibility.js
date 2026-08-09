@@ -3,8 +3,6 @@
   var CLASS = { large: 'a11y-large', contrast: 'a11y-contrast', motion: 'a11y-reduce-motion' };
 
   var html = document.documentElement;
-  var lang = html.lang === 'he' ? 'he' : 'en';
-  var isRTL = html.dir === 'rtl';
 
   var LABELS = {
     en: {
@@ -28,7 +26,9 @@
       statement: 'הצהרת נגישות',
     },
   };
-  var L = LABELS[lang];
+
+  function getLang() { return html.lang === 'he' ? 'he' : 'en'; }
+  function getIsRTL() { return html.dir === 'rtl'; }
 
   /* ── Apply saved state immediately ── */
   function applyState() {
@@ -67,6 +67,9 @@
 
   /* ── Build widget ── */
   function buildWidget() {
+    var lang = getLang();
+    var isRTL = getIsRTL();
+    var L = LABELS[lang];
     var sideKey = isRTL ? 'left' : 'right';
     var safeBottom = 'max(1.5rem, calc(env(safe-area-inset-bottom, 0px) + 0.5rem))';
 
@@ -91,11 +94,11 @@
     ].join(';');
 
     panel.innerHTML = [
-      '<div style="font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#7a6040;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #eee;">' + L.title + '</div>',
+      '<div id="a11y-title" style="font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#7a6040;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #eee;">' + L.title + '</div>',
 
       /* Font size row */
       '<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid #f0f0f0;">',
-      '  <span style="font-size:13px;color:#3d2e18;">' + L.fontSize + '</span>',
+      '  <span id="a11y-label-size" style="font-size:13px;color:#3d2e18;">' + L.fontSize + '</span>',
       '  <div style="display:flex;gap:5px;">',
       '    <button id="a11y-decrease" aria-label="' + L.decrease + '" style="width:32px;height:32px;border-radius:6px;border:1px solid #ddd;background:#f9f6f0;font-size:14px;font-weight:700;cursor:pointer;color:#3d2e18;line-height:1;">A−</button>',
       '    <button id="a11y-increase" aria-label="' + L.increase + '" style="width:32px;height:32px;border-radius:6px;border:1px solid #ddd;background:#f9f6f0;font-size:14px;font-weight:700;cursor:pointer;color:#3d2e18;line-height:1;">A+</button>',
@@ -104,7 +107,7 @@
 
       /* High contrast row */
       '<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid #f0f0f0;">',
-      '  <span style="font-size:13px;color:#3d2e18;">' + L.contrast + '</span>',
+      '  <span id="a11y-label-contrast" style="font-size:13px;color:#3d2e18;">' + L.contrast + '</span>',
       '  <button id="a11y-contrast-toggle" role="switch" aria-checked="false" aria-label="' + L.contrast + '"',
       '    style="width:42px;height:24px;border-radius:12px;border:none;cursor:pointer;background:#ddd;position:relative;flex-shrink:0;padding:0;">',
       '    <span id="a11y-contrast-knob" style="position:absolute;top:4px;left:4px;width:16px;height:16px;border-radius:50%;background:#fff;transition:left 0.15s;display:block;"></span>',
@@ -113,7 +116,7 @@
 
       /* Reduce motion row */
       '<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid #f0f0f0;">',
-      '  <span style="font-size:13px;color:#3d2e18;">' + L.motion + '</span>',
+      '  <span id="a11y-label-motion" style="font-size:13px;color:#3d2e18;">' + L.motion + '</span>',
       '  <button id="a11y-motion-toggle" role="switch" aria-checked="false" aria-label="' + L.motion + '"',
       '    style="width:42px;height:24px;border-radius:12px;border:none;cursor:pointer;background:#ddd;position:relative;flex-shrink:0;padding:0;">',
       '    <span id="a11y-motion-knob" style="position:absolute;top:4px;left:4px;width:16px;height:16px;border-radius:50%;background:#fff;transition:left 0.15s;display:block;"></span>',
@@ -121,7 +124,7 @@
       '</div>',
 
       /* Statement link */
-      '<a href="/accessibility.html" style="display:block;margin-top:10px;font-size:12px;color:#C28840;text-decoration:underline;">' + L.statement + '</a>',
+      '<a id="a11y-link-statement" href="/accessibility.html" style="display:block;margin-top:10px;font-size:12px;color:#C28840;text-decoration:underline;">' + L.statement + '</a>',
     ].join('');
 
     /* Button */
@@ -154,6 +157,42 @@
 
     syncToggles();
     attachEvents(btn, panel);
+    watchLangChange(btn, panel);
+  }
+
+  /* ── Update labels when lang/dir changes ── */
+  function watchLangChange(btn, panel) {
+    var observer = new MutationObserver(function () {
+      var L = LABELS[getLang()];
+      var isRTL = getIsRTL();
+      var sideKey = isRTL ? 'left' : 'right';
+      var otherKey = isRTL ? 'right' : 'left';
+      var safeBottom = 'max(1.5rem, calc(env(safe-area-inset-bottom, 0px) + 0.5rem))';
+
+      /* Update text labels */
+      var el;
+      el = document.getElementById('a11y-title');         if (el) el.textContent = L.title;
+      el = document.getElementById('a11y-label-size');    if (el) el.textContent = L.fontSize;
+      el = document.getElementById('a11y-label-contrast');if (el) el.textContent = L.contrast;
+      el = document.getElementById('a11y-label-motion');  if (el) el.textContent = L.motion;
+      el = document.getElementById('a11y-link-statement');if (el) el.textContent = L.statement;
+
+      /* Update aria labels */
+      el = document.getElementById('a11y-decrease');       if (el) el.setAttribute('aria-label', L.decrease);
+      el = document.getElementById('a11y-increase');       if (el) el.setAttribute('aria-label', L.increase);
+      el = document.getElementById('a11y-contrast-toggle');if (el) el.setAttribute('aria-label', L.contrast);
+      el = document.getElementById('a11y-motion-toggle');  if (el) el.setAttribute('aria-label', L.motion);
+      panel.setAttribute('aria-label', L.title);
+      btn.setAttribute('aria-label', L.ariaBtn);
+
+      /* Update left/right position for RTL switch */
+      panel.style[sideKey] = '1.5rem';
+      panel.style[otherKey] = '';
+      btn.style[sideKey] = '1.5rem';
+      btn.style[otherKey] = '';
+    });
+
+    observer.observe(html, { attributes: true, attributeFilter: ['lang', 'dir'] });
   }
 
   function syncToggles() {
