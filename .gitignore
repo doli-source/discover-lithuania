@@ -7,3 +7,22 @@
 # Env
 .env
 .env.local
+
+# Large files / installers
+*.dmg
+*.zip
+*.pkg
+
+# Node
+node_modules/
+admin/node_modules/
+
+# Brainstorm / superpowers working files
+.superpowers/
+
+# Credentials
+*.json
+!manifest.json
+!package.json
+!package-lock.json
+!supabase-data.js
