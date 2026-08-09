@@ -68,9 +68,7 @@
   /* ── Build widget ── */
   function buildWidget() {
     var lang = getLang();
-    var isRTL = getIsRTL();
     var L = LABELS[lang];
-    var sideKey = isRTL ? 'left' : 'right';
     var safeBottom = 'max(1.5rem, calc(env(safe-area-inset-bottom, 0px) + 0.5rem))';
 
     /* Panel */
@@ -90,7 +88,7 @@
       'width:min(220px, calc(100vw - 2rem))',
       'font-family:-apple-system,BlinkMacSystemFont,sans-serif',
       'bottom:calc(' + safeBottom + ' + 60px)',
-      sideKey + ':1.5rem',
+      'right:1.5rem',
     ].join(';');
 
     panel.innerHTML = [
@@ -137,7 +135,7 @@
       'position:fixed',
       'z-index:9000',
       'bottom:' + safeBottom,
-      sideKey + ':1.5rem',
+      'right:1.5rem',
       'width:48px',
       'height:48px',
       'border-radius:50%',
@@ -164,10 +162,6 @@
   function watchLangChange(btn, panel) {
     var observer = new MutationObserver(function () {
       var L = LABELS[getLang()];
-      var isRTL = getIsRTL();
-      var sideKey = isRTL ? 'left' : 'right';
-      var otherKey = isRTL ? 'right' : 'left';
-      var safeBottom = 'max(1.5rem, calc(env(safe-area-inset-bottom, 0px) + 0.5rem))';
 
       /* Update text labels */
       var el;
@@ -184,12 +178,6 @@
       el = document.getElementById('a11y-motion-toggle');  if (el) el.setAttribute('aria-label', L.motion);
       panel.setAttribute('aria-label', L.title);
       btn.setAttribute('aria-label', L.ariaBtn);
-
-      /* Update left/right position for RTL switch */
-      panel.style[sideKey] = '1.5rem';
-      panel.style[otherKey] = '';
-      btn.style[sideKey] = '1.5rem';
-      btn.style[otherKey] = '';
     });
 
     observer.observe(html, { attributes: true, attributeFilter: ['lang', 'dir'] });
