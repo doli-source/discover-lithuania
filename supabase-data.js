@@ -67,7 +67,7 @@
         emoji:   p.emoji || '📍',
         niv:     en.niv_tip || en.description || '',
         nivHe:   he.niv_tip || he.description || '',
-        status:  p.is_published ? 'approved' : 'draft',
+        status:  p.is_published ? 'approved' : 'hidden',
         source:  p.source,
         lat:     p.lat,
         lng:     p.lng,
