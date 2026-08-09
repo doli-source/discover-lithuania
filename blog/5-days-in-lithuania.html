@@ -899,6 +899,13 @@
       document.querySelectorAll('[data-en]').forEach(function(el) {
         el.innerHTML = isHe ? (el.dataset.he || el.dataset.en) : el.dataset.en;
       });
+      document.querySelectorAll('a[href*="lithuaniadiscovery.com"]').forEach(function(link) {
+        var orig = link.dataset.origHref || link.getAttribute('href');
+        link.dataset.origHref = orig;
+        link.href = isHe
+          ? orig + (orig.includes('?') ? '&' : '?') + 'lang=he'
+          : orig;
+      });
     }
 
     function toggleLang() {

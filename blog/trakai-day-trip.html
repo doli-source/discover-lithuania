@@ -542,6 +542,10 @@
         var el = document.getElementById(id);
         if (el) el.href = el.getAttribute('href') + '?lang=he';
       });
+      document.querySelectorAll('a[href*="lithuaniadiscovery.com"]').forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (!href.includes('lang=')) link.href = href + (href.includes('?') ? '&' : '?') + 'lang=he';
+      });
     })();
   </script>
 
