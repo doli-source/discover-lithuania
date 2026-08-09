@@ -27,8 +27,13 @@
     },
   };
 
-  function getLang() { return html.lang === 'he' ? 'he' : 'en'; }
-  function getIsRTL() { return html.dir === 'rtl'; }
+  // Check URL param (?lang=he) AND html[lang] — React app uses the URL param
+  function getLang() {
+    try {
+      if (new URLSearchParams(window.location.search).get('lang') === 'he') return 'he';
+    } catch (e) {}
+    return html.lang === 'he' ? 'he' : 'en';
+  }
 
   /* ── Apply saved state immediately ── */
   function applyState() {
@@ -40,7 +45,6 @@
     injectModeCSS();
   }
 
-  /* Inject mode CSS inline so it works on pages that don't load styles.css */
   function injectModeCSS() {
     if (document.getElementById('a11y-inline-css')) return;
     var style = document.createElement('style');
@@ -65,13 +69,28 @@
     document.head.appendChild(style);
   }
 
+  /* ── Update all visible labels to current language ── */
+  function updateLabels(btn, panel) {
+    var L = LABELS[getLang()];
+    var el;
+    el = document.getElementById('a11y-title');          if (el) el.textContent = L.title;
+    el = document.getElementById('a11y-label-size');     if (el) el.textContent = L.fontSize;
+    el = document.getElementById('a11y-label-contrast'); if (el) el.textContent = L.contrast;
+    el = document.getElementById('a11y-label-motion');   if (el) el.textContent = L.motion;
+    el = document.getElementById('a11y-link-statement'); if (el) el.textContent = L.statement;
+    el = document.getElementById('a11y-decrease');       if (el) el.setAttribute('aria-label', L.decrease);
+    el = document.getElementById('a11y-increase');       if (el) el.setAttribute('aria-label', L.increase);
+    el = document.getElementById('a11y-contrast-toggle');if (el) el.setAttribute('aria-label', L.contrast);
+    el = document.getElementById('a11y-motion-toggle');  if (el) el.setAttribute('aria-label', L.motion);
+    if (panel) panel.setAttribute('aria-label', L.title);
+    if (btn)   btn.setAttribute('aria-label', L.ariaBtn);
+  }
+
   /* ── Build widget ── */
   function buildWidget() {
-    var lang = getLang();
-    var L = LABELS[lang];
+    var L = LABELS[getLang()];
     var safeBottom = 'max(1.5rem, calc(env(safe-area-inset-bottom, 0px) + 0.5rem))';
 
-    /* Panel */
     var panel = document.createElement('div');
     panel.id = 'a11y-panel';
     panel.setAttribute('role', 'dialog');
@@ -94,7 +113,6 @@
     panel.innerHTML = [
       '<div id="a11y-title" style="font-size:11px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#7a6040;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #eee;">' + L.title + '</div>',
 
-      /* Font size row */
       '<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid #f0f0f0;">',
       '  <span id="a11y-label-size" style="font-size:13px;color:#3d2e18;">' + L.fontSize + '</span>',
       '  <div style="display:flex;gap:5px;">',
@@ -103,7 +121,6 @@
       '  </div>',
       '</div>',
 
-      /* High contrast row */
       '<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid #f0f0f0;">',
       '  <span id="a11y-label-contrast" style="font-size:13px;color:#3d2e18;">' + L.contrast + '</span>',
       '  <button id="a11y-contrast-toggle" role="switch" aria-checked="false" aria-label="' + L.contrast + '"',
@@ -112,7 +129,6 @@
       '  </button>',
       '</div>',
 
-      /* Reduce motion row */
       '<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid #f0f0f0;">',
       '  <span id="a11y-label-motion" style="font-size:13px;color:#3d2e18;">' + L.motion + '</span>',
       '  <button id="a11y-motion-toggle" role="switch" aria-checked="false" aria-label="' + L.motion + '"',
@@ -121,11 +137,9 @@
       '  </button>',
       '</div>',
 
-      /* Statement link */
       '<a id="a11y-link-statement" href="/accessibility.html" style="display:block;margin-top:10px;font-size:12px;color:#C28840;text-decoration:underline;">' + L.statement + '</a>',
     ].join('');
 
-    /* Button */
     var btn = document.createElement('button');
     btn.id = 'a11y-btn';
     btn.setAttribute('aria-label', L.ariaBtn);
@@ -155,32 +169,10 @@
 
     syncToggles();
     attachEvents(btn, panel);
-    watchLangChange(btn, panel);
-  }
 
-  /* ── Update labels when lang/dir changes ── */
-  function watchLangChange(btn, panel) {
-    var observer = new MutationObserver(function () {
-      var L = LABELS[getLang()];
-
-      /* Update text labels */
-      var el;
-      el = document.getElementById('a11y-title');         if (el) el.textContent = L.title;
-      el = document.getElementById('a11y-label-size');    if (el) el.textContent = L.fontSize;
-      el = document.getElementById('a11y-label-contrast');if (el) el.textContent = L.contrast;
-      el = document.getElementById('a11y-label-motion');  if (el) el.textContent = L.motion;
-      el = document.getElementById('a11y-link-statement');if (el) el.textContent = L.statement;
-
-      /* Update aria labels */
-      el = document.getElementById('a11y-decrease');       if (el) el.setAttribute('aria-label', L.decrease);
-      el = document.getElementById('a11y-increase');       if (el) el.setAttribute('aria-label', L.increase);
-      el = document.getElementById('a11y-contrast-toggle');if (el) el.setAttribute('aria-label', L.contrast);
-      el = document.getElementById('a11y-motion-toggle');  if (el) el.setAttribute('aria-label', L.motion);
-      panel.setAttribute('aria-label', L.title);
-      btn.setAttribute('aria-label', L.ariaBtn);
-    });
-
-    observer.observe(html, { attributes: true, attributeFilter: ['lang', 'dir'] });
+    // MutationObserver as backup for html[lang] changes
+    new MutationObserver(function () { updateLabels(btn, panel); })
+      .observe(html, { attributes: true, attributeFilter: ['lang', 'dir'] });
   }
 
   function syncToggles() {
@@ -189,11 +181,11 @@
   }
 
   function setToggle(btnId, knobId, active) {
-    var btn = document.getElementById(btnId);
+    var b = document.getElementById(btnId);
     var knob = document.getElementById(knobId);
-    if (!btn || !knob) return;
-    btn.style.background = active ? '#C28840' : '#ddd';
-    btn.setAttribute('aria-checked', active ? 'true' : 'false');
+    if (!b || !knob) return;
+    b.style.background = active ? '#C28840' : '#ddd';
+    b.setAttribute('aria-checked', active ? 'true' : 'false');
     knob.style.left = active ? '22px' : '4px';
   }
 
@@ -201,6 +193,8 @@
     var open = false;
 
     function openPanel() {
+      // Always re-read language when panel opens
+      updateLabels(btn, panel);
       open = true;
       panel.style.display = 'block';
       panel.setAttribute('aria-hidden', 'false');
