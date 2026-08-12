@@ -105,113 +105,177 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
   <style>
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #faf5ec;
-      --text: #1a1208;
-      --muted: #6b5a3e;
-      --accent: #C28840;
-      --card: #ffffff;
-      --border: #e8dcc8;
+      --bg:     #dce6c8;
+      --card:   #f2f7e8;
+      --ink:    #1f2a1a;
+      --muted:  #607850;
+      --amber:  #C28840;
+      --border: rgba(31,42,26,0.12);
     }
-    @media (prefers-color-scheme: dark) {
-      :root { --bg: #1a1208; --text: #f0e8d8; --muted: #a89070; --card: #2a1e10; --border: #3a2e1e; }
+
+    body {
+      font-family: 'Rubik', -apple-system, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      min-height: 100vh;
     }
-    :root[data-theme="light"] { --bg: #faf5ec; --text: #1a1208; --muted: #6b5a3e; --card: #ffffff; --border: #e8dcc8; }
-    :root[data-theme="dark"]  { --bg: #1a1208; --text: #f0e8d8; --muted: #a89070; --card: #2a1e10; --border: #3a2e1e; }
 
-    body { font-family: 'Bricolage Grotesque', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .site-header { background: var(--ink); position: sticky; top: 0; z-index: 100; }
+    .header-inner {
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 1.5rem; height: 58px;
+      display: flex; align-items: center; gap: 1.5rem;
+    }
+    .site-logo { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; flex-shrink: 0; }
+    .logo-icon { width: 34px; height: 34px; border-radius: 50%; background: var(--amber); display: grid; place-items: center; flex-shrink: 0; }
+    .logo-name { font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 0.95rem; color: #e8f0d8; display: block; line-height: 1.1; }
+    .logo-sub  { font-size: 0.56rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(220,230,200,0.45); display: block; }
+    .site-nav { display: flex; gap: 0.1rem; flex: 1; }
+    .site-nav a { font-size: 0.82rem; font-weight: 500; color: rgba(220,230,200,0.6); padding: 0.3rem 0.7rem; border-radius: 999px; text-decoration: none; }
+    .site-nav a:hover { background: rgba(220,230,200,0.1); color: #e8f0d8; }
+    @media (max-width: 600px) { .site-nav { display: none; } .logo-sub { display: none; } }
 
-    .topbar { background: var(--bg); border-bottom: 1px solid var(--border); padding: 0.75rem 1.5rem; display: flex; align-items: center; gap: 1rem; }
-    .topbar a { color: var(--accent); text-decoration: none; font-weight: 500; font-size: 0.9rem; }
-    .topbar a:hover { text-decoration: underline; }
-    .topbar-sep { color: var(--muted); }
+    .bc {
+      max-width: 760px; margin: 0 auto;
+      padding: 1.25rem 1.5rem 0;
+      display: flex; align-items: center; gap: 0.4rem;
+      font-size: 0.78rem; color: var(--muted);
+    }
+    .bc a { color: var(--amber); text-decoration: none; font-weight: 500; }
 
-    .hero { max-width: 860px; margin: 0 auto; padding: 2.5rem 1.5rem 1.5rem; }
-    .kind-pill { display: inline-block; background: var(--accent); color: #fff; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; padding: 0.25rem 0.7rem; border-radius: 999px; margin-bottom: 1rem; }
-    .place-name { font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; margin-bottom: 0.5rem; }
-    .region-line { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
-    .region-line a { color: var(--muted); text-decoration: underline; }
-    .rating-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; font-size: 0.95rem; }
-    .stars { color: var(--accent); letter-spacing: 0.05em; }
-    .rating-num { font-weight: 600; }
-    .reviews { color: var(--muted); }
+    .hero { max-width: 760px; margin: 0 auto; padding: 1.5rem 1.5rem 2.5rem; }
+    .kind-pill {
+      display: inline-block;
+      background: var(--amber); color: #fff;
+      font-size: 0.64rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.28rem 0.85rem; border-radius: 999px; margin-bottom: 1.2rem;
+    }
+    .place-name {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-style: italic; font-weight: 400;
+      font-size: clamp(2.4rem, 7vw, 3.8rem);
+      line-height: 1.08;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .region-line { font-size: 0.95rem; color: var(--muted); margin-bottom: 1rem; }
+    .region-line a { color: var(--muted); font-weight: 600; text-decoration: none; }
+    .rating-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--muted); }
+    .stars { color: var(--amber); font-size: 1rem; letter-spacing: 0.06em; }
+    .rating-num { font-weight: 700; color: var(--ink); }
 
-    .content { max-width: 860px; margin: 0 auto; padding: 0 1.5rem 3rem; display: grid; gap: 1.5rem; }
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
-    .card h2 { font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 0.75rem; }
-    .description { font-size: 1.05rem; line-height: 1.75; color: var(--text); }
-    .details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
-    .detail { }
-    .detail-label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 0.2rem; }
-    .detail-value { font-size: 0.95rem; }
-    .detail-value a { color: var(--accent); text-decoration: none; word-break: break-all; }
+    .content { max-width: 760px; margin: 0 auto; padding: 0 1.5rem 5rem; display: flex; flex-direction: column; gap: 1rem; }
+
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 1.75rem 2rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(31,42,26,0.06);
+    }
+    .card-title {
+      font-size: 0.6rem; font-weight: 700; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 0.9rem;
+    }
+    .description { font-size: 1rem; line-height: 1.85; color: var(--ink); }
+
+    .details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.25rem 2rem; }
+    .detail-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.25rem; }
+    .detail-value { font-size: 0.92rem; color: var(--ink); }
+    .detail-value a { color: var(--amber); text-decoration: none; font-weight: 500; }
     .detail-value a:hover { text-decoration: underline; }
-    .map-frame { width: 100%; height: 320px; border: 0; border-radius: 8px; }
-    .cta-card { text-align: center; background: var(--accent); border-color: var(--accent); color: #fff; }
-    .cta-card h2 { color: rgba(255,255,255,0.8); }
-    .cta-btn { display: inline-block; margin-top: 0.75rem; background: #fff; color: var(--accent); font-weight: 700; font-size: 1rem; padding: 0.75rem 2rem; border-radius: 8px; text-decoration: none; transition: opacity 0.15s; }
-    .cta-btn:hover { opacity: 0.9; }
-    .breadcrumb { font-size: 0.8rem; color: var(--muted); }
-    .breadcrumb a { color: var(--muted); text-decoration: underline; }
+
+    .map-card { padding: 0; overflow: hidden; }
+    .map-frame { width: 100%; height: 320px; border: 0; display: block; }
+
+    .cta-card { background: var(--ink) !important; border-color: transparent !important; text-align: center; padding: 2.25rem 2rem; }
+    .cta-card .card-title { color: rgba(220,230,200,0.45); }
+    .cta-card p { color: rgba(220,230,200,0.8); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .cta-btn {
+      display: inline-block;
+      background: var(--amber); color: #fff;
+      font-size: 0.9rem; font-weight: 700;
+      padding: 0.8rem 2.25rem; border-radius: 999px;
+      text-decoration: none; transition: opacity 0.15s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+
   </style>
 </head>
 <body>
-  <nav class="topbar" aria-label="breadcrumb">
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://lithuaniadiscovery.com/" class="site-logo">
+        <div class="logo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div><span class="logo-name">Discover Lithuania</span><span class="logo-sub">A Traveler's Guide</span></div>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="https://lithuaniadiscovery.com/">Home</a>
+        <a href="https://lithuaniadiscovery.com/?tab=explore">Explore</a>
+        <a href="https://lithuaniadiscovery.com/?tab=routes">Routes</a>
+        <a href="https://lithuaniadiscovery.com/?tab=food">Food</a>
+        <a href="https://lithuaniadiscovery.com/?tab=stays">Stays</a>
+        <a href="https://lithuaniadiscovery.com/blog/">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="bc" aria-label="breadcrumb">
     <a href="https://lithuaniadiscovery.com/">Discover Lithuania</a>
-    <span class="topbar-sep">›</span>
+    <span>›</span>
     <a href="https://lithuaniadiscovery.com/explore/kaunas/">Kaunas</a>
-    <span class="topbar-sep">›</span>
+    <span>›</span>
     <span>NYC Coffee Co.</span>
   </nav>
 
-  <header class="hero">
-    <div class="kind-pill">Café</div>
-    <h1 class="place-name">🗽 NYC Coffee Co.</h1>
+  <div class="hero">
+    <div class="kind-pill">🗽 Café</div>
+    <h1 class="place-name">NYC Coffee Co.</h1>
     <p class="region-line"><a href="https://lithuaniadiscovery.com/explore/kaunas/">Kaunas</a>, Lithuania</p>
-    <div class="rating-row"><span class="stars" aria-label="4.9 out of 5 stars">★★★★★</span> <span class="rating-num">4.9</span> <span class="reviews">(363 reviews)</span></div>
-  </header>
+    <div class="rating-row">
+      <span class="stars" aria-label="4.9 out of 5 stars">★★★★★</span>
+      <span class="rating-num">4.9</span>
+      <span>(363 reviews)</span>
+    </div>
+  </div>
 
   <main class="content">
-    
     <div class="card">
-      <h2>About</h2>
+      <div class="card-title">About this place</div>
       <p class="description">A 4.9 rating for under €5 — that's almost impossible to argue with. No-nonsense specialty coffee done brilliantly, without the pretension.</p>
     </div>
 
     <div class="card">
-      <h2>Details</h2>
+      <div class="card-title">Details</div>
       <div class="details-grid">
-        <div class="detail"><div class="detail-label">Type</div><div class="detail-value">Cafe</div></div>
-        <div class="detail"><div class="detail-label">Hours</div><div class="detail-value">Daily from 07:30</div></div>
-        <div class="detail"><div class="detail-label">Price</div><div class="detail-value">€1–5</div></div>
-        <div class="detail"><div class="detail-label">Website</div><div class="detail-value"><a href="https://nycafekaunas.lt/" target="_blank" rel="noopener">nycafekaunas.lt</a></div></div>
-        <div class="detail"><div class="detail-label">Region</div><div class="detail-value"><a href="https://lithuaniadiscovery.com/explore/kaunas/">Kaunas</a></div></div>
-        <div class="detail"><div class="detail-label">Map</div><div class="detail-value"><a href="https://www.google.com/maps?q=54.8985,23.905" target="_blank" rel="noopener">Open in Google Maps</a></div></div>
+        <div><div class="detail-label">Type</div><div class="detail-value">Cafe</div></div>
+        <div><div class="detail-label">Hours</div><div class="detail-value">Daily from 07:30</div></div>
+        <div><div class="detail-label">Price</div><div class="detail-value">€1–5</div></div>
+        <div><div class="detail-label">Region</div><div class="detail-value"><a href="https://lithuaniadiscovery.com/explore/kaunas/">Kaunas</a></div></div>
       </div>
     </div>
 
-    
-    <div class="card" style="padding: 0; overflow: hidden;">
-      <iframe
-        class="map-frame"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
+    <div class="card map-card">
+      <iframe class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         src="https://www.google.com/maps?q=54.8985,23.905&output=embed"
         title="NYC Coffee Co. location map"
         aria-label="Map showing location of NYC Coffee Co.">
       </iframe>
     </div>
-
     <div class="card cta-card">
-      <h2>Explore on the interactive map</h2>
-      <p>See NYC Coffee Co. alongside all 166 handpicked places in Lithuania.</p>
+      <div class="card-title">See it on the map</div>
+      <p>Find NYC Coffee Co. alongside all handpicked places across Lithuania.</p>
       <a class="cta-btn" href="https://lithuaniadiscovery.com/?place=nyc-coffee-co">Open in Discover Lithuania →</a>
     </div>
   </main>
-<script src="/accessibility.js?v=5"></script>
+  <script src="/accessibility.js?v=5"></script>
 </body>
 </html>

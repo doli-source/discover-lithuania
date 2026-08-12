@@ -371,12 +371,16 @@ function App() {
   };
 
   const openPlace = (id) => {
+    const place = effectivePlaces.find(pl => pl.id === id);
+    ga('place_open', { place_id: id, place_name: place?.name, place_kind: place?.kind, region: place?.region });
+    if (window.innerWidth <= 720) {
+      window.location.href = `/places/${id}/`;
+      return;
+    }
     setOpenPlaceId(id);
     const p = new URLSearchParams(location.search);
     p.set('place', id);
     history.pushState(null, '', '?' + p.toString());
-    const place = effectivePlaces.find(pl => pl.id === id);
-    ga('place_open', { place_id: id, place_name: place?.name, place_kind: place?.kind, region: place?.region });
   };
   const closePlace = () => {
     setOpenPlaceId(null);
