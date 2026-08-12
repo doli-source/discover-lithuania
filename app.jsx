@@ -374,7 +374,8 @@ function App() {
     const place = effectivePlaces.find(pl => pl.id === id);
     ga('place_open', { place_id: id, place_name: place?.name, place_kind: place?.kind, region: place?.region });
     if (window.innerWidth <= 720) {
-      window.location.href = `/places/${id}/`;
+      const langSuffix = lang && lang !== 'en' ? `?lang=${lang}` : '';
+      window.location.href = `/places/${id}/${langSuffix}`;
       return;
     }
     setOpenPlaceId(id);

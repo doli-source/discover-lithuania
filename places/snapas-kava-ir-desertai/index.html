@@ -248,13 +248,13 @@
   <main class="content">
     <div class="card">
       <div class="card-title">About this place</div>
-      <p class="description">A tiny café on Vytauto Street that a local woman, Laima, opened herself after years of failing to find a proper cup of coffee in Trakai — now it's the warmest corner in town, with single-origin coffee, fresh-baked croissants and brownies every morning, and homemade treats from her own honeyberry orchard.</p>
+      <p class="description" data-he="בית קפה קטן ברחוב ויטאוטו שלאימה, תושבת מקומית, פתחה בעצמה אחרי שנים שלא הצליחה למצוא כוס קפה הגונה בטראקאי — היום זה הפינה הכי חמימה בעיר: קפה איכותי, קרואסונים ובראוניז שנאפים טריים כל בוקר, וממתקים ביתיים מהגינה שלה עם פירות יער sausmedis.">A tiny café on Vytauto Street that a local woman, Laima, opened herself after years of failing to find a proper cup of coffee in Trakai — now it's the warmest corner in town, with single-origin coffee, fresh-baked croissants and brownies every morning, and homemade treats from her own honeyberry orchard.</p>
     </div>
 
     <div class="card">
       <div class="card-title">Details</div>
       <div class="details-grid">
-        <div><div class="detail-label">Type</div><div class="detail-value">Specialty coffee &amp; bakery</div></div>
+        <div><div class="detail-label">Type</div><div class="detail-value" data-he="בית קפה ומאפייה">Specialty coffee &amp; bakery</div></div>
         <div><div class="detail-label">Price</div><div class="detail-value">€5–10</div></div>
         <div><div class="detail-label">Region</div><div class="detail-value"><a href="https://lithuaniadiscovery.com/explore/trakai/">Trakai</a></div></div>
       </div>
@@ -274,5 +274,45 @@
     </div>
   </main>
   <script src="/accessibility.js?v=5"></script>
+<script>/* he-support-v1 */
+(function(){
+  var lang = new URLSearchParams(location.search).get('lang');
+  if (lang !== 'he') return;
+  document.documentElement.lang = 'he';
+  document.documentElement.dir  = 'rtl';
+  var L = {
+    'About this place':'על המקום הזה',
+    'Details':'פרטים',
+    'Type':'סוג',
+    'Hours':'שעות פעילות',
+    'Price':'מחיר',
+    'Region':'אזור',
+    'See it on the map':'ראה על המפה',
+    'Discover Lithuania':'גלה את ליטא',
+    "A Traveler's Guide":'מדריך הטיול שלך'
+  };
+  document.querySelectorAll('.card-title,.detail-label,.logo-name,.logo-sub').forEach(function(el){
+    var t = el.textContent.trim();
+    if (L[t]) el.textContent = L[t];
+  });
+  var d = document.querySelector('.description[data-he]');
+  if (d) d.textContent = d.dataset.he;
+  var tp = document.querySelector('.detail-value[data-he]');
+  if (tp) tp.textContent = tp.dataset.he;
+  document.querySelectorAll('.region-line').forEach(function(el){
+    el.innerHTML = el.innerHTML.replace(/, Lithuania/, ', ליטא');
+  });
+  document.querySelectorAll('.rating-row span').forEach(function(el){
+    el.textContent = el.textContent.replace(/\(([\d,]+) reviews\)/, '($1 ביקורות)');
+  });
+  document.querySelectorAll('.cta-btn').forEach(function(el){
+    el.textContent = 'פתח ב‑Discover Lithuania ←';
+  });
+  document.querySelectorAll('a[href^="https://lithuaniadiscovery.com"]').forEach(function(a){
+    var h = a.getAttribute('href');
+    if (h && !h.includes('lang=he')) a.href = h + (h.includes('?') ? '&' : '?') + 'lang=he';
+  });
+})();
+</script>
 </body>
 </html>

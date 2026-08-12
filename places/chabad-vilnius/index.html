@@ -250,13 +250,13 @@
   <main class="content">
     <div class="card">
       <div class="card-title">About this place</div>
-      <p class="description">Chabad of Lithuania — the beating heart of Vilnius' small but proud Jewish community, led by Rabbi Sholom Ber Krinsky. If you're Jewish and traveling in Lithuania, this is your first stop: kosher home-style meals (order at least 48 hours ahead), Friday night Shabbat dinners, synagogue services, and a genuinely warm welcome. Call ahead before visiting — opening hours can be unpredictable.</p>
+      <p class="description" data-he="בית חב״ד ליטא — הלב הפועם של הקהילה היהודית הקטנה אך הגאה בוילנה, בראשות הרב שלום בער קרינסקי. עבור יהודים המטיילים בליטא: ארוחות כשריות ביתיות (יש להזמין לפחות 48 שעות מראש), ארוחות שבת חמות בערבי שישי, תפילות בבית הכנסת, וקבלת פנים חמה באמת. מומלץ להתקשר מראש לפני שמגיעים — שעות הפתיחה לא תמיד מדויקות.">Chabad of Lithuania — the beating heart of Vilnius' small but proud Jewish community, led by Rabbi Sholom Ber Krinsky. If you're Jewish and traveling in Lithuania, this is your first stop: kosher home-style meals (order at least 48 hours ahead), Friday night Shabbat dinners, synagogue services, and a genuinely warm welcome. Call ahead before visiting — opening hours can be unpredictable.</p>
     </div>
 
     <div class="card">
       <div class="card-title">Details</div>
       <div class="details-grid">
-        <div><div class="detail-label">Type</div><div class="detail-value">Synagogue &amp; Jewish community center</div></div>
+        <div><div class="detail-label">Type</div><div class="detail-value" data-he="בית כנסת ומרכז קהילתי יהודי">Synagogue &amp; Jewish community center</div></div>
         <div><div class="detail-label">Hours</div><div class="detail-value">Tue-Fri 09:00-16:00 · Sat,Sun 11:00-17:00</div></div>
         <div><div class="detail-label">Region</div><div class="detail-value"><a href="https://lithuaniadiscovery.com/explore/vilnius/">Vilnius</a></div></div>
       </div>
@@ -276,5 +276,45 @@
     </div>
   </main>
   <script src="/accessibility.js?v=5"></script>
+<script>/* he-support-v1 */
+(function(){
+  var lang = new URLSearchParams(location.search).get('lang');
+  if (lang !== 'he') return;
+  document.documentElement.lang = 'he';
+  document.documentElement.dir  = 'rtl';
+  var L = {
+    'About this place':'על המקום הזה',
+    'Details':'פרטים',
+    'Type':'סוג',
+    'Hours':'שעות פעילות',
+    'Price':'מחיר',
+    'Region':'אזור',
+    'See it on the map':'ראה על המפה',
+    'Discover Lithuania':'גלה את ליטא',
+    "A Traveler's Guide":'מדריך הטיול שלך'
+  };
+  document.querySelectorAll('.card-title,.detail-label,.logo-name,.logo-sub').forEach(function(el){
+    var t = el.textContent.trim();
+    if (L[t]) el.textContent = L[t];
+  });
+  var d = document.querySelector('.description[data-he]');
+  if (d) d.textContent = d.dataset.he;
+  var tp = document.querySelector('.detail-value[data-he]');
+  if (tp) tp.textContent = tp.dataset.he;
+  document.querySelectorAll('.region-line').forEach(function(el){
+    el.innerHTML = el.innerHTML.replace(/, Lithuania/, ', ליטא');
+  });
+  document.querySelectorAll('.rating-row span').forEach(function(el){
+    el.textContent = el.textContent.replace(/\(([\d,]+) reviews\)/, '($1 ביקורות)');
+  });
+  document.querySelectorAll('.cta-btn').forEach(function(el){
+    el.textContent = 'פתח ב‑Discover Lithuania ←';
+  });
+  document.querySelectorAll('a[href^="https://lithuaniadiscovery.com"]').forEach(function(a){
+    var h = a.getAttribute('href');
+    if (h && !h.includes('lang=he')) a.href = h + (h.includes('?') ? '&' : '?') + 'lang=he';
+  });
+})();
+</script>
 </body>
 </html>

@@ -250,13 +250,13 @@
   <main class="content">
     <div class="card">
       <div class="card-title">About this place</div>
-      <p class="description">My go-to hotel in Vilnius — perfectly located on Gediminas Avenue, the main boulevard of the city. Beautiful rooms, great breakfast, fantastic rooftop bar with panoramic city views. The staff goes above and beyond. If you want to be close to everything, this is the place.</p>
+      <p class="description" data-he="המלון שאני חוזר אליו בווילנה — מיקום מושלם על שדרת גדימינס, הבולוואר הראשי של העיר. חדרים יפים, ארוחת בוקר מצוינת, בר גג פנטסטי עם נוף פנורמי. הצוות יוצא מגדרו. אם אתם רוצים להיות קרוב לכל דבר — זה המקום.">My go-to hotel in Vilnius — perfectly located on Gediminas Avenue, the main boulevard of the city. Beautiful rooms, great breakfast, fantastic rooftop bar with panoramic city views. The staff goes above and beyond. If you want to be close to everything, this is the place.</p>
     </div>
 
     <div class="card">
       <div class="card-title">Details</div>
       <div class="details-grid">
-        <div><div class="detail-label">Type</div><div class="detail-value">4-star hotel on Gediminas Avenue</div></div>
+        <div><div class="detail-label">Type</div><div class="detail-value" data-he="מלון 4 כוכבים על שדרת גדימינס">4-star hotel on Gediminas Avenue</div></div>
         <div><div class="detail-label">Hours</div><div class="detail-value">Mon-Fri 10:00-21:00 · Sat-Sun 11:00-21:00</div></div>
         <div><div class="detail-label">Region</div><div class="detail-value"><a href="https://lithuaniadiscovery.com/explore/vilnius/">Vilnius</a></div></div>
       </div>
@@ -276,5 +276,45 @@
     </div>
   </main>
   <script src="/accessibility.js?v=5"></script>
+<script>/* he-support-v1 */
+(function(){
+  var lang = new URLSearchParams(location.search).get('lang');
+  if (lang !== 'he') return;
+  document.documentElement.lang = 'he';
+  document.documentElement.dir  = 'rtl';
+  var L = {
+    'About this place':'על המקום הזה',
+    'Details':'פרטים',
+    'Type':'סוג',
+    'Hours':'שעות פעילות',
+    'Price':'מחיר',
+    'Region':'אזור',
+    'See it on the map':'ראה על המפה',
+    'Discover Lithuania':'גלה את ליטא',
+    "A Traveler's Guide":'מדריך הטיול שלך'
+  };
+  document.querySelectorAll('.card-title,.detail-label,.logo-name,.logo-sub').forEach(function(el){
+    var t = el.textContent.trim();
+    if (L[t]) el.textContent = L[t];
+  });
+  var d = document.querySelector('.description[data-he]');
+  if (d) d.textContent = d.dataset.he;
+  var tp = document.querySelector('.detail-value[data-he]');
+  if (tp) tp.textContent = tp.dataset.he;
+  document.querySelectorAll('.region-line').forEach(function(el){
+    el.innerHTML = el.innerHTML.replace(/, Lithuania/, ', ליטא');
+  });
+  document.querySelectorAll('.rating-row span').forEach(function(el){
+    el.textContent = el.textContent.replace(/\(([\d,]+) reviews\)/, '($1 ביקורות)');
+  });
+  document.querySelectorAll('.cta-btn').forEach(function(el){
+    el.textContent = 'פתח ב‑Discover Lithuania ←';
+  });
+  document.querySelectorAll('a[href^="https://lithuaniadiscovery.com"]').forEach(function(a){
+    var h = a.getAttribute('href');
+    if (h && !h.includes('lang=he')) a.href = h + (h.includes('?') ? '&' : '?') + 'lang=he';
+  });
+})();
+</script>
 </body>
 </html>
