@@ -323,5 +323,51 @@
   });
 })();
 </script>
+<script>/* ga-events-v1 */
+(function(){
+  var slug   = 'yugen-tea';
+  var name   = 'Yugen Tea';
+  var region = 'vilnius';
+  var kind   = 'cafe';
+  var lang   = new URLSearchParams(location.search).get('lang') || 'en';
+
+  function ga(event, params) {
+    if (typeof gtag === 'function') gtag('event', event, params);
+  }
+
+  // 1. place_page_view — fires on load
+  window.addEventListener('DOMContentLoaded', function() {
+    ga('place_page_view', {
+      place_id: slug, place_name: name,
+      place_kind: kind, region: region, language: lang
+    });
+  });
+
+  // 2. cta_click — "Open in Discover Lithuania" button
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('.cta-btn');
+    if (btn) {
+      ga('cta_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+  });
+
+  // 3. map_view — when the map iframe scrolls into view
+  var mapObserved = false;
+  var mapFrame = document.querySelector('.map-frame');
+  if (mapFrame && window.IntersectionObserver) {
+    new IntersectionObserver(function(entries, obs) {
+      if (!mapObserved && entries[0].isIntersecting) {
+        mapObserved = true;
+        ga('map_view', {
+          place_id: slug, place_name: name, region: region, language: lang
+        });
+        obs.disconnect();
+      }
+    }, { threshold: 0.5 }).observe(mapFrame);
+  }
+})();
+</script>
 </body>
 </html>
