@@ -10,7 +10,7 @@
   const JSX_SCRIPTS = [
     '/tweaks-panel.jsx?v=20260626b',
     '/shared.jsx?v=20260802a',
-    '/screens.jsx?v=20260804e',
+    '/screens.jsx?v=20260817a',
     '/app.jsx?v=20260724a',
   ];
 
@@ -123,6 +123,8 @@
         landmarkId: s.landmark_id || null,
         he:         s.note_he || '',
         en:         s.note_en || '',
+        descHe:     s.desc_he || '',
+        descEn:     s.desc_en || '',
       })),
     }));
 

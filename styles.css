@@ -975,6 +975,12 @@ a.region-card:visited .region-name {
   font-weight: 500;
   margin: 0 0 6px;
 }
+.timeline-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted, #6b7c61);
+  margin: 0 0 6px;
+  font-style: italic;
+}
 .timeline-place {
   display: inline-flex;
   align-items: center;

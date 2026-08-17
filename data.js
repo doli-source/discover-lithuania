@@ -3599,8 +3599,7 @@ const ITINERARIES = [
     he: { title: 'סופ"ש ביערות', tagline: 'אגמים, בקתות, וסאונה' },
     en: { title: 'A Weekend in the Forests', tagline: 'Lakes, cabins, and sauna' },
     stops: [
-      { time: 'שישי–שבת', timeEn: 'Fri–Sat', placeId: 'varena-treehouse', landmarkId: null, he: 'בית-עץ ביער', en: 'Cabin in the trees' },
-      { time: 'שבת–ראשון', timeEn: 'Sat–Sun', placeId: 'villa-the-lake', landmarkId: null, he: 'וילה על האגם', en: 'Villa by the lake' }
+      { time: 'שבת–ראשון', timeEn: 'Fri–Sun', placeId: 'villa-the-lake', landmarkId: null, he: 'וילה מדהימה על שפת האגם', en: 'A stunning villa on the lakeshore', descHe: 'שחייה באגם, טיולים ביערות, ומנוחה אמיתית', descEn: 'Swim in the lake, hike through the forest, and truly unwind' }
     ]
   },
   {

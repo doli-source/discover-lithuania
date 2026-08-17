@@ -583,6 +583,9 @@ function RoutesScreen({ lang, t, regions, places, landmarks, itineraries, params
                 </div>
                 <div className="timeline-content" onClick={() => place && openPlace(place.id)} style={{ cursor: place ? 'pointer' : 'default' }}>
                   <h4 className="timeline-title">{stop[lang]}</h4>
+                  {(lang === 'he' ? stop.descHe : stop.descEn) && (
+                    <p className="timeline-desc">{lang === 'he' ? stop.descHe : stop.descEn}</p>
+                  )}
                   {(place || landmark) && (
                     <div className="timeline-place">
                       <Icon.pin />
