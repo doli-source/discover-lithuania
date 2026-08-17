@@ -1361,8 +1361,8 @@ const PLACES = [
     "nivHe": "חווה אקו עם סוסי Žemaitukas הנדירים של ליטא, 40 דונם של כרים ויער ובקתות עם ג'קוזי — הגטאוויי הכי שקוע בטבע באזור מולטאי.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.3744,
-    "lng": 25.2691,
+    "lat": 55.3603078,
+    "lng": 25.3002967,
     "hours": "Check-in from 15:00",
     "hoursHe": "צ'ק-אין מ-15:00",
     "website": "https://alantoszirgai.lt/"
@@ -2355,8 +2355,8 @@ const PLACES = [
     "nivHe": "הפארק הלאומי הגדול ביותר בליטא — יערות קטיף פטריות עתיקים, נהרות חוליים ודבוראים כפריים.",
     "status": "approved",
     "source": "niv",
-    "lat": 54.083359,
-    "lng": 24.2784736,
+    "lat": 54.1631752,
+    "lng": 24.1861435,
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום"
   },
@@ -3128,8 +3128,8 @@ const PLACES = [
     "mapUrl": "https://maps.app.goo.gl/HqSeQMyKHdLB715D7",
     "status": "approved",
     "source": "niv",
-    "lat": 55.3744666,
-    "lng": 25.2691686,
+    "lat": 55.3603078,
+    "lng": 25.3002967,
     "hours": "Check-in from 15:00",
     "hoursHe": "צ'ק-אין מ-15:00",
     "website": "https://alantoszirgai.lt/"
