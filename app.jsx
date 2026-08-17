@@ -115,11 +115,11 @@ function App() {
   useEffect(() => {
     const baseTitle = lang === 'he' ? 'גלה את ליטא' : 'Lithuania Travel Guide';
     let title = lang === 'he'
-      ? 'גלה את ליטא — מדריך טיול: מסעדות, בתי קפה ולינה | 166 מקומות'
-      : 'Lithuania Travel Guide — Cafés, Restaurants & Places to Stay | 166 Picks';
+      ? 'גלה את ליטא — מדריך טיול: מסעדות, בתי קפה ולינה | 163 מקומות'
+      : 'Lithuania Travel Guide — Cafés, Restaurants & Places to Stay | 163 Picks';
     let description = lang === 'he'
-      ? 'מדריך טיול לליטא — 166 מקומות נבחרים: בתי קפה, מסעדות, אתרי טבע ולינה, ב-12 אזורים. מסלולים מוכנים מראש לטיול בווילנה, טראקאי, קובנה ועוד.'
-      : "Lithuania travel guide with 166 handpicked places — best cafés & restaurants in Vilnius, things to do in Lithuania, nature spots, stays and ready-made itineraries across 12 regions.";
+      ? 'מדריך טיול לליטא — 163 מקומות נבחרים: בתי קפה, מסעדות, אתרי טבע ולינה, ב-12 אזורים. מסלולים מוכנים מראש לטיול בווילנה, טראקאי, קובנה ועוד.'
+      : "Lithuania travel guide with 163 handpicked places — best cafés & restaurants in Vilnius, things to do in Lithuania, nature spots, stays and ready-made itineraries across 12 regions.";
     let canonicalPath = '/';
     let touristTrip = null;
 
