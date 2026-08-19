@@ -11,10 +11,16 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/og-preview.png",
-      "sizes": "1200x630",
-      "type": "image/png",
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48 64x64 128x128 256x256",
+      "type": "image/x-icon",
       "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     }
   ],
   "categories": ["travel", "food", "lifestyle"],
