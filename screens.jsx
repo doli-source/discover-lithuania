@@ -623,7 +623,7 @@ function FoodScreen({ lang, t, places, dishes, regions, openPlace, savedSet, tog
       </div>
 
       <div className="food-section">
-        <h3 className="food-section-title">{lang === 'he' ? 'מה לטעום — מנות מסורתיות' : 'What to taste — traditional dishes'}</h3>
+        <h3 className="food-section-title">{lang === 'he' ? 'מנות מסורתיות' : 'Traditional dishes'}</h3>
         <div className="dish-strip">
           {dishes.map((f, i) => (
             <article className="dish-card" key={f.id}>
