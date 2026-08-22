@@ -616,12 +616,6 @@ function FoodScreen({ lang, t, places, dishes, regions, openPlace, savedSet, tog
 
   return (
     <div className="food">
-      <div className="food-header">
-        <div className="section-eyebrow">{lang === 'he' ? 'אוכל' : 'Food'}</div>
-        <h1 className="page-title">{lang === 'he' ? 'איפה לאכול ולשתות' : 'Where to eat & drink'}</h1>
-        <p className="page-sub">{lang === 'he' ? 'בתי קפה, מסעדות, שווקים וברים — מקומות נבחרים.' : "Cafés, restaurants, markets and bars — curated picks."}</p>
-      </div>
-
       <div className="food-section">
         <h3 className="food-section-title">{lang === 'he' ? 'מנות מסורתיות' : 'Traditional dishes'}</h3>
         <div className="dish-strip">
