@@ -3,11 +3,11 @@
   "short_name": "Lithuania",
   "description": "A curated travel guide to Lithuania — 152+ handpicked places across 12 regions.",
   "start_url": "/",
-  "display": "standalone",
+  "display": "browser",
   "background_color": "#faf5ec",
   "theme_color": "#C28840",
-  "lang": "he",
-  "dir": "rtl",
+  "lang": "en",
+  "dir": "ltr",
   "orientation": "portrait-primary",
   "icons": [
     {
