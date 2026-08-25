@@ -2605,4 +2605,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/places/jewish-heritage-tours-vilnius/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/places/jewish-heritage-tours-vilnius/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/places/jewish-heritage-tours-vilnius/?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/places/jewish-heritage-tours-vilnius/"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/places/jewish-heritage-tours-kaunas/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/places/jewish-heritage-tours-kaunas/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/places/jewish-heritage-tours-kaunas/?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/places/jewish-heritage-tours-kaunas/"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/places/citywave-vilnius/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/places/citywave-vilnius/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/places/citywave-vilnius/?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/places/citywave-vilnius/"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/places/slenis-trakuose/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/places/slenis-trakuose/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/places/slenis-trakuose/?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/places/slenis-trakuose/"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
