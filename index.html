@@ -13,11 +13,13 @@
   <meta name="google-site-verification" content="_NgLgo4VNBGD8IwmD2KyfQWC4dG7SJygKnMQWiOzuk4" />
 
   <!-- Google Analytics -->
+  <script src="/assets/js/traffic-filter.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0YD451PRX4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    gtag('set', 'user_properties', { traffic_type: window.__trafficType || 'real' });
     gtag('config', 'G-0YD451PRX4', { send_page_view: false });
   </script>
 
