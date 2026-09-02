@@ -669,26 +669,6 @@ const PLACES = [
     "website": "https://n2bistro.com"
   },
   {
-    "id": "naked-noah",
-    "region": "vilnius",
-    "kind": "market",
-    "name": "Naked Noah",
-    "type": "Wine store",
-    "typeHe": "יין",
-    "rating": 4.8,
-    "reviews": 57,
-    "price": null,
-    "emoji": "🍷",
-    "niv": "The largest natural wine shop in the Baltics — over 150 labels from small producers worldwide, with staff who know every bottle personally.",
-    "nivHe": "חנות היין הטבעי הגדולה ביותר בבלטיים — מעל 150 תוויות מיצרנים קטנים ברחבי העולם, עם צוות שמכיר אישית כל בקבוק.",
-    "status": "approved",
-    "source": "niv",
-    "lat": 54.677,
-    "lng": 25.284,
-    "hours": "Mon-Fri 12:00-18:00 · Sat 12:00-16:00",
-    "hoursHe": "ב'-ו' 12:00-18:00 · ש' 12:00-16:00"
-  },
-  {
     "id": "burbulio-vynin",
     "region": "vilnius",
     "kind": "market",
