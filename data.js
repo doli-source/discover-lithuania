@@ -3179,6 +3179,28 @@ const PLACES = [
     "website": "https://geniokampas.lt/"
   },
   {
+    "id": "varena-treehouse",
+    "region": "countryside",
+    "kind": "stay",
+    "name": "Varena Treehouse",
+    "type": "6 treehouses + cabin",
+    "typeHe": "6 בתי עץ + צריף",
+    "rating": 4.9,
+    "reviews": null,
+    "price": null,
+    "emoji": "🌲",
+    "niv": "Six treehouses and a cabin tucked into the forests of Varėna district — each with its own character, from the boho-styled BOHO to the compass-named WEST, SOUTH, NORTH and EAST. The tagline says it best: where nature is wild but comfortable.",
+    "nivHe": "שישה בתי עץ וצריף אחד בין יערות מחוז ורנה — לכל אחד אופי משלו, מה-BOHO הבוהמייני ועד ה-WEST, SOUTH, NORTH ו-EAST. הסלוגן שלהם אומר הכל: הטבע פראי אבל נוח.",
+    "mapUrl": "https://maps.app.goo.gl/Wvv4hGUDYMqRiU38A",
+    "status": "approved",
+    "source": "niv",
+    "lat": 54.3027015,
+    "lng": 24.7605948,
+    "hours": null,
+    "hoursHe": null,
+    "website": "https://www.varenatreehouse.com/"
+  },
+  {
     "id": "uoksas-kaunas",
     "region": "kaunas",
     "kind": "restaurant",
