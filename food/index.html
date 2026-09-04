@@ -38,7 +38,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lithuaniadiscovery.com/food/">
   <meta property="og:title" content="Food & Drink in Lithuania — Cafés & Restaurants | Discover Lithuania">
-  <meta property="og:description" content="Discover the best food and drink in Lithuania — handpicked cafés, restaurants, local dishes across Vilnius, Kaunas and beyond.">
+  <meta property="og:description" content="Discover the best food and drink in Lithuania — handpicked cafés, restaurants, local dishes and drinks across Vilnius, Kaunas, Klaipėda and beyond.">
   <meta property="og:image" content="https://lithuaniadiscovery.com/og-preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -125,6 +125,27 @@
   <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://lithuaniadiscovery.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Food & Drink",
+      "item": "https://lithuaniadiscovery.com/food/"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <div id="root"></div>
