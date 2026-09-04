@@ -47,58 +47,73 @@
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Discover Lithuania — A Traveler's Guide">
+  <meta name="twitter:title" content="Places to Stay in Lithuania — Hotels & Nature | Discover Lithuania">
   <meta name="twitter:description" content="152+ handpicked places across 12 regions of Lithuania.">
   <meta name="twitter:image" content="https://lithuaniadiscovery.com/og-preview.png">
 
   <!-- JSON-LD structured data -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://lithuaniadiscovery.com/#website",
-        "url": "https://lithuaniadiscovery.com/",
-        "name": "Discover Lithuania",
-        "description": "A curated travel guide to Lithuania — handpicked cafés, restaurants, stays, nature and routes across 12 regions.",
-        "inLanguage": ["en", "he"],
-        "author": { "@id": "https://lithuaniadiscovery.com/#author" },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://lithuaniadiscovery.com/explore?q={search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
-        }
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://lithuaniadiscovery.com/#website",
+      "url": "https://lithuaniadiscovery.com/",
+      "name": "Discover Lithuania",
+      "description": "A curated travel guide to Lithuania — handpicked cafés, restaurants, stays, nature and routes across 12 regions.",
+      "inLanguage": [
+        "en",
+        "he"
+      ],
+      "author": {
+        "@id": "https://lithuaniadiscovery.com/#author"
       },
-      {
-        "@type": "Person",
-        "@id": "https://lithuaniadiscovery.com/#author",
-        "name": "Niv Shimoni",
-        "description": "Entrepreneur, AI builder, and frequent Lithuania visitor."
-      },
-      {
-        "@type": "TouristDestination",
-        "name": "Lithuania",
-        "description": "Eastern European country known for its medieval old towns, pine forests, dunes, lakes and vibrant café culture.",
-        "url": "https://lithuaniadiscovery.com/",
-        "touristType": ["Cultural tourist", "Nature lover", "Food traveler"]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://lithuaniadiscovery.com/#webpage",
-        "url": "https://lithuaniadiscovery.com/",
-        "name": "Discover Lithuania — A Traveler's Guide",
-        "speakable": {
-          "@type": "SpeakableSpecification",
-          "cssSelector": [".hero-title", ".hero-sub", ".facts-section"]
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://lithuaniadiscovery.com/explore?q={search_term_string}"
         },
-        "isPartOf": { "@id": "https://lithuaniadiscovery.com/#website" }
+        "query-input": "required name=search_term_string"
       }
-    ]
-  }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lithuaniadiscovery.com/#author",
+      "name": "Niv Shimoni",
+      "description": "Entrepreneur, AI builder, and frequent Lithuania visitor."
+    },
+    {
+      "@type": "TouristDestination",
+      "name": "Lithuania",
+      "description": "Eastern European country known for its medieval old towns, pine forests, dunes, lakes and vibrant café culture.",
+      "url": "https://lithuaniadiscovery.com/",
+      "touristType": [
+        "Cultural tourist",
+        "Nature lover",
+        "Food traveler"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lithuaniadiscovery.com/#webpage",
+      "url": "https://lithuaniadiscovery.com/",
+      "name": "Places to Stay in Lithuania — Hotels & Nature | Discover Lithuania",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".hero-title",
+          ".hero-sub",
+          ".facts-section"
+        ]
+      },
+      "isPartOf": {
+        "@id": "https://lithuaniadiscovery.com/#website"
+      }
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -47,58 +47,96 @@
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Druskininkai Travel Guide — Spa, Forests & Relaxation | Discover Lithuania">
+  <meta name="twitter:title" content="Druskininkai Travel Guide — Spa & Forests | Discover Lithuania">
   <meta name="twitter:description" content="Lithuania's premier spa resort — pine forests, mineral springs and gateway to Dzūkija National Park.">
   <meta name="twitter:image" content="https://lithuaniadiscovery.com/og-preview.png">
 
   <!-- JSON-LD structured data -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://lithuaniadiscovery.com/#website",
-        "url": "https://lithuaniadiscovery.com/",
-        "name": "Discover Lithuania",
-        "description": "A curated travel guide to Lithuania — handpicked cafés, restaurants, stays, nature and routes across 12 regions.",
-        "inLanguage": ["en", "he"],
-        "author": { "@id": "https://lithuaniadiscovery.com/#author" },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://lithuaniadiscovery.com/explore?q={search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
-        }
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://lithuaniadiscovery.com/#website",
+      "url": "https://lithuaniadiscovery.com/",
+      "name": "Discover Lithuania",
+      "description": "A curated travel guide to Lithuania — handpicked cafés, restaurants, stays, nature and routes across 12 regions.",
+      "inLanguage": [
+        "en",
+        "he"
+      ],
+      "author": {
+        "@id": "https://lithuaniadiscovery.com/#author"
       },
-      {
-        "@type": "Person",
-        "@id": "https://lithuaniadiscovery.com/#author",
-        "name": "Niv Shimoni",
-        "description": "Entrepreneur, AI builder, and frequent Lithuania visitor."
-      },
-      {
-        "@type": "TouristDestination",
-        "name": "Druskininkai",
-        "description": "Lithuania's premier spa and wellness resort — mineral springs, pine forests, Dzūkija National Park and a famous Soviet-era sculpture park.",
-        "url": "https://lithuaniadiscovery.com/explore/druskininkai/",
-        "touristType": ["Wellness traveler", "Nature lover", "Cultural tourist"]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://lithuaniadiscovery.com/explore/druskininkai/#webpage",
-        "url": "https://lithuaniadiscovery.com/explore/druskininkai/",
-        "name": "Druskininkai Travel Guide — Spa, Forests & Relaxation | Discover Lithuania",
-        "speakable": {
-          "@type": "SpeakableSpecification",
-          "cssSelector": [".hero-title", ".hero-sub", ".facts-section"]
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://lithuaniadiscovery.com/explore?q={search_term_string}"
         },
-        "isPartOf": { "@id": "https://lithuaniadiscovery.com/#website" }
+        "query-input": "required name=search_term_string"
       }
-    ]
-  }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lithuaniadiscovery.com/#author",
+      "name": "Niv Shimoni",
+      "description": "Entrepreneur, AI builder, and frequent Lithuania visitor."
+    },
+    {
+      "@type": "TouristDestination",
+      "name": "Druskininkai",
+      "description": "Lithuania's premier spa and wellness resort — mineral springs, pine forests, Dzūkija National Park and a famous Soviet-era sculpture park.",
+      "url": "https://lithuaniadiscovery.com/explore/druskininkai/",
+      "touristType": [
+        "Wellness traveler",
+        "Nature lover",
+        "Cultural tourist"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lithuaniadiscovery.com/explore/druskininkai/#webpage",
+      "url": "https://lithuaniadiscovery.com/explore/druskininkai/",
+      "name": "Druskininkai Travel Guide — Spa & Forests | Discover Lithuania",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".hero-title",
+          ".hero-sub",
+          ".facts-section"
+        ]
+      },
+      "isPartOf": {
+        "@id": "https://lithuaniadiscovery.com/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://lithuaniadiscovery.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Explore",
+          "item": "https://lithuaniadiscovery.com/explore/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Druskininkai",
+          "item": "https://lithuaniadiscovery.com/explore/druskininkai/"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
