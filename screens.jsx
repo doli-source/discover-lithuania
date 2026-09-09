@@ -957,6 +957,16 @@ function SavedScreen({ savedSet, places, regions, lang, t, openPlace, toggleSave
 function BlogScreen({ lang }) {
   const posts = [
     {
+      emoji: '🥟',
+      tag: lang === 'he' ? 'אוכל ותרבות · פוסט אורח' : 'Food & Culture · Guest Post',
+      title: lang === 'he' ? 'צפלינאי: המתכון של אמא שלי' : 'Cepelinai: My Mum\'s Recipe',
+      desc: lang === 'he'
+        ? 'בריגיטה אויאר מביאה לנו את המתכון המסורתי של אמא שלה לצפלינאי — כופתאות תפוח אדמה ממולאות בבשר.'
+        : 'Brigita Uyar shares her mum\'s traditional recipe for cepelinai — Lithuania\'s beloved stuffed potato dumplings.',
+      href: lang === 'he' ? '/blog/cepelinai-brigita-uyar.html?lang=he' : '/blog/cepelinai-brigita-uyar.html',
+      time: lang === 'he' ? '5 דק׳ קריאה' : '5 min read',
+    },
+    {
       emoji: '🗺️',
       tag: lang === 'he' ? 'ליטא · מסלול' : 'Lithuania · Itinerary',
       title: lang === 'he' ? '5 ימים בליטא — מסלול מלא עם וילנה, טרקאי וקובנה' : '5 Days in Lithuania — Full Itinerary with Vilnius, Trakai & Kaunas',
