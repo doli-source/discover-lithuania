@@ -957,7 +957,7 @@ function SavedScreen({ savedSet, places, regions, lang, t, openPlace, toggleSave
 function BlogScreen({ lang }) {
   const posts = [
     {
-      emoji: '🥟',
+      emoji: '🥔',
       tag: lang === 'he' ? 'אוכל ותרבות · פוסט אורח' : 'Food & Culture · Guest Post',
       title: lang === 'he' ? 'צפלינאי: המתכון של אמא שלי' : 'Cepelinai: My Mum\'s Recipe',
       desc: lang === 'he'
