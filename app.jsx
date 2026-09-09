@@ -38,7 +38,7 @@ const FONT_PAIRS = {
 //   ?place=ID       → place modal overlay (works on any screen)
 //   ?lang=en        → language override (default: he)
 
-const VALID_SCREENS = ['home', 'explore', 'routes', 'food', 'stays', 'saved', 'admin'];
+const VALID_SCREENS = ['home', 'explore', 'routes', 'food', 'stays', 'saved', 'admin', 'blog'];
 
 function parseURL() {
   const seg = location.pathname.replace(/^\//, '').split('/').filter(Boolean);
