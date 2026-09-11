@@ -501,7 +501,7 @@
         }
       });
 
-      document.querySelectorAll('a[href*="lithuaniadiscovery.com"]').forEach(function(link) {
+      document.querySelectorAll('a[href^="/"], a[href*="lithuaniadiscovery.com"]').forEach(function(link) {
         var href = link.getAttribute('href');
         if (!href.includes('lang=')) link.href = href + (href.includes('?') ? '&' : '?') + 'lang=he';
       });
