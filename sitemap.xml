@@ -8,6 +8,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://lithuaniadiscovery.com/about/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://lithuaniadiscovery.com/explore/vilnius/</loc>
     <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
