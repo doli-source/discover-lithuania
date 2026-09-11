@@ -523,7 +523,7 @@ function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
           {items.map(item => (
             <a
               key={item.id}
-              href={item.id === 'home' ? '/' : `/${item.id}`}
+              href={item.id === 'home' ? '/' : `/${item.id}/`}
               className={`nav-link ${screen === item.id ? 'active' : ''}`}
               onClick={(e) => { e.preventDefault(); nav(item.id); }}
             >
@@ -556,7 +556,7 @@ function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
           {items.map(item => (
             <a
               key={item.id}
-              href={item.id === 'home' ? '/' : `/${item.id}`}
+              href={item.id === 'home' ? '/' : `/${item.id}/`}
               className={`mobile-link ${screen === item.id ? 'active' : ''}`}
               onClick={(e) => { e.preventDefault(); nav(item.id); setMobileOpen(false); }}
             >
