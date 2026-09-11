@@ -989,7 +989,7 @@ function BlogScreen({ lang }) {
     {
       emoji: '🍽️',
       tag: lang === 'he' ? 'וילנה · מסעדות' : 'Vilnius · Restaurants',
-      title: lang === 'he' ? '8 המסעדות הכי טובות בווילנה' : '8 Best Restaurants in Vilnius',
+      title: lang === 'he' ? '9 המסעדות הכי טובות בווילנה' : '9 Best Restaurants in Vilnius',
       desc: lang === 'he'
         ? 'Le Travi, Donde, OSH Halal ועוד — המקומות שאנחנו חוזרים אליהם שוב ושוב.'
         : 'Le Travi, Donde, OSH Halal and more — the restaurants we keep coming back to.',
@@ -999,7 +999,7 @@ function BlogScreen({ lang }) {
     {
       emoji: '☕',
       tag: lang === 'he' ? 'וילנה · קפה' : 'Vilnius · Coffee',
-      title: lang === 'he' ? '7 בתי הקפה הכי טובים בווילנה' : '7 Best Coffee Shops in Vilnius',
+      title: lang === 'he' ? '6 בתי הקפה הכי טובים בווילנה' : '6 Best Coffee Shops in Vilnius',
       desc: lang === 'he'
         ? 'Espresinė, BREW, Backstage ועוד — מהמקומות שהמקומיים שותים בהם קפה.'
         : 'Espresinė, BREW, Backstage and more — where locals actually drink coffee.',
