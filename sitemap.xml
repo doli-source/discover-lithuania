@@ -1574,6 +1574,33 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://lithuaniadiscovery.com/places/zvirblio-puota/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/places/zvirblio-puota/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/places/zvirblio-puota/?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/places/zvirblio-puota/"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/places/musangas/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/places/musangas/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/places/musangas/?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/places/musangas/"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/places/private-baltics/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/places/private-baltics/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/places/private-baltics/?lang=he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/places/private-baltics/"/>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://lithuaniadiscovery.com/places/klaip-dos-yd-bendruomen/</loc>
         <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/places/klaip-dos-yd-bendruomen/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/places/klaip-dos-yd-bendruomen/?lang=he"/>
