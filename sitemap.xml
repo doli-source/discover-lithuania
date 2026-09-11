@@ -80,6 +80,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://lithuaniadiscovery.com/explore/kretinga/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/explore/utena/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lithuaniadiscovery.com/routes/</loc>
     <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>

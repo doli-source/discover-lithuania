@@ -8,13 +8,78 @@
     <link>https://lithuaniadiscovery.com</link>
     <description>152+ handpicked cafés, restaurants, stays, nature spots and ready-made routes across 12 regions of Lithuania. By Niv Shimoni.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 04 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://lithuaniadiscovery.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://lithuaniadiscovery.com/og-preview.png</url>
       <title>Discover Lithuania</title>
       <link>https://lithuaniadiscovery.com</link>
     </image>
+
+    <item>
+      <title>Cepelinai: My Mum's Recipe</title>
+      <link>https://lithuaniadiscovery.com/blog/cepelinai-brigita-uyar</link>
+      <guid isPermaLink="true">https://lithuaniadiscovery.com/blog/cepelinai-brigita-uyar</guid>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Brigita Uyar</dc:creator>
+      <description>Guest post by Lithuanian food blogger Brigita Uyar: the story and recipe behind her mum's cepelinai, Lithuania's most beloved potato dumplings.</description>
+      <content:encoded><![CDATA[
+        <p>Cepelinai — giant potato zeppelins stuffed with minced meat and served with sour cream — are Lithuania's national dish. Food blogger Brigita Uyar shares the recipe passed down from her mother.</p>
+        <p><a href="https://lithuaniadiscovery.com/blog/cepelinai-brigita-uyar">Read the full recipe →</a></p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>5 Days in Lithuania — The Perfect Itinerary</title>
+      <link>https://lithuaniadiscovery.com/blog/5-days-in-lithuania</link>
+      <guid isPermaLink="true">https://lithuaniadiscovery.com/blog/5-days-in-lithuania</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Niv Shimoni</dc:creator>
+      <description>The perfect 5-day Lithuania itinerary: Vilnius Old Town, Trakai Island Castle, and the underrated Art Deco city of Kaunas. Real recommendations — updated.</description>
+      <content:encoded><![CDATA[
+        <p>Five days is the sweet spot for Lithuania — enough time to do Vilnius properly, see Trakai, and make it to Kaunas without rushing. This itinerary is based on the route I'd plan for a friend visiting for the first time.</p>
+        <p><a href="https://lithuaniadiscovery.com/blog/5-days-in-lithuania">Read the full itinerary →</a></p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>Trakai Day Trip from Vilnius — The Complete Guide</title>
+      <link>https://lithuaniadiscovery.com/blog/trakai-day-trip</link>
+      <guid isPermaLink="true">https://lithuaniadiscovery.com/blog/trakai-day-trip</guid>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Niv Shimoni</dc:creator>
+      <description>Everything you need for a perfect Trakai day trip from Vilnius — the castle, kibinai, boat rentals, hot air balloon rides and hidden gems. Full guide.</description>
+      <content:encoded><![CDATA[
+        <p>Trakai is 28km from Vilnius and completely different from it. An island castle rising from Lake Galvė, Karaim kibinai pastries, and the option to float over it all in a hot air balloon — it's one of the best day trips in Eastern Europe.</p>
+        <p><a href="https://lithuaniadiscovery.com/blog/trakai-day-trip">Read the full guide →</a></p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>9 Best Restaurants in Vilnius</title>
+      <link>https://lithuaniadiscovery.com/blog/best-restaurants-vilnius</link>
+      <guid isPermaLink="true">https://lithuaniadiscovery.com/blog/best-restaurants-vilnius</guid>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Niv Shimoni</dc:creator>
+      <description>The best restaurants in Vilnius — from Italian pasta to Michelin-starred Lithuanian cuisine. What to order, when to go, and whether to book.</description>
+      <content:encoded><![CDATA[
+        <p>Vilnius punches above its weight for food. There's a Michelin restaurant, an excellent Italian, and several places doing modern Lithuanian cuisine that would hold their own in any European capital. Here are the nine I'd send a friend to.</p>
+        <p><a href="https://lithuaniadiscovery.com/blog/best-restaurants-vilnius">Read the full guide →</a></p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title>6 Best Coffee Shops in Vilnius</title>
+      <link>https://lithuaniadiscovery.com/blog/best-coffee-vilnius</link>
+      <guid isPermaLink="true">https://lithuaniadiscovery.com/blog/best-coffee-vilnius</guid>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Niv Shimoni</dc:creator>
+      <description>The best coffee shops in Vilnius, tested and curated — where locals actually drink coffee, what to order, and when to go.</description>
+      <content:encoded><![CDATA[
+        <p>Vilnius has a serious coffee scene. Specialty roasters, proper espresso, and a few places worth building your morning around. These are the six I keep going back to.</p>
+        <p><a href="https://lithuaniadiscovery.com/blog/best-coffee-vilnius">Read the full guide →</a></p>
+      ]]></content:encoded>
+    </item>
 
     <item>
       <title>A Perfect Day in Vilnius</title>
