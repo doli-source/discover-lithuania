@@ -128,6 +128,29 @@
       })),
     }));
 
+    // Hardcoded places (pending Supabase write access)
+    PLACES.push({
+      id:      'private-baltics',
+      region:  'vilnius',
+      kind:    'activity',
+      name:    'Private Baltics',
+      type:    'Private Tours & Transfers',
+      typeHe:  'סיורים פרטיים והסעות',
+      rating:  null,
+      reviews: null,
+      price:   null,
+      emoji:   '🗺️',
+      niv:     'Boutique travel organizer offering private tours and transfers across the Baltics since 2005. Whether you need a private guide for Vilnius, a transfer to Trakai, or a full Baltic itinerary — Private Baltics delivers a personalized, high-quality experience.',
+      nivHe:   'מארגן נסיעות בוטיק המציע סיורים פרטיים והסעות ברחבי מדינות הבלטי מאז 2005. בין אם אתם מחפשים מדריך פרטי לווילנה, הסעה לטראקאי, או מסלול מרובה ימים — Private Baltics מספקים חוויה אישית ואיכותית.',
+      status:  'approved',
+      source:  'niv',
+      lat:     null,
+      lng:     null,
+      hours:   '',
+      hoursHe: '',
+      website: 'https://www.privatebaltics.com/',
+    });
+
     window.LT_DATA = { REGIONS, PLACES, LANDMARKS, DISHES, ITINERARIES, FACTS, MAP_URL };
 
   } catch (err) {
