@@ -53,6 +53,34 @@ function applyHebrew(html) {
   return { html: out, applied };
 }
 
+// FAQ schema is what an answer engine actually reads, so a Hebrew page whose
+// JSON-LD still asks its questions in English is answering for the wrong
+// audience. The translations are already on the page in data-he; this pairs
+// each English string with its Hebrew and rewrites the schema.
+function translateSchema(html, source) {
+  const pairs = new Map();
+  for (const m of source.matchAll(
+    /<[a-zA-Z0-9]+(?:[^>]*?\s)?data-he="([^"]*)"[^>]*>([^<]+)</g
+  )) {
+    const he = unesc(m[1]).trim();
+    const en = unesc(m[2]).trim();
+    if (en && he && en !== he) pairs.set(en, he);
+  }
+
+  let swapped = 0;
+  const out = html.replace(
+    /("(?:name|text|headline|description)":\s*")([^"]+)(")/g,
+    (whole, open, value, close) => {
+      const en = unesc(value).trim();
+      const he = pairs.get(en);
+      if (!he) return whole;
+      swapped++;
+      return open + he.replace(/"/g, '\\"') + close;
+    }
+  );
+  return { html: out, swapped };
+}
+
 // The Hebrew title and description come from the page's own Hebrew: the h1 and
 // the first substantial Hebrew paragraph. Nothing is invented here.
 function hebrewMeta(html, rel) {
@@ -77,7 +105,8 @@ for (const [src, rel] of Object.entries(ARTICLES)) {
   if (!title) { failures.push(`${src}: no Hebrew <h1> to build a title from`); continue; }
   if (!desc) { failures.push(`${src}: no Hebrew text long enough for a description`); continue; }
 
-  const { html: translated, applied } = applyHebrew(original);
+  const { html: bodyHe, applied } = applyHebrew(original);
+  const { html: translated, swapped } = translateSchema(bodyHe, original);
   if (applied < 5) { failures.push(`${src}: only ${applied} Hebrew swaps — check the markup`); continue; }
 
   const enUrl = `${BASE_URL}/${rel}`;
@@ -96,6 +125,14 @@ for (const [src, rel] of Object.entries(ARTICLES)) {
     .replace(/<meta property="og:url" content="[^"]*"\s*\/?>/, `<meta property="og:url" content="${heUrl}">`)
     .replace(/<meta property="og:locale" content="[^"]*"\s*\/?>/, '<meta property="og:locale" content="he_IL">')
     .replace(/"inLanguage":\s*"en"/g, '"inLanguage": "he"');
+
+  // The article-level headline and description in the schema have no data-he
+  // twin to pair with — they mirror the head meta, so they take the Hebrew
+  // title and description computed above. Proper nouns are left alone.
+  const jsonEsc = (v) => v.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+  out = out
+    .replace(/("headline":\s*")[^"]+(")/g, `$1${jsonEsc(title)}$2`)
+    .replace(/("description":\s*")[^"]{40,}(")/g, `$1${jsonEsc(desc)}$2`);
 
   const alts =
     `  <link rel="alternate" hreflang="en" href="${enUrl}">\n` +
@@ -120,7 +157,7 @@ for (const [src, rel] of Object.entries(ARTICLES)) {
     if (en !== original) fs.writeFileSync(file, en, 'utf8');
   }
   wrote++;
-  console.log(`  ${rel}  ${applied} swaps  "${title.slice(0, 44)}"`);
+  console.log(`  ${rel}  ${applied} body · ${swapped} schema  "${title.slice(0, 40)}"`);
 }
 
 console.log(`\n${dryRun ? 'would write' : 'wrote'} ${wrote} Hebrew article pages`);
