@@ -15,18 +15,33 @@ in the current conversation.
 Meta tags, structured data, headers, and robots/sitemap are not visual — those
 can be changed freely, but they still follow the derived-data rules below.
 
+## Run the check first
+
+```
+node check.js
+```
+
+Run it before every push. It encodes the invariants below and every rule in it
+exists because that invariant was broken in production at least once. A
+non-zero exit means do not deploy.
+
 ## Source of truth
 
-`supabase-data.js` fetches from Supabase at runtime and sets `window.LT_DATA`.
-That is the only authoritative place list.
+`supabase-data.js` builds `window.LT_DATA` from two sources: the published rows
+of the Supabase `places` table, **plus** a handful of places it appends inline
+with `PLACES.push({...})`. The live list is both together — querying only
+Supabase undercounts.
 
-- **The place count is `PLACES.length`.** Never derive it from the number of
-  directories under `/places/` — those drift. Counting directories is exactly
-  how the count became 175 when the real number was 169.
+- **Never derive the place count from the number of directories under
+  `/places/`.** Those drift. Counting directories is exactly how the count
+  became 175 when the real number was 169.
 - `data.js` holds ~30 regions/landmarks and an inline fallback. It is **not**
   the place list, despite the name.
 - `docs/PROJECT_SPEC.md` is stale (it lists 12 regions; there are 10). Read it
   for intent, never for current numbers.
+
+Copy phrased as an approximation — "over 160", "160+" — stays valid as long as
+the real count is higher, so it does not have to move on every addition.
 
 ## Derived data — update together or not at all
 
@@ -46,19 +61,35 @@ Cache headers live in **two** files — `_headers` and `netlify.toml`. When they
 disagree the result is unpredictable, so any file needing a non-default policy
 must be listed in both.
 
+## Hosting — read this before touching any config
+
+The site is served by **GitHub Pages** (`source: main /`) behind **Cloudflare**.
+It is not served by Netlify, despite what the repo looks like.
+
+That means **`_headers` and `netlify.toml` are inert**. GitHub Pages does not
+read either file, so nothing in them reaches a visitor. Security headers and
+cache policy have to be set as Cloudflare rules; editing these two files
+changes nothing. `check.js` warns about this on every run.
+
+A separate Netlify site (`discover-lithuania.netlify.app`) is still live and
+serving an old build. It is not the production site.
+
 ## Deploy
 
 Work happens on `main-local`. Production is `origin/main`.
 
 ```
-git push origin main-local:main
+node check.js && git push origin main-local:main
 ```
 
-Netlify builds from `main` automatically; a GitHub Action then purges the
-Cloudflare cache. There is no staging environment — a push is live.
+GitHub Pages rebuilds from `main`; a GitHub Action then purges the Cloudflare
+cache. Allow a couple of minutes, and verify against the live domain rather
+than the Pages URL — Cloudflare can still be serving the previous copy.
 
-Credentials are in the macOS Keychain. Never write a token into `.git/config`
-or any tracked file.
+There is no staging environment. A push is live.
+
+Credentials are in the macOS Keychain via `gh auth login`. Never write a token
+into `.git/config` or any tracked file.
 
 ## Known gaps
 
