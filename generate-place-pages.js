@@ -547,6 +547,10 @@ ${buildSchema(p, lang)}
   // built from an older template, so rewriting them all would change visible
   // copy across the site. Only missing pages are written unless --all says so.
   const rewriteAll = process.argv.includes('--all');
+  // Rewrite named slugs only — for repairing a single stale page without
+  // touching the wording of the other 176.
+  const onlyArg = process.argv.find((a) => a.startsWith('--only='));
+  const only = onlyArg ? new Set(onlyArg.slice(7).split(',')) : null;
 
   const PLACES = await loadPlaces();
   TOTAL_PLACES = PLACES.length;
@@ -573,7 +577,7 @@ ${buildSchema(p, lang)}
     // The English page may carry hand-applied fixes, so it is only rewritten
     // when it is new or --all is passed. The Hebrew page has no such history:
     // it is generated output, always written.
-    if (isNew || rewriteAll) {
+    if (isNew || rewriteAll || only?.has(p.id)) {
       if (!dryRun) {
         if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
         fs.writeFileSync(path.join(dir, 'index.html'), buildPage(p, 'en'), 'utf8');

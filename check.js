@@ -187,6 +187,38 @@ function checkRegionImages() {
   }
 }
 
+// 3d. Every JSON-LD block must parse. One place page shipped for months with
+//     an unescaped quote in its description, which made Google discard the
+//     whole block — the schema was there and counted for nothing.
+function checkJsonLd(files) {
+  for (const f of files) {
+    if (!f.endsWith('.html')) continue;
+    const html = fs.readFileSync(f, 'utf8');
+    for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+      try { JSON.parse(m[1]); }
+      catch (e) { fail('json-ld', `${rel(f)}: ${e.message}`); }
+    }
+  }
+}
+
+// 3e. A region page for a region that is no longer in the data renders empty,
+//     so it must not stay indexable.
+function checkOrphanRegions() {
+  const dir = path.join(ROOT, 'explore');
+  if (!fs.existsSync(dir)) return;
+  const live = new Set(['vilnius','trakai','kaunas','klaipeda','curonian','countryside',
+                        'druskininkai','palanga','moletai','zarasai','he']);
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (!e.isDirectory() || live.has(e.name)) continue;
+    const page = path.join(dir, e.name, 'index.html');
+    if (!fs.existsSync(page)) continue;
+    const html = fs.readFileSync(page, 'utf8');
+    if (!/noindex/.test(html)) {
+      fail('orphan-region', `/explore/${e.name}/ is not a live region and is still indexable`);
+    }
+  }
+}
+
 // 4. Config files that the host does not read are inert and must not be
 //    trusted. The site runs on GitHub Pages, which ignores both of these.
 function checkHostConfig() {
@@ -297,6 +329,8 @@ function checkUnpushed() {
   checkPages(live);
   checkHebrewPair(live);
   checkRegionImages();
+  checkJsonLd(files);
+  checkOrphanRegions();
   checkCanonicalVsRobots();
   checkHostConfig();
   checkImmutable();
