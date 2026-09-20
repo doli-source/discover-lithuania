@@ -1,20 +1,95 @@
 #!/usr/bin/env node
-// Generates static HTML place pages for SEO
-// Output: /places/[id]/index.html for each of the 166 places
+// Generates a static HTML page per place, for search engines to index.
 // Run: node generate-place-pages.js
+//
+// Reads the same two sources the browser does — published Supabase rows plus
+// the places supabase-data.js appends inline. It used to read data.js, which
+// stopped holding the place list when Supabase took over, so it could no
+// longer regenerate anything.
 
 const fs = require('fs');
 const path = require('path');
 
-// Load data
-let content = fs.readFileSync(path.join(__dirname, 'data.js'), 'utf8');
-content = content.replace('window._DL_DATA_VERSION =', 'global._DL_DATA_VERSION =');
-content = content.replace('window.LT_DATA =', 'global.LT_DATA =');
-eval(content);
-const { PLACES, REGIONS } = global.LT_DATA;
-
 const BASE_URL = 'https://lithuaniadiscovery.com';
+const SUPABASE_URL = 'https://hsovwydscmwyyvsemudg.supabase.co';
+const SUPABASE_KEY =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhzb3Z3eWRzY213eXl2c2VtdWRnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxMDkzOTEsImV4cCI6MjEwMTY4NTM5MX0.OdiHpVogpp_5U7v-XxHdapRhpP-Zz--7Yw82X0zWruA';
+
+// Pages kept although the place has left the data — they still rank, so
+// deleting them would throw away the traffic they earn. Must stay in sync
+// with the same list in check.js.
+const KEPT_ORPHANS = new Set([
+  'alantos-irgai-sodybos-ir-nameli',
+  'atvira-meno-galerija-open-gallery',
+  'muskatas',
+  'naked-noah',
+  'rooma-apartments-vilnius',
+  'sicilia-druskininkai',
+  'toli-toli-druskininkai',
+  'vila-gervalis',
+]);
+
+async function rest(table, qs) {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${qs}`, {
+    headers: { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` },
+  });
+  if (!res.ok) throw new Error(`Supabase ${table}: ${res.status} ${res.statusText}`);
+  return res.json();
+}
+
+// Mirrors the mapping in supabase-data.js. If that file's shape changes,
+// this has to change with it.
+async function loadPlaces() {
+  const [rows, translations] = await Promise.all([
+    rest('places', 'select=*&order=slug'),
+    rest('place_translations', 'select=*'),
+  ]);
+
+  const byPlace = {};
+  for (const t of translations) (byPlace[t.place_id] ||= {})[t.lang] = t;
+
+  const fromDb = rows
+    .filter((p) => p.is_published)
+    .map((p) => {
+      const en = byPlace[p.id]?.en || {};
+      const he = byPlace[p.id]?.he || {};
+      return {
+        id: p.slug,
+        region: p.region_id,
+        kind: p.category_id,
+        name: en.name || p.slug,
+        type: en.type_label || '',
+        typeHe: he.type_label || '',
+        rating: parseFloat(p.rating) || null,
+        reviews: p.review_count,
+        price: p.price_range,
+        emoji: p.emoji || '📍',
+        niv: en.niv_tip || en.description || '',
+        nivHe: he.niv_tip || he.description || '',
+        lat: p.lat,
+        lng: p.lng,
+        hours: p.hours_en || '',
+        hoursHe: p.hours_he || '',
+        website: p.website || '',
+      };
+    });
+
+  // The inline PLACES.push({...}) entries in supabase-data.js are part of the
+  // live list too. Pull them out rather than duplicating them here.
+  const src = fs.readFileSync(path.join(__dirname, 'supabase-data.js'), 'utf8');
+  const inline = [];
+  for (const m of src.matchAll(/PLACES\.push\((\{[\s\S]*?\n\s{4}\})\);/g)) {
+    try { inline.push(eval(`(${m[1]})`)); }
+    catch (e) { console.warn(`  ! could not parse an inline place: ${e.message}`); }
+  }
+
+  const seen = new Set();
+  return [...fromDb, ...inline].filter((p) => !seen.has(p.id) && seen.add(p.id));
+}
 const TODAY = new Date().toISOString().slice(0, 10);
+
+// Set once the live list is loaded; the page template renders it as copy.
+let TOTAL_PLACES = 0;
 
 const REGION_NAMES = {
   vilnius:      'Vilnius',
@@ -152,12 +227,14 @@ function buildPage(p) {
   <meta name="robots" content="index, follow">
   <meta name="google-site-verification" content="_NgLgo4VNBGD8IwmD2KyfQWC4dG7SJygKnMQWiOzuk4">
 
+  <script src="/assets/js/traffic-filter.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0YD451PRX4"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0YD451PRX4',{send_page_view:false});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('set','user_properties',{traffic_type:window.__trafficType||'real'});gtag('config','G-0YD451PRX4',{send_page_view:false});</script>
 
   <link rel="canonical" href="${url}">
   <link rel="alternate" hreflang="en" href="${url}">
   <link rel="alternate" hreflang="x-default" href="${url}">
+  <link rel="alternate" hreflang="he" href="${url}?lang=he">
 
   <meta property="og:type" content="place">
   <meta property="og:url" content="${url}">
@@ -254,13 +331,13 @@ ${buildSchema(p)}
     ${p.niv ? `
     <div class="card">
       <h2>About</h2>
-      <p class="description">${escHtml(p.niv)}</p>
+      <p class="description"${p.nivHe ? ` data-he="${escHtml(p.nivHe)}"` : ''}>${escHtml(p.niv)}</p>
     </div>` : ''}
 
     <div class="card">
       <h2>Details</h2>
       <div class="details-grid">
-        ${p.type ? `<div class="detail"><div class="detail-label">Type</div><div class="detail-value">${escHtml(p.type)}</div></div>` : ''}
+        ${p.type ? `<div class="detail"><div class="detail-label">Type</div><div class="detail-value"${p.typeHe ? ` data-he="${escHtml(p.typeHe)}"` : ''}>${escHtml(p.type)}</div></div>` : ''}
         ${p.hours ? `<div class="detail"><div class="detail-label">Hours</div><div class="detail-value">${escHtml(p.hours)}</div></div>` : ''}
         ${p.price ? `<div class="detail"><div class="detail-label">Price</div><div class="detail-value">${escHtml(p.price)}</div></div>` : ''}
         ${p.website ? `<div class="detail"><div class="detail-label">Website</div><div class="detail-value"><a href="${escHtml(p.website)}" target="_blank" rel="noopener">${escHtml(p.website.replace(/^https?:\/\//, '').replace(/\/$/, ''))}</a></div></div>` : ''}
@@ -283,44 +360,124 @@ ${buildSchema(p)}
 
     <div class="card cta-card">
       <h2>Explore on the interactive map</h2>
-      <p>See ${escHtml(p.name)} alongside all ${PLACES.length} handpicked places in Lithuania.</p>
+      <p>See ${escHtml(p.name)} alongside all ${TOTAL_PLACES} handpicked places in Lithuania.</p>
       <a class="cta-btn" href="${BASE_URL}/?place=${p.id}">Open in Discover Lithuania →</a>
     </div>
   </main>
+
+  <script src="/accessibility.js?v=5"></script>
+  <script>/* ga-events-v1 */
+(function(){
+  var slug   = '${p.id}';
+  var name   = ${JSON.stringify(p.name)};
+  var region = '${p.region}';
+  var kind   = '${p.kind}';
+  var lang   = new URLSearchParams(location.search).get('lang') || 'en';
+
+  function ga(event, params) {
+    if (typeof gtag === 'function') gtag('event', event, params);
+  }
+
+  window.addEventListener('DOMContentLoaded', function() {
+    ga('place_page_view', {
+      place_id: slug, place_name: name,
+      place_kind: kind, region: region, language: lang
+    });
+  });
+
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('.cta-btn');
+    if (btn) {
+      ga('cta_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+  });
+
+  var mapObserved = false;
+  var mapFrame = document.querySelector('.map-frame');
+  if (mapFrame && window.IntersectionObserver) {
+    new IntersectionObserver(function(entries, obs) {
+      if (!mapObserved && entries[0].isIntersecting) {
+        mapObserved = true;
+        ga('map_view', {
+          place_id: slug, place_name: name, region: region, language: lang
+        });
+        obs.disconnect();
+      }
+    }, { threshold: 0.5 }).observe(mapFrame);
+  }
+})();
+</script>
 </body>
 </html>`;
 }
 
-// Generate pages
-const placesDir = path.join(__dirname, 'places');
-if (!fs.existsSync(placesDir)) fs.mkdirSync(placesDir);
+(async () => {
+  const dryRun = process.argv.includes('--dry-run');
+  // Existing pages carry hand-applied fixes (breadcrumbs, hreflang) and were
+  // built from an older template, so rewriting them all would change visible
+  // copy across the site. Only missing pages are written unless --all says so.
+  const rewriteAll = process.argv.includes('--all');
 
-let created = 0;
-for (const p of PLACES) {
-  const dir = path.join(placesDir, p.id);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  const html = buildPage(p);
-  fs.writeFileSync(path.join(dir, 'index.html'), html, 'utf8');
-  created++;
-}
+  const PLACES = await loadPlaces();
+  TOTAL_PLACES = PLACES.length;
 
-console.log(`✓ Generated ${created} place pages in /places/`);
+  const placesDir = path.join(__dirname, 'places');
+  if (!fs.existsSync(placesDir)) fs.mkdirSync(placesDir);
 
-// Generate sitemap entries
-const sitemapEntries = PLACES.map(p =>
-  `  <url>\n    <loc>${BASE_URL}/places/${p.id}/</loc>\n    <lastmod>${TODAY}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`
-).join('\n');
+  const onDisk = new Set(
+    fs.readdirSync(placesDir, { withFileTypes: true })
+      .filter((e) => e.isDirectory())
+      .map((e) => e.name)
+  );
+  const live = new Set(PLACES.map((p) => p.id));
 
-// Read existing sitemap and append
-let sitemap = fs.readFileSync(path.join(__dirname, 'sitemap.xml'), 'utf8');
+  let written = 0;
+  const added = [];
+  for (const p of PLACES) {
+    const isNew = !onDisk.has(p.id);
+    if (isNew) added.push(p.id);
+    if (!isNew && !rewriteAll) continue;
+    if (!dryRun) {
+      const dir = path.join(placesDir, p.id);
+      if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+      fs.writeFileSync(path.join(dir, 'index.html'), buildPage(p), 'utf8');
+    }
+    written++;
+  }
 
-// Remove existing /places/ entries if any
-sitemap = sitemap.replace(/\s*<url>\s*<loc>[^<]*\/places\/[^<]*<\/loc>[\s\S]*?<\/url>/g, '');
+  // Places that left the data leave their page behind. Anything not on the
+  // keep list is stale and has to go, or the sitemap keeps advertising it.
+  const stale = [...onDisk].filter((d) => !live.has(d) && !KEPT_ORPHANS.has(d));
+  if (!dryRun) {
+    for (const d of stale) fs.rmSync(path.join(placesDir, d), { recursive: true, force: true });
+  }
 
-// Insert before closing </urlset>
-sitemap = sitemap.replace('</urlset>', `${sitemapEntries}\n</urlset>`);
+  // Kept orphans stay in the sitemap — they are indexed and earning clicks.
+  const sitemapSlugs = [...PLACES.map((p) => p.id), ...[...KEPT_ORPHANS].filter((o) => onDisk.has(o))];
+  const entries = sitemapSlugs
+    .map((slug) =>
+      `  <url>\n    <loc>${BASE_URL}/places/${slug}/</loc>\n    <lastmod>${TODAY}</lastmod>\n` +
+      `    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`)
+    .join('\n');
 
-fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), sitemap, 'utf8');
-console.log(`✓ Updated sitemap.xml with ${created} place URLs`);
+  if (!dryRun) {
+    const sitemapPath = path.join(__dirname, 'sitemap.xml');
+    let sitemap = fs.readFileSync(sitemapPath, 'utf8');
+    sitemap = sitemap.replace(/\s*<url>\s*<loc>[^<]*\/places\/[^<]*<\/loc>[\s\S]*?<\/url>/g, '');
+    sitemap = sitemap.replace('</urlset>', `${entries}\n</urlset>`);
+    fs.writeFileSync(sitemapPath, sitemap, 'utf8');
+  }
 
-console.log('\nDone! Run this script after any data.js update.');
+  const verb = dryRun ? 'would write' : 'wrote';
+  const scope = rewriteAll ? 'all pages' : 'missing pages only';
+  console.log(`${verb} ${written} place pages (${scope}) · ${sitemapSlugs.length} sitemap URLs`);
+  if (added.length) console.log(`  new:     ${added.join(', ')}`);
+  if (stale.length) console.log(`  ${dryRun ? 'would remove' : 'removed'}: ${stale.join(', ')}`);
+  if (dryRun) console.log('\nDry run — nothing was written.');
+  else console.log('\nDone. Run node check.js before pushing.');
+})().catch((e) => {
+  console.error(`\x1b[31mGeneration failed:\x1b[0m ${e.message}`);
+  process.exit(1);
+});
