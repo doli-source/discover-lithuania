@@ -15,3 +15,7 @@
 
 /*.js
   Cache-Control: public, max-age=31536000, immutable
+
+# Referenced without a ?v= string, so it cannot be cache-busted on update.
+/assets/js/traffic-filter.js
+  Cache-Control: public, max-age=3600

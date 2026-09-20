@@ -2,7 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /cdn-cgi/
-Disallow: /*?place=
 Disallow: /*?tab=
 
 Sitemap: https://lithuaniadiscovery.com/sitemap.xml

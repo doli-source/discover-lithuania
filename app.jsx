@@ -115,11 +115,11 @@ function App() {
   useEffect(() => {
     const baseTitle = lang === 'he' ? 'גלה את ליטא' : 'Lithuania Travel Guide';
     let title = lang === 'he'
-      ? 'גלה את ליטא — מדריך טיול: מסעדות, בתי קפה ולינה | 163 מקומות'
-      : 'Lithuania Travel Guide — Cafés, Restaurants & Places to Stay | 163 Picks';
+      ? 'גלה את ליטא — מדריך טיול: מסעדות, בתי קפה ולינה | 169 מקומות'
+      : 'Lithuania Travel Guide — Cafés, Restaurants & Places to Stay | 169 Picks';
     let description = lang === 'he'
-      ? 'מדריך טיול לליטא — 163 מקומות נבחרים: בתי קפה, מסעדות, אתרי טבע ולינה, ב-12 אזורים. מסלולים מוכנים מראש לטיול בווילנה, טראקאי, קובנה ועוד.'
-      : "Lithuania travel guide with 163 handpicked places — best cafés & restaurants in Vilnius, things to do in Lithuania, nature spots, stays and ready-made itineraries across 12 regions.";
+      ? 'מדריך טיול לליטא — 169 מקומות נבחרים: בתי קפה, מסעדות, אתרי טבע ולינה, ב-10 אזורים. מסלולים מוכנים מראש לטיול בווילנה, טראקאי, קובנה ועוד.'
+      : "Lithuania travel guide with 169 handpicked places — best cafés & restaurants in Vilnius, things to do in Lithuania, nature spots, stays and ready-made itineraries across 10 regions.";
     let canonicalPath = '/';
     let touristTrip = null;
 
@@ -131,7 +131,7 @@ function App() {
       description = openPlaceData.niv
         ? openPlaceData.niv.slice(0, 160)
         : `${openPlaceData.name} — ${placeType} in ${regionName}, Lithuania.${openPlaceData.rating ? ` Rated ${openPlaceData.rating}/5.` : ''}`;
-      canonicalPath = `/?place=${openPlaceData.id}`;
+      canonicalPath = `/places/${openPlaceData.id}/`;
 
       document.title = title;
       const setMeta = (selector, attr, value) => { const el = document.querySelector(selector); if (el) el.setAttribute(attr, value); };
