@@ -16,6 +16,17 @@
 /*.js
   Cache-Control: public, max-age=31536000, immutable
 
+# The rules below opt specific files out of the year-long immutable cache above.
+
 # Referenced without a ?v= string, so it cannot be cache-busted on update.
 /assets/js/traffic-filter.js
   Cache-Control: public, max-age=3600
+
+# Carries live Supabase content, which changes without a ?v= bump.
+# Must match the max-age=0 rule netlify.toml sets for this same file.
+/supabase-data.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Region imagery is swapped without a ?v= bump; matches netlify.toml.
+/region-images.js
+  Cache-Control: public, max-age=86400
