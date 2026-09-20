@@ -6,6 +6,9 @@
     <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/"/>
   </url>
   <url>
     <loc>https://lithuaniadiscovery.com/about/</loc>
@@ -36,6 +39,9 @@
     <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/explore/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/explore/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/explore/"/>
   </url>
   <url>
     <loc>https://lithuaniadiscovery.com/explore/kaunas/</loc>
@@ -172,36 +178,54 @@
     <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/"/>
   </url>
   <url>
     <loc>https://lithuaniadiscovery.com/blog/best-restaurants-vilnius</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/best-restaurants-vilnius"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/best-restaurants-vilnius/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/best-restaurants-vilnius"/>
   </url>
   <url>
     <loc>https://lithuaniadiscovery.com/blog/best-coffee-vilnius</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/best-coffee-vilnius"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/best-coffee-vilnius/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/best-coffee-vilnius"/>
   </url>
   <url>
     <loc>https://lithuaniadiscovery.com/blog/trakai-day-trip</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/trakai-day-trip"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/trakai-day-trip/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/trakai-day-trip"/>
   </url>
   <url>
     <loc>https://lithuaniadiscovery.com/blog/5-days-in-lithuania</loc>
     <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/5-days-in-lithuania"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/5-days-in-lithuania/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/5-days-in-lithuania"/>
   </url>
   <url>
     <loc>https://lithuaniadiscovery.com/blog/cepelinai-brigita-uyar</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/cepelinai-brigita-uyar"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/cepelinai-brigita-uyar/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/cepelinai-brigita-uyar"/>
   </url>
   <url>
     <loc>https://lithuaniadiscovery.com/places/2-vir-jai/</loc>
@@ -3409,5 +3433,77 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/routes/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/routes/he/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/routes/"/>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/blog/5-days-in-lithuania/he/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/5-days-in-lithuania"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/5-days-in-lithuania/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/5-days-in-lithuania"/>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/blog/best-coffee-vilnius/he/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/best-coffee-vilnius"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/best-coffee-vilnius/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/best-coffee-vilnius"/>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/blog/best-restaurants-vilnius/he/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/best-restaurants-vilnius"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/best-restaurants-vilnius/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/best-restaurants-vilnius"/>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/blog/cepelinai-brigita-uyar/he/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/cepelinai-brigita-uyar"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/cepelinai-brigita-uyar/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/cepelinai-brigita-uyar"/>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/blog/he/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/"/>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/blog/trakai-day-trip/he/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/trakai-day-trip"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/trakai-day-trip/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/trakai-day-trip"/>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/explore/he/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/explore/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/explore/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/explore/"/>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/he/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/"/>
   </url>
 </urlset>

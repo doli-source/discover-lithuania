@@ -21,6 +21,40 @@ const TODAY = new Date().toISOString().slice(0, 10);
 // receive in Search Console, not against what the page happens to be about.
 // The comment on each line is the query and its impressions over 180 days.
 const PAGES = {
+  '': {
+    he: {
+      // "ליטא" 3 (pos 51) · "וילנה" 3 (pos 52) · "ליטואניה" 7 · "בירת ליטא" 5
+      title: 'טיול לליטא — מדריך: מסעדות, אטרקציות ולינה | גלה את ליטא',
+      desc: 'מדריך טיול לליטא: מסעדות ובתי קפה נבחרים בוילנה ובקובנה, טירת טראקאי, ספא בדרוסקינינקאי, חופי פלאנגה ומסלולים מוכנים לכל אזור.',
+    },
+    en: {
+      // "best restaurants for dinner" 458 · "where to eat in vilnius" 49
+      title: 'Lithuania Travel Guide — Where to Eat, Stay & What to See',
+      desc: 'A Lithuania travel guide built from places actually visited — where to eat in Vilnius and Kaunas, Trakai castle, Druskininkai spas, Baltic beaches and ready-made routes.',
+    },
+  },
+  'explore': {
+    he: {
+      // "וילנה" · "קלייפדה" 5 · "דרוסקינינקאי" · "קובנה ליטא" 5
+      title: 'אזורי ליטא — וילנה, טראקאי, קובנה, קלייפדה ועוד | גלה את ליטא',
+      desc: 'כל אזורי ליטא במקום אחד: וילנה, טראקאי, קובנה, קלייפדה, רצועת קורשה, פלאנגה, דרוסקינינקאי, מולטאי, זרסאי והכפר הליטאי.',
+    },
+    en: {
+      title: 'Explore Lithuania by Region — Vilnius, Trakai, Kaunas & More',
+      desc: 'Lithuania region by region — Vilnius, Trakai, Kaunas, Klaipėda, the Curonian Spit, Palanga, Druskininkai, Molėtai, Zarasai and the countryside.',
+    },
+  },
+  'blog': {
+    he: {
+      title: 'מדריכים וכתבות על ליטא — אוכל, מסלולים וטיולי יום | גלה את ליטא',
+      desc: 'מדריכים מלאים לליטא: המסעדות הטובות בוילנה, בתי הקפה הטובים, טיול יום לטראקאי, חמישה ימים בליטא ומתכון צפלינאי אותנטי.',
+    },
+    en: {
+      // "best restaurants for dinner" 458 · "best coffee shops nearby" 72
+      title: 'Lithuania Guides — Best Restaurants, Coffee & Day Trips',
+      desc: 'In-depth Lithuania guides — the best restaurants in Vilnius, the best specialty coffee, a Trakai day trip, five days in Lithuania and how cepelinai are really made.',
+    },
+  },
   'explore/vilnius': {
     he: {
       // "וילנה מסעדות" 40 · "וילנה" 3 · "ליטא וילנה" 3
@@ -199,8 +233,8 @@ for (const [rel, cfg] of Object.entries(PAGES)) {
   const enFile = path.join(ROOT, rel, 'index.html');
   if (!fs.existsSync(enFile)) { failures.push(`missing source: ${rel}/index.html`); continue; }
 
-  const enUrl = `${BASE_URL}/${rel}/`;
-  const heUrl = `${BASE_URL}/${rel}/he/`;
+  const enUrl = rel ? `${BASE_URL}/${rel}/` : `${BASE_URL}/`;
+  const heUrl = rel ? `${BASE_URL}/${rel}/he/` : `${BASE_URL}/he/`;
   const src = fs.readFileSync(enFile, 'utf8');
 
   const en = replaceHead(src, { ...cfg.en, canonical: enUrl, enUrl, heUrl, lang: 'en' });
