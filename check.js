@@ -161,6 +161,32 @@ function checkCanonicalVsRobots() {
   }
 }
 
+// 3c. Region imagery must be real files. It once shipped as 3.3 MB of base64
+//     inside a JavaScript file loaded on every page — 97% of the page weight,
+//     downloaded in full whether or not a visitor ever saw one of the images.
+function checkRegionImages() {
+  const dir = path.join(ROOT, 'regions');
+  if (!fs.existsSync(dir)) return fail('region-images', 'regions/ is missing');
+
+  const screens = fs.readFileSync(path.join(ROOT, 'screens.jsx'), 'utf8');
+  for (const m of screens.matchAll(/src=\{`(\/regions\/[^`]*)`\}/g)) {
+    if (!m[1].startsWith('/')) fail('region-images', `relative image path: ${m[1]}`);
+  }
+  if (/REGION_IMAGES/.test(screens)) {
+    fail('region-images', 'screens.jsx still reads window.REGION_IMAGES');
+  }
+  for (const f of contentFiles()) {
+    if (f.endsWith('.html') && fs.readFileSync(f, 'utf8').includes('region-images.js')) {
+      fail('region-images', `${rel(f)} still loads the deleted region-images.js`);
+    }
+  }
+  const have = new Set(fs.readdirSync(dir).map((f) => f.replace(/\.[a-z]+$/, '')));
+  for (const r of ['vilnius','trakai','kaunas','klaipeda','curonian','countryside',
+                   'druskininkai','palanga','moletai','zarasai']) {
+    if (!have.has(r)) fail('region-images', `no image for region "${r}"`);
+  }
+}
+
 // 4. Config files that the host does not read are inert and must not be
 //    trusted. The site runs on GitHub Pages, which ignores both of these.
 function checkHostConfig() {
@@ -270,6 +296,7 @@ function checkUnpushed() {
   checkCount(live, files);
   checkPages(live);
   checkHebrewPair(live);
+  checkRegionImages();
   checkCanonicalVsRobots();
   checkHostConfig();
   checkImmutable();

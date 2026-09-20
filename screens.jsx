@@ -229,7 +229,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
             return (
               <a className="region-card" key={r.id} href={`/explore/${r.id}`} onClick={(e) => { e.preventDefault(); nav('explore', { region: r.id }); }} style={{ '--accent': r.accent }}>
                 <div className="region-visual">
-                  <img className="region-photo" src={(window.REGION_IMAGES && window.REGION_IMAGES[r.id]) || `regions/${r.id}.jpg`} alt={r[lang].name} loading="lazy" />
+                  <img className="region-photo" src={`/regions/${r.id}.jpg`} width="900" height="636" alt={r[lang].name} loading="lazy" />
                   <span className="region-num-big">0{i + 1}</span>
                   <span className="region-count-badge">
                     <span style={{ background: r.accent }}></span>
@@ -459,7 +459,7 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
           <div className="region-banner-img-wrap">
             <img
               className="region-banner-img"
-              src={(window.REGION_IMAGES && window.REGION_IMAGES[region.id]) || `regions/${region.id}.jpg`}
+              src={`/regions/${region.id}.jpg`} width="900" height="636"
               alt={region[lang].name}
             />
           </div>

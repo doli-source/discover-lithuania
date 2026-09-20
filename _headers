@@ -27,6 +27,3 @@
 /supabase-data.js
   Cache-Control: public, max-age=0, must-revalidate
 
-# Region imagery is swapped without a ?v= bump; matches netlify.toml.
-/region-images.js
-  Cache-Control: public, max-age=86400

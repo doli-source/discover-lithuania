@@ -24,10 +24,6 @@
   [headers.values]
     Cache-Control = "public, max-age=3600"
 
-[[headers]]
-  for = "/region-images.js"
-  [headers.values]
-    Cache-Control = "public, max-age=86400"
 
 [[headers]]
   for = "/supabase-data.js"
