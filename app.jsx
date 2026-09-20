@@ -38,11 +38,19 @@ const FONT_PAIRS = {
 //   ?place=ID       → place modal overlay (works on any screen)
 //   ?lang=en        → language override (default: he)
 
+// The path the browser was served, before any client-side navigation.
+const INITIAL_PATH = location.pathname;
+
 const VALID_SCREENS = ['home', 'explore', 'routes', 'food', 'stays', 'saved', 'admin', 'blog'];
 
 function parseURL() {
   const seg = location.pathname.replace(/^\//, '').split('/').filter(Boolean);
   const qs  = new URLSearchParams(location.search);
+
+  // Hebrew lives at its own path (/explore/vilnius/he/) so the served HTML can
+  // carry Hebrew metadata. ?lang=he still works for in-app navigation.
+  const pathIsHebrew = seg[seg.length - 1] === 'he';
+  if (pathIsHebrew) seg.pop();
 
   const rawScreen = seg[0] || 'home';
   const screen    = VALID_SCREENS.includes(rawScreen) ? rawScreen : 'home';
@@ -52,7 +60,7 @@ function parseURL() {
   if (screen === 'routes'  && seg[1]) params.route  = seg[1];
 
   const openPlaceId = qs.get('place') || null;
-  const lang        = qs.get('lang')  || 'en';
+  const lang        = pathIsHebrew ? 'he' : (qs.get('lang') || 'en');
 
   return { screen, params, openPlaceId, lang };
 }
@@ -113,6 +121,12 @@ function App() {
 
   // SEO: per-route <title>, meta description, canonical URL + TouristTrip JSON-LD
   useEffect(() => {
+    // Section pages ship a hand-tuned title and description in their served
+    // HTML, aimed at the queries Search Console shows them receiving. Leave
+    // those alone while the visitor is still on the page that was served;
+    // once they navigate on, the SPA owns the metadata again.
+    if (document.querySelector('meta[name="lt-static-seo"]') &&
+        location.pathname === INITIAL_PATH) return;
     const baseTitle = lang === 'he' ? 'גלה את ליטא' : 'Lithuania Travel Guide';
     let title = lang === 'he'
       ? 'גלה את ליטא — מדריך טיול: מסעדות, בתי קפה ולינה | 169 מקומות'
@@ -202,8 +216,11 @@ function App() {
     setMeta('meta[name="twitter:title"]', 'content', title);
     setMeta('meta[name="twitter:description"]', 'content', description);
 
-    // Update canonical + og:url
-    const canonicalUrl = `https://lithuaniadiscovery.com${canonicalPath}`;
+    // Update canonical + og:url. Hebrew canonicals to its own /he/ path, not
+    // to the English URL — pointing both languages at one canonical is what
+    // kept the Hebrew versions out of the index.
+    const base = `https://lithuaniadiscovery.com${canonicalPath}`;
+    const canonicalUrl = lang === 'he' ? base.replace(/\/$/, '') + '/he/' : base;
     setMeta('link[rel="canonical"]', 'href', canonicalUrl);
     setMeta('meta[property="og:url"]', 'content', canonicalUrl);
 
