@@ -235,7 +235,7 @@
   const heWord = (...words) => words.map((w) => `(?<![א-ת])${w}(?![א-ת])`).join('|');
 
   const INTENTS = [
-    { id: 'eat',    re: new RegExp('\\b(eat|restaurant|restaurants|dinner|lunch|food|brunch|sandwich|shakshuka|pizza|kebab)\\b|' + heWord('מסעדה','מסעדות','לאכול','אוכל','ארוחה','מסעדת'), 'i') },
+    { id: 'eat',    re: new RegExp('\\b(eat|restaurant|restaurants|dinner|lunch|food|brunch|sandwich|shakshuka|pizza|kebab|bakery|bakeries)\\b|' + heWord('מסעדה','מסעדות','לאכול','אוכל','ארוחה','מסעדת'), 'i') },
     { id: 'coffee', re: new RegExp('\\b(coffee|cafe|café|roaster|roasters|espresso)\\b|' + heWord('קפה','קפייה'), 'i') },
     { id: 'spa',    re: new RegExp('\\b(spa|wellness|thermal|aqua ?park|sauna)\\b|' + heWord('ספא','מרחצאות','בריכה'), 'i') },
     { id: 'ski',    re: new RegExp('\\b(ski|skiing|snow arena)\\b|' + heWord('סקי','שלג','מגלשי'), 'i') },
@@ -301,7 +301,7 @@
       return he ? `מקומות הספא והלינה במדריך: ${list(top)}.` : `The spa and wellness places listed here: ${list(top)}.`;
     }
     if (intent === 'ski') {
-      const snow = places.find((p) => /snow|ski|סקי|שלג/i.test(p.name));
+      const snow = places.find((p) => /\bsnow\b|\bski\b|סקי|שלג/i.test(p.name));
       if (!snow) return null;
       return he ? `כן — ${snow.name} מופיע במדריך${snow.rating ? ` (${snow.rating}/5)` : ''}.`
                 : `Yes — ${snow.name} is listed here${snow.rating ? ` (${snow.rating}/5)` : ''}.`;
@@ -345,7 +345,7 @@
       if (!a) continue;
       seen.add(intent);
       out.push({ q: questionFor(intent, ctx.place, lang, row.q), a, from: row.q, impressions: row.impressions });
-      if (out.length >= 6) break;
+      if (out.length >= 8) break;
     }
     return out;
   }

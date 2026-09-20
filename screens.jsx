@@ -366,7 +366,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
           </div>
         </div>
       </section>
-      <RegionFaq lang={lang} section="home" />
+      <RegionFaq lang={lang} section="home" max={10} />
     </div>
   );
 }
@@ -522,7 +522,7 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
 // Rendered on the page because Google only honours FAQ markup when the content
 // is visible, and written into JSON-LD because that is the part an answer
 // engine reads.
-function RegionFaq({ region, places, lang, section }) {
+function RegionFaq({ region, places, lang, section, max = 6 }) {
   const [open, setOpen] = React.useState(0);
   const items = React.useMemo(() => {
     if (!window.LT_FAQ) return [];
@@ -551,10 +551,10 @@ function RegionFaq({ region, places, lang, section }) {
       if (seen.has(item.q) || seen.has(item.a) || seen.has(key)) continue;
       seen.add(item.q); seen.add(item.a); seen.add(key);
       merged.push(item);
-      if (merged.length === 6) break;
+      if (merged.length === max) break;
     }
     return merged;
-  }, [region, places, lang, section]);
+  }, [region, places, lang, section, max]);
 
   React.useEffect(() => {
     if (!items.length || !window.LT_FAQ) return;
