@@ -1,0 +1,71 @@
+# targets vs current standing — 2026-03-22 .. 2026-09-17
+
+/ (home)
+   [he]    3i  0c  pos  51.3   ליטא
+   [he]    7i  0c  pos  53.0   ליטואניה
+   [he]    5i  0c  pos  68.4   בירת ליטא
+   [en]  458i  0c  pos  13.3   best restaurants for dinner
+   [en]   49i  0c  pos  69.1   where to eat in vilnius
+
+/explore/vilnius/
+   [he]   40i  0c  pos  22.2   וילנה מסעדות
+   [he]    3i  0c  pos  52.3   וילנה
+   [en]   49i  0c  pos  69.1   where to eat in vilnius
+   [en]   40i  0c  pos  34.9   coffee roasters vilnius
+   [en]   69i  0c  pos  22.9   restauranter i vilnius
+   [en]   40i  0c  pos  27.1   restauranger i vilnius
+
+/explore/trakai/
+   [he]    7i  0c  pos  40.9   טרקאי
+   [he]    3i  0c  pos  42.3   טרקאי ליטא
+   [he]    3i  0c  pos  30.3   טרקאי וילנה
+   [en]   55i  0c  pos  45.3   trakai castle
+   [en]   47i  0c  pos  50.5   trakai island castle
+
+/explore/klaipeda/
+   [he]    5i  0c  pos  23.0   קלייפדה
+   [he]    8i  0c  pos  21.0   קלייפדה ליטא
+   [en]    3i  0c  pos  67.3   klaipėda city
+   [en]    2i  0c  pos  68.5   klaipėda lithuania
+
+/explore/druskininkai/
+   [he]    6i  0c  pos  43.3   חבילות ספא בדרוסקינינקאי
+   [he]    3i  0c  pos  63.3   ספא בליטא דרוסקינינקאי
+   [he]    3i  0c  pos  62.3   חבילות ספא דרוסקינינקאי
+   [he]    3i  0c  pos  78.3   דרוסקינינקאי
+   [he]    8i  0c  pos  25.6   סקי בליטא
+   [en]   16i  0c  pos  57.9   druskininkai
+   [en]   19i  0c  pos  32.3   druskininkai aquapark
+
+/explore/kaunas/
+   [he]    5i  0c  pos  63.0   קובנה ליטא
+   [he]    3i  0c  pos  49.3   אטרקציות בקובנה
+
+/food/
+   [he]    2i  0c  pos   8.5   אוכל ליטאי
+   [he]    2i  0c  pos  58.0   אוכל כשר בליטא
+   [en]  458i  0c  pos  13.3   best restaurants for dinner
+   [en]   55i  0c  pos  11.9   best restaurants for lunch
+   [en]   82i  1c  pos  11.0   best restaurants near me
+   [en]   49i  0c  pos  69.1   where to eat in vilnius
+
+/blog/
+   [en]   72i  0c  pos  12.1   best coffee shops nearby
+   [en]   40i  0c  pos  34.9   coffee roasters vilnius
+
+/places/backstage-cafe-vokie-i-str/
+   [en]   91i  0c  pos  40.5   backstage cafe vokieciu g
+   [en]   89i  0c  pos  22.2   backstage cafe vokiečių str
+   [en]  128i  0c  pos  34.0   backstage cafe vilnius
+   [en]   88i  0c  pos  41.4   backstage cafe meniu
+
+/places/backstage-roastery-hq/
+   [en]  190i  0c  pos  35.0   backstage roasters
+   [en]  125i  0c  pos  38.0   backstage cafe roastery
+   [en]   86i  0c  pos  60.6   roasters
+
+/places/backstage-roastery-caf/
+   [en]  115i  0c  pos  49.6   backstage cafe
+   [en]  128i  0c  pos  34.0   backstage cafe vilnius
+
+46 targeted queries with data · 2,762 impressions in 180 days

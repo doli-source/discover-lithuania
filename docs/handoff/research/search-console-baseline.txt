@@ -1,0 +1,43 @@
+
+Search Console — 2026-08-21 .. 2026-09-17
+compared with 2026-07-24 .. 2026-08-20
+
+  clicks        52.0  vs 5.0   +940%
+  impressions   9,440.0  vs 2,237.0   +322%
+  ctr           0.6%  vs 0.2%   +146%
+  avg position  16.6  vs 32.0   -48%
+
+By language
+                   clicks            impressions           avg position
+  en   50.0  vs 5.0   +900% 9,075.0  vs 2,116.0   +329%  16.2  vs 31.6   -49%
+  he           1  (no comparison) 184.0  vs 48.0   +283%  26.9  vs 46.2   -42%
+  lt           1  (no comparison) 181.0  vs 73.0   +148%  26.0  vs 32.1   -19%
+
+Hebrew URLs — are they indexed yet?
+  none in the index yet. Google has not finished crawling them —
+  expect two to four weeks from the day they went live.
+
+Still stuck: demand without clicks
+   1316i  1c  /places/tempo-v39/
+            top query: "tempo v39" at position 10
+    535i  0c  /places/backstage-cafe-vokie-i-str/
+            top query: "backstage cafe vilnius" at position 29
+    450i  0c  /places/backstage-roastery-hq/
+            top query: "backstage roasters" at position 24
+    408i  0c  /places/neighbourhood-kaunas/
+            top query: "neighbourhood kaunas" at position 10
+    353i  1c  /places/brew-palanga/
+            top query: "brew palanga" at position 8
+    316i  0c  /food/
+            top query: "shakshuka near me" at position 11
+    275i  0c  /places/backstage-roastery-caf/
+            top query: "backstage cafe vilnius" at position 53
+    194i  0c  /places/backstage-cafe-vokie-i-str/?lang=he
+            top query: "backstage cafe vokieciu g" at position 62
+
+Sitemap
+  last submitted  2026-09-20T15:40:37
+  last downloaded 2026-09-20T15:40:37
+  errors 0 · warnings 0 · pending False
+  URLs submitted  394
+
