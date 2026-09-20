@@ -7,13 +7,13 @@
   const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhzb3Z3eWRzY213eXl2c2VtdWRnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxMDkzOTEsImV4cCI6MjEwMTY4NTM5MX0.OdiHpVogpp_5U7v-XxHdapRhpP-Zz--7Yw82X0zWruA';
   const MAP_URL = 'https://maps.app.goo.gl/JcnKq69fj1RMw1RL7';
 
-  const PLAIN_SCRIPTS = ['/faq-data.js?v=20260920b'];
+  const PLAIN_SCRIPTS = ['/faq-data.js?v=20260920d'];
 
   const JSX_SCRIPTS = [
     '/tweaks-panel.jsx?v=20260626b',
     '/shared.jsx?v=20260802a',
-    '/screens.jsx?v=20260920b',
-    '/app.jsx?v=20260920b',
+    '/screens.jsx?v=20260920d',
+    '/app.jsx?v=20260920d',
   ];
 
   function rest(table, qs) {
@@ -83,6 +83,11 @@
     // search for them in Hebrew, and the site should match the search. Fix the
     // row in Supabase and delete the entry; check.js flags what is still here.
     const HE_NAME_FIX = { druskininkai: 'דרוסקינינקאי', trakai: 'טרקאי' };
+    // The same misspelling appears inside itinerary titles, so correct it
+    // wherever it occurs rather than only on the region row.
+    const HE_SPELLING = [['דרוסקיניינקאי', 'דרוסקינינקאי'], ['טראקאי', 'טרקאי']];
+    const fixHeSpelling = (v) =>
+      typeof v === 'string' ? HE_SPELLING.reduce((t, [bad, good]) => t.split(bad).join(good), v) : v;
 
     const REGIONS = regions.map(r => ({
       id:          r.id,
@@ -121,7 +126,7 @@
       id:       it.id,
       duration: it.duration,
       region:   it.region_id || null,
-      he:       { title: it.title_he, tagline: it.tagline_he },
+      he:       { title: fixHeSpelling(it.title_he), tagline: fixHeSpelling(it.tagline_he) },
       en:       { title: it.title_en, tagline: it.tagline_en },
       stops:    (byItin[it.id] || []).map(s => ({
         time:       s.time || '',

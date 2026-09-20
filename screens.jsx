@@ -366,6 +366,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
           </div>
         </div>
       </section>
+      <RegionFaq lang={lang} section="home" />
     </div>
   );
 }
@@ -521,12 +522,14 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
 // Rendered on the page because Google only honours FAQ markup when the content
 // is visible, and written into JSON-LD because that is the part an answer
 // engine reads.
-function RegionFaq({ region, places, lang }) {
+function RegionFaq({ region, places, lang, section }) {
   const [open, setOpen] = React.useState(0);
   const items = React.useMemo(() => {
     if (!window.LT_FAQ) return [];
-    return window.LT_FAQ.regionFaq(region, places, window.LT_DATA.ITINERARIES, lang);
-  }, [region, places, lang]);
+    return section
+      ? window.LT_FAQ.sectionFaq(section, window.LT_DATA, lang)
+      : window.LT_FAQ.regionFaq(region, places, window.LT_DATA.ITINERARIES, lang);
+  }, [region, places, lang, section]);
 
   React.useEffect(() => {
     if (!items.length || !window.LT_FAQ) return;
@@ -651,6 +654,7 @@ function RoutesScreen({ lang, t, regions, places, landmarks, itineraries, params
           })}
         </ol>
       </div>
+      <RegionFaq lang={lang} section="routes" />
     </div>
   );
 }
@@ -734,6 +738,7 @@ function FoodScreen({ lang, t, places, dishes, regions, openPlace, savedSet, tog
           })}
         </div>
       </div>
+      <RegionFaq lang={lang} section="food" />
     </div>
   );
 }
@@ -785,6 +790,7 @@ function StaysScreen({ lang, t, places, regions, openPlace, savedSet, toggleSave
           );
         })}
       </div>
+      <RegionFaq lang={lang} section="stays" />
     </div>
   );
 }
