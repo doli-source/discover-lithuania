@@ -81,19 +81,10 @@
       };
     });
 
-    // Two regions are spelled in the database differently from the way people
-    // search for them in Hebrew, and the site should match the search. Fix the
-    // row in Supabase and delete the entry; check.js flags what is still here.
-    const HE_NAME_FIX = { druskininkai: 'דרוסקינינקאי', trakai: 'טרקאי' };
-    // The same misspelling appears inside itinerary titles, so correct it
-    // wherever it occurs rather than only on the region row.
-    const HE_SPELLING = [['דרוסקיניינקאי', 'דרוסקינינקאי'], ['טראקאי', 'טרקאי']];
-    const fixHeSpelling = (v) =>
-      typeof v === 'string' ? HE_SPELLING.reduce((t, [bad, good]) => t.split(bad).join(good), v) : v;
 
     const REGIONS = regions.map(r => ({
       id:          r.id,
-      he:          { name: HE_NAME_FIX[r.id] || r.name_he, tag: r.tag_he,  blurb: r.blurb_he },
+      he:          { name: r.name_he, tag: r.tag_he,  blurb: r.blurb_he },
       en:          { name: r.name_en, tag: r.tag_en,  blurb: r.blurb_en },
       accent:      r.accent_color || '#C28840',
       placeholder: '',
@@ -128,7 +119,7 @@
       id:       it.id,
       duration: it.duration,
       region:   it.region_id || null,
-      he:       { title: fixHeSpelling(it.title_he), tagline: fixHeSpelling(it.tagline_he) },
+      he:       { title: it.title_he, tagline: it.tagline_he },
       en:       { title: it.title_en, tagline: it.tagline_en },
       stops:    (byItin[it.id] || []).map(s => ({
         time:       s.time || '',
