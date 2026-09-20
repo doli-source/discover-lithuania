@@ -43,6 +43,29 @@ Supabase undercounts.
 Copy phrased as an approximation — "over 160", "160+" — stays valid as long as
 the real count is higher, so it does not have to move on every addition.
 
+## Two languages, two URLs
+
+Every indexable page exists twice: `/thing/` in English and `/thing/he/` in
+Hebrew. Both are real files whose served HTML is already in that language —
+title, meta description, Open Graph and schema `inLanguage` included. They
+declare each other with hreflang in the page and in the sitemap.
+
+Hebrew is **not** the English page with its text swapped after load. That was
+the old `?lang=he` behaviour, and because the title and description stayed
+English, Google indexed those URLs as English pages and Hebrew queries sat at
+position 50-78. `?lang=he` still works for visitors and now canonicals to the
+`/he/` page.
+
+- Place pages: `node generate-place-pages.js` writes both languages.
+- Region and section pages: `node generate-section-pages.js` writes both.
+- `app.jsx` treats a trailing `/he` path segment as Hebrew, and skips its own
+  metadata handling on pages carrying `<meta name="lt-static-seo">` — those
+  ship hand-tuned titles that the SPA must not overwrite.
+
+Titles and descriptions for section pages live in `generate-section-pages.js`,
+each with the Search Console query and impression count it targets. Change them
+there, not in the HTML, or the next run reverts them.
+
 ## Derived data — update together or not at all
 
 Each row is one fact stored in several places. Changing one copy and not the
