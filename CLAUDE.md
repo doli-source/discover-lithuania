@@ -67,9 +67,14 @@ The site is served by **GitHub Pages** (`source: main /`) behind **Cloudflare**.
 It is not served by Netlify, despite what the repo looks like.
 
 That means **`_headers` and `netlify.toml` are inert**. GitHub Pages does not
-read either file, so nothing in them reaches a visitor. Security headers and
-cache policy have to be set as Cloudflare rules; editing these two files
-changes nothing. `check.js` warns about this on every run.
+read either file, so nothing in them reaches a visitor. Anything that has to
+arrive as an HTTP header is set as a Cloudflare rule instead; editing those two
+files changes nothing. `check.js` warns about this on every run.
+
+The four security headers are already live, set by a Cloudflare Response Header
+Transform Rule named `security-headers` (Rules → Overview, on the
+lithuaniadiscovery.com zone). To change them, edit that rule — not `_headers`.
+Verify with `curl -sI https://lithuaniadiscovery.com/`.
 
 A separate Netlify site (`discover-lithuania.netlify.app`) is still live and
 serving an old build. It is not the production site.
