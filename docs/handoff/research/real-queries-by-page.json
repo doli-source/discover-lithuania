@@ -1,0 +1,3198 @@
+{
+ "generated": "2026-09-20",
+ "window": "2026-03-22..2026-09-17",
+ "pages": {
+  "/blog/best-restaurants-vilnius": {
+   "en": [
+    {
+     "q": "best restaurants for dinner",
+     "impressions": 458,
+     "position": 13.3,
+     "lang": "en"
+    },
+    {
+     "q": "best restaurants near me",
+     "impressions": 82,
+     "position": 11,
+     "lang": "en"
+    },
+    {
+     "q": "restauranter i vilnius",
+     "impressions": 69,
+     "position": 22.9,
+     "lang": "en"
+    },
+    {
+     "q": "best restaurants for lunch",
+     "impressions": 55,
+     "position": 11.9,
+     "lang": "en"
+    },
+    {
+     "q": "where to eat in vilnius",
+     "impressions": 48,
+     "position": 69.2,
+     "lang": "en"
+    },
+    {
+     "q": "restauranger i vilnius",
+     "impressions": 40,
+     "position": 27.1,
+     "lang": "en"
+    },
+    {
+     "q": "restaurant vilnius",
+     "impressions": 27,
+     "position": 35.9,
+     "lang": "en"
+    },
+    {
+     "q": "best places to eat",
+     "impressions": 23,
+     "position": 10.2,
+     "lang": "en"
+    }
+   ],
+   "he": [
+    {
+     "q": "וילנה מסעדות",
+     "impressions": 12,
+     "position": 21.4,
+     "lang": "he"
+    }
+   ]
+  },
+  "/": {
+   "en": [
+    {
+     "q": "mon vilnius",
+     "impressions": 11,
+     "position": 10.7,
+     "lang": "en"
+    },
+    {
+     "q": "zarasai wake park",
+     "impressions": 11,
+     "position": 10.7,
+     "lang": "en"
+    },
+    {
+     "q": "foccaceria",
+     "impressions": 9,
+     "position": 6.7,
+     "lang": "en"
+    },
+    {
+     "q": "park wodny litwa",
+     "impressions": 7,
+     "position": 54.6,
+     "lang": "en"
+    },
+    {
+     "q": "strange love uzupis",
+     "impressions": 7,
+     "position": 10.9,
+     "lang": "en"
+    },
+    {
+     "q": "mon cafe vilnius",
+     "impressions": 6,
+     "position": 9.8,
+     "lang": "en"
+    },
+    {
+     "q": "trakai beach",
+     "impressions": 6,
+     "position": 8.3,
+     "lang": "en"
+    },
+    {
+     "q": "aquapark litwa",
+     "impressions": 4,
+     "position": 57.8,
+     "lang": "en"
+    }
+   ],
+   "he": [
+    {
+     "q": "סקי בליטא",
+     "impressions": 6,
+     "position": 14.8,
+     "lang": "he"
+    },
+    {
+     "q": "ליטואניה",
+     "impressions": 5,
+     "position": 49.2,
+     "lang": "he"
+    },
+    {
+     "q": "בית חבד וילנה",
+     "impressions": 2,
+     "position": 13.5,
+     "lang": "he"
+    },
+    {
+     "q": "קלייפדה",
+     "impressions": 2,
+     "position": 30,
+     "lang": "he"
+    }
+   ]
+  },
+  "/explore/vilnius": {
+   "en": [
+    {
+     "q": "vilnius",
+     "impressions": 5,
+     "position": 62,
+     "lang": "en"
+    },
+    {
+     "q": "vilnius",
+     "impressions": 5,
+     "position": 37.6,
+     "lang": "en"
+    },
+    {
+     "q": "فيلنيوس",
+     "impressions": 4,
+     "position": 42.2,
+     "lang": "en"
+    },
+    {
+     "q": "维尔纽斯旅行",
+     "impressions": 3,
+     "position": 81.3,
+     "lang": "en"
+    },
+    {
+     "q": "ვილნიუსი",
+     "impressions": 3,
+     "position": 51.7,
+     "lang": "en"
+    },
+    {
+     "q": "visit lithuania",
+     "impressions": 2,
+     "position": 75,
+     "lang": "en"
+    },
+    {
+     "q": "维尔纽斯旅游",
+     "impressions": 2,
+     "position": 85.5,
+     "lang": "en"
+    }
+   ],
+   "he": [
+    {
+     "q": "בירת ליטא",
+     "impressions": 4,
+     "position": 67.2,
+     "lang": "he"
+    },
+    {
+     "q": "וילנה מטבע",
+     "impressions": 2,
+     "position": 30.5,
+     "lang": "he"
+    },
+    {
+     "q": "וילנה",
+     "impressions": 2,
+     "position": 55.5,
+     "lang": "he"
+    },
+    {
+     "q": "ליטא עיר בירה",
+     "impressions": 2,
+     "position": 57,
+     "lang": "he"
+    }
+   ]
+  },
+  "/places/benedikto-turgus": {
+   "en": [
+    {
+     "q": "benedikto turgus",
+     "impressions": 25,
+     "position": 6.0,
+     "lang": "en"
+    },
+    {
+     "q": "farmers market vilnius",
+     "impressions": 4,
+     "position": 11,
+     "lang": "en"
+    },
+    {
+     "q": "benedikto turgus",
+     "impressions": 4,
+     "position": 8.8,
+     "lang": "en"
+    },
+    {
+     "q": "benediktu turgus",
+     "impressions": 3,
+     "position": 6,
+     "lang": "en"
+    },
+    {
+     "q": "flea market vilnius",
+     "impressions": 3,
+     "position": 1.3,
+     "lang": "en"
+    },
+    {
+     "q": "turgus",
+     "impressions": 2,
+     "position": 31.5,
+     "lang": "en"
+    },
+    {
+     "q": "turgus vilnius",
+     "impressions": 2,
+     "position": 30,
+     "lang": "en"
+    },
+    {
+     "q": "рынок бенедикта",
+     "impressions": 2,
+     "position": 40.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/bistro-zarasai": {
+   "en": [
+    {
+     "q": "bistro zarasai",
+     "impressions": 58,
+     "position": 6.5,
+     "lang": "en"
+    },
+    {
+     "q": "bistro zarasai",
+     "impressions": 28,
+     "position": 6.4,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/boulangerie-druskininkai": {
+   "en": [
+    {
+     "q": "best french bakeries near me",
+     "impressions": 3,
+     "position": 5.7,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/spricas-brunch": {
+   "en": [
+    {
+     "q": "brunch vilnius",
+     "impressions": 24,
+     "position": 6.2,
+     "lang": "en"
+    },
+    {
+     "q": "brunch",
+     "impressions": 7,
+     "position": 52.3,
+     "lang": "en"
+    },
+    {
+     "q": "brunch vietos vilniuje",
+     "impressions": 5,
+     "position": 24.6,
+     "lang": "en"
+    },
+    {
+     "q": "špricas brunch",
+     "impressions": 4,
+     "position": 10,
+     "lang": "en"
+    },
+    {
+     "q": "brunch in vilnius",
+     "impressions": 3,
+     "position": 1,
+     "lang": "en"
+    },
+    {
+     "q": "brunch vilniuje",
+     "impressions": 3,
+     "position": 67.3,
+     "lang": "en"
+    },
+    {
+     "q": "best breakfast vilnius",
+     "impressions": 2,
+     "position": 1,
+     "lang": "en"
+    },
+    {
+     "q": "best brunch in vilnius",
+     "impressions": 2,
+     "position": 36.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/blog/best-coffee-vilnius": {
+   "en": [
+    {
+     "q": "best coffee shops nearby",
+     "impressions": 72,
+     "position": 12.1,
+     "lang": "en"
+    },
+    {
+     "q": "coffee roasters vilnius",
+     "impressions": 40,
+     "position": 34.9,
+     "lang": "en"
+    },
+    {
+     "q": "kava vilniuje",
+     "impressions": 30,
+     "position": 83.4,
+     "lang": "en"
+    },
+    {
+     "q": "specialty coffee",
+     "impressions": 10,
+     "position": 71.1,
+     "lang": "en"
+    },
+    {
+     "q": "best coffee vilnius",
+     "impressions": 8,
+     "position": 23.5,
+     "lang": "en"
+    },
+    {
+     "q": "coffee vilnius",
+     "impressions": 7,
+     "position": 52.1,
+     "lang": "en"
+    },
+    {
+     "q": "best coffee",
+     "impressions": 6,
+     "position": 55,
+     "lang": "en"
+    },
+    {
+     "q": "coffee in vilnius",
+     "impressions": 4,
+     "position": 36.2,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/blog/best-restaurants-vilnius.html": {
+   "en": [],
+   "he": [
+    {
+     "q": "וילנה מסעדות",
+     "impressions": 16,
+     "position": 21.4,
+     "lang": "he"
+    }
+   ]
+  },
+  "/blog/cepelinai-brigita-uyar": {
+   "en": [
+    {
+     "q": "easy cepelinai recipe",
+     "impressions": 24,
+     "position": 10.6,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/blog/trakai-day-trip": {
+   "en": [
+    {
+     "q": "from vilnius to trakai",
+     "impressions": 2,
+     "position": 67.5,
+     "lang": "en"
+    }
+   ],
+   "he": [
+    {
+     "q": "טרקאי",
+     "impressions": 3,
+     "position": 16,
+     "lang": "he"
+    },
+    {
+     "q": "טרקאי וילנה",
+     "impressions": 2,
+     "position": 16.5,
+     "lang": "he"
+    }
+   ]
+  },
+  "/explore": {
+   "en": [
+    {
+     "q": "lithuania places",
+     "impressions": 4,
+     "position": 50.2,
+     "lang": "en"
+    },
+    {
+     "q": "explore lithuania",
+     "impressions": 3,
+     "position": 8.7,
+     "lang": "en"
+    }
+   ],
+   "he": [
+    {
+     "q": "טרקים בליטא",
+     "impressions": 2,
+     "position": 48,
+     "lang": "he"
+    },
+    {
+     "q": "ליטואניה",
+     "impressions": 2,
+     "position": 62.5,
+     "lang": "he"
+    },
+    {
+     "q": "סקי בליטא",
+     "impressions": 2,
+     "position": 58,
+     "lang": "he"
+    }
+   ]
+  },
+  "/explore/countryside": {
+   "en": [
+    {
+     "q": "lithuania countryside",
+     "impressions": 5,
+     "position": 48.4,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/explore/curonian": {
+   "en": [
+    {
+     "q": "curonian spit",
+     "impressions": 27,
+     "position": 73.2,
+     "lang": "en"
+    },
+    {
+     "q": "curonian spit national park",
+     "impressions": 10,
+     "position": 93.3,
+     "lang": "en"
+    },
+    {
+     "q": "curonians",
+     "impressions": 5,
+     "position": 57.2,
+     "lang": "en"
+    },
+    {
+     "q": "curonian spit lithuania",
+     "impressions": 4,
+     "position": 76.5,
+     "lang": "en"
+    },
+    {
+     "q": "curonian spit national park lithuania",
+     "impressions": 4,
+     "position": 83.8,
+     "lang": "en"
+    },
+    {
+     "q": "curonia",
+     "impressions": 3,
+     "position": 71.3,
+     "lang": "en"
+    },
+    {
+     "q": "curonian",
+     "impressions": 3,
+     "position": 63.7,
+     "lang": "en"
+    },
+    {
+     "q": "nida dunes",
+     "impressions": 3,
+     "position": 51,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/explore/druskininkai": {
+   "en": [
+    {
+     "q": "druskininkai",
+     "impressions": 8,
+     "position": 71.1,
+     "lang": "en"
+    },
+    {
+     "q": "druskininkai resort",
+     "impressions": 3,
+     "position": 19.7,
+     "lang": "en"
+    },
+    {
+     "q": "druskininkai",
+     "impressions": 3,
+     "position": 55.3,
+     "lang": "en"
+    }
+   ],
+   "he": [
+    {
+     "q": "חבילות ספא בדרוסקינינקאי",
+     "impressions": 6,
+     "position": 43.3,
+     "lang": "he"
+    },
+    {
+     "q": "דרוסקינינקאי",
+     "impressions": 3,
+     "position": 78.3,
+     "lang": "he"
+    },
+    {
+     "q": "חבילות ספא דרוסקינינקאי",
+     "impressions": 3,
+     "position": 62.3,
+     "lang": "he"
+    },
+    {
+     "q": "דרוסקינינקאי ליטא",
+     "impressions": 2,
+     "position": 69.5,
+     "lang": "he"
+    },
+    {
+     "q": "חבילות ספא בדרוסקינינקאי כולל טיפולים",
+     "impressions": 2,
+     "position": 48,
+     "lang": "he"
+    },
+    {
+     "q": "ליטא דרוסקינינקאי",
+     "impressions": 2,
+     "position": 70.5,
+     "lang": "he"
+    }
+   ]
+  },
+  "/explore/kaunas": {
+   "en": [
+    {
+     "q": "lietuva kaunas",
+     "impressions": 4,
+     "position": 50,
+     "lang": "en"
+    },
+    {
+     "q": "考纳斯旅行",
+     "impressions": 4,
+     "position": 74,
+     "lang": "en"
+    },
+    {
+     "q": "考纳斯旅游",
+     "impressions": 3,
+     "position": 69.3,
+     "lang": "en"
+    },
+    {
+     "q": "考纳斯旅游团",
+     "impressions": 3,
+     "position": 47.7,
+     "lang": "en"
+    },
+    {
+     "q": "考纳斯旅游攻略",
+     "impressions": 3,
+     "position": 70,
+     "lang": "en"
+    },
+    {
+     "q": "考纳斯旅行社",
+     "impressions": 3,
+     "position": 82.7,
+     "lang": "en"
+    },
+    {
+     "q": "kaunas lietuva",
+     "impressions": 2,
+     "position": 47.5,
+     "lang": "en"
+    },
+    {
+     "q": "lithuanian kaunas",
+     "impressions": 2,
+     "position": 70.5,
+     "lang": "en"
+    }
+   ],
+   "he": [
+    {
+     "q": "אטרקציות בקובנה",
+     "impressions": 3,
+     "position": 49.3,
+     "lang": "he"
+    },
+    {
+     "q": "קובנה ליטא",
+     "impressions": 3,
+     "position": 54.3,
+     "lang": "he"
+    }
+   ]
+  },
+  "/explore/klaipeda": {
+   "en": [
+    {
+     "q": "klaipeda",
+     "impressions": 12,
+     "position": 52.7,
+     "lang": "en"
+    },
+    {
+     "q": "kłajpeda port",
+     "impressions": 6,
+     "position": 66.8,
+     "lang": "en"
+    },
+    {
+     "q": "порт клайпеда",
+     "impressions": 4,
+     "position": 89,
+     "lang": "en"
+    },
+    {
+     "q": "geldapė",
+     "impressions": 3,
+     "position": 54,
+     "lang": "en"
+    },
+    {
+     "q": "hafenstadt litauen",
+     "impressions": 2,
+     "position": 78.5,
+     "lang": "en"
+    },
+    {
+     "q": "klaipeda travel",
+     "impressions": 2,
+     "position": 80.5,
+     "lang": "en"
+    },
+    {
+     "q": "kur földnyelv",
+     "impressions": 2,
+     "position": 60,
+     "lang": "en"
+    },
+    {
+     "q": "lithuania klaipeda",
+     "impressions": 2,
+     "position": 78,
+     "lang": "en"
+    }
+   ],
+   "he": [
+    {
+     "q": "קלייפדה ליטא",
+     "impressions": 6,
+     "position": 13,
+     "lang": "he"
+    },
+    {
+     "q": "קלייפדה",
+     "impressions": 3,
+     "position": 18.3,
+     "lang": "he"
+    }
+   ]
+  },
+  "/explore/kretinga": {
+   "en": [
+    {
+     "q": "reketija",
+     "impressions": 2,
+     "position": 50,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/explore/palanga": {
+   "en": [
+    {
+     "q": "palanga nightlife",
+     "impressions": 13,
+     "position": 9.8,
+     "lang": "en"
+    },
+    {
+     "q": "palanga liettua",
+     "impressions": 3,
+     "position": 74,
+     "lang": "en"
+    },
+    {
+     "q": "palanga",
+     "impressions": 2,
+     "position": 53,
+     "lang": "en"
+    },
+    {
+     "q": "palanga city",
+     "impressions": 2,
+     "position": 75,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/explore/trakai": {
+   "en": [
+    {
+     "q": "trakai",
+     "impressions": 13,
+     "position": 60,
+     "lang": "en"
+    },
+    {
+     "q": "trakai vacation rentals",
+     "impressions": 9,
+     "position": 17.9,
+     "lang": "en"
+    },
+    {
+     "q": "trakai castle",
+     "impressions": 7,
+     "position": 60.1,
+     "lang": "en"
+    },
+    {
+     "q": "特拉凯旅游",
+     "impressions": 3,
+     "position": 74.7,
+     "lang": "en"
+    },
+    {
+     "q": "特拉凯旅游攻略",
+     "impressions": 3,
+     "position": 80.3,
+     "lang": "en"
+    },
+    {
+     "q": "trakai lakes",
+     "impressions": 3,
+     "position": 61,
+     "lang": "en"
+    },
+    {
+     "q": "trakai lithuania",
+     "impressions": 3,
+     "position": 63.3,
+     "lang": "en"
+    },
+    {
+     "q": "trakai castle lithuania",
+     "impressions": 2,
+     "position": 59.5,
+     "lang": "en"
+    }
+   ],
+   "he": [
+    {
+     "q": "טרקאי ליטא",
+     "impressions": 3,
+     "position": 42.3,
+     "lang": "he"
+    },
+    {
+     "q": "טרקאי ליטא",
+     "impressions": 2,
+     "position": 68.5,
+     "lang": "he"
+    },
+    {
+     "q": "טרקאי",
+     "impressions": 2,
+     "position": 59.5,
+     "lang": "he"
+    }
+   ]
+  },
+  "/explore/zarasai": {
+   "en": [
+    {
+     "q": "zarasai",
+     "impressions": 45,
+     "position": 11.5,
+     "lang": "en"
+    },
+    {
+     "q": "zarasai lithuania",
+     "impressions": 16,
+     "position": 12.4,
+     "lang": "en"
+    },
+    {
+     "q": "lithuania zarasai",
+     "impressions": 2,
+     "position": 9.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/food": {
+   "en": [
+    {
+     "q": "shakshuka near me",
+     "impressions": 18,
+     "position": 10.8,
+     "lang": "en"
+    },
+    {
+     "q": "lithuania restaurants",
+     "impressions": 16,
+     "position": 38.6,
+     "lang": "en"
+    },
+    {
+     "q": "best sandwich shops near me",
+     "impressions": 13,
+     "position": 12,
+     "lang": "en"
+    },
+    {
+     "q": "restaurants lithuania",
+     "impressions": 12,
+     "position": 42,
+     "lang": "en"
+    },
+    {
+     "q": "best kaiserschmarrn near me",
+     "impressions": 10,
+     "position": 7.5,
+     "lang": "en"
+    },
+    {
+     "q": "lithuanian restaurant vilnius",
+     "impressions": 10,
+     "position": 25.8,
+     "lang": "en"
+    },
+    {
+     "q": "best tarta de jamon y queso near me",
+     "impressions": 7,
+     "position": 7.7,
+     "lang": "en"
+    },
+    {
+     "q": "breakfast near me",
+     "impressions": 7,
+     "position": 43,
+     "lang": "en"
+    }
+   ],
+   "he": [
+    {
+     "q": "וילנה מסעדות",
+     "impressions": 12,
+     "position": 24,
+     "lang": "he"
+    },
+    {
+     "q": "אוכל כשר בליטא",
+     "impressions": 2,
+     "position": 58,
+     "lang": "he"
+    },
+    {
+     "q": "אוכל ליטאי",
+     "impressions": 2,
+     "position": 8.5,
+     "lang": "he"
+    },
+    {
+     "q": "צפלינאי",
+     "impressions": 2,
+     "position": 9,
+     "lang": "he"
+    }
+   ]
+  },
+  "/landing/aqua-druskininkai": {
+   "en": [
+    {
+     "q": "druskininkai spa aqua park",
+     "impressions": 2,
+     "position": 11.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/3m-zos-rooftop-bar": {
+   "en": [
+    {
+     "q": "3 muzos rooftop",
+     "impressions": 3,
+     "position": 9,
+     "lang": "en"
+    },
+    {
+     "q": "trys muzos",
+     "impressions": 2,
+     "position": 60,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/ac-hotel-vilnius": {
+   "en": [
+    {
+     "q": "ac hotel vilnius",
+     "impressions": 2,
+     "position": 42.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/art-cafe": {
+   "en": [
+    {
+     "q": "art caffee",
+     "impressions": 2,
+     "position": 6,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/ateik-ateik": {
+   "en": [
+    {
+     "q": "ateik ateik klaipeda",
+     "impressions": 2,
+     "position": 11,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/atvira-meno-galerija-open-gallery": {
+   "en": [
+    {
+     "q": "atvira meno galerija",
+     "impressions": 4,
+     "position": 7,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/atvira-meno-galerija": {
+   "en": [
+    {
+     "q": "atvira meno galerija",
+     "impressions": 3,
+     "position": 7.7,
+     "lang": "en"
+    },
+    {
+     "q": "atvira meno galerija",
+     "impressions": 3,
+     "position": 5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/aukstaitija-national-park": {
+   "en": [
+    {
+     "q": "aukstaitija",
+     "impressions": 3,
+     "position": 52,
+     "lang": "en"
+    },
+    {
+     "q": "aukštaitija",
+     "impressions": 2,
+     "position": 66.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/azuolyno-parkas": {
+   "en": [
+    {
+     "q": "azuolyno parkas",
+     "impressions": 3,
+     "position": 18,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/b-heme-house": {
+   "en": [
+    {
+     "q": "boheme house kaunas",
+     "impressions": 4,
+     "position": 30.2,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/backstage-roastery-hq": {
+   "en": [
+    {
+     "q": "roasters",
+     "impressions": 86,
+     "position": 60.6,
+     "lang": "en"
+    },
+    {
+     "q": "coffee roasters",
+     "impressions": 75,
+     "position": 33.1,
+     "lang": "en"
+    },
+    {
+     "q": "coffee roastery",
+     "impressions": 36,
+     "position": 27.3,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/baleboste": {
+   "en": [
+    {
+     "q": "jewish restaurant vilnius",
+     "impressions": 3,
+     "position": 5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/barn-bistro-b-arn": {
+   "en": [
+    {
+     "q": "the barn",
+     "impressions": 8,
+     "position": 9.1,
+     "lang": "en"
+    },
+    {
+     "q": "barn vilnius",
+     "impressions": 5,
+     "position": 10.8,
+     "lang": "en"
+    },
+    {
+     "q": "barn",
+     "impressions": 4,
+     "position": 15.8,
+     "lang": "en"
+    },
+    {
+     "q": "b'arn bistro",
+     "impressions": 2,
+     "position": 10.5,
+     "lang": "en"
+    },
+    {
+     "q": "barnbistro",
+     "impressions": 2,
+     "position": 9.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/basanaviciaus-street": {
+   "en": [
+    {
+     "q": "palanga main street",
+     "impressions": 3,
+     "position": 11.7,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/beekeeping-museum-stripeikiai": {
+   "en": [
+    {
+     "q": "lithuanian museum of ancient beekeeping",
+     "impressions": 2,
+     "position": 24,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/birute-park-palanga": {
+   "en": [
+    {
+     "q": "birutės",
+     "impressions": 2,
+     "position": 61.5,
+     "lang": "en"
+    },
+    {
+     "q": "palanga birute park beach",
+     "impressions": 2,
+     "position": 69,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/bistro-n-2": {
+   "en": [
+    {
+     "q": "bistro n.2 reviews",
+     "impressions": 22,
+     "position": 8.4,
+     "lang": "en"
+    },
+    {
+     "q": "bistro nr 2 vilnius",
+     "impressions": 5,
+     "position": 9.6,
+     "lang": "en"
+    },
+    {
+     "q": "bistro 2 vilnius",
+     "impressions": 3,
+     "position": 10,
+     "lang": "en"
+    },
+    {
+     "q": "bistro n.2",
+     "impressions": 3,
+     "position": 16,
+     "lang": "en"
+    },
+    {
+     "q": "bistro n2 vilnius",
+     "impressions": 2,
+     "position": 7,
+     "lang": "en"
+    },
+    {
+     "q": "bistro no 2 vilnius",
+     "impressions": 2,
+     "position": 10,
+     "lang": "en"
+    },
+    {
+     "q": "bistro nr 2",
+     "impressions": 2,
+     "position": 18.5,
+     "lang": "en"
+    },
+    {
+     "q": "bistro n.2",
+     "impressions": 2,
+     "position": 27,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/brew-palanga": {
+   "en": [
+    {
+     "q": "briu palanga",
+     "impressions": 2,
+     "position": 8.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/brew-specialty-coffee": {
+   "en": [
+    {
+     "q": "specialty coffee",
+     "impressions": 5,
+     "position": 65.4,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/burbulio-vynin": {
+   "en": [
+    {
+     "q": "burbulio vynine vilnius",
+     "impressions": 9,
+     "position": 8.8,
+     "lang": "en"
+    },
+    {
+     "q": "burbulio",
+     "impressions": 4,
+     "position": 7.8,
+     "lang": "en"
+    },
+    {
+     "q": "burbulio vyninė",
+     "impressions": 3,
+     "position": 37.7,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/cafe-banduke": {
+   "en": [
+    {
+     "q": "cafe banduke palanga",
+     "impressions": 2,
+     "position": 10.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/cafe-de-pacai": {
+   "en": [
+    {
+     "q": "cafe de pacai",
+     "impressions": 28,
+     "position": 10.7,
+     "lang": "en"
+    },
+    {
+     "q": "cafe de pacai vilnius",
+     "impressions": 11,
+     "position": 8.5,
+     "lang": "en"
+    },
+    {
+     "q": "cafe pacai",
+     "impressions": 4,
+     "position": 7,
+     "lang": "en"
+    },
+    {
+     "q": "pacai cafe vilnius",
+     "impressions": 2,
+     "position": 10.5,
+     "lang": "en"
+    },
+    {
+     "q": "patisserie cafe",
+     "impressions": 2,
+     "position": 2,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/casa-de-campo-glamping-lithuania": {
+   "en": [
+    {
+     "q": "glamping lithuania",
+     "impressions": 4,
+     "position": 12,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/cha-apuri": {
+   "en": [
+    {
+     "q": "chačapuri vilnius",
+     "impressions": 7,
+     "position": 10.4,
+     "lang": "en"
+    },
+    {
+     "q": "chačapuri",
+     "impressions": 3,
+     "position": 8.7,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/chabad-vilnius": {
+   "en": [],
+   "he": [
+    {
+     "q": "בית חבד וילנה",
+     "impressions": 40,
+     "position": 7.8,
+     "lang": "he"
+    },
+    {
+     "q": "בית חבד ליטא",
+     "impressions": 7,
+     "position": 8.9,
+     "lang": "he"
+    },
+    {
+     "q": "חבד וילנה",
+     "impressions": 5,
+     "position": 9.8,
+     "lang": "he"
+    }
+   ]
+  },
+  "/places/city-coffee-druskininkai": {
+   "en": [
+    {
+     "q": "city coffee druskininkai",
+     "impressions": 6,
+     "position": 9.8,
+     "lang": "en"
+    },
+    {
+     "q": "city coffee",
+     "impressions": 4,
+     "position": 30.2,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/citywave-vilnius": {
+   "en": [
+    {
+     "q": "citywave vilnius",
+     "impressions": 8,
+     "position": 13.9,
+     "lang": "en"
+    },
+    {
+     "q": "surf vilnius",
+     "impressions": 6,
+     "position": 11.7,
+     "lang": "en"
+    },
+    {
+     "q": "vilnius surf",
+     "impressions": 6,
+     "position": 10.2,
+     "lang": "en"
+    },
+    {
+     "q": "vilnius surf wave",
+     "impressions": 4,
+     "position": 8.2,
+     "lang": "en"
+    },
+    {
+     "q": "vilnius surfing",
+     "impressions": 4,
+     "position": 11,
+     "lang": "en"
+    },
+    {
+     "q": "citywave",
+     "impressions": 3,
+     "position": 37,
+     "lang": "en"
+    },
+    {
+     "q": "surfing vilnius",
+     "impressions": 2,
+     "position": 13,
+     "lang": "en"
+    },
+    {
+     "q": "surfwave",
+     "impressions": 2,
+     "position": 10,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/clock-museum-klaipeda": {
+   "en": [
+    {
+     "q": "clock museum klaipeda",
+     "impressions": 4,
+     "position": 9.2,
+     "lang": "en"
+    },
+    {
+     "q": "uhrenmuseum klaipeda",
+     "impressions": 3,
+     "position": 6,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/coffee-circus-piano": {
+   "en": [
+    {
+     "q": "circus coffee",
+     "impressions": 8,
+     "position": 9.1,
+     "lang": "en"
+    },
+    {
+     "q": "cafe circus",
+     "impressions": 2,
+     "position": 7,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/desert-klubas": {
+   "en": [
+    {
+     "q": "desertu klubas vilnius",
+     "impressions": 5,
+     "position": 11.2,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/dia-kaunas": {
+   "en": [
+    {
+     "q": "dia kaunas",
+     "impressions": 19,
+     "position": 11.8,
+     "lang": "en"
+    },
+    {
+     "q": "dia kaunas menu",
+     "impressions": 2,
+     "position": 9,
+     "lang": "en"
+    },
+    {
+     "q": "dia restaurant kaunas",
+     "impressions": 2,
+     "position": 9.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/doyou-place": {
+   "en": [
+    {
+     "q": "doyou place",
+     "impressions": 6,
+     "position": 13.7,
+     "lang": "en"
+    },
+    {
+     "q": "doyou place",
+     "impressions": 2,
+     "position": 8,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/druskininkai-aqua-park": {
+   "en": [
+    {
+     "q": "druskininkai aquapark",
+     "impressions": 13,
+     "position": 31.7,
+     "lang": "en"
+    },
+    {
+     "q": "basen druskienniki",
+     "impressions": 10,
+     "position": 58.5,
+     "lang": "en"
+    },
+    {
+     "q": "druskienniki basen",
+     "impressions": 8,
+     "position": 63.8,
+     "lang": "en"
+    },
+    {
+     "q": "aqua park druskininkai",
+     "impressions": 7,
+     "position": 27.3,
+     "lang": "en"
+    },
+    {
+     "q": "aqua park litwa",
+     "impressions": 7,
+     "position": 55,
+     "lang": "en"
+    },
+    {
+     "q": "aquapark druskienniki",
+     "impressions": 7,
+     "position": 53,
+     "lang": "en"
+    },
+    {
+     "q": "aquapark litwa",
+     "impressions": 7,
+     "position": 49.7,
+     "lang": "en"
+    },
+    {
+     "q": "aqua parkas druskininkai",
+     "impressions": 5,
+     "position": 32.2,
+     "lang": "en"
+    }
+   ],
+   "he": [
+    {
+     "q": "דרוסקינינקאי פארק מים",
+     "impressions": 2,
+     "position": 12,
+     "lang": "he"
+    }
+   ]
+  },
+  "/places/druskininkai-tourism-center": {
+   "en": [
+    {
+     "q": "druskininkai",
+     "impressions": 2,
+     "position": 50,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/esperanza-lake-resort-spa": {
+   "en": [],
+   "he": [
+    {
+     "q": "מלון אספרנזה ליטא",
+     "impressions": 2,
+     "position": 14.5,
+     "lang": "he"
+    }
+   ]
+  },
+  "/places/ethnocosmology-museum": {
+   "en": [
+    {
+     "q": "lithuanian museum of ethnocosmology",
+     "impressions": 2,
+     "position": 35,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/focacceria": {
+   "en": [
+    {
+     "q": "focaccia near me",
+     "impressions": 159,
+     "position": 5.1,
+     "lang": "en"
+    },
+    {
+     "q": "focaceria",
+     "impressions": 12,
+     "position": 5.1,
+     "lang": "en"
+    },
+    {
+     "q": "foccaceria",
+     "impressions": 10,
+     "position": 5.6,
+     "lang": "en"
+    },
+    {
+     "q": "focaccia vilnius",
+     "impressions": 7,
+     "position": 8.9,
+     "lang": "en"
+    },
+    {
+     "q": "focacerria",
+     "impressions": 4,
+     "position": 4.5,
+     "lang": "en"
+    },
+    {
+     "q": "focaciaria",
+     "impressions": 3,
+     "position": 3.7,
+     "lang": "en"
+    },
+    {
+     "q": "foccaria",
+     "impressions": 2,
+     "position": 8,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/fotokava-palanga": {
+   "en": [
+    {
+     "q": "foto kava",
+     "impressions": 17,
+     "position": 9.8,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/gediminas-castle": {
+   "en": [
+    {
+     "q": "gediminas castle",
+     "impressions": 11,
+     "position": 41.5,
+     "lang": "en"
+    },
+    {
+     "q": "gediminas",
+     "impressions": 6,
+     "position": 50.3,
+     "lang": "en"
+    },
+    {
+     "q": "gediminas castle vilnius",
+     "impressions": 3,
+     "position": 40.3,
+     "lang": "en"
+    },
+    {
+     "q": "castle in vilnius",
+     "impressions": 2,
+     "position": 72.5,
+     "lang": "en"
+    },
+    {
+     "q": "vilnus castle",
+     "impressions": 2,
+     "position": 64.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/genio-kampas-treehouse": {
+   "en": [
+    {
+     "q": "genio kampas",
+     "impressions": 3,
+     "position": 7.7,
+     "lang": "en"
+    },
+    {
+     "q": "genio kampas",
+     "impressions": 3,
+     "position": 13.3,
+     "lang": "en"
+    },
+    {
+     "q": "genio kampas tree house",
+     "impressions": 2,
+     "position": 7.5,
+     "lang": "en"
+    },
+    {
+     "q": "genio kampas treehouse",
+     "impressions": 2,
+     "position": 5.5,
+     "lang": "en"
+    },
+    {
+     "q": "genio kampas treehouse",
+     "impressions": 2,
+     "position": 5.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/getaway-to-forest-cab": {
+   "en": [
+    {
+     "q": "getaway to forest cab",
+     "impressions": 2,
+     "position": 8,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/italala-caff": {
+   "en": [
+    {
+     "q": "italala caffè",
+     "impressions": 6,
+     "position": 20.8,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/jewish-heritage-tours-kaunas": {
+   "en": [
+    {
+     "q": "jewish heritage tours lithuania",
+     "impressions": 7,
+     "position": 42.7,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/jewish-heritage-tours-vilnius": {
+   "en": [
+    {
+     "q": "jewish heritage tours lithuania",
+     "impressions": 20,
+     "position": 66.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/kalve-coffee-vasario": {
+   "en": [
+    {
+     "q": "coffee roastery",
+     "impressions": 21,
+     "position": 97.2,
+     "lang": "en"
+    },
+    {
+     "q": "kalve coffee vilnius",
+     "impressions": 7,
+     "position": 12.7,
+     "lang": "en"
+    },
+    {
+     "q": "kalve vasario",
+     "impressions": 4,
+     "position": 9.5,
+     "lang": "en"
+    },
+    {
+     "q": "kalve coffee vasario",
+     "impressions": 2,
+     "position": 8.5,
+     "lang": "en"
+    },
+    {
+     "q": "kalve vilnius",
+     "impressions": 2,
+     "position": 15,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/kaunas-castle": {
+   "en": [
+    {
+     "q": "kaunas castle",
+     "impressions": 3,
+     "position": 59,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/kaunas-tourism-info": {
+   "en": [
+    {
+     "q": "tourist information kaunas",
+     "impressions": 5,
+     "position": 10.6,
+     "lang": "en"
+    },
+    {
+     "q": "kaunas tourism",
+     "impressions": 2,
+     "position": 10,
+     "lang": "en"
+    },
+    {
+     "q": "kaunas tourism information center",
+     "impressions": 2,
+     "position": 15,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/kavos-architektai": {
+   "en": [
+    {
+     "q": "kavos architektai",
+     "impressions": 25,
+     "position": 15.4,
+     "lang": "en"
+    },
+    {
+     "q": "kavos architektai klaipeda",
+     "impressions": 5,
+     "position": 9.4,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/kernave-archaeological": {
+   "en": [
+    {
+     "q": "kernave",
+     "impressions": 5,
+     "position": 60.6,
+     "lang": "en"
+    },
+    {
+     "q": "kernave lithuania",
+     "impressions": 3,
+     "position": 54.3,
+     "lang": "en"
+    },
+    {
+     "q": "kernavė",
+     "impressions": 2,
+     "position": 44,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/kiubete-trakai": {
+   "en": [
+    {
+     "q": "kiubėtė",
+     "impressions": 4,
+     "position": 14.2,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/klaipeda-castle-museum": {
+   "en": [
+    {
+     "q": "the castle museum",
+     "impressions": 4,
+     "position": 49.5,
+     "lang": "en"
+    },
+    {
+     "q": "klaipėda castle",
+     "impressions": 2,
+     "position": 46,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/klaipeda-old-town-walk": {
+   "en": [
+    {
+     "q": "klaipeda old city",
+     "impressions": 5,
+     "position": 50,
+     "lang": "en"
+    },
+    {
+     "q": "klaipeda old town",
+     "impressions": 4,
+     "position": 46.2,
+     "lang": "en"
+    },
+    {
+     "q": "klaipeda city",
+     "impressions": 3,
+     "position": 79,
+     "lang": "en"
+    },
+    {
+     "q": "klaipėda city",
+     "impressions": 3,
+     "position": 67.3,
+     "lang": "en"
+    },
+    {
+     "q": "old town klaipeda",
+     "impressions": 2,
+     "position": 47.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/la-madeleine-atelier": {
+   "en": [
+    {
+     "q": "la madeleine atelier",
+     "impressions": 7,
+     "position": 5.6,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/labanoras-observation-tower": {
+   "en": [
+    {
+     "q": "labanoras regional park tower",
+     "impressions": 4,
+     "position": 34.2,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/le-travi": {
+   "en": [
+    {
+     "q": "la travi vilnius",
+     "impressions": 3,
+     "position": 10.3,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/le-vivier-trakai": {
+   "en": [
+    {
+     "q": "le vivier trakai",
+     "impressions": 11,
+     "position": 9.3,
+     "lang": "en"
+    },
+    {
+     "q": "le vivier trakai",
+     "impressions": 7,
+     "position": 10.4,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/mana-sleep-spa-druskininkai": {
+   "en": [
+    {
+     "q": "mana sleep & spa druskininkai",
+     "impressions": 2,
+     "position": 14.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/mason-restoranas": {
+   "en": [
+    {
+     "q": "mason vilnius",
+     "impressions": 9,
+     "position": 9,
+     "lang": "en"
+    },
+    {
+     "q": "mason restaurant vilnius",
+     "impressions": 7,
+     "position": 7.9,
+     "lang": "en"
+    },
+    {
+     "q": "mason restoranas",
+     "impressions": 7,
+     "position": 9,
+     "lang": "en"
+    },
+    {
+     "q": "maison restoranas",
+     "impressions": 3,
+     "position": 7.7,
+     "lang": "en"
+    },
+    {
+     "q": "masons restaurant",
+     "impressions": 3,
+     "position": 7,
+     "lang": "en"
+    },
+    {
+     "q": "mason restoranas reviews",
+     "impressions": 2,
+     "position": 10,
+     "lang": "en"
+    },
+    {
+     "q": "salmon restaurant",
+     "impressions": 2,
+     "position": 11.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/meat-steakhouse": {
+   "en": [
+    {
+     "q": "meat vilnius",
+     "impressions": 11,
+     "position": 11.5,
+     "lang": "en"
+    },
+    {
+     "q": "steakhouse vilnius",
+     "impressions": 3,
+     "position": 13,
+     "lang": "en"
+    },
+    {
+     "q": "m eat vilnius",
+     "impressions": 2,
+     "position": 8.5,
+     "lang": "en"
+    },
+    {
+     "q": "meat",
+     "impressions": 2,
+     "position": 30.5,
+     "lang": "en"
+    },
+    {
+     "q": "meat restaurant vilnius",
+     "impressions": 2,
+     "position": 11.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/men-fabrikas-loftas": {
+   "en": [
+    {
+     "q": "loftas vilnius",
+     "impressions": 15,
+     "position": 10.5,
+     "lang": "en"
+    },
+    {
+     "q": "mens factory vilnius",
+     "impressions": 5,
+     "position": 9.8,
+     "lang": "en"
+    },
+    {
+     "q": "menu fabrikas loftas",
+     "impressions": 2,
+     "position": 6.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/mindaugo-kepykla": {
+   "en": [
+    {
+     "q": "kepykla",
+     "impressions": 9,
+     "position": 35.6,
+     "lang": "en"
+    },
+    {
+     "q": "mindaugo kepyklele",
+     "impressions": 3,
+     "position": 10.3,
+     "lang": "en"
+    },
+    {
+     "q": "kepykla vilnius",
+     "impressions": 2,
+     "position": 6,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/mo-museum": {
+   "en": [
+    {
+     "q": "mo museum vilnius",
+     "impressions": 16,
+     "position": 22.6,
+     "lang": "en"
+    },
+    {
+     "q": "mo museum",
+     "impressions": 11,
+     "position": 32.1,
+     "lang": "en"
+    },
+    {
+     "q": "museum",
+     "impressions": 7,
+     "position": 45.7,
+     "lang": "en"
+    },
+    {
+     "q": "mo muziejus",
+     "impressions": 4,
+     "position": 36.5,
+     "lang": "en"
+    },
+    {
+     "q": "mo vilnius",
+     "impressions": 4,
+     "position": 10,
+     "lang": "en"
+    },
+    {
+     "q": "museum vilnius",
+     "impressions": 4,
+     "position": 27.2,
+     "lang": "en"
+    },
+    {
+     "q": "vilnius mo museum",
+     "impressions": 4,
+     "position": 7.2,
+     "lang": "en"
+    },
+    {
+     "q": "art museum vilnius",
+     "impressions": 3,
+     "position": 41.7,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/moletai-observatory": {
+   "en": [
+    {
+     "q": "moletu observatorija",
+     "impressions": 11,
+     "position": 82.2,
+     "lang": "en"
+    },
+    {
+     "q": "moletu observatorija",
+     "impressions": 8,
+     "position": 84.4,
+     "lang": "en"
+    },
+    {
+     "q": "molėtų observatorija",
+     "impressions": 4,
+     "position": 88.2,
+     "lang": "en"
+    },
+    {
+     "q": "moletai observatory",
+     "impressions": 3,
+     "position": 8.3,
+     "lang": "en"
+    },
+    {
+     "q": "molėtai astronomical observatory tickets",
+     "impressions": 3,
+     "position": 9.3,
+     "lang": "en"
+    },
+    {
+     "q": "molėtų observatorija",
+     "impressions": 3,
+     "position": 88,
+     "lang": "en"
+    },
+    {
+     "q": "molėtai astronomical observatory reviews",
+     "impressions": 2,
+     "position": 10.5,
+     "lang": "en"
+    },
+    {
+     "q": "moletu observatorija muziejus",
+     "impressions": 2,
+     "position": 83,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/mon": {
+   "en": [
+    {
+     "q": "mon vilnius",
+     "impressions": 66,
+     "position": 9.3,
+     "lang": "en"
+    },
+    {
+     "q": "mon. vilnius",
+     "impressions": 33,
+     "position": 9.7,
+     "lang": "en"
+    },
+    {
+     "q": "mon cafe vilnius",
+     "impressions": 23,
+     "position": 9.3,
+     "lang": "en"
+    },
+    {
+     "q": "mon cafe",
+     "impressions": 21,
+     "position": 10.2,
+     "lang": "en"
+    },
+    {
+     "q": "mon brunch",
+     "impressions": 6,
+     "position": 7.8,
+     "lang": "en"
+    },
+    {
+     "q": "mon.vln",
+     "impressions": 2,
+     "position": 8.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/monopolis-zarasai": {
+   "en": [
+    {
+     "q": "monopolis zarasai",
+     "impressions": 9,
+     "position": 7.6,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/mypilates-kaunas": {
+   "en": [
+    {
+     "q": "mypilates kaunas",
+     "impressions": 6,
+     "position": 19,
+     "lang": "en"
+    },
+    {
+     "q": "my pilates kaunas",
+     "impressions": 5,
+     "position": 7.4,
+     "lang": "en"
+    },
+    {
+     "q": "pilates kaunas",
+     "impressions": 2,
+     "position": 10.5,
+     "lang": "en"
+    },
+    {
+     "q": "mypilates kaunas",
+     "impressions": 2,
+     "position": 43,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/mypilates-naujamiestis": {
+   "en": [
+    {
+     "q": "mypilates vilnius",
+     "impressions": 12,
+     "position": 7.5,
+     "lang": "en"
+    },
+    {
+     "q": "mypilates",
+     "impressions": 3,
+     "position": 34.7,
+     "lang": "en"
+    },
+    {
+     "q": "my pilates antakalnis",
+     "impressions": 2,
+     "position": 26,
+     "lang": "en"
+    },
+    {
+     "q": "my pilates vilnius",
+     "impressions": 2,
+     "position": 6.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/mypilates-palanga": {
+   "en": [
+    {
+     "q": "my pilates palanga",
+     "impressions": 6,
+     "position": 10.8,
+     "lang": "en"
+    },
+    {
+     "q": "mypilates palanga",
+     "impressions": 3,
+     "position": 5,
+     "lang": "en"
+    },
+    {
+     "q": "pilates palanga",
+     "impressions": 2,
+     "position": 1.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/naked-noah": {
+   "en": [
+    {
+     "q": "naked noah",
+     "impressions": 13,
+     "position": 10.2,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/neighbourhood-kaunas": {
+   "en": [
+    {
+     "q": "kaunas restaurants",
+     "impressions": 2,
+     "position": 1.5,
+     "lang": "en"
+    },
+    {
+     "q": "neibourhood",
+     "impressions": 2,
+     "position": 11,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/neringa-hotel": {
+   "en": [
+    {
+     "q": "neringa hotel vilnius",
+     "impressions": 2,
+     "position": 46.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/numan-kaunas": {
+   "en": [
+    {
+     "q": "nüman kaunas",
+     "impressions": 8,
+     "position": 9.6,
+     "lang": "en"
+    },
+    {
+     "q": "niuman",
+     "impressions": 2,
+     "position": 9,
+     "lang": "en"
+    },
+    {
+     "q": "nüman kaunas reviews",
+     "impressions": 2,
+     "position": 10.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/nyc-coffee-co": {
+   "en": [
+    {
+     "q": "nyc coffee co",
+     "impressions": 4,
+     "position": 10.2,
+     "lang": "en"
+    },
+    {
+     "q": "nyc coffee co.",
+     "impressions": 4,
+     "position": 10.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/osh-halal": {
+   "en": [
+    {
+     "q": "uzbek restaurant vilnius",
+     "impressions": 4,
+     "position": 11,
+     "lang": "en"
+    },
+    {
+     "q": "halal vilnius",
+     "impressions": 3,
+     "position": 13.7,
+     "lang": "en"
+    },
+    {
+     "q": "food",
+     "impressions": 2,
+     "position": 1,
+     "lang": "en"
+    },
+    {
+     "q": "halal food near me",
+     "impressions": 2,
+     "position": 1.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/pachamama-dinner-club": {
+   "en": [
+    {
+     "q": "pachamama vilnius",
+     "impressions": 14,
+     "position": 10.4,
+     "lang": "en"
+    },
+    {
+     "q": "pachamama dinner club",
+     "impressions": 2,
+     "position": 45.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/palanga-amber-museum": {
+   "en": [
+    {
+     "q": "palanga amber museum lithuania",
+     "impressions": 5,
+     "position": 58.4,
+     "lang": "en"
+    },
+    {
+     "q": "palanga amber museum",
+     "impressions": 4,
+     "position": 61.8,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/palanga-beach": {
+   "en": [
+    {
+     "q": "palanga beach",
+     "impressions": 9,
+     "position": 40.3,
+     "lang": "en"
+    },
+    {
+     "q": "palanga beach lithuania",
+     "impressions": 5,
+     "position": 48.2,
+     "lang": "en"
+    },
+    {
+     "q": "lithuania palanga",
+     "impressions": 3,
+     "position": 43.7,
+     "lang": "en"
+    },
+    {
+     "q": "palanga",
+     "impressions": 2,
+     "position": 68,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/palanga-pier": {
+   "en": [
+    {
+     "q": "palanga pier",
+     "impressions": 8,
+     "position": 20.4,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/paupio-turgus": {
+   "en": [
+    {
+     "q": "turgus",
+     "impressions": 4,
+     "position": 23.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/rocketbean-kavin": {
+   "en": [
+    {
+     "q": "rocket bean vilnius",
+     "impressions": 7,
+     "position": 19.9,
+     "lang": "en"
+    },
+    {
+     "q": "rocket bean kavinė",
+     "impressions": 3,
+     "position": 10,
+     "lang": "en"
+    },
+    {
+     "q": "rocket bean cafe",
+     "impressions": 2,
+     "position": 10,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/sartai-lake": {
+   "en": [
+    {
+     "q": "lake sartai",
+     "impressions": 2,
+     "position": 11,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/seduva-jewish-museum": {
+   "en": [
+    {
+     "q": "seduva",
+     "impressions": 2,
+     "position": 38.5,
+     "lang": "en"
+    },
+    {
+     "q": "seduva lithuania",
+     "impressions": 2,
+     "position": 35,
+     "lang": "en"
+    },
+    {
+     "q": "šeduva",
+     "impressions": 2,
+     "position": 49,
+     "lang": "en"
+    }
+   ],
+   "he": [
+    {
+     "q": "שדובה ליטא",
+     "impressions": 3,
+     "position": 11,
+     "lang": "he"
+    }
+   ]
+  },
+  "/places/senas-zvejas": {
+   "en": [
+    {
+     "q": "senas zvejas nida",
+     "impressions": 5,
+     "position": 10.8,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/sicilia-druskininkai": {
+   "en": [
+    {
+     "q": "sicilija druskininkai",
+     "impressions": 6,
+     "position": 20.3,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/smoked-fish": {
+   "en": [
+    {
+     "q": "smoked fish lithuania",
+     "impressions": 2,
+     "position": 11,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/snow-arena-druskininkai": {
+   "en": [
+    {
+     "q": "druskienniki ski",
+     "impressions": 2,
+     "position": 36.5,
+     "lang": "en"
+    },
+    {
+     "q": "druskininkai ski resort",
+     "impressions": 2,
+     "position": 22,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/spa-vilnius-druskininkai": {
+   "en": [
+    {
+     "q": "spa vilnius druskininkai",
+     "impressions": 23,
+     "position": 28.2,
+     "lang": "en"
+    },
+    {
+     "q": "vilnius spa",
+     "impressions": 14,
+     "position": 40.4,
+     "lang": "en"
+    },
+    {
+     "q": "spa vilnius",
+     "impressions": 11,
+     "position": 40.5,
+     "lang": "en"
+    },
+    {
+     "q": "lithuania spa",
+     "impressions": 3,
+     "position": 41.7,
+     "lang": "en"
+    },
+    {
+     "q": "spa in vilnius",
+     "impressions": 3,
+     "position": 46.7,
+     "lang": "en"
+    },
+    {
+     "q": "spa in lithuania",
+     "impressions": 2,
+     "position": 42,
+     "lang": "en"
+    },
+    {
+     "q": "spa lithuania",
+     "impressions": 2,
+     "position": 36.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/strangelove": {
+   "en": [
+    {
+     "q": "strangelove vilnius",
+     "impressions": 9,
+     "position": 9.7,
+     "lang": "en"
+    },
+    {
+     "q": "strange love vilnius",
+     "impressions": 8,
+     "position": 10.1,
+     "lang": "en"
+    },
+    {
+     "q": "strange love bernardinai",
+     "impressions": 5,
+     "position": 9.6,
+     "lang": "en"
+    },
+    {
+     "q": "strange love coffee vilnius",
+     "impressions": 2,
+     "position": 9,
+     "lang": "en"
+    },
+    {
+     "q": "strange lovers",
+     "impressions": 2,
+     "position": 68.5,
+     "lang": "en"
+    },
+    {
+     "q": "strangelove",
+     "impressions": 2,
+     "position": 44,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/the-dead-dunes": {
+   "en": [
+    {
+     "q": "curonian spit dead dunes",
+     "impressions": 3,
+     "position": 9.7,
+     "lang": "en"
+    },
+    {
+     "q": "dead dunes lithuania",
+     "impressions": 3,
+     "position": 29.7,
+     "lang": "en"
+    },
+    {
+     "q": "the dead dunes",
+     "impressions": 3,
+     "position": 22.3,
+     "lang": "en"
+    },
+    {
+     "q": "dead dunes",
+     "impressions": 2,
+     "position": 24,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/the-green-house": {
+   "en": [],
+   "he": [
+    {
+     "q": "מוזיאון הגאון מוילנה",
+     "impressions": 2,
+     "position": 14.5,
+     "lang": "he"
+    }
+   ]
+  },
+  "/places/toli-toli-druskininkai": {
+   "en": [
+    {
+     "q": "toli",
+     "impressions": 4,
+     "position": 32,
+     "lang": "en"
+    },
+    {
+     "q": "toli toli druskininkai",
+     "impressions": 4,
+     "position": 8.5,
+     "lang": "en"
+    },
+    {
+     "q": "toli toli druskininkai",
+     "impressions": 2,
+     "position": 7,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/trakai-beach": {
+   "en": [
+    {
+     "q": "trakai beach",
+     "impressions": 7,
+     "position": 11.3,
+     "lang": "en"
+    },
+    {
+     "q": "trakai beach",
+     "impressions": 3,
+     "position": 28,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/trakai-boat-rental": {
+   "en": [
+    {
+     "q": "trakai boat rental",
+     "impressions": 4,
+     "position": 14.2,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/trakai-history-museum": {
+   "en": [
+    {
+     "q": "trakai castle museum",
+     "impressions": 5,
+     "position": 31.6,
+     "lang": "en"
+    },
+    {
+     "q": "trakai island castle museum",
+     "impressions": 3,
+     "position": 35.3,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/trakai-island-castle": {
+   "en": [
+    {
+     "q": "trakai castle",
+     "impressions": 49,
+     "position": 43.9,
+     "lang": "en"
+    },
+    {
+     "q": "trakai island castle",
+     "impressions": 47,
+     "position": 50.5,
+     "lang": "en"
+    },
+    {
+     "q": "trakai island castle lithuania",
+     "impressions": 18,
+     "position": 53.4,
+     "lang": "en"
+    },
+    {
+     "q": "trakai castle lithuania",
+     "impressions": 11,
+     "position": 37.3,
+     "lang": "en"
+    },
+    {
+     "q": "castle trakai",
+     "impressions": 9,
+     "position": 56.2,
+     "lang": "en"
+    },
+    {
+     "q": "trakai castle in lithuania",
+     "impressions": 7,
+     "position": 40.9,
+     "lang": "en"
+    },
+    {
+     "q": "castle of trakai",
+     "impressions": 5,
+     "position": 77.4,
+     "lang": "en"
+    },
+    {
+     "q": "lithuania trakai island castle",
+     "impressions": 3,
+     "position": 82.3,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/varnikai-nature-trail": {
+   "en": [
+    {
+     "q": "varnikai nature trail",
+     "impressions": 3,
+     "position": 15.3,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/viesbutis-kaunas": {
+   "en": [
+    {
+     "q": "kauno viesbutis",
+     "impressions": 2,
+     "position": 28.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/vijunele-park": {
+   "en": [
+    {
+     "q": "vijunele park druskininkai",
+     "impressions": 4,
+     "position": 8,
+     "lang": "en"
+    },
+    {
+     "q": "vijūnėlės parkas",
+     "impressions": 4,
+     "position": 76.2,
+     "lang": "en"
+    },
+    {
+     "q": "vijūnėlės parkas",
+     "impressions": 3,
+     "position": 81,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/vila-gervalis": {
+   "en": [
+    {
+     "q": "vila gervalis",
+     "impressions": 2,
+     "position": 16,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/wake-inn-zarasai": {
+   "en": [
+    {
+     "q": "wake inn zarasai",
+     "impressions": 16,
+     "position": 9.4,
+     "lang": "en"
+    },
+    {
+     "q": "wake inn",
+     "impressions": 9,
+     "position": 55.1,
+     "lang": "en"
+    },
+    {
+     "q": "wake in zarasai",
+     "impressions": 7,
+     "position": 10.1,
+     "lang": "en"
+    },
+    {
+     "q": "zarasai wake inn",
+     "impressions": 4,
+     "position": 8.5,
+     "lang": "en"
+    },
+    {
+     "q": "zarasai wake park",
+     "impressions": 4,
+     "position": 7,
+     "lang": "en"
+    },
+    {
+     "q": "zarasai water park",
+     "impressions": 3,
+     "position": 9.3,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/www-pineplace-lt": {
+   "en": [
+    {
+     "q": "pineplace",
+     "impressions": 4,
+     "position": 10,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/yugen-tea": {
+   "en": [
+    {
+     "q": "yugen tea vilnius",
+     "impressions": 5,
+     "position": 11.8,
+     "lang": "en"
+    },
+    {
+     "q": "yugen tea",
+     "impressions": 3,
+     "position": 18,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/places/zalgirio-arena": {
+   "en": [
+    {
+     "q": "zalgirio arena",
+     "impressions": 16,
+     "position": 27.9,
+     "lang": "en"
+    },
+    {
+     "q": "zalgiris arena",
+     "impressions": 7,
+     "position": 47.6,
+     "lang": "en"
+    },
+    {
+     "q": "žalgiris arena",
+     "impressions": 5,
+     "position": 48.4,
+     "lang": "en"
+    },
+    {
+     "q": "kauno arena",
+     "impressions": 3,
+     "position": 50.7,
+     "lang": "en"
+    },
+    {
+     "q": "kaunas arena",
+     "impressions": 2,
+     "position": 35,
+     "lang": "en"
+    },
+    {
+     "q": "žalgirio arena",
+     "impressions": 2,
+     "position": 36.5,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/routes/spa-weekend": {
+   "en": [
+    {
+     "q": "spa weekend",
+     "impressions": 16,
+     "position": 11.6,
+     "lang": "en"
+    }
+   ],
+   "he": []
+  },
+  "/stays": {
+   "en": [
+    {
+     "q": "glamping lithuania",
+     "impressions": 19,
+     "position": 21.3,
+     "lang": "en"
+    },
+    {
+     "q": "cabins in lithuania",
+     "impressions": 13,
+     "position": 18.4,
+     "lang": "en"
+    },
+    {
+     "q": "where to stay in lithuania",
+     "impressions": 5,
+     "position": 17.6,
+     "lang": "en"
+    },
+    {
+     "q": "โรงแรมในลิทัวเนีย",
+     "impressions": 5,
+     "position": 51.8,
+     "lang": "en"
+    },
+    {
+     "q": "alojamiento en lituania",
+     "impressions": 3,
+     "position": 36,
+     "lang": "en"
+    },
+    {
+     "q": "places to stay in lithuania",
+     "impressions": 3,
+     "position": 9.3,
+     "lang": "en"
+    },
+    {
+     "q": "\"baroque palace\" \"no internet\" blog",
+     "impressions": 2,
+     "position": 6.5,
+     "lang": "en"
+    },
+    {
+     "q": "hotels in lithuania",
+     "impressions": 2,
+     "position": 36.5,
+     "lang": "en"
+    }
+   ],
+   "he": [
+    {
+     "q": "מלון ספא בליטא",
+     "impressions": 2,
+     "position": 31,
+     "lang": "he"
+    }
+   ]
+  }
+ }
+}
