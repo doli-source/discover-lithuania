@@ -2464,56 +2464,77 @@ html.a11y-reduce-motion *::after {
   }
 }
 
-/* ── Region FAQ ─────────────────────────────────────────────────────────── */
+/* ── FAQ ────────────────────────────────────────────────────────────────── */
+/* On a section page this is a top-level band, so it takes the same max-width,
+   centring and gutter every other .section has. Inside a region page it sits
+   in a column that is already constrained, and must not be constrained twice. */
 .region-faq {
-  margin-top: 48px;
-  padding-top: 32px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: clamp(48px, 7vw, 88px) var(--gutter) clamp(60px, 9vw, 110px);
+}
+.region-detail .region-faq {
+  max-width: none;
+  margin: 48px 0 0;
+  padding: 32px 0 0;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
+
 .faq-list {
-  margin-top: 16px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 8px;
 }
 .faq-item {
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: var(--radius, 12px);
+  background: rgba(255, 255, 255, 0.55);
   overflow: hidden;
+  transition: background 0.15s ease, border-color 0.15s ease;
 }
-.faq-item.open { background: rgba(255, 255, 255, 0.9); }
+.faq-item.open {
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.12);
+}
 .faq-q {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  padding: 16px 18px;
+  gap: 20px;
+  padding: 18px 22px;
   background: none;
   border: 0;
   cursor: pointer;
   font: inherit;
+  font-size: 1.02rem;
   font-weight: 500;
   color: inherit;
   text-align: start;
   line-height: 1.45;
 }
-.faq-q:hover { background: rgba(0, 0, 0, 0.03); }
-.faq-q:focus-visible { outline: 2px solid currentColor; outline-offset: -2px; }
+.faq-q:hover { background: rgba(0, 0, 0, 0.02); }
+.faq-q:focus-visible { outline: 2px solid var(--primary, currentColor); outline-offset: -2px; }
 .faq-mark {
   flex: none;
-  font-size: 20px;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
   line-height: 1;
-  opacity: 0.45;
+  opacity: 0.4;
 }
 .faq-a {
-  padding: 0 18px 18px;
+  padding: 0 22px 20px;
   margin: 0;
-  line-height: 1.65;
-  opacity: 0.85;
+  max-width: 68ch;
+  line-height: 1.7;
+  opacity: 0.82;
 }
 @media (max-width: 640px) {
-  .region-faq { margin-top: 32px; padding-top: 24px; }
-  .faq-q { padding: 14px 15px; }
-  .faq-a { padding: 0 15px 15px; }
+  .region-detail .region-faq { margin-top: 32px; padding-top: 24px; }
+  .faq-q { padding: 15px 17px; font-size: 0.97rem; }
+  .faq-a { padding: 0 17px 17px; }
 }

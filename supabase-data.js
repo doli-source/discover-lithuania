@@ -7,13 +7,15 @@
   const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhzb3Z3eWRzY213eXl2c2VtdWRnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxMDkzOTEsImV4cCI6MjEwMTY4NTM5MX0.OdiHpVogpp_5U7v-XxHdapRhpP-Zz--7Yw82X0zWruA';
   const MAP_URL = 'https://maps.app.goo.gl/JcnKq69fj1RMw1RL7';
 
-  const PLAIN_SCRIPTS = ['/faq-data.js?v=20260920d'];
+  const FAQ_QUERIES_V = '20260920f';
+
+  const PLAIN_SCRIPTS = ['/faq-data.js?v=20260920f'];
 
   const JSX_SCRIPTS = [
     '/tweaks-panel.jsx?v=20260626b',
     '/shared.jsx?v=20260802a',
-    '/screens.jsx?v=20260920d',
-    '/app.jsx?v=20260920d',
+    '/screens.jsx?v=20260920f',
+    '/app.jsx?v=20260920f',
   ];
 
   function rest(table, qs) {
@@ -214,6 +216,14 @@
       REGIONS: [], PLACES: [], LANDMARKS: [],
       DISHES: [], ITINERARIES: [], FACTS: [], MAP_URL
     };
+  }
+
+  // ─── The questions the FAQ asks come from real Search Console queries ────
+  try {
+    const qr = await fetch('/faq-queries.json?v=' + FAQ_QUERIES_V);
+    if (qr.ok) window.LT_FAQ_QUERIES = await qr.json();
+  } catch (err) {
+    console.warn('[LT] FAQ query data unavailable, falling back to generic questions');
   }
 
   // ─── Plain JS first: the JSX below expects window.LT_FAQ to exist ─────────

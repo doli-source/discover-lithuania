@@ -220,6 +220,134 @@
     return out;
   }
 
-  window.LT_FAQ = { regionFaq, sectionFaq, faqSchema, regionName };
+
+  // ── Questions taken from real searches ──────────────────────────────────
+  // faq-queries.json holds the queries each page actually receives, pulled
+  // from Search Console. Most are not phrased as questions — "trakai vacation
+  // rentals", "חבילות ספא בדרוסקינינקאי" — so each is classified by intent and
+  // asked back in the words the searcher used. A page only gets a question if
+  // someone actually searched for that thing.
+
+  // Hebrew has no \\b, and a substring match is actively wrong here: the word
+  // דרוסקינינקאי contains the letters of סקי, so a plain match classified the
+  // town's own name as a question about skiing. Each Hebrew term is therefore
+  // anchored between non-letters.
+  const heWord = (...words) => words.map((w) => `(?<![א-ת])${w}(?![א-ת])`).join('|');
+
+  const INTENTS = [
+    { id: 'eat',    re: new RegExp('\\b(eat|restaurant|restaurants|dinner|lunch|food|brunch|sandwich|shakshuka|pizza|kebab)\\b|' + heWord('מסעדה','מסעדות','לאכול','אוכל','ארוחה','מסעדת'), 'i') },
+    { id: 'coffee', re: new RegExp('\\b(coffee|cafe|café|roaster|roasters|espresso)\\b|' + heWord('קפה','קפייה'), 'i') },
+    { id: 'spa',    re: new RegExp('\\b(spa|wellness|thermal|aqua ?park|sauna)\\b|' + heWord('ספא','מרחצאות','בריכה'), 'i') },
+    { id: 'ski',    re: new RegExp('\\b(ski|skiing|snow arena)\\b|' + heWord('סקי','שלג','מגלשי'), 'i') },
+    { id: 'stay',   re: new RegExp('\\b(hotel|hotels|stay|accommodation|rental|rentals|apartment|cabin|resort|camping)\\b|' + heWord('לינה','מלון','מלונות','צימר','צימרים','אכסניה'), 'i') },
+    { id: 'price',  re: new RegExp('\\b(price|prices|cost|cheap|expensive|budget|how much)\\b|' + heWord('מחיר','מחירים','עלות') + '|כמה עולה', 'i') },
+    { id: 'days',   re: new RegExp('\\b(how long|how many days|days|itinerary|weekend)\\b|' + heWord('מסלול','מסלולים') + '|כמה ימים|כמה זמן', 'i') },
+    { id: 'see',    re: new RegExp('\\b(castle|museum|attraction|attractions|things to do|sightseeing|old town|beach|dune)\\b|' + heWord('אטרקציות','טירה','מוזיאון','חוף','לראות'), 'i') },
+  ];
+
+  const classify = (q) => (INTENTS.find((i) => i.re.test(q)) || { id: 'general' }).id;
+
+  // One question per intent, phrased around the place and, where it reads
+  // naturally, the searcher's own wording.
+  function questionFor(intent, place, lang, sample) {
+    const he = lang === 'he';
+    const at = he ? `ב${place}` : `in ${place}`;
+    switch (intent) {
+      case 'eat':    return he ? `איפה כדאי לאכול ${at}?`            : `Where should you eat ${at}?`;
+      case 'coffee': return he ? `איפה הקפה הכי טוב ${at}?`          : `Where is the best coffee ${at}?`;
+      case 'spa':    return he ? `מה יש בתחום הספא ${at}?`           : `What spa and wellness is there ${at}?`;
+      case 'ski':    return he ? `אפשר לעשות סקי ${at}?`             : `Can you ski ${at}?`;
+      case 'stay':   return he ? `איפה אפשר לישון ${at}?`            : `Where can you stay ${at}?`;
+      case 'price':  return he ? `כמה עולה לאכול ${at}?`             : `How much does eating out cost ${at}?`;
+      case 'days':   return he ? `כמה זמן כדאי להקדיש ${at}?`        : `How long do you need ${at}?`;
+      case 'see':    return he ? `מה יש לראות ולעשות ${at}?`         : `What is there to see and do ${at}?`;
+      default:       return he ? `מה יש ${at}?`                      : `What is there ${at}?`;
+    }
+  }
+
+  // Which intents a page has the data to answer.
+  function answerFor(intent, ctx, lang) {
+    const he = lang === 'he';
+    const { places, place, regions, its, dishes } = ctx;
+    const pick = (kinds, n) => places.filter((p) => kinds.includes(p.kind) && p.rating)
+                                     .sort((a, b) => b.rating - a.rating).slice(0, n);
+    const list = (arr) => arr.map((p) => `${p.name} (${p.rating}/5)`).join(', ');
+
+    if (intent === 'eat' || intent === 'general' || intent === 'see') {
+      const counts = {};
+      for (const p of places) counts[p.kind] = (counts[p.kind] || 0) + 1;
+      const spread = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 5)
+        .map(([k, n]) => `${n} ${plural(k, n, lang)}`).join(', ');
+      if (intent === 'eat') {
+        const top = pick(['restaurant', 'cafe'], 4);
+        if (!top.length) return null;
+        return he ? `המקומות המדורגים הגבוה ביותר במדריך: ${list(top)}.`
+                  : `The highest rated on this guide are ${list(top)}.`;
+      }
+      if (!places.length) return null;
+      return he ? `במדריך ${places.length} מקומות ${place ? 'ב' + place : ''}: ${spread}. כל מקום נבדק אישית.`
+                : `This guide lists ${places.length} places${place ? ' in ' + place : ''}: ${spread}. Each one visited or vetted personally.`;
+    }
+    if (intent === 'coffee') {
+      const top = pick(['cafe'], 4);
+      if (!top.length) return null;
+      return he ? `בתי הקפה המדורגים הגבוה ביותר: ${list(top)}.` : `The highest rated cafés here are ${list(top)}.`;
+    }
+    if (intent === 'spa') {
+      const top = pick(['wellness', 'stay', 'hotel'], 4);
+      if (!top.length) return null;
+      return he ? `מקומות הספא והלינה במדריך: ${list(top)}.` : `The spa and wellness places listed here: ${list(top)}.`;
+    }
+    if (intent === 'ski') {
+      const snow = places.find((p) => /snow|ski|סקי|שלג/i.test(p.name));
+      if (!snow) return null;
+      return he ? `כן — ${snow.name} מופיע במדריך${snow.rating ? ` (${snow.rating}/5)` : ''}.`
+                : `Yes — ${snow.name} is listed here${snow.rating ? ` (${snow.rating}/5)` : ''}.`;
+    }
+    if (intent === 'stay') {
+      const top = pick(['stay', 'hotel'], 4);
+      if (!top.length) return null;
+      const n = places.filter((p) => p.kind === 'stay' || p.kind === 'hotel').length;
+      return he ? `${n} מקומות לינה במדריך. המדורגים הגבוה ביותר: ${list(top)}.`
+                : `${n} places to stay are listed. The highest rated are ${list(top)}.`;
+    }
+    if (intent === 'price') {
+      const pr = [...new Set(places.map((p) => p.price).filter((v) => v && v.includes('€')))].sort().slice(0, 4);
+      if (!pr.length) return null;
+      return he ? `לפי המקומות שבמדריך, הטווחים הם ${pr.join(', ')} לאדם.`
+                : `Across the places listed here, ranges run ${pr.join(', ')} per person.`;
+    }
+    if (intent === 'days') {
+      const routes = (its || []).filter((i) => !ctx.regionId || i.region === ctx.regionId);
+      const named = routes.map((i) => { const d = durationOf(i); const t = he ? i.he?.title : i.en?.title;
+        return d && t ? `"${t}" (${he ? d.he : d.en})` : null; }).filter(Boolean);
+      if (!named.length) return null;
+      return he ? `מסלולים מוכנים במדריך: ${named.join(', ')}.` : `Ready-made routes here: ${named.join(', ')}.`;
+    }
+    return null;
+  }
+
+  // Build a page's FAQ from its own search queries.
+  function queryFaq(path, ctx, lang) {
+    const data = window.LT_FAQ_QUERIES;
+    if (!data || !data.pages) return [];
+    const entry = data.pages[path] || data.pages[path.replace(/\/$/, '')];
+    if (!entry) return [];
+
+    const seen = new Set();
+    const out = [];
+    for (const row of entry[lang] || []) {
+      const intent = classify(row.q);
+      if (seen.has(intent)) continue;
+      const a = answerFor(intent, ctx, lang);
+      if (!a) continue;
+      seen.add(intent);
+      out.push({ q: questionFor(intent, ctx.place, lang, row.q), a, from: row.q, impressions: row.impressions });
+      if (out.length >= 6) break;
+    }
+    return out;
+  }
+
+  window.LT_FAQ = { regionFaq, sectionFaq, queryFaq, faqSchema, regionName };
 
 })();

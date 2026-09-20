@@ -526,9 +526,24 @@ function RegionFaq({ region, places, lang, section }) {
   const [open, setOpen] = React.useState(0);
   const items = React.useMemo(() => {
     if (!window.LT_FAQ) return [];
-    return section
-      ? window.LT_FAQ.sectionFaq(section, window.LT_DATA, lang)
-      : window.LT_FAQ.regionFaq(region, places, window.LT_DATA.ITINERARIES, lang);
+    const D = window.LT_DATA;
+    const path = location.pathname.replace(/\/he\/?$/, '/').replace(/\/$/, '') || '/';
+    const scoped = section ? D.PLACES : places.filter((p) => p.region === region.id);
+    const ctx = {
+      places: scoped,
+      place: section ? null : window.LT_FAQ.regionName(region, lang),
+      regionId: section ? null : region.id,
+      regions: D.REGIONS, its: D.ITINERARIES, dishes: D.DISHES,
+    };
+
+    // Questions people actually searched for lead; the generic set fills the
+    // rest so a page with two real queries is not left with two questions.
+    const fromSearch = window.LT_FAQ.queryFaq(path, ctx, lang);
+    const generic = section
+      ? window.LT_FAQ.sectionFaq(section, D, lang)
+      : window.LT_FAQ.regionFaq(region, places, D.ITINERARIES, lang);
+    const have = new Set(fromSearch.map((i) => i.a));
+    return [...fromSearch, ...generic.filter((i) => !have.has(i.a))].slice(0, 6);
   }, [region, places, lang, section]);
 
   React.useEffect(() => {
