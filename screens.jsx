@@ -510,8 +510,59 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
             ))}
           </div>
         )}
+
+        <RegionFaq region={region} places={places} lang={lang} />
       </div>
     </div>
+  );
+}
+
+// Questions a visitor actually asks, answered from the guide's own data.
+// Rendered on the page because Google only honours FAQ markup when the content
+// is visible, and written into JSON-LD because that is the part an answer
+// engine reads.
+function RegionFaq({ region, places, lang }) {
+  const [open, setOpen] = React.useState(0);
+  const items = React.useMemo(() => {
+    if (!window.LT_FAQ) return [];
+    return window.LT_FAQ.regionFaq(region, places, window.LT_DATA.ITINERARIES, lang);
+  }, [region, places, lang]);
+
+  React.useEffect(() => {
+    if (!items.length || !window.LT_FAQ) return;
+    const id = 'ld-region-faq';
+    let el = document.getElementById(id);
+    if (!el) {
+      el = document.createElement('script');
+      el.type = 'application/ld+json';
+      el.id = id;
+      document.head.appendChild(el);
+    }
+    el.textContent = JSON.stringify(window.LT_FAQ.faqSchema(items));
+    return () => { const e = document.getElementById(id); if (e) e.remove(); };
+  }, [items]);
+
+  if (!items.length) return null;
+
+  return (
+    <section className="region-faq">
+      <div className="section-eyebrow">{lang === 'he' ? 'שאלות נפוצות' : 'Common questions'}</div>
+      <div className="faq-list">
+        {items.map((item, i) => (
+          <div className={`faq-item ${open === i ? 'open' : ''}`} key={item.q}>
+            <button
+              className="faq-q"
+              aria-expanded={open === i}
+              onClick={() => setOpen(open === i ? -1 : i)}
+            >
+              <span>{item.q}</span>
+              <span className="faq-mark" aria-hidden="true">{open === i ? '−' : '+'}</span>
+            </button>
+            {open === i && <p className="faq-a">{item.a}</p>}
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
 

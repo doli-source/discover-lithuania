@@ -2463,3 +2463,57 @@ html.a11y-reduce-motion *::after {
     max-width: 300px !important;
   }
 }
+
+/* ── Region FAQ ─────────────────────────────────────────────────────────── */
+.region-faq {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+.faq-list {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.faq-item {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+}
+.faq-item.open { background: rgba(255, 255, 255, 0.9); }
+.faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 500;
+  color: inherit;
+  text-align: start;
+  line-height: 1.45;
+}
+.faq-q:hover { background: rgba(0, 0, 0, 0.03); }
+.faq-q:focus-visible { outline: 2px solid currentColor; outline-offset: -2px; }
+.faq-mark {
+  flex: none;
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.45;
+}
+.faq-a {
+  padding: 0 18px 18px;
+  margin: 0;
+  line-height: 1.65;
+  opacity: 0.85;
+}
+@media (max-width: 640px) {
+  .region-faq { margin-top: 32px; padding-top: 24px; }
+  .faq-q { padding: 14px 15px; }
+  .faq-a { padding: 0 15px 15px; }
+}

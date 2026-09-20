@@ -219,6 +219,37 @@ function checkOrphanRegions() {
   }
 }
 
+// 3f. The Hebrew spelling override is a patch over wrong data. It should
+//     disappear once the rows are corrected, so it is surfaced every run.
+function checkSpellingOverride() {
+  const src = fs.readFileSync(path.join(ROOT, 'supabase-data.js'), 'utf8');
+  const m = src.match(/const HE_NAME_FIX = \{([^}]*)\}/);
+  if (!m || !m[1].trim()) return;
+  const ids = [...m[1].matchAll(/(\w+)\s*:/g)].map((x) => x[1]);
+  if (ids.length) {
+    warn('spelling-override', `still correcting Hebrew names in code for: ${ids.join(', ')} — ` +
+      `fix regions.name_he in Supabase and delete the entry`);
+  }
+}
+
+// 3g. A visible FAQ and its schema must come from the same place, or the page
+//     can end up showing one thing and telling Google another.
+function checkFaq() {
+  const faq = path.join(ROOT, 'faq-data.js');
+  if (!fs.existsSync(faq)) return fail('faq', 'faq-data.js is missing');
+  const screens = fs.readFileSync(path.join(ROOT, 'screens.jsx'), 'utf8');
+  if (!screens.includes('window.LT_FAQ.regionFaq')) fail('faq', 'screens.jsx does not render the FAQ');
+  if (!screens.includes('window.LT_FAQ.faqSchema')) fail('faq', 'screens.jsx does not emit FAQ schema');
+  const loader = fs.readFileSync(path.join(ROOT, 'supabase-data.js'), 'utf8');
+  if (!loader.includes('faq-data.js')) fail('faq', 'faq-data.js is never loaded');
+  const src = fs.readFileSync(faq, 'utf8');
+  for (const banned of ['safe', 'best time to visit']) {
+    if (new RegExp(`['\`][^'\`]*${banned}`, 'i').test(src)) {
+      fail('faq', `faq-data.js answers "${banned}" — there is no data behind that`);
+    }
+  }
+}
+
 // 4. Config files that the host does not read are inert and must not be
 //    trusted. The site runs on GitHub Pages, which ignores both of these.
 function checkHostConfig() {
@@ -331,6 +362,8 @@ function checkUnpushed() {
   checkRegionImages();
   checkJsonLd(files);
   checkOrphanRegions();
+  checkSpellingOverride();
+  checkFaq();
   checkCanonicalVsRobots();
   checkHostConfig();
   checkImmutable();

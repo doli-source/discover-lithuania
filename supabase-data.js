@@ -7,11 +7,13 @@
   const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhzb3Z3eWRzY213eXl2c2VtdWRnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxMDkzOTEsImV4cCI6MjEwMTY4NTM5MX0.OdiHpVogpp_5U7v-XxHdapRhpP-Zz--7Yw82X0zWruA';
   const MAP_URL = 'https://maps.app.goo.gl/JcnKq69fj1RMw1RL7';
 
+  const PLAIN_SCRIPTS = ['/faq-data.js?v=20260920b'];
+
   const JSX_SCRIPTS = [
     '/tweaks-panel.jsx?v=20260626b',
     '/shared.jsx?v=20260802a',
-    '/screens.jsx?v=20260920a',
-    '/app.jsx?v=20260920a',
+    '/screens.jsx?v=20260920b',
+    '/app.jsx?v=20260920b',
   ];
 
   function rest(table, qs) {
@@ -77,9 +79,14 @@
       };
     });
 
+    // Two regions are spelled in the database differently from the way people
+    // search for them in Hebrew, and the site should match the search. Fix the
+    // row in Supabase and delete the entry; check.js flags what is still here.
+    const HE_NAME_FIX = { druskininkai: 'דרוסקינינקאי', trakai: 'טרקאי' };
+
     const REGIONS = regions.map(r => ({
       id:          r.id,
-      he:          { name: r.name_he, tag: r.tag_he,  blurb: r.blurb_he },
+      he:          { name: HE_NAME_FIX[r.id] || r.name_he, tag: r.tag_he,  blurb: r.blurb_he },
       en:          { name: r.name_en, tag: r.tag_en,  blurb: r.blurb_en },
       accent:      r.accent_color || '#C28840',
       placeholder: '',
@@ -202,6 +209,16 @@
       REGIONS: [], PLACES: [], LANDMARKS: [],
       DISHES: [], ITINERARIES: [], FACTS: [], MAP_URL
     };
+  }
+
+  // ─── Plain JS first: the JSX below expects window.LT_FAQ to exist ─────────
+  try {
+    for (const src of PLAIN_SCRIPTS) {
+      const resp = await fetch(src);
+      (0, eval)(await resp.text());
+    }
+  } catch (err) {
+    console.error('[LT] Failed to run plain scripts:', err);
   }
 
   // ─── Compile & run JSX scripts in order ────────────────────────────────────
