@@ -250,5 +250,56 @@
   }
 })();
 </script>
+<script>/* he-support-v1 */
+(function(){
+  var lang = new URLSearchParams(location.search).get('lang');
+  if (lang !== 'he') return;
+  document.documentElement.lang = 'he';
+  document.documentElement.dir  = 'rtl';
+  // Self-canonical for the Hebrew variant. Without this the ?lang=he URL
+  // claims the English page as its canonical, contradicting the hreflang
+  // alternate and pushing Google to drop the Hebrew version.
+  var _c = document.querySelector('link[rel="canonical"]');
+  if (_c && _c.href.indexOf('lang=he') === -1) {
+    _c.href = _c.href + (_c.href.indexOf('?') === -1 ? '?' : '&') + 'lang=he';
+  }
+  var _og = document.querySelector('meta[property="og:url"]');
+  if (_og && _og.content.indexOf('lang=he') === -1) {
+    _og.content = _og.content + (_og.content.indexOf('?') === -1 ? '?' : '&') + 'lang=he';
+  }
+  var L = {
+    'About this place':'על המקום הזה',
+    'Details':'פרטים',
+    'Type':'סוג',
+    'Hours':'שעות פעילות',
+    'Price':'מחיר',
+    'Region':'אזור',
+    'See it on the map':'ראה על המפה',
+    'Discover Lithuania':'גלה את ליטא',
+    "A Traveler's Guide":'מדריך הטיול שלך'
+  };
+  document.querySelectorAll('.card-title,.detail-label,.logo-name,.logo-sub').forEach(function(el){
+    var t = el.textContent.trim();
+    if (L[t]) el.textContent = L[t];
+  });
+  var d = document.querySelector('.description[data-he]');
+  if (d) d.textContent = d.dataset.he;
+  var tp = document.querySelector('.detail-value[data-he]');
+  if (tp) tp.textContent = tp.dataset.he;
+  document.querySelectorAll('.region-line').forEach(function(el){
+    el.innerHTML = el.innerHTML.replace(/, Lithuania/, ', ליטא');
+  });
+  document.querySelectorAll('.rating-row span').forEach(function(el){
+    el.textContent = el.textContent.replace(/\(([\d,]+) reviews\)/, '($1 ביקורות)');
+  });
+  document.querySelectorAll('.cta-btn').forEach(function(el){
+    el.textContent = 'פתח ב‑Discover Lithuania ←';
+  });
+  document.querySelectorAll('a[href^="https://lithuaniadiscovery.com"]').forEach(function(a){
+    var h = a.getAttribute('href');
+    if (h && !h.includes('lang=he')) a.href = h + (h.includes('?') ? '&' : '?') + 'lang=he';
+  });
+})();
+</script>
 </body>
 </html>

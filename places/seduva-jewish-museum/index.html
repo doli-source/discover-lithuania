@@ -284,6 +284,17 @@
   if (lang !== 'he') return;
   document.documentElement.lang = 'he';
   document.documentElement.dir  = 'rtl';
+  // Self-canonical for the Hebrew variant. Without this the ?lang=he URL
+  // claims the English page as its canonical, contradicting the hreflang
+  // alternate and pushing Google to drop the Hebrew version.
+  var _c = document.querySelector('link[rel="canonical"]');
+  if (_c && _c.href.indexOf('lang=he') === -1) {
+    _c.href = _c.href + (_c.href.indexOf('?') === -1 ? '?' : '&') + 'lang=he';
+  }
+  var _og = document.querySelector('meta[property="og:url"]');
+  if (_og && _og.content.indexOf('lang=he') === -1) {
+    _og.content = _og.content + (_og.content.indexOf('?') === -1 ? '?' : '&') + 'lang=he';
+  }
   var L = {
     'About this place':'על המקום הזה',
     'Details':'פרטים',
