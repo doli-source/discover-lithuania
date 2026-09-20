@@ -245,7 +245,7 @@
     { id: 'see',    re: new RegExp('\\b(castle|museum|attraction|attractions|things to do|sightseeing|old town|beach|dune)\\b|' + heWord('אטרקציות','טירה','מוזיאון','חוף','לראות'), 'i') },
   ];
 
-  const classify = (q) => (INTENTS.find((i) => i.re.test(q)) || { id: 'general' }).id;
+  const classify = (q) => (INTENTS.find((i) => i.re.test(q)) || { id: 'see' }).id;
 
   // One question per intent, phrased around the place and, where it reads
   // naturally, the searcher's own wording.
@@ -263,7 +263,7 @@
       case 'price':  return he ? `כמה עולה לאכול ${at}?`             : `How much does eating out cost ${at}?`;
       case 'days':   return he ? `כמה זמן כדאי להקדיש ${at}?`        : `How long do you need ${at}?`;
       case 'see':    return he ? `מה יש לראות ולעשות ${at}?`         : `What is there to see and do ${at}?`;
-      default:       return he ? `מה יש ${at}?`                      : `What is there ${at}?`;
+      default:       return he ? `מה יש לראות ולעשות ${at}?`         : `What is there to see and do ${at}?`;
     }
   }
 

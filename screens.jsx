@@ -542,8 +542,18 @@ function RegionFaq({ region, places, lang, section }) {
     const generic = section
       ? window.LT_FAQ.sectionFaq(section, D, lang)
       : window.LT_FAQ.regionFaq(region, places, D.ITINERARIES, lang);
-    const have = new Set(fromSearch.map((i) => i.a));
-    return [...fromSearch, ...generic.filter((i) => !have.has(i.a))].slice(0, 6);
+    // Dedupe on the question as well as the answer: the search-led set and the
+    // generic set can arrive at the same question by different routes.
+    const seen = new Set();
+    const merged = [];
+    for (const item of [...fromSearch, ...generic]) {
+      const key = item.q + '|' + item.a;
+      if (seen.has(item.q) || seen.has(item.a) || seen.has(key)) continue;
+      seen.add(item.q); seen.add(item.a); seen.add(key);
+      merged.push(item);
+      if (merged.length === 6) break;
+    }
+    return merged;
   }, [region, places, lang, section]);
 
   React.useEffect(() => {

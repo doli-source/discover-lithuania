@@ -7,15 +7,15 @@
   const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhzb3Z3eWRzY213eXl2c2VtdWRnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxMDkzOTEsImV4cCI6MjEwMTY4NTM5MX0.OdiHpVogpp_5U7v-XxHdapRhpP-Zz--7Yw82X0zWruA';
   const MAP_URL = 'https://maps.app.goo.gl/JcnKq69fj1RMw1RL7';
 
-  const FAQ_QUERIES_V = '20260920g';
+  const FAQ_QUERIES_V = '20260920h';
 
-  const PLAIN_SCRIPTS = ['/faq-data.js?v=20260920g'];
+  const PLAIN_SCRIPTS = ['/faq-data.js?v=20260920h'];
 
   const JSX_SCRIPTS = [
     '/tweaks-panel.jsx?v=20260626b',
     '/shared.jsx?v=20260802a',
-    '/screens.jsx?v=20260920g',
-    '/app.jsx?v=20260920g',
+    '/screens.jsx?v=20260920h',
+    '/app.jsx?v=20260920h',
   ];
 
   function rest(table, qs) {
