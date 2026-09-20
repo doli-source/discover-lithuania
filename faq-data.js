@@ -88,7 +88,7 @@
 
     const top = topRated(places, 4);
     if (top.length) {
-      const named = top.map((p) => `${p.name} (${p.rating}/5)`).join(', ');
+      const named = top.map((p) => p.name).join(', ');
       out.push(he
         ? { q: `איפה הכי כדאי לאכול ב${name}?`, a: `המקומות המדורגים הגבוה ביותר במדריך: ${named}.` }
         : { q: `Where are the best places to eat in ${name}?`, a: `The highest rated on this guide are ${named}.` });
@@ -134,7 +134,7 @@
     places.filter((p) => kinds.includes(p.kind) && p.rating)
           .sort((a, b) => b.rating - a.rating).slice(0, n);
 
-  const named = (list) => list.map((p) => `${p.name} (${p.rating}/5)`).join(', ');
+  const named = (list) => list.map((p) => p.name).join(', ');
 
   function sectionFaq(section, data, lang) {
     const he = lang === 'he';
@@ -273,7 +273,7 @@
     const { places, place, regions, its, dishes } = ctx;
     const pick = (kinds, n) => places.filter((p) => kinds.includes(p.kind) && p.rating)
                                      .sort((a, b) => b.rating - a.rating).slice(0, n);
-    const list = (arr) => arr.map((p) => `${p.name} (${p.rating}/5)`).join(', ');
+    const list = (arr) => arr.map((p) => p.name).join(', ');
 
     if (intent === 'eat' || intent === 'general' || intent === 'see') {
       const counts = {};
@@ -303,8 +303,8 @@
     if (intent === 'ski') {
       const snow = places.find((p) => /\bsnow\b|\bski\b|סקי|שלג/i.test(p.name));
       if (!snow) return null;
-      return he ? `כן — ${snow.name} מופיע במדריך${snow.rating ? ` (${snow.rating}/5)` : ''}.`
-                : `Yes — ${snow.name} is listed here${snow.rating ? ` (${snow.rating}/5)` : ''}.`;
+      return he ? `כן — ${snow.name} מופיע במדריך.`
+                : `Yes — ${snow.name} is listed here.`;
     }
     if (intent === 'stay') {
       const top = pick(['stay', 'hotel'], 4);
