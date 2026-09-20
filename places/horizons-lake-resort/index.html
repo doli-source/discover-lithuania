@@ -15,8 +15,8 @@
 
   <link rel="canonical" href="https://lithuaniadiscovery.com/places/horizons-lake-resort/">
   <link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/places/horizons-lake-resort/">
+  <link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/places/horizons-lake-resort/he/">
   <link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/places/horizons-lake-resort/">
-  <link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/places/horizons-lake-resort/?lang=he">
 
   <meta property="og:type" content="place">
   <meta property="og:url" content="https://lithuaniadiscovery.com/places/horizons-lake-resort/">
@@ -42,6 +42,7 @@
       "@id": "https://lithuaniadiscovery.com/places/horizons-lake-resort/",
       "name": "Horizons Lake Resort & Spa",
       "description": "Book the lakeside chalet with jacuzzi terrace for a proper splurge. Perfect base for Dzūkija National Park.",
+      "inLanguage": "en",
       "url": "https://www.horizons.lt/",
       "image": "https://lithuaniadiscovery.com/og-preview.png",
       "geo": {
@@ -74,6 +75,7 @@
       "url": "https://lithuaniadiscovery.com/places/horizons-lake-resort/",
       "name": "Horizons Lake Resort & Spa — Lithuanian Countryside | Discover Lithuania",
       "description": "Book the lakeside chalet with jacuzzi terrace for a proper splurge. Perfect base for Dzūkija National Park.",
+      "inLanguage": "en",
       "isPartOf": {
         "@id": "https://lithuaniadiscovery.com/#website"
       },
@@ -174,20 +176,20 @@
     <div class="kind-pill">Place to Stay</div>
     <h1 class="place-name">🏨 Horizons Lake Resort &amp; Spa</h1>
     <p class="region-line"><a href="https://lithuaniadiscovery.com/explore/countryside/">Lithuanian Countryside</a>, Lithuania</p>
-    <div class="rating-row"><span class="stars" aria-label="4.8 out of 5 stars">★★★★★</span> <span class="rating-num">4.8</span></div>
+    <div class="rating-row"><span class="stars" aria-label="4.8/5">★★★★★</span> <span class="rating-num">4.8</span></div>
   </header>
 
   <main class="content">
     
     <div class="card">
       <h2>About</h2>
-      <p class="description" data-he="כדאי להזמין את השאלט עם הג׳קוזי על המרפסת. בסיס מושלם לבחינת פארק הלאומי דזוקיה.">Book the lakeside chalet with jacuzzi terrace for a proper splurge. Perfect base for Dzūkija National Park.</p>
+      <p class="description">Book the lakeside chalet with jacuzzi terrace for a proper splurge. Perfect base for Dzūkija National Park.</p>
     </div>
 
     <div class="card">
       <h2>Details</h2>
       <div class="details-grid">
-        <div class="detail"><div class="detail-label">Type</div><div class="detail-value" data-he="ריזורט וספא על שפת האגם">Lakeside Resort &amp; Spa</div></div>
+        <div class="detail"><div class="detail-label">Type</div><div class="detail-value">Lakeside Resort &amp; Spa</div></div>
         <div class="detail"><div class="detail-label">Hours</div><div class="detail-value">By reservation</div></div>
         <div class="detail"><div class="detail-label">Price</div><div class="detail-value">3</div></div>
         <div class="detail"><div class="detail-label">Website</div><div class="detail-value"><a href="https://www.horizons.lt/" target="_blank" rel="noopener">www.horizons.lt</a></div></div>
@@ -203,8 +205,8 @@
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         src="https://www.google.com/maps?q=54.1667124,24.4103741&output=embed"
-        title="Horizons Lake Resort &amp; Spa location map"
-        aria-label="Map showing location of Horizons Lake Resort &amp; Spa">
+        title="Horizons Lake Resort &amp; Spa — Map"
+        aria-label="Horizons Lake Resort &amp; Spa — Map">
       </iframe>
     </div>
 
@@ -265,17 +267,13 @@
   if (lang !== 'he') return;
   document.documentElement.lang = 'he';
   document.documentElement.dir  = 'rtl';
-  // Self-canonical for the Hebrew variant. Without this the ?lang=he URL
-  // claims the English page as its canonical, contradicting the hreflang
-  // alternate and pushing Google to drop the Hebrew version.
+  // ?lang=he shows Hebrew but its title, description and schema stay English,
+  // so it is not the page Google should index for Hebrew. Point it at the real
+  // Hebrew page, which is Hebrew all the way down.
   var _c = document.querySelector('link[rel="canonical"]');
-  if (_c && _c.href.indexOf('lang=he') === -1) {
-    _c.href = _c.href + (_c.href.indexOf('?') === -1 ? '?' : '&') + 'lang=he';
-  }
+  if (_c && _c.href.indexOf('/he/') === -1) _c.href = _c.href.replace(/\/$/, '') + '/he/';
   var _og = document.querySelector('meta[property="og:url"]');
-  if (_og && _og.content.indexOf('lang=he') === -1) {
-    _og.content = _og.content + (_og.content.indexOf('?') === -1 ? '?' : '&') + 'lang=he';
-  }
+  if (_og && _og.content.indexOf('/he/') === -1) _og.content = _og.content.replace(/\/$/, '') + '/he/';
   var L = {
     'About this place':'על המקום הזה',
     'Details':'פרטים',

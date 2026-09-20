@@ -86,6 +86,23 @@ async function loadPlaces() {
   const seen = new Set();
   return [...fromDb, ...inline].filter((p) => !seen.has(p.id) && seen.add(p.id));
 }
+
+async function loadHebrewNames(places) {
+  const [regions, translations] = await Promise.all([
+    rest('regions', 'select=id,name_he'),
+    rest('place_translations', 'select=place_id,lang,name'),
+  ]);
+  for (const r of regions) if (r.name_he) REGION_NAMES_HE[r.id] = r.name_he;
+
+  // Hebrew place names are keyed by the row UUID, so map them back via slug.
+  const rows = await rest('places', 'select=id,slug');
+  const uuidToSlug = Object.fromEntries(rows.map((r) => [r.id, r.slug]));
+  const byName = {};
+  for (const t of translations) {
+    if (t.lang === 'he' && t.name && uuidToSlug[t.place_id]) byName[uuidToSlug[t.place_id]] = t.name;
+  }
+  for (const p of places) if (byName[p.id]) p.nameHe = byName[p.id];
+}
 const TODAY = new Date().toISOString().slice(0, 10);
 
 // Set once the live list is loaded; the page template renders it as copy.
@@ -102,6 +119,39 @@ const REGION_NAMES = {
   palanga:      'Palanga',
   moletai:      'Molėtai',
   zarasai:      'Zarasai',
+};
+
+// Filled from the regions table at startup.
+const REGION_NAMES_HE = {};
+
+// A Hebrew place page is a real page at its own URL, not the English one with
+// the text swapped client-side. Everything a crawler reads — title, meta
+// description, Open Graph, schema — has to be Hebrew in the served HTML.
+const STRINGS = {
+  en: {
+    dir: 'ltr', country: 'Lithuania', site: 'Discover Lithuania',
+    about: 'About', details: 'Details', type: 'Type', hours: 'Hours',
+    price: 'Price', website: 'Website', region: 'Region', map: 'Map',
+    openMaps: 'Open in Google Maps', ctaTitle: 'Explore on the interactive map',
+    ctaBtn: 'Open in Discover Lithuania →', reviews: (n) => `(${n} reviews)`,
+    cta: (name, n) => `See ${name} alongside all ${n} handpicked places in Lithuania.`,
+    fallbackDesc: (name, kind, region) => `${name} is a ${kind.toLowerCase()} in ${region}, Lithuania.`,
+  },
+  he: {
+    dir: 'rtl', country: 'ליטא', site: 'גלה את ליטא',
+    about: 'על המקום', details: 'פרטים', type: 'סוג', hours: 'שעות פתיחה',
+    price: 'מחיר', website: 'אתר', region: 'אזור', map: 'מפה',
+    openMaps: 'פתח ב‑Google Maps', ctaTitle: 'על המפה האינטראקטיבית',
+    ctaBtn: 'פתח ב‑גלה את ליטא ←', reviews: (n) => `(${n} ביקורות)`,
+    cta: (name, n) => `${name} יחד עם עוד ${n} מקומות נבחרים בליטא.`,
+    fallbackDesc: (name, kind, region) => `${name} — ${kind} ב${region}, ליטא.`,
+  },
+};
+
+const KIND_LABEL_HE = {
+  cafe: 'בית קפה', restaurant: 'מסעדה', market: 'שוק',
+  culture: 'אתר תרבות', nature: 'אתר טבע', stay: 'מקום לינה',
+  hotel: 'מלון', info: 'אטרקציה', wellness: 'ספא ובריאות',
 };
 
 const KIND_SCHEMA = {
@@ -137,10 +187,39 @@ function escHtml(str) {
     .replace(/"/g, '&quot;');
 }
 
-function buildSchema(p) {
+// Everything that differs between the two language versions of one place,
+// resolved in one spot so the schema and the page can never disagree.
+function view(p, lang) {
+  const he = lang === 'he';
+  const S = STRINGS[lang];
+  const region = he ? (REGION_NAMES_HE[p.region] || REGION_NAMES[p.region] || p.region)
+                    : (REGION_NAMES[p.region] || p.region);
+  const kind = he ? (KIND_LABEL_HE[p.kind] || p.typeHe || '')
+                  : (KIND_LABEL[p.kind] || p.type || '');
+  const name = he ? (p.nameHe || p.name) : p.name;
+  const blurb = he ? (p.nivHe || p.niv || '') : (p.niv || '');
+  const hours = he ? (p.hoursHe || p.hours || '') : (p.hours || '');
+  const typeLabel = he ? (p.typeHe || p.type || '') : (p.type || '');
+
+  const enUrl = `${BASE_URL}/places/${p.id}/`;
+  const heUrl = `${BASE_URL}/places/${p.id}/he/`;
+  const desc = blurb
+    ? blurb.slice(0, 155) + (blurb.length > 155 ? '…' : '')
+    : S.fallbackDesc(name, kind, region);
+
+  return {
+    S, he, lang, region, kind, name, blurb, hours, typeLabel, desc,
+    enUrl, heUrl,
+    url: he ? heUrl : enUrl,
+    title: `${name} — ${region}, ${S.country} | ${S.site}`,
+  };
+}
+
+function buildSchema(p, lang) {
+  const v = view(p, lang);
   const schemaType = KIND_SCHEMA[p.kind] || 'LocalBusiness';
-  const regionName = REGION_NAMES[p.region] || p.region;
-  const url = `${BASE_URL}/places/${p.id}/`;
+  const regionName = v.region;
+  const url = v.url;
 
   const schema = {
     '@context': 'https://schema.org',
@@ -148,8 +227,9 @@ function buildSchema(p) {
       {
         '@type': schemaType,
         '@id': url,
-        name: p.name,
-        description: p.niv || '',
+        name: v.name,
+        description: v.blurb,
+        inLanguage: lang,
         url: url,
         image: `${BASE_URL}/og-preview.png`,
         ...(p.lat && p.lng ? {
@@ -168,7 +248,7 @@ function buildSchema(p) {
             bestRating: 5,
           },
         } : {}),
-        ...(p.hours ? { openingHours: p.hours } : {}),
+        ...(v.hours ? { openingHours: v.hours } : {}),
         ...(p.website ? { url: p.website, sameAs: [p.website] } : {}),
         ...(p.price ? { priceRange: p.price } : {}),
         address: {
@@ -182,15 +262,16 @@ function buildSchema(p) {
         '@type': 'WebPage',
         '@id': `${url}#webpage`,
         url: url,
-        name: `${p.name} — ${regionName} | Discover Lithuania`,
-        description: p.niv || '',
+        name: `${v.name} — ${regionName} | ${v.S.site}`,
+        description: v.blurb,
+        inLanguage: lang,
         isPartOf: { '@id': `${BASE_URL}/#website` },
         breadcrumb: {
           '@type': 'BreadcrumbList',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Discover Lithuania', item: BASE_URL },
+            { '@type': 'ListItem', position: 1, name: v.S.site, item: BASE_URL },
             { '@type': 'ListItem', position: 2, name: regionName, item: `${BASE_URL}/explore/${p.region}/` },
-            { '@type': 'ListItem', position: 3, name: p.name, item: url },
+            { '@type': 'ListItem', position: 3, name: v.name, item: url },
           ],
         },
       },
@@ -200,24 +281,24 @@ function buildSchema(p) {
   return JSON.stringify(schema, null, 2);
 }
 
-function buildPage(p) {
-  const regionName = REGION_NAMES[p.region] || p.region;
-  const kindLabel = KIND_LABEL[p.kind] || p.type || '';
-  const title = `${p.name} — ${regionName}, Lithuania | Discover Lithuania`;
-  const desc = p.niv
-    ? p.niv.slice(0, 155) + (p.niv.length > 155 ? '…' : '')
-    : `${p.name} is a ${kindLabel.toLowerCase()} in ${regionName}, Lithuania.`;
-  const url = `${BASE_URL}/places/${p.id}/`;
+function buildPage(p, lang) {
+  const v = view(p, lang);
+  const S = v.S;
+  const regionName = v.region;
+  const kindLabel = v.kind;
+  const title = v.title;
+  const desc = v.desc;
+  const url = v.url;
   const mapsEmbed = p.lat && p.lng
     ? `https://www.google.com/maps?q=${p.lat},${p.lng}&output=embed`
     : null;
 
   const starsHtml = p.rating
-    ? `<span class="stars" aria-label="${p.rating} out of 5 stars">${'★'.repeat(Math.round(p.rating))}${'☆'.repeat(5 - Math.round(p.rating))}</span> <span class="rating-num">${p.rating}</span>${p.reviews ? ` <span class="reviews">(${p.reviews.toLocaleString()} reviews)</span>` : ''}`
+    ? `<span class="stars" aria-label="${p.rating}/5">${'★'.repeat(Math.round(p.rating))}${'☆'.repeat(5 - Math.round(p.rating))}</span> <span class="rating-num">${p.rating}</span>${p.reviews ? ` <span class="reviews">${S.reviews(p.reviews.toLocaleString())}</span>` : ''}`
     : '';
 
   return `<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="${lang}" dir="${S.dir}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -232,9 +313,9 @@ function buildPage(p) {
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('set','user_properties',{traffic_type:window.__trafficType||'real'});gtag('config','G-0YD451PRX4',{send_page_view:false});</script>
 
   <link rel="canonical" href="${url}">
-  <link rel="alternate" hreflang="en" href="${url}">
-  <link rel="alternate" hreflang="x-default" href="${url}">
-  <link rel="alternate" hreflang="he" href="${url}?lang=he">
+  <link rel="alternate" hreflang="en" href="${v.enUrl}">
+  <link rel="alternate" hreflang="he" href="${v.heUrl}">
+  <link rel="alternate" hreflang="x-default" href="${v.enUrl}">
 
   <meta property="og:type" content="place">
   <meta property="og:url" content="${url}">
@@ -252,7 +333,7 @@ function buildPage(p) {
   <meta name="twitter:image" content="${BASE_URL}/og-preview.png">
 
   <script type="application/ld+json">
-${buildSchema(p)}
+${buildSchema(p, lang)}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -313,36 +394,36 @@ ${buildSchema(p)}
 </head>
 <body>
   <nav class="topbar" aria-label="breadcrumb">
-    <a href="${BASE_URL}/">Discover Lithuania</a>
+    <a href="${v.he ? BASE_URL + '/?lang=he' : BASE_URL + '/'}">${escHtml(S.site)}</a>
     <span class="topbar-sep">›</span>
     <a href="${BASE_URL}/explore/${p.region}/">${escHtml(regionName)}</a>
     <span class="topbar-sep">›</span>
-    <span>${escHtml(p.name)}</span>
+    <span>${escHtml(v.name)}</span>
   </nav>
 
   <header class="hero">
     <div class="kind-pill">${escHtml(kindLabel)}</div>
-    <h1 class="place-name">${escHtml(p.emoji || '')} ${escHtml(p.name)}</h1>
-    <p class="region-line"><a href="${BASE_URL}/explore/${p.region}/">${escHtml(regionName)}</a>, Lithuania</p>
+    <h1 class="place-name">${escHtml(p.emoji || '')} ${escHtml(v.name)}</h1>
+    <p class="region-line"><a href="${BASE_URL}/explore/${p.region}/${v.he ? '?lang=he' : ''}">${escHtml(regionName)}</a>, ${escHtml(S.country)}</p>
     ${p.rating ? `<div class="rating-row">${starsHtml}</div>` : ''}
   </header>
 
   <main class="content">
-    ${p.niv ? `
+    ${v.blurb ? `
     <div class="card">
-      <h2>About</h2>
-      <p class="description"${p.nivHe ? ` data-he="${escHtml(p.nivHe)}"` : ''}>${escHtml(p.niv)}</p>
+      <h2>${escHtml(S.about)}</h2>
+      <p class="description">${escHtml(v.blurb)}</p>
     </div>` : ''}
 
     <div class="card">
-      <h2>Details</h2>
+      <h2>${escHtml(S.details)}</h2>
       <div class="details-grid">
-        ${p.type ? `<div class="detail"><div class="detail-label">Type</div><div class="detail-value"${p.typeHe ? ` data-he="${escHtml(p.typeHe)}"` : ''}>${escHtml(p.type)}</div></div>` : ''}
-        ${p.hours ? `<div class="detail"><div class="detail-label">Hours</div><div class="detail-value">${escHtml(p.hours)}</div></div>` : ''}
-        ${p.price ? `<div class="detail"><div class="detail-label">Price</div><div class="detail-value">${escHtml(p.price)}</div></div>` : ''}
-        ${p.website ? `<div class="detail"><div class="detail-label">Website</div><div class="detail-value"><a href="${escHtml(p.website)}" target="_blank" rel="noopener">${escHtml(p.website.replace(/^https?:\/\//, '').replace(/\/$/, ''))}</a></div></div>` : ''}
-        <div class="detail"><div class="detail-label">Region</div><div class="detail-value"><a href="${BASE_URL}/explore/${p.region}/">${escHtml(regionName)}</a></div></div>
-        ${p.lat && p.lng ? `<div class="detail"><div class="detail-label">Map</div><div class="detail-value"><a href="https://www.google.com/maps?q=${p.lat},${p.lng}" target="_blank" rel="noopener">Open in Google Maps</a></div></div>` : ''}
+        ${v.typeLabel ? `<div class="detail"><div class="detail-label">${escHtml(S.type)}</div><div class="detail-value">${escHtml(v.typeLabel)}</div></div>` : ''}
+        ${v.hours ? `<div class="detail"><div class="detail-label">${escHtml(S.hours)}</div><div class="detail-value">${escHtml(v.hours)}</div></div>` : ''}
+        ${p.price ? `<div class="detail"><div class="detail-label">${escHtml(S.price)}</div><div class="detail-value">${escHtml(p.price)}</div></div>` : ''}
+        ${p.website ? `<div class="detail"><div class="detail-label">${escHtml(S.website)}</div><div class="detail-value"><a href="${escHtml(p.website)}" target="_blank" rel="noopener">${escHtml(p.website.replace(/^https?:\/\//, '').replace(/\/$/, ''))}</a></div></div>` : ''}
+        <div class="detail"><div class="detail-label">${escHtml(S.region)}</div><div class="detail-value"><a href="${BASE_URL}/explore/${p.region}/${v.he ? '?lang=he' : ''}">${escHtml(regionName)}</a></div></div>
+        ${p.lat && p.lng ? `<div class="detail"><div class="detail-label">${escHtml(S.map)}</div><div class="detail-value"><a href="https://www.google.com/maps?q=${p.lat},${p.lng}" target="_blank" rel="noopener">${escHtml(S.openMaps)}</a></div></div>` : ''}
       </div>
     </div>
 
@@ -353,15 +434,15 @@ ${buildSchema(p)}
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         src="${mapsEmbed}"
-        title="${escHtml(p.name)} location map"
-        aria-label="Map showing location of ${escHtml(p.name)}">
+        title="${escHtml(v.name)} — ${escHtml(S.map)}"
+        aria-label="${escHtml(v.name)} — ${escHtml(S.map)}">
       </iframe>
     </div>` : ''}
 
     <div class="card cta-card">
-      <h2>Explore on the interactive map</h2>
-      <p>See ${escHtml(p.name)} alongside all ${TOTAL_PLACES} handpicked places in Lithuania.</p>
-      <a class="cta-btn" href="${BASE_URL}/?place=${p.id}">Open in Discover Lithuania →</a>
+      <h2>${escHtml(S.ctaTitle)}</h2>
+      <p>${escHtml(S.cta(v.name, TOTAL_PLACES))}</p>
+      <a class="cta-btn" href="${BASE_URL}/?place=${p.id}${v.he ? '&lang=he' : ''}">${escHtml(S.ctaBtn)}</a>
     </div>
   </main>
 
@@ -415,17 +496,13 @@ ${buildSchema(p)}
   if (lang !== 'he') return;
   document.documentElement.lang = 'he';
   document.documentElement.dir  = 'rtl';
-  // Self-canonical for the Hebrew variant. Without this the ?lang=he URL
-  // claims the English page as its canonical, contradicting the hreflang
-  // alternate and pushing Google to drop the Hebrew version.
+  // ?lang=he shows Hebrew but its title, description and schema stay English,
+  // so it is not the page Google should index for Hebrew. Point it at the real
+  // Hebrew page, which is Hebrew all the way down.
   var _c = document.querySelector('link[rel="canonical"]');
-  if (_c && _c.href.indexOf('lang=he') === -1) {
-    _c.href = _c.href + (_c.href.indexOf('?') === -1 ? '?' : '&') + 'lang=he';
-  }
+  if (_c && _c.href.indexOf('/he/') === -1) _c.href = _c.href.replace(/\\/$/, '') + '/he/';
   var _og = document.querySelector('meta[property="og:url"]');
-  if (_og && _og.content.indexOf('lang=he') === -1) {
-    _og.content = _og.content + (_og.content.indexOf('?') === -1 ? '?' : '&') + 'lang=he';
-  }
+  if (_og && _og.content.indexOf('/he/') === -1) _og.content = _og.content.replace(/\\/$/, '') + '/he/';
   var L = {
     'About this place':'על המקום הזה',
     'Details':'פרטים',
@@ -473,6 +550,7 @@ ${buildSchema(p)}
 
   const PLACES = await loadPlaces();
   TOTAL_PLACES = PLACES.length;
+  await loadHebrewNames(PLACES);
 
   const placesDir = path.join(__dirname, 'places');
   if (!fs.existsSync(placesDir)) fs.mkdirSync(placesDir);
@@ -487,15 +565,25 @@ ${buildSchema(p)}
   let written = 0;
   const added = [];
   for (const p of PLACES) {
+    const dir = path.join(placesDir, p.id);
+    const heDir = path.join(dir, 'he');
     const isNew = !onDisk.has(p.id);
     if (isNew) added.push(p.id);
-    if (!isNew && !rewriteAll) continue;
-    if (!dryRun) {
-      const dir = path.join(placesDir, p.id);
-      if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-      fs.writeFileSync(path.join(dir, 'index.html'), buildPage(p), 'utf8');
+
+    // The English page may carry hand-applied fixes, so it is only rewritten
+    // when it is new or --all is passed. The Hebrew page has no such history:
+    // it is generated output, always written.
+    if (isNew || rewriteAll) {
+      if (!dryRun) {
+        if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+        fs.writeFileSync(path.join(dir, 'index.html'), buildPage(p, 'en'), 'utf8');
+      }
+      written++;
     }
-    written++;
+    if (!dryRun) {
+      if (!fs.existsSync(heDir)) fs.mkdirSync(heDir, { recursive: true });
+      fs.writeFileSync(path.join(heDir, 'index.html'), buildPage(p, 'he'), 'utf8');
+    }
   }
 
   // Places that left the data leave their page behind. Anything not on the
@@ -507,10 +595,24 @@ ${buildSchema(p)}
 
   // Kept orphans stay in the sitemap — they are indexed and earning clicks.
   const sitemapSlugs = [...PLACES.map((p) => p.id), ...[...KEPT_ORPHANS].filter((o) => onDisk.has(o))];
+  const liveSlugs = new Set(PLACES.map((p) => p.id));
+
+  // Each language pair is one <url> carrying both alternates, which is how
+  // Google wants hreflang expressed in a sitemap.
   const entries = sitemapSlugs
-    .map((slug) =>
-      `  <url>\n    <loc>${BASE_URL}/places/${slug}/</loc>\n    <lastmod>${TODAY}</lastmod>\n` +
-      `    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`)
+    .flatMap((slug) => {
+      const en = `${BASE_URL}/places/${slug}/`;
+      const he = `${BASE_URL}/places/${slug}/he/`;
+      const alts = liveSlugs.has(slug)
+        ? `\n    <xhtml:link rel="alternate" hreflang="en" href="${en}"/>` +
+          `\n    <xhtml:link rel="alternate" hreflang="he" href="${he}"/>` +
+          `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${en}"/>`
+        : '';
+      const url = (loc, extra) =>
+        `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${TODAY}</lastmod>\n` +
+        `    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>${extra}\n  </url>`;
+      return liveSlugs.has(slug) ? [url(en, alts), url(he, alts)] : [url(en, '')];
+    })
     .join('\n');
 
   if (!dryRun) {
@@ -523,7 +625,8 @@ ${buildSchema(p)}
 
   const verb = dryRun ? 'would write' : 'wrote';
   const scope = rewriteAll ? 'all pages' : 'missing pages only';
-  console.log(`${verb} ${written} place pages (${scope}) · ${sitemapSlugs.length} sitemap URLs`);
+  const urlCount = (entries.match(/<loc>/g) || []).length;
+  console.log(`${verb} ${written} English page(s) (${scope}) · ${PLACES.length} Hebrew pages · ${urlCount} sitemap URLs`);
   if (added.length) console.log(`  new:     ${added.join(', ')}`);
   if (stale.length) console.log(`  ${dryRun ? 'would remove' : 'removed'}: ${stale.join(', ')}`);
   if (dryRun) console.log('\nDry run — nothing was written.');

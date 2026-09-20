@@ -106,6 +106,32 @@ function checkPages(live) {
   }
 }
 
+// 3b. Every published place needs a Hebrew page, and the two must point at
+//     each other. A Hebrew URL whose metadata is English — or which no
+//     hreflang declares — is why Hebrew queries sat at position 50+.
+function checkHebrewPair(live) {
+  const heb = /[\u0590-\u05FF]/;
+  for (const slug of live) {
+    const en = path.join(ROOT, 'places', slug, 'index.html');
+    const he = path.join(ROOT, 'places', slug, 'he', 'index.html');
+    if (!fs.existsSync(he)) { fail('hebrew-pair', `no Hebrew page for "${slug}"`); continue; }
+    if (!fs.existsSync(en)) continue;
+
+    const h = fs.readFileSync(he, 'utf8');
+    const title = (h.match(/<title>([^<]*)<\/title>/) || [])[1] || '';
+    const desc = (h.match(/name="description" content="([^"]*)"/) || [])[1] || '';
+    if (!heb.test(title)) fail('hebrew-pair', `${slug}/he/ has a non-Hebrew <title>`);
+    if (!heb.test(desc)) fail('hebrew-pair', `${slug}/he/ has a non-Hebrew description`);
+    if (!/"inLanguage":\s*"he"/.test(h)) fail('hebrew-pair', `${slug}/he/ schema has no inLanguage:he`);
+    if (!h.includes(`/places/${slug}/he/"`)) fail('hebrew-pair', `${slug}/he/ is not self-canonical`);
+
+    const e = fs.readFileSync(en, 'utf8');
+    if (!e.includes(`hreflang="he" href="${SITE}/places/${slug}/he/"`)) {
+      fail('hebrew-pair', `${slug} (en) does not declare its Hebrew alternate`);
+    }
+  }
+}
+
 // 3. No canonical target may be blocked by robots.txt.
 //    Broken once: app.jsx canonicalled to /?place=<id> while robots.txt was
 //    about to Disallow that exact pattern, orphaning every canonical target.
@@ -243,6 +269,7 @@ function checkUnpushed() {
   const files = contentFiles();
   checkCount(live, files);
   checkPages(live);
+  checkHebrewPair(live);
   checkCanonicalVsRobots();
   checkHostConfig();
   checkImmutable();

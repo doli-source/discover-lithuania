@@ -18,7 +18,7 @@
   <link rel="canonical" href="https://lithuaniadiscovery.com/places/stebuklai-spa/">
   <link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/places/stebuklai-spa/">
   <link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/places/stebuklai-spa/">
-  <link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/places/stebuklai-spa/?lang=he">
+  <link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/places/stebuklai-spa/he/">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="he_IL">
   <meta property="og:site_name" content="Discover Lithuania">
@@ -292,17 +292,13 @@
   if (lang !== 'he') return;
   document.documentElement.lang = 'he';
   document.documentElement.dir  = 'rtl';
-  // Self-canonical for the Hebrew variant. Without this the ?lang=he URL
-  // claims the English page as its canonical, contradicting the hreflang
-  // alternate and pushing Google to drop the Hebrew version.
+  // ?lang=he shows Hebrew but its title, description and schema stay English,
+  // so it is not the page Google should index for Hebrew. Point it at the real
+  // Hebrew page, which is Hebrew all the way down.
   var _c = document.querySelector('link[rel="canonical"]');
-  if (_c && _c.href.indexOf('lang=he') === -1) {
-    _c.href = _c.href + (_c.href.indexOf('?') === -1 ? '?' : '&') + 'lang=he';
-  }
+  if (_c && _c.href.indexOf('/he/') === -1) _c.href = _c.href.replace(/\/$/, '') + '/he/';
   var _og = document.querySelector('meta[property="og:url"]');
-  if (_og && _og.content.indexOf('lang=he') === -1) {
-    _og.content = _og.content + (_og.content.indexOf('?') === -1 ? '?' : '&') + 'lang=he';
-  }
+  if (_og && _og.content.indexOf('/he/') === -1) _og.content = _og.content.replace(/\/$/, '') + '/he/';
   var L = {
     'About this place':'על המקום הזה',
     'Details':'פרטים',
