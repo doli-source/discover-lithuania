@@ -251,7 +251,9 @@
   // naturally, the searcher's own wording.
   function questionFor(intent, place, lang, sample) {
     const he = lang === 'he';
-    const at = he ? `ב${place}` : `in ${place}`;
+    // Section pages have no place of their own — the subject is the country.
+    const where = place || (he ? 'ליטא' : 'Lithuania');
+    const at = he ? `ב${where}` : `in ${where}`;
     switch (intent) {
       case 'eat':    return he ? `איפה כדאי לאכול ${at}?`            : `Where should you eat ${at}?`;
       case 'coffee': return he ? `איפה הקפה הכי טוב ${at}?`          : `Where is the best coffee ${at}?`;

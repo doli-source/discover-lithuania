@@ -243,6 +243,14 @@ function checkFaq() {
   const loader = fs.readFileSync(path.join(ROOT, 'supabase-data.js'), 'utf8');
   if (!loader.includes('faq-data.js')) fail('faq', 'faq-data.js is never loaded');
   const src = fs.readFileSync(faq, 'utf8');
+  if (!fs.existsSync(path.join(ROOT, 'faq-queries.json'))) {
+    fail('faq', 'faq-queries.json is missing — the questions fall back to generic');
+  } else {
+    const ignored = fs.readFileSync(path.join(ROOT, '.gitignore'), 'utf8');
+    if (/^\*\.json/m.test(ignored) && !/^!faq-queries\.json/m.test(ignored)) {
+      fail('faq', '.gitignore excludes faq-queries.json, so it will never deploy');
+    }
+  }
   for (const banned of ['safe', 'best time to visit']) {
     if (new RegExp(`['\`][^'\`]*${banned}`, 'i').test(src)) {
       fail('faq', `faq-data.js answers "${banned}" — there is no data behind that`);
