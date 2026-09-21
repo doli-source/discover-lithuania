@@ -3074,7 +3074,7 @@ const PLACES = [
     "id": "seduva-jewish-museum",
     "region": "countryside",
     "kind": "culture",
-    "name": "Šeduva Jewish Museum",
+    "name": "Lost Shtetl Museum",
     "type": "Jewish heritage museum",
     "typeHe": "מוזיאון מורשת יהודית",
     "rating": null,
