@@ -302,9 +302,14 @@ function App() {
     };
     if (openPlaceData) {
       const kindMap = { cafe: 'CafeOrCoffeeShop', restaurant: 'Restaurant', stay: 'LodgingBusiness', nature: 'TouristAttraction', bar: 'BarOrPub', bakery: 'Bakery' };
+      const baseType = kindMap[openPlaceData.kind] || 'LocalBusiness';
+      // Review snippet rich results require a LocalBusiness (or subtype) parent.
+      // TouristAttraction is a plain Place, so pair it with LocalBusiness whenever
+      // there's a rating, matching the fix in generate-place-pages.js.
+      const lbType = baseType === 'TouristAttraction' ? ['TouristAttraction', 'LocalBusiness'] : baseType;
       const lb = {
         '@context': 'https://schema.org',
-        '@type': kindMap[openPlaceData.kind] || 'LocalBusiness',
+        '@type': lbType,
         name: openPlaceData.name,
         description: openPlaceData.niv || openPlaceData.en?.blurb || openPlaceData.type,
         url: openPlaceData.mapUrl || `https://lithuaniadiscovery.com/explore/${openPlaceData.region}`,

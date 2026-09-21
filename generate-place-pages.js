@@ -217,7 +217,15 @@ function view(p, lang) {
 
 function buildSchema(p, lang) {
   const v = view(p, lang);
-  const schemaType = KIND_SCHEMA[p.kind] || 'LocalBusiness';
+  const baseSchemaType = KIND_SCHEMA[p.kind] || 'LocalBusiness';
+  // Google's review-snippet rich result requires the parent object to be
+  // LocalBusiness (or a subtype). TouristAttraction is a plain Place, so on
+  // its own it triggers "Invalid object type for field '<parent_node>'" in
+  // Search Console whenever aggregateRating is present. Combine both types
+  // to keep the TouristAttraction semantics while satisfying that rule.
+  const schemaType = baseSchemaType === 'TouristAttraction'
+    ? ['TouristAttraction', 'LocalBusiness']
+    : baseSchemaType;
   const regionName = v.region;
   const url = v.url;
 
