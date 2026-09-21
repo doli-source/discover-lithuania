@@ -258,6 +258,24 @@ function checkFaq() {
   }
 }
 
+// 3h. An itinerary whose id states a day count must be stored with a matching
+//     duration. coast-3day sat as "weekend" for months and the site printed
+//     "Three Days on the Coast (a weekend)".
+async function checkItineraryDurations() {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/itineraries?select=id,duration`, {
+    headers: { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` },
+  });
+  if (!res.ok) return warn('itinerary-duration', `could not read itineraries: ${res.status}`);
+  for (const it of await res.json()) {
+    const m = /(\d+)\s*day/.exec(it.id || '');
+    if (!m) continue;
+    const expected = m[1] === '1' ? 'day' : `${m[1]}day`;
+    if (it.duration !== expected) {
+      fail('itinerary-duration', `"${it.id}" is stored as "${it.duration}" but its id says ${m[1]} day(s)`);
+    }
+  }
+}
+
 // 4. Config files that the host does not read are inert and must not be
 //    trusted. The site runs on GitHub Pages, which ignores both of these.
 function checkHostConfig() {
@@ -372,6 +390,7 @@ function checkUnpushed() {
   checkOrphanRegions();
   checkSpellingOverride();
   checkFaq();
+  await checkItineraryDurations();
   checkCanonicalVsRobots();
   checkHostConfig();
   checkImmutable();

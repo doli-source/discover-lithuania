@@ -28,17 +28,17 @@
     '3day':  { en: 'three days',  he: 'שלושה ימים' },
   };
 
-  // coast-3day is stored as duration "weekend", which would print
-  // "Three Days on the Coast (a weekend)" — a sentence that argues with
-  // itself. Where the id states a day count, the id wins.
+  // The stored duration is the answer. coast-3day was once filed as "weekend",
+  // which printed "Three Days on the Coast (a weekend)"; that row is corrected
+  // and 3day is an allowed value now. The id is read only when a duration is
+  // missing or unrecognised, so a new route cannot silently print nothing.
   const durationOf = (it) => {
+    const known = DURATION[it.duration];
+    if (known) return known;
     const m = /(\d+)\s*day/.exec(it.id || '');
-    if (m) {
-      const n = Number(m[1]);
-      return n === 1 ? DURATION.day
-           : { en: `${n} days`, he: `${n} ימים` };
-    }
-    return DURATION[it.duration];
+    if (!m) return null;
+    const n = Number(m[1]);
+    return n === 1 ? DURATION.day : { en: `${n} days`, he: `${n} ימים` };
   };
 
   const plural = (kind, n, lang) => {
