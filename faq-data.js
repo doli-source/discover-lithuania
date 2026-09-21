@@ -212,9 +212,9 @@
                                  'What do people eat in Lithuania?', `The traditional dishes covered here: ${dishNames.join(', ')}.`);
       if (durList.length) push('כמה ימים כדאי להקדיש לליטא?', `במדריך ${durList.length} מסלולים מוכנים: ${durList.join(', ')}.`,
                                'How many days should you spend in Lithuania?', `This guide has ${durList.length} ready-made routes: ${durList.join(', ')}.`);
-      const f = (facts || [])[0];
-      const ft = he ? f?.he : f?.en;
-      if (ft) push('מה כדאי לדעת על ליטא?', ft, 'What is worth knowing about Lithuania?', ft);
+      const topStay = topOverall(places, ['stay', 'hotel'], 5);
+      if (topStay.length) push('מה מקומות הלינה המדורגים הכי גבוה בליטא?', `${named(topStay)}.`,
+                               'What are the highest-rated places to stay in Lithuania?', `${named(topStay)}.`);
     }
 
     return out;
@@ -257,7 +257,7 @@
     switch (intent) {
       case 'eat':    return he ? `איפה כדאי לאכול ${at}?`            : `Where should you eat ${at}?`;
       case 'coffee': return he ? `איפה הקפה הכי טוב ${at}?`          : `Where is the best coffee ${at}?`;
-      case 'spa':    return he ? `מה יש בתחום הספא ${at}?`           : `What spa and wellness is there ${at}?`;
+      case 'spa':    return he ? `איפה יש ספא ואיכות חיים ${at}?`     : `Where can you find spas and wellness ${at}?`;
       case 'ski':    return he ? `אפשר לעשות סקי ${at}?`             : `Can you ski ${at}?`;
       case 'stay':   return he ? `איפה אפשר לישון ${at}?`            : `Where can you stay ${at}?`;
       case 'price':  return he ? `כמה עולה לאכול ${at}?`             : `How much does eating out cost ${at}?`;
