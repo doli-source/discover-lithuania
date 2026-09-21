@@ -216,7 +216,11 @@ function replaceHead(html, { title, desc, canonical, enUrl, heUrl, lang }) {
     .replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${canonical}">`)
     .replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${canonical}">`)
     .replace(/<meta property="og:locale" content="[^"]*">/, `<meta property="og:locale" content="${lang === 'he' ? 'he_IL' : 'en_US'}">`)
-    // Tells app.jsx not to overwrite the metadata below with its own.
+    // Tells app.jsx not to overwrite the metadata below with its own. The
+    // insert used to run unconditionally, so every regeneration stacked one
+    // more copy onto the page — the section pages shipped carrying two. Strip
+    // whatever is there, then put exactly one back.
+    .replace(/[ \t]*<meta name="lt-static-seo" content="1">\n/g, '')
     .replace(/<link rel="canonical"/, `<meta name="lt-static-seo" content="1">\n  <link rel="canonical"`);
 
   // Rewrite the whole hreflang set rather than patching individual lines, so

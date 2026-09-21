@@ -294,6 +294,21 @@ function checkTranslationAttributes() {
   }
 }
 
+// 3j. A generator that inserts a tag without first removing the old one stacks
+//     a duplicate on every run. generate-section-pages.js did exactly that with
+//     the lt-static-seo marker, and the section pages shipped carrying two.
+function checkDuplicateMeta() {
+  const once = ['lt-static-seo', 'description', 'viewport'];
+  for (const f of contentFiles()) {
+    if (!f.endsWith('.html')) continue;
+    const head = fs.readFileSync(f, 'utf8').split(/<\/head>/i)[0];
+    for (const name of once) {
+      const n = (head.match(new RegExp(`<meta name="${name}"`, 'g')) || []).length;
+      if (n > 1) fail('duplicate-meta', `${rel(f)} has ${n} <meta name="${name}"> tags in <head>`);
+    }
+  }
+}
+
 // 4. Config files that the host does not read are inert and must not be
 //    trusted. The site runs on GitHub Pages, which ignores both of these.
 function checkHostConfig() {
@@ -409,6 +424,7 @@ function checkUnpushed() {
   checkSpellingOverride();
   checkFaq();
   checkTranslationAttributes();
+  checkDuplicateMeta();
   await checkItineraryDurations();
   checkCanonicalVsRobots();
   checkHostConfig();
