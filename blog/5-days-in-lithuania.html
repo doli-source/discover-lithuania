@@ -413,13 +413,13 @@
         </svg>
       </div>
       <div class="nav-brand-text">
-        <span class="nav-brand-name" data-he="גלה את ליטא">Discover Lithuania</span>
-        <span class="nav-brand-sub" data-he="מדריך טיולים לליטא">Travel Guide</span>
+        <span class="nav-brand-name" data-en="Discover Lithuania" data-he="גלה את ליטא">Discover Lithuania</span>
+        <span class="nav-brand-sub" data-en="Travel Guide" data-he="מדריך טיולים לליטא">Travel Guide</span>
       </div>
     </a>
     <div class="nav-right">
       <button class="lang-btn" id="lb" onclick="toggleLang()">עב</button>
-      <a href="https://lithuaniadiscovery.com" class="nav-back" data-he="← כל המדריכים">← All guides</a>
+      <a href="https://lithuaniadiscovery.com" class="nav-back" data-en="← All guides" data-he="← כל המדריכים">← All guides</a>
     </div>
   </nav>
 
@@ -427,8 +427,8 @@
   <div class="container">
 
     <div class="breadcrumb">
-      <a href="https://lithuaniadiscovery.com" data-he="בית">Home</a> ›
-      <a href="https://lithuaniadiscovery.com/explore" data-he="גלה">Explore</a> ›
+      <a href="https://lithuaniadiscovery.com" data-en="Home" data-he="בית">Home</a> ›
+      <a href="https://lithuaniadiscovery.com/explore" data-en="Explore" data-he="גלה">Explore</a> ›
       <span data-en="5 Days in Lithuania" data-he="5 ימים בליטא">5 Days in Lithuania</span>
     </div>
 
@@ -899,6 +899,10 @@
       var blog = document.getElementById('blog');
       blog.dir = isHe ? 'rtl' : 'ltr';
       blog.setAttribute('lang', isHe ? 'he' : 'en');
+      // The document itself has to say which language it is in, or a crawler
+      // reading <html lang> sees English on a Hebrew page.
+      document.documentElement.lang = isHe ? 'he' : 'en';
+      document.documentElement.dir = isHe ? 'rtl' : 'ltr';
       document.getElementById('lb').textContent = isHe ? 'EN' : 'עב';
       document.querySelectorAll('[data-en]').forEach(function(el) {
         el.innerHTML = isHe ? (el.dataset.he || el.dataset.en) : el.dataset.en;

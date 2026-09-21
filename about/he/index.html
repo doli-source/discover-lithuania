@@ -79,6 +79,17 @@
     .nav-brand-text { display: flex; flex-direction: column; line-height: 1.05; }
     .nav-brand-name { font-family: 'Instrument Serif', 'Frank Ruhl Libre', serif; font-size: 1.35rem; font-weight: 500; color: #1f2a1a; letter-spacing: -0.01em; white-space: nowrap; }
     .nav-brand-sub { font-size: 0.7rem; color: rgba(36,26,16,0.55); letter-spacing: 0.02em; }
+    .lang-btn {
+      font-size: 12px; font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 999px;
+      border: 1.5px solid rgba(36,26,16,0.16);
+      background: #fff;
+      color: #1f2a1a;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .lang-btn:hover { border-color: #C28840; color: #C28840; }
     .nav-back { font-size: 13px; color: #7a6a4e; text-decoration: none; display: flex; align-items: center; gap: 4px; }
     .nav-back:hover { color: #C28840; }
 
@@ -122,7 +133,10 @@
         <span class="nav-brand-sub" data-he="מדריך לטיולים בליטא">מדריך לטיולים בליטא</span>
       </div>
     </a>
-    <a href="https://lithuaniadiscovery.com/blog/" class="nav-back" data-he="← בלוג">← בלוג</a>
+    <div style="display:flex;align-items:center;gap:14px">
+      <a href="https://lithuaniadiscovery.com/blog/" class="nav-back" data-he="← בלוג">← בלוג</a>
+      <button class="lang-btn" id="lb" type="button">עב</button>
+    </div>
   </nav>
 
   <div class="container">
@@ -150,6 +164,20 @@
       <a href="https://lithuaniadiscovery.com/" class="cta-btn" data-he="גלה את ליטא ←">גלה את ליטא ←</a>
     </div>
   </div>
+
+  <script>/* lang-toggle-about */
+  (function () {
+    var btn = document.getElementById('lb');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var url = new URL(location.href);
+      if (url.searchParams.get('lang') === 'he') url.searchParams.delete('lang');
+      else url.searchParams.set('lang', 'he');
+      location.href = url.toString();
+    });
+    if (new URLSearchParams(location.search).get('lang') === 'he') btn.textContent = 'EN';
+  })();
+  </script>
 
   <script>/* he-support-about */
   (function () {
