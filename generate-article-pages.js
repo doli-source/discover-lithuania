@@ -38,19 +38,54 @@ const failures = [];
 // page's own script performs at runtime.
 function applyHebrew(html) {
   let applied = 0;
-  const out = html.replace(
-    /<([a-zA-Z0-9]+)((?:[^>]*?\s)?data-he="([^"]*)"[^>]*)>([\s\S]*?)<\/\1>/g,
-    (whole, tag, attrs, he, inner) => {
-      // Only swap leaf text. An element wrapping more markup keeps its children,
-      // which the runtime script would have replaced wholesale — matching that
-      // here would drop links, so those are left for the script.
-      if (/<[a-zA-Z]/.test(inner)) return whole;
-      applied++;
-      return `<${tag}${attrs}>${he}</${tag}>`;
+  let out = '';
+  let i = 0;
+
+  // A regex cannot find the end of a start tag here: data-en values on the
+  // 5-days post contain <a href="…">, and the ">" inside that quoted value
+  // ends the match early. Scan instead, tracking whether we are inside an
+  // attribute value, so the tag boundary is the real one.
+  while (i < html.length) {
+    const lt = html.indexOf('<', i);
+    if (lt === -1) { out += html.slice(i); break; }
+
+    const nameMatch = /^<([a-zA-Z][a-zA-Z0-9]*)/.exec(html.slice(lt, lt + 24));
+    if (!nameMatch) { out += html.slice(i, lt + 1); i = lt + 1; continue; }
+
+    // Walk to the ">" that actually closes this start tag.
+    let j = lt + 1, quote = null;
+    while (j < html.length) {
+      const c = html[j];
+      if (quote) { if (c === quote) quote = null; }
+      else if (c === '"' || c === "'") quote = c;
+      else if (c === '>') break;
+      j++;
     }
-  );
+    if (j >= html.length) { out += html.slice(i); break; }
+
+    const tag = nameMatch[1];
+    const attrs = html.slice(lt + 1 + tag.length, j);
+    const he = /(?:^|\s)data-he=("([^"]*)"|'([^']*)')/.exec(attrs);
+    const close = `</${tag}>`;
+    const closeAt = html.indexOf(close, j + 1);
+
+    if (!he || closeAt === -1) { out += html.slice(i, j + 1); i = j + 1; continue; }
+
+    const inner = html.slice(j + 1, closeAt);
+    // A container holding another data-he element keeps its children, or the
+    // nested translation is discarded before it is applied.
+    if (/data-he=/.test(inner) || /<[a-zA-Z][a-zA-Z0-9]*\s[^>]*data-he/.test(inner)) {
+      out += html.slice(i, j + 1); i = j + 1; continue;
+    }
+
+    const value = he[2] !== undefined ? he[2] : he[3];
+    out += html.slice(i, lt) + `<${tag}${attrs}>` + value + close;
+    i = closeAt + close.length;
+    applied++;
+  }
   return { html: out, applied };
 }
+
 
 // FAQ schema is what an answer engine actually reads, so a Hebrew page whose
 // JSON-LD still asks its questions in English is answering for the wrong
@@ -104,7 +139,13 @@ for (const [src, rel] of Object.entries(ARTICLES)) {
   if (!title) { failures.push(`${src}: no Hebrew <h1> to build a title from`); continue; }
   if (!desc) { failures.push(`${src}: no Hebrew text long enough for a description`); continue; }
 
-  const { html: bodyHe, applied } = applyHebrew(original);
+  let { html: bodyHe, applied } = applyHebrew(original);
+
+  // Counts rendered from data rather than written as copy, so they carry no
+  // data-he of their own and stayed English on the Hebrew page.
+  bodyHe = bodyHe
+    .replace(/\((\d[\d,]*)\s+reviews\)/g, '($1 ביקורות)')
+    .replace(/(?<![a-zA-Z])diesel(?![a-zA-Z])/g, 'דיזל');
   const { html: translated, swapped } = translateSchema(bodyHe, original);
   if (applied < 5) { failures.push(`${src}: only ${applied} Hebrew swaps — check the markup`); continue; }
 
