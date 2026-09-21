@@ -515,7 +515,9 @@ function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
     { id: 'routes', label: t.nav.routes },
     { id: 'food', label: t.nav.food },
     { id: 'stays', label: t.nav.stays },
-    { id: 'blog', label: t.nav.blog }
+    { id: 'blog', label: t.nav.blog },
+    { id: 'about', label: t.nav.about, href: '/about/', external: true },
+    { id: 'faq', label: t.nav.faq, href: lang === 'he' ? '/faq/he/' : '/faq/', external: true }
   ];
 
   return (
@@ -540,9 +542,9 @@ function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
           {items.map(item => (
             <a
               key={item.id}
-              href={item.id === 'home' ? '/' : `/${item.id}/`}
+              href={item.href || (item.id === 'home' ? '/' : `/${item.id}/`)}
               className={`nav-link ${screen === item.id ? 'active' : ''}`}
-              onClick={(e) => { e.preventDefault(); nav(item.id); }}
+              onClick={item.external ? undefined : (e) => { e.preventDefault(); nav(item.id); }}
             >
               {item.label}
             </a>
@@ -573,9 +575,9 @@ function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
           {items.map(item => (
             <a
               key={item.id}
-              href={item.id === 'home' ? '/' : `/${item.id}/`}
+              href={item.href || (item.id === 'home' ? '/' : `/${item.id}/`)}
               className={`mobile-link ${screen === item.id ? 'active' : ''}`}
-              onClick={(e) => { e.preventDefault(); nav(item.id); setMobileOpen(false); }}
+              onClick={item.external ? (() => setMobileOpen(false)) : (e) => { e.preventDefault(); nav(item.id); setMobileOpen(false); }}
             >
               {item.label}
             </a>
