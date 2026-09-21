@@ -18,8 +18,7 @@ const dryRun = process.argv.includes('--dry-run');
 
 // source file → [English URL path, Hebrew URL path]
 const ARTICLES = {
-  // about/index.html is deliberately absent: it carries three data-he strings,
-  // so a Hebrew version of it would be an English page with a Hebrew nav bar.
+  'about/index.html': 'about',
   'blog/trakai-day-trip.html': 'blog/trakai-day-trip',
   'blog/best-restaurants-vilnius.html': 'blog/best-restaurants-vilnius',
   'blog/best-coffee-vilnius.html': 'blog/best-coffee-vilnius',
