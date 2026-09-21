@@ -46,7 +46,7 @@ function ShareButton({ place, lang }) {
     <div style={{ position: 'absolute', top: 8, left: 8, zIndex: 10 }} onClick={e => e.stopPropagation()}>
       <button
         onClick={toggleOpen}
-        aria-label="Share"
+        aria-label={lang === 'he' ? 'שתף' : 'Share'}
         style={{
           width: 30, height: 30, borderRadius: '50%',
           background: 'rgba(255,255,255,0.92)', border: '0.5px solid rgba(0,0,0,0.12)',
@@ -160,12 +160,12 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
           </div>
           <h1 className="hero-title">
             {lang === 'he'
-              ? <>גלה את <em>ליטא</em><br />לאט, טעים, ובלי לחץ.</>
+              ? <>גלה את <em>ליטא</em>{' — '}<br />לאט, טעים ובלי לחץ.</>
               : <>Discover <em>Lithuania</em><br />slow, tasty, unrushed.</>}
           </h1>
           <p className="hero-sub">
             {lang === 'he'
-              ? `${stats.total} מקומות נבחרים — בתי קפה, מסעדות, טבע ולינה — מובחרים בקפידה.`
+              ? `${stats.total} מקומות שנבחרו בקפידה — בתי קפה, מסעדות, טבע ולינה.`
               : `${stats.total} handpicked places — cafés, restaurants, nature & stays — carefully chosen.`}
           </p>
           <div className="hero-stats-row">
@@ -215,7 +215,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
       <section className="section section-tinted">
         <div className="section-head">
           <div>
-            <div className="section-eyebrow">01 — {lang === 'he' ? 'לאן' : 'Where'}</div>
+            <div className="section-eyebrow">01 — {lang === 'he' ? 'האזורים' : 'Where'}</div>
             <h2 className="section-title">{lang === 'he' ? `${regions.length} אזורים לגלות` : `${regions.length} regions to explore`}</h2>
             <p className="section-sub">{lang === 'he' ? 'בחר אזור — וקבל את כל המקומות שם.' : 'Pick a region — get everything pinned there.'}</p>
           </div>
@@ -287,7 +287,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
       <section className="section">
         <div className="section-head">
           <div>
-            <div className="section-eyebrow">02 — {lang === 'he' ? 'איך' : 'How'}</div>
+            <div className="section-eyebrow">02 — {lang === 'he' ? 'המסלולים' : 'How'}</div>
             <h2 className="section-title">{t.flagshipRoutes}</h2>
             <p className="section-sub">{lang === 'he' ? 'מסלולים מוכנים, מהיום הבודד עד שבוע שלם' : 'Ready-made routes, from a single day to a full week'}</p>
           </div>
@@ -322,7 +322,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
       <section className="section section-tinted">
         <div className="section-head">
           <div>
-            <div className="section-eyebrow">03 — {lang === 'he' ? 'מה' : 'What'}</div>
+            <div className="section-eyebrow">03 — {lang === 'he' ? 'האוכל' : 'What'}</div>
             <h2 className="section-title">{lang === 'he' ? 'טעמים ליטאיים' : 'Lithuanian Tastes'}</h2>
             <p className="section-sub">{lang === 'he' ? 'המנות המסורתיות שכדאי להזמין — וכמובן איפה לאכול אותן.' : 'Traditional dishes worth ordering — and where to find them.'}</p>
           </div>
@@ -431,7 +431,7 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
           <h1 className="page-title">{lang === 'he' ? 'בחר אזור' : 'Pick a region'}</h1>
           <p className="page-sub">
             {lang === 'he'
-              ? `${places.length} מקומות בכל הארץ, מסומנים אישית. לחץ על כרטיס למידע.`
+              ? `${places.length} מקומות בכל הארץ, שנבחרו אישית. לחץ על כרטיס למידע.`
               : `${places.length} places across the country. Click any card for details.`}
           </p>
         </div>

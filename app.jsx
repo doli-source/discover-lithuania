@@ -653,7 +653,7 @@ function Footer({ lang, t, nav }) {
             <h5>{lang === 'he' ? 'מידע' : 'Info'}</h5>
             <button>{lang === 'he' ? 'מטבע: יורו (€)' : 'Currency: Euro (€)'}</button>
             <button>{lang === 'he' ? 'שפה: ליטאית' : 'Language: Lithuanian'}</button>
-            <button>{lang === 'he' ? 'אזור זמן: +2 GMT' : 'Time: +2 GMT'}</button>
+            <button>{lang === 'he' ? 'אזור זמן: GMT+2' : 'Time: GMT+2'}</button>
           </div>
         </div>
       </div>
