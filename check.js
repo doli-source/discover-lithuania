@@ -276,6 +276,24 @@ async function checkItineraryDurations() {
   }
 }
 
+// 3i. A page whose language script selects [data-en] cannot see an element
+//     that only carries data-he. The 5-days byline sat English for exactly
+//     that reason after the attribute was added to it.
+function checkTranslationAttributes() {
+  for (const f of contentFiles()) {
+    if (!f.endsWith('.html')) continue;
+    const html = fs.readFileSync(f, 'utf8');
+    if (!/querySelectorAll\(\s*'\[data-en\]'/.test(html)) continue;
+    for (const m of html.matchAll(/<([a-zA-Z][a-zA-Z0-9]*)((?:[^<>"']|"[^"]*"|'[^']*')*)>/g)) {
+      if (m[2].includes('data-he') && !m[2].includes('data-en')) {
+        const line = html.slice(0, m.index).split('\n').length;
+        fail('translation-attrs',
+          `${rel(f)}:${line} has data-he but no data-en, and this page switches on [data-en]`);
+      }
+    }
+  }
+}
+
 // 4. Config files that the host does not read are inert and must not be
 //    trusted. The site runs on GitHub Pages, which ignores both of these.
 function checkHostConfig() {
@@ -390,6 +408,7 @@ function checkUnpushed() {
   checkOrphanRegions();
   checkSpellingOverride();
   checkFaq();
+  checkTranslationAttributes();
   await checkItineraryDurations();
   checkCanonicalVsRobots();
   checkHostConfig();
