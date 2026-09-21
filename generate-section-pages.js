@@ -186,7 +186,9 @@ const PAGES = {
   },
   'routes': {
     he: {
-      title: 'מסלולי טיול בליטא — מוכנים ליום, סופ"ש ושבוע | גלה את ליטא',
+      // The routes run one day, a weekend and three days. There is no
+      // week-long route, and the title should not offer one.
+      title: 'מסלולי טיול בליטא — מיום אחד ועד שלושה ימים | גלה את ליטא',
       desc: 'מסלולי טיול מוכנים בליטא: יום בוילנה, סופ"ש ספא בדרוסקינינקאי, שלושה ימים בחוף הבלטי וסופ"ש ביערות.',
     },
     en: {
