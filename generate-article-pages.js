@@ -145,7 +145,10 @@ for (const [src, rel] of Object.entries(ARTICLES)) {
   // data-he of their own and stayed English on the Hebrew page.
   bodyHe = bodyHe
     .replace(/\((\d[\d,]*)\s+reviews\)/g, '($1 ביקורות)')
-    .replace(/(?<![a-zA-Z])diesel(?![a-zA-Z])/g, 'דיזל');
+    .replace(/(?<![a-zA-Z])diesel(?![a-zA-Z])/g, 'דיזל')
+    .replace(/(\d+)\s*km(?![a-zA-Z])/g, '$1 ק״מ')
+    .replace(/~(\d+)h(?![a-zA-Z])/g, '~$1 שעות')
+    .replace(/>Steak</g, '>סטייק<');
   const { html: translated, swapped } = translateSchema(bodyHe, original);
   if (applied < 5) { failures.push(`${src}: only ${applied} Hebrew swaps — check the markup`); continue; }
 
