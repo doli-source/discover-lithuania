@@ -240,6 +240,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/cepelinai-brigita-uyar"/>
   </url>
   <url>
+    <loc>https://lithuaniadiscovery.com/blog/agnes-br-ceramics</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/agnes-br-ceramics"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/agnes-br-ceramics/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/agnes-br-ceramics"/>
+  </url>
+  <url>
     <loc>https://lithuaniadiscovery.com/explore/vilnius/he/</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -391,6 +400,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/cepelinai-brigita-uyar"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/cepelinai-brigita-uyar/he/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/cepelinai-brigita-uyar"/>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/blog/agnes-br-ceramics/he/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/agnes-br-ceramics"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/agnes-br-ceramics/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/agnes-br-ceramics"/>
   </url>
   <url>
     <loc>https://lithuaniadiscovery.com/blog/he/</loc>

@@ -28,3 +28,4 @@ admin/node_modules/
 !supabase-data.js
 # Generated from Search Console, but it has to ship — the FAQ reads it.
 !faq-queries.json
+/.artifact-scratch/

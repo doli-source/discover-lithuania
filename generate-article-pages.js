@@ -24,6 +24,7 @@ const ARTICLES = {
   'blog/best-coffee-vilnius.html': 'blog/best-coffee-vilnius',
   'blog/5-days-in-lithuania.html': 'blog/5-days-in-lithuania',
   'blog/cepelinai-brigita-uyar.html': 'blog/cepelinai-brigita-uyar',
+  'blog/agnes-br-ceramics.html': 'blog/agnes-br-ceramics',
 };
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');

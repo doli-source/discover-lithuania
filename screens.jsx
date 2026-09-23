@@ -1039,6 +1039,16 @@ function SavedScreen({ savedSet, places, regions, lang, t, openPlace, toggleSave
 function BlogScreen({ lang }) {
   const posts = [
     {
+      emoji: '🏺',
+      tag: lang === 'he' ? 'הכירו את היוצרת · פוסט אורח' : 'Meet the Maker · Guest Feature',
+      title: lang === 'he' ? 'מהעיפרון לחומר: המסע היצירתי של אגנס BR' : 'From Pencil to Clay: Agnes BR\'s Creative Journey',
+      desc: lang === 'he'
+        ? 'אגנס BR, אמנית קרמיקה מוילנה, משתפת את המסע שלה מפיננסים לחומר — והסטודיו שלה בתוך אחוזה בטרקו-וקה.'
+        : 'Agnes BR, a Vilnius-based ceramics artist, shares her journey from finance to clay — and her studio inside a Trakų Vokė manor.',
+      href: lang === 'he' ? '/blog/agnes-br-ceramics?lang=he' : '/blog/agnes-br-ceramics',
+      time: lang === 'he' ? '4 דק׳ קריאה' : '4 min read',
+    },
+    {
       emoji: '🥔',
       tag: lang === 'he' ? 'אוכל ותרבות · פוסט אורח' : 'Food & Culture · Guest Post',
       title: lang === 'he' ? 'צפלינאי: המתכון של אמא שלי' : 'Cepelinai: My Mum\'s Recipe',
