@@ -88,9 +88,6 @@
     .author-info { flex: 1; min-width: 0; }
     .author-name { font-size: 15px; font-weight: 600; color: #1f2a1a; margin-bottom: 3px; }
     .author-bio { font-size: 13px; color: #9a8a72; line-height: 1.45; }
-    .author-links { display: flex; gap: 10px; margin-top: 6px; }
-    .author-links a { font-size: 12px; color: #5C8AA6; text-decoration: none; font-weight: 600; }
-    .author-links a:hover { text-decoration: underline; }
     .author-tag { font-size: 11px; font-weight: 500; background: #fffbf0; color: #8a6020; border: 1px solid #e8d0a0; padding: 2px 8px; border-radius: 4px; flex-shrink: 0; white-space: nowrap; align-self: flex-start; }
 
     .prose p { font-size: 16px; color: #4a3e2e; line-height: 1.8; margin-bottom: 1.25rem; }
@@ -115,6 +112,13 @@
     .also-read:hover { border-color: #5C8AA6; }
     .also-read-label { font-size: 11px; color: #9a8a72; margin-bottom: 2px; }
     .also-read-title { font-size: 14px; font-weight: 600; }
+
+    .connect-card { background: #fff; border: 1px solid #e8e0d0; border-radius: 14px; padding: 1.75rem 1.5rem; margin: 2.5rem 0; text-align: center; }
+    .connect-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9a8a72; margin-bottom: 0.5rem; }
+    .connect-title { font-size: 19px; font-weight: 700; color: #1f2a1a; margin-bottom: 1.1rem; }
+    .connect-links { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .connect-links a { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: #1f2a1a; text-decoration: none; border: 1px solid #e8e0d0; padding: 10px 20px; border-radius: 24px; background: #faf7f0; }
+    .connect-links a:hover { border-color: #C28840; background: #fff8ee; }
 
     .article-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e8e0d0; font-size: 13px; color: #9a8a72; }
     .article-footer a { color: #5C8AA6; text-decoration: none; }
@@ -181,10 +185,6 @@
       <div class="author-info">
         <div class="author-name" data-he="אגנס BR">אגנס BR</div>
         <div class="author-bio" data-he="אמנית קרמיקה מוילנה, יוצרת בסטודיו שלה בטרקו-וקה.">אמנית קרמיקה מוילנה, יוצרת בסטודיו שלה בטרקו-וקה.</div>
-        <div class="author-links">
-          <a href="https://agnesbr.lt" target="_blank" rel="noopener">agnesbr.lt</a>
-          <a href="https://instagram.com/agnesbr.lt" target="_blank" rel="noopener">@agnesbr.lt</a>
-        </div>
       </div>
       <span class="author-tag" data-he="פוסט אורח">פוסט אורח</span>
     </div>
@@ -237,6 +237,15 @@
     </div>
 
     <div class="photo-wrap"><img src="/blog/agnes-br-ceramics/photos/agnes-shoulder.jpg" alt="Agnes BR painting a bowl in low studio light" loading="lazy" /></div>
+
+    <div class="connect-card">
+      <div class="connect-label" data-he="יצירת קשר">יצירת קשר</div>
+      <div class="connect-title" data-he="עקבו אחרי הסטודיו של אגנס וראו עוד מהעבודות שלה">עקבו אחרי הסטודיו של אגנס וראו עוד מהעבודות שלה</div>
+      <div class="connect-links">
+        <a href="https://agnesbr.lt" target="_blank" rel="noopener">🌐 agnesbr.lt</a>
+        <a href="https://instagram.com/agnesbr.lt" target="_blank" rel="noopener">📷 @agnesbr.lt</a>
+      </div>
+    </div>
 
     <a href="/blog/cepelinai-brigita-uyar" class="also-read" id="also-cepelinai">
       <div>
