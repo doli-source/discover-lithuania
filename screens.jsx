@@ -174,7 +174,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
             <div className="hstat"><span className="hstat-num">{stats.cities}</span><span className="hstat-lbl">{lang === 'he' ? 'אזורים' : 'Regions'}</span></div>
           </div>
           <div className="hero-cta">
-            <a className="btn btn-primary" href="/explore" onClick={(e) => { e.preventDefault(); nav('explore'); }}>
+            <a className="btn btn-primary" href="/explore/" onClick={(e) => { e.preventDefault(); nav('explore'); }}>
               {lang === 'he' ? 'גלה את כל המקומות' : 'Explore all places'} <Icon.arrow style={{ transform: lang === 'he' ? 'scaleX(-1)' : 'none' }} />
             </a>
             <a className="btn btn-ghost" href={mapUrl} target="_blank" rel="noopener noreferrer"
@@ -219,7 +219,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
             <h2 className="section-title">{lang === 'he' ? `${regions.length} אזורים לגלות` : `${regions.length} regions to explore`}</h2>
             <p className="section-sub">{lang === 'he' ? 'בחר אזור — וקבל את כל המקומות שם.' : 'Pick a region — get everything pinned there.'}</p>
           </div>
-          <a className="link-btn" href="/explore" onClick={(e) => { e.preventDefault(); nav('explore'); }}>
+          <a className="link-btn" href="/explore/" onClick={(e) => { e.preventDefault(); nav('explore'); }}>
             {t.exploreCta} <Icon.arrow style={{ transform: lang === 'he' ? 'scaleX(-1)' : 'none' }} />
           </a>
         </div>
@@ -227,7 +227,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
           {regions.map((r, i) => {
             const count = places.filter(p => p.region === r.id).length;
             return (
-              <a className="region-card" key={r.id} href={`/explore/${r.id}`} onClick={(e) => { e.preventDefault(); nav('explore', { region: r.id }); }} style={{ '--accent': r.accent }}>
+              <a className="region-card" key={r.id} href={`/explore/${r.id}/`} onClick={(e) => { e.preventDefault(); nav('explore', { region: r.id }); }} style={{ '--accent': r.accent }}>
                 <div className="region-visual">
                   <img className="region-photo" src={`/regions/${r.id}.jpg`} width="900" height="636" alt={r[lang].name} loading="lazy" />
                   <span className="region-num-big">0{i + 1}</span>
@@ -291,13 +291,13 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
             <h2 className="section-title">{t.flagshipRoutes}</h2>
             <p className="section-sub">{lang === 'he' ? 'מסלולים מוכנים, מהיום הבודד עד שבוע שלם' : 'Ready-made routes, from a single day to a full week'}</p>
           </div>
-          <a className="link-btn" href="/routes" onClick={(e) => { e.preventDefault(); nav('routes'); }}>
+          <a className="link-btn" href="/routes/" onClick={(e) => { e.preventDefault(); nav('routes'); }}>
             {t.routesCta} <Icon.arrow style={{ transform: lang === 'he' ? 'scaleX(-1)' : 'none' }} />
           </a>
         </div>
         <div className="route-cards">
           {topRoutes.map(r => (
-            <a className="route-card" key={r.id} href={`/routes/${r.id}`} onClick={(e) => { e.preventDefault(); nav('routes', { route: r.id }); }}>
+            <a className="route-card" key={r.id} href={`/routes/${r.id}/`} onClick={(e) => { e.preventDefault(); nav('routes', { route: r.id }); }}>
               <div className="route-duration">
                 <span className="dur-num">{r.stops.length}</span>
                 <span className="dur-unit">{t.stops}</span>
@@ -326,7 +326,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
             <h2 className="section-title">{lang === 'he' ? 'טעמים ליטאיים' : 'Lithuanian Tastes'}</h2>
             <p className="section-sub">{lang === 'he' ? 'המנות המסורתיות שכדאי להזמין — וכמובן איפה לאכול אותן.' : 'Traditional dishes worth ordering — and where to find them.'}</p>
           </div>
-          <a className="link-btn" href="/food" onClick={(e) => { e.preventDefault(); nav('food'); }}>
+          <a className="link-btn" href="/food/" onClick={(e) => { e.preventDefault(); nav('food'); }}>
             {lang === 'he' ? 'תפריט מלא' : 'Full menu'} <Icon.arrow style={{ transform: lang === 'he' ? 'scaleX(-1)' : 'none' }} />
           </a>
         </div>
@@ -356,7 +356,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
               : 'Build your own trip from all the places and routes. Everything you need — in one place.'}
           </p>
           <div className="closing-cta">
-            <a className="btn btn-primary btn-large" href="/routes" onClick={(e) => { e.preventDefault(); nav('routes'); }}>
+            <a className="btn btn-primary btn-large" href="/routes/" onClick={(e) => { e.preventDefault(); nav('routes'); }}>
               {t.cta} <Icon.arrow style={{ transform: lang === 'he' ? 'scaleX(-1)' : 'none' }} />
             </a>
             <a className="btn btn-ghost btn-large" href={mapUrl} target="_blank" rel="noopener noreferrer"

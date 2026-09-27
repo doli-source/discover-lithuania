@@ -639,14 +639,14 @@ function Footer({ lang, t, nav }) {
         <div className="footer-cols">
           <div className="footer-col">
             <h5>{lang === 'he' ? 'גלה' : 'Explore'}</h5>
-            <a href="/explore" onClick={(e) => { e.preventDefault(); nav('explore'); }}>{t.nav.explore}</a>
-            <a href="/routes" onClick={(e) => { e.preventDefault(); nav('routes'); }}>{t.nav.routes}</a>
-            <a href="/food" onClick={(e) => { e.preventDefault(); nav('food'); }}>{t.nav.food}</a>
+            <a href="/explore/" onClick={(e) => { e.preventDefault(); nav('explore'); }}>{t.nav.explore}</a>
+            <a href="/routes/" onClick={(e) => { e.preventDefault(); nav('routes'); }}>{t.nav.routes}</a>
+            <a href="/food/" onClick={(e) => { e.preventDefault(); nav('food'); }}>{t.nav.food}</a>
           </div>
           <div className="footer-col">
             <h5>{lang === 'he' ? 'אזורים' : 'Regions'}</h5>
             {REGIONS.map(r => (
-              <a key={r.id} href={`/explore/${r.id}`} onClick={(e) => { e.preventDefault(); nav('explore', { region: r.id }); }}>{r[lang].name}</a>
+              <a key={r.id} href={`/explore/${r.id}/`} onClick={(e) => { e.preventDefault(); nav('explore', { region: r.id }); }}>{r[lang].name}</a>
             ))}
           </div>
           <div className="footer-col">
