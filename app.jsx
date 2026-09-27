@@ -658,7 +658,7 @@ function Footer({ lang, t, nav }) {
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© 2026 · {lang === 'he' ? 'מדריך לא רשמי' : 'An unofficial guide'}</span>
+        <span>© 2026 · {lang === 'he' ? 'מדריך לא רשמי' : 'An unofficial guide'} · <a href={lang === 'he' ? '/privacy/he/' : '/privacy/'} className="footer-legal-link">{lang === 'he' ? 'מדיניות פרטיות' : 'Privacy Policy'}</a></span>
         <span className="footer-tag">Made with ♥ for the curious traveler</span>
       </div>
     </footer>

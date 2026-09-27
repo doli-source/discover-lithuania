@@ -1296,6 +1296,12 @@ a.region-card:visited .region-name {
   color: rgba(250,245,236,0.4);
   border-top: 1px solid rgba(250,245,236,0.08);
 }
+.footer-legal-link {
+  color: rgba(250,245,236,0.55);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.footer-legal-link:hover { color: var(--cream); }
 
 /* ââ WhatsApp floating button ââ */
 .wa-float {
