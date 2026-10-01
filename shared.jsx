@@ -8,7 +8,7 @@ const STRINGS = {
     heroSubtitle: 'מסלולים, מקומות אוכל, וכל מה שצריך כדי לאהוב את הארץ הקטנה והקסומה הזו.',
     cta: 'בנה לי מסלול',
     ctaSecond: 'מקומות אוכל',
-    nav: { home: 'בית', explore: 'גלה', routes: 'מסלולים', food: 'אוכל', stays: 'לינה', blog: 'בלוג', about: 'על ליטא', faq: 'שאלות נפוצות' },
+    nav: { home: 'בית', explore: 'גלה', routes: 'מסלולים', food: 'אוכל', stays: 'לינה', blog: 'בלוג', about: 'אודות', faq: 'שאלות נפוצות' },
     kinds: { all: 'הכל', cafe: 'בתי קפה', restaurant: 'מסעדות', market: 'שוק / בר', culture: 'תרבות', nature: 'טבע', stay: 'לינה', wellness: 'וולנס', activity: 'פעילות', bar: 'בר', info: 'מידע לתייר' },
     minutes: 'דק׳',
     day: 'יום',

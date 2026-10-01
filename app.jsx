@@ -521,7 +521,7 @@ function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
     { id: 'food', label: t.nav.food },
     { id: 'stays', label: t.nav.stays },
     { id: 'blog', label: t.nav.blog },
-    { id: 'about', label: t.nav.about, href: '/about/', external: true },
+    { id: 'about', label: t.nav.about, href: lang === 'he' ? '/about/he/' : '/about/', external: true },
     { id: 'faq', label: t.nav.faq, href: lang === 'he' ? '/faq/he/' : '/faq/', external: true }
   ];
 
