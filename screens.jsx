@@ -1039,6 +1039,16 @@ function SavedScreen({ savedSet, places, regions, lang, t, openPlace, toggleSave
 function BlogScreen({ lang }) {
   const posts = [
     {
+      emoji: '🏛️',
+      tag: lang === 'he' ? 'מורשת יהודית · פוסט אורח' : 'Jewish Heritage · Guest Feature',
+      title: lang === 'he' ? 'מוזיאון Lost Shtetl: עולם שנעלם חוזר לחיים' : 'The Lost Shtetl Museum: Where a Vanished World Comes Back to Life',
+      desc: lang === 'he'
+        ? 'צוות מוזיאון Lost Shtetl משתף את סיפורה של הקהילה היהודית שנעלמה משדובה — והמוזיאון שמחזיר אותה לחיים.'
+        : "The team of the Lost Shtetl Museum shares the story of Šeduva's vanished Jewish community — and the museum that brings it back to life.",
+      href: lang === 'he' ? '/blog/lost-shtetl-museum?lang=he' : '/blog/lost-shtetl-museum',
+      time: lang === 'he' ? '5 דק׳ קריאה' : '5 min read',
+    },
+    {
       emoji: '🏺',
       tag: lang === 'he' ? 'הכירו את היוצרת · פוסט אורח' : 'Meet the Maker · Guest Feature',
       title: lang === 'he' ? 'מהעיפרון לחומר: המסע היצירתי של אגנס BR' : 'From Pencil to Clay: Agnes BR\'s Creative Journey',
