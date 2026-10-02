@@ -79,6 +79,20 @@ function buildURL(screen, params, openPlaceId, lang) {
 
   return path + (qs.toString() ? '?' + qs.toString() : '');
 }
+
+// Real on-disk Hebrew pages live at a sibling "he/" path for every screen
+// except an individual routes itinerary (only the routes hub has a built
+// he/ page — see routes/*/ on disk). Used to give the language-toggle link
+// a real, crawlable href instead of only a client-side "?lang=he" swap.
+function buildAltLangBasePath(screen, params) {
+  if (screen === 'routes' && params?.route) return null;
+  let path = '/';
+  if (screen && screen !== 'home') {
+    path = '/' + screen;
+    if (screen === 'explore' && params?.region) path += '/' + params.region;
+  }
+  return path.endsWith('/') ? path : path + '/';
+}
 // ────────────────────────────────────────────────────────────────────────────
 
 function App() {
@@ -367,6 +381,17 @@ function App() {
     ga('language_toggle', { to: newLang });
   };
 
+  // Crawlable href for the language-toggle link: points at the real he/
+  // (or non-he) static page for the current screen so search engines can
+  // discover the other language version via a normal link, not only via
+  // the sitemap. The onClick still does the fast in-place swap above.
+  const langToggleHref = useMemo(() => {
+    const otherLang = lang === 'he' ? 'en' : 'he';
+    const basePath = buildAltLangBasePath(screen, params);
+    if (basePath === null) return buildURL(screen, params, openPlaceId, otherLang);
+    return otherLang === 'he' ? basePath + 'he/' : basePath;
+  }, [screen, params, lang, openPlaceId]);
+
   const ga = (event, params) => { if (typeof gtag === 'function') gtag('event', event, params); };
 
   const nav = (s, p = {}) => {
@@ -431,7 +456,7 @@ function App() {
 
   return (
     <div className="app">
-      <NavBar lang={lang} setLang={setLang} screen={screen} nav={nav} t={t} savedCount={savedSet.size} onSavedClick={() => nav('saved')} />
+      <NavBar lang={lang} setLang={setLang} screen={screen} nav={nav} t={t} savedCount={savedSet.size} onSavedClick={() => nav('saved')} langToggleHref={langToggleHref} />
 
       <main className="main">
         {screen === 'home' && (
@@ -505,7 +530,7 @@ function App() {
   );
 }
 
-function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
+function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick, langToggleHref }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   useEffect(() => {
@@ -563,16 +588,17 @@ function NavBar({ lang, setLang, screen, nav, t, savedCount, onSavedClick }) {
               <span>{savedCount}</span>
             </button>
           )}
-          <button
+          <a
+            href={langToggleHref}
             className="lang-toggle"
-            onClick={() => setLang(lang === 'he' ? 'en' : 'he')}
+            onClick={(e) => { e.preventDefault(); setLang(lang === 'he' ? 'en' : 'he'); }}
             aria-label="Toggle language"
           >
             <Icon.globe/>
             <span className={lang === 'he' ? 'active' : ''}>עב</span>
             <span className="lang-sep">·</span>
             <span className={lang === 'en' ? 'active' : ''}>EN</span>
-          </button>
+          </a>
         </div>
       </div>
       {mobileOpen && (

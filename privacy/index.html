@@ -67,6 +67,7 @@
     .nav-brand-name { font-family: 'Instrument Serif', 'Frank Ruhl Libre', serif; font-size: 1.35rem; font-weight: 500; color: #1f2a1a; letter-spacing: -0.01em; white-space: nowrap; }
     .nav-brand-sub { font-size: 0.7rem; color: rgba(36,26,16,0.55); letter-spacing: 0.02em; }
     .lang-btn {
+      display: inline-block;
       font-size: 12px; font-weight: 600;
       padding: 5px 12px;
       border-radius: 999px;
@@ -75,6 +76,7 @@
       color: #1f2a1a;
       cursor: pointer;
       line-height: 1;
+      text-decoration: none;
     }
     .lang-btn:hover { border-color: #C28840; color: #C28840; }
     .nav-back { font-size: 13px; color: #7a6a4e; text-decoration: none; display: flex; align-items: center; gap: 4px; }
@@ -125,7 +127,7 @@
     </a>
     <div style="display:flex;align-items:center;gap:14px">
       <a href="https://lithuaniadiscovery.com/" class="nav-back" data-he="← בית">&#8592; Home</a>
-      <button class="lang-btn" id="lb" type="button">עב</button>
+      <a class="lang-btn" id="lb" href="/privacy/he/">עב</a>
     </div>
   </nav>
 
@@ -178,7 +180,8 @@
   (function () {
     var btn = document.getElementById('lb');
     if (!btn) return;
-    btn.addEventListener('click', function () {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
       var url = new URL(location.href);
       if (url.searchParams.get('lang') === 'he') url.searchParams.delete('lang');
       else url.searchParams.set('lang', 'he');
