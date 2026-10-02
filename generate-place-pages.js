@@ -189,6 +189,64 @@ function escHtml(str) {
 
 // Everything that differs between the two language versions of one place,
 // resolved in one spot so the schema and the page can never disagree.
+// Converts a free-text hours_en string (e.g. "Mon-Fri 09:00-19:00 · Sat-Sun
+// 10:00-18:00") into a schema.org-valid openingHours value (Mo-Fr day
+// codes). Returns null when the text doesn't confidently match a known
+// pattern (seasonal, check-in, "Open daily", etc.) rather than guessing --
+// the plain-text "Hours" field shown on the page is unaffected either way.
+// Always built from the English source (p.hours) regardless of page
+// language, since schema.org day codes are not translated.
+const HOURS_DAY_CODE = { mon: 'Mo', tue: 'Tu', wed: 'We', thu: 'Th', fri: 'Fr', sat: 'Sa', sun: 'Su' };
+
+function mapHoursDayToken(tok) {
+  tok = tok.trim();
+  let m = tok.match(/^([A-Za-z]{3})-([A-Za-z]{3})$/);
+  if (m) {
+    const a = HOURS_DAY_CODE[m[1].toLowerCase()], b = HOURS_DAY_CODE[m[2].toLowerCase()];
+    return a && b ? `${a}-${b}` : null;
+  }
+  m = tok.match(/^([A-Za-z]{3})$/);
+  if (m) return HOURS_DAY_CODE[m[1].toLowerCase()] || null;
+  return null;
+}
+
+function parseHoursDayList(dayPart) {
+  const toks = dayPart.split(',').map((t) => t.trim()).filter(Boolean);
+  const mapped = toks.map(mapHoursDayToken);
+  return mapped.some((x) => x === null) ? null : mapped.join(',');
+}
+
+function parseHoursSegment(seg) {
+  seg = seg.trim();
+  let m = seg.match(/^Daily\s+(\d{1,2}:\d{2})-(\d{1,2}:\d{2})$/i);
+  if (m) return `Mo-Su ${m[1].padStart(5, '0')}-${m[2].padStart(5, '0')}`;
+  m = seg.match(/^([A-Za-z]{3}(?:-[A-Za-z]{3})?(?:,\s*[A-Za-z]{3}(?:-[A-Za-z]{3})?)*)\s+(\d{1,2}:\d{2})-(\d{1,2}:\d{2})$/);
+  if (m) {
+    const days = parseHoursDayList(m[1]);
+    if (!days) return null;
+    return `${days} ${m[2].padStart(5, '0')}-${m[3].padStart(5, '0')}`;
+  }
+  m = seg.match(/^(\d{1,2}:\d{2})-(\d{1,2}:\d{2})$/);
+  if (m) return `Mo-Su ${m[1].padStart(5, '0')}-${m[2].padStart(5, '0')}`;
+  if (/^24\/7/i.test(seg)) return 'Mo-Su 00:00-24:00';
+  return null;
+}
+
+function parseOpeningHours(raw) {
+  if (!raw || /\u2026|\.\.\.$/.test(raw)) return null;
+  let segments = raw.split('\u00b7').map((s) => s.trim()).filter(Boolean);
+  if (segments.length === 1 && /,\s*[A-Za-z]{3}(,[A-Za-z]{3})*\s+\d{1,2}:\d{2}/.test(segments[0])) {
+    segments = segments[0].split(/,\s*(?=[A-Za-z]{3}(?:,[A-Za-z]{3})*\s+\d)/).map((s) => s.trim());
+  }
+  const parsed = [];
+  for (const seg of segments) {
+    const p = parseHoursSegment(seg);
+    if (p === null) return null;
+    parsed.push(p);
+  }
+  return parsed.length === 0 ? null : (parsed.length === 1 ? parsed[0] : parsed);
+}
+
 function view(p, lang) {
   const he = lang === 'he';
   const S = STRINGS[lang];
@@ -228,6 +286,7 @@ function buildSchema(p, lang) {
     : baseSchemaType;
   const regionName = v.region;
   const url = v.url;
+  const canonicalHours = parseOpeningHours(p.hours);
 
   const schema = {
     '@context': 'https://schema.org',
@@ -256,7 +315,7 @@ function buildSchema(p, lang) {
             bestRating: 5,
           },
         } : {}),
-        ...(v.hours ? { openingHours: v.hours } : {}),
+        ...(canonicalHours ? { openingHours: canonicalHours } : {}),
         ...(p.website ? { url: p.website, sameAs: [p.website] } : {}),
         ...(p.price ? { priceRange: p.price } : {}),
         address: {
