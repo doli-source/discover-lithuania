@@ -1398,6 +1398,16 @@ a.region-card:visited .region-name {
   transition: all 0.2s;
   position: relative;
 }
+/* Invisible full-card link so crawlers (and ctrl/cmd-click) get a real,
+   language-correct href to the place page. Sits below the bookmark (z-index 2)
+   and share button (z-index 10) so those stay clickable on top; purely an
+   overlay, so it changes nothing visually. */
+.niv-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+}
 .niv-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 14px 32px rgba(36,26,16,0.1);

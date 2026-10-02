@@ -14,8 +14,8 @@
   const JSX_SCRIPTS = [
     '/tweaks-panel.jsx?v=20260626b',
     '/shared.jsx?v=20261001a',
-    '/screens.jsx?v=20260927a',
-    '/app.jsx?v=20261001a',
+    '/screens.jsx?v=20261002a',
+    '/app.jsx?v=20261002a',
   ];
 
   function rest(table, qs) {

@@ -99,8 +99,15 @@ function PlaceCard({ place, region, lang, t, onClick, saved, onToggleSave, accen
   const typeLabel = lang === 'he' ? place.typeHe : place.type;
   const ph = `${place.name} · ${place.type}`;
   const tone = tones[place.id.charCodeAt(0) % tones.length];
+  const placeHref = lang === 'he' ? `/places/${place.id}/he/` : `/places/${place.id}/`;
   return (
-    <article className={`niv-card ${place.niv ? 'has-tip' : ''}`} onClick={onClick}>
+    <article className={`niv-card ${place.niv ? 'has-tip' : ''}`}>
+      <a
+        className="niv-card-link"
+        href={placeHref}
+        aria-label={ph}
+        onClick={(e) => { e.preventDefault(); onClick && onClick(); }}
+      />
       <div className="niv-card-img" style={{ position: 'relative', background: `linear-gradient(135deg, ${(accent || (region && region.accent) || '#C28840')}22, ${(accent || (region && region.accent) || '#C28840')}10)` }}>
         <span className="niv-emoji-big" aria-hidden="true">{place.emoji}</span>
         <ShareButton place={place} lang={lang} />
@@ -227,7 +234,7 @@ function HomeScreen({ lang, t, regions, places, landmarks, dishes, itineraries, 
           {regions.map((r, i) => {
             const count = places.filter(p => p.region === r.id).length;
             return (
-              <a className="region-card" key={r.id} href={`/explore/${r.id}/`} onClick={(e) => { e.preventDefault(); nav('explore', { region: r.id }); }} style={{ '--accent': r.accent }}>
+              <a className="region-card" key={r.id} href={lang === 'he' ? `/explore/${r.id}/he/` : `/explore/${r.id}/`} onClick={(e) => { e.preventDefault(); nav('explore', { region: r.id }); }} style={{ '--accent': r.accent }}>
                 <div className="region-visual">
                   <img className="region-photo" src={`/regions/${r.id}.jpg`} width="900" height="636" alt={r[lang].name} loading="lazy" />
                   <span className="region-num-big">0{i + 1}</span>
@@ -1045,7 +1052,7 @@ function BlogScreen({ lang }) {
       desc: lang === 'he'
         ? 'צוות מוזיאון Lost Shtetl משתף את סיפורה של הקהילה היהודית שנעלמה משדובה — והמוזיאון שמחזיר אותה לחיים.'
         : "The team of the Lost Shtetl Museum shares the story of Šeduva's vanished Jewish community — and the museum that brings it back to life.",
-      href: lang === 'he' ? '/blog/lost-shtetl-museum?lang=he' : '/blog/lost-shtetl-museum',
+      href: lang === 'he' ? '/blog/lost-shtetl-museum/he/' : '/blog/lost-shtetl-museum',
       time: lang === 'he' ? '5 דק׳ קריאה' : '5 min read',
     },
     {
@@ -1055,7 +1062,7 @@ function BlogScreen({ lang }) {
       desc: lang === 'he'
         ? 'אגנס BR, אמנית קרמיקה מוילנה, משתפת את המסע שלה מפיננסים לחומר — והסטודיו שלה בתוך אחוזה בטרקו-וקה.'
         : 'Agnes BR, a Vilnius-based ceramics artist, shares her journey from finance to clay — and her studio inside a Trakų Vokė manor.',
-      href: lang === 'he' ? '/blog/agnes-br-ceramics?lang=he' : '/blog/agnes-br-ceramics',
+      href: lang === 'he' ? '/blog/agnes-br-ceramics/he/' : '/blog/agnes-br-ceramics',
       time: lang === 'he' ? '4 דק׳ קריאה' : '4 min read',
     },
     {
@@ -1065,7 +1072,7 @@ function BlogScreen({ lang }) {
       desc: lang === 'he'
         ? 'בריגיטה אויאר מביאה לנו את המתכון המסורתי של אמא שלה לצפלינאי — כופתאות תפוח אדמה ממולאות בבשר.'
         : 'Brigita Uyar shares her mum\'s traditional recipe for cepelinai — Lithuania\'s beloved stuffed potato dumplings.',
-      href: lang === 'he' ? '/blog/cepelinai-brigita-uyar?lang=he' : '/blog/cepelinai-brigita-uyar',
+      href: lang === 'he' ? '/blog/cepelinai-brigita-uyar/he/' : '/blog/cepelinai-brigita-uyar',
       time: lang === 'he' ? '5 דק׳ קריאה' : '5 min read',
     },
     {
@@ -1075,7 +1082,7 @@ function BlogScreen({ lang }) {
       desc: lang === 'he'
         ? 'מסלול יום אחר יום — מהרחובות הצבעוניים של העיר הישנה, דרך הטירה על האגם בטרקאי, ועד לסצנת האוכל הצעירה של קובנה.'
         : 'A day-by-day itinerary — from the colourful Old Town streets to Trakai\'s island castle and Kaunas\'s young food scene.',
-      href: lang === 'he' ? '/blog/5-days-in-lithuania?lang=he' : '/blog/5-days-in-lithuania',
+      href: lang === 'he' ? '/blog/5-days-in-lithuania/he/' : '/blog/5-days-in-lithuania',
       time: lang === 'he' ? '7 דק׳ קריאה' : '7 min read',
     },
     {
@@ -1085,7 +1092,7 @@ function BlogScreen({ lang }) {
       desc: lang === 'he'
         ? 'הטירה על האגם, קיבינאי, השכרת סירות, כדור פורח — כל מה שצריך לבילוי מושלם בטרקאי.'
         : 'The island castle, Karaim kibinai, boat rentals, hot air balloon, and the best coffee in town.',
-      href: lang === 'he' ? '/blog/trakai-day-trip?lang=he' : '/blog/trakai-day-trip',
+      href: lang === 'he' ? '/blog/trakai-day-trip/he/' : '/blog/trakai-day-trip',
       time: lang === 'he' ? '5 דק׳ קריאה' : '5 min read',
     },
     {
@@ -1095,7 +1102,7 @@ function BlogScreen({ lang }) {
       desc: lang === 'he'
         ? 'Le Travi, Donde, OSH Halal ועוד — המקומות שאנחנו חוזרים אליהם שוב ושוב.'
         : 'Le Travi, Donde, OSH Halal and more — the restaurants we keep coming back to.',
-      href: lang === 'he' ? '/blog/best-restaurants-vilnius?lang=he' : '/blog/best-restaurants-vilnius',
+      href: lang === 'he' ? '/blog/best-restaurants-vilnius/he/' : '/blog/best-restaurants-vilnius',
       time: lang === 'he' ? '4 דק׳ קריאה' : '4 min read',
     },
     {
@@ -1105,7 +1112,7 @@ function BlogScreen({ lang }) {
       desc: lang === 'he'
         ? 'Espresinė, BREW, Backstage ועוד — מהמקומות שהמקומיים שותים בהם קפה.'
         : 'Espresinė, BREW, Backstage and more — where locals actually drink coffee.',
-      href: lang === 'he' ? '/blog/best-coffee-vilnius?lang=he' : '/blog/best-coffee-vilnius',
+      href: lang === 'he' ? '/blog/best-coffee-vilnius/he/' : '/blog/best-coffee-vilnius',
       time: lang === 'he' ? '4 דק׳ קריאה' : '4 min read',
     },
   ];
