@@ -262,7 +262,9 @@ function view(p, lang) {
   const enUrl = `${BASE_URL}/places/${p.id}/`;
   const heUrl = `${BASE_URL}/places/${p.id}/he/`;
   const desc = blurb
-    ? blurb.slice(0, 155) + (blurb.length > 155 ? '…' : '')
+    ? (blurb.length > 155
+        ? blurb.slice(0, 155).replace(/\s+\S*$/, '') + '…'
+        : blurb)
     : S.fallbackDesc(name, kind, region);
 
   return {
