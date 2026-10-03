@@ -194,9 +194,9 @@
         <div class="detail"><div class="detail-label">Type</div><div class="detail-value">History museum</div></div>
         <div class="detail"><div class="detail-label">Hours</div><div class="detail-value">Mon-Sat 08:00-21:00</div></div>
         
-        <div class="detail"><div class="detail-label">Website</div><div class="detail-value"><a href="https://zarasumuziejus.lt/" target="_blank" rel="noopener">zarasumuziejus.lt</a></div></div>
+        <div class="detail"><div class="detail-label">Website</div><div class="detail-value"><a class="website-link" href="https://zarasumuziejus.lt/" target="_blank" rel="noopener">zarasumuziejus.lt</a></div></div>
         <div class="detail"><div class="detail-label">Region</div><div class="detail-value"><a href="https://lithuaniadiscovery.com/explore/zarasai/">Zarasai</a></div></div>
-        <div class="detail"><div class="detail-label">Map</div><div class="detail-value"><a href="https://www.google.com/maps?q=55.728408,26.245125" target="_blank" rel="noopener">Open in Google Maps</a></div></div>
+        <div class="detail"><div class="detail-label">Map</div><div class="detail-value"><a class="map-link" href="https://www.google.com/maps?q=55.728408,26.245125" target="_blank" rel="noopener">Open in Google Maps</a></div></div>
       </div>
     </div>
 
@@ -261,6 +261,21 @@
       }
     }, { threshold: 0.5 }).observe(mapFrame);
   }
+
+  document.addEventListener('click', function(e) {
+    var w = e.target.closest('.website-link');
+    if (w) {
+      ga('website_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+    var m = e.target.closest('.map-link');
+    if (m) {
+      ga('map_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+  });
 })();
 </script>
 <script>/* he-support-v1 */

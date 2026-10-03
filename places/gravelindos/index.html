@@ -324,8 +324,8 @@
         <div><div class="detail-label">Type</div><div class="detail-value" data-he="קהילת רכיבה לנשים">Women's cycling community</div></div>
         <div><div class="detail-label">Rides</div><div class="detail-value" data-he-label="רכיבות" data-he="כל יום חמישי — חינם">Every Thursday — free</div></div>
         <div><div class="detail-label">Region</div><div class="detail-value"><a href="https://lithuaniadiscovery.com/explore/vilnius/">Vilnius</a></div></div>
-        <div><div class="detail-label">Website</div><div class="detail-value"><a href="https://gravelindos.com" target="_blank" rel="noopener">gravelindos.com</a></div></div>
-        <div><div class="detail-label">Instagram</div><div class="detail-value"><a href="https://www.instagram.com/gravelindos" target="_blank" rel="noopener">@gravelindos</a></div></div>
+        <div><div class="detail-label">Website</div><div class="detail-value"><a class="website-link" href="https://gravelindos.com" target="_blank" rel="noopener">gravelindos.com</a></div></div>
+        <div><div class="detail-label">Instagram</div><div class="detail-value"><a class="website-link" href="https://www.instagram.com/gravelindos" target="_blank" rel="noopener">@gravelindos</a></div></div>
         <div><div class="detail-label">Contact</div><div class="detail-value"><!-- email_off --><a href="mailto:gravelindos@gmail.com">gravelindos@gmail.com</a><!-- /email_off --></div></div>
       </div>
     </div>
@@ -413,6 +413,12 @@
     var btn = e.target.closest('.cta-btn');
     if (btn) {
       ga('cta_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+    var w = e.target.closest('.website-link');
+    if (w) {
+      ga('website_click', {
         place_id: slug, place_name: name, region: region, language: lang
       });
     }

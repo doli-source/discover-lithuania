@@ -191,9 +191,9 @@
         <div class="detail"><div class="detail-label">סוג</div><div class="detail-value">חווה עם סוסים ובתי נופש ליד האגם</div></div>
         <div class="detail"><div class="detail-label">שעות פתיחה</div><div class="detail-value">צ'ק-אין מ-15:00</div></div>
         
-        <div class="detail"><div class="detail-label">אתר</div><div class="detail-value"><a href="https://alantoszirgai.lt/" target="_blank" rel="noopener">alantoszirgai.lt</a></div></div>
+        <div class="detail"><div class="detail-label">אתר</div><div class="detail-value"><a class="website-link" href="https://alantoszirgai.lt/" target="_blank" rel="noopener">alantoszirgai.lt</a></div></div>
         <div class="detail"><div class="detail-label">אזור</div><div class="detail-value"><a href="https://lithuaniadiscovery.com/explore/countryside/?lang=he">הכפר</a></div></div>
-        <div class="detail"><div class="detail-label">מפה</div><div class="detail-value"><a href="https://www.google.com/maps?q=55.3744666,25.2691686" target="_blank" rel="noopener">פתח ב‑Google Maps</a></div></div>
+        <div class="detail"><div class="detail-label">מפה</div><div class="detail-value"><a class="map-link" href="https://www.google.com/maps?q=55.3744666,25.2691686" target="_blank" rel="noopener">פתח ב‑Google Maps</a></div></div>
       </div>
     </div>
 
@@ -258,6 +258,21 @@
       }
     }, { threshold: 0.5 }).observe(mapFrame);
   }
+
+  document.addEventListener('click', function(e) {
+    var w = e.target.closest('.website-link');
+    if (w) {
+      ga('website_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+    var m = e.target.closest('.map-link');
+    if (m) {
+      ga('map_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+  });
 })();
 </script>
 <script>/* he-support-v1 */

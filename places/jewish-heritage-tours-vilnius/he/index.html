@@ -235,6 +235,21 @@
       }
     }, { threshold: 0.5 }).observe(mapFrame);
   }
+
+  document.addEventListener('click', function(e) {
+    var w = e.target.closest('.website-link');
+    if (w) {
+      ga('website_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+    var m = e.target.closest('.map-link');
+    if (m) {
+      ga('map_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+  });
 })();
 </script>
 <script>/* he-support-v1 */

@@ -194,9 +194,9 @@
         <div class="detail"><div class="detail-label">סוג</div><div class="detail-value">מוזיאון</div></div>
         <div class="detail"><div class="detail-label">שעות פתיחה</div><div class="detail-value">ב'-ו' 08:00-16:30</div></div>
         
-        <div class="detail"><div class="detail-label">אתר</div><div class="detail-value"><a href="https://etnokosmomuziejus.lt/en/" target="_blank" rel="noopener">etnokosmomuziejus.lt/en</a></div></div>
+        <div class="detail"><div class="detail-label">אתר</div><div class="detail-value"><a class="website-link" href="https://etnokosmomuziejus.lt/en/" target="_blank" rel="noopener">etnokosmomuziejus.lt/en</a></div></div>
         <div class="detail"><div class="detail-label">אזור</div><div class="detail-value"><a href="https://lithuaniadiscovery.com/explore/moletai/?lang=he">מולטאי</a></div></div>
-        <div class="detail"><div class="detail-label">מפה</div><div class="detail-value"><a href="https://www.google.com/maps?q=55.31539,25.55506" target="_blank" rel="noopener">פתח ב‑Google Maps</a></div></div>
+        <div class="detail"><div class="detail-label">מפה</div><div class="detail-value"><a class="map-link" href="https://www.google.com/maps?q=55.31539,25.55506" target="_blank" rel="noopener">פתח ב‑Google Maps</a></div></div>
       </div>
     </div>
 
@@ -261,6 +261,21 @@
       }
     }, { threshold: 0.5 }).observe(mapFrame);
   }
+
+  document.addEventListener('click', function(e) {
+    var w = e.target.closest('.website-link');
+    if (w) {
+      ga('website_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+    var m = e.target.closest('.map-link');
+    if (m) {
+      ga('map_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+  });
 })();
 </script>
 <script>/* he-support-v1 */

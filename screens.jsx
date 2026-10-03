@@ -902,7 +902,7 @@ function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, map
                   <Icon.globe />
                   <a href={place.website} target="_blank" rel="noopener noreferrer"
                      style={{ color: accentColor, textDecoration: 'none', fontWeight: 600 }}
-                     onClick={e => e.stopPropagation()}>
+                     onClick={e => { e.stopPropagation(); if (typeof gtag === 'function') gtag('event', 'website_click', { place_id: place.id, place_name: place.name, region: place.region, language: lang }); }}>
                     {place.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
                   </a>
                 </div>
@@ -928,7 +928,7 @@ function PlaceModal({ place, region, lang, t, onClose, saved, onToggleSaved, map
             {place.website && (
               <button
                 className="btn btn-ghost"
-                onClick={(e) => { e.preventDefault(); window.open(place.website, '_blank', 'noopener,noreferrer'); }}
+                onClick={(e) => { e.preventDefault(); if (typeof gtag === 'function') gtag('event', 'website_click', { place_id: place.id, place_name: place.name, region: place.region, language: lang }); window.open(place.website, '_blank', 'noopener,noreferrer'); }}
               >
                 <Icon.globe /> {lang === 'he' ? 'אתר' : 'Website'}
               </button>

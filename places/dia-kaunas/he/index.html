@@ -192,9 +192,9 @@
         <div class="detail"><div class="detail-label">סוג</div><div class="detail-value">מסעדת שף</div></div>
         <div class="detail"><div class="detail-label">שעות פתיחה</div><div class="detail-value">ב'-ד' 12:00-22:00 · ה' 12:00-23:00 · ו'-ש' 12:00-24:00 · א' 12:00-21:00</div></div>
         <div class="detail"><div class="detail-label">מחיר</div><div class="detail-value">€50+</div></div>
-        <div class="detail"><div class="detail-label">אתר</div><div class="detail-value"><a href="https://www.restoranasdia.lt" target="_blank" rel="noopener">www.restoranasdia.lt</a></div></div>
+        <div class="detail"><div class="detail-label">אתר</div><div class="detail-value"><a class="website-link" href="https://www.restoranasdia.lt" target="_blank" rel="noopener">www.restoranasdia.lt</a></div></div>
         <div class="detail"><div class="detail-label">אזור</div><div class="detail-value"><a href="https://lithuaniadiscovery.com/explore/kaunas/?lang=he">קובנה</a></div></div>
-        <div class="detail"><div class="detail-label">מפה</div><div class="detail-value"><a href="https://www.google.com/maps?q=54.8965017,23.9090541" target="_blank" rel="noopener">פתח ב‑Google Maps</a></div></div>
+        <div class="detail"><div class="detail-label">מפה</div><div class="detail-value"><a class="map-link" href="https://www.google.com/maps?q=54.8965017,23.9090541" target="_blank" rel="noopener">פתח ב‑Google Maps</a></div></div>
       </div>
     </div>
 
@@ -259,6 +259,21 @@
       }
     }, { threshold: 0.5 }).observe(mapFrame);
   }
+
+  document.addEventListener('click', function(e) {
+    var w = e.target.closest('.website-link');
+    if (w) {
+      ga('website_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+    var m = e.target.closest('.map-link');
+    if (m) {
+      ga('map_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+  });
 })();
 </script>
 <script>/* he-support-v1 */

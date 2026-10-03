@@ -264,7 +264,7 @@
       <div class="details-grid">
         <div><div class="detail-label">Type</div><div class="detail-value" data-he="6 בתי עץ + צריף">6 treehouses + cabin</div></div>
         <div><div class="detail-label">Region</div><div class="detail-value"><a href="https://lithuaniadiscovery.com/explore/countryside/">Lithuanian Countryside</a></div></div>
-        <div><div class="detail-label">Website</div><div class="detail-value"><a href="https://www.varenatreehouse.com/" target="_blank" rel="noopener">varenatreehouse.com</a></div></div>
+        <div><div class="detail-label">Website</div><div class="detail-value"><a class="website-link" href="https://www.varenatreehouse.com/" target="_blank" rel="noopener">varenatreehouse.com</a></div></div>
       </div>
     </div>
 
@@ -368,6 +368,21 @@
       }
     }, { threshold: 0.5 }).observe(mapFrame);
   }
+
+  document.addEventListener('click', function(e) {
+    var w = e.target.closest('.website-link');
+    if (w) {
+      ga('website_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+    var m = e.target.closest('.map-link');
+    if (m) {
+      ga('map_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+  });
 })();
 </script>
 </body>

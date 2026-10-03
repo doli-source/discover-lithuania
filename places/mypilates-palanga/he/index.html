@@ -192,9 +192,9 @@
         <div class="detail"><div class="detail-label">סוג</div><div class="detail-value">סטודיו פילאטיס עונתי</div></div>
         <div class="detail"><div class="detail-label">שעות פתיחה</div><div class="detail-value">ב'-א' 08:00-22:00</div></div>
         <div class="detail"><div class="detail-label">מחיר</div><div class="detail-value">€12–22</div></div>
-        <div class="detail"><div class="detail-label">אתר</div><div class="detail-value"><a href="https://mypilates.lt/" target="_blank" rel="noopener">mypilates.lt</a></div></div>
+        <div class="detail"><div class="detail-label">אתר</div><div class="detail-value"><a class="website-link" href="https://mypilates.lt/" target="_blank" rel="noopener">mypilates.lt</a></div></div>
         <div class="detail"><div class="detail-label">אזור</div><div class="detail-value"><a href="https://lithuaniadiscovery.com/explore/palanga/?lang=he">פלאנגה</a></div></div>
-        <div class="detail"><div class="detail-label">מפה</div><div class="detail-value"><a href="https://www.google.com/maps?q=55.9192235,21.0584414" target="_blank" rel="noopener">פתח ב‑Google Maps</a></div></div>
+        <div class="detail"><div class="detail-label">מפה</div><div class="detail-value"><a class="map-link" href="https://www.google.com/maps?q=55.9192235,21.0584414" target="_blank" rel="noopener">פתח ב‑Google Maps</a></div></div>
       </div>
     </div>
 
@@ -259,6 +259,21 @@
       }
     }, { threshold: 0.5 }).observe(mapFrame);
   }
+
+  document.addEventListener('click', function(e) {
+    var w = e.target.closest('.website-link');
+    if (w) {
+      ga('website_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+    var m = e.target.closest('.map-link');
+    if (m) {
+      ga('map_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+  });
 })();
 </script>
 <script>/* he-support-v1 */

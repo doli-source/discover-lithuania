@@ -490,9 +490,9 @@ ${buildSchema(p, lang)}
         ${v.typeLabel ? `<div class="detail"><div class="detail-label">${escHtml(S.type)}</div><div class="detail-value">${escHtml(v.typeLabel)}</div></div>` : ''}
         ${v.hours ? `<div class="detail"><div class="detail-label">${escHtml(S.hours)}</div><div class="detail-value">${escHtml(v.hours)}</div></div>` : ''}
         ${p.price ? `<div class="detail"><div class="detail-label">${escHtml(S.price)}</div><div class="detail-value">${escHtml(p.price)}</div></div>` : ''}
-        ${p.website ? `<div class="detail"><div class="detail-label">${escHtml(S.website)}</div><div class="detail-value"><a href="${escHtml(p.website)}" target="_blank" rel="noopener">${escHtml(p.website.replace(/^https?:\/\//, '').replace(/\/$/, ''))}</a></div></div>` : ''}
+        ${p.website ? `<div class="detail"><div class="detail-label">${escHtml(S.website)}</div><div class="detail-value"><a class="website-link" href="${escHtml(p.website)}" target="_blank" rel="noopener">${escHtml(p.website.replace(/^https?:\/\//, '').replace(/\/$/, ''))}</a></div></div>` : ''}
         <div class="detail"><div class="detail-label">${escHtml(S.region)}</div><div class="detail-value"><a href="${BASE_URL}/explore/${p.region}/${v.he ? '?lang=he' : ''}">${escHtml(regionName)}</a></div></div>
-        ${p.lat && p.lng ? `<div class="detail"><div class="detail-label">${escHtml(S.map)}</div><div class="detail-value"><a href="https://www.google.com/maps?q=${p.lat},${p.lng}" target="_blank" rel="noopener">${escHtml(S.openMaps)}</a></div></div>` : ''}
+        ${p.lat && p.lng ? `<div class="detail"><div class="detail-label">${escHtml(S.map)}</div><div class="detail-value"><a class="map-link" href="https://www.google.com/maps?q=${p.lat},${p.lng}" target="_blank" rel="noopener">${escHtml(S.openMaps)}</a></div></div>` : ''}
       </div>
     </div>
 
@@ -557,6 +557,21 @@ ${buildSchema(p, lang)}
       }
     }, { threshold: 0.5 }).observe(mapFrame);
   }
+
+  document.addEventListener('click', function(e) {
+    var w = e.target.closest('.website-link');
+    if (w) {
+      ga('website_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+    var m = e.target.closest('.map-link');
+    if (m) {
+      ga('map_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+  });
 })();
 </script>
 <script>/* he-support-v1 */

@@ -239,7 +239,7 @@
         <div><div class="detail-label">Type</div><div class="detail-value" data-he="בית קלייה לקפה">Coffee Roaster</div></div>
         <div><div class="detail-label">Hours</div><div class="detail-value">Closes 19:00</div></div>
         <div><div class="detail-label">Address</div><div class="detail-value">Liepų g. 64, Klaipėda</div></div>
-        <div><div class="detail-label">Website</div><div class="detail-value"><a href="https://musangas.lt/" target="_blank" rel="noopener">musangas.lt</a></div></div>
+        <div><div class="detail-label">Website</div><div class="detail-value"><a class="website-link" href="https://musangas.lt/" target="_blank" rel="noopener">musangas.lt</a></div></div>
         <div><div class="detail-label">Region</div><div class="detail-value"><a href="https://lithuaniadiscovery.com/explore/klaipeda/">Klaipėda</a></div></div>
       </div>
     </div>
@@ -349,6 +349,21 @@
       }
     }, { threshold: 0.5 }).observe(mapFrame);
   }
+
+  document.addEventListener('click', function(e) {
+    var w = e.target.closest('.website-link');
+    if (w) {
+      ga('website_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+    var m = e.target.closest('.map-link');
+    if (m) {
+      ga('map_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+  });
 })();
   </script>
 </body>

@@ -195,9 +195,9 @@
         <div class="detail"><div class="detail-label">סוג</div><div class="detail-value">מוזיאון אתנוגרפי</div></div>
         <div class="detail"><div class="detail-label">שעות פתיחה</div><div class="detail-value">ד'-א' 10:00-18:00</div></div>
         <div class="detail"><div class="detail-label">מחיר</div><div class="detail-value">€1–3</div></div>
-        <div class="detail"><div class="detail-label">אתר</div><div class="detail-value"><a href="https://trakaimuziejus.lt/en/s-sapsalo-karaimu-tautos-muziejaus-ekspozicija/" target="_blank" rel="noopener">trakaimuziejus.lt/en/s-sapsalo-karaimu-tautos-muziejaus-ekspozicija</a></div></div>
+        <div class="detail"><div class="detail-label">אתר</div><div class="detail-value"><a class="website-link" href="https://trakaimuziejus.lt/en/s-sapsalo-karaimu-tautos-muziejaus-ekspozicija/" target="_blank" rel="noopener">trakaimuziejus.lt/en/s-sapsalo-karaimu-tautos-muziejaus-ekspozicija</a></div></div>
         <div class="detail"><div class="detail-label">אזור</div><div class="detail-value"><a href="https://lithuaniadiscovery.com/explore/trakai/?lang=he">טרקאי</a></div></div>
-        <div class="detail"><div class="detail-label">מפה</div><div class="detail-value"><a href="https://www.google.com/maps?q=54.6471567,24.9330656" target="_blank" rel="noopener">פתח ב‑Google Maps</a></div></div>
+        <div class="detail"><div class="detail-label">מפה</div><div class="detail-value"><a class="map-link" href="https://www.google.com/maps?q=54.6471567,24.9330656" target="_blank" rel="noopener">פתח ב‑Google Maps</a></div></div>
       </div>
     </div>
 
@@ -262,6 +262,21 @@
       }
     }, { threshold: 0.5 }).observe(mapFrame);
   }
+
+  document.addEventListener('click', function(e) {
+    var w = e.target.closest('.website-link');
+    if (w) {
+      ga('website_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+    var m = e.target.closest('.map-link');
+    if (m) {
+      ga('map_click', {
+        place_id: slug, place_name: name, region: region, language: lang
+      });
+    }
+  });
 })();
 </script>
 <script>/* he-support-v1 */
