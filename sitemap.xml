@@ -3563,4 +3563,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/places/still-waters-guesthouse/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/places/still-waters-guesthouse/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/places/still-waters-guesthouse/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/places/still-waters-guesthouse/"/>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/places/still-waters-guesthouse/he/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/places/still-waters-guesthouse/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/places/still-waters-guesthouse/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/places/still-waters-guesthouse/"/>
+  </url>
 </urlset>
