@@ -1050,8 +1050,8 @@ function BlogScreen({ lang }) {
       tag: lang === 'he' ? 'איפה לישון' : 'Where to Stay',
       title: lang === 'he' ? 'DOYOU PLACE: המקום שבו ליטא מלמדת אותך להאט' : 'DOYOU PLACE: Where Lithuania Teaches You to Slow Down',
       desc: lang === 'he'
-        ? 'בקתות עץ משולשות ביער, על אגם, כ-45 דקות מווילנה.'
-        : 'A-frame cabins in the woods by a lake, about 45 minutes from Vilnius.',
+        ? 'בקתות עץ משולשות ביער, על אגם, שעת נסיעה מווילנה.'
+        : 'A-frame cabins in the woods by a lake, an hour\'s drive from Vilnius.',
       href: lang === 'he' ? '/blog/doyou-place?lang=he' : '/blog/doyou-place',
       time: lang === 'he' ? '5 דק׳ קריאה' : '5 min read',
     },
