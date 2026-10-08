@@ -276,6 +276,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/agnes-br-ceramics"/>
   </url>
   <url>
+    <loc>https://lithuaniadiscovery.com/blog/doyou-place</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/doyou-place"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/doyou-place/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/doyou-place"/>
+  </url>
+  <url>
     <loc>https://lithuaniadiscovery.com/explore/vilnius/he/</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -445,6 +454,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/agnes-br-ceramics"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/agnes-br-ceramics/he/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/agnes-br-ceramics"/>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/blog/doyou-place/he/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/doyou-place"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/doyou-place/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/doyou-place"/>
   </url>
   <url>
     <loc>https://lithuaniadiscovery.com/blog/he/</loc>

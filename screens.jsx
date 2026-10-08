@@ -1046,6 +1046,16 @@ function SavedScreen({ savedSet, places, regions, lang, t, openPlace, toggleSave
 function BlogScreen({ lang }) {
   const posts = [
     {
+      emoji: '🌲',
+      tag: lang === 'he' ? 'איפה לישון' : 'Where to Stay',
+      title: lang === 'he' ? 'DOYOU PLACE: המקום שבו ליטא מלמדת אותך להאט' : 'DOYOU PLACE: Where Lithuania Teaches You to Slow Down',
+      desc: lang === 'he'
+        ? 'בקתות עץ משולשות ביער, על אגם, כ-45 דקות מווילנה.'
+        : 'A-frame cabins in the woods by a lake, about 45 minutes from Vilnius.',
+      href: lang === 'he' ? '/blog/doyou-place?lang=he' : '/blog/doyou-place',
+      time: lang === 'he' ? '5 דק׳ קריאה' : '5 min read',
+    },
+    {
       emoji: '🏛️',
       tag: lang === 'he' ? 'מורשת יהודית · פוסט אורח' : 'Jewish Heritage · Guest Feature',
       title: lang === 'he' ? 'מוזיאון Lost Shtetl: עולם שנעלם חוזר לחיים' : 'The Lost Shtetl Museum: Where a Vanished World Comes Back to Life',
