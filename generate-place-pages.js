@@ -379,7 +379,7 @@ function buildPage(p, lang) {
 
   <script src="/assets/js/traffic-filter.js"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0YD451PRX4"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('set','user_properties',{traffic_type:window.__trafficType||'real'});gtag('config','G-0YD451PRX4',{send_page_view:false});</script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('set','user_properties',{traffic_type:window.__trafficType||'real'});gtag('config','G-0YD451PRX4');</script>
 
   <link rel="canonical" href="${url}">
   <link rel="alternate" hreflang="en" href="${v.enUrl}">
