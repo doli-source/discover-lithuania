@@ -99,7 +99,9 @@ function PlaceCard({ place, region, lang, t, onClick, saved, onToggleSave, accen
   const typeLabel = lang === 'he' ? place.typeHe : place.type;
   const ph = `${place.name} · ${place.type}`;
   const tone = tones[place.id.charCodeAt(0) % tones.length];
-  const placeHref = lang === 'he' ? `/places/${place.id}/he/` : `/places/${place.id}/`;
+  // These places have no static /he/ page yet; linking to it would 404 (GSC, Oct 2026).
+  const NO_HE_PAGE = ['alantos-irgai-sodybos-ir-nameli', 'atvira-meno-galerija-open-gallery', 'muskatas', 'naked-noah', 'rooma-apartments-vilnius', 'sicilia-druskininkai', 'toli-toli-druskininkai', 'vila-gervalis'];
+  const placeHref = (lang === 'he' && !NO_HE_PAGE.includes(place.id)) ? `/places/${place.id}/he/` : `/places/${place.id}/`;
   return (
     <article className={`niv-card ${place.niv ? 'has-tip' : ''}`}>
       <a
