@@ -197,6 +197,27 @@
       hoursHe: '',
       website: 'https://www.privatebaltics.com/',
     });
+    PLACES.push({
+      id:      'vytautas-mineral-spa',
+      region:  'countryside',
+      kind:    'stay',
+      name:    'Vytautas Mineral SPA',
+      type:    'Mineral Spa Hotel',
+      typeHe:  'מלון ספא מינרלי',
+      rating:  null,
+      reviews: null,
+      price:   null,
+      emoji:   '♨️',
+      niv:     'The only mineral spa hotel in the Baltic states, set in Birštonas on the Nemunas river. Built around the \'Sophia\' spring — a source containing 70 different minerals. Nine room types, indoor pools and saunas, a full spa menu (body, face, hair treatments), fitness area, and two restaurants: MOON (à la carte) and SUN Gastrobar.',
+      nivHe:   'בית הספא המינרלי היחיד במדינות הבלטי, ממוקם בביירשטונס על נהר נמונס. נבנה סביב מעיין \'סופיה\' — מקור המכיל 70 מינרלים שונים. תשעה סוגי חדרים, בריכות וסאונות מקוריות, תפריט ספא מלא (טיפולי גוף, פנים ושיער), חדר כושר ושני מסעדות: MOON (à la carte) ו-SUN Gastrobar.',
+      status:  'approved',
+      source:  'niv',
+      lat:     54.6099724,
+      lng:     24.0210853,
+      hours:   '24/7 reception',
+      hoursHe: 'קבלה 24/7',
+      website: 'https://www.vytautasmineralspa.lt/en',
+    });
 
     window.LT_DATA = { REGIONS, PLACES, LANDMARKS, DISHES, ITINERARIES, FACTS, MAP_URL };
 
