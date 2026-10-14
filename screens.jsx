@@ -1050,7 +1050,7 @@ function BlogScreen({ lang }) {
     {
       emoji: '🥯',
       tag: lang === 'he' ? 'הכירו את היוצרת · כתבה אורחת' : 'Meet the Maker · Guest Feature',
-      title: lang === 'he' ? 'מחזירים בייגלה לז\'אגארה' : 'Bringing Bagels Back to Žagarė',
+      title: lang === 'he' ? 'הבייגלה חוזר לז\'אגארה: סיפורה של ארנסטה' : 'Bringing Bagels Back to Žagarė',
       desc: lang === 'he'
         ? 'אופה בייגלה ולחם מחמצת בז\'אגארה, בבית ישן מלבנים אדומות.'
         : 'Bakes sourdough bagels and bread in Žagarė, in an old red-brick house.',
