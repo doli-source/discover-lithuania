@@ -1048,6 +1048,16 @@ function SavedScreen({ savedSet, places, regions, lang, t, openPlace, toggleSave
 function BlogScreen({ lang }) {
   const posts = [
     {
+      emoji: '🥯',
+      tag: lang === 'he' ? 'הכירו את היוצרת · כתבה אורחת' : 'Meet the Maker · Guest Feature',
+      title: lang === 'he' ? 'מחזירים בייגלה לז\'אגארה' : 'Bringing Bagels Back to Žagarė',
+      desc: lang === 'he'
+        ? 'אופה בייגלה ולחם מחמצת בז\'אגארה, בבית ישן מלבנים אדומות.'
+        : 'Bakes sourdough bagels and bread in Žagarė, in an old red-brick house.',
+      href: lang === 'he' ? '/blog/zagares-beigeliai?lang=he' : '/blog/zagares-beigeliai',
+      time: lang === 'he' ? '3 דק׳ קריאה' : '3 min read',
+    },
+    {
       emoji: '🌲',
       tag: lang === 'he' ? 'איפה לישון' : 'Where to Stay',
       title: lang === 'he' ? 'DOYOU PLACE: המקום שבו ליטא מלמדת אותך להאט' : 'DOYOU PLACE: Where Lithuania Teaches You to Slow Down',

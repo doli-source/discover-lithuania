@@ -26,6 +26,7 @@ const ARTICLES = {
   'blog/cepelinai-brigita-uyar.html': 'blog/cepelinai-brigita-uyar',
   'blog/agnes-br-ceramics.html': 'blog/agnes-br-ceramics',
   'blog/doyou-place.html': 'blog/doyou-place',
+  'blog/zagares-beigeliai.html': 'blog/zagares-beigeliai',
 };
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
