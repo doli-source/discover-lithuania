@@ -1052,7 +1052,7 @@ function BlogScreen({ lang }) {
       tag: lang === 'he' ? 'הכירו את היוצרת · כתבה אורחת' : 'Meet the Maker · Guest Feature',
       title: lang === 'he' ? 'הבייגלה חוזר לז\'אגארה: סיפורה של ארנסטה' : 'Bringing Bagels Back to Žagarė',
       desc: lang === 'he'
-        ? 'אופה בייגלה ולחם מחמצת בז\'אגארה, בבית ישן מלבנים אדומות.'
+        ? 'אופה בייגלים ולחם במחמצת בז\'אגארה, בבית ישן מלבנים אדומות.'
         : 'Bakes sourdough bagels and bread in Žagarė, in an old red-brick house.',
       href: lang === 'he' ? '/blog/zagares-beigeliai?lang=he' : '/blog/zagares-beigeliai',
       time: lang === 'he' ? '3 דק׳ קריאה' : '3 min read',
