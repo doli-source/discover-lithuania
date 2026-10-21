@@ -1048,6 +1048,16 @@ function SavedScreen({ savedSet, places, regions, lang, t, openPlace, toggleSave
 function BlogScreen({ lang }) {
   const posts = [
     {
+      emoji: '🥐',
+      tag: lang === 'he' ? 'הכירו את היוצרת · כתבה אורחת' : 'Meet the Maker · Guest Feature',
+      title: lang === 'he' ? 'אמנות, מתמטיקה והלחמניות של סבתא' : 'Art, Mathematics and My Grandmother\'s Buns',
+      desc: lang === 'he'
+        ? 'קונדיטורית ושותפה ב-BREW Bakery, וילנה.'
+        : 'Pastry chef and partner at BREW Bakery, Vilnius.',
+      href: lang === 'he' ? '/blog/jekaterina-brew-bakery?lang=he' : '/blog/jekaterina-brew-bakery',
+      time: lang === 'he' ? '4 דק׳ קריאה' : '4 min read',
+    },
+    {
       emoji: '🥯',
       tag: lang === 'he' ? 'הכירו את היוצרת · כתבה אורחת' : 'Meet the Maker · Guest Feature',
       title: lang === 'he' ? 'הבייגלה חוזר לז\'אגארה: סיפורה של ארנסטה' : 'Bringing Bagels Back to Žagarė',
