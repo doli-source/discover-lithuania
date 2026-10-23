@@ -119,8 +119,29 @@ function translateSchema(html, source) {
   return { html: out, swapped };
 }
 
+// Hand-written Hebrew descriptions. Without these, the first paragraph is cut
+// at 158 characters, which ended mid-word on these posts (GSC, Oct 2026).
+const HE_DESC = {
+  "blog/5-days-in-lithuania": "מסלול של 5 ימים בליטא: יומיים מלאים בעיר העתיקה של וילנה, טיול יום לטירת טראקאי, קובנה של הארט-דקו, ובוקר רגוע לפני הטיסה חזרה.",
+  "blog/trakai-day-trip": "טרקאי נמצאת 28 ק״מ מווילנה: טירה מלבנים אדומות מהמאה ה-14 באמצע אגם גלבה, כפרי דייגים ותרבות קראית בת 600 שנה. כל מה שצריך ליום כיף מווילנה.",
+  "blog/best-coffee-vilnius": "6 בתי הקפה הכי טובים בווילנה, מקלייניות ספיישלטי ועד בארי אספרסו קטנים. המקומות ששווים את הזמן שלכם, שנבחרו מתוך עשרות ביקורים ברחבי העיר.",
+  "blog/doyou-place": "DOYOU PLACE: שלוש בקתות עץ משולשות ביער, על אגם, שעת נסיעה מווילנה. ביליתי שם כמה ימים, ואלה הרשמים שלי מהמקום.",
+  "blog/zagares-beigeliai": "ארנסטה, האופה שמאחורי Žagarės Beigeliai, מספרת איך החזירה את הבייגלה לז'אגארה. בייגלים ולחם במחמצת בבית ישן מלבנים אדומות, הרחק מווילנה.",
+  "blog/best-restaurants-vilnius": "9 המסעדות הכי טובות בווילנה, מפלוב ב-€5 ביד אוזבקית נסתרת ועד סטייקים מיובשים. איטלקי, יהודי ליטאי, אוזבקי וים תיכוני, עם יחס איכות-מחיר מצוין."
+};
+
 // The Hebrew title and description come from the page's own Hebrew: the h1 and
 // the first substantial Hebrew paragraph. Nothing is invented here.
+// Cut at the last full sentence that fits, or else at the last whole word.
+function shortenAtBoundary(s, max) {
+  s = s.trim();
+  if (s.length <= max) return s;
+  const cut = s.slice(0, max);
+  const end = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('! '), cut.lastIndexOf('? '));
+  if (end > max * 0.5) return cut.slice(0, end + 1);
+  return cut.slice(0, cut.lastIndexOf(' ')).replace(/[\s,;:\u2014-]+$/, '') + '…';
+}
+
 function hebrewMeta(html, rel) {
   const h1 = html.match(/<h1[^>]*\sdata-he="([^"]*)"/);
   const title = h1 ? unesc(h1[1]) : null;
@@ -128,8 +149,9 @@ function hebrewMeta(html, rel) {
   let desc = null;
   for (const m of html.matchAll(/data-he="([^"]{80,})"/g)) {
     const t = unesc(m[1]);
-    if (HEB.test(t) && !/^[\s\W]*$/.test(t)) { desc = stripTags(t).slice(0, 158); break; }
+    if (HEB.test(t) && !/^[\s\W]*$/.test(t)) { desc = shortenAtBoundary(stripTags(t), 158); break; }
   }
+  if (HE_DESC[rel]) desc = HE_DESC[rel];
   return { title, desc };
 }
 
