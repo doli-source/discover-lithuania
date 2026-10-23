@@ -1,16 +1,15 @@
 name: Purge Cloudflare Cache
 
-# Runs after GitHub Pages has finished deploying. Running on push raced the
-# build: the purge finished first and Cloudflare re-cached the old files.
+# Runs when GitHub Pages reports a successful deploy. Running on push raced
+# the build (Cloudflare re-cached the old files), and workflow_run never fires
+# for the built-in "pages build and deployment" workflow.
 on:
-  workflow_run:
-    workflows: ["pages build and deployment"]
-    types: [completed]
+  deployment_status:
   workflow_dispatch:
 
 jobs:
   purge:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || (github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'github-pages') }}
     runs-on: ubuntu-latest
     steps:
       - name: Purge Cloudflare cache
@@ -21,16 +20,16 @@ jobs:
             --data '{"purge_everything":true}'
 
       - name: Check out the deployed commit
-        if: ${{ github.event_name == 'workflow_run' }}
+        if: ${{ github.event_name == 'deployment_status' }}
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.workflow_run.head_sha }}
+          ref: ${{ github.event.deployment.sha }}
           fetch-depth: 2
 
       # Tells Bing, Yandex and other IndexNow engines which pages changed in
       # this deploy, so they recrawl them within hours instead of weeks.
       - name: Notify IndexNow of changed pages
-        if: ${{ github.event_name == 'workflow_run' }}
+        if: ${{ github.event_name == 'deployment_status' }}
         run: |
           sleep 20
           KEY=a7f3e2d1b4c5e8f9a2b3c4d5e6f7a8b9
