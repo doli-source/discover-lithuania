@@ -1,11 +1,16 @@
 name: Purge Cloudflare Cache
 
+# Runs after GitHub Pages has finished deploying. Running on push raced the
+# build: the purge finished first and Cloudflare re-cached the old files.
 on:
-  push:
-    branches: [main]
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
+  workflow_dispatch:
 
 jobs:
   purge:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Purge Cloudflare cache
@@ -14,3 +19,38 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.CF_API_TOKEN }}" \
             -H "Content-Type: application/json" \
             --data '{"purge_everything":true}'
+
+      - name: Check out the deployed commit
+        if: ${{ github.event_name == 'workflow_run' }}
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+          fetch-depth: 2
+
+      # Tells Bing, Yandex and other IndexNow engines which pages changed in
+      # this deploy, so they recrawl them within hours instead of weeks.
+      - name: Notify IndexNow of changed pages
+        if: ${{ github.event_name == 'workflow_run' }}
+        run: |
+          sleep 20
+          KEY=a7f3e2d1b4c5e8f9a2b3c4d5e6f7a8b9
+          git diff --name-only HEAD~1 HEAD -- '*.html' \
+            | grep -v -E '^(admin|landing|snapas|node_modules)/|qr-snapas' \
+            | sed -E 's#(^|/)index\.html$#\1#; s#\.html$##; s#^#https://lithuaniadiscovery.com/#' \
+            | head -n 9000 > urls.txt || true
+          echo "Changed pages: $(wc -l < urls.txt)"
+          [ -s urls.txt ] || exit 0
+          python3 - "$KEY" <<'PY'
+          import json, sys, urllib.request
+          key = sys.argv[1]
+          urls = [u.strip() for u in open('urls.txt') if u.strip()]
+          body = json.dumps({"host": "lithuaniadiscovery.com", "key": key,
+                             "keyLocation": f"https://lithuaniadiscovery.com/{key}.txt",
+                             "urlList": urls}).encode()
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body,
+                                       headers={"Content-Type": "application/json; charset=utf-8"})
+          try:
+              print("IndexNow:", urllib.request.urlopen(req, timeout=30).status)
+          except Exception as e:
+              print("IndexNow failed (not fatal):", e)
+          PY
