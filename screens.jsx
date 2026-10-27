@@ -1048,6 +1048,16 @@ function SavedScreen({ savedSet, places, regions, lang, t, openPlace, toggleSave
 function BlogScreen({ lang }) {
   const posts = [
     {
+      emoji: '🍷',
+      tag: lang === 'he' ? 'הכירו את היוצרת · כתבה אורחת' : 'Meet the Maker · Guest Feature',
+      title: lang === 'he' ? 'אני מקווה לגרום לכם להתאהב ביין טבעי' : 'I Hope to Make You Fall in Love with Natural Wine',
+      desc: lang === 'he'
+        ? 'מספרת סיפורי יין ומגישת טלוויזיה ב-LNK, יוצרת GliuGliu. וילנה.'
+        : 'Wine storyteller and TV host at LNK. Creator of GliuGliu, Vilnius.',
+      href: lang === 'he' ? '/blog/ieva-elvyra-natural-wine?lang=he' : '/blog/ieva-elvyra-natural-wine',
+      time: lang === 'he' ? '4 דק׳ קריאה' : '4 min read',
+    },
+    {
       emoji: '🥐',
       tag: lang === 'he' ? 'הכירו את היוצרת · כתבה אורחת' : 'Meet the Maker · Guest Feature',
       title: lang === 'he' ? 'אמנות, מתמטיקה והלחמניות של סבתא' : 'Art, Mathematics and My Grandmother\'s Buns',

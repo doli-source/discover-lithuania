@@ -28,6 +28,7 @@ const ARTICLES = {
   'blog/doyou-place.html': 'blog/doyou-place',
   'blog/zagares-beigeliai.html': 'blog/zagares-beigeliai',
   'blog/jekaterina-brew-bakery.html': 'blog/jekaterina-brew-bakery',
+  'blog/ieva-elvyra-natural-wine.html': 'blog/ieva-elvyra-natural-wine',
 };
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');

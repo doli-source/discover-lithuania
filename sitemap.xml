@@ -303,6 +303,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/jekaterina-brew-bakery"/>
   </url>
   <url>
+    <loc>https://lithuaniadiscovery.com/blog/ieva-elvyra-natural-wine</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/ieva-elvyra-natural-wine"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/ieva-elvyra-natural-wine/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/ieva-elvyra-natural-wine"/>
+  </url>
+  <url>
     <loc>https://lithuaniadiscovery.com/explore/vilnius/he/</loc>
     <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -499,6 +508,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/jekaterina-brew-bakery"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/jekaterina-brew-bakery/he/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/jekaterina-brew-bakery"/>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/blog/ieva-elvyra-natural-wine/he/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/ieva-elvyra-natural-wine"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/ieva-elvyra-natural-wine/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/ieva-elvyra-natural-wine"/>
   </url>
   <url>
     <loc>https://lithuaniadiscovery.com/blog/he/</loc>
