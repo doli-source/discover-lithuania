@@ -322,7 +322,9 @@ function buildSchema(p, lang) {
         ...(p.price ? { priceRange: p.price } : {}),
         address: {
           '@type': 'PostalAddress',
-          addressLocality: regionName,
+          // "Countryside" and "Curonian Spit" are regions, not towns; a wrong
+          // locality is worse than none (geo already pins the place).
+          ...(['countryside', 'curonian'].includes(p.region) ? {} : { addressLocality: regionName }),
           addressCountry: 'LT',
         },
         tourBookingPage: `${BASE_URL}/?place=${p.id}`,
