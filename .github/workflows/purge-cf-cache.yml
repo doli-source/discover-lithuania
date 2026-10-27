@@ -37,6 +37,10 @@ jobs:
             | grep -v -E '^(admin|landing|snapas|node_modules)/|qr-snapas' \
             | sed -E 's#(^|/)index\.html$#\1#; s#\.html$##; s#^#https://lithuaniadiscovery.com/#' \
             | head -n 9000 > urls.txt || true
+          # A commit message containing [indexnow-all] submits every sitemap URL.
+          if git log -1 --format=%B HEAD | grep -q '\[indexnow-all\]'; then
+            grep -o '<loc>[^<]*</loc>' sitemap.xml | sed 's#<loc>##; s#</loc>##' > urls.txt
+          fi
           echo "Changed pages: $(wc -l < urls.txt)"
           [ -s urls.txt ] || exit 0
           python3 - "$KEY" <<'PY'
