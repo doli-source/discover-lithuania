@@ -103,6 +103,11 @@ async function loadHebrewNames(places) {
   }
   for (const p of places) if (byName[p.id]) p.nameHe = byName[p.id];
 }
+// Hebrew <title> overrides where the search term differs from the place's
+// name (GSC: "בית חבד וילנה" at position ~8, 0 clicks, Oct 2026).
+const HE_TITLE = {
+  'chabad-vilnius': 'בית חב״ד וילנה (Chabad of Lithuania)',
+};
 const TODAY = new Date().toISOString().slice(0, 10);
 
 // Set once the live list is loaded; the page template renders it as copy.
@@ -271,7 +276,7 @@ function view(p, lang) {
     S, he, lang, region, kind, name, blurb, hours, typeLabel, desc,
     enUrl, heUrl,
     url: he ? heUrl : enUrl,
-    title: `${name} — ${region}, ${S.country} | ${S.site}`,
+    title: (he && HE_TITLE[p.id]) ? `${HE_TITLE[p.id]} | ${S.site}` : `${name} — ${region}, ${S.country} | ${S.site}`,
   };
 }
 

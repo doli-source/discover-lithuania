@@ -131,6 +131,13 @@ const HE_DESC = {
   "blog/best-restaurants-vilnius": "9 המסעדות הכי טובות בווילנה, מפלוב ב-€5 ביד אוזבקית נסתרת ועד סטייקים מיובשים. איטלקי, יהודי ליטאי, אוזבקי וים תיכוני, עם יחס איכות-מחיר מצוין."
 };
 
+// Hebrew <title> overrides. Israelis search "וילנה" (one vav); the h1 says
+// "בווילנה", so the title is phrased around the search term (GSC, Oct 2026).
+const HE_TITLE = {
+  'blog/best-restaurants-vilnius': 'מסעדות בוילנה: 9 המקומות הכי טובים (מדריך מקומי)',
+  'blog/best-coffee-vilnius': 'בתי קפה בוילנה: 6 הכי טובים (מדריך מקומי)',
+};
+
 // The Hebrew title and description come from the page's own Hebrew: the h1 and
 // the first substantial Hebrew paragraph. Nothing is invented here.
 // Cut at the last full sentence that fits, or else at the last whole word.
@@ -145,7 +152,7 @@ function shortenAtBoundary(s, max) {
 
 function hebrewMeta(html, rel) {
   const h1 = html.match(/<h1[^>]*\sdata-he="([^"]*)"/);
-  const title = h1 ? unesc(h1[1]) : null;
+  const title = HE_TITLE[rel] || (h1 ? unesc(h1[1]) : null);
 
   let desc = null;
   for (const m of html.matchAll(/data-he="([^"]{80,})"/g)) {
