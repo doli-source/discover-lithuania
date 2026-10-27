@@ -21,7 +21,7 @@ jobs:
 
       - name: Check out the deployed commit
         if: ${{ github.event_name == 'deployment_status' }}
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.event.deployment.sha }}
           fetch-depth: 2
@@ -42,9 +42,9 @@ jobs:
             grep -o '<loc>[^<]*</loc>' sitemap.xml | sed 's#<loc>##; s#</loc>##' > urls.txt
           fi
           echo "Changed pages: $(wc -l < urls.txt)"
-          [ -s urls.txt ] || exit 0
+          if [ ! -s urls.txt ]; then echo "::notice title=IndexNow::No changed pages to submit"; exit 0; fi
           python3 - "$KEY" <<'PY'
-          import json, sys, urllib.request
+          import json, sys, urllib.request, urllib.error
           key = sys.argv[1]
           urls = [u.strip() for u in open('urls.txt') if u.strip()]
           body = json.dumps({"host": "lithuaniadiscovery.com", "key": key,
@@ -52,8 +52,12 @@ jobs:
                              "urlList": urls}).encode()
           req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body,
                                        headers={"Content-Type": "application/json; charset=utf-8"})
+          # Printed as an annotation so the result shows on the public run page.
           try:
-              print("IndexNow:", urllib.request.urlopen(req, timeout=30).status)
+              status = urllib.request.urlopen(req, timeout=30).status
+              print(f"::notice title=IndexNow::Submitted {len(urls)} URL(s), HTTP {status}")
+          except urllib.error.HTTPError as e:
+              print(f"::warning title=IndexNow::{len(urls)} URL(s), HTTP {e.code}: {e.read()[:200]!r}")
           except Exception as e:
-              print("IndexNow failed (not fatal):", e)
+              print(f"::warning title=IndexNow::{len(urls)} URL(s), failed: {e}")
           PY
