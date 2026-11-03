@@ -118,8 +118,8 @@ const PLACES = [
     "source": "niv",
     "lat": 54.6863,
     "lng": 25.2812,
-    "hours": "Mon-Thu 09:00-17:00 · Fri 09:00-16:00 · Sat,Sun off",
-    "hoursHe": "ב'-ה' 09:00-17:00 · ו' 09:00-16:00 · ש',א' off",
+    "hours": "Mon-Fri 07:30-19:00 · Sat-Sun 08:00-19:00",
+    "hoursHe": "ב'-ו' 07:30-19:00 · ש'-א' 08:00-19:00",
     "website": "https://rocketbean.com/"
   },
   {
@@ -456,8 +456,8 @@ const PLACES = [
     "source": "niv",
     "lat": 54.6875327,
     "lng": 25.2814507,
-    "hours": "Mon 17:00-24:00 · Tue 17:00-24:00 · Wed 17:00-24:00 · Thu 17:00-02:00…",
-    "hoursHe": "ב' 17:00-24:00 · ג' 17:00-24:00 · ד' 17:00-24:00 · ה' 17:00-02:00…",
+    "hours": "Mon-Wed 17:00-00:00 · Thu 17:00-01:00 · Fri 17:00-02:00 · Sat 14:00-02:00 · Sun closed",
+    "hoursHe": "ב'-ד' 17:00-00:00 · ה' 17:00-01:00 · ו' 17:00-02:00 · ש' 14:00-02:00 · א' סגור",
     "website": "https://www.pachamama.lt"
   },
   {
@@ -893,8 +893,8 @@ const PLACES = [
     "source": "niv",
     "lat": 54.6793497,
     "lng": 25.2774967,
-    "hours": "Sun-Wed 10:00-20:00 · Thu-Sat 10:00-22:00",
-    "hoursHe": "א'-ד' 10:00-20:00 · ה'-ש' 10:00-22:00",
+    "hours": "Wed-Mon 10:00-20:00 · Tue closed",
+    "hoursHe": "ד'-ב' 10:00-20:00 · ג' סגור",
     "website": "https://mo.lt/en/"
   },
   {
@@ -993,8 +993,8 @@ const PLACES = [
     "nivHe": "מרכז הקלייה של Backstage Roasters ברחוב T. Ševčenkos — פולים מברזיל ותאילנד, קלויים בקומה השנייה ומוגשים למטה בקפה.",
     "status": "approved",
     "source": "niv",
-    "lat": 54.6784,
-    "lng": 25.2849,
+    "lat": 54.6532878,
+    "lng": 25.2279967,
     "hours": "Mon-Fri 08:00-20:00 · Sat-Sun 08:30-18:00",
     "hoursHe": "ב'-ו' 08:00-20:00 · ש'-א' 08:30-18:00",
     "website": "https://backstageroasters.com/"
@@ -1117,8 +1117,8 @@ const PLACES = [
     "nivHe": "נוכחות יהודית קטנה אך משמעותית בקלייפדה — אחד מהקשרים הנותרים לקהילה היהודית השוקקת שפרחה פעם בעיר נמל זו. שווה ביקור אם אתם באזור.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.7106,
-    "lng": 21.1335,
+    "lat": 55.7040931,
+    "lng": 21.1395875,
     "hours": "By appointment",
     "hoursHe": "בתיאום מראש"
   },
@@ -1179,8 +1179,8 @@ const PLACES = [
     "source": "niv",
     "lat": 54.6699534,
     "lng": 25.278352,
-    "hours": "Mon-Sat 08:00-21:00, Sun 09:00-21:00",
-    "hoursHe": "ב'-ש' 08:00-21:00, א' 09:00-21:00",
+    "hours": "Wed-Thu 09:00-16:00 · Fri-Sun 09:00-18:00",
+    "hoursHe": "ד'-ה' 09:00-16:00 · ו'-א' 09:00-18:00",
     "website": "https://spricas.lt/"
   },
   {
@@ -1198,8 +1198,8 @@ const PLACES = [
     "nivHe": "נוף קסום של אונסק\"ו — דיונות חול שאין כמותן באירופה.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.4400442,
-    "lng": 21.0870391,
+    "lat": 55.45,
+    "lng": 21.065,
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום"
   },
@@ -1218,8 +1218,8 @@ const PLACES = [
     "nivHe": "הדיונה הגבוהה ביותר בחצי האי הקורוני ב-67 מטר — טיפוס דרך אורנים ריחניים לפסגה עם נוף על הלגונה, הים הבלטי והיער.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.3543039,
-    "lng": 21.029118,
+    "lat": 55.35444,
+    "lng": 21.03861,
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום"
   },
@@ -1238,8 +1238,8 @@ const PLACES = [
     "nivHe": "בית עישון על שפת הדרך בחצי האי הקורוני עם הדגים המעושנים הטריים ביותר שתמצאו — קנו חם ישר מהמעשן ואכלו על שפת המים.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.462,
-    "lng": 21.143,
+    "lat": 55.3045,
+    "lng": 21.002,
     "hours": "Tue-Fri 10:00-18:00, Sat 10:00-15:00",
     "hoursHe": "ג'-ו' 10:00-18:00, ש' 10:00-15:00"
   },
@@ -1490,8 +1490,7 @@ const PLACES = [
     "lat": 54.6763081,
     "lng": 25.2834031,
     "hours": "Mon-Sat 10:00-18:00",
-    "hoursHe": "ב'-ש' 10:00-18:00",
-    "website": "https://lapetitefrance.lt/"
+    "hoursHe": "ב'-ש' 10:00-18:00"
   },
   {
     "id": "hotel-pacai",
@@ -2004,8 +2003,8 @@ const PLACES = [
     "nivHe": "פונדק דייגים ישן עם צפלינאי ודגים מעושנים — האותנטיות של נידה.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.462,
-    "lng": 21.143,
+    "lat": 55.3165,
+    "lng": 21.0085,
     "hours": "Tue-Fri 10:00-18:00, Sat 10:00-15:00",
     "hoursHe": "ג'-ו' 10:00-18:00, ש' 10:00-15:00"
   },
@@ -2064,8 +2063,8 @@ const PLACES = [
     "nivHe": "80 פסלי עץ של מיתולוגיה ליטאית לאורך שביל יער — מרהיב, מקסים וחינם.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.5377459,
-    "lng": 21.1098158,
+    "lat": 55.5352,
+    "lng": 21.1088,
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום",
     "website": "https://www.raganukalnas.lt/en/"
@@ -2085,8 +2084,8 @@ const PLACES = [
     "nivHe": "כאן שהה תומאס מאן שלושה קיצות בשנות ה-30 — צריף עץ קטן מלא אור והיסטוריה ספרותית.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.304,
-    "lng": 20.999,
+    "lat": 55.3145,
+    "lng": 21.0146,
     "hours": "May–Oct: daily 10:00-18:00 · Nov–Apr: Tue-Sat 10:00-17:00",
     "hoursHe": "מאי–אוק': יום-יום 10:00-18:00 · נוב'–אפר': ג'-ש' 10:00-17:00",
     "website": "https://www.mann.lt/"
@@ -2106,8 +2105,8 @@ const PLACES = [
     "nivHe": "סירות דייגים צבעוניות על לגונת קורון — דוכני דגים בבוקר, מפרשיות וזריחות ורודות.",
     "status": "approved",
     "source": "niv",
-    "lat": 55.304,
-    "lng": 20.9993,
+    "lat": 55.307,
+    "lng": 21.007,
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום"
   },
@@ -2127,8 +2126,8 @@ const PLACES = [
     "mapUrl": "https://maps.app.goo.gl/YxSPBL7PyRV1dwdV9",
     "status": "approved",
     "source": "niv",
-    "lat": 55.3096643,
-    "lng": 20.9582555,
+    "lat": 55.3097,
+    "lng": 21.0027,
     "hours": "Daily 11:00-21:00",
     "hoursHe": "יום-יום 11:00-21:00",
     "website": "https://stebuklaispa.lt/"
@@ -2335,8 +2334,8 @@ const PLACES = [
     "nivHe": "הפארק הלאומי הגדול ביותר בליטא — יערות קטיף פטריות עתיקים, נהרות חוליים ודבוראים כפריים.",
     "status": "approved",
     "source": "niv",
-    "lat": 54.1631752,
-    "lng": 24.1861435,
+    "lat": 54.083359,
+    "lng": 24.2784736,
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום"
   },
@@ -2399,7 +2398,7 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.01567,
-    "lng": 23.9304943,
+    "lng": 23.9686031,
     "hours": "Open daily",
     "hoursHe": "פתוח מדי יום"
   },
@@ -2419,8 +2418,8 @@ const PLACES = [
     "mapUrl": "https://maps.app.goo.gl/AxUNLqP6g6o6ZQVS9",
     "status": "approved",
     "source": "niv",
-    "lat": 54.01567,
-    "lng": 23.9304943,
+    "lat": 54.0250587,
+    "lng": 23.9729747,
     "hours": "Apr–Aug 10:00-22:30 · Sep-Oct 10:00-21:30 · Nov–Mar 10:00-20:30",
     "hoursHe": "אפר'–אוג' 10:00-22:30 · ספט'-אוק' 10:00-21:30 · נוב'–מרץ 10:00-20:30"
   },
@@ -2748,8 +2747,8 @@ const PLACES = [
     "source": "niv",
     "lat": 54.6527297,
     "lng": 24.9339191,
-    "hours": "Mar,Apr,Oct,Nov Tue-Sun 10:00-18:00 · May-Sep Mon-Sun 10:00-15:00 · Dec-Feb Wed-Sun 10:00-18:00",
-    "hoursHe": "Mar,Apr,Oct,Nov ג'-א' 10:00-18:00 · May-Sep ב'-א' 10:00-15:00 · Dec-Feb ד'-א' 10:00-18:00",
+    "hours": "Mar,Apr,Oct,Nov Tue-Sun 10:00-18:00 · May-Sep Mon-Sun 10:00-19:00 · Dec-Feb Wed-Sun 10:00-18:00",
+    "hoursHe": "מרץ, אפריל, אוקטובר, נובמבר ג'-א' 10:00-18:00 · מאי-ספטמבר ב'-א' 10:00-19:00 · דצמבר-פברואר ד'-א' 10:00-18:00",
     "website": "https://trakaimuziejus.lt"
   },
   {
@@ -2854,7 +2853,7 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6505959,
-    "lng": 24.9044752,
+    "lng": 24.9235296,
     "hours": "Daily 11:00-21:00",
     "hoursHe": "יום-יום 11:00-21:00",
     "website": "https://levivier.lt/"
@@ -2875,8 +2874,8 @@ const PLACES = [
     "mapUrl": "https://maps.app.goo.gl/JdY3tPMLLihB1WwH9",
     "status": "approved",
     "source": "niv",
-    "lat": 54.64363,
-    "lng": 24.9297407,
+    "lat": 54.6438353,
+    "lng": 24.9347178,
     "hours": "Mon-Fri 08:30-20:00 · Sat 10:00-21:00 · Sun 10:00-20:00",
     "hoursHe": "ב'-ו' 08:30-20:00 · ש' 10:00-21:00 · א' 10:00-20:00",
     "website": "https://www.ajsokoladas.lt"
@@ -2897,8 +2896,8 @@ const PLACES = [
     "mapUrl": "https://maps.app.goo.gl/vHtHg7oFGszWrftt9",
     "status": "approved",
     "source": "niv",
-    "lat": 54.6437229,
-    "lng": 24.7700851,
+    "lat": 54.6331097,
+    "lng": 24.9350084,
     "hours": "Seasonal · booking required",
     "hoursHe": "עונתי · הזמנה מראש"
   },
@@ -2939,8 +2938,8 @@ const PLACES = [
     "mapUrl": "https://maps.app.goo.gl/N59Aboj2uDnVZYx97",
     "status": "approved",
     "source": "niv",
-    "lat": 54.6486343,
-    "lng": 24.9134332,
+    "lat": 54.6477,
+    "lng": 24.9307,
     "hours": "Seasonal: daily 09:00-20:00",
     "hoursHe": "עונתי: יום-יום 09:00-20:00"
   },
@@ -2961,7 +2960,7 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6486343,
-    "lng": 24.9134332,
+    "lng": 24.933,
     "hours": "May–Sep: daily 10:00-19:00 · Oct–Apr: Tue-Sun 10:00-18:00",
     "hoursHe": "מאי–ספט': יום-יום 10:00-19:00 · אוק'–אפר': ג'-א' 10:00-18:00"
   },
@@ -2981,8 +2980,8 @@ const PLACES = [
     "mapUrl": "https://maps.app.goo.gl/NafX4WiecRcK7x5q8",
     "status": "approved",
     "source": "niv",
-    "lat": 54.6461142,
-    "lng": 24.931338,
+    "lat": 54.6447118,
+    "lng": 24.9339318,
     "website": "https://kiubete.lt",
     "hours": "Daily 10:30-22:00",
     "hoursHe": "יום-יום 10:30-22:00"
@@ -3108,8 +3107,8 @@ const PLACES = [
     "mapUrl": "https://maps.app.goo.gl/HqSeQMyKHdLB715D7",
     "status": "approved",
     "source": "niv",
-    "lat": 55.3603078,
-    "lng": 25.3002967,
+    "lat": 55.3744666,
+    "lng": 25.2691686,
     "hours": "Check-in from 15:00",
     "hoursHe": "צ'ק-אין מ-15:00",
     "website": "https://alantoszirgai.lt/"
@@ -3130,8 +3129,8 @@ const PLACES = [
     "mapUrl": "https://maps.app.goo.gl/Qw6T6vro7RgFHTCV9",
     "status": "approved",
     "source": "niv",
-    "lat": 54.3027028,
-    "lng": 22.1745831,
+    "lat": 54.3027106,
+    "lng": 23.392781,
     "hours": "Check-in from 15:00",
     "hoursHe": "צ'ק-אין מ-15:00",
     "website": "https://www.astriosioskirsnosdvaras.lt/"
