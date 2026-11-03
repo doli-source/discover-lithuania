@@ -116,8 +116,8 @@ const PLACES = [
     "nivHe": "מקלה קפה בלטית מריגה — שלושה סוגי אספרסו, פילטר מצוין ותמיד מבוצע בשלמות.",
     "status": "approved",
     "source": "niv",
-    "lat": 54.6863,
-    "lng": 25.2812,
+    "lat": 54.6735089,
+    "lng": 25.2842871,
     "hours": "Mon-Fri 07:30-19:00 · Sat-Sun 08:00-19:00",
     "hoursHe": "ב'-ו' 07:30-19:00 · ש'-א' 08:00-19:00",
     "website": "https://rocketbean.com/"
