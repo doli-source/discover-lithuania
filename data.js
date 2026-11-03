@@ -539,8 +539,8 @@ const PLACES = [
     "source": "niv",
     "lat": 54.6737907,
     "lng": 25.2857133,
-    "hours": "Tue-Thu 10:00-18:00 · Fri 09:00-22:00 · Sat-Sun 08:00-22:00",
-    "hoursHe": "ג'-ה' 10:00-18:00 · ו' 09:00-22:00 · ש'-א' 08:00-22:00",
+    "hours": "Tue-Sun 10:00-17:00",
+    "hoursHe": "ג'-א' 10:00-17:00",
     "website": "https://cheftheviking.lt/en/baleboste/"
   },
   {
