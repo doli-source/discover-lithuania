@@ -159,10 +159,10 @@ const PLACES = [
     "mapUrl": "https://maps.app.goo.gl/L7yNZbDcwaEXpk8S9",
     "status": "approved",
     "source": "niv",
-    "lat": 54.6920896,
-    "lng": 25.2541696,
-    "hours": "Mon-Fri 08:00-15:00 · Sat 09:00-14:00",
-    "hoursHe": "ב'-ו' 08:00-15:00 · ש' 09:00-14:00",
+    "lat": 54.6921252,
+    "lng": 25.2570447,
+    "hours": "Mon-Fri 08:00-17:00 · Sat 09:00-16:00",
+    "hoursHe": "ב'-ו' 08:00-17:00 · ש' 09:00-16:00",
     "website": "https://espresine.lt/"
   },
   {
