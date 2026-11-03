@@ -1552,8 +1552,8 @@ const PLACES = [
     "mapUrl": "https://maps.app.goo.gl/SqkDDRjFc8EueN3u7",
     "status": "approved",
     "source": "niv",
-    "lat": 54.6772642,
-    "lng": 25.2481592,
+    "lat": 54.6725433,
+    "lng": 25.2754372,
     "hours": "Mon-Fri 11:00-18:00",
     "hoursHe": "ב'-ו' 11:00-18:00",
     "website": "https://comforthotel.lt/"
@@ -1575,7 +1575,7 @@ const PLACES = [
     "status": "approved",
     "source": "niv",
     "lat": 54.6954549,
-    "lng": 25.2557592,
+    "lng": 25.2748136,
     "hours": "24/7 reception",
     "hoursHe": "קבלה 24/7",
     "website": "https://www.radissonhotels.com/en-us/hotels/radisson-blu-vilnius-lietuva"
@@ -1989,26 +1989,6 @@ const PLACES = [
     "hoursHe": "ב'-ש' 08:00-22:00 · א' 08:00-21:00"
   },
   {
-    "id": "senas-zvejas",
-    "region": "curonian",
-    "kind": "restaurant",
-    "name": "Senas Žvejas",
-    "type": "Fisherman's tavern",
-    "typeHe": "פונדק דייגים",
-    "rating": 4.6,
-    "reviews": 380,
-    "price": "€10–20",
-    "emoji": "🎣",
-    "niv": "Old fisherman's tavern with cepelinai and smoked fish — as authentic as Nida gets.",
-    "nivHe": "פונדק דייגים ישן עם צפלינאי ודגים מעושנים — האותנטיות של נידה.",
-    "status": "approved",
-    "source": "niv",
-    "lat": 55.3165,
-    "lng": 21.0085,
-    "hours": "Tue-Fri 10:00-18:00, Sat 10:00-15:00",
-    "hoursHe": "ג'-ו' 10:00-18:00, ש' 10:00-15:00"
-  },
-  {
     "id": "toda-nida",
     "region": "curonian",
     "kind": "restaurant",
@@ -2355,8 +2335,8 @@ const PLACES = [
     "mapUrl": "https://maps.app.goo.gl/79Hm8ACTXc4Mauyb8",
     "status": "approved",
     "source": "niv",
-    "lat": 54.0128855,
-    "lng": 23.9786396,
+    "lat": 54.0164367,
+    "lng": 23.9758637,
     "hours": "Daily from 08:30",
     "hoursHe": "יום-יום מ-08:30"
   },
