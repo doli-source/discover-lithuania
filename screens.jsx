@@ -1048,6 +1048,16 @@ function SavedScreen({ savedSet, places, regions, lang, t, openPlace, toggleSave
 function BlogScreen({ lang }) {
   const posts = [
     {
+      emoji: '🚴‍♀️',
+      tag: lang === 'he' ? 'הכירו את היוצרת · כתבה אורחת' : 'Meet the Maker · Guest Feature',
+      title: lang === 'he' ? 'מארבע רוכבות ל-3,000 בנות גראבל' : 'From Four Riders to 3,000 Gravel Girls',
+      desc: lang === 'he'
+        ? 'מייסדת GRAVELINDOS, קהילת רכיבת גראבל לנשים בליטא.'
+        : 'Founder of GRAVELINDOS, a women\'s gravel cycling community in Lithuania.',
+      href: lang === 'he' ? '/blog/gravelindos-women-gravel-cycling?lang=he' : '/blog/gravelindos-women-gravel-cycling',
+      time: lang === 'he' ? '3 דק׳ קריאה' : '3 min read',
+    },
+    {
       emoji: '🍷',
       tag: lang === 'he' ? 'הכירו את היוצרת · כתבה אורחת' : 'Meet the Maker · Guest Feature',
       title: lang === 'he' ? 'אני מקווה לגרום לכם להתאהב ביין טבעי' : 'I Hope to Make You Fall in Love with Natural Wine',
