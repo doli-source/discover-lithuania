@@ -135,6 +135,7 @@ const REGION_NAMES_HE = {};
 const STRINGS = {
   en: {
     dir: 'ltr', country: 'Lithuania', site: 'Discover Lithuania',
+    featuredIn: 'Featured in',
     about: 'About', details: 'Details', type: 'Type', hours: 'Hours',
     price: 'Price', website: 'Website', region: 'Region', map: 'Map',
     openMaps: 'Open in Google Maps', ctaTitle: 'Explore on the interactive map',
@@ -144,6 +145,7 @@ const STRINGS = {
   },
   he: {
     dir: 'rtl', country: 'ליטא', site: 'גלה את ליטא',
+    featuredIn: 'מופיע ב',
     about: 'על המקום', details: 'פרטים', type: 'סוג', hours: 'שעות פתיחה',
     price: 'מחיר', website: 'אתר', region: 'אזור', map: 'מפה',
     openMaps: 'פתח ב‑Google Maps', ctaTitle: 'על המפה האינטראקטיבית',
@@ -250,6 +252,47 @@ function parseOpeningHours(raw) {
     parsed.push(p);
   }
   return parsed.length === 0 ? null : (parsed.length === 1 ? parsed[0] : parsed);
+}
+
+// Blog posts that feature a place. Each place page links back to the post that
+// talks about it, so the post gets internal links from the pages it mentions.
+// This lived only as hand edits to the English pages, and a regeneration wiped
+// them from 4 places (2-vir-jai, le-travi, osh-halal, trakai-island-castle), so
+// it is generated here now. Hebrew pages are always rewritten, so they need it
+// here too. Labels are the posts' own titles; nothing is invented.
+const FEATURED_POSTS = {
+  restaurants: { path: 'best-restaurants-vilnius', icon: '🍽️',
+    en: '9 Best Restaurants in Vilnius', he: 'מסעדות בוילנה: 9 המקומות הכי טובים (מדריך מקומי)' },
+  coffee: { path: 'best-coffee-vilnius', icon: '☕',
+    en: '6 Best Coffee Shops in Vilnius', he: 'בתי קפה בוילנה: 6 הכי טובים (מדריך מקומי)' },
+  trakai: { path: 'trakai-day-trip', icon: '🏰',
+    en: 'Trakai Day Trip from Vilnius', he: 'מדריך יום כיף בטרקאי' },
+};
+const FEATURED_IN = {
+  'baleboste': 'restaurants', 'donde': 'restaurants', 'focacceria': 'restaurants',
+  'meat-steakhouse': 'restaurants', 'tempo-v39': 'restaurants', 'osh-halal': 'restaurants',
+  '2-vir-jai': 'restaurants', 'le-travi': 'restaurants',
+  'brew-specialty-coffee': 'coffee', 'espresin': 'coffee', 'strangelove': 'coffee',
+  'rocketbean-kavin': 'coffee', 'backstage-roastery-caf': 'coffee', 'coffee-circus-piano': 'coffee',
+  'trakai-island-castle': 'trakai', 'trakai-boat-rental': 'trakai', 'trakai-balloon-ride': 'trakai',
+  'kibinai-senoji': 'trakai', 'aj-sokoladas': 'trakai', 'snapas-kava-ir-desertai': 'trakai',
+  's-shapshal-karaim-museum': 'trakai',
+};
+
+// The card that links a place to its post. Same card markup the page already
+// uses. `.detail-value a` is break-all (built for long URLs), which would split
+// the Hebrew title mid-word, so the link opts out of it.
+function featuredInCard(slug, lang) {
+  const post = FEATURED_POSTS[FEATURED_IN[slug]];
+  if (!post) return '';
+  const he = lang === 'he';
+  const href = `/blog/${post.path}${he ? '/he/' : ''}`;
+  return `
+    <div class="card" style="padding: 1rem 1.75rem;">
+      <h2>${escHtml(STRINGS[lang].featuredIn)}</h2>
+      <div class="detail-value"><a href="${href}" style="word-break: normal">${post.icon} ${escHtml(post[he ? 'he' : 'en'])}</a></div>
+    </div>
+`;
 }
 
 function view(p, lang) {
@@ -503,6 +546,7 @@ ${buildSchema(p, lang)}
       </div>
     </div>
 
+    ${featuredInCard(p.id, lang)}
     ${mapsEmbed ? `
     <div class="card" style="padding: 0; overflow: hidden;">
       <iframe
