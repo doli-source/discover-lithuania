@@ -521,6 +521,18 @@ function ExploreScreen({ lang, t, regions, places, params, nav, savedSet, toggle
           </div>
         )}
 
+        {region.id === 'vilnius' && (
+          <p style={{ marginTop: 32, fontSize: '1rem' }}>
+            {lang === 'he' ? 'איפה לאכול בוילנה: ' : 'Where to eat in Vilnius: '}
+            <a
+              href={lang === 'he' ? '/blog/best-restaurants-vilnius/he/' : '/blog/best-restaurants-vilnius'}
+              style={{ color: region.accent, fontWeight: 600 }}
+            >
+              {lang === 'he' ? '9 המסעדות הכי טובות בווילנה' : '9 Best Restaurants in Vilnius'}
+            </a>
+          </p>
+        )}
+
         <RegionFaq region={region} places={places} lang={lang} />
       </div>
     </div>
