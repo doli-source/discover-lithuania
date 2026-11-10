@@ -59,44 +59,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css?v=20261002a" />
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #eef3e5;
-      color: #1f2a1a;
-      min-height: 100vh;
-    }
-
-    .lt-nav { position: sticky; top: 0; z-index: 50; background: rgba(250,245,236,0.92); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(36,26,16,0.08); }
-    .lt-nav-inner { max-width: 1200px; margin: 0 auto; padding: 14px 1.5rem; display: flex; align-items: center; gap: 24px; }
-    .lt-brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; text-decoration: none; }
-    .lt-brand-mark { width: 38px; height: 38px; border-radius: 50%; background: #C28840; color: #eef3e5; display: grid; place-items: center; flex-shrink: 0; }
-    .lt-brand-text { display: flex; flex-direction: column; line-height: 1.05; }
-    .lt-brand-name { font-family: 'Instrument Serif','Frank Ruhl Libre',serif; font-size: 1.35rem; font-weight: 500; letter-spacing: -0.01em; white-space: nowrap; color: #1f2a1a; }
-    .lt-brand-sub { font-size: 0.7rem; color: rgba(36,26,16,0.55); letter-spacing: 0.02em; white-space: nowrap; }
-    .lt-nav-links { display: flex; align-items: center; gap: 4px; }
-    .lt-nav-link { padding: 8px 14px; border-radius: 999px; font-size: 0.92rem; color: rgba(36,26,16,0.7); font-weight: 500; text-decoration: none; transition: all 0.15s; }
-    .lt-nav-link:hover { background: rgba(194,136,64,0.1); color: #1f2a1a; }
-    .lt-nav-link.active { background: #1f2a1a; color: #faf5ec; }
-    .lt-nav-actions { display: flex; align-items: center; gap: 8px; margin-inline-start: auto; }
-    .lt-lang-btn { display: inline-block; font-size: 12px; font-weight: 600; padding: 5px 12px; border-radius: 999px; border: 1.5px solid rgba(36,26,16,0.16); background: transparent; color: #1f2a1a; text-decoration: none; line-height: 1; }
-    .lt-lang-btn:hover { border-color: #C28840; color: #C28840; }
-    .lt-mobile-menu { display: none; padding: 6px; border-radius: 8px; background: none; border: none; cursor: pointer; color: rgba(36,26,16,0.7); }
-    .lt-mobile-nav { display: none; }
-    @media (max-width: 720px) {
-      .lt-nav-links { display: none; }
-      .lt-brand-sub { display: none; }
-      .lt-mobile-menu { display: block; }
-      .lt-mobile-nav { flex-direction: column; padding: 0 1.5rem 16px; gap: 4px; background: rgba(250,245,236,0.98); border-bottom: 1px solid rgba(36,26,16,0.08); }
-      .lt-mobile-nav.open { display: flex; }
-      .lt-mobile-link { padding: 12px 14px; border-radius: 8px; font-size: 1rem; color: rgba(36,26,16,0.7); text-decoration: none; }
-      .lt-mobile-link.active { background: #1f2a1a; color: #faf5ec; }
-    }
-
     .container { max-width: 680px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
 
     .breadcrumb { font-size: 12px; color: #9a8a72; margin-bottom: 1.75rem; display: flex; align-items: center; gap: 6px; }
@@ -125,45 +91,49 @@
   </style>
 </head>
 <body>
-  <header class="lt-nav">
-    <div class="lt-nav-inner">
-      <a class="lt-brand" href="https://lithuaniadiscovery.com">
-        <div class="lt-brand-mark">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
+  <header class="nav" id="lt-nav">
+    <div class="nav-inner">
+      <a class="brand" href="https://lithuaniadiscovery.com">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
             <path d="M12 2 L14 9 L21 11 L14 13 L12 22 L10 13 L3 11 L10 9 Z" opacity="0.95"/>
           </svg>
-        </div>
-        <div class="lt-brand-text">
-          <span class="lt-brand-name">Discover Lithuania</span>
-          <span class="lt-brand-sub">A Traveler's Guide to Lithuania</span>
-        </div>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Discover Lithuania</span>
+          <span class="brand-sub">A Traveler's Guide to Lithuania</span>
+        </span>
       </a>
-      <nav class="lt-nav-links">
-        <a href="https://lithuaniadiscovery.com/" class="lt-nav-link">Home</a>
-        <a href="https://lithuaniadiscovery.com/explore/" class="lt-nav-link">Explore</a>
-        <a href="https://lithuaniadiscovery.com/routes/" class="lt-nav-link">Routes</a>
-        <a href="https://lithuaniadiscovery.com/food/" class="lt-nav-link">Food</a>
-        <a href="https://lithuaniadiscovery.com/stays/" class="lt-nav-link">Stays</a>
-        <a href="https://lithuaniadiscovery.com/blog/" class="lt-nav-link">Blog</a>
-        <a href="/about/" class="lt-nav-link active">About</a>
-        <a href="https://lithuaniadiscovery.com/faq/" class="lt-nav-link">FAQ</a>
+      <nav class="nav-links">
+        <a href="https://lithuaniadiscovery.com/" class="nav-link">Home</a>
+        <a href="https://lithuaniadiscovery.com/explore/" class="nav-link">Explore</a>
+        <a href="https://lithuaniadiscovery.com/routes/" class="nav-link">Routes</a>
+        <a href="https://lithuaniadiscovery.com/food/" class="nav-link">Food</a>
+        <a href="https://lithuaniadiscovery.com/stays/" class="nav-link">Stays</a>
+        <a href="https://lithuaniadiscovery.com/blog/" class="nav-link">Blog</a>
+        <a href="/about/" class="nav-link active">About</a>
+        <a href="https://lithuaniadiscovery.com/faq/" class="nav-link">FAQ</a>
       </nav>
-      <div class="lt-nav-actions">
-        <a class="lt-lang-btn" href="/about/he/">עב</a>
-        <button class="lt-mobile-menu" onclick="document.getElementById('lt-mnav').classList.toggle('open')" aria-label="Menu">
+      <div class="nav-actions">
+        <a href="/about/he/" class="lang-toggle">
+          <span class="active">EN</span>
+          <span class="lang-sep">/</span>
+          <span>עב</span>
+        </a>
+        <button class="mobile-menu" onclick="document.getElementById('lt-mnav').classList.toggle('open')" aria-label="Menu">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
         </button>
       </div>
     </div>
-    <nav class="lt-mobile-nav" id="lt-mnav">
-      <a href="https://lithuaniadiscovery.com/" class="lt-mobile-link">Home</a>
-      <a href="https://lithuaniadiscovery.com/explore/" class="lt-mobile-link">Explore</a>
-      <a href="https://lithuaniadiscovery.com/routes/" class="lt-mobile-link">Routes</a>
-      <a href="https://lithuaniadiscovery.com/food/" class="lt-mobile-link">Food</a>
-      <a href="https://lithuaniadiscovery.com/stays/" class="lt-mobile-link">Stays</a>
-      <a href="https://lithuaniadiscovery.com/blog/" class="lt-mobile-link">Blog</a>
-      <a href="/about/" class="lt-mobile-link active">About</a>
-      <a href="https://lithuaniadiscovery.com/faq/" class="lt-mobile-link">FAQ</a>
+    <nav class="mobile-nav" id="lt-mnav">
+      <a href="https://lithuaniadiscovery.com/" class="mobile-link">Home</a>
+      <a href="https://lithuaniadiscovery.com/explore/" class="mobile-link">Explore</a>
+      <a href="https://lithuaniadiscovery.com/routes/" class="mobile-link">Routes</a>
+      <a href="https://lithuaniadiscovery.com/food/" class="mobile-link">Food</a>
+      <a href="https://lithuaniadiscovery.com/stays/" class="mobile-link">Stays</a>
+      <a href="https://lithuaniadiscovery.com/blog/" class="mobile-link">Blog</a>
+      <a href="/about/" class="mobile-link active">About</a>
+      <a href="https://lithuaniadiscovery.com/faq/" class="mobile-link">FAQ</a>
     </nav>
   </header>
 
