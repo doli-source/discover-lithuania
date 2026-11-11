@@ -14,7 +14,7 @@
   const JSX_SCRIPTS = [
     '/tweaks-panel.jsx?v=20260626b',
     '/shared.jsx?v=20261001a',
-    '/screens.jsx?v=20261109a',
+    '/screens.jsx?v=20261111a',
     '/app.jsx?v=20261003a',
   ];
 

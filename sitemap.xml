@@ -321,6 +321,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/gravelindos-women-gravel-cycling"/>
   </url>
   <url>
+    <loc>https://lithuaniadiscovery.com/blog/goda-vilnius-coffee-story</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/goda-vilnius-coffee-story"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/goda-vilnius-coffee-story/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/goda-vilnius-coffee-story"/>
+  </url>
+  <url>
     <loc>https://lithuaniadiscovery.com/explore/vilnius/he/</loc>
     <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -535,6 +544,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/gravelindos-women-gravel-cycling"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/gravelindos-women-gravel-cycling/he/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/gravelindos-women-gravel-cycling"/>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/blog/goda-vilnius-coffee-story/he/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/goda-vilnius-coffee-story"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/goda-vilnius-coffee-story/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/goda-vilnius-coffee-story"/>
   </url>
   <url>
     <loc>https://lithuaniadiscovery.com/blog/he/</loc>

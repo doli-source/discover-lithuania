@@ -1060,6 +1060,16 @@ function SavedScreen({ savedSet, places, regions, lang, t, openPlace, toggleSave
 function BlogScreen({ lang }) {
   const posts = [
     {
+      emoji: '☕',
+      tag: lang === 'he' ? 'הכירו את היוצרת · כתבה אורחת' : 'Meet the Maker · Guest Feature',
+      title: lang === 'he' ? 'המסע שלי בעולם הקפה' : 'My Journey Through Coffee',
+      desc: lang === 'he'
+        ? 'גודה, עובדת קפה מווילנה, על הדרך שלה מבריסטה לסוחרת קפה ירוק.'
+        : 'Goda, a Vilnius coffee professional, on her path from barista to green coffee trader.',
+      href: lang === 'he' ? '/blog/goda-vilnius-coffee-story?lang=he' : '/blog/goda-vilnius-coffee-story',
+      time: lang === 'he' ? '5 דק׳ קריאה' : '5 min read',
+    },
+    {
       emoji: '🚴‍♀️',
       tag: lang === 'he' ? 'הכירו את היוצרת · כתבה אורחת' : 'Meet the Maker · Guest Feature',
       title: lang === 'he' ? 'מארבע רוכבות ל-3,000 בנות גראבל' : 'From Four Riders to 3,000 Gravel Girls',

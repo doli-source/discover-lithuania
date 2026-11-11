@@ -30,6 +30,7 @@ const ARTICLES = {
   'blog/jekaterina-brew-bakery.html': 'blog/jekaterina-brew-bakery',
   'blog/ieva-elvyra-natural-wine.html': 'blog/ieva-elvyra-natural-wine',
   'blog/gravelindos-women-gravel-cycling.html': 'blog/gravelindos-women-gravel-cycling',
+  'blog/goda-vilnius-coffee-story.html': 'blog/goda-vilnius-coffee-story',
 };
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
