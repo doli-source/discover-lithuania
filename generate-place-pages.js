@@ -733,7 +733,13 @@ ${buildSchema(p, lang)}
   }
 
   // Kept orphans stay in the sitemap — they are indexed and earning clicks.
-  const sitemapSlugs = [...PLACES.map((p) => p.id), ...[...KEPT_ORPHANS].filter((o) => onDisk.has(o))];
+  // A kept orphan that is marked noindex must not be listed in the sitemap
+  // (GSC flags "Excluded by noindex" for sitemap URLs, e.g. naked-noah, Nov 2026).
+  const isNoindex = (slug) => {
+    const f = path.join(placesDir, slug, 'index.html');
+    return fs.existsSync(f) && /<meta name="robots" content="[^"]*noindex/.test(fs.readFileSync(f, 'utf8'));
+  };
+  const sitemapSlugs = [...PLACES.map((p) => p.id), ...[...KEPT_ORPHANS].filter((o) => onDisk.has(o) && !isNoindex(o))];
   const liveSlugs = new Set(PLACES.map((p) => p.id));
 
   // Each language pair is one <url> carrying both alternates, which is how
