@@ -55,54 +55,109 @@
 
   <!-- JSON-LD structured data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://lithuaniadiscovery.com/#website",
-        "url": "https://lithuaniadiscovery.com/",
-        "name": "Discover Lithuania",
-        "description": "Lithuania travel guide with 170 handpicked places — best cafés, restaurants, stays, nature spots and ready-made itineraries across 10 regions including Vilnius, Kaunas, Klaipėda, Trakai and the Curonian Spit.",
-        "inLanguage": ["en", "he"],
-        "author": { "@id": "https://lithuaniadiscovery.com/#author" },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://lithuaniadiscovery.com/explore?q={search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://lithuaniadiscovery.com/#website",
+      "url": "https://lithuaniadiscovery.com/",
+      "name": "Discover Lithuania",
+      "description": "Lithuania travel guide with 170 handpicked places — best cafés, restaurants, stays, nature spots and ready-made itineraries across 10 regions including Vilnius, Kaunas, Klaipėda, Trakai and the Curonian Spit.",
+      "inLanguage": [
+        "en",
+        "he"
+      ],
+      "author": {
+        "@id": "https://lithuaniadiscovery.com/#author"
       },
-      {
-        "@type": "Person",
-        "@id": "https://lithuaniadiscovery.com/#author",
-        "name": "Niv Shimoni",
-        "description": "Entrepreneur, AI builder, and frequent Lithuania visitor."
-      },
-      {
-        "@type": "TouristDestination",
-        "name": "Lithuania",
-        "alternateName": ["ליטא", "ליטואניה", "Lietuva"],
-        "description": "Eastern European country known for its medieval old towns, pine forests, dunes, lakes and vibrant café culture.",
-        "url": "https://lithuaniadiscovery.com/",
-        "touristType": ["Cultural tourist", "Nature lover", "Food traveler"]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://lithuaniadiscovery.com/#webpage",
-        "url": "https://lithuaniadiscovery.com/",
-        "name": "Lithuania Travel Guide — Cafés, Restaurants & Itineraries",
-        "speakable": {
-          "@type": "SpeakableSpecification",
-          "cssSelector": [".hero-title", ".hero-sub", ".facts-section"]
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://lithuaniadiscovery.com/explore?q={search_term_string}"
         },
-        "isPartOf": { "@id": "https://lithuaniadiscovery.com/#website" }
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@id": "https://lithuaniadiscovery.com/#organization"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://lithuaniadiscovery.com/#organization",
+      "name": "Lithuania Discovery",
+      "alternateName": [
+        "Discover Lithuania",
+        "LithuaniaDiscovery.com",
+        "גלה את ליטא"
+      ],
+      "url": "https://lithuaniadiscovery.com/",
+      "image": "https://lithuaniadiscovery.com/og-preview.png",
+      "description": "Independent bilingual (English and Hebrew) travel guide to Lithuania: handpicked cafés, restaurants, stays, nature spots, guest stories and ready-made routes across the country.",
+      "founder": {
+        "@id": "https://lithuaniadiscovery.com/#author"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Lithuania"
+      },
+      "knowsLanguage": [
+        "en",
+        "he"
+      ],
+      "subjectOf": {
+        "@type": "Article",
+        "name": "Explore Lithuania Discovery: your guide to Lithuania",
+        "url": "https://cci-fl.org/2026/10/15/explore-lithuania-discovery-your-guide-to-lithuania/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "CCI France Lituanie"
+        }
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://lithuaniadiscovery.com/#author",
+      "name": "Niv Shimoni",
+      "description": "Entrepreneur, AI builder, and frequent Lithuania visitor."
+    },
+    {
+      "@type": "TouristDestination",
+      "name": "Lithuania",
+      "alternateName": [
+        "ליטא",
+        "ליטואניה",
+        "Lietuva"
+      ],
+      "description": "Eastern European country known for its medieval old towns, pine forests, dunes, lakes and vibrant café culture.",
+      "url": "https://lithuaniadiscovery.com/",
+      "touristType": [
+        "Cultural tourist",
+        "Nature lover",
+        "Food traveler"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lithuaniadiscovery.com/#webpage",
+      "url": "https://lithuaniadiscovery.com/",
+      "name": "Lithuania Travel Guide — Cafés, Restaurants & Itineraries",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".hero-title",
+          ".hero-sub",
+          ".facts-section"
+        ]
+      },
+      "isPartOf": {
+        "@id": "https://lithuaniadiscovery.com/#website"
+      }
+    }
+  ]
+}
+</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
