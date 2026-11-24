@@ -15,7 +15,7 @@
     '/tweaks-panel.jsx?v=20260626b',
     '/shared.jsx?v=20261001a',
     '/screens.jsx?v=20261124b',
-    '/app.jsx?v=20261003a',
+    '/app.jsx?v=20261125a',
   ];
 
   function rest(table, qs) {

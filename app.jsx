@@ -630,6 +630,22 @@ function Footer({ lang, t, nav }) {
               ? 'מדריך אישי לליטא — בלי פאתוס, רק מה שכיף.'
               : 'A friendly guide to Lithuania — no pretense, just what\'s fun.'}
           </p>
+          <a className="footer-brand-ig" href="https://www.instagram.com/lithuaniadiscovery/" target="_blank" rel="noopener noreferrer" aria-label="Lithuania Discovery on Instagram" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginTop: '12px', color: 'var(--primary)', fontSize: '0.875rem', textDecoration: 'none' }}>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="ig-grad-site" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#F58529"/>
+                  <stop offset="50%" stopColor="#DD2A7B"/>
+                  <stop offset="100%" stopColor="#8134AF"/>
+                </linearGradient>
+              </defs>
+              <rect width="24" height="24" rx="6" fill="url(#ig-grad-site)"/>
+              <circle cx="12" cy="12" r="4.5" stroke="white" strokeWidth="1.5" fill="none"/>
+              <circle cx="17" cy="7" r="1" fill="white"/>
+              <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" stroke="white" strokeWidth="1.5" fill="none"/>
+            </svg>
+            <span dir="ltr">@lithuaniadiscovery</span>
+          </a>
           <div className="footer-about">
             <p className="footer-about-bio">
               {lang === 'he'
