@@ -1060,7 +1060,7 @@ function SavedScreen({ savedSet, places, regions, lang, t, openPlace, toggleSave
 function BlogScreen({ lang }) {
   const posts = [
     {
-      emoji: '🍽️',
+      emoji: '🥂',
       tag: lang === 'he' ? 'מאחורי הקלעים' : 'Behind the Scenes',
       title: lang === 'he' ? 'האנשים שמאחורי הסיפורים' : 'The People Behind the Stories',
       desc: lang === 'he'
