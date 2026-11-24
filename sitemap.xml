@@ -330,6 +330,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/goda-vilnius-coffee-story"/>
   </url>
   <url>
+    <loc>https://lithuaniadiscovery.com/blog/brew-gathering-vilnius</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/brew-gathering-vilnius"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/brew-gathering-vilnius/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/brew-gathering-vilnius"/>
+  </url>
+  <url>
     <loc>https://lithuaniadiscovery.com/explore/vilnius/he/</loc>
     <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -553,6 +562,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/goda-vilnius-coffee-story"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/goda-vilnius-coffee-story/he/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/goda-vilnius-coffee-story"/>
+  </url>
+  <url>
+    <loc>https://lithuaniadiscovery.com/blog/brew-gathering-vilnius/he/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lithuaniadiscovery.com/blog/brew-gathering-vilnius"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://lithuaniadiscovery.com/blog/brew-gathering-vilnius/he/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lithuaniadiscovery.com/blog/brew-gathering-vilnius"/>
   </url>
   <url>
     <loc>https://lithuaniadiscovery.com/blog/he/</loc>

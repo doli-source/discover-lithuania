@@ -1060,6 +1060,16 @@ function SavedScreen({ savedSet, places, regions, lang, t, openPlace, toggleSave
 function BlogScreen({ lang }) {
   const posts = [
     {
+      emoji: '🍽️',
+      tag: lang === 'he' ? 'מאחורי הקלעים' : 'Behind the Scenes',
+      title: lang === 'he' ? 'האנשים שמאחורי הסיפורים' : 'The People Behind the Stories',
+      desc: lang === 'he'
+        ? 'אחר צהריים ב-BREW בווילנה: האתר על הקיר, אוכל ישראלי של השף דניאל, והאנשים שמאחורי הסיפורים.'
+        : 'An afternoon at BREW in Vilnius: the site on the wall, Israeli food by chef Daniel, and the people behind the stories.',
+      href: lang === 'he' ? '/blog/brew-gathering-vilnius?lang=he' : '/blog/brew-gathering-vilnius',
+      time: lang === 'he' ? '3 דק׳ קריאה' : '3 min read',
+    },
+    {
       emoji: '☕',
       tag: lang === 'he' ? 'הכירו את היוצרת · כתבה אורחת' : 'Meet the Maker · Guest Feature',
       title: lang === 'he' ? 'המסע שלי בעולם הקפה' : 'My Journey Through Coffee',
