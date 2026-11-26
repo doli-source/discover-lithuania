@@ -108,6 +108,14 @@ async function loadHebrewNames(places) {
 const HE_TITLE = {
   'chabad-vilnius': 'בית חב״ד וילנה (Chabad of Lithuania)',
 };
+// English <title> overrides for places with search impressions on a broader
+// term than the name (GSC Nov 2026: "best brunch places in vilnius" ~9,
+// "coffee ... vilnius" ~9, 0-1% CTR). Facts come from each place's own text.
+const EN_TITLE = {
+  'spricas-brunch':      "Spricas Brunch Vilnius: One of the City's Most Talked-About Brunch Spots",
+  'mon':                 'mon. Vilnius: Specialty Coffee & Brunch with a Hidden Courtyard',
+  'coffee-circus-piano': 'Coffee Circus Piano Vilnius: Specialty Coffee Around a Big Red Piano',
+};
 const TODAY = new Date().toISOString().slice(0, 10);
 
 // Set once the live list is loaded; the page template renders it as copy.
@@ -319,7 +327,7 @@ function view(p, lang) {
     S, he, lang, region, kind, name, blurb, hours, typeLabel, desc,
     enUrl, heUrl,
     url: he ? heUrl : enUrl,
-    title: (he && HE_TITLE[p.id]) ? `${HE_TITLE[p.id]} | ${S.site}` : `${name} — ${region}, ${S.country} | ${S.site}`,
+    title: (he && HE_TITLE[p.id]) ? `${HE_TITLE[p.id]} | ${S.site}` : (!he && EN_TITLE[p.id]) ? `${EN_TITLE[p.id]} | ${S.site}` : `${name} — ${region}, ${S.country} | ${S.site}`,
   };
 }
 
