@@ -112,7 +112,7 @@ const HE_TITLE = {
 // term than the name (GSC Nov 2026: "best brunch places in vilnius" ~9,
 // "coffee ... vilnius" ~9, 0-1% CTR). Facts come from each place's own text.
 const EN_TITLE = {
-  'spricas-brunch':      "Spricas Brunch Vilnius: One of the City's Most Talked-About Brunch Spots",
+  'spricas-brunch':      "Spricas Brunch Vilnius: One of the Most Talked-About Brunch Spots",
   'mon':                 'mon. Vilnius: Specialty Coffee & Brunch with a Hidden Courtyard',
   'coffee-circus-piano': 'Coffee Circus Piano Vilnius: Specialty Coffee Around a Big Red Piano',
 };
@@ -317,17 +317,29 @@ function view(p, lang) {
 
   const enUrl = `${BASE_URL}/places/${p.id}/`;
   const heUrl = `${BASE_URL}/places/${p.id}/he/`;
-  const desc = blurb
+  let desc = blurb
     ? (blurb.length > 155
         ? blurb.slice(0, 155).replace(/\s+\S*$/, '') + '…'
         : blurb)
     : S.fallbackDesc(name, kind, region);
+  // Many Hebrew blurbs are one short line; Bing flags descriptions under
+  // ~110 chars as too short (Webmaster Tools, Nov 2026). Pad with what the
+  // page really shows: name, region, hours and map, when present.
+  if (he && blurb && desc.length < 110) {
+    const has = [hours ? 'שעות פתיחה' : '', (p.lat && p.lng) ? 'מיקום במפה' : ''].filter(Boolean);
+    desc = `${name}, ${region}: ${/[.!?…]$/.test(desc) ? desc : desc + '.'}` +
+      (has.length ? ` כולל ${has.join(' ו')}.` : '');
+  }
 
+  let title = (he && HE_TITLE[p.id]) ? `${HE_TITLE[p.id]} | ${S.site}` : (!he && EN_TITLE[p.id]) ? `${EN_TITLE[p.id]} | ${S.site}` : `${name} — ${region}, ${S.country} | ${S.site}`;
+  // Bing flags titles over 70 characters (Webmaster Tools, Nov 2026); the
+  // site name is the first thing to go, it is also in og:site_name.
+  if (title.length > 70) title = title.slice(0, -(` | ${S.site}`).length);
   return {
     S, he, lang, region, kind, name, blurb, hours, typeLabel, desc,
     enUrl, heUrl,
     url: he ? heUrl : enUrl,
-    title: (he && HE_TITLE[p.id]) ? `${HE_TITLE[p.id]} | ${S.site}` : (!he && EN_TITLE[p.id]) ? `${EN_TITLE[p.id]} | ${S.site}` : `${name} — ${region}, ${S.country} | ${S.site}`,
+    title,
   };
 }
 
